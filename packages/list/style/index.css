@@ -1,0 +1,59 @@
+.tyh-list {
+  width: 100%;
+  border: 1px solid #dcdee2;
+  border-radius: 6px;
+  color: #515a6e;
+  padding: 0px;
+}
+.tyh-list .tyh-list-header {
+  min-height: 45px;
+  font-weight: 600;
+  border-bottom: 1px solid #dcdee2;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+}
+.tyh-list .tyh-list-content {
+  min-height: 45px;
+}
+.tyh-list .tyh-list-content .note {
+  padding: 20px;
+}
+.tyh-list .tyh-list-content .tyh-list-content-ul {
+  padding: 0;
+  margin: 0;
+}
+.tyh-list .tyh-list-content .tyh-list-content-ul .tyh-list-content-li {
+  min-height: 45px;
+  list-style: none;
+  border-bottom: 1px solid #dcdee2;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.tyh-list .tyh-list-content .tyh-list-content-ul .tyh-list-content-li:last-child {
+  border: none;
+}
+.tyh-list .tyh-list-content .tyh-list-content-ul .tyh-list-content-li .tyh-list-content-li-num {
+  width: 25px;
+  display: inline-block;
+  text-align: center;
+  color: #34373f;
+  font-weight: 600;
+  margin-right: 23px;
+}
+.tyh-list .tyh-list-content .tyh-list-content-ul .tyh-list-content-li-zebra:nth-child(odd) {
+  background: #fafafa;
+}
+.tyh-list .tyh-list-footer {
+  min-height: 45px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid #dcdee2;
+  box-sizing: border-box;
+}
