@@ -1,22 +1,10 @@
 <template>
   <span class="tyh-menu-item">
-    <!-- 存在 url -->
     <span
-      v-if="url"
       class="tyh-menu-item-span"
       :class="[prohibitClass]"
       :style="[colorStyle]"
-      @click="onRouterLink"
-    >
-      <slot></slot>
-    </span>
-
-    <!-- 不存在 url 时 -->
-    <span
-      v-else
-      class="tyh-menu-item-span"
-      :class="[prohibitClass]"
-      :style="[colorStyle]"
+      @click="url ? onRouterLink() : ''"
     >
       <slot></slot>
     </span>
@@ -24,8 +12,8 @@
 </template>
 
 <script>
-import { computed, getCurrentInstance } from 'vue'
-// import { useRouter } from 'vue-router'
+import { computed } from 'vue'
+import { useRouter } from 'vue-router'
 export default {
   name: 'TyhMenuItem',
   props: {
@@ -50,17 +38,15 @@ export default {
     const prohibitClass = computed(() => {
       return props.prohibit ? 'tyh-menu-item-prohibit' : ''
     })
-
     // 文字颜色
     const colorStyle = computed(() => {
       return { color: props.color }
     })
-
-    const { proxy } = getCurrentInstance()
+    const router = useRouter()
     // 按钮是如果禁用 就直接返回 否则就跳转对应路由
     function onRouterLink () {
       if (props.prohibit) return
-      console.log(proxy.$root.$router.push(props.url))
+      router.push(props.url)
     }
 
     return {
@@ -73,5 +59,3 @@ export default {
 </script>
 
 <style src="../style/index.css" scoped></style>
-
-

@@ -19,7 +19,6 @@ export default {
     const colorClass = computed(() => {
       return props.color ? `tyh-tag--${props.color}` : 'tyh-tag--'
     })
-
     // 尺寸 class
     const sizeClass = computed(() => {
       return props.size ? `tyh-tag--${props.size}` : ''

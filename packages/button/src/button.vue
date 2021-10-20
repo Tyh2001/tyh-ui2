@@ -3,7 +3,7 @@
     class="tyh-button"
     :class="[typeClass, roundClass, prohibitClass, simpleClass]"
   >
-    <!-- <Tyh-icon v-if="icon" :icon="icon" :color="iconColor" /> -->
+    <tyh-icon v-if="icon" :icon="icon" :color="iconColor" />
     <span class="tyh-button-text" :class="[iconButtonTextClass]">
       <slot></slot>
     </span>
@@ -11,9 +11,13 @@
 </template>
 
 <script>
+import TyhIcon from '../../icon'
 import { computed } from 'vue'
 export default {
   name: 'TyhButton',
+  components: {
+    TyhIcon
+  },
   props: {
     // 按钮的类型
     type: {

@@ -1,5 +1,5 @@
 <template>
-  <i :class="[iconClass]" :style="[iconStyle, sizeStyle]" @click="iconClick" />
+  <i :class="[iconClass]" :style="[iconStyle, sizeStyle]" />
 </template>
 
 <script>
@@ -47,5 +47,3 @@ export default {
 </script>
 
 <style src="../style/index.css" scoped></style>
-
-
