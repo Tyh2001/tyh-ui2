@@ -1,0 +1,101 @@
+.tyh-input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+
+  .tyh-input_inp {
+    width: 100%;
+    border-radius: 5px;
+    font-size: 13px;
+    color: #3f536e;
+    border: 1px solid #c5d9e8;
+    outline: none;
+    padding: 0 10px;
+    transition: border 0.35s;
+    background: #fff;
+    box-sizing: border-box;
+
+    &:focus {
+      border: 1px solid #409eff;
+      transition: border 0.35s
+    }
+  }
+
+  // 清空的文本框
+  .tyh-input-clear-padding {
+    padding-right: 26px;
+  }
+
+  // 左侧小图标
+  .tyh-input-icon__showIcon {
+    position: absolute;
+    left: 10px;
+    margin: auto;
+    user-select: none;
+  }
+
+  // 有小图标之后需要增加边距
+  .tyh-input__padding-left {
+    padding-left: 30px;
+  }
+
+  // 右侧清空按钮
+  .tyh-input-icon__clear {
+    position: absolute;
+    right: 10px;
+    margin: auto;
+    cursor: pointer;
+  }
+
+  // 不同尺寸的行高
+  // 为了控制小图标
+  .tyh-input-icon-big-height {
+    line-height: 40px;
+  }
+
+  .tyh-input-icon-medium-height {
+    line-height: 35px;
+  }
+
+  .tyh-input-icon-small-height {
+    line-height: 30px;
+  }
+
+  .tyh-input-icon-mini-height {
+    line-height: 25px;
+  }
+}
+
+// 按钮尺寸
+// 特大版
+.tyh-input_inp--big {
+  height: 40px;
+}
+
+// 中等尺寸(默认值)
+.tyh-input_inp--medium {
+  height: 35px;
+}
+
+// 小版
+.tyh-input_inp--small {
+  height: 30px;
+}
+
+// 迷你版
+.tyh-input_inp--mini {
+  height: 25px;
+}
+
+// 禁用按钮
+.tyh-button-prohibit {
+  background: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  color: #c0c4cc !important;
+  cursor: not-allowed;
+
+  /deep/ .tyh-icon {
+    cursor: not-allowed !important;
+  }
+}

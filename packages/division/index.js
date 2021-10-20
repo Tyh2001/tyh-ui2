@@ -1,4 +1,4 @@
-import TyhDivision from './src/division.vue'
+import TyhDivision from './division.vue'
 
 TyhDivision.install = function (Vue) {
   Vue.component(TyhDivision.name, TyhDivision)

@@ -1,4 +1,4 @@
-import TyhIcon from './src/icon.vue'
+import TyhIcon from './icon.vue'
 
 TyhIcon.install = function (Vue) {
   Vue.component(TyhIcon.name, TyhIcon)

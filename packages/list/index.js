@@ -1,4 +1,4 @@
-import TyhList from './src/list.vue'
+import TyhList from './list.vue'
 
 TyhList.install = function (Vue) {
   Vue.component(TyhList.name, TyhList)

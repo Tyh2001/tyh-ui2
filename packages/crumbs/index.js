@@ -1,4 +1,4 @@
-import TyhCrumbs from './src/crumbs.vue'
+import TyhCrumbs from './crumbs.vue'
 
 TyhCrumbs.install = function (Vue) {
   Vue.component(TyhCrumbs.name, TyhCrumbs)

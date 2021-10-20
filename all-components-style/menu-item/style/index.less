@@ -1,0 +1,58 @@
+.tyh-menu-item {
+
+  // 内部的每一项
+  .tyh-menu-item-span {
+    border-bottom: 3px solid transparent;
+    line-height: 57px;
+    height: 57px;
+    display: inline-block;
+    padding: 0 22px;
+    font-size: 15px;
+    cursor: pointer;
+    position: relative;
+
+    // &:hover {
+    //   border-bottom: 3px solid #409eff;
+    //   transition: border 0.2s;
+    // }
+
+    &::after {
+      content: "";
+      width: 0;
+      height: 2px;
+      background: #409eff;
+      position: absolute;
+      left: 100%;
+      bottom: 0;
+      transition: all 0.4s;
+    }
+
+    &:hover {
+      &::after {
+        width: 100%;
+        left: 0;
+        transition-delay: 0.1s;
+      }
+    }
+  }
+
+  .tyh-menu-item.active {
+    &::after {
+      width: 100%;
+    }
+  }
+
+  // 禁用状态
+  .tyh-menu-item-prohibit {
+    cursor: not-allowed;
+    color: rgb(144, 144, 144) !important;
+
+    // &:hover {
+    //   border: none;
+    //   padding-bottom: 3px;
+    // }
+    &::after {
+      background: none;
+    }
+  }
+}

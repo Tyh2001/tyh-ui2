@@ -1,0 +1,43 @@
+.tyh-tag {
+  min-width: 57px;
+  height: 28px;
+  border-radius: 4px;
+  display: inline-block;
+  font-size: 14px;
+  text-align: center;
+  line-height: 28px;
+  cursor: default;
+  user-select: none;
+  padding: 0 6px;
+}
+.tyh-tag-- {
+  border: 1px solid #dfdfdf;
+  background-color: #f7f7f7;
+  color: #3f536e;
+}
+.tyh-tag--primary {
+  background-color: #409eff;
+  color: #fff;
+}
+.tyh-tag--success {
+  background-color: #f05048;
+  color: #fff;
+}
+.tyh-tag--danger {
+  background-color: #2ea44f;
+  color: #fff;
+}
+.tyh-tag--warning {
+  background-color: #ff7700;
+  color: #fff;
+}
+.tyh-tag--small {
+  min-width: 49px;
+  height: 25px;
+  line-height: 26px;
+}
+.tyh-tag--mini {
+  min-width: 41px;
+  height: 22px;
+  line-height: 22px;
+}
