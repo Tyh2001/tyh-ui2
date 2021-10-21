@@ -38,7 +38,7 @@ export default {
     }
 
     return {
-      toClass,
+      onRouterTo,
       icon
     }
   }
