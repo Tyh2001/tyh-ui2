@@ -1,7 +1,7 @@
 <template>
   <div
     class="tyh-menu"
-    :style="[backgroundColorStyle]"
+    :style="[{ background: backgroundColor }]"
     :class="{ 'tyh-menu-bottom-shadow': buttomShadow }"
   >
     <slot></slot>
@@ -9,7 +9,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhMenu',
   props: {
@@ -20,18 +19,6 @@ export default {
     },
     // 是否显示底部阴影
     buttomShadow: Boolean
-  },
-  setup (props) {
-    // 导航栏背景色
-    const backgroundColorStyle = computed(() => {
-      return {
-        background: props.backgroundColor
-      }
-    })
-
-    return {
-      backgroundColorStyle
-    }
   }
 }
 </script>

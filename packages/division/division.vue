@@ -1,13 +1,17 @@
 <template>
   <fieldset class="tyh-division">
-    <legend class="tyh-division-text" :class="[positionClass]">
+    <legend
+      class="tyh-division-text"
+      :class="[
+        position ? `tyh-division-text--${position}` : 'tyh-division-text--left',
+      ]"
+    >
       <slot></slot>
     </legend>
   </fieldset>
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhDivision',
   props: {
@@ -15,18 +19,6 @@ export default {
     position: {
       type: String,
       default: 'left'
-    }
-  },
-  setup (props) {
-    // 文字位置
-    const positionClass = computed(() => {
-      return props.position
-        ? `tyh-division-text--${props.position}`
-        : 'tyh-division-text--left'
-    })
-
-    return {
-      positionClass
     }
   }
 }

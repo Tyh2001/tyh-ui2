@@ -1,11 +1,16 @@
 <template>
-  <span class="tyh-tag" :class="[colorClass, sizeClass]">
+  <span
+    class="tyh-tag"
+    :class="[
+      color ? `tyh-tag--${color}` : 'tyh-tag--',
+      size ? `tyh-tag--${size}` : '',
+    ]"
+  >
     <slot></slot>
   </span>
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhTag',
   props: {
@@ -13,21 +18,6 @@ export default {
     color: String,
     // 标签大小
     size: String
-  },
-  setup (props) {
-    // 主题颜色 class
-    const colorClass = computed(() => {
-      return props.color ? `tyh-tag--${props.color}` : 'tyh-tag--'
-    })
-    // 尺寸 class
-    const sizeClass = computed(() => {
-      return props.size ? `tyh-tag--${props.size}` : ''
-    })
-
-    return {
-      colorClass,
-      sizeClass
-    }
   }
 }
 </script>

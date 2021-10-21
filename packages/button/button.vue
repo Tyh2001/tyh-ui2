@@ -1,10 +1,21 @@
 <template>
   <button
     class="tyh-button"
-    :class="[typeClass, roundClass, prohibitClass, simpleClass]"
+    :class="[
+      type ? `tyh-button--${type}` : 'tyh-button--',
+      prohibit ? `tyh-button--prohibit--${type}` : '',
+      simple ? `tyh-button--${type}-simple` : '',
+      icon ? 'tyh-button-icon-margin' : '',
+      {
+        'tyh-button--round': round,
+      },
+    ]"
   >
-    <tyh-icon v-if="icon" :icon="icon" :color="iconColor" />
-    <span class="tyh-button-text" :class="[iconButtonTextClass]">
+    <tyh-icon v-if="icon" :icon="icon" :color="type === '' ? '' : '#fff'" />
+    <span
+      class="tyh-button-text"
+      :class="[icon ? 'tyh-button-icon-margin' : '']"
+    >
       <slot></slot>
     </span>
   </button>
@@ -12,7 +23,6 @@
 
 <script>
 import TyhIcon from '../icon'
-import { computed } from 'vue'
 export default {
   name: 'TyhButton',
   components: {
@@ -40,47 +50,6 @@ export default {
     simple: {
       type: Boolean,
       default: false
-    }
-  },
-  setup (props) {
-    // 类型 class
-    const typeClass = computed(() => {
-      return props.type
-        ? `tyh-button--${props.type}`
-        : 'tyh-button--'
-    })
-    // 圆角 class
-    const roundClass = computed(() => {
-      return props.round ? 'tyh-button--round' : ''
-    })
-    // 禁用 class
-    const prohibitClass = computed(() => {
-      return props.prohibit
-        ? `tyh-button--prohibit--${props.type}`
-        : ''
-    })
-    // 朴素按钮 class
-    const simpleClass = computed(() => {
-      return props.simple
-        ? `tyh-button--${props.type}-simple`
-        : ''
-    })
-    // 有 icon 的按钮文字
-    const iconButtonTextClass = computed(() => {
-      return props.icon ? 'tyh-button-icon-margin' : ''
-    })
-    // 图标的颜色
-    const iconColor = computed(() => {
-      return props.type === '' ? '' : '#fff'
-    })
-
-    return {
-      typeClass,
-      roundClass,
-      prohibitClass,
-      simpleClass,
-      iconButtonTextClass,
-      iconColor
     }
   }
 }

@@ -2,8 +2,8 @@
   <span class="tyh-menu-item">
     <span
       class="tyh-menu-item-span"
-      :class="[prohibitClass]"
-      :style="[colorStyle]"
+      :class="[prohibit ? 'tyh-menu-item-prohibit' : '']"
+      :style="[{ color: color }]"
       @click="url ? onRouterLink() : ''"
     >
       <slot></slot>
@@ -12,7 +12,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 import { useRouter } from 'vue-router'
 export default {
   name: 'TyhMenuItem',
@@ -34,14 +33,6 @@ export default {
     }
   },
   setup (props) {
-    // 是否禁用
-    const prohibitClass = computed(() => {
-      return props.prohibit ? 'tyh-menu-item-prohibit' : ''
-    })
-    // 文字颜色
-    const colorStyle = computed(() => {
-      return { color: props.color }
-    })
     const router = useRouter()
     // 按钮是如果禁用 就直接返回 否则就跳转对应路由
     function onRouterLink () {
@@ -50,8 +41,6 @@ export default {
     }
 
     return {
-      prohibitClass,
-      colorStyle,
       onRouterLink
     }
   }

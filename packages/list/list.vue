@@ -1,16 +1,14 @@
 <template>
   <div class="tyh-list">
-    <!-- 头部 -->
     <div v-if="header" class="tyh-list-header">
       {{ header }}
     </div>
 
-    <!-- 中间内容 -->
     <div v-if="content.length" class="tyh-list-content">
       <ul class="tyh-list-content-ul">
         <li
           class="tyh-list-content-li"
-          :class="[zebraClass]"
+          :class="[zebra ? 'tyh-list-content-li-zebra' : '']"
           v-for="(item, index) in content"
           :key="index"
         >
@@ -24,12 +22,10 @@
       </ul>
     </div>
 
-    <!-- 如果传递来的数组是没有内容的 则显示 暂无内容 -->
     <div v-else class="tyh-list-content">
       <p class="note">暂无内容...</p>
     </div>
 
-    <!-- 底部 -->
     <div v-if="footer" class="tyh-list-footer">
       {{ footer }}
     </div>
@@ -37,7 +33,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhList',
   props: {
@@ -61,11 +56,6 @@ export default {
     }
   },
   setup (props) {
-    // 斑马纹 Class
-    const zebraClass = computed(() => {
-      return props.zebra ? 'tyh-list-content-li-zebra' : ''
-    })
-
     // 根据传来的键名 返回对应的键值
     function contentKey (item) {
       // 如果 item 是对象但是没有传递 key 参数则直接返回
@@ -85,7 +75,6 @@ export default {
     }
 
     return {
-      zebraClass,
       contentKey
     }
   }

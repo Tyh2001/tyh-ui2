@@ -1,9 +1,11 @@
 <template>
-  <i :class="[iconClass]" :style="[iconStyle, sizeStyle]" />
+  <i
+    :class="[`tyh-icon ${icon}`]"
+    :style="[{ color: color }, { fontSize: `${size}px` }]"
+  />
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhIcon',
   props: {
@@ -18,29 +20,6 @@ export default {
     size: {
       type: String,
       default: '16'
-    }
-  },
-  setup (props) {
-    const iconClass = computed(() => {
-      return `tyh-icon ${props.icon}`
-    })
-    // icon 的颜色
-    const iconStyle = computed(() => {
-      return {
-        color: props.color
-      }
-    })
-    // icon 的大小
-    const sizeStyle = computed(() => {
-      return {
-        fontSize: `${props.size}px`
-      }
-    })
-
-    return {
-      iconClass,
-      iconStyle,
-      sizeStyle
     }
   }
 }

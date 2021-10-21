@@ -1,7 +1,19 @@
 <template>
   <a
     class="tyh-link"
-    :class="[colorClass, hoverlineClass, underlineClass]"
+    :class="[
+      color ? `tyh-link--${color}` : 'tyh-link--',
+      hoverline
+        ? color
+          ? `tyh-link--hoverline--${color}`
+          : 'tyh-link--hoverline'
+        : '',
+      underline
+        ? color
+          ? `tyh-link--underline--${color}`
+          : 'tyh-link--underline'
+        : '',
+    ]"
     :href="url"
     :target="target"
   >
@@ -10,7 +22,6 @@
 </template>
 
 <script>
-import { computed } from 'vue'
 export default {
   name: 'TyhLink',
   props: {
@@ -24,34 +35,6 @@ export default {
     underline: Boolean,
     // 是否以一个新的标签页打开
     target: String
-  },
-  setup (props) {
-    // 颜色 class
-    const colorClass = computed(() => {
-      return props.color ? `tyh-link--${props.color}` : 'tyh-link--'
-    })
-    // 鼠标移入 class
-    const hoverlineClass = computed(() => {
-      return props.hoverline
-        ? props.color
-          ? `tyh-link--hoverline--${props.color}`
-          : 'tyh-link--hoverline'
-        : ''
-    })
-    // 下划线 class
-    const underlineClass = computed(() => {
-      return props.underline
-        ? props.color
-          ? `tyh-link--underline--${props.color}`
-          : 'tyh-link--underline'
-        : ''
-    })
-
-    return {
-      colorClass,
-      hoverlineClass,
-      underlineClass
-    }
   }
 }
 </script>

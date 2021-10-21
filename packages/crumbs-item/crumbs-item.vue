@@ -1,5 +1,9 @@
 <template>
-  <span class="tyh-crumbs-item" :class="[toClass]" @click="onRouterTo">
+  <span
+    class="tyh-crumbs-item"
+    :class="[to ? 'tyh-crumbs-item__to' : '']"
+    @click="onRouterTo"
+  >
     <span class="tyh-crumbs-item-text">
       <slot></slot>
     </span>
@@ -9,7 +13,7 @@
 
 <script>
 import TyhIcon from '../icon'
-import { computed, ref, inject } from 'vue'
+import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
 export default {
   name: 'TyhCrumbsItem',
@@ -23,10 +27,6 @@ export default {
     }
   },
   setup (props) {
-    // 传入 to 的类名
-    const toClass = computed(() => {
-      return props.to ? 'tyh-crumbs-item__to' : ''
-    })
     // 将图标转换为父组件传入的图标
     const icon = ref('')
     icon.value = inject('Crumbs-separator')
@@ -39,7 +39,6 @@ export default {
 
     return {
       toClass,
-      onRouterTo,
       icon
     }
   }
