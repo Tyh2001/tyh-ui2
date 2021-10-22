@@ -34,7 +34,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.1.3",
+  version: "1.1.4",
   install
 }
 

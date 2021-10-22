@@ -1,26 +1,45 @@
 <p align="center">
-  <img height="260px" src="https://www.hualigs.cn/image/60c16782369ab.jpg">
+  <img height="260px" src="https://tianyuhao.icu/tyhui/v3/assets/logo.1320fb15.png">
 </p>
-
 
 ## 前言
 
-tyh-ui 是一套基于 Vue 3.0 的桌面端轻量级 UI 组件库
+tyh-ui 的下一代 ui 组件库，基于 vue3.0 版本，全面拥抱 vue3.0
 
+官网：https://tianyuhao.icu/tyhui/v3
 
-> 开发靠个人
+> 简洁至上
 
-Tyh-ui 是由 tyh2001 独立开发的一款基于 Vue 3.0 的桌面端轻量级 UI 组件库。
+tyh-ui 整体非常简洁明了，虽没有很多高级的组件，但它是使用最简单的方式达到实用的效果。
 
-如果您在使用中有什么问题或 BUG 不妨可以来仓库的 Lssuse 中反馈一下，我很乐意来进行改进。
+> 轻量容易
 
+使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。。
 
-> 轻量易维护
+## 安装
 
-Tyh-ui 是一个极其轻量的组件库，它并没有那么多复杂的目录结构和冗余的代码，清晰明了。
+```shell
+npm i tyh-ui-next
+```
 
-但同时 Tyh-ui 还有很多地方需要维护改进，远远不够完美，我正在努力改进中。
+## 快速上手
 
+在 main.js 中引入下面内容
+
+```js
+import { createApp } from 'vue'
+import App from './App.vue'
+import tyhUi from 'tyh-ui-next/src'
+
+createApp(App).use(tyhUi).mount('#app')
+```
+
+## 链接
+
+- [tyh-ui 官网](https://tianyuhao.icu/tyhui/v3)
+- [Github](https://github.com/Tyh2001)
+- [tyh-ui 源码仓库](https://github.com/Tyh2001/tyh-ui-next)
+- [tyh-ui npm](https://www.npmjs.com/package/tyh-ui-next)
 
 ## 合作者
 
