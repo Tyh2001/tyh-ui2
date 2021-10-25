@@ -12,14 +12,10 @@
 </template>
 
 <script>
-import TyhIcon from '../icon'
 import { ref, inject } from 'vue'
 import { useRouter } from 'vue-router'
 export default {
   name: 'TyhCrumbsItem',
-  components: {
-    TyhIcon
-  },
   props: {
     // 跳转的路径
     to: {

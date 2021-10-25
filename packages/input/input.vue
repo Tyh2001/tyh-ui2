@@ -39,12 +39,8 @@
 </template>
 
 <script>
-import TyhIcon from '../icon'
 export default {
   name: 'TyhInput',
-  components: {
-    TyhIcon
-  },
   props: {
     // 内容
     modelValue: [String, Number],

@@ -2,32 +2,31 @@
   <button
     class="tyh-button"
     :class="[
-      type ? `tyh-button--${type}` : 'tyh-button--',
-      prohibit ? `tyh-button--prohibit--${type}` : '',
+      type ? (!simple ? `tyh-button--${type}` : '') : 'tyh-button--',
+      prohibit
+        ? !simple
+          ? `tyh-button--prohibit--${type}`
+          : `tyh-button--prohibit--${type}-simple`
+        : '',
       simple ? `tyh-button--${type}-simple` : '',
-      icon ? 'tyh-button-icon-margin' : '',
+      size ? `tyh-button--size-${size}` : '',
       {
         'tyh-button--round': round,
+        'tyh-button-icon-margin': icon,
+        'tyh-button-big': big,
       },
     ]"
   >
-    <tyh-icon v-if="icon" :icon="icon" :color="type === '' ? '' : '#fff'" />
-    <span
-      class="tyh-button-text"
-      :class="[icon ? 'tyh-button-icon-margin' : '']"
-    >
+    <tyh-icon v-if="icon" :icon="icon" :color="type ? '#fff' : ''" />
+    <span class="tyh-button-text" :class="[{ 'tyh-button-icon-margin': icon }]">
       <slot></slot>
     </span>
   </button>
 </template>
 
 <script>
-import TyhIcon from '../icon'
 export default {
   name: 'TyhButton',
-  components: {
-    TyhIcon
-  },
   props: {
     // 按钮的类型
     type: {
@@ -50,6 +49,16 @@ export default {
     simple: {
       type: Boolean,
       default: false
+    },
+    // 长按钮
+    big: {
+      type: Boolean,
+      default: false
+    },
+    // 按钮尺寸
+    size: {
+      type: String,
+      default: ''
     }
   }
 }

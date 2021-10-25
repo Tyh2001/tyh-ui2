@@ -4,9 +4,18 @@
     :class="[
       color ? `tyh-tag--${color}` : 'tyh-tag--',
       size ? `tyh-tag--${size}` : '',
+      {
+        'tyh-tag--round': round,
+      },
     ]"
   >
     <slot></slot>
+    <tyh-icon
+      size="8"
+      icon="tyh-ui-close-03"
+      :color="color ? '#fff' : ''"
+      @click="closeTag"
+    />
   </span>
 </template>
 
@@ -15,9 +24,28 @@ export default {
   name: 'TyhTag',
   props: {
     // 标签颜色
-    color: String,
+    color: {
+      type: String,
+      default: ''
+    },
     // 标签大小
-    size: String
+    size: {
+      type: String,
+      default: ''
+    },
+    // 圆角
+    round: {
+      type: Boolean,
+      default: false
+    }
+  },
+  setup (props, { emit }) {
+    // 点击关闭按钮
+    function closeTag () {
+      emit('close')
+    }
+
+    return { closeTag }
   }
 }
 </script>
