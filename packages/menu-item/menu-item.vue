@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { useRouter } from 'vue-router'
+import { getCurrentInstance } from 'vue'
 export default {
   name: 'TyhMenuItem',
   props: {
@@ -33,11 +33,11 @@ export default {
     }
   },
   setup (props) {
-    const router = useRouter()
+    const { proxy } = getCurrentInstance()
     // 按钮是如果禁用 就直接返回 否则就跳转对应路由
     function onRouterLink () {
       if (props.prohibit) return
-      router.push(props.url)
+      proxy.$root.$router.push(props.url)
     }
 
     return {

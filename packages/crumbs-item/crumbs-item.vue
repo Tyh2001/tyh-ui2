@@ -13,7 +13,7 @@
 
 <script>
 import { ref, inject } from 'vue'
-import { useRouter } from 'vue-router'
+import { getCurrentInstance } from 'vue'
 export default {
   name: 'TyhCrumbsItem',
   props: {
@@ -27,10 +27,10 @@ export default {
     const icon = ref('')
     icon.value = inject('Crumbs-separator')
     // 点击跳转对应的路由
-    const router = useRouter()
+    const { proxy } = getCurrentInstance()
     function onRouterTo () {
       if (!props.to) return
-      router.push(props.to)
+      proxy.$root.$router.push(props.to)
     }
 
     return {
