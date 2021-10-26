@@ -11,6 +11,7 @@
   >
     <slot></slot>
     <tyh-icon
+      v-if="isclose"
       size="8"
       icon="tyh-ui-close-03"
       :color="color ? '#fff' : ''"
@@ -35,6 +36,11 @@ export default {
     },
     // 圆角
     round: {
+      type: Boolean,
+      default: false
+    },
+    // 是否可以关闭
+    isclose: {
       type: Boolean,
       default: false
     }
