@@ -13,6 +13,7 @@ import TyhCrumbsItem from '../packages/crumbs-item'
 import TyhInput from '../packages/input'
 import TyhTurnPage from '../packages/turn-page'
 import TyhTurnPageItem from '../packages/turn-page-item'
+import TyhBackTop from '../packages/back-top'
 
 const components = [
   TyhButton,
@@ -28,7 +29,8 @@ const components = [
   TyhCrumbsItem,
   TyhInput,
   TyhTurnPage,
-  TyhTurnPageItem
+  TyhTurnPageItem,
+  TyhBackTop
 ]
 
 const install = app => {
@@ -38,7 +40,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.1.9",
+  version: "1.2.0",
   install
 }
 
@@ -57,7 +59,8 @@ export {
   TyhCrumbsItem,
   TyhInput,
   TyhTurnPage,
-  TyhTurnPageItem
+  TyhTurnPageItem,
+  TyhBackTop
 }
 
 export default tyhUi
