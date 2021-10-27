@@ -19,7 +19,7 @@ tyh-ui 整体非常简洁明了，虽没有很多高级的组件，但它是使�
 ## 安装
 
 ```shell
-npm i tyh-ui-next
+npm i tyh-ui2
 ```
 
 ## 快速上手
@@ -29,17 +29,17 @@ npm i tyh-ui-next
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import tyhUi from 'tyh-ui-next/src'
+import tyhUi2 from 'tyh-ui2'
 
-createApp(App).use(tyhUi).mount('#app')
+createApp(App).use(tyhUi2).mount('#app')
 ```
 
 ## 链接
 
 - [tyh-ui 官网](https://tianyuhao.icu/tyhui/v3)
 - [Github](https://github.com/Tyh2001)
-- [tyh-ui 源码仓库](https://github.com/Tyh2001/tyh-ui-next)
-- [tyh-ui npm](https://www.npmjs.com/package/tyh-ui-next)
+- [tyh-ui 源码仓库](https://github.com/Tyh2001/tyh-ui2)
+- [tyh-ui npm](https://www.npmjs.com/package/tyh-ui2)
 
 ## 合作者
 
