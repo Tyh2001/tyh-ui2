@@ -14,7 +14,6 @@ import TyhInput from '../packages/input'
 import TyhTurnPage from '../packages/turn-page'
 import TyhTurnPageItem from '../packages/turn-page-item'
 import TyhBackTop from '../packages/back-top'
-// import TyhMessage from '../packages/message'
 
 const components = [
   TyhButton,
@@ -31,23 +30,17 @@ const components = [
   TyhInput,
   TyhTurnPage,
   TyhTurnPageItem,
-  TyhBackTop,
-  // TyhMessage
+  TyhBackTop
 ]
 
 const install = app => {
   components.forEach(component => {
     app.use(component)
   })
-  applyOptions(app)
-}
-
-function applyOptions (app) {
-  // app.config.globalProperties.$message = Message
 }
 
 const tyhUi = {
-  version: "0.0.1",
+  version: "1.0.3",
   install
 }
 
@@ -67,8 +60,7 @@ export {
   TyhInput,
   TyhTurnPage,
   TyhTurnPageItem,
-  TyhBackTop,
-  // TyhMessage
+  TyhBackTop
 }
 
 export default tyhUi

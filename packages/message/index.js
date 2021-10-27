@@ -1,17 +1,17 @@
 import { createVNode, render } from 'vue'
-import Message from './message.vue'
+import TyhMessage from './message.vue'
 
-const div = document.createElement('div')
-div.setAttribute('class', 'xtx-message-wrapper')
-document.body.appendChild(div)
+const divVNode = createVNode('div')
+render(divVNode, document.body)
+const div = divVNode.el
 
-let time = null
-export default ({ text, type }) => {
-  const vNode = createVNode(Message, { text, type })
-  render(vNode, div)
+const Message = options => {
+  const comVNode = createVNode(TyhMessage, options)
+  render(comVNode, div)
 
-  clearTimeout(time)
-  time = setTimeout(() => {
+  setTimeout(() => {
     render(null, div)
-  }, 2000)
+  }, options.time || 2000)
 }
+
+export default Message
