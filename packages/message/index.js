@@ -2,6 +2,7 @@ import { createVNode, render } from 'vue'
 import TyhMessage from './message.vue'
 
 const divVNode = createVNode('div')
+console.log(divVNode)
 render(divVNode, document.body)
 const div = divVNode.el
 

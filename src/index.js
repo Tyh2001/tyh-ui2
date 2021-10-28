@@ -14,6 +14,7 @@ import TyhInput from '../packages/input'
 import TyhTurnPage from '../packages/turn-page'
 import TyhTurnPageItem from '../packages/turn-page-item'
 import TyhBackTop from '../packages/back-top'
+import TyhSkeleton from '../packages/skeleton'
 
 const components = [
   TyhButton,
@@ -30,7 +31,8 @@ const components = [
   TyhInput,
   TyhTurnPage,
   TyhTurnPageItem,
-  TyhBackTop
+  TyhBackTop,
+  TyhSkeleton
 ]
 
 const install = app => {
@@ -40,7 +42,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.0.4",
+  version: "1.0.5",
   install
 }
 
@@ -60,7 +62,8 @@ export {
   TyhInput,
   TyhTurnPage,
   TyhTurnPageItem,
-  TyhBackTop
+  TyhBackTop,
+  TyhSkeleton
 }
 
 export default tyhUi
