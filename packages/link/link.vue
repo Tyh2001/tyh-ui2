@@ -2,21 +2,32 @@
   <a
     class="tyh-link"
     :class="[
-      color ? `tyh-link--${color}` : 'tyh-link--',
+      type ? `tyh-link--${type}` : 'tyh-link--',
       hoverline
-        ? color
-          ? `tyh-link--hoverline--${color}`
+        ? type
+          ? `tyh-link--hoverline--${type}`
           : 'tyh-link--hoverline'
         : '',
       underline
-        ? color
-          ? `tyh-link--underline--${color}`
+        ? type
+          ? `tyh-link--underline--${type}`
           : 'tyh-link--underline'
         : '',
+      prohibit
+        ? type
+          ? `tyh-link-prohibit-${type}`
+          : 'tyh-link-prohibit-'
+        : '',
     ]"
-    :href="url"
+    :href="prohibit ? 'javascript:void(0)' : url"
     :target="target"
   >
+    <tyh-icon
+      v-if="iconClass"
+      :icon="iconClass"
+      size="15"
+      style="margin-right: 3px"
+    />
     <slot></slot>
   </a>
 </template>
@@ -28,13 +39,26 @@ export default {
     // 跳转的路径参数
     url: String,
     // 字体颜色
-    color: String,
+    type: String,
     // 移入显示下划线
-    hoverline: Boolean,
+    hoverline: {
+      type: Boolean,
+      default: false
+    },
     // 显示下划线
-    underline: Boolean,
+    underline: {
+      type: Boolean,
+      default: false
+    },
     // 是否以一个新的标签页打开
-    target: String
+    target: String,
+    // icon
+    iconClass: String,
+    // 是否禁用
+    prohibit: {
+      type: Boolean,
+      default: false
+    }
   }
 }
 </script>
