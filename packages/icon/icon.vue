@@ -1,7 +1,7 @@
 <template>
   <i
     :class="[`tyh-icon ${icon}`]"
-    :style="[{ color: color }, { fontSize: `${size}px` }]"
+    :style="[{ color, fontSize: `${size}px` }]"
   />
 </template>
 
@@ -14,12 +14,12 @@ export default {
     // icon 的颜色
     color: {
       type: String,
-      default: '#606266'
+      default: ''
     },
     // icon 的大小
     size: {
       type: String,
-      default: '16'
+      default: '18'
     }
   }
 }

@@ -32,7 +32,7 @@
       :class="[`tyh-input-icon-${size}-height`]"
       size="12"
       color="rgb(199, 199, 199)"
-      icon="tyh-ui-close-03"
+      icon="tyh-ui-guanbi"
       @click="clearInputText"
     />
   </div>

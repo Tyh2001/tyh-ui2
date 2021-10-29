@@ -13,7 +13,7 @@
     <tyh-icon
       v-if="isclose"
       size="8"
-      icon="tyh-ui-close-03"
+      icon="tyh-ui-close"
       :color="color ? '#fff' : ''"
       @click="closeTag"
     />

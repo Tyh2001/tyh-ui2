@@ -9,12 +9,12 @@
     <router-link :to="url">
       <tyh-icon
         v-if="direction === 'left'"
-        :icon="icon ? icon : 'tyh-ui-left-02'"
+        :icon="icon ? icon : 'tyh-ui-arrow-left-bold'"
       />
       <slot></slot>
       <tyh-icon
         v-if="direction === 'right'"
-        :icon="icon ? icon : 'tyh-ui-right-02'"
+        :icon="icon ? icon : 'tyh-ui-arrow-right-bold'"
       />
     </router-link>
   </p>

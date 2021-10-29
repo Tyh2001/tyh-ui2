@@ -12,7 +12,7 @@ export default {
     // 分隔符
     separator: {
       type: String,
-      default: 'tyh-ui-xiexian-01'
+      default: 'tyh-ui-xiexian'
     }
   },
   setup (props) {
