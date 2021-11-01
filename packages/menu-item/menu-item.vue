@@ -4,7 +4,7 @@
       class="tyh-menu-item-span"
       :class="[prohibit ? 'tyh-menu-item-prohibit' : '']"
       :style="[{ color: color }]"
-      @click="url ? onRouterLink() : ''"
+      @click="url && onRouterLink()"
     >
       <slot></slot>
     </span>

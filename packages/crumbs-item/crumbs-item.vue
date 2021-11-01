@@ -1,7 +1,7 @@
 <template>
   <span
     class="tyh-crumbs-item"
-    :class="[to ? 'tyh-crumbs-item__to' : '']"
+    :class="[{ 'tyh-crumbs-item__to': to }]"
     @click="onRouterTo"
   >
     <span class="tyh-crumbs-item-text">

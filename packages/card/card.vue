@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-card" :class="[shadow ? `tyh-card-shadow-${shadow}` : '']">
-    <div class="tyh-card-header" v-if="!simple">
+    <div v-if="!simple" class="tyh-card-header">
       <p class="tyh-card-title">
         <slot name="title"></slot>
       </p>

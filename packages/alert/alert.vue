@@ -11,10 +11,10 @@
     ]"
     :style="[{ justifyContent: center && 'center' }]"
   >
-    <p class="tyh-alert-message" style="text-align: center">
+    <div class="tyh-alert-message" style="text-align: center">
       <tyh-icon v-if="iconClass" :icon="iconClass" />
       {{ message }}
-    </p>
+    </div>
     <tyh-icon v-if="close" icon="tyh-ui-guanbi" @click="closeAlert" />
   </div>
 </template>

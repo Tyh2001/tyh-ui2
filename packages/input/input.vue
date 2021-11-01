@@ -43,7 +43,7 @@ export default {
   name: 'TyhInput',
   props: {
     // 内容
-    modelValue: [String, Number],
+    modelValue: String,
     // 文字中显示的文字
     innerText: String,
     // 类型
