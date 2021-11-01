@@ -1,10 +1,10 @@
 {
   "name": "tyh-ui2",
-  "version": "1.1.0",
-  "description": "tyh-ui 是一套基于 Vue 3.0 的桌面端轻量级 UI 组件库",
+  "version": "1.1.1",
+  "description": "tyh-ui 是一套基于 Vue 3.0 的桌面端轻量级 UI 组件库",
   "main": "src/index.js",
   "scripts": {
-    "test": "npm i tyh-ui2"
+    "test": "npm i tyh-ui2"
   },
   "keywords": [
     "tyh-ui2"

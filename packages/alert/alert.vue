@@ -11,7 +11,7 @@
     ]"
     :style="[{ justifyContent: center && 'center' }]"
   >
-    <div class="tyh-alert-message" style="text-align: center">
+    <div class="tyh-alert-message">
       <tyh-icon v-if="iconClass" :icon="iconClass" />
       {{ message }}
     </div>
