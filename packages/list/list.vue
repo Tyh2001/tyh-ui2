@@ -33,49 +33,32 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhList',
-  props: {
-    // header 内容
-    header: [String, Number],
-    // 主体内容
-    content: [Array, String],
-    // 循环体
-    iskey: String,
-    // footer 内容
-    footer: [String, Number],
-    // 斑马纹
-    zebra: {
-      type: Boolean,
-      default: false
-    },
-    // 显示序号
-    num: {
-      type: Boolean,
-      default: false
-    }
-  },
-  setup (props) {
-    // 根据传来的键名 返回对应的键值
-    function contentKey (item) {
-      // 如果 item 是对象但是没有传递 key 参数则直接返回
-      if (typeof item === 'object' && !props.iskey) {
-        return item
-      }
-      // 如果 item 不是对象，则直接返回
-      if (typeof item !== 'object') {
-        return item
-      }
-      // 如果是对象 就返回对应的键
-      for (const key in item) {
-        if (props.iskey === key) {
-          return item[key]
-        }
-      }
-    }
+export default { name: 'TyhList' }
+</script>
 
-    return {
-      contentKey
+<script setup>
+const props = defineProps({
+  header: [String, Number], // header 内容
+  content: [Array, String], // 主体内容
+  iskey: String, // 循环体
+  footer: [String, Number], // footer 内容
+  zebra: Boolean, // 斑马纹
+  num: Boolean // 显示序号
+})
+// 根据传来的键名 返回对应的键值
+function contentKey (item) {
+  // 如果 item 是对象但是没有传递 key 参数则直接返回
+  if (typeof item === 'object' && !props.iskey) {
+    return item
+  }
+  // 如果 item 不是对象，则直接返回
+  if (typeof item !== 'object') {
+    return item
+  }
+  // 如果是对象 就返回对应的键
+  for (const key in item) {
+    if (props.iskey === key) {
+      return item[key]
     }
   }
 }

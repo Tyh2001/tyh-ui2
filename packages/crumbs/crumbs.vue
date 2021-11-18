@@ -5,18 +5,16 @@
 </template>
 
 <script>
+export default { name: 'TyhCrumbs' }
+</script>
+
+<script setup>
 import { provide } from 'vue'
-export default {
-  name: 'TyhCrumbs',
-  props: {
-    // 分隔符
-    separator: {
-      type: String,
-      default: 'tyh-ui-xiexian'
-    }
-  },
-  setup (props) {
-    provide('Crumbs-separator', props.separator)
+const props = defineProps({
+  separator: { // 分隔符
+    type: String,
+    default: 'tyh-ui-xiexian'
   }
-}
+})
+provide('Crumbs-separator', props.separator)
 </script>

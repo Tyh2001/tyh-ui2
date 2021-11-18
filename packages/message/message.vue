@@ -13,37 +13,19 @@
 </template>
 
 <script>
+export default { name: 'TyhMessage' }
+</script>
+
+<script setup>
 import { onMounted, ref } from 'vue'
 import TyhIcon from '../icon/icon.vue'
-export default {
-  name: 'TyhMessage',
-  components: {
-    TyhIcon
-  },
-  props: {
-    // 文字内容
-    message: {
-      type: String,
-      default: ''
-    },
-    // 类型
-    type: {
-      type: String,
-      default: ''
-    },
-    // icon
-    iconClass: {
-      type: String,
-      default: ''
-    }
-  },
-  setup () {
-    const isShow = ref(false)
-    onMounted(() => {
-      isShow.value = true
-    })
-
-    return { isShow }
-  }
-}
+defineProps({
+  message: String,
+  type: String,
+  iconClass: String
+})
+const isShow = ref(false)
+onMounted(() => {
+  isShow.value = true
+})
 </script>

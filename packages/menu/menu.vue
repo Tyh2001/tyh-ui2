@@ -9,16 +9,15 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhMenu',
-  props: {
-    // 背景色
-    backgroundColor: {
-      type: String,
-      default: '#545c64'
-    },
-    // 是否显示底部阴影
-    buttomShadow: Boolean
-  }
-}
+export default { name: 'TyhMenu' }
+</script>
+
+<script setup>
+defineProps({
+  backgroundColor: { // 背景色
+    type: String,
+    default: '#545c64'
+  },
+  buttomShadow: Boolean // 是否显示底部阴影
+})
 </script>

@@ -12,37 +12,22 @@
 </template>
 
 <script>
-import { getCurrentInstance } from 'vue'
-export default {
-  name: 'TyhMenuItem',
-  props: {
-    // 跳转的地址
-    url: {
-      type: String,
-      default: null
-    },
-    // 是否禁用
-    prohibit: {
-      type: Boolean,
-      default: false
-    },
-    // 文字颜色
-    color: {
-      type: String,
-      default: '#fff'
-    }
-  },
-  setup (props) {
-    const { proxy } = getCurrentInstance()
-    // 按钮是如果禁用 就直接返回 否则就跳转对应路由
-    function onRouterLink () {
-      if (props.prohibit) return
-      proxy.$root.$router.push(props.url)
-    }
+export default { name: 'TyhMenuItem' }
+</script>
 
-    return {
-      onRouterLink
-    }
+<script setup>
+import { getCurrentInstance } from 'vue'
+const props = defineProps({
+  url: String, // 跳转的地址
+  prohibit: Boolean, // 是否禁用
+  color: { // 文字颜色
+    type: String,
+    default: '#fff'
   }
+})
+const { proxy } = getCurrentInstance()
+function onRouterLink () {
+  if (props.prohibit) return
+  proxy.$root.$router.push(props.url)
 }
 </script>

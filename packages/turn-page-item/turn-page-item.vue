@@ -6,7 +6,7 @@
       { 'tyh-turn-page-center': isCenter },
     ]"
   >
-    <router-link :to="url">
+    <router-link :to="url ? url : ''">
       <tyh-icon
         v-if="direction === 'left'"
         :icon="icon ? icon : 'tyh-ui-arrow-left-bold'"
@@ -21,30 +21,23 @@
 </template>
 
 <script>
+export default { name: 'TyhTurnPageItem' }
+</script>
+
+<script setup>
 import { inject } from 'vue'
-export default {
-  name: 'TyhTurnPageItem',
-  props: {
-    // 指向方向
-    direction: {
-      type: String,
-      required: true,
-      validator (value) {
-        return ['left', 'right'].includes(value)
-      }
-    },
-    // 路由地址
-    url: {
-      type: String,
-      default: ''
-    },
-    // 图标
-    icon: String,
+defineProps({
+  // 指向方向
+  direction: {
+    type: String,
+    required: true,
+    validator (value) {
+      return ['left', 'right'].includes(value)
+    }
   },
-  setup () {
-    // 是否居中显示
-    const isCenter = inject('is-center')
-    return { isCenter }
-  }
-}
+  url: String,
+  icon: String
+})
+// 是否居中显示
+const isCenter = inject('is-center')
 </script>

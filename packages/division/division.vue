@@ -12,14 +12,14 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhDivision',
-  props: {
-    // 文字位置
-    position: {
-      type: String,
-      default: 'left'
-    }
+export default { name: 'TyhDivision' }
+</script>
+
+<script setup>
+defineProps({
+  position: {
+    type: String,
+    default: 'left'
   }
-}
+})
 </script>

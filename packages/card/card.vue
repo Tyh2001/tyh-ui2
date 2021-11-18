@@ -16,19 +16,12 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhCard',
-  props: {
-    // 阴影显示时机
-    shadow: {
-      type: String,
-      default: ''
-    },
-    // 简约卡片
-    simple: {
-      type: Boolean,
-      default: false
-    }
-  }
-}
+export default { name: 'TyhCard' }
+</script>
+
+<script setup>
+defineProps({
+  shadow: String, // 阴影显示时机	
+  simple: Boolean // 简约卡片
+})
 </script>

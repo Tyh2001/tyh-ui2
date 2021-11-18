@@ -5,18 +5,13 @@
 </template>
 
 <script>
+export default { name: 'TyhTurnPage' }
+</script>
+
+<script setup>
 import { provide } from 'vue'
-export default {
-  name: 'TyhTurnPage',
-  props: {
-    // 居中显示
-    center: {
-      type: Boolean,
-      required: false
-    }
-  },
-  setup (props) {
-    provide('is-center', props.center)
-  }
-}
+const props = defineProps({
+  center: Boolean
+})
+provide('is-center', props.center)
 </script>

@@ -20,38 +20,29 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhAlert',
-  props: {
-    // 展示的文字
-    message: String,
-    // 类型
-    type: String,
-    // 文字前面的 icon
-    iconClass: String,
-    // 是否显示关闭按钮
-    close: {
-      type: Boolean,
-      default: false
-    },
-    // 是否居中显示
-    center: {
-      type: Boolean,
-      default: false
-    },
-    // 简约的
-    simple: {
-      type: Boolean,
-      default: false
-    }
-  },
-  setup (props, { emit }) {
-    // 点击关闭按钮
-    function closeAlert () {
-      emit('close-alert')
-    }
+export default { name: 'tyh-alert' }
+</script>
 
-    return { closeAlert }
+<script setup>
+defineProps({
+  message: String, // 展示的文字
+  type: String, // 类型
+  iconClass: String, // 文字前面的 icon
+  close: { // 是否显示关闭按钮
+    type: Boolean,
+    default: false
+  },
+  center: { // 是否居中显示
+    type: Boolean,
+    default: false
+  },
+  simple: { // 简约的
+    type: Boolean,
+    default: false
   }
+})
+const emit = defineEmits(['close-alert'])
+function closeAlert () {
+  emit('close-alert')
 }
 </script>

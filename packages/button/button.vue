@@ -25,41 +25,27 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhButton',
-  props: {
-    // 按钮的类型
-    type: {
-      type: String,
-      default: ''
-    },
-    // 圆角按钮
-    round: Boolean,
-    // 禁用状态
-    prohibit: {
-      type: Boolean,
-      default: false
-    },
-    // icon
-    icon: {
-      type: String,
-      default: ''
-    },
-    // 朴素按钮
-    simple: {
-      type: Boolean,
-      default: false
-    },
-    // 长按钮
-    big: {
-      type: Boolean,
-      default: false
-    },
-    // 按钮尺寸
-    size: {
-      type: String,
-      default: ''
-    }
-  }
-}
+export default { name: 'tyh-button' }
+</script>
+
+<script setup>
+defineProps({
+  type: String, // 按钮的类型
+  // 圆角按钮
+  round: Boolean,
+  prohibit: { // 禁用状态
+    type: Boolean,
+    default: false
+  },
+  icon: String,  // icon
+  simple: { // 朴素按钮
+    type: Boolean,
+    default: false
+  },
+  big: { // 长按钮
+    type: Boolean,
+    default: false
+  },
+  size: String // 按钮尺寸
+})
 </script>

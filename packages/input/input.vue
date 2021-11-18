@@ -39,62 +39,39 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhInput',
-  props: {
-    // 内容
-    modelValue: String,
-    // 文字中显示的文字
-    innerText: String,
-    // 类型
-    inpType: {
-      type: String,
-      default: 'text',
-      validator (value) {
-        return ['text', 'password'].includes(value)
-      }
-    },
-    // 尺寸
-    size: {
-      type: String,
-      default: 'medium'
-    },
-    // 最大输入上限
-    max: String,
-    // 是否可以清空
-    clear: {
-      type: Boolean,
-      default: false
-    },
-    // 左侧显示的图标
-    showIcon: String,
-    // 是否禁用
-    prohibit: {
-      type: Boolean,
-      default: false
-    },
-    // 是否自动获取焦点
-    autofocus: {
-      type: Boolean,
-      default: false
-    },
-    // 原生 name 属性
-    name: String
-  },
-  setup (props, { emit }) {
-    // 输入时触发 input 事件 将新的值再传递给父组件 实现双向绑定
-    function handleInput (evt) {
-      emit('update:modelValue', evt.target.value)
-    }
-    // 点击清空文本框内容
-    function clearInputText () {
-      emit('update:modelValue', '')
-    }
+export default { name: 'TyhInput' }
+</script>
 
-    return {
-      handleInput,
-      clearInputText
+<script setup>
+defineProps({
+  modelValue: String, // 内容
+  innerText: String, // 文字中显示的文字
+  inpType: { // 类型
+    type: String,
+    default: 'text',
+    validator (value) {
+      return ['text', 'password'].includes(value)
     }
-  }
+  },
+  size: { // 尺寸
+    type: String,
+    default: 'medium'
+  },
+  max: String, // 最大输入上限
+  clear: { // 是否可以清空
+    type: Boolean,
+    default: false
+  },
+  showIcon: String, // 左侧显示的图标
+  prohibit: Boolean, // 是否禁用
+  autofocus: Boolean, // 是否自动获取焦点
+  name: String // 原生 name 属性
+})
+const emit = defineEmits(['handleInput', 'clearInputText'])
+function handleInput (evt) {
+  emit('update:modelValue', evt.target.value)
+}
+function clearInputText () {
+  emit('update:modelValue', '')
 }
 </script>

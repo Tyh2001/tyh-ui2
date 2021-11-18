@@ -12,23 +12,14 @@
 </template>
 
 <script>
-export default {
-  name: 'TyhSkeleton',
-  props: {
-    // 是否为圆角
-    round: {
-      type: Boolean,
-      default: false
-    },
-    // 宽度
-    width: String,
-    // 高度
-    height: String,
-    // 是否启用动画
-    animation: {
-      type: Boolean,
-      default: false
-    }
-  }
-}
+export default { name: 'TyhSkeleton' }
+</script>
+
+<script setup>
+defineProps({
+  round: Boolean,
+  width: String,
+  height: String,
+  animation: Boolean
+})
 </script>
