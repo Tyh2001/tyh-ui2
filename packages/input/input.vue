@@ -67,7 +67,7 @@ defineProps({
   autofocus: Boolean, // 是否自动获取焦点
   name: String // 原生 name 属性
 })
-const emit = defineEmits(['handleInput', 'clearInputText'])
+const emit = defineEmits(['update:modelValue', 'update:modelValue'])
 function handleInput (evt) {
   emit('update:modelValue', evt.target.value)
 }
