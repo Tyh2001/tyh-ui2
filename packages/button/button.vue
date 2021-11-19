@@ -42,5 +42,3 @@ defineProps({
   size: String // 按钮尺寸
 })
 </script>
-
-<style scoped src="./style/index.css"></style>
