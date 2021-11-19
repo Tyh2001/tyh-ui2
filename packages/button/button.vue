@@ -7,7 +7,7 @@
         ? !simple
           ? `tyh-button--prohibit--${type}`
           : `tyh-button--prohibit--${type}-simple`
-        : 'tyh-button--prohibit',
+        : '',
       simple ? `tyh-button--${type}-simple` : '',
       size ? `tyh-button--size-${size}` : '',
       {
@@ -39,3 +39,5 @@ defineProps({
   size: String // 按钮尺寸
 })
 </script>
+
+<style scoped src="./style/index.css"></style>

@@ -1,0 +1,293 @@
+.tyh-button {
+  min-width: 40px;
+  padding: 0px 22px;
+  height: 35px;
+  border-radius: 2px;
+  cursor: pointer;
+  user-select: none;
+  border: none;
+}
+.tyh-button .tyh-button-text {
+  font-size: 14px;
+}
+.tyh-button .tyh-button-icon-margin {
+  margin-left: 5px;
+}
+.tyh-button:active {
+  transition: background 0.3s;
+}
+.tyh-button:hover {
+  transition: background 0.3s;
+}
+.tyh-button--primary .tyh-button-text,
+.tyh-button--success .tyh-button-text,
+.tyh-button--danger .tyh-button-text,
+.tyh-button--warning .tyh-button-text {
+  color: #fff;
+}
+.tyh-button-- {
+  background: #fff;
+  border: 1px solid #dcdfe6;
+}
+.tyh-button-- .tyh-button-text {
+  color: #606266;
+}
+.tyh-button--:active {
+  background: #e0efff;
+}
+.tyh-button--:active .tyh-button-text {
+  color: #002FA7;
+}
+.tyh-button--primary {
+  background: #002FA7;
+}
+.tyh-button--primary:hover {
+  background: #1f48b2;
+  box-shadow: 0 0px 3px #1f48b2;
+}
+.tyh-button--primary:active {
+  background: #06287e;
+}
+.tyh-button--success {
+  background: #54c600;
+}
+.tyh-button--success:hover {
+  background: #6bdb18;
+  box-shadow: 0 0px 3px #6bdb18;
+}
+.tyh-button--success:active {
+  background: #45a200;
+}
+.tyh-button--danger {
+  background: #d10f1b;
+}
+.tyh-button--danger:hover {
+  background: #ea3941;
+  box-shadow: 0 0px 3px #ea3941;
+}
+.tyh-button--danger:active {
+  background: #b90510;
+}
+.tyh-button--warning {
+  background: #fbcc30;
+}
+.tyh-button--warning:hover {
+  background: #fbd659;
+  box-shadow: 0 0px 3px #fbd659;
+}
+.tyh-button--warning:active {
+  background: #dfb118;
+}
+.tyh-button--round {
+  border-radius: 20px;
+}
+.tyh-button---simple {
+  background: #fff;
+  border: 1px solid #dcdfe6;
+}
+.tyh-button---simple .tyh-button-text {
+  color: #606266;
+}
+.tyh-button---simple:active {
+  background: #fff;
+}
+.tyh-button---simple:active .tyh-button-text {
+  color: #002FA7;
+}
+.tyh-button--primary-simple {
+  border: 1px solid #002FA7;
+  background: #e8f4ff;
+}
+.tyh-button--primary-simple .tyh-button-text {
+  color: #002FA7;
+}
+.tyh-button--primary-simple:hover {
+  background: #5d88f6;
+  box-shadow: 0 0px 3px #5d88f6;
+}
+.tyh-button--primary-simple:active {
+  background: #0852f3;
+}
+.tyh-button--success-simple {
+  background: #e1ffea;
+  border: 1px solid #54c600;
+}
+.tyh-button--success-simple .tyh-button-text {
+  color: #54c600;
+}
+.tyh-button--success-simple:hover {
+  background: #6bdb18;
+  box-shadow: 0 0px 3px #6bdb18;
+}
+.tyh-button--success-simple:active {
+  background: #45a200;
+}
+.tyh-button--danger-simple {
+  background: #ffe8e6;
+  border: 1px solid #d10f1b;
+}
+.tyh-button--danger-simple .tyh-button-text {
+  color: #d10f1b;
+}
+.tyh-button--danger-simple:hover {
+  background: #ea3941;
+  box-shadow: 0 0px 3px #ea3941;
+}
+.tyh-button--danger-simple:active {
+  background: #b90510;
+}
+.tyh-button--warning-simple {
+  background: #fff1e3;
+  border: 1px solid #fbcc30;
+}
+.tyh-button--warning-simple .tyh-button-text {
+  color: #ddb11e;
+}
+.tyh-button--warning-simple:hover {
+  background: #fbd659;
+  box-shadow: 0 0px 3px #fbd659;
+}
+.tyh-button--warning-simple:active {
+  background: #dfb118;
+}
+.tyh-button--primary-simple:hover .tyh-button-text,
+.tyh-button--success-simple:hover .tyh-button-text,
+.tyh-button--danger-simple:hover .tyh-button-text,
+.tyh-button--warning-simple:hover .tyh-button-text {
+  color: #fff;
+}
+.tyh-button--prohibit,
+.tyh-button--prohibit---simple {
+  cursor: not-allowed;
+  background: #fff;
+}
+.tyh-button--prohibit .tyh-button-text,
+.tyh-button--prohibit---simple .tyh-button-text {
+  color: #a0a0a0;
+}
+.tyh-button--prohibit:active,
+.tyh-button--prohibit---simple:active {
+  background: #fff;
+}
+.tyh-button--prohibit:active .tyh-button-text,
+.tyh-button--prohibit---simple:active .tyh-button-text {
+  color: #a0a0a0;
+}
+.tyh-button--prohibit--primary {
+  cursor: not-allowed;
+  background: #90b0fe;
+}
+.tyh-button--prohibit--primary:active,
+.tyh-button--prohibit--primary:hover {
+  background: #90b0fe;
+  box-shadow: none;
+}
+.tyh-button--prohibit--success {
+  cursor: not-allowed;
+  background: #a8e878;
+}
+.tyh-button--prohibit--success:active,
+.tyh-button--prohibit--success:hover {
+  background: #a8e878;
+  box-shadow: none;
+}
+.tyh-button--prohibit--danger {
+  cursor: not-allowed;
+  background: #ec747b;
+  box-shadow: none;
+}
+.tyh-button--prohibit--danger:active,
+.tyh-button--prohibit--danger:hover {
+  background: #ec747b;
+  box-shadow: none;
+}
+.tyh-button--prohibit--warning {
+  cursor: not-allowed;
+  background: #ffe07a;
+}
+.tyh-button--prohibit--warning:active,
+.tyh-button--prohibit--warning:hover {
+  background: #ffe07a;
+  box-shadow: none;
+}
+.tyh-button--prohibit--primary-simple {
+  cursor: not-allowed;
+  background: #e8f4ff;
+  border: 1px solid #98b3fb;
+}
+.tyh-button--prohibit--primary-simple .tyh-button-text {
+  color: #98b3fb;
+}
+.tyh-button--prohibit--primary-simple:active,
+.tyh-button--prohibit--primary-simple:hover {
+  background: #e8f4ff;
+  box-shadow: none;
+}
+.tyh-button--prohibit--primary-simple:active .tyh-button-text,
+.tyh-button--prohibit--primary-simple:hover .tyh-button-text {
+  color: #98b3fb;
+}
+.tyh-button--prohibit--success-simple {
+  cursor: not-allowed;
+  background: #e1ffea;
+  border: 1px solid #b9e996;
+}
+.tyh-button--prohibit--success-simple .tyh-button-text {
+  color: #b9e996;
+}
+.tyh-button--prohibit--success-simple:active,
+.tyh-button--prohibit--success-simple:hover {
+  background: #e1ffea;
+  box-shadow: none;
+}
+.tyh-button--prohibit--success-simple:active .tyh-button-text,
+.tyh-button--prohibit--success-simple:hover .tyh-button-text {
+  color: #b9e996;
+}
+.tyh-button--prohibit--danger-simple {
+  cursor: not-allowed;
+  background: #ffe8e6;
+  border: 1px solid #ffa5ab;
+}
+.tyh-button--prohibit--danger-simple .tyh-button-text {
+  color: #ffa5ab;
+}
+.tyh-button--prohibit--danger-simple:active,
+.tyh-button--prohibit--danger-simple:hover {
+  background: #ffe8e6;
+  box-shadow: none;
+}
+.tyh-button--prohibit--danger-simple:active .tyh-button-text,
+.tyh-button--prohibit--danger-simple:hover .tyh-button-text {
+  color: #ffa5ab;
+}
+.tyh-button--prohibit--warning-simple {
+  cursor: not-allowed;
+  background: #fff1e3;
+  border: 1px solid #ffde72;
+}
+.tyh-button--prohibit--warning-simple .tyh-button-text {
+  color: #ffde72;
+}
+.tyh-button--prohibit--warning-simple:active,
+.tyh-button--prohibit--warning-simple:hover {
+  background: #fff1e3;
+  box-shadow: none;
+}
+.tyh-button--prohibit--warning-simple:active .tyh-button-text,
+.tyh-button--prohibit--warning-simple:hover .tyh-button-text {
+  color: #ffde72;
+}
+.tyh-button-big {
+  width: 100%;
+}
+.tyh-button--size-small {
+  min-width: 30px;
+  padding: 0px 17px;
+  height: 30px;
+}
+.tyh-button--size-mini {
+  min-width: 20px;
+  padding: 0px 12px;
+  height: 25px;
+}
