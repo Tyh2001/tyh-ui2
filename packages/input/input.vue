@@ -58,10 +58,7 @@ defineProps({
     default: 'medium'
   },
   max: String, // 最大输入上限
-  clear: { // 是否可以清空
-    type: Boolean,
-    default: false
-  },
+  clear: Boolean, // 是否可以清空
   showIcon: String, // 左侧显示的图标
   prohibit: Boolean, // 是否禁用
   autofocus: Boolean, // 是否自动获取焦点

@@ -22,9 +22,9 @@ const props = defineProps({
   to: String // 跳转的路径
 })
 const icon = ref('')
+const { proxy } = getCurrentInstance()
 icon.value = inject('Crumbs-separator')
 // 点击跳转对应的路由
-const { proxy } = getCurrentInstance()
 function onRouterTo () {
   if (!props.to) return
   proxy.$root.$router.push(props.to)

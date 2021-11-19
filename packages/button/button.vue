@@ -7,7 +7,7 @@
         ? !simple
           ? `tyh-button--prohibit--${type}`
           : `tyh-button--prohibit--${type}-simple`
-        : '',
+        : 'tyh-button--prohibit',
       simple ? `tyh-button--${type}-simple` : '',
       size ? `tyh-button--size-${size}` : '',
       {
@@ -31,21 +31,11 @@ export default { name: 'tyh-button' }
 <script setup>
 defineProps({
   type: String, // 按钮的类型
-  // 圆角按钮
-  round: Boolean,
-  prohibit: { // 禁用状态
-    type: Boolean,
-    default: false
-  },
-  icon: String,  // icon
-  simple: { // 朴素按钮
-    type: Boolean,
-    default: false
-  },
-  big: { // 长按钮
-    type: Boolean,
-    default: false
-  },
+  round: Boolean, // 圆角按钮
+  prohibit: Boolean, // 禁用状态
+  icon: String, // icon
+  simple: Boolean, // 朴素按钮
+  big: Boolean, // 长按钮
   size: String // 按钮尺寸
 })
 </script>
