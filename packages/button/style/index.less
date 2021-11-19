@@ -38,7 +38,7 @@
 }
 
 // 基础按钮
-.tyh-button-- {
+.tyh-button--default {
   background: #fff;
   border: 1px solid #dcdfe6;
 
@@ -50,21 +50,21 @@
     background: #e0efff;
 
     .tyh-button-text {
-      color: #002FA7;
+      color: #3a6ff4;
     }
   }
 }
 
 .tyh-button--primary {
-  background: #002FA7;
+  background: #3a6ff4;
 
   &:hover {
-    background: #1f48b2;
-    box-shadow: 0 0px 3px #1f48b2;
+    background: #5d88f6;
+    box-shadow: 0 0px 3px #5d88f6;
   }
 
   &:active {
-    background: #06287e;
+    background: #0852f3;
   }
 }
 
@@ -113,7 +113,7 @@
 }
 
 // 朴素按钮
-.tyh-button---simple {
+.tyh-button--default-simple {
   background: #fff;
   border: 1px solid #dcdfe6;
 
@@ -125,17 +125,17 @@
     background: #fff;
 
     .tyh-button-text {
-      color: #002FA7;
+      color: #3a6ff4;
     }
   }
 }
 
 .tyh-button--primary-simple {
-  border: 1px solid #002FA7;
+  border: 1px solid #3a6ff4;
   background: #e8f4ff;
 
   .tyh-button-text {
-    color: #002FA7;
+    color: #3a6ff4;
   }
 
   &:hover {
@@ -215,8 +215,7 @@
 }
 
 // 禁用状态
-.tyh-button--prohibit,
-.tyh-button--prohibit---simple {
+.tyh-button--prohibit--default {
   cursor: not-allowed;
   background: #fff;
 
@@ -279,6 +278,26 @@
 }
 
 // 朴素按钮禁用状态
+.tyh-button--prohibit--default-simple {
+  cursor: not-allowed;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+
+  .tyh-button-text {
+    color: #a0a0a0;
+  }
+
+  &:active,
+  &:hover {
+    background: #fff;
+    box-shadow: none;
+
+    .tyh-button-text {
+      color: #a0a0a0;
+    }
+  }
+}
+
 .tyh-button--prohibit--primary-simple {
   cursor: not-allowed;
   background: #e8f4ff;

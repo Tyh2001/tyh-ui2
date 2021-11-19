@@ -30,7 +30,10 @@ export default { name: 'tyh-button' }
 
 <script setup>
 defineProps({
-  type: String, // 按钮的类型
+  type: {
+    type: String,
+    default: 'default'
+  }, // 按钮的类型
   round: Boolean, // 圆角按钮
   prohibit: Boolean, // 禁用状态
   icon: String, // icon

@@ -25,28 +25,28 @@
 .tyh-button--warning .tyh-button-text {
   color: #fff;
 }
-.tyh-button-- {
+.tyh-button--default {
   background: #fff;
   border: 1px solid #dcdfe6;
 }
-.tyh-button-- .tyh-button-text {
+.tyh-button--default .tyh-button-text {
   color: #606266;
 }
-.tyh-button--:active {
+.tyh-button--default:active {
   background: #e0efff;
 }
-.tyh-button--:active .tyh-button-text {
-  color: #002FA7;
+.tyh-button--default:active .tyh-button-text {
+  color: #3a6ff4;
 }
 .tyh-button--primary {
-  background: #002FA7;
+  background: #3a6ff4;
 }
 .tyh-button--primary:hover {
-  background: #1f48b2;
-  box-shadow: 0 0px 3px #1f48b2;
+  background: #5d88f6;
+  box-shadow: 0 0px 3px #5d88f6;
 }
 .tyh-button--primary:active {
-  background: #06287e;
+  background: #0852f3;
 }
 .tyh-button--success {
   background: #54c600;
@@ -81,25 +81,25 @@
 .tyh-button--round {
   border-radius: 20px;
 }
-.tyh-button---simple {
+.tyh-button--default-simple {
   background: #fff;
   border: 1px solid #dcdfe6;
 }
-.tyh-button---simple .tyh-button-text {
+.tyh-button--default-simple .tyh-button-text {
   color: #606266;
 }
-.tyh-button---simple:active {
+.tyh-button--default-simple:active {
   background: #fff;
 }
-.tyh-button---simple:active .tyh-button-text {
-  color: #002FA7;
+.tyh-button--default-simple:active .tyh-button-text {
+  color: #3a6ff4;
 }
 .tyh-button--primary-simple {
-  border: 1px solid #002FA7;
+  border: 1px solid #3a6ff4;
   background: #e8f4ff;
 }
 .tyh-button--primary-simple .tyh-button-text {
-  color: #002FA7;
+  color: #3a6ff4;
 }
 .tyh-button--primary-simple:hover {
   background: #5d88f6;
@@ -156,21 +156,17 @@
 .tyh-button--warning-simple:hover .tyh-button-text {
   color: #fff;
 }
-.tyh-button--prohibit,
-.tyh-button--prohibit---simple {
+.tyh-button--prohibit--default {
   cursor: not-allowed;
   background: #fff;
 }
-.tyh-button--prohibit .tyh-button-text,
-.tyh-button--prohibit---simple .tyh-button-text {
+.tyh-button--prohibit--default .tyh-button-text {
   color: #a0a0a0;
 }
-.tyh-button--prohibit:active,
-.tyh-button--prohibit---simple:active {
+.tyh-button--prohibit--default:active {
   background: #fff;
 }
-.tyh-button--prohibit:active .tyh-button-text,
-.tyh-button--prohibit---simple:active .tyh-button-text {
+.tyh-button--prohibit--default:active .tyh-button-text {
   color: #a0a0a0;
 }
 .tyh-button--prohibit--primary {
@@ -209,6 +205,23 @@
 .tyh-button--prohibit--warning:hover {
   background: #ffe07a;
   box-shadow: none;
+}
+.tyh-button--prohibit--default-simple {
+  cursor: not-allowed;
+  background: #fff;
+  border: 1px solid #dcdfe6;
+}
+.tyh-button--prohibit--default-simple .tyh-button-text {
+  color: #a0a0a0;
+}
+.tyh-button--prohibit--default-simple:active,
+.tyh-button--prohibit--default-simple:hover {
+  background: #fff;
+  box-shadow: none;
+}
+.tyh-button--prohibit--default-simple:active .tyh-button-text,
+.tyh-button--prohibit--default-simple:hover .tyh-button-text {
+  color: #a0a0a0;
 }
 .tyh-button--prohibit--primary-simple {
   cursor: not-allowed;
