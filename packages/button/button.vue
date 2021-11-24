@@ -17,7 +17,11 @@
       },
     ]"
   >
-    <tyh-icon v-if="icon" :icon="icon" :color="type ? '#fff' : ''" />
+    <tyh-icon
+      v-if="icon"
+      :icon="icon"
+      :color="type !== 'default' ? '#fff' : ''"
+    />
     <span class="tyh-button-text" :class="[{ 'tyh-button-icon-margin': icon }]">
       <slot></slot>
     </span>
