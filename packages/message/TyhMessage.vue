@@ -14,7 +14,7 @@
 
 <script setup>
 import { onMounted, ref } from 'vue'
-import TyhIcon from '../icon/icon.vue'
+import TyhIcon from '../icon/TyhIcon.vue'
 defineProps({
   message: String,
   type: String,
