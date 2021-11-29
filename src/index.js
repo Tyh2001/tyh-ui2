@@ -17,6 +17,7 @@ import TyhBackTop from '../packages/back-top'
 import TyhSkeleton from '../packages/skeleton'
 import TyhAlert from '../packages/alert'
 import TyhRadio from '../packages/radio'
+import TyhRate from '../packages/rate'
 
 const components = [
   TyhButton,
@@ -36,7 +37,8 @@ const components = [
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,
-  TyhRadio
+  TyhRadio,
+  TyhRate
 ]
 
 const install = app => {
@@ -46,7 +48,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.3.2",
+  version: "1.3.3",
   install
 }
 
@@ -69,7 +71,8 @@ export {
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,
-  TyhRadio
+  TyhRadio,
+  TyhRate
 }
 
 export default tyhUi
