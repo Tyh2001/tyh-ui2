@@ -1,7 +1,7 @@
-import TyhTurnPage from './turn-page.vue'
+import TyhTurnPage from './TyhTurnPage.vue'
 
-TyhTurnPage.install = function (Vue) {
-  Vue.component(TyhTurnPage.name, TyhTurnPage)
+TyhTurnPage.install = app => {
+  app.component('TyhTurnPage', TyhTurnPage)
 }
 
 export default TyhTurnPage

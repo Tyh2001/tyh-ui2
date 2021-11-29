@@ -1,5 +1,5 @@
 import { createVNode, render } from 'vue'
-import TyhMessage from './message.vue'
+import TyhMessage from './TyhMessage.vue'
 
 const divVNode = createVNode('div')
 render(divVNode, document.body)

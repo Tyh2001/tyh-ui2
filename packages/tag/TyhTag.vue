@@ -20,10 +20,6 @@
   </span>
 </template>
 
-<script>
-export default { name: 'TyhTag' }
-</script>
-
 <script setup>
 defineProps({
   color: String,

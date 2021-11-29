@@ -32,10 +32,6 @@
   </a>
 </template>
 
-<script>
-export default { name: 'TyhLink' }
-</script>
-
 <script setup>
 defineProps({
   url: String, // 跳转的路径参数

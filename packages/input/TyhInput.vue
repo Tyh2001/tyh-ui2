@@ -38,10 +38,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhInput' }
-</script>
-
 <script setup>
 defineProps({
   modelValue: String, // 内容

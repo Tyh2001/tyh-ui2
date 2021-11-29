@@ -20,10 +20,6 @@
   </p>
 </template>
 
-<script>
-export default { name: 'TyhTurnPageItem' }
-</script>
-
 <script setup>
 import { inject } from 'vue'
 defineProps({

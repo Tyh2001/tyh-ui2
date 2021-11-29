@@ -11,10 +11,6 @@
   </span>
 </template>
 
-<script>
-export default { name: 'TyhMenuItem' }
-</script>
-
 <script setup>
 import { getCurrentInstance } from 'vue'
 const props = defineProps({

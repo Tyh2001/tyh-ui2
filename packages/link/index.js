@@ -1,7 +1,7 @@
-import TyhLink from './link.vue'
+import TyhLink from './TyhLink.vue'
 
-TyhLink.install = function (Vue) {
-  Vue.component(TyhLink.name, TyhLink)
+TyhLink.install = app => {
+  app.component('TyhLink', TyhLink)
 }
 
 export default TyhLink

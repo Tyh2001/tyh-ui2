@@ -4,10 +4,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhCrumbs' }
-</script>
-
 <script setup>
 import { provide } from 'vue'
 const props = defineProps({

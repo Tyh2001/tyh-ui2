@@ -11,10 +11,6 @@
   </fieldset>
 </template>
 
-<script>
-export default { name: 'TyhDivision' }
-</script>
-
 <script setup>
 defineProps({
   position: {

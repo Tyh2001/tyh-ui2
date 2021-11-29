@@ -1,7 +1,7 @@
-import TyhTag from './tag.vue'
+import TyhTag from './TyhTag.vue'
 
-TyhTag.install = function (Vue) {
-  Vue.component(TyhTag.name, TyhTag)
+TyhTag.install = app => {
+  app.component('TyhTag', TyhTag)
 }
 
 export default TyhTag

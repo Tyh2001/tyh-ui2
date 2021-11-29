@@ -32,10 +32,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhList' }
-</script>
-
 <script setup>
 const props = defineProps({
   header: [String, Number], // header 内容

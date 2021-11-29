@@ -15,10 +15,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhCard' }
-</script>
-
 <script setup>
 defineProps({
   shadow: String, // 阴影显示时机	

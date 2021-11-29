@@ -1,7 +1,7 @@
-import TyhAlert from './alert.vue'
+import TyhAlert from './TyhAlert.vue'
 
-TyhAlert.install = function (Vue) {
-  Vue.component(TyhAlert.name, TyhAlert)
+TyhAlert.install = app => {
+  app.component('TyhAlert', TyhAlert)
 }
 
 export default TyhAlert

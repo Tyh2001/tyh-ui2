@@ -11,10 +11,6 @@
   />
 </template>
 
-<script>
-export default { name: 'TyhSkeleton' }
-</script>
-
 <script setup>
 defineProps({
   round: Boolean,

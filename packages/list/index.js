@@ -1,7 +1,7 @@
-import TyhList from './list.vue'
+import TyhList from './TyhList.vue'
 
-TyhList.install = function (Vue) {
-  Vue.component(TyhList.name, TyhList)
+TyhList.install = app => {
+  app.component('TyhList', TyhList)
 }
 
 export default TyhList

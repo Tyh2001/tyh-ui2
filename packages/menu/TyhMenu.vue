@@ -8,10 +8,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhMenu' }
-</script>
-
 <script setup>
 defineProps({
   backgroundColor: { // 背景色

@@ -3,10 +3,6 @@
   <slot></slot>
 </template>
 
-<script>
-export default { name: 'TyhRadio' }
-</script>
-
 <script setup>
 </script>
 

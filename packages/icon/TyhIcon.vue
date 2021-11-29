@@ -5,10 +5,6 @@
   />
 </template>
 
-<script>
-export default { name: 'TyhIcon' }
-</script>
-
 <script setup>
 defineProps({
   icon: String,

@@ -1,7 +1,7 @@
-import TyhCrumbsItem from './crumbs-item.vue'
+import TyhCrumbsItem from './TyhCrumbsItem.vue'
 
-TyhCrumbsItem.install = function (Vue) {
-  Vue.component(TyhCrumbsItem.name, TyhCrumbsItem)
+TyhCrumbsItem.install = app => {
+  app.component('TyhCrumbsItem', TyhCrumbsItem)
 }
 
 export default TyhCrumbsItem

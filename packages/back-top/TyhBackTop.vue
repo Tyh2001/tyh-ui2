@@ -9,10 +9,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhBackTop' }
-</script>
-
 <script setup>
 import { ref, onMounted } from 'vue'
 defineProps({

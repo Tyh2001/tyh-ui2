@@ -1,7 +1,7 @@
-import TyhInput from './input.vue'
+import TyhInput from './TyhInput.vue'
 
-TyhInput.install = function (Vue) {
-  Vue.component(TyhInput.name, TyhInput)
+TyhInput.install = app => {
+  app.component('TyhInput', TyhInput)
 }
 
 export default TyhInput

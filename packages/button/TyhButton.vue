@@ -28,15 +28,14 @@
   </button>
 </template>
 
-<script>
-export default { name: 'tyh-button' }
-</script>
-
 <script setup>
 defineProps({
   type: {
     type: String,
-    default: 'default'
+    default: 'default',
+    validator (val) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    }
   }, // 按钮的类型
   round: Boolean, // 圆角按钮
   prohibit: Boolean, // 禁用状态

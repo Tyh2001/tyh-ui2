@@ -11,10 +11,6 @@
   </span>
 </template>
 
-<script>
-export default { name: 'TyhCrumbsItem' }
-</script>
-
 <script setup>
 import { ref, inject } from 'vue'
 import { getCurrentInstance } from 'vue'

@@ -12,10 +12,6 @@
   </div>
 </template>
 
-<script>
-export default { name: 'TyhMessage' }
-</script>
-
 <script setup>
 import { onMounted, ref } from 'vue'
 import TyhIcon from '../icon/icon.vue'

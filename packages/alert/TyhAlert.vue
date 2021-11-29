@@ -7,7 +7,7 @@
         ? type
           ? `tyh-alert-background-${type}`
           : 'tyh-alert-background-'
-        : ''
+        : '',
     ]"
     :style="[{ justifyContent: center && 'center' }]"
   >
@@ -18,10 +18,6 @@
     <tyh-icon v-if="close" icon="tyh-ui-guanbi" @click="closeAlert" />
   </div>
 </template>
-
-<script>
-export default { name: 'tyh-alert' }
-</script>
 
 <script setup>
 defineProps({
