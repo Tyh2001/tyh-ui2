@@ -1,7 +1,13 @@
 <template>
   <div class="tyh-image">
     <img
-      :class="[`tyh-image-${fit}`]"
+      :draggable="draggable"
+      :class="[
+        `tyh-image-${fit}`,
+        {
+          'tyh-image-select': select,
+        },
+      ]"
       :style="[{ width, height }]"
       :src="src"
       :alt="alt"
@@ -20,6 +26,8 @@ defineProps({
     }
   },
   width: String,
-  height: String
+  height: String,
+  select: Boolean, // 是否可以选择
+  draggable: Boolean, // 是否可以拖动
 })
 </script>

@@ -1,0 +1,44 @@
+<template>
+  <div class="tyh-avatar">
+    <img
+      :draggable="draggable"
+      :class="[
+        `tyh-avatar-${fit}`,
+        {
+          'tyh-avatar-round': round,
+          'tyh-avatar-border': border,
+          'tyh-avatar-select': select,
+        },
+      ]"
+      :style="[
+        {
+          width: `${size * 10}px`,
+          height: `${size * 10}px`,
+        },
+      ]"
+      :src="src"
+      :alt="alt"
+    />
+  </div>
+</template>
+
+<script setup>
+defineProps({
+  src: String,
+  alt: String,
+  size: {
+    type: [String, Number],
+    default: '8'
+  },
+  fit: {
+    type: String,
+    validator (value) {
+      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(value)
+    }
+  },
+  round: Boolean,
+  border: Boolean,
+  select: Boolean, // 是否可以选择
+  draggable: Boolean, // 是否可以拖动图片
+})
+</script>
