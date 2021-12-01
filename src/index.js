@@ -16,7 +16,6 @@ import TyhTurnPageItem from '../packages/turn-page-item'
 import TyhBackTop from '../packages/back-top'
 import TyhSkeleton from '../packages/skeleton'
 import TyhAlert from '../packages/alert'
-import TyhRadio from '../packages/radio'
 import TyhRate from '../packages/rate'
 import TyhImage from '../packages/image'
 
@@ -38,7 +37,6 @@ const components = [
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,
-  TyhRadio,
   TyhRate,
   TyhImage
 ]
@@ -50,7 +48,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.3.4",
+  version: "1.3.5",
   install
 }
 
@@ -73,7 +71,6 @@ export {
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,
-  TyhRadio,
   TyhRate,
   TyhImage
 }
