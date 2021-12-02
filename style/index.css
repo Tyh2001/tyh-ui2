@@ -1297,7 +1297,7 @@
 .tyh-footer {
   height: 60px;
   padding: 0 20px;
-  display: flex;
+  width: 100%;
   box-sizing: border-box;
   flex-shrink: 0;
 }
