@@ -1,5 +1,9 @@
 # 更新日志
 
+## 1.4.1 (2021-12-02)
+
+- 添加 Container 布局容器组件 tyh-aside 配置项
+
 ## 1.4.0 (2021-12-02)
 
 - 添加 Container 布局容器组件 tyh-footer,tyh-header 部分的配置项
