@@ -19,6 +19,11 @@ import TyhAlert from '../packages/alert'
 import TyhRate from '../packages/rate'
 import TyhImage from '../packages/image'
 import TyhAvatar from '../packages/avatar'
+import TyhAside from '../packages/container/TyhAside'
+import TyhContainer from '../packages/container/TyhContainer'
+import TyhFooter from '../packages/container/TyhFooter'
+import TyhHeader from '../packages/container/TyhHeader'
+import TyhMain from '../packages/container/TyhMain'
 
 const components = [
   TyhButton,
@@ -40,7 +45,12 @@ const components = [
   TyhAlert,
   TyhRate,
   TyhImage,
-  TyhAvatar
+  TyhAvatar,
+  TyhAside,
+  TyhContainer,
+  TyhFooter,
+  TyhHeader,
+  TyhMain
 ]
 
 const install = app => {
@@ -50,7 +60,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.3.6",
+  version: "1.3.7",
   install
 }
 
@@ -75,7 +85,12 @@ export {
   TyhAlert,
   TyhRate,
   TyhImage,
-  TyhAvatar
+  TyhAvatar,
+  TyhAside,
+  TyhContainer,
+  TyhFooter,
+  TyhHeader,
+  TyhMain
 }
 
 export default tyhUi
