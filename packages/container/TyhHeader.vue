@@ -1,5 +1,14 @@
 <template>
-  <header class="tyh-header">
+  <header class="tyh-header" :style="[{ height }]">
     <slot></slot>
   </header>
 </template>
+
+<script setup>
+defineProps({
+  height: {
+    type: String,
+    default: '60px'
+  }
+})
+</script>
