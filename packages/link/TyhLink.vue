@@ -1,23 +1,28 @@
 <template>
   <a
     :class="isClass()"
-    :style="[underline ? 'text-decoration: none' : '']"
+    :style="[{ textDecoration: underline ? 'none' : 'underline' }]"
     :href="prohibit ? 'javascript:void(0)' : url"
     :target="target"
   >
     <tyh-icon
       v-if="icon"
       size="15"
-      style="margin-right: 3px"
+      :style="[
+        'margin-right: 2px',
+        {
+          cursor: prohibit ? 'no-drop' : 'pointer',
+        },
+      ]"
       :icon="icon"
-      :color="iconColor()"
+      :color="COLOR[type]"
     />
     <slot />
   </a>
 </template>
 
 <script setup>
-const ICON_COLOR = {
+const COLOR = {
   primary: '#3a6ff4',
   success: '#54c600',
   danger: '#d10f1b',
@@ -47,8 +52,5 @@ const isClass = () => {
     `tyh-link-${props.type}`,
     props.prohibit ? `tyh-link-prohibit-${props.type}` : '',
   ]
-}
-const iconColor = () => {
-  return ICON_COLOR[props.type]
 }
 </script>

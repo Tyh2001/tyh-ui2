@@ -1,13 +1,6 @@
 <template>
   <span
-    class="tyh-tag"
-    :class="[
-      `tyh-tag-${type}`,
-      size ? `tyh-tag-${size}` : '',
-      {
-        'tyh-tag-round': round,
-      },
-    ]"
+    :class="isClass()"
     :style="[{ color: type === 'default' ? '#333' : '#fff' }]"
   >
     <slot />
@@ -23,7 +16,7 @@
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   type: {
     type: String,
     default: 'default',
@@ -43,5 +36,15 @@ defineProps({
 const emit = defineEmits(['close'])
 const closeTag = () => {
   emit('close')
+}
+const isClass = () => {
+  return [
+    'tyh-tag',
+    `tyh-tag-${props.type}`,
+    props.size ? `tyh-tag-${props.size}` : '',
+    {
+      'tyh-tag-round': props.round
+    }
+  ]
 }
 </script>
