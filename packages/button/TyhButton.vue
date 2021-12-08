@@ -1,5 +1,5 @@
 <template>
-  <button class="tyh-button" :class="btnClass" :disabled="disabled">
+  <button :class="isClass()" :disabled="disabled">
     <tyh-icon v-if="icon" :icon="icon" :color="textColor" />
     <span
       class="tyh-button-text"
@@ -34,8 +34,9 @@ const props = defineProps({
 const textColor = computed(() => {
   return props.type === 'default' ? '#333' : '#fff'
 })
-const btnClass = computed(() => {
+const isClass = () => {
   return [
+    'tyh-button',
     `tyh-button-${props.type}`,
     props.disabled ? `tyh-button-disabled-${props.type}` : '',
     props.size ? `tyh-button-size-${props.size}` : '',
@@ -44,5 +45,5 @@ const btnClass = computed(() => {
       'tyh-button-square': props.square,
     }
   ]
-})
+}
 </script>

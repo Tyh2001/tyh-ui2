@@ -1,45 +1,54 @@
 <template>
   <a
-    class="tyh-link"
-    :class="[
-      type ? `tyh-link--${type}` : 'tyh-link--',
-      hoverline
-        ? type
-          ? `tyh-link--hoverline--${type}`
-          : 'tyh-link--hoverline'
-        : '',
-      underline
-        ? type
-          ? `tyh-link--underline--${type}`
-          : 'tyh-link--underline'
-        : '',
-      prohibit
-        ? type
-          ? `tyh-link-prohibit-${type}`
-          : 'tyh-link-prohibit-'
-        : '',
-    ]"
+    :class="isClass()"
+    :style="[underline ? 'text-decoration: none' : '']"
     :href="prohibit ? 'javascript:void(0)' : url"
     :target="target"
   >
     <tyh-icon
-      v-if="iconClass"
-      :icon="iconClass"
+      v-if="icon"
       size="15"
       style="margin-right: 3px"
+      :icon="icon"
+      :color="iconColor()"
     />
-    <slot></slot>
+    <slot />
   </a>
 </template>
 
 <script setup>
-defineProps({
-  url: String, // 跳转的路径参数
-  type: String, // 字体颜色
-  hoverline: Boolean, // 移入显示下划线
-  underline: Boolean, // 显示下划线
-  target: String, // 是否以一个新的标签页打开
-  iconClass: String, // icon
-  prohibit: Boolean // 是否禁用
+const ICON_COLOR = {
+  primary: '#3a6ff4',
+  success: '#54c600',
+  danger: '#d10f1b',
+  warning: '#fbcc30',
+  default: '#3f536e'
+}
+const props = defineProps({
+  type: {
+    type: String,
+    default: 'default',
+    validator (val) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    }
+  },
+  prohibit: Boolean,
+  url: String,
+  underline: {
+    type: Boolean,
+    default: true
+  },
+  target: String,
+  icon: String
 })
+const isClass = () => {
+  return [
+    'tyh-link',
+    `tyh-link-${props.type}`,
+    props.prohibit ? `tyh-link-prohibit-${props.type}` : '',
+  ]
+}
+const iconColor = () => {
+  return ICON_COLOR[props.type]
+}
 </script>
