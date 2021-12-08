@@ -5,6 +5,7 @@
 - 优化 Tag 组件
 - Tag 组件 isclose 配置项改为 isClose
 - Tag 组件 onClose 事件改为 close
+- Tag 组件 color 配置改为 type
 
 ## 1.4.3 (2021-12-08)
 
