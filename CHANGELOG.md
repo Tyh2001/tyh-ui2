@@ -1,5 +1,18 @@
 # 更新日志
 
+## 1.4.3 (2021-12-08)
+
+- 修复 Button 不能禁用 bug
+- Button 样式由 387 行样式缩减到了 113 行，优化更好了
+- 废除 Button 组件的 simple ，prohibit 和 big 配置项
+- 新增 Button 组件的 disabled 配置项，disabled 配置项为禁用配置
+- 按钮的尺寸修改现在变得更加自由了，没有过多的冗余配置
+- Button 按钮组件的 size 属性新增 large 配置选项
+
+## 1.4.2 (2021-12-02)
+
+- 修复语法 bug
+
 ## 1.4.1 (2021-12-02)
 
 - 添加 Container 布局容器组件 tyh-aside 配置项

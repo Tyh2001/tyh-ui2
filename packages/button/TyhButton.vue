@@ -1,47 +1,48 @@
 <template>
-  <button
-    class="tyh-button"
-    :class="[
-      type ? (!simple ? `tyh-button--${type}` : '') : 'tyh-button--',
-      prohibit
-        ? !simple
-          ? `tyh-button--prohibit--${type}`
-          : `tyh-button--prohibit--${type}-simple`
-        : '',
-      simple ? `tyh-button--${type}-simple` : '',
-      size ? `tyh-button--size-${size}` : '',
-      {
-        'tyh-button--round': round,
-        'tyh-button-icon-margin': icon,
-        'tyh-button-big': big,
-      },
-    ]"
-  >
-    <tyh-icon
-      v-if="icon"
-      :icon="icon"
-      :color="type !== 'default' ? '#fff' : ''"
-    />
-    <span class="tyh-button-text" :class="[{ 'tyh-button-icon-margin': icon }]">
-      <slot></slot>
+  <button class="tyh-button" :class="btnClass" :disabled="disabled">
+    <tyh-icon v-if="icon" :icon="icon" :color="textColor" />
+    <span
+      class="tyh-button-text"
+      :style="[icon ? 'margin-left:5px' : '', { color: textColor }]"
+    >
+      <slot />
     </span>
   </button>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+const props = defineProps({
   type: {
     type: String,
     default: 'default',
     validator (val) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
     }
-  }, // 按钮的类型
-  round: Boolean, // 圆角按钮
-  prohibit: Boolean, // 禁用状态
-  icon: String, // icon
-  simple: Boolean, // 朴素按钮
-  big: Boolean, // 长按钮
-  size: String // 按钮尺寸
+  },
+  round: Boolean,
+  disabled: Boolean,
+  icon: String,
+  size: {
+    type: String,
+    validator (val) {
+      return ['large', 'small', 'mini'].includes(val)
+    }
+  },
+  square: Boolean
+})
+const textColor = computed(() => {
+  return props.type === 'default' ? '#333' : '#fff'
+})
+const btnClass = computed(() => {
+  return [
+    props.type ? `tyh-button-${props.type}` : '',
+    props.disabled ? `tyh-button-disabled-${props.type}` : '',
+    props.size ? `tyh-button-size-${props.size}` : '',
+    {
+      'tyh-button-round': props.round,
+      'tyh-button-square': props.square,
+    }
+  ]
 })
 </script>

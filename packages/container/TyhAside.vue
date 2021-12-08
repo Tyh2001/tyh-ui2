@@ -6,7 +6,9 @@
 
 <script setup>
 defineProps({
-  width: String,
-  default: '200px'
+  width: {
+    type: String,
+    default: '200px'
+  }
 })
 </script>
