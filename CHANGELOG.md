@@ -1,5 +1,11 @@
 # 更新日志
 
+## 1.4.4 (2021-12-08)
+
+- 优化 Tag 组件
+- Tag 组件 isclose 配置项改为 isClose
+- Tag 组件 onClose 事件改为 close
+
 ## 1.4.3 (2021-12-08)
 
 - 修复 Button 不能禁用 bug

@@ -36,7 +36,7 @@ const textColor = computed(() => {
 })
 const btnClass = computed(() => {
   return [
-    props.type ? `tyh-button-${props.type}` : '',
+    `tyh-button-${props.type}`,
     props.disabled ? `tyh-button-disabled-${props.type}` : '',
     props.size ? `tyh-button-size-${props.size}` : '',
     {
