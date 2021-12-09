@@ -2,29 +2,27 @@
   <img height="260px" src="https://tianyuhao.icu/tyhui/v3/assets/logo.1320fb15.png">
 </p>
 
-## :bulb:前言
+<p align="center"><a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">Chinese</a> | English</p>
 
-tyh-ui 的下一代 ui 组件库，基于 vue3.0 版本，全面拥抱 vue3.0
+## Introduction:bulb:
 
-官网：https://tianyuhao.icu/tyhui/v3
+The next generation UI component library of tyh UI is based on vue3 Version, fully embrace vue3
 
-> 简洁至上:trophy:
+> Simplicity first
 
-tyh-ui 整体非常简洁明了，虽没有很多高级的组件，但它是使用最简单的方式达到实用的效果。
+Tyh UI is very concise and clear as a whole, although it does not have many advanced components,But the results were achieved in a simple way.
 
-> 轻量容易:unlock:
+> Light weight and easy
 
-使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。
+Easy to use, simple configuration, clear directory, simple structure, lightweight components, easy to use, as easy as copy and paste.
 
-## :wrench:安装
+## Install:wrench:
 
 ```shell
-npm i tyh-ui2
+npm install tyh-ui2
 ```
 
-## :key:快速上手
-
-在 `main.js` 中引入下面内容
+## Quick Start:key:
 
 ```js
 import { createApp } from 'vue'
@@ -34,14 +32,15 @@ import tyhUi2 from 'tyh-ui2'
 createApp(App).use(tyhUi2).mount('#app')
 ```
 
-## :earth_africa:链接
+## Documentation:earth_africa:
 
-- [tyh-ui 官网](https://tianyuhao.icu/tyhui/v3)
-- [Github](https://github.com/Tyh2001)
-- [tyh-ui 源码仓库](https://github.com/Tyh2001/tyh-ui2)
-- [tyh-ui npm](https://www.npmjs.com/package/tyh-ui2)
+To check out live docs, visit [website](https://tianyuhao.icu/tyhui/v3).
 
-## :wave:合作者
+## Changelog:page_facing_up:
+
+Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
+
+## Contribution:wave:
 
 <div style="display: flex; align-items: center;">
   <img style=" float: left;" height="60px" src="https://www.hualigs.cn/image/608132a6c15b2.jpg">
