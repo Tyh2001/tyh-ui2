@@ -38,7 +38,7 @@ defineProps({
   },
   round: Boolean,
   border: Boolean,
-  select: Boolean, // 是否可以选择
-  draggable: Boolean, // 是否可以拖动图片
+  select: Boolean,
+  draggable: Boolean
 })
 </script>

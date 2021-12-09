@@ -1,5 +1,15 @@
 # 更新日志
 
+## 1.4.7 (2021-12-09)
+
+- Input 组件 innerText 配置项改为 placeholder
+- Input 组件 prohibit 配置项改为 disabled
+- Input 组件 prohibit 配置项改为 disabled
+- Input 组件 inpType 配置项改为 type
+- Input 组件 showIcon 配置项改为 icon
+- Input 组件 新增 showPassword 配置项勇于查看密码
+- Input 组件 添加 clear，enter，onblur，onfocus 回调
+
 ## 1.4.6 (2021-12-08)
 
 - 优化 Alert 组件配置项

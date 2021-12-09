@@ -1,70 +1,112 @@
 
 <template>
-  <div class="tyh-input" :class="prohibit ? 'tyh-button-prohibit' : ''">
+  <div class="tyh-input" :class="{ 'tyh-input-disabled': disabled }">
     <tyh-icon
-      v-if="showIcon"
-      class="tyh-input-icon__showIcon"
-      :class="[`tyh-input-icon-${size}-height`]"
-      :icon="showIcon"
+      v-if="icon"
+      :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
+      :style="[
+        {
+          cursor: disabled ? 'not-allowed' : 'Default',
+        },
+      ]"
+      color="#c7c7c7"
+      :icon="icon"
       size="12"
-      color="rgb(199, 199, 199)"
     />
     <input
-      class="tyh-input_inp"
-      :class="[
-        size ? `tyh-input_inp--${size}` : 'tyh-input_inp--medium',
-        clear ? 'tyh-input-clear-padding' : '',
-        prohibit ? 'tyh-button-prohibit' : '',
-        showIcon ? 'tyh-input__padding-left' : '',
-      ]"
-      :type="inpType"
+      :class="isClass()"
+      :type="inputType"
       :value="modelValue"
-      :placeholder="innerText"
+      :placeholder="placeholder"
       :maxlength="max"
-      :disabled="prohibit"
+      :disabled="disabled"
       :autofocus="autofocus"
       :name="name"
-      @input="handleInput"
+      @input="input"
+      @keyup.enter="emit('enter')"
+      @blur="emit('onblur')"
+      @focus="emit('onfocus')"
     />
     <tyh-icon
-      v-if="clear"
-      class="tyh-input-icon__clear"
-      :class="[`tyh-input-icon-${size}-height`]"
-      size="12"
-      color="rgb(199, 199, 199)"
+      v-if="clear && !showPassword"
+      :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
+      :style="[
+        {
+          cursor: disabled ? 'not-allowed' : 'pointer',
+        },
+      ]"
+      color="#c7c7c7"
       icon="tyh-ui-guanbi"
-      @click="clearInputText"
+      size="12"
+      @click="clearText"
+    />
+    <tyh-icon
+      v-if="showPassword"
+      :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
+      :style="[
+        {
+          cursor: disabled ? 'not-allowed' : 'pointer'
+        }
+      ]"
+      color="#c7c7c7"
+      :icon="isPass ? 'tyh-ui-browse' : 'tyh-ui-eye-close'"
+      size="12"
+      @click="showPasswordFn"
     />
   </div>
 </template>
 
 <script setup>
-defineProps({
-  modelValue: String, // 内容
-  innerText: String, // 文字中显示的文字
-  inpType: { // 类型
+import { ref } from 'vue'
+const props = defineProps({
+  modelValue: String,
+  placeholder: String,
+  type: {
     type: String,
     default: 'text',
-    validator (value) {
-      return ['text', 'password'].includes(value)
+    validator (val) {
+      return ['text', 'password'].includes(val)
     }
   },
-  size: { // 尺寸
+  size: {
     type: String,
-    default: 'medium'
+    default: 'medium',
+    validator (val) {
+      return ['large', 'medium', 'small', 'mini'].includes(val)
+    }
   },
-  max: String, // 最大输入上限
-  clear: Boolean, // 是否可以清空
-  showIcon: String, // 左侧显示的图标
-  prohibit: Boolean, // 是否禁用
-  autofocus: Boolean, // 是否自动获取焦点
-  name: String // 原生 name 属性
+  max: Number,
+  clear: Boolean,
+  icon: String,
+  disabled: Boolean,
+  autofocus: Boolean,
+  name: String,
+  showPassword: Boolean
 })
-const emit = defineEmits(['update:modelValue', 'update:modelValue'])
-function handleInput (evt) {
+const emit = defineEmits(['update:modelValue', 'update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
+const input = evt => {
   emit('update:modelValue', evt.target.value)
 }
-function clearInputText () {
+const clearText = () => {
+  if (props.disabled) return
   emit('update:modelValue', '')
+  emit('clear')
+}
+const isClass = () => {
+  return [
+    'tyh-input-input',
+    `tyh-input-input-${props.size}`,
+    {
+      'tyh-input-icon-padding': props.icon,
+      'tyh-input-clear-padding': props.clear,
+      'tyh-input-disabled': props.disabled
+    }
+  ]
+}
+const inputType = ref(props.type)
+const isPass = ref(false)
+const showPasswordFn = () => {
+  isPass.value = !isPass.value
+  isPass.value ? inputType.value = 'text' : inputType.value = 'password'
 }
 </script>

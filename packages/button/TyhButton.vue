@@ -1,9 +1,9 @@
 <template>
   <button :class="isClass()" :disabled="disabled">
-    <tyh-icon v-if="icon" :icon="icon" :color="textColor" />
+    <tyh-icon v-if="icon" :icon="icon" :color="textColor()" />
     <span
       class="tyh-button-text"
-      :style="[icon ? 'margin-left:5px' : '', { color: textColor }]"
+      :style="[icon ? 'margin-left:5px' : '', { color: textColor() }]"
     >
       <slot />
     </span>
@@ -11,7 +11,6 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
 const props = defineProps({
   type: {
     type: String,
@@ -31,9 +30,9 @@ const props = defineProps({
   },
   square: Boolean
 })
-const textColor = computed(() => {
+const textColor = () => {
   return props.type === 'default' ? '#333' : '#fff'
-})
+}
 const isClass = () => {
   return [
     'tyh-button',
@@ -42,7 +41,7 @@ const isClass = () => {
     props.size ? `tyh-button-size-${props.size}` : '',
     {
       'tyh-button-round': props.round,
-      'tyh-button-square': props.square,
+      'tyh-button-square': props.square
     }
   ]
 }
