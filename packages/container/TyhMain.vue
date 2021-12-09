@@ -1,5 +1,5 @@
 <template>
   <main class="tyh-main">
-    <slot></slot>
+    <slot />
   </main>
 </template>

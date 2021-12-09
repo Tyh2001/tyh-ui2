@@ -5,7 +5,7 @@
     :style="[{ bottom: `${bottom}px`, right: `${right}px` }]"
     @click="backTop"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

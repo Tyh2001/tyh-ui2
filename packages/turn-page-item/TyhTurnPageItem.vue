@@ -1,9 +1,9 @@
 <template>
   <p
-    class="tyh-turn-page-item"
     :class="[
+      'tyh-turn-page-item',
       `tyh-turn-page-item-${direction}`,
-      { 'tyh-turn-page-center': isCenter },
+      { 'tyh-turn-page-center': isCenter }
     ]"
   >
     <router-link :to="url ? url : ''">
@@ -11,7 +11,7 @@
         v-if="direction === 'left'"
         :icon="icon ? icon : 'tyh-ui-arrow-left-bold'"
       />
-      <slot></slot>
+      <slot />
       <tyh-icon
         v-if="direction === 'right'"
         :icon="icon ? icon : 'tyh-ui-arrow-right-bold'"
@@ -27,13 +27,12 @@ defineProps({
   direction: {
     type: String,
     required: true,
-    validator (value) {
-      return ['left', 'right'].includes(value)
+    validator (val) {
+      return ['left', 'right'].includes(val)
     }
   },
   url: String,
   icon: String
 })
-// 是否居中显示
 const isCenter = inject('is-center')
 </script>

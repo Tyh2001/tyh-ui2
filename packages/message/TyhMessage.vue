@@ -1,8 +1,10 @@
 <template>
   <div v-if="isShow" class="tyh-message">
     <span
-      class="tyh-message-body"
-      :class="[type ? `tyh-message-body--${type}` : 'tyh-message-body--']"
+      :class="[
+        'tyh-message-body',
+        type ? `tyh-message-body--${type}` : 'tyh-message-body--'
+      ]"
     >
       <tyh-icon v-if="iconClass" size="15" :icon="iconClass" />
       <span class="tyh-message-message">

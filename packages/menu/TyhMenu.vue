@@ -4,7 +4,7 @@
     :style="[{ background: backgroundColor }]"
     :class="{ 'tyh-menu-bottom-shadow': buttomShadow }"
   >
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

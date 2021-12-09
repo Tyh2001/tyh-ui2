@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-crumbs">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 

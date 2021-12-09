@@ -4,18 +4,18 @@
     class="tyh-division"
     :style="[
       {
-        margin: `${margin} 0`,
-      },
+        margin: `${margin} 0`
+      }
     ]"
   >
     <legend
-      class="tyh-division-text"
       :class="[
-        position ? `tyh-division-text--${position}` : 'tyh-division-text--left',
+        'tyh-division-text',
+        position ? `tyh-division-text--${position}` : 'tyh-division-text--left'
       ]"
     >
       <span :style="[{ color: textColor }]">
-        <slot></slot>
+        <slot />
       </span>
     </legend>
   </fieldset>
@@ -26,8 +26,8 @@
 defineProps({
   position: {
     type: String,
-    validator (value) {
-      return ['left', 'center', 'right'].includes(value)
+    validator (val) {
+      return ['left', 'center', 'right'].includes(val)
     }
   },
   textColor: {

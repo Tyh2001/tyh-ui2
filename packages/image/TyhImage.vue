@@ -21,13 +21,13 @@ defineProps({
   alt: String,
   fit: {
     type: String,
-    validator (value) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(value)
+    validator (val) {
+      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(val)
     }
   },
   width: String,
   height: String,
-  select: Boolean, // 是否可以选择
-  draggable: Boolean, // 是否可以拖动
+  select: Boolean,
+  draggable: Boolean
 })
 </script>

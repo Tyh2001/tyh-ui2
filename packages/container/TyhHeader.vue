@@ -1,6 +1,6 @@
 <template>
   <header class="tyh-header" :style="[{ height }]">
-    <slot></slot>
+    <slot />
   </header>
 </template>
 

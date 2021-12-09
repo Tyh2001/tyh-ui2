@@ -1,6 +1,6 @@
 <template>
   <aside class="tyh-aside" :style="[{ width }]">
-    <slot></slot>
+    <slot />
   </aside>
 </template>
 

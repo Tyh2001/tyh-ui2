@@ -1,9 +1,11 @@
 <template>
   <section
-    class="tyh-container"
-    :class="[flex ? 'tyh-container-flex' : 'tyh-container-noFlex']"
+    :class="[
+      'tyh-container',
+      flex ? 'tyh-container-flex' : 'tyh-container-noFlex'
+    ]"
   >
-    <slot></slot>
+    <slot />
   </section>
 </template>
 

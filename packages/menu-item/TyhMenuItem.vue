@@ -1,12 +1,12 @@
 <template>
   <span class="tyh-menu-item">
     <span
-      class="tyh-menu-item-span"
-      :class="[prohibit ? 'tyh-menu-item-prohibit' : '']"
+      class=""
+      :class="['tyh-menu-item-span', { 'tyh-menu-item-prohibit': prohibit }]"
       :style="[{ color: color }]"
       @click="url && onRouterLink()"
     >
-      <slot></slot>
+      <slot />
     </span>
   </span>
 </template>

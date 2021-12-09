@@ -7,14 +7,14 @@
         {
           'tyh-avatar-round': round,
           'tyh-avatar-border': border,
-          'tyh-avatar-select': select,
-        },
+          'tyh-avatar-select': select
+        }
       ]"
       :style="[
         {
           width: `${size * 10}px`,
-          height: `${size * 10}px`,
-        },
+          height: `${size * 10}px`
+        }
       ]"
       :src="src"
       :alt="alt"
@@ -32,8 +32,8 @@ defineProps({
   },
   fit: {
     type: String,
-    validator (value) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(value)
+    validator (val) {
+      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(val)
     }
   },
   round: Boolean,

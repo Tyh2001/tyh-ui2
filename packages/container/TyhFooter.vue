@@ -1,6 +1,6 @@
 <template>
   <footer class="tyh-footer" :style="[{ height }]">
-    <slot></slot>
+    <slot />
   </footer>
 </template>
 

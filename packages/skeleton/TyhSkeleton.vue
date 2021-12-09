@@ -1,10 +1,10 @@
 <template>
   <div
-    class="tyh-skeleton"
     :class="[
+      'tyh-skeleton',
       {
         'tyh-skeleton-round': round,
-        'tyh-skeleton-animation': animation,
+        'tyh-skeleton-animation': animation
       },
     ]"
     :style="[{ width, height }]"

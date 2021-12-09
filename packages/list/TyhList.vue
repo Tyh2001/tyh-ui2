@@ -7,8 +7,8 @@
     <div v-if="content.length" class="tyh-list-content">
       <ul class="tyh-list-content-ul">
         <li
-          class="tyh-list-content-li"
           :class="[
+            'tyh-list-content-li',
             {
               'tyh-list-content-li-zebra': zebra,
               'tyh-list-content-li-hoverShow': hoverShow,
@@ -17,11 +17,9 @@
           v-for="(item, index) in content"
           :key="index"
         >
-          <!-- 序号 -->
           <span class="tyh-list-content-li-num" v-if="num">
             {{ index + 1 }}
           </span>
-          <!-- 内容 -->
           <span class="tyh-list-content-li-center">{{ contentKey(item) }}</span>
         </li>
       </ul>

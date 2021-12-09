@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-turn-page">
-    <slot></slot>
+    <slot />
   </div>
 </template>
 
