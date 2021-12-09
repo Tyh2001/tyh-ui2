@@ -1,4 +1,3 @@
-import '../style/index.css'
 import TyhButton from '../packages/button'
 import TyhList from '../packages/list'
 import TyhCard from '../packages/card'
@@ -60,7 +59,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.4.9",
+  version: "1.5.0",
   install
 }
 
