@@ -1,5 +1,9 @@
 # 更新日志
 
+## 1.5.3 (2021-12-10)
+
+- 加入 Text 文字组件
+
 ## 1.5.2 (2021-12-10)
 
 - 优化 TyhBackTop，TyhCard，TyhCrumbs，TyhCrumbsItem，TyhList，TyhMenuItem，TyhTurnPageItem 组件

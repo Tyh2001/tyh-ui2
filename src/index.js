@@ -23,6 +23,7 @@ import TyhContainer from '../packages/container/TyhContainer'
 import TyhFooter from '../packages/container/TyhFooter'
 import TyhHeader from '../packages/container/TyhHeader'
 import TyhMain from '../packages/container/TyhMain'
+import TyhText from '../packages/text'
 
 const components = [
   TyhButton,
@@ -49,7 +50,8 @@ const components = [
   TyhContainer,
   TyhFooter,
   TyhHeader,
-  TyhMain
+  TyhMain,
+  TyhText
 ]
 
 const install = app => {
@@ -59,7 +61,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "1.5.2",
+  version: "1.5.3",
   install
 }
 
@@ -89,7 +91,8 @@ export {
   TyhContainer,
   TyhFooter,
   TyhHeader,
-  TyhMain
+  TyhMain,
+  TyhText
 }
 
 export default tyhUi
