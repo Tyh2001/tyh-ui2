@@ -1,7 +1,6 @@
 <template>
   <div class="tyh-rate">
     <div class="tyh-rate-mouseout" @mouseout="mouseOut">
-      <!-- 空心星星 -->
       <tyh-icon
         v-for="num in 5"
         icon="tyh-ui-favorite"
@@ -10,14 +9,12 @@
         :color="voidColor"
         @mouseover="mouseOver(num)"
       />
-
-      <!-- 实心星星 -->
-      <span class="solid" :style="fontWidth">
+      <span class="solid" :style="fontWidth()">
         <tyh-icon
           v-for="num in 5"
           icon="tyh-ui-favorite-filling"
           size="17"
-          :color="fontColor"
+          :color="color"
           :key="num"
           @mouseover="mouseOver(num)"
           @click="upDataValue"
@@ -29,40 +26,38 @@
 </template>
 
 <script setup>
-import { computed, ref, watch } from 'vue'
+import { ref, watch } from 'vue'
 const props = defineProps({
   modelValue: Number,
-  color: { // 选中的颜色
+  color: {
     type: String,
     default: '#fbcc30'
   },
-  voidColor: { // 未选中的颜色
+  voidColor: {
     type: String,
     default: '#C6D1DE'
   },
   showText: Boolean,
-  SayText: {
+  sayText: {
     type: Array,
     default: ['极差', '失望', '一般', '惊喜', '满意']
   }
 })
 const emit = defineEmits(['update:modelValue', 'change'])
 const width = ref(props.modelValue)
-const fontColor = computed(() => props.color)
-const voidColor = computed(() => props.voidColor)
-function mouseOut () {
+const mouseOut = () => {
   width.value = props.modelValue
 }
-function mouseOver (num) {
+const mouseOver = num => {
   width.value = num
 }
-const fontWidth = computed(() => `width:${width.value * 17}px;`)
-function upDataValue () {
+const fontWidth = () => `width:${width.value * 17}px;`
+const upDataValue = () => {
   emit('update:modelValue', width.value)
-  if (width.value !== props.modelValue) emit('change') // 当发生改变的时候
+  if (width.value !== props.modelValue) emit('change')
 }
 const showSay = ref(null)
-const SayArr = ref([...props.SayText])
+const SayArr = ref([...props.sayText])
 watch(() => width.value, () => {
   switch (width.value) {
     case 1: showSay.value = SayArr.value[0]
