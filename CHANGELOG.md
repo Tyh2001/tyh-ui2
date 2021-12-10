@@ -1,5 +1,11 @@
 # 更新日志
 
+## 1.5.2 (2021-12-10)
+
+- 优化 TyhBackTop，TyhCard，TyhCrumbs，TyhCrumbsItem，TyhList，TyhMenuItem，TyhTurnPageItem 组件
+- 这些组件在书写上变得更加简洁清晰了，删除部分荣誉代码，优化样式
+- TyhTurnPageItem 组件新增 prohibit 配置项
+
 ## 1.5.1 (2021-12-10)
 
 - 优化 Rate 组件

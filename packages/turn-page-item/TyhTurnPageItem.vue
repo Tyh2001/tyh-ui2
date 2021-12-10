@@ -1,29 +1,31 @@
 <template>
-  <p
-    :class="[
-      'tyh-turn-page-item',
-      `tyh-turn-page-item-${direction}`,
-      { 'tyh-turn-page-center': isCenter }
-    ]"
-  >
-    <router-link :to="url ? url : ''">
+  <div class="tyh-turn-page-item" :align="isCenter ? 'center' : direction">
+    <div
+      :class="[
+        'tyh-turn-page-item-link',
+        {
+          'tyh-turn-page-item-prohibit': prohibit
+        }
+      ]"
+      @click="link"
+    >
       <tyh-icon
         v-if="direction === 'left'"
-        :icon="icon ? icon : 'tyh-ui-arrow-left-bold'"
+        :icon="icon || 'tyh-ui-arrow-left-bold'"
       />
       <slot />
       <tyh-icon
         v-if="direction === 'right'"
-        :icon="icon ? icon : 'tyh-ui-arrow-right-bold'"
+        :icon="icon || 'tyh-ui-arrow-right-bold'"
       />
-    </router-link>
-  </p>
+    </div>
+  </div>
 </template>
 
 <script setup>
+import { getCurrentInstance } from 'vue'
 import { inject } from 'vue'
-defineProps({
-  // 指向方向
+const props = defineProps({
   direction: {
     type: String,
     required: true,
@@ -32,7 +34,17 @@ defineProps({
     }
   },
   url: String,
-  icon: String
+  icon: String,
+  prohibit: Boolean
 })
 const isCenter = inject('is-center')
+const { proxy } = getCurrentInstance()
+const link = () => {
+  if (props.prohibit) return
+  try {
+    proxy.$router.push(props.url)
+  } catch (e) {
+    console.log(e)
+  }
+}
 </script>

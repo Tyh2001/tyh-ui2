@@ -4,7 +4,7 @@
       class=""
       :class="['tyh-menu-item-span', { 'tyh-menu-item-prohibit': prohibit }]"
       :style="[{ color: color }]"
-      @click="url && onRouterLink()"
+      @click="url && link()"
     >
       <slot />
     </span>
@@ -14,16 +14,20 @@
 <script setup>
 import { getCurrentInstance } from 'vue'
 const props = defineProps({
-  url: String, // 跳转的地址
-  prohibit: Boolean, // 是否禁用
-  color: { // 文字颜色
+  url: String,
+  prohibit: Boolean,
+  color: {
     type: String,
     default: '#fff'
   }
 })
 const { proxy } = getCurrentInstance()
-function onRouterLink () {
+const link = () => {
   if (props.prohibit) return
-  proxy.$root.$router.push(props.url)
+  try {
+    proxy.$router.push(props.url)
+  } catch (e) {
+    console.log(e)
+  }
 }
 </script>

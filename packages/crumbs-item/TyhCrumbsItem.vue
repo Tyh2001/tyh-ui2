@@ -1,10 +1,10 @@
 <template>
   <span
     :class="['tyh-crumbs-item', { 'tyh-crumbs-item__to': to }]"
-    @click="onRouterTo"
+    @click="link"
   >
     <span class="tyh-crumbs-item-text">
-      <slot></slot>
+      <slot />
     </span>
     <tyh-icon color="#C0C4CC" :icon="icon" />
   </span>
@@ -14,14 +14,17 @@
 import { ref, inject } from 'vue'
 import { getCurrentInstance } from 'vue'
 const props = defineProps({
-  to: String // 跳转的路径
+  to: String
 })
 const icon = ref('')
 const { proxy } = getCurrentInstance()
 icon.value = inject('Crumbs-separator')
-// 点击跳转对应的路由
-function onRouterTo () {
+const link = () => {
   if (!props.to) return
-  proxy.$root.$router.push(props.to)
+  try {
+    proxy.$router.push(props.to)
+  } catch (e) {
+    console.log(e)
+  }
 }
 </script>

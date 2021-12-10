@@ -7,7 +7,7 @@
 <script setup>
 import { provide } from 'vue'
 const props = defineProps({
-  separator: { // 分隔符
+  separator: {
     type: String,
     default: 'tyh-ui-xiexian'
   }

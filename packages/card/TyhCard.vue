@@ -17,7 +17,7 @@
 
 <script setup>
 defineProps({
-  shadow: String, // 阴影显示时机	
-  simple: Boolean // 简约卡片
+  shadow: String,
+  simple: Boolean
 })
 </script>

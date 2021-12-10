@@ -37,13 +37,13 @@
 
 <script setup>
 const props = defineProps({
-  header: [String, Number], // header 内容
-  content: [Array, String], // 主体内容
-  iskey: String, // 循环体
-  footer: [String, Number], // footer 内容
-  zebra: Boolean, // 斑马纹
-  num: Boolean, // 显示序号
-  hoverShow: Boolean // 鼠标移入的投影
+  header: [String, Number],
+  content: [Array, String],
+  iskey: String,
+  footer: [String, Number],
+  zebra: Boolean,
+  num: Boolean,
+  hoverShow: Boolean
 })
 // 根据传来的键名 返回对应的键值
 function contentKey (item) {
