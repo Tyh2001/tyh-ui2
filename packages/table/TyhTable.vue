@@ -54,11 +54,17 @@
 
 <script setup>
 const props = defineProps({
-  data: Array,
-  columns: Array,
+  data: {
+    type: Array,
+    default: []
+  },
+  columns: {
+    type: Array,
+    default: []
+  },
   trHeight: {
     type: String,
-    default: '40'
+    default: '40px'
   },
   align: {
     type: String,
@@ -68,10 +74,7 @@ const props = defineProps({
     }
   },
   zebra: Boolean,
-  border: {
-    type: Boolean,
-    default: false
-  },
+  border: Boolean,
   width: {
     type: String,
     default: '100%'
@@ -81,14 +84,18 @@ const props = defineProps({
     default: 'auto'
   },
   num: Boolean,
-  important: Array,
+  important: {
+    type: Array,
+    default: []
+  },
   importantColor: {
     type: String,
     default: '#fdf5e6'
   }
 })
 const importantStyle = i => {
-  for (const key of props.important) {
+  const importants = props.important
+  for (const key of importants) {
     if (key === i + 1) {
       return `background: ${props.importantColor}`
     }
