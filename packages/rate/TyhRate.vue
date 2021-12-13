@@ -72,5 +72,5 @@ watch(() => width.value, () => {
       break
     default: showSay.value = ''
   }
-})
+}, { immediate: true })
 </script>

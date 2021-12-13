@@ -11,6 +11,13 @@
 </template>
 
 <script setup>
+const COLOR = {
+  primary: '#3a6ff4',
+  success: '#54c600',
+  danger: '#d10f1b',
+  warning: '#fbcc30',
+  default: '#3f536e'
+}
 const props = defineProps({
   type: {
     type: String,
@@ -28,16 +35,19 @@ const props = defineProps({
       return ['large', 'small', 'mini'].includes(val)
     }
   },
-  square: Boolean
+  square: Boolean,
+  simple: Boolean
 })
 const textColor = () => {
-  return props.type === 'default' ? '#333' : '#fff'
+  if (props.simple) return COLOR[props.type]
+  return props.type === 'default' || props.type === '' ? '#333' : '#fff'
 }
 const isClass = () => {
   return [
     'tyh-button',
-    `tyh-button-${props.type}`,
-    props.disabled ? `tyh-button-disabled-${props.type}` : '',
+    props.simple
+      ? props.disabled ? `tyh-button-simple-disabled-${props.type}` : `tyh-button-simple-${props.type}`
+      : props.disabled ? `tyh-button-disabled-${props.type}` : `tyh-button-${props.type}`,
     props.size ? `tyh-button-size-${props.size}` : '',
     {
       'tyh-button-round': props.round,
