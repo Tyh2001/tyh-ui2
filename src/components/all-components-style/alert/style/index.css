@@ -1,0 +1,31 @@
+.tyh-alert {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.tyh-alert .tyh-alert-message {
+  font-size: 15px;
+}
+.tyh-alert .tyh-ui-guanbi {
+  position: absolute;
+  right: 15px;
+}
+.tyh-alert-primary {
+  border: 1px solid #3a6ff4;
+}
+.tyh-alert-success {
+  border: 1px solid #54c600;
+}
+.tyh-alert-danger {
+  border: 1px solid #d10f1b;
+}
+.tyh-alert-warning {
+  border: 1px solid #fbcc30;
+}
+.tyh-alert-default {
+  border: 1px solid #606266;
+}

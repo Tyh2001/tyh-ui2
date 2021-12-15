@@ -1,0 +1,40 @@
+@primary: #3a6ff4;
+@success: #54c600;
+@danger: #d10f1b;
+@warning: #fbcc30;
+@default: #3f536e;
+
+.tyh-link {
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.tyh-link-primary {
+  color: @primary;
+}
+
+.tyh-link-success {
+  color: @success;
+}
+
+.tyh-link-danger {
+  color: @danger;
+}
+
+.tyh-link-warning {
+  color: @warning;
+}
+
+.tyh-link-default {
+  color: @default;
+}
+
+.tyh-link-prohibit-primary,
+.tyh-link-prohibit-success,
+.tyh-link-prohibit-danger,
+.tyh-link-prohibit-warning,
+.tyh-link-prohibit-default {
+  opacity: .5;
+  cursor: no-drop;
+}

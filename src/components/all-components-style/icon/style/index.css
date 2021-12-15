@@ -1,0 +1,222 @@
+@font-face {
+  font-family: "tyh-icon";
+  src: url('./font_2628839_8vsvvpg4u5.woff2') format('woff2'),
+    url('./font_2628839_8vsvvpg4u5.woff') format('woff'),
+    url('./font_2628839_8vsvvpg4u5.ttf') format('truetype');
+}
+
+.tyh-icon {
+  font-family: "tyh-icon" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.tyh-ui-biaoqing-01:before {
+  content: "\e609";
+}
+
+.tyh-ui-jihao-01:before {
+  content: "\e60b";
+}
+
+.tyh-ui-zhaopian-01:before {
+  content: "\e653";
+}
+
+.tyh-ui-dianzan-01:before {
+  content: "\e607";
+}
+
+.tyh-ui-pinglun-01:before {
+  content: "\e60e";
+}
+
+.tyh-ui-taiyang-01:before {
+  content: "\e641";
+}
+
+.tyh-ui-xingxing-01:before {
+  content: "\e631";
+}
+
+.tyh-ui-yueliang-01:before {
+  content: "\e6a4";
+}
+
+.tyh-ui-aixin-01:before {
+  content: "\e606";
+}
+
+.tyh-ui-wifi-01:before {
+  content: "\e605";
+}
+
+.tyh-ui-diannao-01:before {
+  content: "\e81b";
+}
+
+.tyh-ui-suotou-01:before {
+  content: "\e6f4";
+}
+
+.tyh-ui-nv-01:before {
+  content: "\e650";
+}
+
+.tyh-ui-nan-01:before {
+  content: "\e60d";
+}
+
+.tyh-ui-xiexian-01:before {
+  content: "\e604";
+}
+
+.tyh-ui-yonghu-01:before {
+  content: "\e628";
+}
+
+.tyh-ui-shop-01:before {
+  content: "\e763";
+}
+
+.tyh-ui-xiazai-01:before {
+  content: "\e60a";
+}
+
+.tyh-ui-dianhua-01:before {
+  content: "\e6b9";
+}
+
+.tyh-ui-shouji-01:before {
+  content: "\e6bd";
+}
+
+.tyh-ui-wenjian-02:before {
+  content: "\e63a";
+}
+
+.tyh-ui-wenjian-01:before {
+  content: "\e61b";
+}
+
+.tyh-ui-shangchuan-01:before {
+  content: "\e626";
+}
+
+.tyh-ui-series-01:before {
+  content: "\e635";
+}
+
+.tyh-ui-type-01:before {
+  content: "\e60c";
+}
+
+.tyh-ui-channel-01:before {
+  content: "\e603";
+}
+
+.tyh-ui-color-01:before {
+  content: "\e717";
+}
+
+.tyh-ui-close-03:before {
+  content: "\e632";
+}
+
+.tyh-ui-github:before {
+  content: "\e602";
+}
+
+.tyh-ui-cloes-02:before {
+  content: "\e6c5";
+}
+
+.tyh-ui-warning-01:before {
+  content: "\e627";
+}
+
+.tyh-ui-danger-01:before {
+  content: "\ea22";
+}
+
+.tyh-ui-success-01:before {
+  content: "\e600";
+}
+
+.tyh-ui-primary-01:before {
+  content: "\e601";
+}
+
+.tyh-ui-huojian-01:before {
+  content: "\e608";
+}
+
+.tyh-ui-tyhui:before {
+  content: "\e620";
+}
+
+.tyh-ui-left-02:before {
+  content: "\ea28";
+}
+
+.tyh-ui-right-01:before {
+  content: "\ea24";
+}
+
+.tyh-ui-home-01:before {
+  content: "\e612";
+}
+
+.tyh-ui-left-01:before {
+  content: "\ea23";
+}
+
+.tyh-ui-top-01:before {
+  content: "\e614";
+}
+
+.tyh-ui-close-01:before {
+  content: "\e615";
+}
+
+.tyh-ui-top-02:before {
+  content: "\e616";
+}
+
+.tyh-ui-add-01:before {
+  content: "\e618";
+}
+
+.tyh-ui-setting-01:before {
+  content: "\e61a";
+}
+
+.tyh-ui-phone-01:before {
+  content: "\e61c";
+}
+
+.tyh-ui-PaperPlane-01:before {
+  content: "\e61d";
+}
+
+.tyh-ui-sub-01:before {
+  content: "\e61e";
+}
+
+.tyh-ui-trash-01:before {
+  content: "\e61f";
+}
+
+.tyh-ui-bottom-01:before {
+  content: "\ea25";
+}
+
+.tyh-ui-bottom-02:before {
+  content: "\ea26";
+}
+
+.tyh-ui-right-02:before {
+  content: "\ea27";
+}

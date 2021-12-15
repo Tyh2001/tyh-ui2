@@ -4,6 +4,8 @@
 
 <p align="center">中文 | <a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README.md">English</a></p>
 
+<p align="center"><a href="http://tianyuhao.icu/tyhui/v3">tyhUI2 官方文档</a></p>
+
 ## 介绍:bulb:
 
 tyh-ui 的下一代 ui 组件库，基于 vue3.0 版本，全面拥抱 vue3.0
@@ -32,10 +34,6 @@ import 'tyh-ui2/style/index.css'
 
 createApp(App).use(tyhUi2).mount('#app')
 ```
-
-## 官方文档:earth_africa:
-
-要查看实时文档，请访问[网站](https://tianyuhao.icu/tyhui/v3)。
 
 ## 更新日志:page_facing_up:
 

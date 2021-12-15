@@ -1,0 +1,28 @@
+.tyh-link {
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+.tyh-link-primary {
+  color: #3a6ff4;
+}
+.tyh-link-success {
+  color: #54c600;
+}
+.tyh-link-danger {
+  color: #d10f1b;
+}
+.tyh-link-warning {
+  color: #fbcc30;
+}
+.tyh-link-default {
+  color: #3f536e;
+}
+.tyh-link-prohibit-primary,
+.tyh-link-prohibit-success,
+.tyh-link-prohibit-danger,
+.tyh-link-prohibit-warning,
+.tyh-link-prohibit-default {
+  opacity: 0.5;
+  cursor: no-drop;
+}

@@ -1,0 +1,52 @@
+@primary: #3a6ff4;
+@success: #54c600;
+@danger: #d10f1b;
+@warning: #fbcc30;
+@default: #606266;
+
+// 背景色
+@primaryBac: #e8f4ff;
+@successBac: #e1ffea;
+@dangerBac: #ffe8e6;
+@warningBac: #fff1e3;
+@defaultBac: #f6f6f6;
+
+.tyh-alert {
+  min-height: 35px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+  .tyh-alert-message {
+    font-size: 15px;
+  }
+
+  // 关闭按钮
+  .tyh-ui-guanbi {
+    position: absolute;
+    right: 15px;
+  }
+}
+
+.tyh-alert-primary {
+  border: 1px solid @primary;
+}
+
+.tyh-alert-success {
+  border: 1px solid @success;
+}
+
+.tyh-alert-danger {
+  border: 1px solid @danger;
+}
+
+.tyh-alert-warning {
+  border: 1px solid @warning;
+}
+
+.tyh-alert-default {
+  border: 1px solid @default;
+}

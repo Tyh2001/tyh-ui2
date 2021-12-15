@@ -1,0 +1,35 @@
+.tyh-menu-item .tyh-menu-item-span {
+  border-bottom: 3px solid transparent;
+  line-height: 57px;
+  height: 57px;
+  display: inline-block;
+  padding: 0 22px;
+  font-size: 15px;
+  cursor: pointer;
+  position: relative;
+}
+.tyh-menu-item .tyh-menu-item-span::after {
+  content: "";
+  width: 0;
+  height: 2px;
+  background: #409eff;
+  position: absolute;
+  left: 100%;
+  bottom: 0;
+  transition: all 0.4s;
+}
+.tyh-menu-item .tyh-menu-item-span:hover::after {
+  width: 100%;
+  left: 0;
+  transition-delay: 0.1s;
+}
+.tyh-menu-item .tyh-menu-item.active::after {
+  width: 100%;
+}
+.tyh-menu-item .tyh-menu-item-prohibit {
+  cursor: not-allowed;
+  color: #909090 !important;
+}
+.tyh-menu-item .tyh-menu-item-prohibit::after {
+  background: none;
+}

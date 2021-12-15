@@ -1,14 +1,25 @@
 {
-  "name": "tyh-ui2",
-  "version": "1.6.0",
-  "description": "tyh-ui 是一套基于 Vue 3.0 的桌面端轻量级 UI 组件库",
-  "main": "src/index.js",
+  "name": "tyh-ui-next",
+  "version": "0.0.0",
   "scripts": {
-    "test": "npm i tyh-ui2"
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
   },
-  "keywords": [
-    "tyh-ui2"
-  ],
-  "author": "tyh2001",
-  "license": "ISC"
+  "dependencies": {
+    "@vueuse/core": "^7.1.2",
+    "element-plus": "^1.2.0-beta.3",
+    "element3": "^0.0.40",
+    "less": "^4.1.2",
+    "less-loader": "^10.2.0",
+    "sass": "^1.43.4",
+    "tyh-ui2": "^1.5.5",
+    "vue": "^3.2.16",
+    "vue-router": "^4.0.12"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^1.9.3",
+    "babel-plugin-component": "^1.1.1",
+    "vite": "^2.6.4"
+  }
 }

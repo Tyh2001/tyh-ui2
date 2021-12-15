@@ -1,0 +1,63 @@
+.tyh-input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.35s;
+}
+.tyh-input .tyh-input-input {
+  width: 100%;
+  border-radius: 5px;
+  color: #3f536e;
+  border: 1px solid #c5d9e8;
+  outline: none;
+  padding: 0 10px;
+  transition: border 0.35s;
+  background: #fff;
+  box-sizing: border-box;
+}
+.tyh-input .tyh-input-input:focus {
+  border: 1px solid #3a6ff4;
+}
+.tyh-input .tyh-input-icon {
+  position: absolute;
+  left: 10px;
+  user-select: none;
+}
+.tyh-input .tyh-input-input-large,
+.tyh-input .tyh-input-icon-large {
+  line-height: 40px;
+  font-size: 15px;
+}
+.tyh-input .tyh-input-input-medium,
+.tyh-input .tyh-input-icon-medium {
+  line-height: 35px;
+  font-size: 14px;
+}
+.tyh-input .tyh-input-input-small,
+.tyh-input .tyh-input-icon-small {
+  line-height: 30px;
+  font-size: 13px;
+}
+.tyh-input .tyh-input-input-mini,
+.tyh-input .tyh-input-icon-mini {
+  line-height: 25px;
+  font-size: 12px;
+}
+.tyh-input .tyh-input-icon-padding {
+  padding-left: 26px;
+}
+.tyh-input .tyh-input-clear-padding {
+  padding-right: 26px;
+}
+.tyh-input .tyh-input-clear {
+  position: absolute;
+  right: 10px;
+  margin: auto;
+}
+.tyh-input-disabled {
+  background: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  color: #c0c4cc !important;
+  cursor: not-allowed;
+}
