@@ -12,13 +12,13 @@
   <a href="https://www.npmjs.com/package/tyh-ui2">
     <img src="https://badgen.net/npm/v/tyh-ui2" alt="npm package">
   </a>
-  <a style="margin-left:10px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md">
     <img src="https://img.shields.io/badge/tyh--ui2-CHANGELOG-orange" alt="CHANGELOG">
   </a>
-  <a style="margin-left:10px;" href="http://tianyuhao.icu/tyhui/v3">
+  <a style="margin-left:15px;" href="http://tianyuhao.icu/tyhui/v3">
     <img src="https://img.shields.io/badge/tyh--ui2-docs-red" alt="docs">
   </a>
-  <a style="margin-left:10px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">
     <img src="https://img.shields.io/badge/tyh--ui2-README__zh-yellowgreen" alt="README_zh">
   </a>
 </p>
