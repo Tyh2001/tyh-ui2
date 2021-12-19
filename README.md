@@ -2,9 +2,11 @@
   <img height="260px" src="http://tianyuhao.icu/tyhui/v3/assets/logo.1320fb15.png">
 </p>
 
+<p style="font-size:30px;font-weight:600;" align="center">tyh ui</p>
+
 <p align="center"><a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">Chinese</a> | English</p>
 
-<p align="center"><a href="http://tianyuhao.icu/tyhui/v3">tyhUI2 docs</a></p>
+<p align="center"><a href="https://www.npmjs.com/package/tyh-ui2"><img src="https://badgen.net/npm/v/tyh-ui2" alt="npm package"></a><a href="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md"><img src="https://img.shields.io/badge/tyh--ui2-CHANGELOG-orange" alt="CHANGELOG"></a><a href="http://tianyuhao.icu/tyhui/v3"><img src="https://img.shields.io/badge/tyh--ui2-docs-red" alt="docs"></a><a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md"><img src="https://img.shields.io/badge/tyh--ui2-README__zh-yellowgreen" alt="README_zh"></a></p>
 
 ## Introduction:bulb:
 
