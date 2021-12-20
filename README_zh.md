@@ -16,8 +16,8 @@
   <a style="margin-left:15px;" href="http://tianyuhao.icu/tyhui/v3">
     <img src="https://img.shields.io/badge/tyh--ui2-docs-red" alt="docs">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">
-    <img src="https://img.shields.io/badge/tyh--ui2-README__zh-yellowgreen" alt="README_zh">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README.md">
+    <img src="https://img.shields.io/badge/tyh--ui2-README__en-yellowgreen">
   </a>
 </p>
 
