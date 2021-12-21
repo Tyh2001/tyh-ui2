@@ -1,14 +1,42 @@
 {
   "name": "tyh-ui2",
-  "version": "1.6.5",
-  "description": "tyh-ui 是一套基于 Vue 3.0 的桌面端轻量级 UI 组件库",
+  "version": "1.7.0",
+  "description": "The next generation UI component library of tyh UI is based on vue3 Version, fully embrace vue3",
   "main": "src/index.js",
   "scripts": {
     "test": "npm i tyh-ui2"
   },
   "keywords": [
-    "tyh-ui2"
+    "ui",
+    "tyh",
+    "tyh-ui",
+    "tyh-ui2",
+    "vue",
+    "vue3",
+    "setup",
+    "Composition API",
+    "component",
+    "components",
+    "vue-next",
+    "css",
+    "css3",
+    "less",
+    "web",
+    "html",
+    "javascript",
+    "element",
+    "element3",
+    "element-plus",
+    "element-ui"
   ],
-  "author": "tyh2001",
-  "license": "ISC"
+  "author": {
+    "name": "tyh2001",
+    "url": "https://tianyuhao.icu/blog"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fengyuanchen/cropperjs/issues"
+  },
+  "homepage": "http://tianyuhao.icu/tyhui/v3",
+  "repository": "https://github.com/Tyh2001/tyh-ui2"
 }
