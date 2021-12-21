@@ -1,19 +1,14 @@
 <template>
-  <tyh-rate v-model="value3" showText />
-  <tyh-rate
-    v-model="value3"
-    showText
-    :sayText="['1星', '2星', '3星', '4星', '5星']"
-  />
-
-  <tyh-button @click="add">add</tyh-button>
+  <tyh-button-group>
+    <tyh-button type="primary">主要按钮</tyh-button>
+    <tyh-button type="primary">主要按钮</tyh-button>
+    <tyh-button type="primary">主要按钮</tyh-button>
+    <tyh-button type="success">成功按钮</tyh-button>
+  </tyh-button-group>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const value3 = ref(2)
-
-function add () {
-  value3.value++
-}
 </script>
+
+<style scoped>
+</style>
