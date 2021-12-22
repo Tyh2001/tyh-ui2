@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="260px" src="https://tianyuhao.cn/tyhui/v3/assets/logo.1320fb15.png">
+  <img height="260px" src="https://tianyuhao.cn/tyhui/v3/assets/logo.8a99342f.png">
 </p>
 
 <p align="center">
