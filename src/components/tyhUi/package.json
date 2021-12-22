@@ -31,12 +31,12 @@
   ],
   "author": {
     "name": "tyh2001",
-    "url": "https://tianyuhao.icu/blog"
+    "url": "https://tianyuhao.cn/blog"
   },
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/fengyuanchen/cropperjs/issues"
   },
-  "homepage": "http://tianyuhao.icu/tyhui/v3",
+  "homepage": "https://tianyuhao.cn/tyhui/v3",
   "repository": "https://github.com/Tyh2001/tyh-ui2"
 }
