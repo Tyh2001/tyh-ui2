@@ -2,8 +2,8 @@
 
 ├── src<br>
 │ ├── components 组件(components)<br>
-| | ├── all-components-style 组件开发样式(Component development style)<br>
-| | └── tyhUi 组件源文件(Component source file)<br>
+│ │ ├── all-components-style 组件开发样式(Component development style)<br>
+│ │ └── tyhUi 组件源文件(Component source file)<br>
 │ ├── router<br>
 │ ├── App.vue<br>
 │ └── main.js<br>
