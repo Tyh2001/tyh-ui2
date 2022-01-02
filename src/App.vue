@@ -1,25 +1,25 @@
-
 <template>
-  <el-button plain @click="open1"> 成功 </el-button>
-  <el-button plain @click="open2"> 警告 </el-button>
+  <ul>
+    <li v-for="index in 10" :key="index">
+      {{ users[index + numList - 1] }}
+    </li>
+  </ul>
+
+  <tyh-button @click="page++">下一页</tyh-button>
 </template>
+
 <script setup>
-import { Notification } from 'element3'
-
-function open1 () {
-  Notification.success({
-    title: '成功',
-    message: '这是一条成功的提示消息',
-    type: 'success'
-  })
-}
-function open2 () {
-  Notification.warning({
-    title: '警告',
-    message: '这是一条警告的提示消息',
-    type: 'warning'
-  })
+import { computed, ref } from 'vue'
+const users = []
+for (let i = 0; i < 100000; i++) {
+  users.push(`张三${i + 1}`)
 }
 
-
+const page = ref(0)
+const numList = computed(() => {
+  return page.value * 10
+})
 </script>
+
+<style scoped>
+</style>
