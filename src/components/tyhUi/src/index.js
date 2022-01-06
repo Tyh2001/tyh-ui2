@@ -61,13 +61,13 @@ const components = [
 ]
 
 const install = app => {
-  components.forEach(component => {
-    app.use(component)
+  components.forEach(i => {
+    app.use(i)
   })
 }
 
 const tyhUi = {
-  version: "2.0.2",
+  version: "2.1.0",
   install
 }
 

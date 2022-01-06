@@ -7,10 +7,6 @@
     errorIcon="tyh-ui-add"
     @load="load"
   />
-  <!-- <el-image
-   style="width:300px;height:300px"
-    src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
-  /> -->
 </template>
 
 <script setup>
