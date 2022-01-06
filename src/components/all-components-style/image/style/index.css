@@ -19,3 +19,11 @@
 .tyh-image .tyh-image-scale-down {
   object-fit: scale-down;
 }
+.tyh-image .tyh-image-error {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #606266;
+  font-size: 15px;
+}

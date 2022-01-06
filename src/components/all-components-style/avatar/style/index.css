@@ -25,3 +25,22 @@
 .tyh-avatar .tyh-avatar-scale-down {
   object-fit: scale-down;
 }
+.tyh-avatar .tyh-avatar-error {
+  background-color: #c1c4cc;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #c1c4cc;
+  font-size: 15px;
+  position: relative;
+}
+.tyh-avatar .tyh-avatar-error .tyh-icon {
+  width: 70px;
+  height: 70px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
