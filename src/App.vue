@@ -14,7 +14,7 @@ function load () {
   console.log('ok')
 }
 function error () {
-  console.log('err')
+  console.log('error')
 }
 </script>
 
