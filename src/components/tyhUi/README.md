@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="260px" src="https://tianyuhao.cn/tyhui/v3/assets/logo.8a99342f.png">
+  <img height="260px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui2-logo.svg">
 </p>
 
 <p align="center">
@@ -36,7 +36,7 @@ Easy to use, simple configuration, clear directory, simple structure, lightweigh
 ## Install:wrench:
 
 ```shell
-npm install tyh-ui2
+npm i tyh-ui2
 ```
 
 ## Quick Start:key:
