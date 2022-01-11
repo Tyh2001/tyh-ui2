@@ -36,7 +36,7 @@ Easy to use, simple configuration, clear directory, simple structure, lightweigh
 ## Install:wrench:
 
 ```shell
-npm install tyh-ui2
+npm i tyh-ui2
 ```
 
 ## Quick Start:key:
