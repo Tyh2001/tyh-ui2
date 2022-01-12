@@ -10,7 +10,8 @@
 </template>
 
 <script setup>
-function load () {
+function load (a, b) {
+  console.log(a)
   console.log('ok')
 }
 function error () {
