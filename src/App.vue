@@ -1,21 +1,12 @@
 <template>
-  <tyh-avatar
-    size="10"
-    round
-    src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
-    @error="error"
-    errorIcon="tyh-ui-add"
-    @load="load"
-  />
+  <tyh-button @click="change">点击</tyh-button>
 </template>
 
 <script setup>
-function load (a, b) {
-  console.log(a)
-  console.log('ok')
-}
-function error () {
-  console.log('error')
+import { ref } from 'vue'
+const text = ref(12)
+function change (a, b) {
+  text.value = 13
 }
 </script>
 
