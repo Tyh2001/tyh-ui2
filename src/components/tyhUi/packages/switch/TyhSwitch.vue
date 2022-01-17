@@ -1,5 +1,6 @@
 <template>
   <span
+    v-if="closeText"
     class="tyh-switch-closeText"
     :style="[`color:${switchValue ? '#333' : '#3a6ff4'}`]"
   >
@@ -20,7 +21,7 @@
       :class="[
         'tyh-switch-roll',
         {
-          'tyh-switch-change': switchValue,
+          'tyh-switch-change': modelValue,
         },
       ]"
       :style="[`border:2px solid  ${switchColor}`]"
@@ -28,8 +29,9 @@
   </span>
 
   <span
+    v-if="openText"
     class="tyh-switch-openText"
-    :style="[`color:${switchValue ? '#3a6ff4' : '#333'}`]"
+    :style="[`color:${modelValue ? '#3a6ff4' : '#333'}`]"
   >
     {{ openText }}
   </span>
@@ -66,7 +68,7 @@ const clickSwitch = () => {
 }
 
 const switchColor = computed(() => {
-  return switchValue.value ? '#54c600' : '#d10f1b'
+  return props.modelValue ? '#54c600' : '#d10f1b'
 })
 </script>
 
