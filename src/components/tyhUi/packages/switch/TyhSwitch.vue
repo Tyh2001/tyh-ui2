@@ -5,8 +5,14 @@
   >
     {{ closeText }}
   </span>
+
   <span
-    :class="['tyh-switch']"
+    :class="[
+      'tyh-switch',
+      {
+        'tyh-switch-disabled': disabled,
+      },
+    ]"
     :style="[{ backgroundColor: switchColor }]"
     @click="clickSwitch"
   >
@@ -20,6 +26,7 @@
       :style="[`border:2px solid  ${switchColor}`]"
     />
   </span>
+
   <span
     class="tyh-switch-openText"
     :style="[`color:${switchValue ? '#3a6ff4' : '#333'}`]"
@@ -44,13 +51,15 @@ const props = defineProps({
     default: '#54c600'
   },
   closeText: String,
-  openText: String
+  openText: String,
+  disabled: Boolean
 })
 const emit = defineEmits(['update:modelValue', 'change'])
 
 const switchValue = ref(props.modelValue)
 
 const clickSwitch = () => {
+  if (props.disabled) return
   switchValue.value = !switchValue.value
   emit('update:modelValue', switchValue.value)
   emit('change', switchValue.value)

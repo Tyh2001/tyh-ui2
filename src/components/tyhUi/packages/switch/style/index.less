@@ -2,12 +2,11 @@
   width: 40px;
   height: 20px;
   display: inline-block;
-  transition: 0.5s;
+  transition: .3s;
   position: relative;
   border-radius: 20px;
   cursor: pointer;
 
-  // 滚动的小球
   .tyh-switch-roll {
     width: 16px;
     height: 16px;
@@ -15,7 +14,7 @@
     top: 0;
     bottom: 0;
     left: 0;
-    transition: 0.5s;
+    transition: .3s;
     border-radius: 50%;
     background-color: #fff;
   }
@@ -23,6 +22,11 @@
   .tyh-switch-change {
     left: 20px;
   }
+}
+
+.tyh-switch-disabled {
+  opacity: .6;
+  cursor: no-drop;
 }
 
 .tyh-switch-closeText,
