@@ -1,10 +1,5 @@
 <template>
-  <tyh-switch v-model="value" />
-  <tyh-switch :width="60" v-model="value" closeColor="red" openColor="black" />
-  <tyh-switch :width="30"  v-model="value" />
-  <tyh-switch v-model="value" />
-  <tyh-switch v-model="value" />
-  <el-switch v-model="value" />
+  <tyh-switch v-model="value" @change="onChange($event)" />
 </template>
 
 <script setup>
