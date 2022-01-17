@@ -1,0 +1,9 @@
+.tyh-switch {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  background-color: red;
+}
+.tyh-bac {
+  background-color: skyblue;
+}
