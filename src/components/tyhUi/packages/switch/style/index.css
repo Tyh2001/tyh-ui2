@@ -21,3 +21,16 @@
 .tyh-switch .tyh-switch-change {
   left: 20px;
 }
+.tyh-switch-closeText,
+.tyh-switch-openText {
+  vertical-align: top;
+  font-size: 13px;
+  color: #333;
+  transition: 0.3s;
+}
+.tyh-switch-closeText {
+  margin-right: 5px;
+}
+.tyh-switch-openText {
+  margin-left: 5px;
+}
