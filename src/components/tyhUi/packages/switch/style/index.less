@@ -1,12 +1,28 @@
 .tyh-switch {
-  width: 200px;
-  height: 200px;
+  width: 40px;
+  height: 20px;
   display: inline-block;
-  background-color: red;
+  background-color: #3a6ff4;
+  transition: 0.5s;
+  position: relative;
+  border-radius: 20px;
+  cursor: pointer;
 
+  // 滚动的小球
+  .tyh-switch-roll {
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    transition: 0.5s;
+    border-radius: 50%;
+    background-color: #fff;
+    border: 2px solid #3a6ff4;
+  }
 
-}
-
-.tyh-bac {
-  background-color: skyblue;
+  .tyh-switch-change {
+    left: 20px;
+  }
 }

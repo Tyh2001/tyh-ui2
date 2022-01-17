@@ -1,13 +1,13 @@
 <template>
-  <span
-    :class="[
-      'tyh-switch',
-      {
-        'tyh-bac': !switchValue,
-      },
-    ]"
-    @click="changeSwitch"
-  >
+  <span class="tyh-switch" @click="changeSwitch">
+    <span
+      :class="[
+        'tyh-switch-roll',
+        {
+          'tyh-switch-change': switchValue,
+        },
+      ]"
+    />
   </span>
 </template>
 
@@ -17,7 +17,9 @@ const props = defineProps({
   modelValue: {
     type: Boolean,
     required: true
-  }
+  },
+  closeColor: {},
+  openColor: {},
 })
 const emit = defineEmits(['update:modelValue'])
 

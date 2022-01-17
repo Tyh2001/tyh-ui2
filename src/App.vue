@@ -1,5 +1,6 @@
 <template>
   <tyh-switch v-model="value"></tyh-switch>
+  {{ value }}
 </template>
 
 <script setup>
