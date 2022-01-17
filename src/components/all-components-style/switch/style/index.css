@@ -1,46 +1,33 @@
 .tyh-switch {
-  // width: 40px;
-  // height: 20px;
   display: inline-block;
-  transition: .3s;
+  transition: 0.3s;
   position: relative;
   border-radius: 20px;
   cursor: pointer;
-
-  .tyh-switch-roll {
-    // width: 16px;
-    // height: 16px;
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    transition: .3s;
-    border-radius: 50%;
-    background-color: #fff;
-  }
-
-  .tyh-switch-change {
-    left: 20px;
-  }
 }
-
+.tyh-switch .tyh-switch-roll {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  transition: 0.3s;
+  border-radius: 50%;
+  background-color: #fff;
+}
 .tyh-switch-disabled {
-  opacity: .6;
+  opacity: 0.6;
   cursor: no-drop;
 }
-
 .tyh-switch-closeText,
 .tyh-switch-openText {
   vertical-align: top;
   font-size: 13px;
   color: #333;
-  transition: .3s;
+  transition: 0.3s;
 }
-
 .tyh-switch-closeText {
   margin-right: 5px;
 }
-
 .tyh-switch-openText {
   margin-left: 5px;
 }

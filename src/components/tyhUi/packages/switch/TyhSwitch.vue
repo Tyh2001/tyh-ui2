@@ -17,15 +17,7 @@
     :style="switchStyle"
     @click="clickSwitch"
   >
-    <span
-      :class="[
-        'tyh-switch-roll',
-        {
-          'tyh-switch-change': modelValue,
-        },
-      ]"
-      :style="switchRollStyle"
-    />
+    <span class="tyh-switch-roll" :style="switchRollStyle" />
   </span>
 
   <span
@@ -46,11 +38,11 @@ const props = defineProps({
   },
   closeColor: {
     type: String,
-    default: '#d10f1b'
+    default: '#dcdfe6'
   },
   openColor: {
     type: String,
-    default: '#54c600'
+    default: '#3a6ff4'
   },
   closeText: String,
   openText: String,
@@ -90,10 +82,9 @@ const switchRollStyle = computed(() => {
   return [{
     width: `${(props.width / 2) - 4}px`,
     height: `${(props.width / 2) - 4}px`,
+    left: props.modelValue ? `${props.width / 2}px` : '0px'
   },
-  `border:2px solid  ${switchColor.value}`,
+  `border:2px solid  ${switchColor.value}`
   ]
 })
 </script>
-
-<style src="./style/index.css"></style>

@@ -1,14 +1,9 @@
 <template>
   <tyh-switch v-model="value" />
-  <br />
   <tyh-switch :width="60" v-model="value" closeColor="red" openColor="black" />
-  <br />
+  <tyh-switch :width="30"  v-model="value" />
   <tyh-switch v-model="value" />
-  <br />
   <tyh-switch v-model="value" />
-  <br />
-  <tyh-switch v-model="value" />
-  <br />
   <el-switch v-model="value" />
 </template>
 
