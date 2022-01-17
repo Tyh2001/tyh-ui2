@@ -14,7 +14,7 @@
         'tyh-switch-disabled': disabled,
       },
     ]"
-    :style="[{ backgroundColor: switchColor }]"
+    :style="switchStyle"
     @click="clickSwitch"
   >
     <span
@@ -24,7 +24,7 @@
           'tyh-switch-change': modelValue,
         },
       ]"
-      :style="[`border:2px solid  ${switchColor}`]"
+      :style="switchRollStyle"
     />
   </span>
 
@@ -54,7 +54,14 @@ const props = defineProps({
   },
   closeText: String,
   openText: String,
-  disabled: Boolean
+  disabled: Boolean,
+  width: {
+    type: Number,
+    default: 40,
+    validator (val) {
+      return val < 40 ? 40 : val
+    }
+  }
 })
 const emit = defineEmits(['update:modelValue', 'change'])
 
@@ -68,7 +75,24 @@ const clickSwitch = () => {
 }
 
 const switchColor = computed(() => {
-  return props.modelValue ? '#54c600' : '#d10f1b'
+  return props.modelValue ? props.openColor : props.closeColor
+})
+
+const switchStyle = computed(() => {
+  return [{
+    width: `${props.width}px`,
+    height: `${props.width / 2}px`,
+    backgroundColor: switchColor.value
+  }]
+})
+
+const switchRollStyle = computed(() => {
+  return [{
+    width: `${(props.width / 2) - 4}px`,
+    height: `${(props.width / 2) - 4}px`,
+  },
+  `border:2px solid  ${switchColor.value}`,
+  ]
 })
 </script>
 

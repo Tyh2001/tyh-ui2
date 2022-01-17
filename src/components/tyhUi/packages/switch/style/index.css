@@ -1,6 +1,4 @@
 .tyh-switch {
-  width: 40px;
-  height: 20px;
   display: inline-block;
   transition: 0.3s;
   position: relative;
@@ -8,8 +6,6 @@
   cursor: pointer;
 }
 .tyh-switch .tyh-switch-roll {
-  width: 16px;
-  height: 16px;
   position: absolute;
   top: 0;
   bottom: 0;

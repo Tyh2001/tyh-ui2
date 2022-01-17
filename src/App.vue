@@ -1,7 +1,7 @@
 <template>
   <tyh-switch v-model="value" />
   <br />
-  <tyh-switch v-model="value" />
+  <tyh-switch :width="60" v-model="value" closeColor="red" openColor="black" />
   <br />
   <tyh-switch v-model="value" />
   <br />
