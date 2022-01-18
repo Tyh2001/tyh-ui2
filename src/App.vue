@@ -1,8 +1,14 @@
-<template></template>
+<template>
+  <tyh-calendar v-model="value" />
+</template>
 
 <script setup>
-
+const value = new Date()
 </script>
 
-<style scoped>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
 </style>
