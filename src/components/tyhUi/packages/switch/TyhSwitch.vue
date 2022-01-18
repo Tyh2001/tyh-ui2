@@ -49,10 +49,7 @@ const props = defineProps({
   disabled: Boolean,
   width: {
     type: Number,
-    default: 40,
-    validator (val) {
-      return val < 40 ? 40 : val
-    }
+    default: 40
   }
 })
 const emit = defineEmits(['update:modelValue', 'change'])
@@ -71,18 +68,22 @@ const switchColor = computed(() => {
 })
 
 const switchStyle = computed(() => {
+  const width = ref(props.width)
+  if (width.value < 20) width.value = 20
   return [{
-    width: `${props.width}px`,
-    height: `${props.width / 2}px`,
+    width: `${width.value}px`,
+    height: `${width.value / 2}px`,
     backgroundColor: switchColor.value
   }]
 })
 
 const switchRollStyle = computed(() => {
+  const width = ref(props.width)
+  if (width.value < 20) width.value = 20
   return [{
-    width: `${(props.width / 2) - 4}px`,
-    height: `${(props.width / 2) - 4}px`,
-    left: props.modelValue ? `${props.width / 2}px` : '0px'
+    width: `${(width.value / 2) - 4}px`,
+    height: `${(width.value / 2) - 4}px`,
+    left: props.modelValue ? `${width.value / 2}px` : '0px'
   },
   `border:2px solid  ${switchColor.value}`
   ]
