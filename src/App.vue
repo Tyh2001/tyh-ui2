@@ -1,38 +1,31 @@
 <template>
-<div style="height:200px"></div>
-  <tyh-button
-    aria-label="Hey tooltip!"
-    data-microtip-position="top"
-    role="tooltip"
-  >
-    按钮
-  </tyh-button>
+  <tyh-rate v-model="value1" />
+  <tyh-rate v-model="value1" />
+  <el-rate v-model="value1" />
 
-  <tyh-button
-    aria-label="Hey tooltip!"
-    data-microtip-position="top-left"
-    role="tooltip"
-  >
-    按钮
-  </tyh-button>
-  <button
-    aria-label="Hey tooltip!"
-    data-microtip-position="top"
-    role="tooltip"
-  ></button>
+  <tyh-rate
+    v-model="value1"
+    showText
+    :sayText="[
+      '1星',
+      '2星',
+      '3星',
+      '4星',
+      '5星',
+      '52星',
+      '5星2',
+      '5星2',
+      '52星',
+    ]"
+  />
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const value = ref(true)
+const value1 = ref(2)
 
-function onChange (e) {
-  console.log(e)
-}
+const change = () => console.log('123')
 </script>
 
 <style scoped>
-.a {
-  /* background-color: rgb(190, 112, 112); */
-}
 </style>
