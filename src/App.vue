@@ -1,44 +1,57 @@
 <template>
-  <tyh-button>默认按钮</tyh-button>
-  <tyh-button type="primary">主要按钮</tyh-button>
-  <tyh-button type="success">成功按钮</tyh-button>
-  <tyh-button type="danger">危险按钮</tyh-button>
-  <tyh-button type="warning">警告按钮</tyh-button>
+  <tyh-button type="primary" @click="open2">成功</tyh-button>
+  <tyh-button @click="add">tyh-message</tyh-button>
 
-  <br />
-  <el-button :plain="true" @click="open2">成功</el-button>
-  <el-button :plain="true" @click="open3">警告</el-button>
-  <el-button :plain="true" @click="open1">消息</el-button>
-  <el-button :plain="true" @click="open4">错误</el-button>
-  <br />
-  <tyh-switch v-model="aa" :width="10" />
+  <el-button plain @click="open1"> 成功 </el-button>
+  <el-button plain @click="open2"> 警告 </el-button>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const aa = ref(true)
-import { Message } from 'element3'
-function open1 () {
-  Message('这是一条消息提示')
-}
+import { TyhMessage } from './components/tyhUi/packages/message/src/Message.js'
+// console.log(TyhMessage)
+import { Notification } from 'element3'
 
-function open2 () {
-  Message({
-    message: '恭喜你，这是一条成功消息',
+function open1() {
+  Notification.success({
+    title: '成功',
+    message: '这是一条成功的提示消息',
     type: 'success'
   })
 }
-
-function open3 () {
-  Message({
-    message: '警告哦，这是一条警告消息',
+function open2 () {
+  Notification.warning({
+    title: '警告',
+    message: '这是一条警告的提示消息',
     type: 'warning'
   })
 }
 
-function open4 () {
-  Message.error('错了哦，这是一条错误消息')
+const add = () => {
+
+  TyhMessage({
+    message: '这是一段信息', // 提示文字
+    type: 'success', // 类型
+    showClose: true, // 是否显示关闭按钮
+    center: true, // 文字是否居中
+    iconClass: 'tyh-ui-githublogo', // 自定义左侧 icon
+    offset: 20 // Message 距离窗口顶部的偏移量
+  })
 }
+
+// import { ref } from 'vue'
+// const aa = ref(true)
+// import { Message } from 'element3'
+
+// function open2 () {
+//   Message({
+//     // offset: 300,
+//     showClose: true,
+//     message: '恭喜你，这是一条成功消息',
+//     type: 'success'
+//   })
+// }
+
+
 </script>
 
 <style scoped>
