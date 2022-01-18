@@ -1,6 +1,4 @@
-<template>
-  <tyh-switch v-model="value" @change="onChange($event)" />
-</template>
+<template></template>
 
 <script setup>
 import { ref } from 'vue'
@@ -12,4 +10,7 @@ function onChange (e) {
 </script>
 
 <style scoped>
+.a {
+  /* background-color: rgb(190, 112, 112); */
+}
 </style>

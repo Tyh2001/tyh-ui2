@@ -15,8 +15,11 @@ import 'element3/lib/theme-chalk/index.css'
 // import ElementPlus from 'element-plus'
 // import 'element-plus/dist/index.css'
 
+import naive from 'naive-ui'
+
 createApp(App)
   .use(router)
   .use(El3)
   .use(tyhUi2)
+  .use(naive)
   .mount('#app')
