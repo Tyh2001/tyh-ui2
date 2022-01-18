@@ -3,31 +3,33 @@
     <h3>{{ getMonth + 1 }}月</h3>
     <tyh-button type="primary" @click="prevMonth">上个月</tyh-button>
     <tyh-button type="success" @click="nextMonth">下个月</tyh-button>
-    <!-- <tyh-button type="warning" @click="yearMonths(modelValue.getMonth())">
-      回到当前月
-    </tyh-button> -->
 
     <ul class="tyh-calendar-week">
       <li
         class="tyh-calendar-week-item"
         v-for="(item, index) in 7"
         :key="index"
+        :style="[{ width: `${cellWidth}px` }]"
       >
         {{ changeWeek(item) }}
       </li>
     </ul>
 
     <ul class="tyh-calendar-month">
-      <!-- <li
+      <li
         class="tyh-calendar-day"
         v-for="(item, index) in fun_week()"
         :key="index"
-      ></li> -->
+        :style="[{ width: `${cellWidth}px`, height: `${cellWidth}px` }]"
+      ></li>
       <li
         class="tyh-calendar-day"
         v-for="(month, index) in yearMonths(getMonth)"
         :key="index"
-        :style="nowDateStyle(index)"
+        :style="[
+          nowDateStyle(index),
+          { width: `${cellWidth}px`, height: `${cellWidth}px` },
+        ]"
       >
         {{ index + 1 }}
       </li>
@@ -36,23 +38,26 @@
 </template>
 
 <script setup>
-import { ref, computed } from 'vue'
+import { ref } from 'vue'
 const props = defineProps({
   modelValue: {
     type: Object,
     required: true
+  },
+  cellWidth: {
+    type: Number,
+    default: 50
   }
 })
 
 // 获取当前月份
 const getMonth = ref(props.modelValue.getMonth())
-// const getDate = ref(props.modelValue.getDate())
-// const getWeek = ref(props.modelValue.getDay())
 
 // 获取当前月份的1号是周几
-// function fun_week (week) {
-//   return new Date(`${props.modelValue.getFullYear()}-${getMonth.value + 1}-1`).getDay() - 1
-// }
+const fun_week = week => {
+  const res = new Date(`${props.modelValue.getFullYear()}-${getMonth.value + 1}-1`).getDay()
+  return res === 0 ? 7 - 1 : res - 1
+}
 
 // 获取当前月份的时间
 const yearMonths = (month = getMonth.value) => {
@@ -64,12 +69,10 @@ const yearMonths = (month = getMonth.value) => {
   return months[getMonth.value]
 }
 
-
 // 上个月
 const prevMonth = () => {
   if (getMonth.value > 0) {
     getMonth.value--
-    console.log('当前月份的时间是', yearMonths())
     return
   }
   alert('停止')
@@ -79,7 +82,6 @@ const prevMonth = () => {
 const nextMonth = () => {
   if (getMonth.value < 11) {
     getMonth.value++
-    console.log('当前月份的时间是', yearMonths())
     return
   }
   alert('停止')
@@ -114,7 +116,7 @@ const changeWeek = num => {
   return res
 }
 
-
+// 改变当前时间的样式
 const nowDateStyle = date => {
   if (date + 1 === props.modelValue.getDate()) {
     return [{
@@ -123,7 +125,6 @@ const nowDateStyle = date => {
     }]
   }
 }
-
 </script>
 
 <style scoped src="./style/index.css"></style>

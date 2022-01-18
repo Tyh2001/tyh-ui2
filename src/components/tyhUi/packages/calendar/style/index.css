@@ -9,8 +9,6 @@
   flex-wrap: wrap;
 }
 .tyh-calendar .tyh-calendar-month .tyh-calendar-day {
-  width: 48px;
-  height: 48px;
   border: 1px solid #eee;
   display: flex;
   justify-content: center;
@@ -22,7 +20,6 @@
   flex-wrap: wrap;
 }
 .tyh-calendar .tyh-calendar-week .tyh-calendar-week-item {
-  width: 48px;
   height: 30px;
   border: 1px solid #fff;
   display: flex;
