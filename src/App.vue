@@ -1,4 +1,26 @@
-<template></template>
+<template>
+<div style="height:200px"></div>
+  <tyh-button
+    aria-label="Hey tooltip!"
+    data-microtip-position="top"
+    role="tooltip"
+  >
+    按钮
+  </tyh-button>
+
+  <tyh-button
+    aria-label="Hey tooltip!"
+    data-microtip-position="top-left"
+    role="tooltip"
+  >
+    按钮
+  </tyh-button>
+  <button
+    aria-label="Hey tooltip!"
+    data-microtip-position="top"
+    role="tooltip"
+  ></button>
+</template>
 
 <script setup>
 import { ref } from 'vue'
