@@ -81,7 +81,7 @@ function TyhCalendar (props) {
 
   // 获取当前月份的1号是周几
   const fun_week = week => {
-    const res = new Date(`${getYear.value}-${getMonth.value + 1}-1`).getDay()
+    const res = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
     return res === 0 ? 7 - 1 : res - 1
   }
 
