@@ -13,6 +13,7 @@
   box-sizing: border-box;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .tyh-calendar .tyh-calendar-container .tyh-calendar-header .tyh-calendar-isDay {
   color: #333;
