@@ -1,6 +1,6 @@
 <template>
   <span
-    :class="isClass()"
+    :class="isClass"
     :style="[{ color: type === 'default' ? '#333' : '#fff' }]"
   >
     <slot />
@@ -10,12 +10,13 @@
       icon="tyh-ui-close"
       :color="type === 'default' ? '#333' : '#fff'"
       style="margin-left: 7px"
-      @click="closeTag"
+      @click="emit('close')"
     />
   </span>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 const props = defineProps({
   type: {
     type: String,
@@ -34,10 +35,7 @@ const props = defineProps({
   isClose: Boolean
 })
 const emit = defineEmits(['close'])
-const closeTag = () => {
-  emit('close')
-}
-const isClass = () => {
+const isClass = computed(() => {
   return [
     'tyh-tag',
     `tyh-tag-${props.type}`,
@@ -46,5 +44,5 @@ const isClass = () => {
       'tyh-tag-round': props.round
     }
   ]
-}
+})
 </script>

@@ -6,15 +6,15 @@
       :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'Default',
-        },
+          cursor: disabled ? 'not-allowed' : 'Default'
+        }
       ]"
       color="#c7c7c7"
       :icon="icon"
       size="12"
     />
     <input
-      :class="isClass()"
+      :class="isClass"
       :type="inputType"
       :value="modelValue"
       :placeholder="placeholder"
@@ -32,8 +32,8 @@
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'pointer',
-        },
+          cursor: disabled ? 'not-allowed' : 'pointer'
+        }
       ]"
       color="#c7c7c7"
       icon="tyh-ui-guanbi"
@@ -57,7 +57,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 const props = defineProps({
   modelValue: String,
   placeholder: String,
@@ -92,7 +92,7 @@ const clearText = () => {
   emit('update:modelValue', '')
   emit('clear')
 }
-const isClass = () => {
+const isClass = computed(() => {
   return [
     'tyh-input-input',
     `tyh-input-input-${props.size}`,
@@ -102,7 +102,7 @@ const isClass = () => {
       'tyh-input-disabled': props.disabled
     }
   ]
-}
+})
 const inputType = ref(props.type)
 const isPass = ref(false)
 const showPasswordFn = () => {

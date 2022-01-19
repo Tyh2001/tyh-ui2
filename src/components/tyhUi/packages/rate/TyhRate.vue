@@ -22,12 +22,12 @@
         />
       </span>
     </div>
-    <div v-if="showText" class="show-text">{{ showSayFn() }}</div>
+    <div v-if="showText" class="show-text">{{ showSayFn }}</div>
   </div>
 </template>
 
 <script setup>
-import { ref, watch } from 'vue'
+import { ref, watch, computed } from 'vue'
 const props = defineProps({
   modelValue: Number,
   color: {
@@ -54,7 +54,7 @@ const upDataValue = () => {
   if (width.value !== props.modelValue) emit('change')
 }
 
-const showSayFn = () => {
+const showSayFn = computed(() => {
   if (!props.showText) return
   const showSay = ref(null)
   watch(() => width.value, () => {
@@ -74,6 +74,6 @@ const showSayFn = () => {
   }, { immediate: true })
 
   return showSay.value
-}
+})
 
 </script>

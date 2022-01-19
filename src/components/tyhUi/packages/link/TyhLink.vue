@@ -1,6 +1,6 @@
 <template>
   <a
-    :class="isClass()"
+    :class="isClass"
     :style="[{ textDecoration: underline ? 'none' : 'underline' }]"
     :href="prohibit ? 'javascript:void(0)' : url"
     :target="target"
@@ -11,8 +11,8 @@
       :style="[
         'margin-right: 2px',
         {
-          cursor: prohibit ? 'no-drop' : 'pointer',
-        },
+          cursor: prohibit ? 'no-drop' : 'pointer'
+        }
       ]"
       :icon="icon"
       :color="COLOR[type]"
@@ -22,6 +22,7 @@
 </template>
 
 <script setup>
+import { computed } from 'vue'
 const COLOR = {
   primary: '#3a6ff4',
   success: '#54c600',
@@ -46,11 +47,11 @@ const props = defineProps({
   target: String,
   icon: String
 })
-const isClass = () => {
+const isClass = computed(() => {
   return [
     'tyh-link',
     `tyh-link-${props.type}`,
     props.prohibit ? `tyh-link-prohibit-${props.type}` : '',
   ]
-}
+})
 </script>

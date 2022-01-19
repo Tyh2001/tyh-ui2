@@ -11,8 +11,8 @@
             'tyh-list-content-li',
             {
               'tyh-list-content-li-zebra': zebra,
-              'tyh-list-content-li-hoverShow': hoverShow,
-            },
+              'tyh-list-content-li-hoverShow': hoverShow
+            }
           ]"
           v-for="(item, index) in content"
           :key="index"
@@ -45,11 +45,8 @@ const props = defineProps({
   num: Boolean,
   hoverShow: Boolean
 })
-// 根据传来的键名 返回对应的键值
 function contentKey (item) {
-  // 如果 item 是对象但是没有传递 key 参数则直接返回
   if (item instanceof Object && !props.iskey) return item
-  // 如果 item 不是对象，则直接返回
   if (!(item instanceof Object)) return item
   for (const key in item) {
     if (props.iskey === key) {

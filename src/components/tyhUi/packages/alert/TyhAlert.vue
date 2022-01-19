@@ -1,6 +1,6 @@
 <template>
-  <div :class="isClass()" :style="isStyle()">
-    <div class="tyh-alert-message" :style="isMessageStyle()">
+  <div :class="isClass" :style="isStyle">
+    <div class="tyh-alert-message" :style="isMessageStyle">
       <tyh-icon v-if="icon" :icon="icon" :color="COLOR[type]" />
       {{ message }}
     </div>
@@ -8,12 +8,13 @@
       v-if="close"
       icon="tyh-ui-guanbi"
       :color="COLOR[type]"
-      @click="closeAlert"
+      @click="emit('close')"
     />
   </div>
 </template>
 
 <script setup>
+import { computed } from 'vue'
 const BACKGROUND_COLOR = {
   primary: '#e8f4ff',
   success: '#e1ffea',
@@ -43,28 +44,21 @@ const props = defineProps({
   simple: Boolean
 })
 const emit = defineEmits(['close'])
-const closeAlert = () => {
-  emit('close')
-}
-const isClass = () => {
+const isClass = computed(() => {
   return [
     'tyh-alert',
     props.type ? `tyh-alert-${props.type}` : '',
   ]
-}
-const isStyle = () => {
-  return [
-    {
-      justifyContent: props.center && 'center',
-      background: !props.simple ? BACKGROUND_COLOR[props.type] : ''
-    }
-  ]
-}
-const isMessageStyle = () => {
-  return [
-    {
-      color: COLOR[props.type]
-    }
-  ]
-}
+})
+const isStyle = computed(() => {
+  return [{
+    justifyContent: props.center && 'center',
+    background: !props.simple ? BACKGROUND_COLOR[props.type] : ''
+  }]
+})
+const isMessageStyle = computed(() => {
+  return [{
+    color: COLOR[props.type]
+  }]
+})
 </script>
