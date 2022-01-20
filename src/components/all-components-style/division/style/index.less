@@ -1,9 +1,9 @@
 .tyh-division {
   width: 100%;
+  display: inline-block;
   height: 1px;
   background-color: #c0c0c0;
-  display: flex;
-  align-items: center;
+  position: relative;
 
   .tyh-division-text {
     position: absolute;
@@ -11,6 +11,7 @@
     padding: 0 20px;
     font-weight: 500;
     font-size: 14px;
+    transform: translateY(-50%);
   }
 
   .tyh-division-text-right {
@@ -19,12 +20,10 @@
 
   .tyh-division-text-left {
     left: 30px;
-
   }
 
   .tyh-division-text-center {
-    right: 0;
-    left: 0;
-    margin: auto;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
   }
 }

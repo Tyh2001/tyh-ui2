@@ -1,12 +1,18 @@
 <template>
-  <p>adadadada</p>
-  <p>adadadada</p>
-  <p>adadadada</p>
-  <tyh-division>你好</tyh-division>
-  <p>adadadada</p>
-  <tyh-division position="center">你好</tyh-division>
-  <p>adadadada</p>
-  <tyh-division position="right" :margin="21" color="red" icon="tyh-ui-githublogo">你好</tyh-division>
+    <p>adadadada</p>
+    <p>adadadada</p>
+    <p>adadadada</p>
+    <tyh-division>你好</tyh-division>
+    <p>adadadada</p>
+    <tyh-division position="center">你好</tyh-division>
+    <p>adadadada</p>
+    <tyh-division
+      position="right"
+      :margin="21"
+      color="red"
+      icon="tyh-ui-githublogo"
+      >你好</tyh-division
+    >
 </template>
 
 <script setup>
@@ -20,4 +26,10 @@ const value3 = ref(2)
   margin: 0;
   padding: 0;
 }
+/* #box { */
+  /* width: 800px;
+  padding: 30px;
+  box-sizing: border-box;
+  border: 1px solid black;
+} */
 </style>
