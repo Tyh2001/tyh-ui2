@@ -1,42 +1,30 @@
 <template>
-  <fieldset
-    v-if="position"
-    class="tyh-division"
-    :style="[
-      {
-        margin: `${margin} 0`
-      }
-    ]"
-  >
-    <legend
-      :class="[
-        'tyh-division-text',
-        position ? `tyh-division-text--${position}` : 'tyh-division-text--left'
-      ]"
+  <div class="tyh-division" :style="[{ margin: `${margin}px 0` }]">
+    <span
+      :class="['tyh-division-text', `tyh-division-text-${position}`]"
+      :style="[{ color }]"
     >
-      <span :style="[{ color: textColor }]">
-        <slot />
-      </span>
-    </legend>
-  </fieldset>
-  <hr v-else class="tyh-division" />
+      <slot />
+    </span>
+  </div>
 </template>
 
 <script setup>
 defineProps({
   position: {
     type: String,
+    default: 'left',
     validator (val) {
       return ['left', 'center', 'right'].includes(val)
     }
   },
-  textColor: {
+  color: {
     type: String,
     default: '#515a6e'
   },
   margin: {
-    type: String,
-    default: '16px'
+    type: Number,
+    default: 25
   }
 })
 </script>

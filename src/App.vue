@@ -1,6 +1,12 @@
 <template>
-  <tyh-calendar v-model="value" />
-  <!-- <tyh-calendar v-model="value" :cellWidth="2" /> -->
+  <p>adadadada</p>
+  <p>adadadada</p>
+  <p>adadadada</p>
+  <tyh-division>你好</tyh-division>
+  <p>adadadada</p>
+  <tyh-division position="center">你好</tyh-division>
+  <p>adadadada</p>
+  <tyh-division position="right" :margin="21">你好</tyh-division>
 </template>
 
 <script setup>
