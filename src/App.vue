@@ -6,7 +6,7 @@
   <p>adadadada</p>
   <tyh-division position="center">你好</tyh-division>
   <p>adadadada</p>
-  <tyh-division position="right" :margin="21">你好</tyh-division>
+  <tyh-division position="right" :margin="21" color="red" icon="tyh-ui-githublogo">你好</tyh-division>
 </template>
 
 <script setup>

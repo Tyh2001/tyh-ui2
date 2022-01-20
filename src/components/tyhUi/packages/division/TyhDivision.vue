@@ -4,7 +4,8 @@
       :class="['tyh-division-text', `tyh-division-text-${position}`]"
       :style="[{ color }]"
     >
-      <slot />
+      <tyh-icon v-if="icon" :color="color" :icon="icon" />
+      <slot v-else />
     </span>
   </div>
 </template>
@@ -25,6 +26,7 @@ defineProps({
   margin: {
     type: Number,
     default: 25
-  }
+  },
+  icon: String
 })
 </script>
