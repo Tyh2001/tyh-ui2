@@ -28,7 +28,7 @@
       <ul class="tyh-calendar-month">
         <li
           class="tyh-calendar-day"
-          v-for="(item, index) in fun_week()"
+          v-for="(item, index) in fun_week"
           :key="index"
           :style="[calendarItemSize]"
         />
@@ -80,12 +80,12 @@ function TyhCalendar (props) {
   const getDate = ref(props.modelValue.getDate())
 
   // 获取当前月份的1号是周几
-  const fun_week = week => {
-    const res = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
+  const fun_week = computed(() => {
+    const res = new Date(`${getYear.value}-${getMonth.value + 1}-1`).getDay()
     return res === 0 ? 7 - 1 : res - 1
-  }
+  })
 
-  // 获取当前月份的时间
+  // 获取当年所有月份的时间
   const yearMonths = (month = getMonth.value) => {
     const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
     const year = props.modelValue.getFullYear()
@@ -113,6 +113,7 @@ function TyhCalendar (props) {
     getMonth.value = 0
   }
 
+  // 回到当前时间
   const goNow = () => {
     getMonth.value = props.modelValue.getMonth()
     getYear.value = props.modelValue.getFullYear()
@@ -132,16 +133,16 @@ function TyhCalendar (props) {
   }
 
   const calendarStyle = computed(() => {
-    const width_ = props.cellWidth < 25 ? 25 : props.cellWidth
+    const size = props.cellWidth < 25 ? 25 : props.cellWidth
     return [{
-      width: `${(width_ + 2) * 7}px`
+      width: `${(size + 2) * 7}px`
     }]
   })
 
   const calendarItemSize = computed(() => {
-    const width_ = props.cellWidth < 25 ? 25 : props.cellWidth
+    const size = props.cellWidth < 25 ? 25 : props.cellWidth
     return [
-      { width: `${width_}px`, height: `${width_}px` }
+      { width: `${size}px`, height: `${size}px` }
     ]
   })
 
@@ -160,5 +161,4 @@ function TyhCalendar (props) {
     getDate
   }
 }
-
 </script>
