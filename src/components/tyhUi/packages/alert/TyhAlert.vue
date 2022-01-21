@@ -15,20 +15,6 @@
 
 <script setup>
 import { computed } from 'vue'
-const BACKGROUND_COLOR = {
-  primary: '#e8f4ff',
-  success: '#e1ffea',
-  danger: '#ffe8e6',
-  warning: '#fff1e3',
-  default: '#f6f6f6',
-}
-const COLOR = {
-  primary: '#3a6ff4',
-  success: '#54c600',
-  danger: '#d10f1b',
-  warning: '#fbcc30',
-  default: '#3f536e'
-}
 const props = defineProps({
   type: {
     type: String,
@@ -44,21 +30,53 @@ const props = defineProps({
   simple: Boolean
 })
 const emit = defineEmits(['close'])
-const isClass = computed(() => {
-  return [
-    'tyh-alert',
-    props.type ? `tyh-alert-${props.type}` : '',
-  ]
-})
-const isStyle = computed(() => {
-  return [{
-    justifyContent: props.center && 'center',
-    background: !props.simple ? BACKGROUND_COLOR[props.type] : ''
-  }]
-})
-const isMessageStyle = computed(() => {
-  return [{
-    color: COLOR[props.type]
-  }]
-})
+
+const {
+  BACKGROUND_COLOR,
+  COLOR,
+  isClass,
+  isStyle,
+  isMessageStyle
+} = _TyhAlert(props)
+
+function _TyhAlert (props) {
+  const BACKGROUND_COLOR = {
+    primary: '#e8f4ff',
+    success: '#e1ffea',
+    danger: '#ffe8e6',
+    warning: '#fff1e3',
+    default: '#f6f6f6',
+  }
+  const COLOR = {
+    primary: '#3a6ff4',
+    success: '#54c600',
+    danger: '#d10f1b',
+    warning: '#fbcc30',
+    default: '#3f536e'
+  }
+  const isClass = computed(() => {
+    return [
+      'tyh-alert',
+      props.type ? `tyh-alert-${props.type}` : '',
+    ]
+  })
+  const isStyle = computed(() => {
+    return [{
+      justifyContent: props.center && 'center',
+      background: !props.simple ? BACKGROUND_COLOR[props.type] : ''
+    }]
+  })
+  const isMessageStyle = computed(() => {
+    return [{
+      color: COLOR[props.type]
+    }]
+  })
+  return {
+    BACKGROUND_COLOR,
+    COLOR,
+    isClass,
+    isStyle,
+    isMessageStyle
+  }
+}
 </script>

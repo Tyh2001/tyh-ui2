@@ -22,7 +22,7 @@ defineProps({
   }
 })
 const backShow = ref(false)
-function handleScroll () {
+const handleScroll = () => {
   let timer = null
   return function () {
     if (timer !== null) {
@@ -34,7 +34,7 @@ function handleScroll () {
     }, 188)
   }
 }
-function backTop () {
+const backTop = () => {
   let top = document.documentElement.scrollTop || document.body.scrollTop
   const timeTop = setInterval(() => {
     document.body.scrollTop = document.documentElement.scrollTop = top -= 50
