@@ -6,8 +6,8 @@
       :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'Default'
-        }
+          cursor: disabled ? 'not-allowed' : 'Default',
+        },
       ]"
       color="#c7c7c7"
       :icon="icon"
@@ -32,8 +32,8 @@
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'pointer'
-        }
+          cursor: disabled ? 'not-allowed' : 'pointer',
+        },
       ]"
       color="#c7c7c7"
       icon="tyh-ui-guanbi"
@@ -45,8 +45,8 @@
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'pointer'
-        }
+          cursor: disabled ? 'not-allowed' : 'pointer',
+        },
       ]"
       color="#c7c7c7"
       :icon="isPass ? 'tyh-ui-browse' : 'tyh-ui-eye-close'"
@@ -84,29 +84,51 @@ const props = defineProps({
   showPassword: Boolean
 })
 const emit = defineEmits(['update:modelValue', 'update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
-const input = evt => {
-  emit('update:modelValue', evt.target.value)
+
+const {
+  input,
+  clearText,
+  isClass,
+  inputType,
+  isPass,
+  showPasswordFn
+} = _TyhInput(props, emit)
+
+function _TyhInput (props, emit) {
+  const input = evt => {
+    emit('update:modelValue', evt.target.value)
+  }
+  const clearText = () => {
+    if (props.disabled) return
+    emit('update:modelValue', '')
+    emit('clear')
+  }
+  const isClass = computed(() => {
+    return [
+      'tyh-input-input',
+      `tyh-input-input-${props.size}`,
+      {
+        'tyh-input-icon-padding': props.icon,
+        'tyh-input-clear-padding': props.clear,
+        'tyh-input-disabled': props.disabled
+      }
+    ]
+  })
+  const inputType = ref(props.type)
+  const isPass = ref(false)
+  const showPasswordFn = () => {
+    isPass.value = !isPass.value
+    isPass.value ? inputType.value = 'text' : inputType.value = 'password'
+  }
+
+  return {
+    input,
+    clearText,
+    isClass,
+    inputType,
+    isPass,
+    showPasswordFn
+  }
 }
-const clearText = () => {
-  if (props.disabled) return
-  emit('update:modelValue', '')
-  emit('clear')
-}
-const isClass = computed(() => {
-  return [
-    'tyh-input-input',
-    `tyh-input-input-${props.size}`,
-    {
-      'tyh-input-icon-padding': props.icon,
-      'tyh-input-clear-padding': props.clear,
-      'tyh-input-disabled': props.disabled
-    }
-  ]
-})
-const inputType = ref(props.type)
-const isPass = ref(false)
-const showPasswordFn = () => {
-  isPass.value = !isPass.value
-  isPass.value ? inputType.value = 'text' : inputType.value = 'password'
-}
+
 </script>
