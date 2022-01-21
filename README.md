@@ -23,11 +23,11 @@
 
 ## Introduction:bulb:
 
-The next generation UI component library of tyh UI is based on vue3 Version, fully embrace vue3
+The next generation ui component library of tyh-ui is based on vue3 Version, fully embrace vue3.
 
 > Simplicity first
 
-Tyh UI is very concise and clear as a whole, although it does not have many advanced components,But the results were achieved in a simple way.
+Tyh-ui is very concise and clear as a whole, although it does not have many advanced components,But the results were achieved in a simple way.
 
 > Light weight and easy
 
