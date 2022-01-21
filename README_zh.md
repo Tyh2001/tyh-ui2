@@ -50,9 +50,11 @@ import 'tyh-ui2/style/index.css'
 createApp(App).use(tyhUi2).mount('#app')
 ```
 
-## 更新日志:page_facing_up:
+## 关于:page_facing_up:
 
-[更新日志](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
+- [更新日志](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
+- 项目的安装和启动请参考[Start_project](https://github.com/Tyh2001/tyh-ui2/blob/master/Start_project.md)。
+- 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui2/blob/master/SECURITY.md)
 
 ## 贡献者:wave:
 
