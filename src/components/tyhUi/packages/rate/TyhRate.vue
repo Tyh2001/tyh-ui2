@@ -45,35 +45,44 @@ const props = defineProps({
   }
 })
 const emit = defineEmits(['update:modelValue', 'change'])
-const width = ref(props.modelValue)
 
-watch(() => props.modelValue, newVal => width.value = newVal)
+const { width, upDataValue, showSayFn } = _TyhRate(props, emit)
 
-const upDataValue = () => {
-  emit('update:modelValue', width.value)
-  if (width.value !== props.modelValue) emit('change')
+function _TyhRate (props, emit) {
+  const width = ref(props.modelValue)
+  watch(() => props.modelValue, newVal => width.value = newVal)
+
+  const upDataValue = () => {
+    emit('update:modelValue', width.value)
+    if (width.value !== props.modelValue) emit('change')
+  }
+
+  const showSayFn = computed(() => {
+    if (!props.showText) return
+    const showSay = ref(null)
+    watch(() => width.value, () => {
+      switch (width.value) {
+        case 1: showSay.value = props.sayText[0]
+          break
+        case 2: showSay.value = props.sayText[1]
+          break
+        case 3: showSay.value = props.sayText[2]
+          break
+        case 4: showSay.value = props.sayText[3]
+          break
+        case 5: showSay.value = props.sayText[4]
+          break
+        default: showSay.value = ''
+      }
+    }, { immediate: true })
+
+    return showSay.value
+  })
+
+  return {
+    width,
+    upDataValue,
+    showSayFn
+  }
 }
-
-const showSayFn = computed(() => {
-  if (!props.showText) return
-  const showSay = ref(null)
-  watch(() => width.value, () => {
-    switch (width.value) {
-      case 1: showSay.value = props.sayText[0]
-        break
-      case 2: showSay.value = props.sayText[1]
-        break
-      case 3: showSay.value = props.sayText[2]
-        break
-      case 4: showSay.value = props.sayText[3]
-        break
-      case 5: showSay.value = props.sayText[4]
-        break
-      default: showSay.value = ''
-    }
-  }, { immediate: true })
-
-  return showSay.value
-})
-
 </script>

@@ -1,7 +1,7 @@
 {
   "name": "tyh-ui2",
-  "version": "2.8.2",
-  "description": "The next generation UI component library of tyh UI is based on vue3 Version, fully embrace vue3",
+  "version": "2.9.0",
+  "description": "The next generation ui component library of tyh-ui is based on vue3 Version, fully embrace vue3.",
   "main": "src/index.js",
   "scripts": {
     "test": "npm i tyh-ui2"
