@@ -16,13 +16,13 @@
     "microtip": "^0.2.2",
     "sass": "^1.43.4",
     "tyh-ui2": "^1.9.0",
-    "vue": "^3.2.16",
+    "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.9.3",
+    "@vitejs/plugin-vue": "^2.0.0",
     "babel-plugin-component": "^1.1.1",
     "naive-ui": "^2.24.1",
-    "vite": "^2.6.4"
+    "vite": "^2.7.2"
   }
 }

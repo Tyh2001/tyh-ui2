@@ -50,9 +50,10 @@ import 'tyh-ui2/style/index.css'
 createApp(App).use(tyhUi2).mount('#app')
 ```
 
-## Changelog:page_facing_up:
+## About:page_facing_up:
 
-Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
+- Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
+- For the installation and startup of the project, please refer to [Start_project]().
 
 ## Contribution:wave:
 
