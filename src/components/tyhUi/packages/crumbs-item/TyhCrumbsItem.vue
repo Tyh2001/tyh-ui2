@@ -16,15 +16,21 @@ import { getCurrentInstance } from 'vue'
 const props = defineProps({
   to: String
 })
-const icon = ref('')
-const { proxy } = getCurrentInstance()
-icon.value = inject('Crumbs-separator')
-const link = () => {
-  if (!props.to) return
-  try {
-    proxy.$router.push(props.to)
-  } catch (e) {
-    console.log(e)
+
+const { icon, link } = _TyhCrumbsItem(props)
+
+function _TyhCrumbsItem (props) {
+  const icon = ref('')
+  const { proxy } = getCurrentInstance()
+  icon.value = inject('Crumbs-separator')
+  const link = () => {
+    if (!props.to) return
+    try {
+      proxy.$router.push(props.to)
+    } catch (e) {
+      console.log(e)
+    }
   }
+  return { icon, link }
 }
 </script>

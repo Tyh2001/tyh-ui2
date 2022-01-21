@@ -4,8 +4,8 @@
       :class="[
         'tyh-turn-page-item-link',
         {
-          'tyh-turn-page-item-prohibit': prohibit
-        }
+          'tyh-turn-page-item-prohibit': prohibit,
+        },
       ]"
       @click="link"
     >
@@ -37,14 +37,20 @@ const props = defineProps({
   icon: String,
   prohibit: Boolean
 })
-const isCenter = inject('is-center')
-const { proxy } = getCurrentInstance()
-const link = () => {
-  if (props.prohibit) return
-  try {
-    proxy.$router.push(props.url)
-  } catch (e) {
-    console.log(e)
+
+const { isCenter, link } = _TyhTurnPageItem(props)
+
+function _TyhTurnPageItem (props) {
+  const isCenter = inject('is-center')
+  const { proxy } = getCurrentInstance()
+  const link = () => {
+    if (props.prohibit) return
+    try {
+      proxy.$router.push(props.url)
+    } catch (e) {
+      console.log(e)
+    }
   }
+  return { isCenter, link }
 }
 </script>
