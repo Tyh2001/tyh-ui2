@@ -12,13 +12,7 @@
 
 <script setup>
 import { computed } from 'vue'
-const COLOR = {
-  primary: '#3a6ff4',
-  success: '#54c600',
-  danger: '#d10f1b',
-  warning: '#fbcc30',
-  default: '#3f536e'
-}
+
 const props = defineProps({
   type: {
     type: String,
@@ -39,21 +33,39 @@ const props = defineProps({
   square: Boolean,
   simple: Boolean
 })
-const textColor = computed(() => {
-  if (props.simple) return COLOR[props.type]
-  return props.type === 'default' || props.type === '' ? '#333' : '#fff'
-})
-const isClass = computed(() => {
-  return [
-    'tyh-button',
-    props.simple
-      ? props.disabled ? `tyh-button-simple-disabled-${props.type}` : `tyh-button-simple-${props.type}`
-      : props.disabled ? `tyh-button-disabled-${props.type}` : `tyh-button-${props.type}`,
-    props.size ? `tyh-button-size-${props.size}` : '',
-    {
-      'tyh-button-round': props.round,
-      'tyh-button-square': props.square
-    }
-  ]
-})
+
+const { COLOR, textColor, isClass } = _TyhButton(props)
+
+function _TyhButton (props) {
+  const COLOR = {
+    primary: '#3a6ff4',
+    success: '#54c600',
+    danger: '#d10f1b',
+    warning: '#fbcc30',
+    default: '#3f536e'
+  }
+
+  const textColor = computed(() => {
+    if (props.simple) return COLOR[props.type]
+    return props.type === 'default' || props.type === '' ? '#333' : '#fff'
+  })
+
+  const isClass = computed(() => {
+    return [
+      'tyh-button',
+      props.simple
+        ? props.disabled ? `tyh-button-simple-disabled-${props.type}` : `tyh-button-simple-${props.type}`
+        : props.disabled ? `tyh-button-disabled-${props.type}` : `tyh-button-${props.type}`,
+      props.size ? `tyh-button-size-${props.size}` : '',
+      {
+        'tyh-button-round': props.round,
+        'tyh-button-square': props.square
+      }
+    ]
+  })
+
+  return { COLOR, textColor, isClass }
+}
+
+
 </script>
