@@ -53,7 +53,7 @@ createApp(App).use(tyhUi2).mount('#app')
 ## About:page_facing_up:
 
 - Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
-- For the installation and startup of the project, please refer to [Start_project]().
+- For the installation and startup of the project, please refer to [Start_project](https://github.com/Tyh2001/tyh-ui2/blob/master/Start_project.md).
 
 ## Contribution:wave:
 
