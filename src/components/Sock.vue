@@ -17,7 +17,7 @@ defineProps({
   },
   width: {
     type: String,
-    default: '100px'
+    default: '100%'
   },
   height: {
     type: String,
@@ -43,27 +43,73 @@ defineProps({
 }
 .shan {
   &::after {
-    content: "";
-    position: absolute;
-    animation: shan 1.5s ease 0s infinite;
-    top: 0;
-    width: 50%;
-    height: 100%;
-    background: linear-gradient(
-      to left,
-      rgba(255, 255, 255, 0) 0,
-      rgba(255, 255, 255, 0.3) 50%,
-      rgba(255, 255, 255, 0) 100%
-    );
-    transform: skewX(-45deg);
+
+    background-size: 400% 100%;
+    animation: el-skeleton-loading 1.4s ease infinite;
+    // position: absolute;
+    // animation: shan 1.5s ease 0s infinite;
+    // top: 0;
+    // width: 150%;
+    // height: 100%;
+    // background-color: rgb(180, 180, 180);
+    // background-image: linear-gradient(
+    //   to left,
+    //   rgb(239, 239, 239),
+    //   #fff,
+    //   rgb(239, 239, 239)
+    // );
+    // transform: skewX(-45deg);
+    // content: "";
+    // // height: 150%;
+    // // width: 25px;
+    // width: 150%;
+    // height: 100%;
+    // background: #fff;
+    // position: absolute;
+    // top: 0;
+    // // left: 0;
+    // // right: 0;
+    // // bottom: 0;
+    // // margin: auto;
+    // // opacity: 0.6;
+    // // filter: blur(6px);
+    // animation: move 1s infinite ease-out;
   }
 }
 @keyframes shan {
   0% {
     left: -100%;
   }
+
   100% {
     left: 120%;
   }
 }
+@keyframes move {
+  0% {
+    transform: translate(-200px, -200px) rotate(45deg);
+  }
+  100% {
+    transform: translate(200px, 200px) rotate(45deg);
+  }
+}
+// @keyframes shan {
+//   0% {
+//     left: -100%;
+//   }
+//   100% {
+//     left: 120%;
+//   }
+// }
+// @keyframes skeleton {
+//   0% {
+//     opacity: 0.4;
+//   }
+//   50% {
+//     opacity: 1;
+//   }
+//   100% {
+//     opacity: 0.4;
+//   }
+// }
 </style>
