@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview"
+    "serve": "vite preview",
+    "webpack": "webpack --mode development --watch"
   },
   "dependencies": {
     "@vueuse/core": "^7.1.2",
