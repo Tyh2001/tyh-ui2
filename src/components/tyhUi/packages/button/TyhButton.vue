@@ -33,9 +33,9 @@ const props = defineProps({
   simple: Boolean
 })
 
-const { COLOR, textColor, isClass } = _TyhButton(props)
+const { textColor, isClass } = _TyhButton()
 
-function _TyhButton (props) {
+function _TyhButton () {
   const COLOR = {
     primary: '#3a6ff4',
     success: '#54c600',
@@ -63,6 +63,6 @@ function _TyhButton (props) {
     ]
   })
 
-  return { COLOR, textColor, isClass }
+  return { textColor, isClass }
 }
 </script>

@@ -60,9 +60,9 @@ const {
   clickSwitch,
   switchStyle,
   switchRollStyle
-} = _TyhSwitch(props, emit)
+} = _TyhSwitch()
 
-function _TyhSwitch (props, emit) {
+function _TyhSwitch () {
   const switchValue = ref(props.modelValue)
 
   const clickSwitch = () => {

@@ -32,8 +32,8 @@
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'pointer',
-        },
+          cursor: disabled ? 'not-allowed' : 'pointer'
+        }
       ]"
       color="#c7c7c7"
       icon="tyh-ui-guanbi"
@@ -92,9 +92,9 @@ const {
   inputType,
   isPass,
   showPasswordFn
-} = _TyhInput(props, emit)
+} = _TyhInput()
 
-function _TyhInput (props, emit) {
+function _TyhInput () {
   const input = evt => {
     emit('update:modelValue', evt.target.value)
   }

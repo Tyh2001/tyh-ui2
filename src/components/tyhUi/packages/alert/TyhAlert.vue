@@ -36,7 +36,7 @@ const {
   isClass,
   isStyle,
   isMessageStyle
-} = _TyhAlert(props)
+} = _TyhAlert()
 
 function _TyhAlert () {
   const BACKGROUND_COLOR = {

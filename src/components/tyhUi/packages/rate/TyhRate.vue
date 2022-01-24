@@ -46,9 +46,9 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:modelValue', 'change'])
 
-const { width, upDataValue, showSayFn } = _TyhRate(props, emit)
+const { width, upDataValue, showSayFn } = _TyhRate()
 
-function _TyhRate (props, emit) {
+function _TyhRate () {
   const width = ref(props.modelValue)
   watch(() => props.modelValue, newVal => width.value = newVal)
 

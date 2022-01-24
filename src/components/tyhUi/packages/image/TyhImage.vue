@@ -5,6 +5,7 @@
         <span class="tyh-image-error-text">加载失败</span>
       </slot>
     </div>
+
     <img
       v-else
       :draggable="draggable"

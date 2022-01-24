@@ -71,10 +71,9 @@ const {
   calendarStyle,
   calendarItemSize,
   getDate
-} = _TyhCalendar(props)
+} = _TyhCalendar()
 
-
-function _TyhCalendar (props) {
+function _TyhCalendar () {
   const getMonth = ref(props.modelValue.getMonth())
   const getYear = ref(props.modelValue.getFullYear())
   const getDate = ref(props.modelValue.getDate())

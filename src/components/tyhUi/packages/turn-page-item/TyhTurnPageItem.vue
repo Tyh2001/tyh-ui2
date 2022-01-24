@@ -38,9 +38,9 @@ const props = defineProps({
   prohibit: Boolean
 })
 
-const { isCenter, link } = _TyhTurnPageItem(props)
+const { isCenter, link } = _TyhTurnPageItem()
 
-function _TyhTurnPageItem (props) {
+function _TyhTurnPageItem () {
   const isCenter = inject('is-center')
   const { proxy } = getCurrentInstance()
   const link = () => {
