@@ -32,14 +32,13 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const {
-  BACKGROUND_COLOR,
   COLOR,
   isClass,
   isStyle,
   isMessageStyle
 } = _TyhAlert(props)
 
-function _TyhAlert (props) {
+function _TyhAlert () {
   const BACKGROUND_COLOR = {
     primary: '#e8f4ff',
     success: '#e1ffea',
@@ -67,12 +66,9 @@ function _TyhAlert (props) {
     }]
   })
   const isMessageStyle = computed(() => {
-    return [{
-      color: COLOR[props.type]
-    }]
+    return [{ color: COLOR[props.type] }]
   })
   return {
-    BACKGROUND_COLOR,
     COLOR,
     isClass,
     isStyle,
