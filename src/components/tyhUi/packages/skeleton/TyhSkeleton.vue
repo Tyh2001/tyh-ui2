@@ -5,7 +5,7 @@
       {
         'tyh-skeleton-round': round,
         'tyh-skeleton-animation': animation
-      },
+      }
     ]"
     :style="[{ width, height }]"
   />

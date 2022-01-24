@@ -51,7 +51,7 @@ const isClass = computed(() => {
   return [
     'tyh-link',
     `tyh-link-${props.type}`,
-    props.prohibit ? `tyh-link-prohibit-${props.type}` : '',
+    props.prohibit ? `tyh-link-prohibit-${props.type}` : ''
   ]
 })
 </script>
