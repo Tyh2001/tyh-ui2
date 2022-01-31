@@ -1,10 +1,12 @@
 <template>
-  <tyh-input v-model="text1" />
-  <tyh-input v-model="text1" />
-  <tyh-input v-model="text1" />
+  <tyh-button disabled @click="aa">1</tyh-button>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const text1 = ref('')
+function aa (){
+  console.log(1)
+}
 </script>
+
+<style scoped>
+</style>
