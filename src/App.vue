@@ -1,10 +1,5 @@
-<template>
+<template src="./page/index.html"></template>
 
-</template>
+<script src="./page/index.js"></script>
 
-<script setup>
-
-</script>
-
-<style scoped>
-</style>
+<style scoped src="./page/index.css"></style>
