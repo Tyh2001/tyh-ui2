@@ -138,7 +138,7 @@ function _TyhCalendar () {
   })
 
   const calendarItemSize = computed(() => {
-    const size = props.cellWidth < 25 ? 25 : props.cellWidth
+    const size = props.cellWidth < 28 ? 28 : props.cellWidth
     return [
       { width: `${size}px`, height: `${size}px` }
     ]
