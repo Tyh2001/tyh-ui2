@@ -80,8 +80,8 @@ function _TyhCalendar () {
 
   // 获取当前月份的1号是周几
   const fun_week = computed(() => {
-    const res = new Date(`${getYear.value}-${getMonth.value + 1}-1`).getDay()
-    return res === 0 ? 7 - 1 : res - 1
+    const week = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
+    return week === 0 ? 7 - 1 : week - 1
   })
 
   // 获取当年所有月份的时间
@@ -160,7 +160,3 @@ function _TyhCalendar () {
   }
 }
 </script>
-
-<style lang="" src="./style/index.css">
-  
-</style>
