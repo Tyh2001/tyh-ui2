@@ -21,7 +21,6 @@
   text-align: right;
 }
 .tyh-calendar .tyh-calendar-container .tyh-calendar-month {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
@@ -37,7 +36,6 @@
   background-color: #dae8ff;
 }
 .tyh-calendar .tyh-calendar-container .tyh-calendar-week {
-  list-style: none;
   display: flex;
   flex-wrap: wrap;
 }
