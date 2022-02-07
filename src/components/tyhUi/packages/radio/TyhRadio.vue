@@ -1,26 +1,41 @@
 <template>
-  <input type="radio" :value="value" @input="input" />
-  <span>
-    <slot />
-  </span>
+  <label class="tyh-radio">
+    <span
+      class="tyh-radio-frame"
+      :class="[modelValue === label ? 'tyh-radio-frame-is' : 'tyh-radio-frame']"
+    ></span>
+    <input
+      hidden
+      class="tyh-radio-input"
+      type="radio"
+      :name="name"
+      :value="label"
+      @input="input"
+    />
+    <span class="tyh-radio-label">
+      <slot />
+    </span>
+  </label>
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+const props = defineProps({
   modelValue: {
     type: String,
     required: true
   },
-  value: String
+  label: String,
+  name: {
+    type: String,
+    default: '1'
+  }
 })
 const emits = defineEmits(['update:modelValue'])
 
-function input (evt) {
-  console.log(evt.target.value)
+const input = evt => {
   emits('update:modelValue', evt.target.value)
 }
-
 </script>
 
-<style scoped>
-</style>
+<style scoped src="./style/index.css"></style>

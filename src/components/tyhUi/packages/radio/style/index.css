@@ -1,0 +1,36 @@
+.tyh-radio {
+  margin-right: 19px;
+}
+.tyh-radio .tyh-radio-frame {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 1px solid #e4e3e3;
+  vertical-align: middle;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.tyh-radio .tyh-radio-frame:hover {
+  border: 1px solid #3a6ff4;
+}
+.tyh-radio .tyh-radio-label {
+  font-size: 14px;
+  margin-left: 6px;
+  color: #353535;
+}
+.tyh-radio .tyh-radio-frame-is {
+  background-color: #3a6ff4;
+  border: 1px solid #3a6ff4;
+  position: relative;
+}
+.tyh-radio .tyh-radio-frame-is::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 33%;
+  right: 33%;
+}
