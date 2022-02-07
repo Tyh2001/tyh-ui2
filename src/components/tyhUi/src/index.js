@@ -28,6 +28,7 @@ import TyhTable from '../packages/table'
 import TyhButtonGroup from '../packages/button-group'
 import TyhCalendar from '../packages/calendar'
 import TyhSwitch from '../packages/switch'
+import TyhRadio from '../packages/radio'
 
 const components = [
   TyhButton,
@@ -59,7 +60,8 @@ const components = [
   TyhTable,
   TyhButtonGroup,
   TyhCalendar,
-  TyhSwitch
+  TyhSwitch,
+  TyhRadio
 ]
 
 const install = app => {
@@ -104,7 +106,8 @@ export {
   TyhTable,
   TyhButtonGroup,
   TyhCalendar,
-  TyhSwitch
+  TyhSwitch,
+  TyhRadio
 }
 
 export default tyhUi

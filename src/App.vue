@@ -1,10 +1,10 @@
 <template>
-  <tyh-calendar v-model="value" :cellWidth="70" />
+  <input type="radio" name="1" id="" />
+  <input type="radio" name="1" id="" />
+  <input type="radio" name="1" id="" />
 
-  <tyh-calendar v-model="value" :cellWidth="10" />
+  <tyh-radio />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const value = ref(new Date())
 </script>
