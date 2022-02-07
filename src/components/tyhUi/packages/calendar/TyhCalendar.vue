@@ -19,7 +19,7 @@
           class="tyh-calendar-week-item"
           v-for="(item, index) in 7"
           :key="index"
-          :style="[{ width: `${cellWidth < 25 ? 25 : cellWidth}px` }]"
+          :style="[{ width: `${cellWidth < 28 ? 28 : cellWidth}px` }]"
         >
           {{ changeWeek(item) }}
         </td>
@@ -131,7 +131,7 @@ function _TyhCalendar () {
   }
 
   const calendarWidth = computed(() => {
-    const size = props.cellWidth < 25 ? 25 : props.cellWidth
+    const size = props.cellWidth < 28 ? 28 : props.cellWidth
     return [{
       width: `${(size + 2) * 7}px`
     }]

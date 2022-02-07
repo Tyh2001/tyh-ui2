@@ -1,5 +1,7 @@
 <template>
-  <tyh-calendar v-model="value" />
+  <tyh-calendar v-model="value" :cellWidth="70" />
+
+  <tyh-calendar v-model="value" :cellWidth="10" />
 </template>
 
 <script setup>
