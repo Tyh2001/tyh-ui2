@@ -1,22 +1,32 @@
 <template>
-  <label
-    class="tyh-radio"
-    role="radio"
-    :aria-checked="modelValue === label"
-    :aria-disabled="false"
-  >
+  <label class="tyh-radio">
     <span
-      :class="['tyh-radio-frame', modelValue === label && 'tyh-radio-frame-is']"
+      :class="[
+        'tyh-radio-frame',
+        modelValue === label && 'tyh-radio-hig',
+        {
+          'tyh-radio-disabled': disabled,
+        },
+      ]"
     />
     <input
+      :class="['tyh-radio-input']"
+      v-model="modelValue"
       hidden
-      class="tyh-radio-input"
       type="radio"
       :value="label"
-      v-model="modelValue"
+      :disabled="disabled"
       @input="input"
     />
-    <span class="tyh-radio-label">
+    <span
+      :class="[
+        'tyh-radio-label',
+        {
+          'tyh-radio-disabled': disabled,
+        },
+      ]"
+      :style="[{ color: modelValue === label ? '#3a6ff4' : '#515a6e' }]"
+    >
       <slot />
     </span>
   </label>
@@ -30,7 +40,8 @@ const props = defineProps({
     required: true
   },
   label: String,
-  name: String
+  name: String,
+  disabled: Boolean
 })
 const emits = defineEmits(['update:modelValue'])
 

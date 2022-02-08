@@ -2,6 +2,8 @@
 
 .tyh-radio {
   margin-right: 19px;
+  cursor: pointer;
+  user-select: none;
 
   .tyh-radio-frame {
     width: 12px;
@@ -10,7 +12,6 @@
     border: 1px solid rgb(228, 227, 227);
     vertical-align: middle;
     border-radius: 50%;
-    cursor: pointer;
     transition: .3s;
   }
 
@@ -18,20 +19,25 @@
     border: 1px solid @radioColor;
   }
 
+  .tyh-radio-disabled {
+    opacity: .5;
+    cursor: no-drop;
+  }
+
   .tyh-radio-label {
     font-size: 14px;
     margin-left: 6px;
-    color: rgb(53, 53, 53);
+    transition: .3s;
   }
 
   // 选中的
-  .tyh-radio-frame-is {
+  .tyh-radio-hig {
     background-color: @radioColor;
     border: 1px solid @radioColor;
     position: relative;
   }
 
-  .tyh-radio-frame-is::after {
+  .tyh-radio-hig::after {
     content: '';
     width: 4px;
     height: 4px;
