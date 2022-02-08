@@ -14,5 +14,5 @@
 
 <script setup>
 import { ref } from 'vue'
-const radio = ref('1')
+const radio = ref('3')
 </script>

@@ -1,15 +1,19 @@
 <template>
-  <label class="tyh-radio">
+  <label
+    class="tyh-radio"
+    role="radio"
+    :aria-checked="modelValue === label"
+    :aria-disabled="false"
+  >
     <span
-      class="tyh-radio-frame"
-      :class="[modelValue === label ? 'tyh-radio-frame-is' : 'tyh-radio-frame']"
-    ></span>
+      :class="['tyh-radio-frame', modelValue === label && 'tyh-radio-frame-is']"
+    />
     <input
       hidden
       class="tyh-radio-input"
       type="radio"
-      :name="name"
       :value="label"
+      v-model="modelValue"
       @input="input"
     />
     <span class="tyh-radio-label">
@@ -26,16 +30,11 @@ const props = defineProps({
     required: true
   },
   label: String,
-  name: {
-    type: String,
-    default: '1'
-  }
+  name: String
 })
 const emits = defineEmits(['update:modelValue'])
 
-const input = evt => {
-  emits('update:modelValue', evt.target.value)
-}
+const input = evt => emits('update:modelValue', evt.target.value)
 </script>
 
 <style scoped src="./style/index.css"></style>
