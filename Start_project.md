@@ -1,4 +1,4 @@
-# Start_project
+# START_PROJECT
 
 ## Start project
 
@@ -18,36 +18,23 @@ npm run dev
 
 ## directory structure
 
-├── src
-
-│ ├── components -> components
-
-│ │ ├── allStyle -> Component development style
-
-│ │ └── tyhUi -> Component source files
-
-│ ├── router
-
+```
+├── src                     开发目录
+│ ├── components            组件目录
+│ │ ├── allStyle            组件开发样式
+│ │ ├── build-tyhUi         用于压缩组件源文件
+│ │ └── tyhUi               组件源文件
+│ ├── router                路由
 │ ├── App.vue
-
 │ └── main.js
-
 ├── .gitignore
-
-├── CHANGELOG.md -> CHANGELOG
-
-├── README.md -> README_en
-
-├── README_zh.md -> README_zh
-
-├── SECURITY.md -> SECURITY
-
-├── STRUCTURE.md -> directory structure
-
+├── CHANGELOG.md            更新日志
+├── README.md               README 英文
+├── README_zh.md            README 中文
+├── SECURITY.md             安全反馈
+├── STRUCTURE.md            目录结构
 ├── index.html
-
 ├── package-lock.json
-
 ├── package.json
-
 └── vite.config.js
+```

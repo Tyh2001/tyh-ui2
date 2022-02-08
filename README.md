@@ -23,7 +23,7 @@
 
 ## Introduction:bulb:
 
-The next generation ui component library of tyh-ui is based on vue3 Version, fully embrace vue3.
+A lightweight component library, based on the vue3.0 version, fully embraces vue3.0
 
 > Simplicity first
 
@@ -53,7 +53,7 @@ createApp(App).use(tyhUi2).mount('#app')
 ## About:page_facing_up:
 
 - Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
-- For the installation and startup of the project, please refer to [Start_project](https://github.com/Tyh2001/tyh-ui2/blob/master/Start_project.md).
+- For the installation and startup of the project, please refer to [START_PROJECT](https://github.com/Tyh2001/tyh-ui2/blob/master/START_PROJECT.md).
 - [Vulnerabilities](https://github.com/Tyh2001/tyh-ui2/blob/master/SECURITY.md) can be reported here
 
 ## Contribution:wave:
