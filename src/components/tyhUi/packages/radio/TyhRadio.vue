@@ -1,23 +1,28 @@
 <template>
-  <label class="tyh-radio">
+  <label
+    class="tyh-radio"
+    :style="{ cursor: disabled ? 'no-drop' : 'pointer' }"
+  >
     <span
       :class="[
-        'tyh-radio-frame',
-        modelValue === label && 'tyh-radio-hig',
-        {
-          'tyh-radio-disabled': disabled,
-        },
+        'tyh-radio-o',
+        modelValue === label
+          ? disabled
+            ? 'tyh-radio-hig-disabled'
+            : 'tyh-radio-hig'
+          : '',
+        disabled ? 'tyh-radio-disabled' : 'tyh-radio-on',
       ]"
-    />
-    <input
-      :class="['tyh-radio-input']"
-      v-model="modelValue"
-      hidden
-      type="radio"
-      :value="label"
-      :disabled="disabled"
-      @input="input"
-    />
+    >
+      <input
+        v-model="modelValue"
+        hidden
+        type="radio"
+        :value="label"
+        :disabled="disabled"
+        @input="input"
+      />
+    </span>
     <span
       :class="[
         'tyh-radio-label',

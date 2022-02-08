@@ -1,9 +1,8 @@
 .tyh-radio {
   margin-right: 19px;
-  cursor: pointer;
   user-select: none;
 }
-.tyh-radio .tyh-radio-frame {
+.tyh-radio .tyh-radio-o {
   width: 12px;
   height: 12px;
   display: inline-block;
@@ -12,12 +11,8 @@
   border-radius: 50%;
   transition: 0.3s;
 }
-.tyh-radio .tyh-radio-frame:hover {
+.tyh-radio .tyh-radio-on:hover {
   border: 1px solid #3a6ff4;
-}
-.tyh-radio .tyh-radio-disabled {
-  opacity: 0.5;
-  cursor: no-drop;
 }
 .tyh-radio .tyh-radio-label {
   font-size: 14px;
@@ -29,7 +24,12 @@
   border: 1px solid #3a6ff4;
   position: relative;
 }
-.tyh-radio .tyh-radio-hig::after {
+.tyh-radio .tyh-radio-hig-disabled {
+  background-color: #b6b5b5;
+  border: 1px solid #b6b5b5;
+  position: relative;
+}
+.tyh-radio .tyh-radio-o::after {
   content: '';
   width: 4px;
   height: 4px;
