@@ -53,7 +53,7 @@ createApp(App).use(tyhUi2).mount('#app')
 ## 关于:page_facing_up:
 
 - [更新日志](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
-- 项目的安装和启动请参考[START_PROJECT](https://github.com/Tyh2001/tyh-ui2/blob/master/START_PROJECT.md)。
+- 项目的安装和启动请参考[启动项目](https://github.com/Tyh2001/tyh-ui2/blob/master/START_PROJECT.md)。
 - 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui2/blob/master/SECURITY.md)
 
 ## 贡献者:wave:
