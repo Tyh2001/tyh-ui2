@@ -45,38 +45,41 @@ const props = defineProps({
   }
 })
 const emits = defineEmits(['update:modelValue', 'change'])
+const { input, isClass, isStyle, labelStyle } = _TyhRadio()
 
-const input = evt => {
-  emits('update:modelValue', evt.target.value)
-  emits('change', evt.target.value)
+function _TyhRadio () {
+  const input = evt => {
+    emits('update:modelValue', evt.target.value)
+    emits('change', evt.target.value)
+  }
+
+  const isClass = computed(() => {
+    return [
+      'tyh-radio-o',
+      props.modelValue === props.label
+        ? props.disabled ? 'tyh-radio-disabled' : 'tyh-radio-hig'
+        : ''
+    ]
+  })
+
+  const isStyle = computed(() => {
+    return [{
+      color: props.modelValue === props.label
+        ? props.disabled ? '#b6b5b5' : '#3a6ff4'
+        : props.disabled ? '#b6b5b5' : '#333'
+    }]
+  })
+
+  const labelStyle = computed(() => {
+    return [
+      { cursor: props.disabled ? 'no-drop' : 'pointer' },
+      props.border && `border: 1px solid ${props.modelValue === props.label
+        ? props.disabled ? '#b6b5b5' : '#3a6ff4'
+        : '#b6b5b5'
+      }`
+    ]
+  })
+
+  return { input, isClass, isStyle, labelStyle }
 }
-
-const isClass = computed(() => {
-  return [
-    'tyh-radio-o',
-    props.modelValue === props.label
-      ? props.disabled ? 'tyh-radio-disabled' : 'tyh-radio-hig'
-      : ''
-  ]
-})
-
-const isStyle = computed(() => {
-  return [{
-    color: props.modelValue === props.label
-      ? props.disabled ? '#b6b5b5' : '#3a6ff4'
-      : props.disabled ? '#b6b5b5' : '#333'
-  }]
-})
-
-const labelStyle = computed(() => {
-  return [
-    { cursor: props.disabled ? 'no-drop' : 'pointer' },
-    props.border && `border: 1px solid ${props.modelValue === props.label
-      ? props.disabled ? '#b6b5b5' : '#3a6ff4'
-      : '#b6b5b5'
-    }`
-  ]
-})
 </script>
-
-<style scoped src="./style/index.css"></style>
