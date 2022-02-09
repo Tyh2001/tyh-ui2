@@ -44,9 +44,12 @@ const props = defineProps({
     }
   }
 })
-const emits = defineEmits(['update:modelValue'])
+const emits = defineEmits(['update:modelValue', 'change'])
 
-const input = evt => emits('update:modelValue', evt.target.value)
+const input = evt => {
+  emits('update:modelValue', evt.target.value)
+  emits('change', evt.target.value)
+}
 
 const isClass = computed(() => {
   return [
