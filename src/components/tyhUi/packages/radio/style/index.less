@@ -4,6 +4,7 @@
   margin-right: 19px;
   user-select: none;
 
+  // 选择的圆圈
   .tyh-radio-o {
     width: 12px;
     height: 12px;
@@ -12,19 +13,26 @@
     vertical-align: middle;
     border-radius: 50%;
     transition: .3s;
+
+    input {
+      display: none !important;
+    }
   }
 
-  .tyh-radio-on:hover {
-    border: 1px solid @radioColor;
-  }
-
-  .tyh-radio-disabled {
-    opacity: .5;
-    color: #b6b5b5;
+  // 小点点
+  .tyh-radio-o::after {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 33%;
+    right: 33%;
   }
 
   // 文字
-  .tyh-radio-label {
+  .tyh-radio-text {
     font-size: 14px;
     margin-left: 6px;
     transition: .3s;
@@ -37,22 +45,9 @@
     position: relative;
   }
 
-  // 选中禁用状态
-  .tyh-radio-hig-disabled {
+  .tyh-radio-disabled {
     background-color: #b6b5b5;
     border: 1px solid #b6b5b5;
     position: relative;
-  }
-
-  // 圆圈
-  .tyh-radio-o::after {
-    content: '';
-    width: 4px;
-    height: 4px;
-    border-radius: 100%;
-    background-color: #fff;
-    position: absolute;
-    top: 33%;
-    right: 33%;
   }
 }
