@@ -1,12 +1,19 @@
 <template>
   <label
-    class="tyh-radio"
-    :style="{ cursor: disabled ? 'no-drop' : 'pointer' }"
+    :class="[
+      'tyh-radio',
+      border && `tyh-radio-${size}`,
+      {
+        'tyh-radio-border': border,
+      },
+    ]"
+    :style="labelStyle"
   >
     <span :class="isClass">
       <input
         v-model="modelValue"
         type="radio"
+        :name="name"
         :value="label"
         :disabled="disabled"
         @input="input"
@@ -27,7 +34,15 @@ const props = defineProps({
   },
   label: String,
   name: String,
-  disabled: Boolean
+  disabled: Boolean,
+  border: Boolean,
+  size: {
+    type: String,
+    default: 'large',
+    validator (val) {
+      return ['large', 'medium', 'small', 'mini'].includes(val)
+    }
+  }
 })
 const emits = defineEmits(['update:modelValue'])
 
@@ -46,8 +61,18 @@ const isStyle = computed(() => {
   return [{
     color: props.modelValue === props.label
       ? props.disabled ? '#b6b5b5' : '#3a6ff4'
-      : '#333'
+      : props.disabled ? '#b6b5b5' : '#333'
   }]
+})
+
+const labelStyle = computed(() => {
+  return [
+    { cursor: props.disabled ? 'no-drop' : 'pointer' },
+    props.border && `border: 1px solid ${props.modelValue === props.label
+      ? props.disabled ? '#b6b5b5' : '#3a6ff4'
+      : '#b6b5b5'
+    }`
+  ]
 })
 </script>
 
