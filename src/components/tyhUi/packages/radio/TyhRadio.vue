@@ -53,10 +53,14 @@ function _TyhRadio () {
     emits('change', evt.target.value)
   }
 
+  const isLabel = computed(() => {
+    return props.modelValue === props.label
+  })
+
   const isClass = computed(() => {
     return [
       'tyh-radio-o',
-      props.modelValue === props.label
+      isLabel.value
         ? props.disabled ? 'tyh-radio-disabled' : 'tyh-radio-hig'
         : ''
     ]
@@ -64,7 +68,7 @@ function _TyhRadio () {
 
   const isStyle = computed(() => {
     return [{
-      color: props.modelValue === props.label
+      color: isLabel.value
         ? props.disabled ? '#b6b5b5' : '#3a6ff4'
         : props.disabled ? '#b6b5b5' : '#333'
     }]
@@ -73,10 +77,11 @@ function _TyhRadio () {
   const labelStyle = computed(() => {
     return [
       { cursor: props.disabled ? 'no-drop' : 'pointer' },
-      props.border && `border: 1px solid ${props.modelValue === props.label
-        ? props.disabled ? '#b6b5b5' : '#3a6ff4'
-        : '#b6b5b5'
-      }`
+      props.border && `border: 1px solid ${isLabel.value
+        ? props.disabled
+          ? '#b6b5b5'
+          : '#3a6ff4'
+        : '#b6b5b5'}`
     ]
   })
 

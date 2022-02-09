@@ -1,36 +1,10 @@
 <template>
-  <tyh-radio
-    v-model="radio"
-    @change="aa($event)"
-    label="111"
-    border
-    size="large"
-    >备选项</tyh-radio
-  >
-  <tyh-radio
-    v-model="radio"
-    @change="aa($event)"
-    label="222"
-    border
-    size="large"
-    >备选项</tyh-radio
-  >
-  <tyh-radio
-    v-model="radio"
-    @change="aa($event)"
-    label="333"
-    border
-    size="large"
-    >备选项</tyh-radio
-  >
+  <tyh-radio v-model="radio1" label="备选项1">备选项1</tyh-radio>
+  <tyh-radio v-model="radio1" disabled label="备选项2">备选项2</tyh-radio>
+  <tyh-radio v-model="radio1" label="备选项3">备选项3</tyh-radio>
 </template>
-
 
 <script setup>
 import { ref } from 'vue'
-const radio = ref('3')
-
-function aa (a) {
-  console.log(121, a)
-}
+const radio1 = ref('备选项1')
 </script>
