@@ -1,9 +1,8 @@
 <template>
-  <tyh-tree :data="data"></tyh-tree>
+  <tyh-tree :data="data" />
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
 const data = [
   {
     label: '一级 1',
