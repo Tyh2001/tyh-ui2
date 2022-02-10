@@ -13,8 +13,8 @@
 import { computed, ref } from 'vue'
 const props = defineProps({
   data: {
-    type: [Array, Object],
-    required: true
+    type: Array,
+    default: []
   }
 })
 
