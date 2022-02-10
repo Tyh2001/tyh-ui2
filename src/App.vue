@@ -1,8 +1,19 @@
 <template>
   <!-- <tyh-tree :data="data" /> -->
+  <tyh-button @click="open2">成功</tyh-button>
 </template>
 
 <script setup>
+// import { Message } from 'element3'
+import Message from './components/demo/Message/index'
+
+function open2 () {
+  Message({
+    message: '恭喜你，这是一条成功消息',
+    type: 'success'
+  })
+}
+
 const data = [
   {
     label: '一级 1',

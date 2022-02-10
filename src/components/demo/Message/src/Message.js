@@ -1,6 +1,5 @@
 import messageComponent from './Message.vue'
 import { createComponent } from './component'
-import { PopupManager } from './popup'
 import { isVNode } from 'vue'
 
 const instanceList = []
@@ -23,7 +22,6 @@ Message.closeAll = () => {
 
 function createMessage (opts) {
   const instance = createMessageComponentByOpts(opts)
-  setZIndex(instance)
   appendToBody(instance)
   addInstance(instance)
   return instance.proxy
@@ -34,10 +32,6 @@ function createMessageComponentByOpts (opts) {
     return createComponent(messageComponent, opts, () => opts.message)
   }
   return createComponent(messageComponent, opts)
-}
-
-function setZIndex (instance) {
-  instance.vnode.el.style.zIndex = PopupManager.nextZIndex()
 }
 
 function mergeOptions (opts, type = 'info') {
