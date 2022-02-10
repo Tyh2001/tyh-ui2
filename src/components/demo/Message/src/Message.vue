@@ -4,32 +4,19 @@
       v-show="isShow"
       :class="[
         'el-message',
-        isShowType ? `el-message--${type}` : '',
+        `el-message--${type}`,
         showClose ? 'is-closable' : '',
         center ? 'is-center' : '',
-        customClass,
       ]"
       :style="[positionStyle]"
-      @mouseenter="handleMouseenter"
-      @mouseleave="handleMouseleave"
     >
-      <i v-if="iconClass" :class="iconClass"></i>
-      <i v-else :class="['el-message__icon', `el-icon-${type}`]"></i>
       <slot>
-        <p
-          class="el-message__content"
-          v-if="dangerouslyUseHTMLString"
-          v-html="message"
-        ></p>
-        <p class="el-message__content" v-else>
+        <p class="el-message__content">
           {{ message }}
         </p>
       </slot>
-      <i
-        v-if="showClose"
-        class="el-message__closeBtn el-icon-close"
-        @click="handleClose"
-      ></i>
+
+      <span v-if="showClose" @click="handleClose">X</span>
     </div>
   </transition>
 </template>
@@ -42,28 +29,23 @@ const props = defineProps({
   },
   type: {
     type: String,
-    defalut: 'info',
+    default: 'info',
     validator (val) {
       return ['success', 'warning', 'info', 'error'].includes(val)
     }
   },
-  iconClass: String,
   showClose: Boolean,
   duration: Number,
   center: Boolean,
-  customClass: String,
-  dangerouslyUseHTMLString: Boolean,
   offset: Number
 })
 const emit = defineEmits(['close'])
 
 const instance = getCurrentInstance()
-
 const isShow = ref(true)
-// @public
-const offsetVal = ref(props.offset)
 
-const isShowType = computed(() => props.type && !props.iconClass)
+const offsetVal = ref(props.offset)
+// 	Message 距离窗口顶部的偏移量
 const positionStyle = computed(() => ({
   top: `${offsetVal.value}px`
 }))
@@ -77,6 +59,7 @@ function delayClose () {
   }
 }
 
+// 关闭弹窗
 function _close () {
   clearTimeout(timer)
   emit('close', instance)
@@ -87,20 +70,8 @@ function handleAfterLeave () {
   instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
 }
 
+// 点击关闭弹窗
 function handleClose () {
-  _close()
-}
-
-function handleMouseenter () {
-  clearTimeout(timer)
-}
-
-function handleMouseleave () {
-  delayClose()
-}
-
-// @public
-function close () {
   _close()
 }
 
