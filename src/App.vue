@@ -1,5 +1,5 @@
 <template>
-  <tyh-tree :data="data" />
+  <!-- <tyh-tree :data="data" /> -->
 </template>
 
 <script setup>

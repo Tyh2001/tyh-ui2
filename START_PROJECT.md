@@ -23,6 +23,7 @@ npm run dev
 │ ├── components            组件目录
 │ │ ├── allStyle            组件开发样式
 │ │ ├── build-tyhUi         用于压缩组件源文件
+│ │ ├── demo                测试组件
 │ │ └── tyhUi               组件源文件
 │ ├── router                路由
 │ ├── App.vue
