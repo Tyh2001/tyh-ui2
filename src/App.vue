@@ -1,35 +1,10 @@
 <template>
-  <!-- <tyh-tree :data="data"></tyh-tree> -->
-  <hr />
-  <tyh-tree :data="data2"></tyh-tree>
+  <tyh-tree :data="data"></tyh-tree>
 </template>
 
 <script setup>
 import { ref, reactive } from 'vue'
-const data = {
-  label: '一级 1',
-  children: [
-    {
-      label: '二级 1-1',
-      children: [
-        {
-          label: '三级 1-1-1'
-        },
-        {
-          label: '三级 1-1-2'
-        },
-        {
-          label: '三级 1-1-3'
-        }
-      ]
-    },
-    {
-      label: '二级 1-2',
-    }
-  ]
-}
-
-const data2 = [
+const data = [
   {
     label: '一级 1',
     children: [
