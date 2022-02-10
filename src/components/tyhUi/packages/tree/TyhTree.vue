@@ -1,7 +1,7 @@
 <template>
   <ul v-for="(dataItem, index) in data" :key="index">
     <li @click="onOpen">
-      {{ dataItem.label }} <span>{{ isClose ? "+" : "-" }}</span>
+      {{ dataItem.label }} <span>{{ isClose ? "-" : "+" }}</span>
     </li>
     <div v-if="dataItem.children" v-show="isClose">
       <tyh-tree :data="dataItem.children" />
