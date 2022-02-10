@@ -1,0 +1,24 @@
+.tyh-three .tyh-three-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.tyh-three .tyh-three-list .tyh-three-label {
+  cursor: pointer;
+  user-select: none;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.tyh-three .tyh-three-list .tyh-three-label .tyh-three-label-text {
+  margin-left: 8px;
+}
+.tyh-three .tyh-three-list .tyh-three-label:hover {
+  background: #eee;
+}
+.tyh-three .tyh-three-list .tyh-three-children {
+  box-sizing: border-box;
+  padding-left: 25px;
+}

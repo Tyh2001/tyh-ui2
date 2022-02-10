@@ -1,12 +1,15 @@
 <template>
-  <ul v-for="(dataItem, index) in data" :key="index">
-    <li @click="onOpen">
-      {{ dataItem.label }} <span>{{ isClose ? "-" : "+" }}</span>
-    </li>
-    <div v-if="dataItem.children" v-show="isClose">
-      <tyh-tree :data="dataItem.children" />
+  <div class="tyh-three">
+    <div class="tyh-three-list" v-for="(dataItem, index) in data" :key="index">
+      <div class="tyh-three-label" @click="onOpen(dataItem)">
+        <tyh-icon icon="tyh-ui-arrow-right-filling" />
+        <span class="tyh-three-label-text">{{ dataItem.label }}</span>
+      </div>
+      <div class="tyh-three-children" v-if="dataItem.children" v-show="isClose">
+        <tyh-tree :data="dataItem.children" />
+      </div>
     </div>
-  </ul>
+  </div>
 </template>
 
 <script setup>
@@ -20,11 +23,12 @@ const props = defineProps({
 
 const isClose = ref(false)
 
-const onOpen = () => {
-  isClose.value = !isClose.value
+const onOpen = item => {
+  if (item.children && item.children.length) {
+    isClose.value = !isClose.value
+  }
 }
 </script>
 
-<style scoped src="./style/index.css">
-</style>
+<style scoped src="./style/index.css"></style>
 
