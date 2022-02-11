@@ -1,6 +1,12 @@
 <template>
   <!-- <tyh-tree :data="data" /> -->
-  <tyh-button @click="open2">成功</tyh-button>
+  <!-- <tyh-button @click="open2">成功</tyh-button>
+  <el-page-header @back="goBack" content="详情页面" title="asa"> </el-page-header> -->
+
+  <!-- <h1>11</h1> -->
+  <tyh-page-header icon="tyh-ui-close" content="详情页面" @back="goBack" />
+  <br />
+  <el-page-header content="详情页面"> </el-page-header>
 </template>
 
 <script setup>
@@ -12,8 +18,11 @@ function open2 () {
     message: '恭喜你，这是一条成功消息',
     type: 'success',
     showClose: true,
-    offset:30
+    offset: 30
   })
+}
+function goBack () {
+  console.log('go back')
 }
 
 const data = [

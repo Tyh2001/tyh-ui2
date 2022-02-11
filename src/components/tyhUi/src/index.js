@@ -32,6 +32,7 @@ import TyhRadio from '../packages/radio'
 import TyhSelect from '../packages/select'
 import TyhOption from '../packages/option'
 import TyhTree from '../packages/tree'
+import TyhPageHeader from '../packages/page-header'
 
 const components = [
   TyhButton,
@@ -67,7 +68,8 @@ const components = [
   TyhRadio,
   TyhSelect,
   TyhOption,
-  TyhTree
+  TyhTree,
+  TyhPageHeader
 ]
 
 const install = app => {
@@ -77,7 +79,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "3.2.0",
+  version: "3.2.1",
   install
 }
 
@@ -116,7 +118,8 @@ export {
   TyhRadio,
   TyhSelect,
   TyhOption,
-  TyhTree
+  TyhTree,
+  TyhPageHeader
 }
 
 export default tyhUi
