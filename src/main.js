@@ -30,7 +30,8 @@ import Element3 from 'element3'
 //   tracesSampleRate: 1.0,
 // });
 
-onerror = function (msg, url, row, col) {
+// http://localhost/tyh-ui2/public/index.php/index/index/index
+onerror = function (msg, url) {
   console.log(msg)
   console.log(url)
 }
