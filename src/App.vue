@@ -1,92 +1,40 @@
 <template>
-  <!-- <tyh-tree :data="data" /> -->
-  <!-- <tyh-button @click="open2">成功</tyh-button>
-  <el-page-header @back="goBack" content="详情页面" title="asa"> </el-page-header> -->
-
-  <!-- <h1>11</h1> -->
-  <tyh-page-header icon="tyh-ui-close" content="详情页面" @back="goBack" />
-  <br />
-  <el-page-header content="详情页面"> </el-page-header>
+  <button @click="throwError">Throw error</button>
 </template>
 
 <script setup>
-// import { Message } from 'element3'
-import Message from './components/demo/Message/index'
-
-function open2 () {
-  Message({
-    message: '恭喜你，这是一条成功消息',
-    type: 'success',
-    showClose: true,
-    offset: 30
-  })
+function throwError () {
+  console.log(a)
 }
-function goBack () {
-  console.log('go back')
-}
-
-const data = [
-  {
-    label: '一级 1',
-    children: [
-      {
-        label: '二级 1-1',
-        children: [
-          {
-            label: '三级 1-1-1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    label: '一级 2',
-    children: [
-      {
-        label: '二级 2-1',
-        children: [
-          {
-            label: '三级 2-1-1'
-          }
-        ]
-      },
-      {
-        label: '二级 2-2',
-        children: [
-          {
-            label: '三级 2-2-1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    label: '一级 3',
-    children: [
-      {
-        label: '二级 3-1',
-        children: [
-          {
-            label: '三级 3-1-1'
-          }
-        ]
-      },
-      {
-        label: '二级 3-2',
-        children: [
-          {
-            label: '三级 3-2-1'
-          }
-        ]
-      }
-    ]
-  }
-]
+// onerror = function (msg, url, row, col) {
+//   console.log(msg)
+//   console.log(url)
+//   console.log(row)
+//   console.log(col)
+// }
 </script>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
+<style scoped>
+.errBox {
+  color: rgb(232, 232, 232);
+  line-height: 3.2;
+  white-space: pre;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 13px;
+  position: fixed;
+  z-index: 9999;
+  padding: 10px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  bottom: 0px;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.85098);
+}
+.errBox .errUrl {
+  background-color: #e36049;
+  color: #fff;
+  padding: 2px 4px;
+  border-radius: 2px;
 }
 </style>

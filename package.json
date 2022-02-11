@@ -8,6 +8,8 @@
     "webpack": "webpack --mode development"
   },
   "dependencies": {
+    "@sentry/tracing": "^6.17.6",
+    "@sentry/vue": "^6.17.6",
     "@vueuse/core": "^7.1.2",
     "at-ui": "^1.3.3",
     "element-plus": "^1.2.0-beta.3",
