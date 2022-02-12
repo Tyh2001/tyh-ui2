@@ -16,10 +16,12 @@
       </div>
     </div>
 
-    <div v-if="moreInfo" class="tyh-info-body">
-      <ul>
-        <li>姓名：{{ moreInfo.name }}</li>
-      </ul>
+    <div v-if="$slots.body" class="tyh-info-body">
+      <slot name="body" />
+    </div>
+
+    <div v-if="$slots.footer" class="tyh-info-footer">
+      <slot name="footer" />
     </div>
   </div>
 </template>
@@ -27,8 +29,7 @@
 <script setup>
 defineProps({
   userInfo: String,
-  describe: String,
-  moreInfo: Object
+  describe: String
 })
 </script>
 
