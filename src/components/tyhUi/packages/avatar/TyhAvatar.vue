@@ -25,8 +25,8 @@ const props = defineProps({
   src: String,
   alt: String,
   size: {
-    type: Number,
-    default: 8
+    type: [Number, String],
+    default: '8'
   },
   fit: {
     type: String,
@@ -65,8 +65,8 @@ function _TyhAvatar () {
     ]
   })
   const successClass = computed(() => {
-    [
-      `tyh-avatar-${props.fit}`,
+    return [
+      props.fit && `tyh-avatar-${props.fit}`,
       {
         'tyh-avatar-round': props.round,
         'tyh-avatar-border': props.border,
@@ -83,3 +83,6 @@ function _TyhAvatar () {
   }
 }
 </script>
+
+<style scoped src="./style/index.css">
+</style>

@@ -1,5 +1,6 @@
 .tyh-avatar {
   display: inline-block;
+  font-size: 0;
 }
 .tyh-avatar .tyh-avatar-round {
   border-radius: 50%;
