@@ -2,10 +2,6 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 
-// 错误监控
-import * as Sentry from "@sentry/vue";
-import { BrowserTracing } from "@sentry/tracing";
-
 // import tyhUi2 from 'tyh-ui2'
 // import 'tyh-ui2/style/index.css'
 
