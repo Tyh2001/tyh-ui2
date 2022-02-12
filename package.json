@@ -4,20 +4,14 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "serve": "vite preview",
-    "webpack": "webpack --mode development"
+    "serve": "vite preview"
   },
   "dependencies": {
     "@sentry/tracing": "^6.17.6",
     "@sentry/vue": "^6.17.6",
     "@vueuse/core": "^7.1.2",
-    "at-ui": "^1.3.3",
     "element-plus": "^1.2.0-beta.3",
     "element3": "^0.0.40",
-    "less": "^4.1.2",
-    "less-loader": "^10.2.0",
-    "microtip": "^0.2.2",
-    "sass": "^1.43.4",
     "tyh-ui2": "^3.2.1",
     "vue": "^3.2.25",
     "vue-router": "^4.0.12"
@@ -26,8 +20,6 @@
     "@vitejs/plugin-vue": "^2.0.0",
     "babel-plugin-component": "^1.1.1",
     "naive-ui": "^2.24.1",
-    "vite": "^2.7.2",
-    "webpack": "^5.67.0",
-    "webpack-cli": "^4.9.1"
+    "vite": "^2.7.2"
   }
 }
