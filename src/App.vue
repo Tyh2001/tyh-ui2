@@ -1,5 +1,5 @@
 <template>
-
+  <tyh-info />
 </template>
 
 <script setup>
