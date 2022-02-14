@@ -54,9 +54,6 @@ nextTick(() => {
   })
   int.observe(myRef.value)
 })
-
-
-
 </script>
 
 <style scoped>
