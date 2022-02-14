@@ -1,40 +1,32 @@
 <template>
-  <button @click="throwError">Throw error</button>
+  <tyh-info userInfo="Tyh2001" describe="hello world">
+    <template v-slot:photo>
+      <tyh-avatar
+        round
+        size="5"
+        src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
+      />
+    </template>
+    <template v-slot:right>
+      <tyh-button simple type="primary" size="mini">关注 TA</tyh-button>
+    </template>
+
+    <template v-slot:body>
+      <tyh-text block type="success">这是我今天拍的照片，好看吗？</tyh-text>
+      <tyh-image
+        width="300px"
+        src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
+      />
+    </template>
+
+    <template v-slot:footer>
+      <tyh-text type="danger">2022-02-12</tyh-text>
+    </template>
+  </tyh-info>
 </template>
 
 <script setup>
-function throwError () {
-  console.log(a)
-}
-// onerror = function (msg, url, row, col) {
-//   console.log(msg)
-//   console.log(url)
-//   console.log(row)
-//   console.log(col)
-// }
 </script>
 
 <style scoped>
-.errBox {
-  color: rgb(232, 232, 232);
-  line-height: 3.2;
-  white-space: pre;
-  font-family: Menlo, Consolas, monospace;
-  font-size: 13px;
-  position: fixed;
-  z-index: 9999;
-  padding: 10px;
-  left: 0px;
-  right: 0px;
-  top: 0px;
-  bottom: 0px;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.85098);
-}
-.errBox .errUrl {
-  background-color: #e36049;
-  color: #fff;
-  padding: 2px 4px;
-  border-radius: 2px;
-}
 </style>

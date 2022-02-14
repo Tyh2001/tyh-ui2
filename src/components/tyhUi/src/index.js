@@ -33,6 +33,7 @@ import TyhSelect from '../packages/select'
 import TyhOption from '../packages/option'
 import TyhTree from '../packages/tree'
 import TyhPageHeader from '../packages/page-header'
+import TyhInfo from '../packages/info'
 
 const components = [
   TyhButton,
@@ -69,7 +70,8 @@ const components = [
   TyhSelect,
   TyhOption,
   TyhTree,
-  TyhPageHeader
+  TyhPageHeader,
+  TyhInfo
 ]
 
 const install = app => {
@@ -79,7 +81,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "3.2.1",
+  version: "3.2.2",
   install
 }
 
@@ -119,7 +121,8 @@ export {
   TyhSelect,
   TyhOption,
   TyhTree,
-  TyhPageHeader
+  TyhPageHeader,
+  TyhInfo
 }
 
 export default tyhUi
