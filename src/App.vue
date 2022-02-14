@@ -37,18 +37,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, nextTick } from 'vue'
+import { ref, nextTick } from 'vue'
 const myRef = ref(null)
 
-// console.log(myRef)
 nextTick(() => {
 
   const int = new IntersectionObserver(changes => {
-    // console.log(changes[0].target)
-    // console.log('改变了')
-
     changes.forEach(change => {
-      // const container = change.target
       console.log('改变了')
     })
   })
