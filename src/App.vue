@@ -1,31 +1,62 @@
 <template>
-  <tyh-info userInfo="Tyh2001" describe="hello world">
-    <template v-slot:photo>
-      <tyh-avatar
-        round
-        size="5"
-        src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
-      />
-    </template>
-    <template v-slot:right>
-      <tyh-button simple type="primary" size="mini">关注 TA</tyh-button>
-    </template>
+  <tyh-card>
+    <template v-slot:title>主标题</template>
+    <template v-slot:subtitle>副标题</template>
+    <h1>这是内容部分1</h1>
+    <h1>这是内容部分2</h1>
+    <h1>这是内容部分3</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+    <h1>这是内容部分4</h1>
+  </tyh-card>
 
-    <template v-slot:body>
-      <tyh-text block type="success">这是我今天拍的照片，好看吗？</tyh-text>
-      <tyh-image
-        width="300px"
-        src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
-      />
-    </template>
-
-    <template v-slot:footer>
-      <tyh-text type="danger">2022-02-12</tyh-text>
-    </template>
-  </tyh-info>
+  <!-- <tyh-image
+    ref="tyh-image"
+    width="300px"
+    src="https://tianyuhao.cn/tyhui/v3/assets/giraffe.jpg"
+  /> -->
+  <div class="text" ref="myRef">获取单个DOM元素</div>
+  <div class="text" ref="myRef">获取单个DOM元素</div>
+  <div class="text" ref="myRef">获取单个DOM元素</div>
+  <div class="text" ref="myRef">获取单个DOM元素</div>
+  <div class="text" ref="myRef">获取单个DOM元素</div>
 </template>
 
 <script setup>
+import { ref, onMounted, nextTick } from 'vue'
+const myRef = ref(null)
+
+// console.log(myRef)
+nextTick(() => {
+
+  const int = new IntersectionObserver(changes => {
+    // console.log(changes[0].target)
+    // console.log('改变了')
+
+    changes.forEach(change => {
+      // const container = change.target
+      console.log('改变了')
+    })
+  })
+  int.observe(myRef.value)
+})
+
+
+
 </script>
 
 <style scoped>
