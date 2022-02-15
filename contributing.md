@@ -1,22 +1,16 @@
-# START_PROJECT
+# tyh-ui 贡献指南
 
-## Start project
+## 前言
 
-1. Fork [tyh-ui2](https://github.com/Tyh2001/tyh-ui2)
+你好！我很高兴你有兴趣为 tyh-ui 做贡献。在提交您的贡献之前，请务必花点时间阅读以下指南：
 
-2. install
+## 安全报告指南
 
-```shell
-git clone git@github.com:Tyh2001/tyh-ui2.git
+## 拉取请求指南
 
-cd tyh-ui2
+## 开发设置
 
-npm i
-
-npm run dev
-```
-
-## directory structure
+## 项目结构
 
 ```
 ├── src                     开发目录
@@ -38,3 +32,9 @@ npm run dev
 ├── package.json
 └── vite.config.js
 ```
+
+## 财务贡献
+
+## 感谢
+
+感谢所有已经为 tyh-ui <a href="https://github.com/Tyh2001/tyh-ui2/graphs/contributors">做出贡献的人</a>！
