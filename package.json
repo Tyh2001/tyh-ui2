@@ -8,11 +8,11 @@
   },
   "dependencies": {
     "@vueuse/core": "^7.1.2",
-    "vue": "^3.2.25",
-    "element3": "^0.0.40",
     "element-plus": "^1.2.0-beta.3",
+    "element3": "^0.0.40",
     "naive-ui": "^2.24.1",
     "tyh-ui2": "^3.2.1",
+    "vue": "^3.2.25",
     "vue-router": "^4.0.12"
   },
   "devDependencies": {
