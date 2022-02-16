@@ -18,15 +18,11 @@
   </tyh-select> -->
   <!-- <br /> -->
   <!-- <tyh-input v-model="text1" /> -->
-  <!-- <el-select v-model="value" placeholder="请选择">
-    <el-option
-      v-for="item in data"
-      :key="item.value"
-      :label="item.label"
-      :value="item.value"
-    >
-    </el-option>
-  </el-select> -->
+  <!-- <el-select v-model="value" placeholder="请选择"> -->
+    <!-- <el-option label="123" value="1232">
+    1
+    </el-option> -->
+  <!-- </el-select> -->
 </template>
 
 <script setup>
