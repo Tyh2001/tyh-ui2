@@ -1,4 +1,13 @@
+.tyh-option {
+  cursor: pointer;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  user-select: none;
+}
+.tyh-option:hover {
+  background-color: #eee;
+}
 .tyh-option .tyh-option-text {
-  height: 35px;
-  background-color: red;
+  color: #333;
+  font-size: 12px;
 }

@@ -1,21 +1,21 @@
 <template>
-  <option :value="value">
-    <span>
+  <li class="tyh-option" @click="send">
+    <span class="tyh-option-text">
       <slot />
     </span>
-  </option>
-
-  <!-- <p @click="sendVal">
-    <slot />
-  </p> -->
+  </li>
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 const props = defineProps({
   value: String
 })
 
-function sendVal () {
+const emit = defineEmits(['update:modelValue', 'newValue'])
+
+function send () {
+  emit('newValue', props.value)
   console.log(props.value)
 }
 </script>

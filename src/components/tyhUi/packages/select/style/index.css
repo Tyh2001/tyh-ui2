@@ -1,5 +1,9 @@
 .tyh-select {
   width: 210px;
+  display: inline-block;
+}
+.tyh-select .tyh-select-input {
+  width: 210px;
   height: 37px;
   border-radius: 5px;
   color: #3f536e;
@@ -12,6 +16,12 @@
   font-size: 14px;
   cursor: pointer;
 }
-.tyh-select:focus {
+.tyh-select .tyh-select-input:focus {
   border: 1px solid #3a6ff4;
+}
+.tyh-select .tyh-select-list {
+  list-style: none;
+  padding-left: 0;
+  border-radius: 4px;
+  box-shadow: 2px 2px 18px 3px #0000001a, 0 0 4px #0000001a;
 }
