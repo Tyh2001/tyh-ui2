@@ -1,6 +1,6 @@
 
 <template>
-  <div :class="['tyh-textarea', { 'tyh-textarea-disabled': disabled }]">
+  <div class="tyh-textarea">
     <textarea
       cols="30"
       :rows="rows"
@@ -34,9 +34,9 @@ const props = defineProps({
   },
   resize: {
     type: String,
-    default: 'vertical',
+    default: '',
     validator (val) {
-      return ['vertical', 'horizontal', 'none', ''].includes(val)
+      return ['vertical', 'horizontal', 'none'].includes(val)
     }
   },
   disabled: Boolean,

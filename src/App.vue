@@ -14,7 +14,8 @@
   <div class="text" ref="myRef">获取单个DOM元素</div> -->
 
   <!-- <textarea name="" id="" cols="30" rows="10" v-model="value"></textarea> -->
-  <tyh-textarea v-model="value" resize="vertical" autofocus @onblur="fun" />
+
+  <tyh-textarea v-model="value2" disabled />
 </template>
 
 <script setup>
@@ -23,6 +24,7 @@ const value = ref('')
 function fun () {
   console.log('123')
 }
+const value2 = ref('哈哈哈哈哈')
 // const myRef = ref(null)
 
 // nextTick(() => {
