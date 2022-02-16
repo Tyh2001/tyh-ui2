@@ -1,12 +1,16 @@
 # 更新日志
 
+## 3.2.6 (2022-02-16)
+
+- 修改 TyhTextarea 组件 resize 配置项
+
 ## 3.2.5 (2022-02-16)
 
 - 新增 TyhTextarea 组件禁用状态的样式
 
 ## 3.2.4 (2022-02-16)
 
-- 新增 TyhTextarea 组件 resize 配置项
+- 修改 TyhTextarea 组件 resize 配置项
 
 ## 3.2.3 (2022-02-16)
 

@@ -34,7 +34,6 @@ const props = defineProps({
   },
   resize: {
     type: String,
-    default: '',
     validator (val) {
       return ['vertical', 'horizontal', 'none'].includes(val)
     }
