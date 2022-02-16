@@ -3,22 +3,6 @@
     multiple 是否允许多选
     size 可见的行数
   -->
-  <!-- <select v-model="value" multiple type="select-multiple">
-    <option value="1">第一个</option>
-    <option value="2">第二个</option>
-    <option value="3">第三个</option>
-    <option value="4">第四个</option>
-  </select>-->
-
-  <select v-model="value">
-    <option value="1">第一个</option>
-    <option value="2">第二个</option>
-    <option value="3">第三个</option>
-    <option value="4">第四个</option>
-  </select>
-
-  <br />
-
   <tyh-select v-model="value2">
     <tyh-option value="1">第一个</tyh-option>
     <tyh-option value="2">第二个</tyh-option>
@@ -26,13 +10,14 @@
     <tyh-option value="4">第四个</tyh-option>
   </tyh-select>
 
-  <!-- <select v-model="value">
-    <option value="1">第一个</option>
-    <option value="2">第二个</option>
-    <option value="3">第三个</option>
-    <option value="4">第四个</option>
-  </select> -->
-
+  <!-- <tyh-select v-model="value2">
+    <tyh-option value="1">第一个</tyh-option>
+    <tyh-option value="2">第二个</tyh-option>
+    <tyh-option value="3">第三个</tyh-option>
+    <tyh-option value="4">第四个</tyh-option>
+  </tyh-select> -->
+  <!-- <br /> -->
+  <!-- <tyh-input v-model="text1" /> -->
   <!-- <el-select v-model="value" placeholder="请选择">
     <el-option
       v-for="item in data"
@@ -48,6 +33,9 @@
 import { ref, nextTick, reactive } from 'vue'
 const value = ref('')
 const value2 = ref('2')
+function aaa (e) {
+  console.log(e)
+}
 const data =
   [
     {

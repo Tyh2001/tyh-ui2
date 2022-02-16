@@ -1,17 +1,13 @@
 <template>
-  <option :value="value" @click="onClick">
+  <option :value="value">
     <slot />
   </option>
 </template>
 
 <script setup>
-defineProps({
+const props = defineProps({
   value: String
 })
-
-function onClick () {
-  console.log('12')
-}
 </script>
 
 <style scoped src="./style/index.css">
