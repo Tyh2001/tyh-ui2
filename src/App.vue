@@ -1,42 +1,78 @@
 <template>
-  <!-- <tyh-card>
-    <template v-slot:title>主标题</template>
-    <template v-slot:subtitle>副标题</template>
-    <h1>这是内容部分1</h1>
-    <h1>这是内容部分2</h1>
-    <h1>这是内容部分3</h1>
-  </tyh-card>
+  <!-- 
+    multiple 是否允许多选
+    size 可见的行数
+  -->
+  <!-- <select v-model="value" multiple type="select-multiple">
+    <option value="1">第一个</option>
+    <option value="2">第二个</option>
+    <option value="3">第三个</option>
+    <option value="4">第四个</option>
+  </select>-->
 
-  <div class="text" ref="myRef">获取单个DOM元素</div>
-  <div class="text" ref="myRef">获取单个DOM元素</div>
-  <div class="text" ref="myRef">获取单个DOM元素</div>
-  <div class="text" ref="myRef">获取单个DOM元素</div>
-  <div class="text" ref="myRef">获取单个DOM元素</div> -->
+  <select v-model="value">
+    <option value="1">第一个</option>
+    <option value="2">第二个</option>
+    <option value="3">第三个</option>
+    <option value="4">第四个</option>
+  </select>
 
-  <!-- <textarea name="" id="" cols="30" rows="10" v-model="value"></textarea> -->
+  <br />
 
-  <!-- <tyh-textarea v-model="value2" disabled /> -->
-  <tyh-textarea v-model="value7" />
-  <tyh-textarea v-model="value8" resize="vertical" />
-  <tyh-textarea v-model="value9" resize="horizontal" />
-  <tyh-textarea v-model="value10" resize="none" />
+  <tyh-select v-model="value2">
+    <tyh-option value="1">第一个</tyh-option>
+    <tyh-option value="2">第二个</tyh-option>
+    <tyh-option value="3">第三个</tyh-option>
+    <tyh-option value="4">第四个</tyh-option>
+  </tyh-select>
+
+  <!-- <select v-model="value">
+    <option value="1">第一个</option>
+    <option value="2">第二个</option>
+    <option value="3">第三个</option>
+    <option value="4">第四个</option>
+  </select> -->
+
+  <!-- <el-select v-model="value" placeholder="请选择">
+    <el-option
+      v-for="item in data"
+      :key="item.value"
+      :label="item.label"
+      :value="item.value"
+    >
+    </el-option>
+  </el-select> -->
 </template>
 
 <script setup>
-import { ref, nextTick } from 'vue'
+import { ref, nextTick, reactive } from 'vue'
 const value = ref('')
-const value7 = ref('随意拉伸')
-const value8 = ref('只能纵向拉伸')
-const value9 = ref('只能横向拉伸')
-const value10 = ref('禁止拉伸')
-function fun () {
-  console.log('123')
-}
-const value2 = ref('哈哈哈哈哈')
-// const myRef = ref(null)
-
+const value2 = ref('2')
+const data =
+  [
+    {
+      value: '选项1',
+      label: '黄金糕'
+    },
+    {
+      value: '选项2',
+      label: '双皮奶'
+    },
+    {
+      value: '选项3',
+      label: '蚵仔煎'
+    },
+    {
+      value: '选项4',
+      label: '龙须面'
+    },
+    {
+      value: '选项5',
+      label: '北京烤鸭'
+    }
+  ]
+// 图片懒加载简单逻辑
 // nextTick(() => {
-
 //   const int = new IntersectionObserver(changes => {
 //     changes.forEach(change => {
 //       console.log('改变了')
