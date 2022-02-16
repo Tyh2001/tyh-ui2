@@ -16,9 +16,9 @@
 
 ## 提交说明规范
 
-当执行 `commit` 的时候，需要严格按照下方说明规范进行填写说明信息
+git 允许我们在每次提交时，附带一个提交信息作为说明，当执行 `commit` 的时候，需要严格按照下方说明规范进行填写说明信息
 
-| code     | 描述                                 |
+| 类别     | 描述                                 |
 | -------- | ------------------------------------ |
 | feat     | 新功能                               |
 | fix      | 修复                                 |
@@ -32,7 +32,7 @@
 | Init     | 新建库                               |
 | release  | 发布新版本                           |
 
-`commit` 规范为：`<code>：<具体描述（中文/英文）>`
+`commit` 规范为：`<类别>：<具体描述信息>`
 
 - 如添加新功能
 
@@ -41,6 +41,10 @@
 - 如修改代码样式
 
 提交规范为：`style：修改xx的xx样式`
+
+- 在修复 bug 时
+
+提交规范为：`fix(可选说明信息)：修改xxxx（issue 编号（可选））`
 
 ## 项目结构
 
@@ -69,7 +73,7 @@
 
 开发不易，欢迎大家赞助！
 
-<img width="300px" align="center" src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg" alt="weixin"><img width="300px" align="center" src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg" alt="zhifubao">
+<img width="200px" align="center" src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg" alt="weixin"><img width="200px" align="center" src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg" alt="zhifubao">
 
 ## 感谢
 
