@@ -13,13 +13,16 @@
   <div class="text" ref="myRef">获取单个DOM元素</div>
   <div class="text" ref="myRef">获取单个DOM元素</div> -->
 
-  <textarea name="" id="" cols="30" rows="10" v-model="value"></textarea>
-  <tyh-textarea v-model="value" />
+  <!-- <textarea name="" id="" cols="30" rows="10" v-model="value"></textarea> -->
+  <tyh-textarea v-model="value" resize="vertical" autofocus @onblur="fun" />
 </template>
 
 <script setup>
 import { ref, nextTick } from 'vue'
 const value = ref('')
+function fun () {
+  console.log('123')
+}
 // const myRef = ref(null)
 
 // nextTick(() => {

@@ -3,15 +3,16 @@
   <div :class="['tyh-textarea', { 'tyh-textarea-disabled': disabled }]">
     <textarea
       cols="30"
-      rows="10"
+      :rows="rows"
       :class="isClass"
       :autofocus="autofocus"
       :value="modelValue"
       :placeholder="placeholder"
       :disabled="disabled"
       :name="name"
+      :maxlength="max"
+      :style="{ resize }"
       @input="input"
-      @keyup.enter="emit('enter')"
       @blur="emit('onblur')"
       @focus="emit('onfocus')"
     />
@@ -23,45 +24,41 @@ import { computed } from 'vue'
 const props = defineProps({
   modelValue: String,
   placeholder: String,
-  size: {
+  max: [Number, String],
+  rows: {
+    type: [Number, String],
+    default: '3'
+  },
+  cols: {
+    type: [Number, String],
+  },
+  resize: {
     type: String,
-    default: 'medium',
+    default: 'vertical',
     validator (val) {
-      return ['large', 'medium', 'small', 'mini'].includes(val)
+      return ['vertical', 'horizontal', 'none', ''].includes(val)
     }
   },
-  max: Number,
   disabled: Boolean,
   autofocus: Boolean,
   name: String,
 })
-const emit = defineEmits(['update:modelValue', 'update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
+const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
 
-const {
-  input,
-  isClass
-} = _TyhTextarea()
+const { input, isClass } = _TyhTextarea()
 
 function _TyhTextarea () {
-  const input = evt => {
-    emit('update:modelValue', evt.target.value)
-  }
+  const input = e => emit('update:modelValue', e.target.value)
 
   const isClass = computed(() => {
     return [
       'tyh-textarea-textarea',
-      `tyh-textarea-textarea-${props.size}`,
       {
-        'tyh-textarea-icon-padding': props.icon,
-        'tyh-textarea-clear-padding': props.clear,
         'tyh-textarea-disabled': props.disabled
       }
     ]
   })
 
-  return {
-    input,
-    isClass
-  }
+  return { input, isClass }
 }
 </script>

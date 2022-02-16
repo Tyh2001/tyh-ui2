@@ -75,7 +75,7 @@ const props = defineProps({
       return ['large', 'medium', 'small', 'mini'].includes(val)
     }
   },
-  max: Number,
+  max: [Number, String],
   clear: Boolean,
   icon: String,
   disabled: Boolean,
@@ -83,7 +83,7 @@ const props = defineProps({
   name: String,
   showPassword: Boolean
 })
-const emit = defineEmits(['update:modelValue', 'update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
+const emit = defineEmits(['update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
 
 const {
   input,
@@ -95,9 +95,7 @@ const {
 } = _TyhInput()
 
 function _TyhInput () {
-  const input = evt => {
-    emit('update:modelValue', evt.target.value)
-  }
+  const input = e => emit('update:modelValue', e.target.value)
   const clearText = () => {
     if (props.disabled) return
     emit('update:modelValue', '')
