@@ -1,6 +1,6 @@
 
 <template>
-  <div class="tyh-input" :class="{ 'tyh-input-disabled': disabled }">
+  <div :class="['tyh-input', { 'tyh-input-disabled': disabled }]">
     <tyh-icon
       v-if="icon"
       :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
@@ -32,8 +32,8 @@
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'pointer'
-        }
+          cursor: disabled ? 'not-allowed' : 'pointer',
+        },
       ]"
       color="#c7c7c7"
       icon="tyh-ui-guanbi"
@@ -130,5 +130,4 @@ function _TyhInput () {
     showPasswordFn
   }
 }
-
 </script>

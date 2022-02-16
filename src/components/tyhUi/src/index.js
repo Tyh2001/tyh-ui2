@@ -34,6 +34,7 @@ import TyhOption from '../packages/option'
 import TyhTree from '../packages/tree'
 import TyhPageHeader from '../packages/page-header'
 import TyhInfo from '../packages/info'
+import TyhTextarea from '../packages/textarea'
 
 const components = [
   TyhButton,
@@ -71,7 +72,8 @@ const components = [
   TyhOption,
   TyhTree,
   TyhPageHeader,
-  TyhInfo
+  TyhInfo,
+  TyhTextarea
 ]
 
 const install = app => {
@@ -122,7 +124,8 @@ export {
   TyhOption,
   TyhTree,
   TyhPageHeader,
-  TyhInfo
+  TyhInfo,
+  TyhTextarea
 }
 
 export default tyhUi
