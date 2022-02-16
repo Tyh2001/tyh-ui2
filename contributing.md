@@ -69,9 +69,7 @@
 
 开发不易，欢迎大家赞助！
 
-<img width="200px" src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg" alt="weixin">
-
-<img width="200px" src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg" alt="zhifubao">
+<img width="300px" align="center" src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg" alt="weixin"><img width="300px" align="center" src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg" alt="zhifubao">
 
 ## 感谢
 
