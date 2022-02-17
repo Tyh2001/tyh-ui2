@@ -1,5 +1,5 @@
 <template>
-  <select class="tyh-select" v-model="modelValue" name="" @input="input">
+  <select class="tyh-select" v-model="modelValue" :name="name" @input="input">
     <slot />
   </select>
 </template>
@@ -7,10 +7,11 @@
 <script setup>
 defineProps({
   modelValue: {
-    type: String
-  }
+    type: String,
+    required: true
+  },
+  name: String
 })
-
 const emit = defineEmits(['update:modelValue'])
 const input = e => emit('update:modelValue', e.target.value)
 </script>

@@ -1,6 +1,7 @@
 <template>
   <option :value="value">
-    <span>
+    <span v-if="label">{{ label }}</span>
+    <span v-else>
       <slot />
     </span>
   </option>
@@ -8,12 +9,9 @@
 
 <script setup>
 const props = defineProps({
-  value: String
+  value: String,
+  label: String
 })
-
-function sendVal () {
-  console.log(props.value)
-}
 </script>
 
 <style scoped src="./style/index.css">

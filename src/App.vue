@@ -13,6 +13,16 @@
     </tyh-option>
   </tyh-select>
 
+  <tyh-select v-model="value">
+    <tyh-option
+      v-for="(item, index) in options"
+      :key="index"
+      :value="item.value"
+      :label="item.label"
+    >
+    </tyh-option>
+  </tyh-select>
+
   <el-select v-model="value" placeholder="请选择">
     <el-option
       v-for="item in options"
