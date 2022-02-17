@@ -3,23 +3,13 @@
     multiple 是否允许多选
     size 可见的行数
   -->
-  <tyh-select v-model="value">
+  <tyh-select v-model="value" placeholder="请选择">
     <tyh-option
       v-for="(item, index) in options"
       :key="index"
       :value="item.value"
     >
       {{ item.label }}
-    </tyh-option>
-  </tyh-select>
-
-  <tyh-select v-model="value">
-    <tyh-option
-      v-for="(item, index) in options"
-      :key="index"
-      :value="item.value"
-      :label="item.label"
-    >
     </tyh-option>
   </tyh-select>
 
@@ -35,7 +25,7 @@
 
 <script setup>
 import { ref, nextTick, reactive, provide } from 'vue'
-const value = ref('双皮奶')
+const value = ref('选项1')
 
 const options = [
   {
