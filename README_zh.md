@@ -1,23 +1,23 @@
 <p align="center">
-  <img height="260px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui2-logo.svg">
+  <img height="260px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
 </p>
 
 <p align="center">
-  中文 | <a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README.md">English</a>
+  中文 | <a href="https://github.com/Tyh2001/tyh-ui/blob/master/README.md">English</a>
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/tyh-ui2">
     <img src="https://badgen.net/npm/v/tyh-ui2" alt="npm package">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md">
-    <img src="https://img.shields.io/badge/tyh--ui2-CHANGELOG-orange" alt="CHANGELOG">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md">
+    <img src="https://img.shields.io/badge/tyh--ui-CHANGELOG-orange" alt="CHANGELOG">
   </a>
   <a style="margin-left:15px;" href="https://tianyuhao.cn/tyhui/v3">
-    <img src="https://img.shields.io/badge/tyh--ui2-docs-red" alt="docs">
+    <img src="https://img.shields.io/badge/tyh--ui-docs-red" alt="docs">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README.md">
-    <img src="https://img.shields.io/badge/tyh--ui2-README__en-yellowgreen">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/README.md">
+    <img src="https://img.shields.io/badge/tyh--ui-README__en-yellowgreen">
   </a>
 </p>
 
@@ -52,9 +52,9 @@ createApp(App).use(tyhUi2).mount('#app')
 
 ## 关于:page_facing_up:
 
-- [更新日志](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
-- 项目的安装和贡献请参考[贡献指南](https://github.com/Tyh2001/tyh-ui2/blob/master/contributing.md)。
-- 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui2/blob/master/SECURITY.md)
+- [更新日志](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
+- 项目的安装和贡献请参考[贡献指南](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md)。
+- 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md)
 
 ## 贡献者:wave:
 
