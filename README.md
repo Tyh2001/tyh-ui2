@@ -23,7 +23,7 @@
 
 ## Introduction:bulb:
 
-A lightweight component library, based on the vue3.0 version, fully embraces vue3.0
+A lightweight component library, based on the vue3.0 version, fully embraces vue3.0.
 
 > Simplicity first
 
