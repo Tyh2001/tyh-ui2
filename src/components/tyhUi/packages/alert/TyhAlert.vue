@@ -4,6 +4,7 @@
       <tyh-icon v-if="icon" :icon="icon" :color="COLOR[type]" />
       {{ message }}
     </div>
+
     <tyh-icon
       v-if="close"
       icon="tyh-ui-guanbi"
