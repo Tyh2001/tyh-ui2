@@ -6,8 +6,8 @@
       :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
       :style="[
         {
-          cursor: disabled ? 'not-allowed' : 'Default',
-        },
+          cursor: disabled ? 'not-allowed' : 'Default'
+        }
       ]"
       color="#c7c7c7"
       :icon="icon"

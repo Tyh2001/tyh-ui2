@@ -55,8 +55,8 @@ function _TyhButton () {
       props.simple
         ? props.disabled ? `tyh-button-simple-disabled-${props.type}` : `tyh-button-simple-${props.type}`
         : props.disabled ? `tyh-button-disabled-${props.type}` : `tyh-button-${props.type}`,
-      props.size ? `tyh-button-size-${props.size}` : '',
       {
+        [`tyh-button-size-${props.size}`]: props.size,
         'tyh-button-round': props.round,
         'tyh-button-square': props.square
       }

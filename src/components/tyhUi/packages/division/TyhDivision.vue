@@ -24,8 +24,8 @@ defineProps({
     default: '#515a6e'
   },
   margin: {
-    type: Number,
-    default: 25
+    type: [Number, String],
+    default: '25'
   },
   icon: String
 })

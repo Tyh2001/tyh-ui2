@@ -13,11 +13,11 @@
 import { ref, onMounted } from 'vue'
 defineProps({
   bottom: {
-    type: String,
+    type: [String, Number],
     default: '50'
   },
   right: {
-    type: String,
+    type: [String, Number],
     default: '50'
   }
 })

@@ -11,8 +11,8 @@
     :class="[
       'tyh-switch',
       {
-        'tyh-switch-disabled': disabled,
-      },
+        'tyh-switch-disabled': disabled
+      }
     ]"
     :style="switchStyle"
     @click="clickSwitch"
@@ -48,7 +48,7 @@ const props = defineProps({
   openText: String,
   disabled: Boolean,
   width: {
-    type: Number,
+    type: [Number, String],
     default: 40
   }
 })

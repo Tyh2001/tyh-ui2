@@ -39,8 +39,8 @@ const isClass = computed(() => {
   return [
     'tyh-tag',
     `tyh-tag-${props.type}`,
-    props.size ? `tyh-tag-${props.size}` : '',
     {
+      [`tyh-tag-${props.size}`]: props.size,
       'tyh-tag-round': props.round
     }
   ]

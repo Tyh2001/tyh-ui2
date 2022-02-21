@@ -10,7 +10,7 @@ defineProps({
   icon: String,
   color: String,
   size: {
-    type: String,
+    type: [Number, String],
     default: '18'
   }
 })

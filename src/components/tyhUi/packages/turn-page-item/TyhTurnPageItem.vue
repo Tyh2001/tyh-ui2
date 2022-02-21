@@ -4,8 +4,8 @@
       :class="[
         'tyh-turn-page-item-link',
         {
-          'tyh-turn-page-item-prohibit': prohibit,
-        },
+          'tyh-turn-page-item-prohibit': prohibit
+        }
       ]"
       @click="link"
     >

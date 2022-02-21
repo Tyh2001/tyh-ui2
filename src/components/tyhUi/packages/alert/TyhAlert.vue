@@ -57,7 +57,9 @@ function _TyhAlert () {
   const isClass = computed(() => {
     return [
       'tyh-alert',
-      props.type ? `tyh-alert-${props.type}` : '',
+      {
+        [`tyh-alert-${props.type}`]: props.type
+      }
     ]
   })
   const isStyle = computed(() => {

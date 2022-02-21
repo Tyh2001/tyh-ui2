@@ -65,14 +65,12 @@ function _TyhAvatar () {
     ]
   })
   const successClass = computed(() => {
-    return [
-      props.fit && `tyh-avatar-${props.fit}`,
-      {
-        'tyh-avatar-round': props.round,
-        'tyh-avatar-border': props.border,
-        'tyh-avatar-select': props.select
-      }
-    ]
+    return [{
+      [`tyh-avatar-${props.fit}`]: props.fit,
+      'tyh-avatar-round': props.round,
+      'tyh-avatar-border': props.border,
+      'tyh-avatar-select': props.select
+    }]
   })
   return {
     isError,
@@ -83,6 +81,3 @@ function _TyhAvatar () {
   }
 }
 </script>
-
-<style scoped src="./style/index.css">
-</style>

@@ -1,6 +1,16 @@
 # 更新日志
 
-## 3.2.8 (2022-02-19)
+## 3.2.10 (2022-02-21)
+
+- 加入 TyhTagging 组件
+- 优化 TyhAlert、TyhAlert、TyhButton、TyhCard、TyhRadio 组件 class 处理细节
+- TyhBackTop 组件的 `bottom` 和 `right` 属性现在可以传入数字或字符串了
+- TyhDivision 组件的 `margin` 属性现在可以传入数字或字符串了
+- TyhIcon 组件的 `size` 属性现在可以传入数字或字符串了
+- TyhSwitch 组件的 `width` 属性现在可以传入数字或字符串了
+- TyhText 组件的 `size` 属性现在可以传入数字或字符串了
+
+## 3.2.9 (2022-02-19)
 
 - 更新 readme 文件
 

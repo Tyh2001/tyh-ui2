@@ -28,8 +28,8 @@
           :class="[
             'tyh-tbody-tr',
             {
-              'tyh-tbody-tr-zebra': zebra,
-            },
+              'tyh-tbody-tr-zebra': zebra
+            }
           ]"
           :height="trHeight"
           :style="importantStyle(ind)"

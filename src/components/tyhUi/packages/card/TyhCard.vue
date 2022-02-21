@@ -1,5 +1,5 @@
 <template>
-  <div :class="['tyh-card', shadow ? `tyh-card-shadow-${shadow}` : '']">
+  <div :class="['tyh-card', { [`tyh-card-shadow-${shadow}`]: shadow }]">
     <div v-if="!simple" class="tyh-card-header">
       <p class="tyh-card-title">
         <slot name="title" />

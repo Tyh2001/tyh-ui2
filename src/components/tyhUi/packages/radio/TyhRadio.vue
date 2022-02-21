@@ -2,10 +2,10 @@
   <label
     :class="[
       'tyh-radio',
-      border && `tyh-radio-${size}`,
       {
-        'tyh-radio-border': border,
-      },
+        [`tyh-radio-${size}`]: border,
+        'tyh-radio-border': border
+      }
     ]"
     :style="labelStyle"
   >

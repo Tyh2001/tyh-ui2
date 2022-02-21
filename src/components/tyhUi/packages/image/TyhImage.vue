@@ -12,8 +12,8 @@
       :class="[
         `tyh-image-${fit}`,
         {
-          'tyh-image-select': select,
-        },
+          'tyh-image-select': select
+        }
       ]"
       :style="[{ width, height }]"
       :src="src"

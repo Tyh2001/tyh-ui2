@@ -1,0 +1,21 @@
+.tyh-tagging {
+  display: inline-block;
+  border-radius: 6px;
+  padding: 0.2em 0.4em;
+}
+.tyh-tagging-,
+.tyh-tagging-default {
+  background-color: #f4f5f5;
+}
+.tyh-tagging-primary {
+  background-color: rgba(58, 111, 244, 0.2);
+}
+.tyh-tagging-success {
+  background-color: rgba(84, 198, 0, 0.2);
+}
+.tyh-tagging-danger {
+  background-color: rgba(209, 15, 27, 0.2);
+}
+.tyh-tagging-warning {
+  background-color: rgba(251, 204, 48, 0.2);
+}
