@@ -20,14 +20,14 @@ const props = defineProps({
   },
   color: {
     type: String,
-    default: '#333'
+    default: '#fff'
   }
 })
 const isClass = computed(() => ['tyh-tagging', `tyh-tagging-${props.type}`])
 const isStyle = computed(() => {
-  return { fontSize: `${props.size}px`, color: props.color }
+  return {
+    fontSize: `${props.size}px`,
+    color: props.type === 'default' ? '#333' : props.color
+  }
 })
 </script>
-
-<style src="./style/index.css" scoped>
-</style>
