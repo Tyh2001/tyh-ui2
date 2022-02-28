@@ -11,6 +11,7 @@ function change2 () {
     type: 'success',
     showClose: true,
     icon: 'tyh-ui-meh-filling',
+    round: true
   })
 }
 </script>

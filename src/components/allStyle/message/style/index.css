@@ -17,11 +17,14 @@
 .tyh-message .tyh-message-content {
   text-align: center;
 }
-.tyh-message .tyh-icon {
+.tyh-message .lef-icon {
   margin-right: 6px;
 }
 .tyh-message .tyh-ui-close {
   margin-left: 15px;
+}
+.tyh-message-round {
+  border-radius: 50%;
 }
 .tyh-message-,
 .tyh-message-default {

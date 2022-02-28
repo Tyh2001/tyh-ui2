@@ -2,17 +2,26 @@
   <transition name="tyh-message-fade" @after-leave="leave" appear>
     <div
       v-show="isShow"
-      :class="['tyh-message', `tyh-message-${type}`]"
+      :class="[
+        'tyh-message',
+        `tyh-message-${type}`,
+        { 'tyh-message-round': round }
+      ]"
       :style="[{ top: `${offset}px` }]"
     >
       <div class="tyh-message-content">
-        <tyh-icon v-if="icon" :icon="icon" :color="isIconColor" />
+        <tyh-icon
+          v-if="icon"
+          class="lef-icon"
+          :icon="icon"
+          :color="isIconColor"
+        />
         <span>{{ message }}</span>
         <tyh-icon
           v-if="showClose"
           icon="tyh-ui-close"
-          :color="isIconColor"
           size="16"
+          :color="isIconColor"
           @click="close"
         />
       </div>
@@ -37,7 +46,8 @@ const props = defineProps({
   showClose: Boolean,
   time: Number,
   offset: Number,
-  icon: String
+  icon: String,
+  round: Boolean
 })
 
 const { isShow, isIconColor, leave, close } = _TyhMessage()
