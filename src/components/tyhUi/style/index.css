@@ -466,7 +466,7 @@
   transition: background 0.2s;
   background: #f4f8fd;
 }
-.tyh-message {
+/* .tyh-message {
   display: inline-block;
   min-width: 130px;
   height: 35px;
@@ -531,7 +531,7 @@
 }
 .tyh-message-body--warning .tyh-icon {
   color: #fbcc30 !important;
-}
+} */
 .tyh-skeleton {
   min-height: 16px;
   width: 100%;

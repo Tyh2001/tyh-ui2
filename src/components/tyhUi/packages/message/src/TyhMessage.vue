@@ -1,29 +1,20 @@
 <template>
-  <transition name="el-message-fade" @after-leave="handleAfterLeave" appear>
+  <transition name="tyh-message-fade" @after-leave="handleAfterLeave" appear>
     <div
       v-show="isShow"
-      :class="[
-        'el-message',
-        `el-message--${type}`,
-        {
-          ['is-closable']: showClose,
-          ['is-center']: center
-        }
-      ]"
+      :class="['tyh-message', `tyh-message-${type}`]"
       :style="[{ top: `${offset}px` }]"
     >
-      <slot>
-        <p class="el-message__content">
-          {{ message }}
-        </p>
-      </slot>
-
-      <span v-if="showClose" @click="handleClose">X</span>
+      <div class="tyh-message-content">
+        <tyh-icon v-if="showClose" icon="tyh-ui-tyhui" />
+        <span>{{ message }}</span>
+      </div>
     </div>
   </transition>
 </template>
 
 <script setup>
+import TyhIcon from '../../icon'
 import { getCurrentInstance, ref } from 'vue'
 const props = defineProps({
   message: {
@@ -31,14 +22,13 @@ const props = defineProps({
   },
   type: {
     type: String,
-    default: 'info',
+    default: 'default',
     validator (val) {
-      return ['success', 'warning', 'info', 'error'].includes(val)
+      return ['primary', 'success', 'danger', 'warning', 'default'].includes(val)
     }
   },
   showClose: Boolean,
   time: Number,
-  center: Boolean,
   offset: Number
 })
 const emit = defineEmits(['close'])
@@ -50,13 +40,13 @@ let timer
 function delayClose () {
   if (props.time > 0) {
     timer = setTimeout(() => {
-      _close()
+      close()
     }, props.time)
   }
 }
 
 // 关闭弹窗
-function _close () {
+function close () {
   clearTimeout(timer)
   emit('close', instance)
   isShow.value = false
@@ -66,15 +56,14 @@ function handleAfterLeave () {
   instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
 }
 
-function handleClose () {
-  _close()
-}
-
 delayClose()
 </script>
 
+
+<style src="../style/index.css" scoped>
+</style>
 <style scoped>
-.el-message {
+/* .el-message {
   min-width: 380px;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -180,5 +169,5 @@ delayClose()
   opacity: 0;
   -webkit-transform: translate(-50%, -100%);
   transform: translate(-50%, -100%);
-}
+} */
 </style>

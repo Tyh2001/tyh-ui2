@@ -1,48 +1,32 @@
 .tyh-message {
   display: inline-block;
-  min-width: 130px;
-  height: 35px;
+  min-width: 150px;
   border-radius: 4px;
-  padding: 0 23px;
+  padding: 10px 23px;
   box-sizing: border-box;
   background: #fff;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   user-select: none;
   position: fixed;
   z-index: 99999;
-  transform: translateX(-50%);
-  position: fixed;
   top: -37px;
   left: 50%;
-  animation: tyhMessage 0.17s linear forwards;
+  transform: translateX(-50%);
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
 
-  .tyh-message-body {
-    width: 100%;
-    height: 100%;
-    display: inline-block;
+  .tyh-message-content {
     display: flex;
     justify-content: center;
     align-items: center;
-
-    .tyh-message-message {
-      font-size: 13px;
-    }
-  }
-
-  .tyh-icon {
-    margin-right: 6px;
   }
 }
 
-// 弹出动画
-@keyframes tyhMessage {
-  to {
-    top: 20px;
-  }
+.tyh-icon {
+  margin-right: 6px;
 }
 
-// 不同的类型提示
-.tyh-message-body-- {
+.tyh-message-,
+.tyh-message-default {
   color: #484848;
 
   .tyh-icon {
@@ -50,7 +34,7 @@
   }
 }
 
-.tyh-message-body--primary {
+.tyh-message-primary {
   color: #3a6ff4;
 
   .tyh-icon {
@@ -58,7 +42,7 @@
   }
 }
 
-.tyh-message-body--success {
+.tyh-message-success {
   color: #54c600;
 
   .tyh-icon {
@@ -66,7 +50,7 @@
   }
 }
 
-.tyh-message-body--danger {
+.tyh-message-danger {
   color: #d10f1b;
 
   .tyh-icon {
@@ -74,10 +58,17 @@
   }
 }
 
-.tyh-message-body--warning {
+.tyh-message-warning {
   color: #fbcc30;
 
   .tyh-icon {
     color: #fbcc30 !important;
   }
+}
+
+.tyh-message-fade-enter-from,
+.tyh-message-fade-leave-to {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
 }

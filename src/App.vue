@@ -4,15 +4,11 @@
 
 <script setup>
 import { Message } from './components/tyhUi/packages/message'
-
-// console.log(Message)
 function change2 () {
   Message({
-    message: '恭喜你，这是一条成功消息',
-    type: 'success'
+    message: '是一条成功消息',
+    type: 'success',
+    showClose: true
   })
 }
 </script>
-
-<style scoped>
-</style>

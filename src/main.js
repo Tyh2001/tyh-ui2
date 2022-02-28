@@ -9,11 +9,11 @@ import router from './router'
 import tyhUi2 from './components/tyhUi'
 import './components/tyhUi/style/index.css'
 
-import 'element3/lib/theme-chalk/index.css'
-import Element3 from 'element3'
+// import 'element3/lib/theme-chalk/index.css'
+// import Element3 from 'element3'
 
 createApp(App)
   .use(router)
-  .use(Element3)
+  // .use(Element3)
   .use(tyhUi2)
   .mount('#app')
