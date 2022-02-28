@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-// import { Message } from './components/tyhUi/packages/message'
 import { Message } from './components/tyhUi'
 function change2 () {
   // 'primary', 'success', 'danger', 'warning', 'default'
@@ -12,7 +11,6 @@ function change2 () {
     type: 'success',
     showClose: true,
     icon: 'tyh-ui-meh-filling',
-    offset: 80
   })
 }
 </script>
