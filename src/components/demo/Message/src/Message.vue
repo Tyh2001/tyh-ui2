@@ -5,8 +5,10 @@
       :class="[
         'el-message',
         `el-message--${type}`,
-        showClose ? 'is-closable' : '',
-        center ? 'is-center' : '',
+        {
+          ['is-closable']: showClose,
+          ['is-center']: center
+        }
       ]"
       :style="[positionStyle]"
     >
