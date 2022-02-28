@@ -3,7 +3,6 @@
 </template>
 
 <script setup>
-import Message2 from './components/demo/Message/'
 import { Message } from './components/tyhUi/packages/message'
 
 // console.log(Message)
@@ -12,10 +11,6 @@ function change2 () {
     message: '恭喜你，这是一条成功消息',
     type: 'success'
   })
-  // Message2({
-  //   message: '恭喜你，这是一条成功消息',
-  //   type: 'success'
-  // })
 }
 </script>
 

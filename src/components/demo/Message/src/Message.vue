@@ -41,7 +41,7 @@ const props = defineProps({
   center: Boolean,
   offset: Number
 })
-const emit = defineEmits(['close'])
+// const emit = defineEmits(['close'])
 
 const instance = getCurrentInstance()
 const isShow = ref(true)
@@ -64,7 +64,7 @@ function delayClose () {
 // 关闭弹窗
 function _close () {
   clearTimeout(timer)
-  emit('close', instance)
+  // emit('close', instance)
   isShow.value = false
 }
 
