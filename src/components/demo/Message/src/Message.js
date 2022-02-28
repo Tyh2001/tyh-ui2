@@ -4,9 +4,8 @@ import { isVNode, h, render } from 'vue'
 const instanceList = []
 
 export function Message (opts) {
-  // console.log(opts)
-  // return createMessage(mergeOptions(opts))
-  // console.log(createMessage(mergeOptions(opts)))
+  console.log(opts)
+  console.log(mergeOptions(opts))
   return createMessage(mergeOptions(opts))
 }
 
@@ -16,7 +15,8 @@ Message.closeAll = () => {
     removeInstance(instance)
   })
 }
-['info', 'success', 'warning', 'error'].forEach((type) => {
+
+['info', 'success', 'warning', 'error'].forEach(type => {
   Message[type] = (opts) => {
     return createMessage(mergeOptions(opts, type))
   }
@@ -31,7 +31,6 @@ function createMessage (opts) {
   const instance = createMessageComponentByOpts(opts)
   appendToBody(instance)
   addInstance(instance)
-  // console.log(opts)
   return instance.proxy
 }
 
@@ -78,11 +77,7 @@ function mergeOptions (opts, type = 'info') {
   return Object.assign({}, defaultOptions, opts)
 }
 
-// console.log(mergeOptions({
-//   message: '恭喜你，这是一条成功消息',
-//   type: 'success',
-//   showClose: true
-// }))
+
 
 /**
  * Message 距离窗口顶部的偏移量
@@ -93,7 +88,6 @@ function calculateVerticalOffset (offset = 20) {
   let result = offset
 
   instanceList.forEach((instance) => {
-    // console.log(instance + '1111111111')
     result += getNextElementInterval(instance)
   })
 
@@ -146,7 +140,6 @@ function getIndexByInstance (instance) {
  * @param {object} componentInstance 
  */
 function appendToBody (componentInstance) {
-  console.log(componentInstance)
   document.body.append(componentInstance.vnode.el)
 }
 
