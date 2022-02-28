@@ -4,8 +4,8 @@ import { isVNode, h, render } from 'vue'
 const instanceList = []
 
 export function Message (opts) {
-  console.log(opts)
-  console.log(mergeOptions(opts))
+  // console.log(opts)
+  // console.log(mergeOptions(opts))
   return createMessage(mergeOptions(opts))
 }
 
@@ -28,18 +28,40 @@ Message.closeAll = () => {
  * @returns proxy
  */
 function createMessage (opts) {
-  const instance = createMessageComponentByOpts(opts)
+  const instance = createComponent(messageComponent, opts)
+  // console.log(instance)
   appendToBody(instance)
   addInstance(instance)
   return instance.proxy
 }
 
 
-function createMessageComponentByOpts (opts) {
-  if (isVNode(opts.message)) {
-    return createComponent(messageComponent, opts, () => opts.message)
-  }
-  return createComponent(messageComponent, opts)
+// function createMessageComponentByOpts (opts) {
+//   // console.log(opts.message)
+//   // console.log(isVNode(opts.message))
+//   /**
+//    * isVNode 详情在这里：检查一个值是否是一个 vnode
+//    * https://staging-cn.vuejs.org/api/render-function.html#isvnode
+//    */
+//   // if (isVNode(opts.message)) {
+//   //   return createComponent(messageComponent, opts, () => opts.message)
+//   // }
+//   // 因为不是一个 vnode 对象，所以需要创建一个
+//   console.log(messageComponent)
+//   return createComponent(messageComponent, opts)
+// }
+
+/**
+ * 创建组件实例对象
+ * 返回的实例和调用 getCurrentComponent() 返回的一致
+ * @param {*} Component
+ */
+function createComponent (Component, props, children) {
+  const vnode = h(Component, { ...props, ref: MOUNT_COMPONENT_REF }, children)
+  const container = document.createElement('div')
+  vnode[COMPONENT_CONTAINER_SYMBOL] = container
+  render(vnode, container)
+  return vnode.component
 }
 
 /**
@@ -144,20 +166,7 @@ function appendToBody (componentInstance) {
 }
 
 
-// 其他文件引入的 component.js
 
 const MOUNT_COMPONENT_REF = 'el_component'
 const COMPONENT_CONTAINER_SYMBOL = Symbol('el_component_container')
 
-/**
- * 创建组件实例对象
- * 返回的实例和调用 getCurrentComponent() 返回的一致
- * @param {*} Component
- */
-function createComponent (Component, props, children) {
-  const vnode = h(Component, { ...props, ref: MOUNT_COMPONENT_REF }, children)
-  const container = document.createElement('div')
-  vnode[COMPONENT_CONTAINER_SYMBOL] = container
-  render(vnode, container)
-  return vnode.component
-}

@@ -1,5 +1,5 @@
 <template>
-  <div v-if="isShow" class="tyh-message">
+  <!-- <div v-if="isShow" class="tyh-message">
     <span
       :class="[
         'tyh-message-body',
@@ -11,19 +11,25 @@
         {{ message }}
       </span>
     </span>
+  </div> -->
+  <div>
+    <span>{{ message }}</span>
   </div>
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
-import TyhIcon from '../icon/TyhIcon.vue'
 defineProps({
-  message: String,
-  type: String,
-  iconClass: String
+  message: String
 })
-const isShow = ref(false)
-onMounted(() => {
-  isShow.value = true
-})
+// import { onMounted, ref } from 'vue'
+// // import TyhIcon from '../../icon/TyhIcon.vue'
+// defineProps({
+//   message: String,
+//   type: String,
+//   iconClass: String
+// })
+// const isShow = ref(false)
+// onMounted(() => {
+//   isShow.value = true
+// })
 </script>
