@@ -14,10 +14,13 @@
   transform: translateX(-50%);
   transition: opacity 0.3s, transform 0.4s, top 0.4s;
 }
-.tyh-icon {
+.tyh-message .tyh-message-content {
+  text-align: center;
+}
+.tyh-message .tyh-icon {
   margin-right: 6px;
 }
-.tyh-ui-close {
+.tyh-message .tyh-ui-close {
   margin-left: 15px;
 }
 .tyh-message-,
