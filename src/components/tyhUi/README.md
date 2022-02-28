@@ -23,7 +23,7 @@
 
 ## Introduction:bulb:
 
-A lightweight component library, based on the vue3.0 version, fully embraces vue3.0
+A lightweight component library, based on the vue3.0 version, fully embraces vue3.0.
 
 > Simplicity first
 
@@ -62,3 +62,13 @@ createApp(App).use(tyhUi2).mount('#app')
   <img style=" float: left;" height="60px" src="https://www.hualigs.cn/image/608132a6c15b2.jpg">
   <h4 style="display: inline-block;">tyh2001</h4>
 </div>
+
+## Thank a lot:sparkling_heart:
+
+- Star
+
+[![Stargazers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/stars/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/stargazers)
+
+- Fork
+
+[![Forkers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/forks/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/network/members)
