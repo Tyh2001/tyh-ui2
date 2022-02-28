@@ -1,4 +1,11 @@
+@primary: #3a6ff4;
+@success: #54c600;
+@danger: #d10f1b;
+@warning: #fbcc30;
+@default: #484848;
+
 .tyh-message {
+  position: fixed;
   display: inline-block;
   min-width: 150px;
   border-radius: 4px;
@@ -7,53 +14,42 @@
   background: #fff;
   box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
   user-select: none;
-  position: fixed;
   z-index: 99999;
   top: -37px;
   left: 50%;
   transform: translateX(-50%);
   transition: opacity 0.3s, transform 0.4s, top 0.4s;
 }
-.tyh-message .tyh-message-content {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+
 .tyh-icon {
   margin-right: 6px;
 }
+
+.tyh-ui-close {
+  margin-left: 15px;
+}
+
 .tyh-message-,
 .tyh-message-default {
-  color: #484848;
+  color: @default;
 }
-.tyh-message- .tyh-icon,
-.tyh-message-default .tyh-icon {
-  color: #484848 !important;
-}
+
 .tyh-message-primary {
-  color: #3a6ff4;
+  color: @primary;
 }
-.tyh-message-primary .tyh-icon {
-  color: #3a6ff4 !important;
-}
+
 .tyh-message-success {
-  color: #54c600;
+  color: @success;
 }
-.tyh-message-success .tyh-icon {
-  color: #54c600 !important;
-}
+
 .tyh-message-danger {
-  color: #d10f1b;
+  color: @danger;
 }
-.tyh-message-danger .tyh-icon {
-  color: #d10f1b !important;
-}
+
 .tyh-message-warning {
-  color: #fbcc30;
+  color: @warning;
 }
-.tyh-message-warning .tyh-icon {
-  color: #fbcc30 !important;
-}
+
 .tyh-message-fade-enter-from,
 .tyh-message-fade-leave-to {
   opacity: 0;

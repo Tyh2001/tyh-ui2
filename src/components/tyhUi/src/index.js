@@ -36,6 +36,7 @@ import TyhTextarea from '../packages/textarea'
 import TyhSelect from '../packages/select'
 import TyhOption from '../packages/option'
 import TyhTagging from '../packages/tagging'
+import { Message } from '../packages/message'
 
 const components = [
   TyhButton,
@@ -85,12 +86,13 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "3.2.12",
+  version: "3.2.13",
   install
 }
 
 export {
   install,
+  Message,
   TyhButton,
   TyhList,
   TyhCard,
