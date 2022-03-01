@@ -1,23 +1,15 @@
 <template>
   <div class="tyh-three">
+    <!-- 循环出具体多少分组 -->
     <div class="tyh-three-list" v-for="(dataItem, index) in data" :key="index">
-      <div class="tyh-three-label" @click="onOpen(dataItem)">
-        <tyh-icon
-          icon="tyh-ui-arrow-right-filling"
-          color="#c0c4cc"
-          :class="[{ 'tyh-three-icon': isClose }]"
-        />
-        <span class="tyh-three-label-text">{{ dataItem.label }}</span>
+      <!-- 点击的位置 -->
+      <div class="tyh-three-label" @click="onOpen(dataItem, index)">
+        {{ dataItem.label }}
       </div>
-      <transition name="slide-fade">
-        <div
-          class="tyh-three-children"
-          v-if="dataItem.children"
-          v-show="isClose"
-        >
-          <tyh-tree :data="dataItem.children" />
-        </div>
-      </transition>
+
+      <div class="tyh-three-children" v-if="dataItem.children" v-show="isClose">
+        <tyh-tree :data="dataItem.children" />
+      </div>
     </div>
   </div>
 </template>
@@ -27,17 +19,20 @@ import { ref } from 'vue'
 defineProps({
   data: {
     type: Array,
-    default: []
   }
 })
 
-const isClose = ref(false)
+// const isClose = ref(false)
 
-const onOpen = item => {
-  if (item.children && item.children.length) {
-    isClose.value = !isClose.value
-  }
+const isClose = index => {
+}
+
+const onOpen = (item, index) => {
+  console.log(item, index)
+  // if (item.children && item.children.length) {
+  //   isClose.value = !isClose.value
+  // }
 }
 </script>
 
-<style scoped src="./style/index.css"></style>
+<style scoped src="../../../allStyle/tree/style/index.css"></style>

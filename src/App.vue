@@ -1,17 +1,63 @@
 <template>
-  <tyh-button type="primary" @click="change2">主要提示</tyh-button>
+  <tyh-tree :data="data" />
 </template>
 
 <script setup>
-import { Message } from './components/tyhUi'
-function change2 () {
-  // 'primary', 'success', 'danger', 'warning', 'default'
-  Message({
-    message: '是一条成功消息',
-    type: 'success',
-    showClose: true,
-    icon: 'tyh-ui-meh-filling',
-    round: true
-  })
-}
+const data = [
+  {
+    label: '一级 1',
+    children: [
+      {
+        label: '二级 1-1',
+        children: [
+          {
+            label: '三级 1-1-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '一级 2',
+    children: [
+      {
+        label: '二级 2-1',
+        children: [
+          {
+            label: '三级 2-1-1'
+          }
+        ]
+      },
+      {
+        label: '二级 2-2',
+        children: [
+          {
+            label: '三级 2-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '一级 3',
+    children: [
+      {
+        label: '二级 3-1',
+        children: [
+          {
+            label: '三级 3-1-1'
+          }
+        ]
+      },
+      {
+        label: '二级 3-2',
+        children: [
+          {
+            label: '三级 3-2-1'
+          }
+        ]
+      }
+    ]
+  }
+]
 </script>
