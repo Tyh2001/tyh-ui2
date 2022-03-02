@@ -56,19 +56,12 @@ createApp(App).use(tyhUi2).mount('#app')
 - 项目的安装和贡献请参考[贡献指南](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md)。
 - 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md)
 
-## 贡献者:wave:
-
-<div style="display: flex; align-items: center;">
-  <img style=" float: left;" height="60px" src="https://www.hualigs.cn/image/608132a6c15b2.jpg">
-  <h4 style="display: inline-block;">tyh2001</h4>
-</div>
-
 ## 非常感谢:sparkling_heart:
 
-- Star
+**Star**
 
 [![Stargazers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/stars/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/stargazers)
 
-- Fork
+**Fork**
 
 [![Forkers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/forks/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/network/members)
