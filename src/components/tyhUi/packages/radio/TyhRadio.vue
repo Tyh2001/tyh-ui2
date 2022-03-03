@@ -39,8 +39,8 @@ const props = defineProps({
   size: {
     type: String,
     default: 'large',
-    validator (val) {
-      return ['large', 'medium', 'small', 'mini'].includes(val)
+    validator (v) {
+      return ['large', 'medium', 'small', 'mini'].includes(v)
     }
   }
 })
@@ -53,9 +53,7 @@ function _TyhRadio () {
     emits('change', evt.target.value)
   }
 
-  const isLabel = computed(() => {
-    return props.modelValue === props.label
-  })
+  const isLabel = computed(() => props.modelValue === props.label)
 
   const isClass = computed(() => {
     return [

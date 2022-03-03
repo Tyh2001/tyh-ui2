@@ -1,7 +1,5 @@
 <template>
-  <div class="tyh-crumbs">
-    <slot />
-  </div>
+  <div class="tyh-crumbs"><slot /></div>
 </template>
 
 <script setup>

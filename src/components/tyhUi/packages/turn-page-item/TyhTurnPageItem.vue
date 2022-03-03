@@ -3,9 +3,7 @@
     <div
       :class="[
         'tyh-turn-page-item-link',
-        {
-          'tyh-turn-page-item-prohibit': prohibit
-        }
+        { 'tyh-turn-page-item-prohibit': prohibit }
       ]"
       @click="link"
     >
@@ -29,8 +27,8 @@ const props = defineProps({
   direction: {
     type: String,
     required: true,
-    validator (val) {
-      return ['left', 'right'].includes(val)
+    validator (v) {
+      return ['left', 'right'].includes(v)
     }
   },
   url: String,

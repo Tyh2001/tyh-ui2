@@ -15,6 +15,3 @@ defineProps({
 const emit = defineEmits(['update:modelValue'])
 const input = e => emit('update:modelValue', e.target.value)
 </script>
-
-<style scoped src="./style/index.css">
-</style>

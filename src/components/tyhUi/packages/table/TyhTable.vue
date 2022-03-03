@@ -69,8 +69,8 @@ const props = defineProps({
   align: {
     type: String,
     default: 'left',
-    validator (val) {
-      return ['left', 'right', 'center'].includes(val)
+    validator (v) {
+      return ['left', 'right', 'center'].includes(v)
     }
   },
   zebra: Boolean,
@@ -104,9 +104,7 @@ const importantStyle = i => {
 const isTdThClass = key => {
   return [
     `tyh-${key}-td`,
-    {
-      'tyh-table-border': props.border
-    }
+    { 'tyh-table-border': props.border }
   ]
 }
 </script>

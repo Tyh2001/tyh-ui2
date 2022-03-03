@@ -9,12 +9,7 @@
     <img
       v-else
       :draggable="draggable"
-      :class="[
-        `tyh-image-${fit}`,
-        {
-          'tyh-image-select': select
-        }
-      ]"
+      :class="[`tyh-image-${fit}`, { 'tyh-image-select': select }]"
       :style="[{ width, height }]"
       :src="src"
       :alt="alt"
@@ -31,8 +26,8 @@ defineProps({
   alt: String,
   fit: {
     type: String,
-    validator (val) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(val)
+    validator (v) {
+      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
     }
   },
   width: String,

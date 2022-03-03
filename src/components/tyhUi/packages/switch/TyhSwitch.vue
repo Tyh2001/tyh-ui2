@@ -8,12 +8,7 @@
   </span>
 
   <span
-    :class="[
-      'tyh-switch',
-      {
-        'tyh-switch-disabled': disabled
-      }
-    ]"
+    :class="['tyh-switch', { 'tyh-switch-disabled': disabled }]"
     :style="switchStyle"
     @click="clickSwitch"
   >

@@ -34,8 +34,8 @@ const props = defineProps({
   },
   resize: {
     type: String,
-    validator (val) {
-      return ['vertical', 'horizontal', 'none'].includes(val)
+    validator (v) {
+      return ['vertical', 'horizontal', 'none'].includes(v)
     }
   },
   disabled: Boolean,
@@ -43,12 +43,10 @@ const props = defineProps({
   name: String,
 })
 const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
-
 const { input, isClass } = _TyhTextarea()
 
 function _TyhTextarea () {
   const input = e => emit('update:modelValue', e.target.value)
-
   const isClass = computed(() => {
     return [
       'tyh-textarea-textarea',
@@ -57,7 +55,6 @@ function _TyhTextarea () {
       }
     ]
   })
-
   return { input, isClass }
 }
 </script>

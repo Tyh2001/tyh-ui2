@@ -1,14 +1,14 @@
 <template>
   <div :class="isClass" :style="isStyle">
     <div class="tyh-alert-message" :style="isMessageStyle">
-      <tyh-icon v-if="icon" :icon="icon" :color="COLOR[type]" />
+      <tyh-icon v-if="icon" :icon="icon" :color="THEME[type]" />
       {{ message }}
     </div>
 
     <tyh-icon
       v-if="close"
       icon="tyh-ui-guanbi"
-      :color="COLOR[type]"
+      :color="THEME[type]"
       @click="emit('close')"
     />
   </div>
@@ -20,8 +20,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator (v) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   message: String,
@@ -33,21 +33,21 @@ const props = defineProps({
 const emit = defineEmits(['close'])
 
 const {
-  COLOR,
+  THEME,
   isClass,
   isStyle,
   isMessageStyle
 } = _TyhAlert()
 
 function _TyhAlert () {
-  const BACKGROUND_COLOR = {
+  const BACKGROUND_THEME = {
     primary: '#e8f4ff',
     success: '#e1ffea',
     danger: '#ffe8e6',
     warning: '#fff1e3',
     default: '#f6f6f6',
   }
-  const COLOR = {
+  const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
     danger: '#d10f1b',
@@ -65,14 +65,14 @@ function _TyhAlert () {
   const isStyle = computed(() => {
     return [{
       justifyContent: props.center && 'center',
-      background: !props.simple ? BACKGROUND_COLOR[props.type] : ''
+      background: !props.simple ? BACKGROUND_THEME[props.type] : ''
     }]
   })
   const isMessageStyle = computed(() => {
-    return [{ color: COLOR[props.type] }]
+    return [{ color: THEME[props.type] }]
   })
   return {
-    COLOR,
+    THEME,
     isClass,
     isStyle,
     isMessageStyle

@@ -15,8 +15,8 @@ defineProps({
   position: {
     type: String,
     default: 'left',
-    validator (val) {
-      return ['left', 'center', 'right'].includes(val)
+    validator (v) {
+      return ['left', 'center', 'right'].includes(v)
     }
   },
   color: {

@@ -15,7 +15,7 @@
         }
       ]"
       :icon="icon"
-      :color="COLOR[type]"
+      :color="THEME[type]"
     />
     <slot />
   </a>
@@ -23,7 +23,7 @@
 
 <script setup>
 import { computed } from 'vue'
-const COLOR = {
+const THEME = {
   primary: '#3a6ff4',
   success: '#54c600',
   danger: '#d10f1b',
@@ -34,8 +34,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator (v) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   prohibit: Boolean,
@@ -51,9 +51,7 @@ const isClass = computed(() => {
   return [
     'tyh-link',
     `tyh-link-${props.type}`,
-    {
-      [`tyh-link-prohibit-${props.type}`]: props.prohibit
-    }
+    { [`tyh-link-prohibit-${props.type}`]: props.prohibit }
   ]
 })
 </script>

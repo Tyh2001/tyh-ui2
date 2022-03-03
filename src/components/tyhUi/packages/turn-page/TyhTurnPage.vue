@@ -1,7 +1,5 @@
 <template>
-  <div class="tyh-turn-page">
-    <slot />
-  </div>
+  <div class="tyh-turn-page"><slot /></div>
 </template>
 
 <script setup>

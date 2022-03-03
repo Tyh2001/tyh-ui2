@@ -1,7 +1,5 @@
 <template>
-  <span :class="isClass" :style="isStyle">
-    <slot />
-  </span>
+  <span :class="isClass" :style="isStyle"><slot /></span>
 </template>
 
 <script setup>
@@ -10,8 +8,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator (v) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   size: {

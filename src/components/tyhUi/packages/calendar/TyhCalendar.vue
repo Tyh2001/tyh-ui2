@@ -78,13 +78,11 @@ function _TyhCalendar () {
   const getYear = ref(props.modelValue.getFullYear())
   const getDate = props.modelValue.getDate()
 
-  // 获取当前月份的1号是周几
   const fun_week = computed(() => {
     const week = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
     return week === 0 ? 7 - 1 : week - 1
   })
 
-  // 获取当年所有月份的时间
   const yearMonths = (month = getMonth.value, year) => {
     if (month !== 1) {
       const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
@@ -111,7 +109,6 @@ function _TyhCalendar () {
     getMonth.value = 0
   }
 
-  // 回到当前时间
   const goNow = () => {
     getMonth.value = props.modelValue.getMonth()
     getYear.value = props.modelValue.getFullYear()
@@ -132,16 +129,12 @@ function _TyhCalendar () {
 
   const calendarWidth = computed(() => {
     const size = props.cellWidth < 28 ? 28 : props.cellWidth
-    return [{
-      width: `${(size + 2) * 7}px`
-    }]
+    return [{ width: `${(size + 2) * 7}px` }]
   })
 
   const calendarItemSize = computed(() => {
     const size = props.cellWidth < 28 ? 28 : props.cellWidth
-    return [
-      { width: `${size}px`, height: `${size}px` }
-    ]
+    return [{ width: `${size}px`, height: `${size}px` }]
   })
 
   return {

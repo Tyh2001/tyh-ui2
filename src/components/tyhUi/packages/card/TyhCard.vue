@@ -19,8 +19,8 @@
 defineProps({
   shadow: {
     type: String,
-    validator (val) {
-      return ['always', 'hover', 'noShadow'].includes(val)
+    validator (v) {
+      return ['always', 'hover', 'noShadow'].includes(v)
     }
   },
   simple: Boolean

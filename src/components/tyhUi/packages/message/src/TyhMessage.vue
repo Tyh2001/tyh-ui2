@@ -39,8 +39,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['primary', 'success', 'danger', 'warning', 'default'].includes(val)
+    validator (v) {
+      return ['primary', 'success', 'danger', 'warning', 'default'].includes(v)
     }
   },
   showClose: Boolean,
@@ -54,14 +54,14 @@ const { isShow, isIconColor, leave, close } = _TyhMessage()
 
 function _TyhMessage () {
   const isShow = ref(true)
-  const COLOR = {
+  const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
     danger: '#d10f1b',
     warning: '#fbcc30',
     default: '#484848',
   }
-  const isIconColor = computed(() => COLOR[props.type] || '#484848')
+  const isIconColor = computed(() => THEME[props.type] || '#484848')
 
   let timer
   (function () {

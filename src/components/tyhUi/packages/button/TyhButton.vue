@@ -1,10 +1,7 @@
 <template>
   <button :class="isClass" :disabled="disabled">
-    <tyh-icon v-if="icon" :icon="icon" :color="textColor" />
-    <span
-      class="tyh-button-text"
-      :style="[icon ? 'margin-left:5px' : '', { color: textColor }]"
-    >
+    <tyh-icon v-if="icon" :icon="icon" :color="textColor" size="14" />
+    <span v-if="$slots.default" :style="[{ color: textColor }]">
       <slot />
     </span>
   </button>
@@ -16,8 +13,8 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator (v) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   round: Boolean,
@@ -25,8 +22,8 @@ const props = defineProps({
   icon: String,
   size: {
     type: String,
-    validator (val) {
-      return ['large', 'small', 'mini'].includes(val)
+    validator (v) {
+      return ['large', 'small', 'mini'].includes(v)
     }
   },
   square: Boolean,
@@ -34,9 +31,8 @@ const props = defineProps({
 })
 
 const { textColor, isClass } = _TyhButton()
-
 function _TyhButton () {
-  const COLOR = {
+  const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
     danger: '#d10f1b',
@@ -45,8 +41,8 @@ function _TyhButton () {
   }
 
   const textColor = computed(() => {
-    if (props.simple) return COLOR[props.type]
-    return props.type === 'default' || props.type === '' ? '#333' : '#fff'
+    if (props.simple) return THEME[props.type]
+    return props.type === 'default' || !props.type ? '#333' : '#fff'
   })
 
   const isClass = computed(() => {
@@ -66,3 +62,6 @@ function _TyhButton () {
   return { textColor, isClass }
 }
 </script>
+
+<style scoped src="./style/index.css">
+</style>

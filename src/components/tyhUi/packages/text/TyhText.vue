@@ -3,7 +3,7 @@
     class="tyh-text"
     :style="[
       {
-        color: color || COLOR[type],
+        color: color || THEME[type],
         display: block ? 'block' : 'inline-block',
         fontSize: `${size}px`
       }
@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-const COLOR = {
+const THEME = {
   primary: '#3a6ff4',
   success: '#54c600',
   danger: '#d10f1b',
@@ -25,8 +25,8 @@ defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator (v) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   size: {

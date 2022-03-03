@@ -41,7 +41,6 @@ const props = defineProps({
   errorIcon: String
 })
 const emit = defineEmits(['error', 'load'])
-
 const { isError, onError, isSize, errorClass, successClass } = _TyhAvatar()
 
 function _TyhAvatar () {
@@ -59,9 +58,7 @@ function _TyhAvatar () {
   const errorClass = computed(() => {
     return [
       'tyh-avatar-error',
-      {
-        'tyh-avatar-round': props.round
-      }
+      { 'tyh-avatar-round': props.round }
     ]
   })
   const successClass = computed(() => {

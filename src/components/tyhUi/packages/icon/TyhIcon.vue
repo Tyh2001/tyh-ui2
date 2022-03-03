@@ -1,8 +1,5 @@
 <template>
-  <i
-    :class="[`tyh-icon ${icon}`]"
-    :style="[{ color, fontSize: `${size}px` }]"
-  />
+  <i :class="[`tyh-icon`, icon]" :style="[{ color, fontSize: `${size}px` }]" />
 </template>
 
 <script setup>
@@ -11,9 +8,7 @@ defineProps({
   color: String,
   size: {
     type: [Number, String],
-    default: '18'
+    default: '16'
   }
 })
 </script>
-
-<style src="./style/index.css" scoped></style>
