@@ -8,9 +8,9 @@
 
 先把项目跑起来
 
-- Fork [tyh-ui2](https://github.com/Tyh2001/tyh-ui2)
+- Fork [tyh-ui](https://github.com/Tyh2001/tyh-ui)
 - `git clone xxxxx`
-- `cd tyh-ui2`
+- `cd tyh-ui`
 - `npm i`
 - `npm run dev`
 
@@ -49,9 +49,9 @@ git 允许我们在每次提交时，附带一个提交信息作为说明，当�
 
 ```
 ├── src                     开发目录
-│ ├── components            组件目录
-│ │ ├── allStyle            组件开发样式
-│ │ ├── demo                测试组件
+│ ├── demo                  测试组件
+│ ├── package               组件目录
+│ │ ├── THEME_STYLE         组件开发样式
 │ │ └── tyhUi               组件源文件
 │ ├── router                路由
 │ ├── App.vue
@@ -77,3 +77,11 @@ git 允许我们在每次提交时，附带一个提交信息作为说明，当�
 ## 感谢
 
 感谢所有已经为 tyh-ui <a href="https://github.com/Tyh2001/tyh-ui2/graphs/contributors">做出贡献的人</a>！
+
+**Star**
+
+[![Stargazers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/stars/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/stargazers)
+
+**Fork**
+
+[![Forkers repo roster for @Tyh2001/tyh-ui](https://reporoster.com/forks/Tyh2001/tyh-ui)](https://github.com/Tyh2001/tyh-ui/network/members)
