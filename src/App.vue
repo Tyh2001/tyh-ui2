@@ -1,63 +1,34 @@
-<template>
-  <tyh-tree :data="data" />
+  <template>
+  <tyh-select v-model="value" placeholder="请选择">
+    <tyh-option
+      v-for="(item, index) in options"
+      :key="index"
+      :value="item.value"
+    >
+      {{ item.label }}
+    </tyh-option>
+  </tyh-select>
 </template>
 
 <script setup>
-const data = [
+import { ref } from 'vue'
+const value = ref('选项2')
+const options = [
   {
-    label: '一级 1',
-    children: [
-      {
-        label: '二级 1-1',
-        children: [
-          {
-            label: '三级 1-1-1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    label: '一级 2',
-    children: [
-      {
-        label: '二级 2-1',
-        children: [
-          {
-            label: '三级 2-1-1'
-          }
-        ]
-      },
-      {
-        label: '二级 2-2',
-        children: [
-          {
-            label: '三级 2-2-1'
-          }
-        ]
-      }
-    ]
-  },
-  {
-    label: '一级 3',
-    children: [
-      {
-        label: '二级 3-1',
-        children: [
-          {
-            label: '三级 3-1-1'
-          }
-        ]
-      },
-      {
-        label: '二级 3-2',
-        children: [
-          {
-            label: '三级 3-2-1'
-          }
-        ]
-      }
-    ]
+    value: '选项1',
+    label: '上海'
+  }, {
+    value: '选项2',
+    label: '北京'
+  }, {
+    value: '选项3',
+    label: '杭州'
+  }, {
+    value: '选项4',
+    label: '天津'
+  }, {
+    value: '选项5',
+    label: '大连'
   }
 ]
 </script>
