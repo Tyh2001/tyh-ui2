@@ -20,8 +20,8 @@
 .tyh-card .tyh-card-header .tyh-card-subtitle {
   font-size: 14px;
 }
-.tyh-card .tyh-card-content {
-  padding: 15px 20px;
+.tyh-card .tyh-card-body {
+  padding: 20px;
   box-sizing: border-box;
   font-size: 14px;
   color: #303133;

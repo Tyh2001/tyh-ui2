@@ -1,5 +1,11 @@
 # 更新日志
 
+## 3.2.19 (2022-03-03)
+
+- 优化 TyhCard 组件
+- 启用 TyhCard 组件 simple 属性
+- 新增 TyhCard 组件 body-style 属性
+
 ## 3.2.18 (2022-03-03)
 
 - 优化按钮组件，解决 `TyhButton` 组件在禁用状态鼠标 `hover` 在 `icon` 上仍显示 `pointer` 的问题
