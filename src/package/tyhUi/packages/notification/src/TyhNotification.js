@@ -2,7 +2,6 @@ import TN from './TyhNotification.vue'
 import { h, render } from 'vue'
 
 export function Notification (opts) {
-  console.log(mergeOptions(opts))
   return createNot(mergeOptions(opts))
 }
 
@@ -23,11 +22,10 @@ function mergeOptions (opts) {
   const def = {
     title: '',
     message: '',
-    time: 35000,
+    type: '',
+    time: 3500,
     position: 'top-right',
-    close: false,
-    type: 'default',
-    background: '#fff'
+    close: true
   }
   return Object.assign(def, opts)
 }

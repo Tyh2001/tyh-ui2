@@ -8,26 +8,26 @@ function click () {
   Notification({
     title: '标题',
     position: 'top-left',
-    message: '内容'
+    message: '内容',
   })
 
   Notification({
-    title: '标题标题标题标题标题标题标题标题标题标题',
+    title: '标题',
     position: 'top-right',
-    message: '标题标题标题标题标题标题标题标题标题标题',
-    type: 'primary'
+    message: '内容',
   })
 
   Notification({
     title: '标题',
     position: 'bottom-left',
-    message: '内容'
+    message: '内容',
   })
 
   Notification({
     title: '标题',
     position: 'bottom-right',
-    message: '内容'
+    message: '内容',
+    type: 'warning'
   })
 }
 </script>
