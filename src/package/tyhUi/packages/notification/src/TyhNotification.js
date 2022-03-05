@@ -23,7 +23,7 @@ function mergeOptions (opts) {
   const def = {
     title: '',
     message: '',
-    time: 4500,
+    time: 35000,
     position: 'top-right',
     close: false,
     type: 'default',
