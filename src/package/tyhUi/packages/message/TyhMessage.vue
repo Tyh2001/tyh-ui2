@@ -10,18 +10,22 @@
       :style="[{ top: `${offset}px` }]"
     >
       <div class="tyh-message-content">
-        <tyh-icon
+        <!-- <tyh-icon
           v-if="icon"
           class="lef-icon"
           :icon="icon"
-          :color="isIconColor"
+          :color="isIconStyle"
+        /> -->
+        <i
+          v-if="icon"
+          :class="['tyh-icon', 'lef-icon', icon]"
+          :style="isIconStyle"
         />
         <span>{{ message }}</span>
-        <tyh-icon
+        <i
           v-if="showClose"
-          icon="tyh-ui-close"
-          size="16"
-          :color="isIconColor"
+          class="tyh-icon tyh-ui-close"
+          :style="isIconStyle"
           @click="close"
         />
       </div>
@@ -30,11 +34,10 @@
 </template>
 
 <script setup>
-import TyhIcon from '../../icon'
 import { getCurrentInstance, ref, computed } from 'vue'
 const props = defineProps({
   message: {
-    type: [String, Object]
+    type: String,
   },
   type: {
     type: String,
@@ -50,7 +53,7 @@ const props = defineProps({
   round: Boolean
 })
 
-const { isShow, isIconColor, leave, close } = _TyhMessage()
+const { isShow, isIconStyle, leave, close } = _TyhMessage()
 
 function _TyhMessage () {
   const isShow = ref(true)
@@ -61,7 +64,9 @@ function _TyhMessage () {
     warning: '#fbcc30',
     default: '#484848',
   }
-  const isIconColor = computed(() => THEME[props.type] || '#484848')
+  const isIconStyle = computed(() => {
+    return { color: THEME[props.type] || '#484848' }
+  })
 
   let timer
   (function () {
@@ -82,6 +87,6 @@ function _TyhMessage () {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
   }
 
-  return { isShow, isIconColor, leave, close }
+  return { isShow, isIconStyle, leave, close }
 }
 </script>

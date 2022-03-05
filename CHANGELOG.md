@@ -1,5 +1,11 @@
 # 更新日志
 
+## 3.3.0 (2022-03-05)
+
+- 优化 TyhNotification、TyhMessage 组件的模块共享
+- 更新 TyhMessage 组件是 icon 展示方式
+- 优化样式文件
+
 ## 3.2.20 (2022-03-05)
 
 - 加入 TyhNotification 组件

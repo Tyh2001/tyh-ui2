@@ -38,6 +38,7 @@ import TyhOption from '../packages/option'
 import TyhTagging from '../packages/tagging'
 import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
+console.log(Notification)
 
 const components = [
   TyhButton,
@@ -87,7 +88,7 @@ const install = app => {
 }
 
 const tyhUi = {
-  version: "3.2.20",
+  version: "3.3.0",
   install
 }
 
