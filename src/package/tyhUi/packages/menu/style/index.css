@@ -1,0 +1,8 @@
+.tyh-menu {
+  flex-wrap: wrap;
+  align-items: center;
+  user-select: none;
+}
+.tyh-menu-shadow {
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}

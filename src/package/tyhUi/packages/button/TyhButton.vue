@@ -62,6 +62,3 @@ function _TyhButton () {
   return { textColor, isClass }
 }
 </script>
-
-<style scoped src="./style/index.css">
-</style>
