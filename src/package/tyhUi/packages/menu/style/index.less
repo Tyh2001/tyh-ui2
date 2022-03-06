@@ -1,7 +1,34 @@
 .tyh-menu {
+  // display: flex;
   flex-wrap: wrap;
   align-items: center;
   user-select: none;
+  justify-content: space-between;
+  padding: 0 22px;
+
+  .tyh-menu-left,
+  .tyh-menu-right {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    min-height: 60px;
+  }
+
+  .tyh-menu-default {
+    flex-wrap: wrap;
+  }
+}
+
+.tyh-menu-flex {
+  display: flex;
+}
+
+.tyh-menu-dark {
+  background: #545c64;
+}
+
+.tyh-menu-light {
+  background: #fff;
 }
 
 .tyh-menu-shadow {

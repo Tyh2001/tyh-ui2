@@ -1,11 +1,14 @@
 <template>
-  <div
-    v-if="$slots.default"
-    class="tyh-menu"
-    :style="isStyle"
-    :class="{ 'tyh-menu-shadow': shadow }"
-  >
-    <slot />
+  <div :class="isClass">
+    <div v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
+      <slot name="left" />
+    </div>
+    <div v-if="$slots.default" :class="['tyh-menu-default', isFlex]">
+      <slot />
+    </div>
+    <div v-if="$slots.right" :class="['tyh-menu-right', isFlex]">
+      <slot name="right" />
+    </div>
   </div>
 </template>
 
@@ -29,11 +32,18 @@ const props = defineProps({
   }
 })
 provide('theme', props.theme)
-const isStyle = computed(() => {
-  return [{
-    display: props.mode === 'vertical' && 'flex',
-    background: props.theme === 'dark' ? '#545c64' : '#fff',
-  }]
+
+const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
+
+const isClass = computed(() => {
+  return [
+    'tyh-menu',
+    isFlex,
+    {
+      'tyh-menu-shadow': props.shadow,
+      [`tyh-menu-${props.theme}`]: props.theme
+    }
+  ]
 })
 </script>
 

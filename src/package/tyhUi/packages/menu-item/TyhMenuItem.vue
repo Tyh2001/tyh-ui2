@@ -17,11 +17,7 @@ const props = defineProps({
 })
 const theme = inject('theme')
 
-const isStyle = computed(() => {
-  return [{
-    color: theme === 'dark' ? '#fff' : '#000'
-  }]
-})
+const isStyle = computed(() => [{ color: theme === 'dark' ? '#fff' : '#000' }])
 const { proxy } = getCurrentInstance()
 const link = () => {
   if (props.prohibit) return
