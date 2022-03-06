@@ -1,5 +1,21 @@
 # 更新日志
 
+## 3.3.1 (2022-03-06)
+
+以前开发的组件，仍然存在很多不足之处，比如 TyhMenu 导航栏，所以在接下来几个版本中，需要将其进行修复或重做
+
+- TyhMenuItem 组件 废除 url 配置项，新增 to 配置项（你可以理解为该了一个称呼，其实使用方式是一样的）
+- TyhMenuItem 组件 废除 color 配置项
+- TyhMenu 组件废除 background 属性
+- TyhMenu 组件新增 theme 属性，可以配置导航栏的主题
+- TyhMenu 组件新增 mode 属性，配置导航栏的排列方式
+- 加入 `v-if="$slots.default"` 属性判断 TyhMenu 和 TyhMenuItem
+- 导航栏的整体样式也做了略微的调整
+- 暂时移除了 hove 状态
+- 删除了冗余的 console.log
+
+整体样式表暂未压缩
+
 ## 3.3.0 (2022-03-05)
 
 - 优化 TyhNotification、TyhMessage 组件的模块共享

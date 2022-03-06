@@ -1,13 +1,13 @@
 <template>
-  <tyh-menu mode="horizontal">
-    <tyh-menu-item url="/home">首页</tyh-menu-item>
+  <tyh-menu mode="vertical" shadow theme="dark">
+    <!-- <tyh-menu-item url="/home">首页</tyh-menu-item>
     <tyh-menu-item url="/abc">内容</tyh-menu-item>
-    <tyh-menu-item>设置</tyh-menu-item>
-    <tyh-menu-item>回收站</tyh-menu-item>
-    <tyh-menu-item></tyh-menu-item>
+    <tyh-menu-item prohibit>设置</tyh-menu-item>
+    <tyh-menu-item prohibit>回收站</tyh-menu-item>
+    <tyh-menu-item></tyh-menu-item> -->
   </tyh-menu>
-  <br />
-  <tyh-menu mode="vertical">
+
+  <tyh-menu mode="vertical" shadow theme="light">
     <tyh-menu-item url="/home">首页</tyh-menu-item>
     <tyh-menu-item url="/abc">内容</tyh-menu-item>
     <tyh-menu-item>设置</tyh-menu-item>

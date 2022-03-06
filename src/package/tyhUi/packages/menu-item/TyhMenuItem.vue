@@ -1,29 +1,32 @@
 <template>
   <div
     v-if="$slots.default"
-    class="tyh-menu-item"
-    :style="[{ color }]"
-    @click="url && link()"
+    :class="['tyh-menu-item', { 'tyh-menu-item-prohibit': prohibit }]"
+    :style="isStyle"
+    @click="to && link()"
   >
     <slot />
   </div>
 </template>
 
 <script setup>
-import { getCurrentInstance } from 'vue'
+import { getCurrentInstance, inject, computed } from 'vue'
 const props = defineProps({
-  url: String,
-  prohibit: Boolean,
-  color: {
-    type: String,
-    default: '#fff'
-  }
+  to: String,
+  prohibit: Boolean
+})
+const theme = inject('theme')
+
+const isStyle = computed(() => {
+  return [{
+    color: theme === 'dark' ? '#fff' : '#000'
+  }]
 })
 const { proxy } = getCurrentInstance()
 const link = () => {
   if (props.prohibit) return
   try {
-    proxy.$router.push(props.url)
+    proxy.$router.push(props.to)
   } catch (e) {
     console.log(e)
   }

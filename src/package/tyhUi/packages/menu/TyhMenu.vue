@@ -1,19 +1,23 @@
 <template>
   <div
+    v-if="$slots.default"
     class="tyh-menu"
     :style="isStyle"
-    :class="{ 'tyh-menu-bottom-shadow': shadow }"
+    :class="{ 'tyh-menu-shadow': shadow }"
   >
     <slot />
   </div>
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, provide } from 'vue'
 const props = defineProps({
-  background: {
+  theme: {
     type: String,
-    default: '#545c64'
+    default: 'dark',
+    validator (v) {
+      return ['dark', 'light'].includes(v)
+    }
   },
   shadow: Boolean,
   mode: {
@@ -24,11 +28,11 @@ const props = defineProps({
     }
   }
 })
-
+provide('theme', props.theme)
 const isStyle = computed(() => {
   return [{
     display: props.mode === 'vertical' && 'flex',
-    background: props.background,
+    background: props.theme === 'dark' ? '#545c64' : '#fff',
   }]
 })
 </script>

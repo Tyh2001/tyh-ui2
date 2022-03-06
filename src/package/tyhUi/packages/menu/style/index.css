@@ -3,6 +3,6 @@
   align-items: center;
   user-select: none;
 }
-.tyh-menu-bottom-shadow {
-  box-shadow: 0px 7px 19px rgba(0, 0, 0, 0.1);
+.tyh-menu-shadow {
+  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
 }

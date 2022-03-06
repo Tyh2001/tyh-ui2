@@ -1,13 +1,15 @@
 .tyh-menu-item {
-  height: 58px;
+  height: 60px;
   padding: 0 22px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  border-bottom: 2px solid transparent;
 }
-.tyh-menu-item:hover {
-  transition: border 0.2s;
-  border-bottom: 2px solid #3a6ff4;
+.tyh-menu-item-prohibit {
+  cursor: not-allowed;
+  color: #bbbbbb !important;
+}
+.tyh-menu-item-prohibit::after {
+  background: none;
 }
