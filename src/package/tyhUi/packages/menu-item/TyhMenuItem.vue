@@ -1,13 +1,12 @@
 <template>
-  <span class="tyh-menu-item">
-    <span
-      :class="['tyh-menu-item-span', { 'tyh-menu-item-prohibit': prohibit }]"
-      :style="[{ color: color }]"
-      @click="url && link()"
-    >
-      <slot />
-    </span>
-  </span>
+  <div
+    v-if="$slots.default"
+    class="tyh-menu-item"
+    :style="[{ color }]"
+    @click="url && link()"
+  >
+    <slot />
+  </div>
 </template>
 
 <script setup>
@@ -30,3 +29,6 @@ const link = () => {
   }
 }
 </script>
+
+<style src="./style/index.css" scoped>
+</style>

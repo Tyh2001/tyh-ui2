@@ -1,7 +1,7 @@
 <template>
   <div
     class="tyh-menu"
-    :style="[{ background }]"
+    :style="isStyle"
     :class="{ 'tyh-menu-bottom-shadow': shadow }"
   >
     <slot />
@@ -9,11 +9,29 @@
 </template>
 
 <script setup>
-defineProps({
+import { computed } from 'vue'
+const props = defineProps({
   background: {
     type: String,
     default: '#545c64'
   },
-  shadow: Boolean
+  shadow: Boolean,
+  mode: {
+    type: String,
+    default: 'horizontal',
+    validator (v) {
+      return ['horizontal', 'vertical'].includes(v)
+    }
+  }
+})
+
+const isStyle = computed(() => {
+  return [{
+    display: props.mode === 'vertical' && 'flex',
+    background: props.background,
+  }]
 })
 </script>
+
+<style src="./style/index.css" scoped>
+</style>
