@@ -10,12 +10,6 @@
       :style="[{ top: `${offset}px` }]"
     >
       <div class="tyh-message-content">
-        <!-- <tyh-icon
-          v-if="icon"
-          class="lef-icon"
-          :icon="icon"
-          :color="isIconStyle"
-        /> -->
         <i
           v-if="icon"
           :class="['tyh-icon', 'lef-icon', icon]"
@@ -52,7 +46,6 @@ const props = defineProps({
   icon: String,
   round: Boolean
 })
-
 const { isShow, isIconStyle, leave, close } = _TyhMessage()
 
 function _TyhMessage () {

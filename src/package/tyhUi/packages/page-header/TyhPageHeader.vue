@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-page-header">
-    <div class="tyh-page-header-title-box" @click="onClick">
+    <div class="tyh-page-header-title-box" @click="emit('back')">
       <tyh-icon :icon="icon" size="14" />
       <span class="tyh-page-header-title">{{ title }}</span>
     </div>
@@ -21,5 +21,4 @@ defineProps({
   }
 })
 const emit = defineEmits(['back'])
-const onClick = () => emit('back')
 </script>

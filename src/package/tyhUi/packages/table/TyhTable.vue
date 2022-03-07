@@ -56,11 +56,11 @@
 const props = defineProps({
   data: {
     type: Array,
-    default: []
+    default: () => []
   },
   columns: {
     type: Array,
-    default: []
+    default: () => []
   },
   trHeight: {
     type: String,
@@ -86,7 +86,7 @@ const props = defineProps({
   num: Boolean,
   important: {
     type: Array,
-    default: []
+    default: () => []
   },
   importantColor: {
     type: String,
@@ -114,7 +114,6 @@ const isTdThClass = key => {
   width: 6px;
   background-color: #ffffff;
 }
-
 ::-webkit-scrollbar-thumb {
   background: #dddddd;
   border-radius: 6px;

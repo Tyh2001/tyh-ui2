@@ -16,7 +16,6 @@ import { getCurrentInstance } from 'vue'
 const props = defineProps({
   to: String
 })
-
 const { icon, link } = _TyhCrumbsItem()
 
 function _TyhCrumbsItem () {

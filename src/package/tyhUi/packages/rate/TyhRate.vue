@@ -41,11 +41,10 @@ const props = defineProps({
   showText: Boolean,
   sayText: {
     type: Array,
-    default: ['极差', '失望', '一般', '惊喜', '满意']
+    default: () => ['极差', '失望', '一般', '惊喜', '满意']
   }
 })
 const emit = defineEmits(['update:modelValue', 'change'])
-
 const { width, upDataValue, showSayFn } = _TyhRate()
 
 function _TyhRate () {
@@ -79,10 +78,6 @@ function _TyhRate () {
     return showSay.value
   })
 
-  return {
-    width,
-    upDataValue,
-    showSayFn
-  }
+  return { width, upDataValue, showSayFn }
 }
 </script>

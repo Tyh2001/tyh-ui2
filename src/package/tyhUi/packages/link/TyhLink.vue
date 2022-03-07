@@ -10,9 +10,7 @@
       size="15"
       :style="[
         'margin-right: 2px',
-        {
-          cursor: prohibit ? 'no-drop' : 'pointer'
-        }
+        { cursor: prohibit ? 'no-drop' : 'pointer' }
       ]"
       :icon="icon"
       :color="THEME[type]"

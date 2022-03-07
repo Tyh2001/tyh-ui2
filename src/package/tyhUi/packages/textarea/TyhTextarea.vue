@@ -50,9 +50,7 @@ function _TyhTextarea () {
   const isClass = computed(() => {
     return [
       'tyh-textarea-textarea',
-      {
-        'tyh-textarea-disabled': props.disabled
-      }
+      { 'tyh-textarea-disabled': props.disabled }
     ]
   })
   return { input, isClass }

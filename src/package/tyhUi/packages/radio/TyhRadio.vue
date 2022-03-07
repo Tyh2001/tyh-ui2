@@ -79,7 +79,8 @@ function _TyhRadio () {
         ? props.disabled
           ? '#b6b5b5'
           : '#3a6ff4'
-        : '#b6b5b5'}`
+        : '#b6b5b5'
+      }`
     ]
   })
 

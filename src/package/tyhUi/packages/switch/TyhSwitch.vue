@@ -84,12 +84,13 @@ function _TyhSwitch () {
   const switchRollStyle = computed(() => {
     const width = ref(props.width)
     if (width.value < 20) width.value = 20
-    return [{
-      width: `${(width.value / 2) - 4}px`,
-      height: `${(width.value / 2) - 4}px`,
-      left: props.modelValue ? `${width.value / 2}px` : '0px'
-    },
-    `border:2px solid  ${switchColor.value}`
+    return [
+      {
+        width: `${(width.value / 2) - 4}px`,
+        height: `${(width.value / 2) - 4}px`,
+        left: props.modelValue ? `${width.value / 2}px` : '0px'
+      },
+      `border:2px solid  ${switchColor.value}`
     ]
   })
 

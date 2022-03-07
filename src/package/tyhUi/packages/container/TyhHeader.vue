@@ -1,7 +1,5 @@
 <template>
-  <header class="tyh-header" :style="[{ height }]">
-    <slot />
-  </header>
+  <header class="tyh-header" :style="[{ height }]"><slot /></header>
 </template>
 
 <script setup>

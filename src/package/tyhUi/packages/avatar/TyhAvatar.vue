@@ -30,8 +30,8 @@ const props = defineProps({
   },
   fit: {
     type: String,
-    validator (val) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(val)
+    validator (v) {
+      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
     }
   },
   round: Boolean,

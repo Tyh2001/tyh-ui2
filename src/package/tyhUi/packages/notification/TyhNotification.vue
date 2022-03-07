@@ -37,9 +37,8 @@ const props = defineProps({
   close: Boolean,
   type: {
     type: String,
-    default: '',
     validator (v) {
-      return ['', 'primary', 'success', 'danger', 'warning'].includes(v)
+      return ['primary', 'success', 'danger', 'warning'].includes(v)
     }
   }
 })
