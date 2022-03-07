@@ -38,7 +38,7 @@ const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
 const isClass = computed(() => {
   return [
     'tyh-menu',
-    isFlex,
+    isFlex.value,
     {
       'tyh-menu-shadow': props.shadow,
       [`tyh-menu-${props.theme}`]: props.theme

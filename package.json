@@ -9,7 +9,7 @@
   "dependencies": {
     "@vueuse/core": "^7.1.2",
     "element3": "^0.0.40",
-    "tyh-ui2": "^3.2.19",
+    "tyh-ui2": "^3.3.2",
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },

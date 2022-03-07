@@ -1,35 +1,19 @@
 <template>
-  <tyh-menu shadow mode="horizontal">
-    <tyh-menu-item to="/home">首页</tyh-menu-item>
-    <tyh-menu-item to="/abc">内容</tyh-menu-item>
-    <tyh-menu-item prohibit>设置</tyh-menu-item>
-    <tyh-menu-item prohibit>回收站</tyh-menu-item>
-  </tyh-menu>
-
-  <br />
-  <br />
-
-  <tyh-menu shadow mode="vertical" theme="light">
-    <!-- <tyh-menu shadow mode="horizontal"> -->
+  <tyh-menu>
     <template v-slot:left>
-      <tyh-button type="primary">主要按钮</tyh-button>
+      <tyh-avatar :size="7" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
     </template>
-
+    <tyh-menu-item>首页</tyh-menu-item>
+    <tyh-menu-item>内容</tyh-menu-item>
+    <tyh-menu-item>设置</tyh-menu-item>
+    <tyh-menu-item>回收站</tyh-menu-item>
     <template v-slot:right>
-      <tyh-input v-model="text1" />
+      <tyh-button simple>右侧插槽</tyh-button>
     </template>
-
-    <tyh-menu-item to="/home">首页</tyh-menu-item>
-    <tyh-menu-item to="/abc">内容</tyh-menu-item>
-    <tyh-menu-item prohibit>设置</tyh-menu-item>
-    <tyh-menu-item prohibit>回收站</tyh-menu-item>
   </tyh-menu>
-<!-- </div> -->
-
 </template>
 
 <script setup>
-const text1 = ''
 </script>
 
 <style>
