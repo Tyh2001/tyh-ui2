@@ -1,0 +1,38 @@
+.tyh-drawer {
+  position: fixed;
+  background: skyblue;
+}
+.tyh-drawer-top {
+  top: 0;
+  left: 0;
+  right: 0;
+}
+.tyh-drawer-left {
+  left: 0;
+  top: 0;
+  bottom: 0;
+}
+.tyh-drawer-bottom {
+  bottom: 0px;
+  right: 0;
+  left: 0;
+}
+.tyh-drawer-right {
+  right: 0px;
+  top: 0;
+  bottom: 0;
+}
+body {
+  margin: 30px;
+}
+.slide-fade-enter-active {
+  transition: all 0.2s ease-out;
+}
+.slide-fade-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+.slide-fade-enter-from,
+.slide-fade-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}
