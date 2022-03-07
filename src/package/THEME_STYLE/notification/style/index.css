@@ -34,16 +34,26 @@
 .tyh-notification .tyh-notification-body .tyh-notification-content {
   max-width: 200px;
 }
-.tyh-notification .tyh-notification-body .tyh-notification-content .tyh-notification-title {
+.tyh-notification
+  .tyh-notification-body
+  .tyh-notification-content
+  .tyh-notification-title {
   margin: 0;
   color: #333;
   font-size: 16px;
   display: block;
 }
-.tyh-notification .tyh-notification-body .tyh-notification-content .tyh-notification-message {
+.tyh-notification
+  .tyh-notification-body
+  .tyh-notification-content
+  .tyh-notification-message {
   margin-top: 3px;
 }
-.tyh-notification .tyh-notification-body .tyh-notification-content .tyh-notification-message p {
+.tyh-notification
+  .tyh-notification-body
+  .tyh-notification-content
+  .tyh-notification-message
+  p {
   font-size: 15px;
   color: #606266;
   margin: 0;

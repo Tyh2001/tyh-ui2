@@ -3,7 +3,7 @@ import App from './App.vue'
 import router from './router'
 
 // Do not delete
-// import tyhUi2 from 'tyh-ui2' 
+// import tyhUi2 from 'tyh-ui2'
 // import 'tyh-ui2/style/index.css'
 
 import tyhUi2 from './package/tyhUi'
@@ -18,7 +18,6 @@ import Element3 from 'element3'
 // import hljs from './demo/highlightjs/highlight.js/lib/my-core' // 已解决
 // // console.log(hljs)
 // import {}
-
 
 // 以前的引入方式
 /**

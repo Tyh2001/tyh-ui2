@@ -29,5 +29,4 @@ const link = () => {
 }
 </script>
 
-<style src="./style/index.css" scoped>
-</style>
+<style src="./style/index.css" scoped></style>

@@ -50,14 +50,9 @@ const props = defineProps({
 
 const emit = defineEmits(['update:modelValue', 'change'])
 
-const {
-  switchValue,
-  clickSwitch,
-  switchStyle,
-  switchRollStyle
-} = _TyhSwitch()
+const { switchValue, clickSwitch, switchStyle, switchRollStyle } = _TyhSwitch()
 
-function _TyhSwitch () {
+function _TyhSwitch() {
   const switchValue = ref(props.modelValue)
 
   const clickSwitch = () => {
@@ -74,11 +69,13 @@ function _TyhSwitch () {
   const switchStyle = computed(() => {
     const width = ref(props.width)
     if (width.value < 20) width.value = 20
-    return [{
-      width: `${width.value}px`,
-      height: `${width.value / 2}px`,
-      backgroundColor: switchColor.value
-    }]
+    return [
+      {
+        width: `${width.value}px`,
+        height: `${width.value / 2}px`,
+        backgroundColor: switchColor.value
+      }
+    ]
   })
 
   const switchRollStyle = computed(() => {
@@ -86,8 +83,8 @@ function _TyhSwitch () {
     if (width.value < 20) width.value = 20
     return [
       {
-        width: `${(width.value / 2) - 4}px`,
-        height: `${(width.value / 2) - 4}px`,
+        width: `${width.value / 2 - 4}px`,
+        height: `${width.value / 2 - 4}px`,
         left: props.modelValue ? `${width.value / 2}px` : '0px'
       },
       `border:2px solid  ${switchColor.value}`

@@ -69,7 +69,7 @@ const props = defineProps({
   align: {
     type: String,
     default: 'left',
-    validator (v) {
+    validator(v) {
       return ['left', 'right', 'center'].includes(v)
     }
   },
@@ -102,10 +102,7 @@ const importantStyle = i => {
   }
 }
 const isTdThClass = key => {
-  return [
-    `tyh-${key}-td`,
-    { 'tyh-table-border': props.border }
-  ]
+  return [`tyh-${key}-td`, { 'tyh-table-border': props.border }]
 }
 </script>
 

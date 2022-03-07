@@ -13,7 +13,7 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (v) {
+    validator(v) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
@@ -22,7 +22,7 @@ const props = defineProps({
   icon: String,
   size: {
     type: String,
-    validator (v) {
+    validator(v) {
       return ['large', 'small', 'mini'].includes(v)
     }
   },
@@ -31,7 +31,7 @@ const props = defineProps({
 })
 
 const { textColor, isClass } = _TyhButton()
-function _TyhButton () {
+function _TyhButton() {
   const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
@@ -49,8 +49,12 @@ function _TyhButton () {
     return [
       'tyh-button',
       props.simple
-        ? props.disabled ? `tyh-button-simple-disabled-${props.type}` : `tyh-button-simple-${props.type}`
-        : props.disabled ? `tyh-button-disabled-${props.type}` : `tyh-button-${props.type}`,
+        ? props.disabled
+          ? `tyh-button-simple-disabled-${props.type}`
+          : `tyh-button-simple-${props.type}`
+        : props.disabled
+        ? `tyh-button-disabled-${props.type}`
+        : `tyh-button-${props.type}`,
       {
         [`tyh-button-size-${props.size}`]: props.size,
         'tyh-button-round': props.round,

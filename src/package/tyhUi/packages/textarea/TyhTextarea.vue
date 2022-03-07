@@ -1,4 +1,3 @@
-
 <template>
   <div class="tyh-textarea">
     <textarea
@@ -30,22 +29,22 @@ const props = defineProps({
     default: '3'
   },
   cols: {
-    type: [Number, String],
+    type: [Number, String]
   },
   resize: {
     type: String,
-    validator (v) {
+    validator(v) {
       return ['vertical', 'horizontal', 'none'].includes(v)
     }
   },
   disabled: Boolean,
   autofocus: Boolean,
-  name: String,
+  name: String
 })
 const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
 const { input, isClass } = _TyhTextarea()
 
-function _TyhTextarea () {
+function _TyhTextarea() {
   const input = e => emit('update:modelValue', e.target.value)
   const isClass = computed(() => {
     return [

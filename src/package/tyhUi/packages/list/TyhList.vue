@@ -45,7 +45,7 @@ const props = defineProps({
   num: Boolean,
   hoverShow: Boolean
 })
-function contentKey (item) {
+function contentKey(item) {
   if (item instanceof Object && !props.iskey) return item
   if (!(item instanceof Object)) return item
   for (const key in item) {

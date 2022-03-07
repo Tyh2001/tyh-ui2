@@ -1,9 +1,13 @@
 const hljs = hljs => {
   const languages = Object.create(null)
   const aliases = Object.create(null)
-  const PLAINTEXT_LANGUAGE = { disableAutodetect: true, name: 'Plain text', contains: [] }
+  const PLAINTEXT_LANGUAGE = {
+    disableAutodetect: true,
+    name: 'Plain text',
+    contains: []
+  }
 
-  function registerLanguage (languageName, languageDefinition) {
+  function registerLanguage(languageName, languageDefinition) {
     let lang = null
     try {
       lang = languageDefinition(hljs)
@@ -22,11 +26,13 @@ const hljs = hljs => {
     }
   }
 
-  function registerAliases (aliasList, { languageName }) {
+  function registerAliases(aliasList, { languageName }) {
     if (typeof aliasList === 'string') {
       aliasList = [aliasList]
     }
-    aliasList.forEach(alias => { aliases[alias.toLowerCase()] = languageName })
+    aliasList.forEach(alias => {
+      aliases[alias.toLowerCase()] = languageName
+    })
   }
 
   const res = Object.assign(hljs, {

@@ -29,8 +29,9 @@ const handleScroll = () => {
       clearTimeout(timer)
     }
     timer = setTimeout(() => {
-      let scrollTop = document.documentElement.scrollTop || document.body.scrollTop
-      scrollTop > 100 ? backShow.value = true : backShow.value = false
+      let scrollTop =
+        document.documentElement.scrollTop || document.body.scrollTop
+      scrollTop > 100 ? (backShow.value = true) : (backShow.value = false)
     }, 188)
   }
 }

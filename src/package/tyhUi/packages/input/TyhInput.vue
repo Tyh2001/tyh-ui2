@@ -1,4 +1,3 @@
-
 <template>
   <div :class="['tyh-input', { 'tyh-input-disabled': disabled }]">
     <tyh-icon
@@ -43,14 +42,14 @@ const props = defineProps({
   type: {
     type: String,
     default: 'text',
-    validator (v) {
+    validator(v) {
       return ['text', 'password'].includes(v)
     }
   },
   size: {
     type: String,
     default: 'medium',
-    validator (v) {
+    validator(v) {
       return ['large', 'medium', 'small', 'mini'].includes(v)
     }
   },
@@ -62,16 +61,16 @@ const props = defineProps({
   name: String,
   showPassword: Boolean
 })
-const emit = defineEmits(['update:modelValue', 'clear', 'enter', 'onblur', 'onfocus'])
-const {
-  input,
-  isClass,
-  inputType,
-  rightIcon,
-  rightIconClick
-} = _TyhInput()
+const emit = defineEmits([
+  'update:modelValue',
+  'clear',
+  'enter',
+  'onblur',
+  'onfocus'
+])
+const { input, isClass, inputType, rightIcon, rightIconClick } = _TyhInput()
 
-function _TyhInput () {
+function _TyhInput() {
   const inputType = ref(props.type)
   const isPass = ref(false)
 
@@ -101,14 +100,14 @@ function _TyhInput () {
   }
 
   const isIcon = computed(() => {
-    return props.clear
-      ? props.showPassword ? true : false
-      : true
+    return props.clear ? (props.showPassword ? true : false) : true
   })
 
   const rightIcon = computed(() => {
     return isIcon.value
-      ? isPass.value ? 'tyh-ui-browse' : 'tyh-ui-eye-close'
+      ? isPass.value
+        ? 'tyh-ui-browse'
+        : 'tyh-ui-eye-close'
       : 'tyh-ui-guanbi'
   })
 

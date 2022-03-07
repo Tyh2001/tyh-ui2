@@ -20,7 +20,7 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (v) {
+    validator(v) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
@@ -32,20 +32,15 @@ const props = defineProps({
 })
 const emit = defineEmits(['close'])
 
-const {
-  THEME,
-  isClass,
-  isStyle,
-  isMessageStyle
-} = _TyhAlert()
+const { THEME, isClass, isStyle, isMessageStyle } = _TyhAlert()
 
-function _TyhAlert () {
+function _TyhAlert() {
   const BACKGROUND_THEME = {
     primary: '#e8f4ff',
     success: '#e1ffea',
     danger: '#ffe8e6',
     warning: '#fff1e3',
-    default: '#f6f6f6',
+    default: '#f6f6f6'
   }
   const THEME = {
     primary: '#3a6ff4',
@@ -55,16 +50,15 @@ function _TyhAlert () {
     default: '#3f536e'
   }
   const isClass = computed(() => {
-    return [
-      'tyh-alert',
-      { [`tyh-alert-${props.type}`]: props.type }
-    ]
+    return ['tyh-alert', { [`tyh-alert-${props.type}`]: props.type }]
   })
   const isStyle = computed(() => {
-    return [{
-      justifyContent: props.center && 'center',
-      background: !props.simple ? BACKGROUND_THEME[props.type] : ''
-    }]
+    return [
+      {
+        justifyContent: props.center && 'center',
+        background: !props.simple ? BACKGROUND_THEME[props.type] : ''
+      }
+    ]
   })
   const isMessageStyle = computed(() => {
     return [{ color: THEME[props.type] }]

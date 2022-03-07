@@ -31,12 +31,12 @@
 import { getCurrentInstance, ref, computed } from 'vue'
 const props = defineProps({
   message: {
-    type: String,
+    type: String
   },
   type: {
     type: String,
     default: 'default',
-    validator (v) {
+    validator(v) {
       return ['primary', 'success', 'danger', 'warning', 'default'].includes(v)
     }
   },
@@ -48,21 +48,21 @@ const props = defineProps({
 })
 const { isShow, isIconStyle, leave, close } = _TyhMessage()
 
-function _TyhMessage () {
+function _TyhMessage() {
   const isShow = ref(true)
   const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
     danger: '#d10f1b',
     warning: '#fbcc30',
-    default: '#484848',
+    default: '#484848'
   }
   const isIconStyle = computed(() => {
     return { color: THEME[props.type] || '#484848' }
   })
 
   let timer
-  (function () {
+  ;(function () {
     if (props.time > 0) {
       timer = setTimeout(() => {
         close()

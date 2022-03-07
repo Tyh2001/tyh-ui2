@@ -4,5 +4,4 @@ import javascript from './languages/javascript'
 
 hljs.registerLanguage('javascript', javascript)
 
-
 export default hljs

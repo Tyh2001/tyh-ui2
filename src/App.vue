@@ -1,15 +1,15 @@
 <template>
-    <!-- <tyh-highlight>{{ code }}</tyh-highlight> -->
-    <!-- <highlightjs language="javascript" :code="code" /> -->
+  <!-- <tyh-highlight>{{ code }}</tyh-highlight> -->
+  <!-- <highlightjs language="javascript" :code="code" /> -->
 
-    <!-- <el-button @click="drawer = true" type="primary"> 点我打开 </el-button> -->
-    <!-- <el-drawer v-model:visible="drawer" direction="rtl">
+  <!-- <el-button @click="drawer = true" type="primary"> 点我打开 </el-button> -->
+  <!-- <el-drawer v-model:visible="drawer" direction="rtl">
       <span>我来啦!</span>
     </el-drawer> -->
-    <!-- <pre v-tyh><code class="javascript">{{ code }}</code></pre> -->
-    <tyh-button @click="open = !open">关闭</tyh-button>
+  <!-- <pre v-tyh><code class="javascript">{{ code }}</code></pre> -->
+  <tyh-button @click="open = !open">关闭</tyh-button>
 
-    <tyh-drawer v-model="open" direction="top">哈哈哈</tyh-drawer>
+  <tyh-drawer v-model="open" direction="top">哈哈哈</tyh-drawer>
 </template>
 
 <script setup>

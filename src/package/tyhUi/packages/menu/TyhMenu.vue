@@ -18,7 +18,7 @@ const props = defineProps({
   theme: {
     type: String,
     default: 'dark',
-    validator (v) {
+    validator(v) {
       return ['dark', 'light'].includes(v)
     }
   },
@@ -26,7 +26,7 @@ const props = defineProps({
   mode: {
     type: String,
     default: 'horizontal',
-    validator (v) {
+    validator(v) {
       return ['horizontal', 'vertical'].includes(v)
     }
   }
@@ -47,5 +47,4 @@ const isClass = computed(() => {
 })
 </script>
 
-<style src="./style/index.css" scoped>
-</style>
+<style src="./style/index.css" scoped></style>
