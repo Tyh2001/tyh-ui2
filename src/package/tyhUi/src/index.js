@@ -36,9 +36,11 @@ import TyhTextarea from '../packages/textarea'
 import TyhSelect from '../packages/select'
 import TyhOption from '../packages/option'
 import TyhTagging from '../packages/tagging'
+import TyhDrawer from '../packages/drawer'
 import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
+
 const components = [
   TyhButton,
   TyhList,
@@ -77,7 +79,8 @@ const components = [
   TyhTextarea,
   TyhSelect,
   TyhOption,
-  TyhTagging
+  TyhTagging,
+  TyhDrawer
 ]
 
 const install = app => {
@@ -132,7 +135,8 @@ export {
   TyhTextarea,
   TyhSelect,
   TyhOption,
-  TyhTagging
+  TyhTagging,
+  TyhDrawer
 }
 
 export default tyhUi
