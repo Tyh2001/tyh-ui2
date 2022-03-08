@@ -1,26 +1,13 @@
 <template>
-  <tyh-button @click="open = true">点我打开</tyh-button>
-
-  <tyh-drawer
-    v-model="open"
-    direction="right"
-    @close="close"
-    @onClose="onClose"
-    @open="isOpen"
-    @onOpen="onOpen"
-    title="这是标题"
-    size="50%"
-  >
-    哈哈哈
-    <tyh-button @click="open2 = true">点我打开</tyh-button>
-    <tyh-drawer v-model="open2" direction="right" title="第二个">
-      哈哈哈
-    </tyh-drawer>
+  <tyh-button type="primary" @click="open = true">点我打开</tyh-button>
+  <tyh-drawer v-model="open" direction="right" :showHeader="false">
+    hello，欢迎使用 tyh-ui!
   </tyh-drawer>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+const radio = ref('right')
 const open = ref(false)
 const open2 = ref(false)
 

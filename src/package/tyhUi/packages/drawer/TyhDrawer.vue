@@ -6,6 +6,7 @@
   >
     <div
       :class="['tyh-drawer-packing', { 'tyh-drawer-modal': modal }]"
+      :style="{ zIndex }"
       v-show="modelValue"
       @click.self="packingClose"
     >
@@ -62,6 +63,10 @@ const props = defineProps({
   showHeader: {
     type: Boolean,
     default: true
+  },
+  zIndex: {
+    type: Number,
+    default: 3500
   }
 })
 const emit = defineEmits(['update:modelValue', 'open', 'close', 'onOpen', 'onClose'])

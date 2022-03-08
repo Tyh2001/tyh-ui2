@@ -1,5 +1,10 @@
 # 更新日志
 
+## 3.3.6 (2022-03-08)
+
+- 修复 TyhDrawer 组件的样式
+- TyhDrawer 组件新增 zIndex 配置项
+
 ## 3.3.5 (2022-03-08)
 
 - 新增 TyhDrawer 组件（我还是非常满意的，哈哈:blush::blush:）
