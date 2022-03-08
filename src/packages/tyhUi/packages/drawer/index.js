@@ -1,7 +1,7 @@
 import TyhDrawer from './TyhDrawer.vue'
 
-TyhDrawer.install = x => {
-  x.component('TyhDrawer', TyhDrawer)
+TyhDrawer.install = app => {
+  app.component('TyhDrawer', TyhDrawer)
 }
 
 export default TyhDrawer
