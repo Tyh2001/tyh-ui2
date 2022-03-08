@@ -21,13 +21,15 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (val) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(val)
+    validator(val) {
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(
+        val
+      )
     }
   },
   size: {
     type: String,
-    validator (val) {
+    validator(val) {
       return ['small', 'mini'].includes(val)
     }
   },

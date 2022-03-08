@@ -73,7 +73,7 @@ const {
   getDate
 } = _TyhCalendar()
 
-function _TyhCalendar () {
+function _TyhCalendar() {
   const getMonth = ref(props.modelValue.getMonth())
   const getYear = ref(props.modelValue.getFullYear())
   const getDate = props.modelValue.getDate()
@@ -88,7 +88,7 @@ function _TyhCalendar () {
       const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
       return months[month]
     }
-    return year % 4 == 0 && year % 100 != 0 || year % 400 == 0 ? 29 : 28
+    return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28
   }
 
   const prevMonth = () => {
@@ -120,10 +120,12 @@ function _TyhCalendar () {
 
   const nowDateStyle = date => {
     if (date + 1 === props.modelValue.getDate()) {
-      return [{
-        backgroundColor: '#3a6ff4',
-        color: '#fff',
-      }]
+      return [
+        {
+          backgroundColor: '#3a6ff4',
+          color: '#fff'
+        }
+      ]
     }
   }
 

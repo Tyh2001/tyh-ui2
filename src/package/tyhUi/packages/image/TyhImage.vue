@@ -26,7 +26,7 @@ defineProps({
   alt: String,
   fit: {
     type: String,
-    validator (v) {
+    validator(v) {
       return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
     }
   },

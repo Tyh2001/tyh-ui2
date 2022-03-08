@@ -32,14 +32,20 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.tyh-calendar .tyh-calendar-container .tyh-calendar-month .tyh-calendar-day:hover {
+.tyh-calendar
+  .tyh-calendar-container
+  .tyh-calendar-month
+  .tyh-calendar-day:hover {
   background-color: #dae8ff;
 }
 .tyh-calendar .tyh-calendar-container .tyh-calendar-week {
   display: flex;
   flex-wrap: wrap;
 }
-.tyh-calendar .tyh-calendar-container .tyh-calendar-week .tyh-calendar-week-item {
+.tyh-calendar
+  .tyh-calendar-container
+  .tyh-calendar-week
+  .tyh-calendar-week-item {
   height: 30px;
   border: 1px solid #fff;
   display: flex;

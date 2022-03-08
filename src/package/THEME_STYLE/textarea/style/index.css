@@ -16,7 +16,7 @@
   transition: border 0.35s;
   background: #fff;
   box-sizing: border-box;
-  font-family: "微软雅黑";
+  font-family: '微软雅黑';
   font-size: 15px;
 }
 .tyh-textarea .tyh-textarea-textarea:focus {

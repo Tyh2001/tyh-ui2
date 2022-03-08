@@ -7,6 +7,6 @@ const CONFIG = {
   close: true
 }
 
-export function Notification (opts) {
+export function Notification(opts) {
   return createNot(TN, mergeOptions(CONFIG, opts))
 }

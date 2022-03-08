@@ -27,7 +27,7 @@
 import { ref } from 'vue'
 defineProps({
   data: {
-    type: Array,
+    type: Array
   }
 })
 

@@ -18,7 +18,7 @@ const props = defineProps({
   direction: {
     type: String,
     default: 'right',
-    validator (v) {
+    validator(v) {
       return ['top', 'left', 'bottom', 'right'].includes(v)
     }
   },
@@ -39,5 +39,4 @@ const isStyle = computed(() => {
 })
 </script>
 
-<style src="./style/index.css" scoped>
-</style>
+<style src="./style/index.css" scoped></style>

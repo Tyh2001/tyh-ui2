@@ -30,23 +30,25 @@ const props = defineProps({
   position: {
     type: String,
     default: 'top-right',
-    validator (v) {
-      return ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(v)
+    validator(v) {
+      return ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(
+        v
+      )
     }
   },
   close: Boolean,
   type: {
     type: String,
-    validator (v) {
+    validator(v) {
       return ['primary', 'success', 'danger', 'warning'].includes(v)
     }
   }
 })
 const { isShow, onClose, leave, iconClass } = _TyhNotification()
-function _TyhNotification () {
+function _TyhNotification() {
   const isShow = ref(true)
   let timer
-  (function () {
+  ;(function () {
     if (props.time > 0) {
       timer = setTimeout(() => {
         onClose()
@@ -62,20 +64,29 @@ function _TyhNotification () {
   const isIcon = computed(() => {
     let icon
     switch (props.type) {
-      case 'primary': icon = 'tyh-ui-smile'
+      case 'primary':
+        icon = 'tyh-ui-smile'
         break
-      case 'success': icon = 'tyh-ui-success-filling'
+      case 'success':
+        icon = 'tyh-ui-success-filling'
         break
-      case 'danger': icon = 'tyh-ui-error'
+      case 'danger':
+        icon = 'tyh-ui-error'
         break
-      case 'warning': icon = 'tyh-ui-warning-filling'
+      case 'warning':
+        icon = 'tyh-ui-warning-filling'
         break
     }
     return icon
   })
 
   const iconClass = computed(() => {
-    return ['tyh-icon', 'tyh-notification-icon', isIcon.value, `tyh-notification-icon-${props.type}`]
+    return [
+      'tyh-icon',
+      'tyh-notification-icon',
+      isIcon.value,
+      `tyh-notification-icon-${props.type}`
+    ]
   })
 
   const instance = getCurrentInstance()
