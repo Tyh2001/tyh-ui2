@@ -1,0 +1,78 @@
+.tyh-drawer-packing {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 200;
+
+  .tyh-drawer {
+    position: fixed;
+    background: #fff;
+    z-index: 300;
+    padding: 20px;
+    box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.2);
+
+    .tyh-drawer-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .tyh-drawer-title {
+        font-size: 15px;
+        color: #333;
+      }
+
+      .tyh-ui-close {
+        cursor: pointer;
+      }
+    }
+
+    .tyh-drawer-body {
+      margin-top: 20px;
+    }
+  }
+
+  .tyh-drawer-top {
+    top: 0;
+    left: 0;
+    right: 0;
+  }
+
+  .tyh-drawer-left {
+    left: 0;
+    top: 0;
+    bottom: 0;
+  }
+
+  .tyh-drawer-bottom {
+    bottom: 0px;
+    right: 0;
+    left: 0;
+  }
+
+  .tyh-drawer-right {
+    right: 0px;
+    top: 0;
+    bottom: 0;
+  }
+}
+
+.tyh-drawer-modal {
+  background: rgba(0, 0, 0, 0.4);
+
+}
+
+.tyh-drawer-enter-active {
+  transition: all 0.2s ease-out;
+}
+
+.tyh-drawer-leave-active {
+  transition: all 0.3s cubic-bezier(1, 0.5, 0.8, 1);
+}
+
+.tyh-drawer-enter-from,
+.tyh-drawer-leave-to {
+  transform: translateX(20px);
+  opacity: 0;
+}

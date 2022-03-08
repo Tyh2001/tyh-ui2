@@ -10,7 +10,7 @@ import tyhUi2 from './package/tyhUi'
 import './package/tyhUi/style/index.css'
 
 import 'element3/lib/theme-chalk/index.css'
-import Element3 from 'element3'
+// import Element3 from 'element3'
 
 // import './demo/highlightjs/highlight.js/styles/stackoverflow-light.css' // 已解决
 // import { javascript } from './demo/highlightjs/highlight.js/lib/languages/javascript' // 已解决
@@ -49,7 +49,7 @@ createApp(App)
   //     }
   //   })
   // })
-  .use(Element3)
+  // .use(Element3)
   // .use(hlVue)
   .use(tyhUi2)
   .mount('#app')
