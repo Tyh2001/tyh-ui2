@@ -10,3 +10,12 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+.tyh-footer {
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+</style>

@@ -10,3 +10,9 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+.tyh-header {
+  flex-shrink: 0;
+}
+</style>

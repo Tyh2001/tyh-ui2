@@ -10,3 +10,9 @@ defineProps({
   }
 })
 </script>
+
+<style scoped>
+.tyh-aside {
+  flex-shrink: 0;
+}
+</style>
