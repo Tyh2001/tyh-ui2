@@ -1802,3 +1802,25 @@
   transform: translateX(20px);
   opacity: 0;
 }
+.tyh-aside {
+  flex-shrink: 0;
+}
+.tyh-container-vertical {
+  display: flex;
+}
+.tyh-container-horizontal {
+  width: 100%;
+}
+.tyh-footer {
+  width: 100%;
+  flex-shrink: 0;
+}
+.tyh-header {
+  flex-shrink: 0;
+}
+.tyh-main {
+  padding: 20px;
+  box-sizing: border-box;
+  flex: 1;
+  flex-shrink: 0;
+}

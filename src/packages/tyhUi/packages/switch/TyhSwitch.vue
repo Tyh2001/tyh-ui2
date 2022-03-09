@@ -47,12 +47,10 @@ const props = defineProps({
     default: 40
   }
 })
-
 const emit = defineEmits(['update:modelValue', 'change'])
-
 const { switchValue, clickSwitch, switchStyle, switchRollStyle } = _TyhSwitch()
 
-function _TyhSwitch() {
+function _TyhSwitch () {
   const switchValue = ref(props.modelValue)
 
   const clickSwitch = () => {
@@ -90,12 +88,6 @@ function _TyhSwitch() {
       `border:2px solid  ${switchColor.value}`
     ]
   })
-
-  return {
-    switchValue,
-    clickSwitch,
-    switchStyle,
-    switchRollStyle
-  }
+  return { switchValue, clickSwitch, switchStyle, switchRollStyle }
 }
 </script>

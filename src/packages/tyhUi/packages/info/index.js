@@ -1,7 +1,5 @@
-import TyhInfo from './TyhInfo.vue'
+import T from './TyhInfo.vue'
 
-TyhInfo.install = app => {
-  app.component('TyhInfo', TyhInfo)
-}
+T.install = _ => _.component('TyhInfo', T)
 
-export default TyhInfo
+export default T

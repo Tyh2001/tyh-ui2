@@ -1,6 +1,7 @@
 <template>
   <button :class="isClass" :disabled="disabled">
-    <tyh-icon v-if="icon" :icon="icon" :color="textColor" size="14" />
+    <!-- <tyh-icon v-if="icon" :icon="icon" :color="textColor" size="14" /> -->
+    <i :class="['tyh-icon', `${icon}`]" />
     <span v-if="$slots.default" :style="[{ color: textColor }]">
       <slot />
     </span>
@@ -13,7 +14,7 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator(v) {
+    validator (v) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
@@ -22,7 +23,7 @@ const props = defineProps({
   icon: String,
   size: {
     type: String,
-    validator(v) {
+    validator (v) {
       return ['large', 'small', 'mini'].includes(v)
     }
   },
@@ -31,7 +32,7 @@ const props = defineProps({
 })
 
 const { textColor, isClass } = _TyhButton()
-function _TyhButton() {
+function _TyhButton () {
   const THEME = {
     primary: '#3a6ff4',
     success: '#54c600',
@@ -53,8 +54,8 @@ function _TyhButton() {
           ? `tyh-button-simple-disabled-${props.type}`
           : `tyh-button-simple-${props.type}`
         : props.disabled
-        ? `tyh-button-disabled-${props.type}`
-        : `tyh-button-${props.type}`,
+          ? `tyh-button-disabled-${props.type}`
+          : `tyh-button-${props.type}`,
       {
         [`tyh-button-size-${props.size}`]: props.size,
         'tyh-button-round': props.round,

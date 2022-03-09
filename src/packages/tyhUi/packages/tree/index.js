@@ -1,7 +1,5 @@
-import TyhTree from './TyhTree.vue'
+import T from './TyhTree.vue'
 
-TyhTree.install = app => {
-  app.component('TyhTree', TyhTree)
-}
+T.install = _ => _.component('TyhTree', T)
 
-export default TyhTree
+export default T

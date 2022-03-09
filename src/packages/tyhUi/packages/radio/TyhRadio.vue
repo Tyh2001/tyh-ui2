@@ -39,7 +39,7 @@ const props = defineProps({
   size: {
     type: String,
     default: 'large',
-    validator(v) {
+    validator (v) {
       return ['large', 'medium', 'small', 'mini'].includes(v)
     }
   }
@@ -47,7 +47,7 @@ const props = defineProps({
 const emits = defineEmits(['update:modelValue', 'change'])
 const { input, isClass, isStyle, labelStyle } = _TyhRadio()
 
-function _TyhRadio() {
+function _TyhRadio () {
   const input = evt => {
     emits('update:modelValue', evt.target.value)
     emits('change', evt.target.value)
@@ -74,19 +74,17 @@ function _TyhRadio() {
             ? '#b6b5b5'
             : '#3a6ff4'
           : props.disabled
-          ? '#b6b5b5'
-          : '#333'
+            ? '#b6b5b5'
+            : '#333'
       }
     ]
   })
-
   const labelStyle = computed(() => {
     return [
       { cursor: props.disabled ? 'no-drop' : 'pointer' },
       props.border &&
-        `border: 1px solid ${
-          isLabel.value ? (props.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
-        }`
+      `border: 1px solid ${isLabel.value ? (props.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
+      }`
     ]
   })
 

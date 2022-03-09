@@ -2,6 +2,10 @@
   <header class="tyh-header" :style="[{ height }]"><slot /></header>
 </template>
 
+<script>
+export default { name: 'TyhHeader' }
+</script>
+
 <script setup>
 defineProps({
   height: {
@@ -10,9 +14,3 @@ defineProps({
   }
 })
 </script>
-
-<style scoped>
-.tyh-header {
-  flex-shrink: 0;
-}
-</style>

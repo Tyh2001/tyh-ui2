@@ -1,7 +1,5 @@
-import TyhTag from './TyhTag.vue'
+import T from './TyhTag.vue'
 
-TyhTag.install = app => {
-  app.component('TyhTag', TyhTag)
-}
+T.install = _ => _.component('TyhTag', T)
 
-export default TyhTag
+export default T

@@ -1,7 +1,5 @@
-import TyhSkeleton from './TyhSkeleton.vue'
+import T from './TyhSkeleton.vue'
 
-TyhSkeleton.install = app => {
-  app.component('TyhSkeleton', TyhSkeleton)
-}
+T.install = _ => _.component('TyhSkeleton', T)
 
-export default TyhSkeleton
+export default T

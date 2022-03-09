@@ -1,7 +1,5 @@
-import TyhImage from './TyhImage.vue'
+import T from './TyhImage.vue'
 
-TyhImage.install = app => {
-  app.component('TyhImage', TyhImage)
-}
+T.install = _ => _.component('TyhImage', T)
 
-export default TyhImage
+export default T

@@ -2,6 +2,10 @@
   <footer class="tyh-footer" :style="[{ height }]"><slot /></footer>
 </template>
 
+<script>
+export default { name: 'TyhFooter' }
+</script>
+
 <script setup>
 defineProps({
   height: {
@@ -10,12 +14,3 @@ defineProps({
   }
 })
 </script>
-
-<style scoped>
-.tyh-footer {
-  padding: 0 20px;
-  width: 100%;
-  box-sizing: border-box;
-  flex-shrink: 0;
-}
-</style>

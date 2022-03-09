@@ -1,7 +1,5 @@
-import TyhInput from './TyhInput.vue'
+import T from './TyhInput.vue'
 
-TyhInput.install = app => {
-  app.component('TyhInput', TyhInput)
-}
+T.install = _ => _.component('TyhInput', T)
 
-export default TyhInput
+export default T

@@ -1,7 +1,5 @@
-import TyhCalendar from './TyhCalendar.vue'
+import T from './TyhCalendar.vue'
 
-TyhCalendar.install = app => {
-  app.component('TyhCalendar', TyhCalendar)
-}
+T.install = _ => _.component('TyhCalendar', T)
 
-export default TyhCalendar
+export default T

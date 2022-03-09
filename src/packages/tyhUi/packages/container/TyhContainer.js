@@ -1,7 +1,5 @@
-import TyhContainer from './TyhContainer.vue'
+import T from './TyhContainer.vue'
 
-TyhContainer.install = app => {
-  app.component('TyhContainer', TyhContainer)
-}
+T.install = _ => _.component('TyhContainer', T)
 
-export default TyhContainer
+export default T

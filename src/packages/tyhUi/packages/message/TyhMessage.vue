@@ -36,7 +36,7 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator(v) {
+    validator (v) {
       return ['primary', 'success', 'danger', 'warning', 'default'].includes(v)
     }
   },
@@ -48,7 +48,7 @@ const props = defineProps({
 })
 const { isShow, isIconStyle, leave, close } = _TyhMessage()
 
-function _TyhMessage() {
+function _TyhMessage () {
   const isShow = ref(true)
   const THEME = {
     primary: '#3a6ff4',
@@ -62,19 +62,17 @@ function _TyhMessage() {
   })
 
   let timer
-  ;(function () {
-    if (props.time > 0) {
-      timer = setTimeout(() => {
-        close()
-      }, props.time)
-    }
-  })()
-
+    ; (function () {
+      if (props.time > 0) {
+        timer = setTimeout(() => {
+          close()
+        }, props.time)
+      }
+    })()
   const close = () => {
     clearTimeout(timer)
     isShow.value = false
   }
-
   const instance = getCurrentInstance()
   const leave = () => {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)

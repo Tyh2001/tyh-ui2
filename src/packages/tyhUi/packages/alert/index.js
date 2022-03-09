@@ -1,7 +1,5 @@
-import TyhAlert from './TyhAlert.vue'
+import T from './TyhAlert.vue'
 
-TyhAlert.install = app => {
-  app.component('TyhAlert', TyhAlert)
-}
+T.install = _ => _.component('TyhAlert', T)
 
-export default TyhAlert
+export default T

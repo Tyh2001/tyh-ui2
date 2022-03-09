@@ -1,8 +1,7 @@
-import TM from './TyhMessage.vue'
+import T from './TyhMessage.vue'
 import { createNot, mergeOptions } from '../../utils/tips'
+const G = { time: 2000, offset: 20 }
 
-const CONFIG = { time: 2000, offset: 20 }
-
-export function Message(opts) {
-  return createNot(TM, mergeOptions(CONFIG, opts))
+export const Message = opts => {
+  return createNot(T, mergeOptions(G, opts))
 }

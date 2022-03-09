@@ -1,43 +1,55 @@
 <template>
-  <tyh-container>
-    <tyh-header>
-      <tyh-menu>
-        <tyh-menu-item>首页</tyh-menu-item>
-        <tyh-menu-item>内容</tyh-menu-item>
-        <tyh-menu-item>设置</tyh-menu-item>
-        <tyh-menu-item>回收站</tyh-menu-item>
-      </tyh-menu>
-    </tyh-header>
-    <tyh-container flex>
-      <tyh-aside width="200px">
-        <tyh-menu theme="light" mode="vertical">
-          <tyh-menu-item>首页</tyh-menu-item>
-          <tyh-menu-item>内容</tyh-menu-item>
-          <tyh-menu-item>设置</tyh-menu-item>
-          <tyh-menu-item>回收站</tyh-menu-item>
-        </tyh-menu>
-      </tyh-aside>
-      <tyh-main>
-        <tyh-card>
-          <template v-slot:title>主标题</template>
-          <template v-slot:subtitle>副标题</template>
-          <p>这是内容部分1</p>
-          <p>这是内容部分2</p>
-          <p>这是内容部分3</p>
-          <p>这是内容部分4</p>
-        </tyh-card>
-      </tyh-main>
-    </tyh-container>
-  </tyh-container>
+  <tyh-button icon="tyh-ui-setting-filling">设置</tyh-button>
+  <tyh-button icon="tyh-ui-tyhui" type="primary">tyh-ui</tyh-button>
+  <tyh-button icon="tyh-ui-fabulous" type="success"></tyh-button>
+  <tyh-button icon="tyh-ui-discount" type="danger"></tyh-button>
+  <tyh-button icon="tyh-ui-chart-bar" type="warning"></tyh-button>
+
+  <tyh-button simple icon="tyh-ui-setting-filling">设置</tyh-button>
+  <tyh-button simple icon="tyh-ui-tyhui" type="primary">tyh-ui</tyh-button>
+  <tyh-button simple icon="tyh-ui-fabulous" type="success"></tyh-button>
+  <tyh-button simple icon="tyh-ui-discount" type="danger"></tyh-button>
+  <tyh-button simple icon="tyh-ui-chart-bar" type="warning"></tyh-button>
+  <Tiger />
 </template>
 
 <script setup>
-
+import Tiger from './demo/tiger.vue'
 </script>
 
-<style>
-* {
-  margin: 0;
-  padding: 0;
+<style scoped>
+.tyh-header,
+.tyh-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.tyh-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.tyh-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .tyh-container {
+  margin-bottom: 40px;
+}
+
+.tyh-container:nth-child(5) .tyh-aside,
+.tyh-container:nth-child(6) .tyh-aside {
+  line-height: 260px;
+}
+
+.tyh-container:nth-child(7) .tyh-aside {
+  line-height: 320px;
 }
 </style>

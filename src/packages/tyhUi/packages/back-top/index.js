@@ -1,7 +1,5 @@
-import TyhBackTop from './TyhBackTop.vue'
+import T from './TyhBackTop.vue'
 
-TyhBackTop.install = app => {
-  app.component('TyhBackTop', TyhBackTop)
-}
+T.install = _ => _.component('TyhBackTop', T)
 
-export default TyhBackTop
+export default T

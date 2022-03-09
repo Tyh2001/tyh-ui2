@@ -41,7 +41,7 @@ import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
 
-const components = [
+const cpm = [
   TyhButton,
   TyhList,
   TyhCard,
@@ -83,13 +83,13 @@ const components = [
   TyhDrawer
 ]
 
-const install = app => {
-  components.forEach(i => {
-    app.use(i)
+const install = _ => {
+  cpm.forEach(i => {
+    _.use(i)
   })
 }
 
-const tyhUi = {
+const T = {
   version,
   install
 }
@@ -139,4 +139,4 @@ export {
   TyhDrawer
 }
 
-export default tyhUi
+export default T

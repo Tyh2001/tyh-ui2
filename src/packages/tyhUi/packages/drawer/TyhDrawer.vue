@@ -71,7 +71,6 @@ const props = defineProps({
 })
 const emit = defineEmits(['update:modelValue', 'open', 'close', 'onOpen', 'onClose'])
 const { close, isDirection, packingClose } = _TyhDrawer()
-
 function _TyhDrawer () {
   const close = () => {
     emit('close')

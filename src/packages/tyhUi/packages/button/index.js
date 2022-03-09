@@ -1,7 +1,5 @@
-import TyhButton from './TyhButton.vue'
+import T from './TyhButton.vue'
 
-TyhButton.install = app => {
-  app.component('TyhButton', TyhButton)
-}
+T.install = _ => _.component('TyhButton', T)
 
-export default TyhButton
+export default T

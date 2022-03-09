@@ -13,6 +13,4 @@ export const createComponent = (com, props) => {
   return node.component
 }
 
-export const mergeOptions = (def, opts) => {
-  return Object.assign(def, opts)
-}
+export const mergeOptions = (def, opts) => Object.assign(def, opts)

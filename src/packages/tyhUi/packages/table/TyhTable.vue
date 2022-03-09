@@ -69,7 +69,7 @@ const props = defineProps({
   align: {
     type: String,
     default: 'left',
-    validator(v) {
+    validator (v) {
       return ['left', 'right', 'center'].includes(v)
     }
   },

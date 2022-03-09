@@ -3,9 +3,7 @@
     :class="['tyh-crumbs-item', { 'tyh-crumbs-item__to': to }]"
     @click="link"
   >
-    <span class="tyh-crumbs-item-text">
-      <slot />
-    </span>
+    <span class="tyh-crumbs-item-text"><slot /></span>
     <tyh-icon color="#C0C4CC" :icon="icon" />
   </span>
 </template>
@@ -18,7 +16,7 @@ const props = defineProps({
 })
 const { icon, link } = _TyhCrumbsItem()
 
-function _TyhCrumbsItem() {
+function _TyhCrumbsItem () {
   const icon = ref('')
   const { proxy } = getCurrentInstance()
   icon.value = inject('Crumbs-separator')

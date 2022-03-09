@@ -2,6 +2,10 @@
   <aside class="tyh-aside" :style="[{ width }]"><slot /></aside>
 </template>
 
+<script>
+export default { name: 'TyhAside' }
+</script>
+
 <script setup>
 defineProps({
   width: {
@@ -10,9 +14,3 @@ defineProps({
   }
 })
 </script>
-
-<style scoped>
-.tyh-aside {
-  flex-shrink: 0;
-}
-</style>

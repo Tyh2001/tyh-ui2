@@ -1,7 +1,5 @@
-import TyhRadio from './TyhRadio.vue'
+import T from './TyhRadio.vue'
 
-TyhRadio.install = app => {
-  app.component('TyhRadio', TyhRadio)
-}
+T.install = _ => _.component('TyhRadio', T)
 
-export default TyhRadio
+export default T

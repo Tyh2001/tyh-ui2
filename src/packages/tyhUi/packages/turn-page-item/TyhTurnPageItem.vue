@@ -27,7 +27,7 @@ const props = defineProps({
   direction: {
     type: String,
     required: true,
-    validator(v) {
+    validator (v) {
       return ['left', 'right'].includes(v)
     }
   },
@@ -37,8 +37,7 @@ const props = defineProps({
 })
 
 const { isCenter, link } = _TyhTurnPageItem()
-
-function _TyhTurnPageItem() {
+function _TyhTurnPageItem () {
   const isCenter = inject('is-center')
   const { proxy } = getCurrentInstance()
   const link = () => {
