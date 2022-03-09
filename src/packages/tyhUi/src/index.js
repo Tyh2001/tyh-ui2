@@ -37,6 +37,7 @@ import TyhSelect from '../packages/select'
 import TyhOption from '../packages/option'
 import TyhTagging from '../packages/tagging'
 import TyhDrawer from '../packages/drawer'
+import TyhDialog from '../packages/dialog'
 import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
@@ -80,7 +81,8 @@ const cpm = [
   TyhSelect,
   TyhOption,
   TyhTagging,
-  TyhDrawer
+  TyhDrawer,
+  TyhDialog
 ]
 
 const install = _ => {
@@ -136,7 +138,8 @@ export {
   TyhSelect,
   TyhOption,
   TyhTagging,
-  TyhDrawer
+  TyhDrawer,
+  TyhDialog
 }
 
 export default T
