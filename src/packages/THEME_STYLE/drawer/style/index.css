@@ -8,6 +8,7 @@
 .tyh-drawer-packing .tyh-drawer {
   position: fixed;
   background: #fff;
+  z-index: 300;
   padding: 20px;
   box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.2);
 }

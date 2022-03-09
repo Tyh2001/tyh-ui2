@@ -1,48 +1,19 @@
 <template>
-  <tyh-division
-    color="blue"
-    margin="30px"
-  >
-    这是左边文字
-  </tyh-division>
+  <button @click="show = true">Toggle render</button>
+  <tyh-dialog v-model="show" width="45%" title="这是标题" appendToBody>
+    哈哈
+    <template v-slot:footer>
+      <tyh-button type="primary">主要按钮</tyh-button>
+      <tyh-button type="success">成功按钮</tyh-button>
+    </template>
+  </tyh-dialog>
 </template>
 
 <script setup>
+import { ref } from 'vue'
+const show = ref(false)
+const show2 = ref(false)
 </script>
 
 <style scoped>
-.tyh-header,
-.tyh-footer {
-  background-color: #b3c0d1;
-  color: #333;
-  text-align: center;
-  line-height: 60px;
-}
-
-.tyh-aside {
-  background-color: #d3dce6;
-  color: #333;
-  text-align: center;
-  line-height: 200px;
-}
-
-.tyh-main {
-  background-color: #e9eef3;
-  color: #333;
-  text-align: center;
-  line-height: 160px;
-}
-
-body > .tyh-container {
-  margin-bottom: 40px;
-}
-
-.tyh-container:nth-child(5) .tyh-aside,
-.tyh-container:nth-child(6) .tyh-aside {
-  line-height: 260px;
-}
-
-.tyh-container:nth-child(7) .tyh-aside {
-  line-height: 320px;
-}
 </style>
