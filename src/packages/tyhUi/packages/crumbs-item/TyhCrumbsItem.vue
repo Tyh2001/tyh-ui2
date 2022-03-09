@@ -4,7 +4,7 @@
     @click="link"
   >
     <span class="tyh-crumbs-item-text"><slot /></span>
-    <tyh-icon color="#C0C4CC" :icon="icon" />
+    <i :class="['tyh-icon', icon]" />
   </span>
 </template>
 

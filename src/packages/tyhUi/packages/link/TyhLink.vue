@@ -1,7 +1,7 @@
 <template>
   <a
     :class="isClass"
-    :style="[{ textDecoration: underline ? 'none' : 'underline' }]"
+    :style="{ textDecoration: underline ? 'none' : 'underline' }"
     :href="prohibit ? 'javascript:void(0)' : url"
     :target="target"
   >

@@ -1,7 +1,7 @@
 <template>
   <span
     :class="isClass"
-    :style="[{ color: type === 'default' ? '#333' : '#fff' }]"
+    :style="{ color: type === 'default' ? '#333' : '#fff' }"
   >
     <slot />
     <tyh-icon

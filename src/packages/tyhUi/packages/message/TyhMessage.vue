@@ -7,7 +7,7 @@
         `tyh-message-${type}`,
         { 'tyh-message-round': round }
       ]"
-      :style="[{ top: `${offset}px` }]"
+      :style="{ top: `${offset}px` }"
     >
       <div class="tyh-message-content">
         <i

@@ -1,10 +1,7 @@
 <template>
   <button :class="isClass" :disabled="disabled">
-    <!-- <tyh-icon v-if="icon" :icon="icon" :color="textColor" size="14" /> -->
-    <i :class="['tyh-icon', `${icon}`]" />
-    <span v-if="$slots.default" :style="[{ color: textColor }]">
-      <slot />
-    </span>
+    <i v-if="icon" :class="['tyh-icon', `${icon}`]" :style="{ color }" />
+    <span v-if="$slots.default" :style="{ color }"><slot /></span>
   </button>
 </template>
 
@@ -31,7 +28,7 @@ const props = defineProps({
   simple: Boolean
 })
 
-const { textColor, isClass } = _TyhButton()
+const { color, isClass } = _TyhButton()
 function _TyhButton () {
   const THEME = {
     primary: '#3a6ff4',
@@ -41,7 +38,7 @@ function _TyhButton () {
     default: '#3f536e'
   }
 
-  const textColor = computed(() => {
+  const color = computed(() => {
     if (props.simple) return THEME[props.type]
     return props.type === 'default' || !props.type ? '#333' : '#fff'
   })
@@ -64,6 +61,6 @@ function _TyhButton () {
     ]
   })
 
-  return { textColor, isClass }
+  return { color, isClass }
 }
 </script>

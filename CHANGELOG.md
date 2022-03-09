@@ -1,5 +1,18 @@
 # 更新日志
 
+## 3.3.7 (2022-03-09)
+
+- 优化了所有组件的 index.js 文件注册组件代码，降低代码可读性，但是减少了包的体积
+- TyhButton 组件的样式有略微的调整
+- TyhButton 组件的 icon 更改了渲染方式
+- Container 布局容器组件的 `<tyh-container>：外层容器` 做了较大的调整，现在根据其内部的子元素来自动判断容器的排列方向
+- 废除了 tyh-container 的 flex 配置项
+- 新增 tyh-container 的 direction 配置项
+- TyhBackTop 组件的 bottom 和 right 属性现在必须要传递一个`字符串`的指定距离
+- TyhDivision 组件的 margin 属性现在必须要传递一个`字符串`的指定距离
+- 还有其他若干出代码简化写法
+- 本次性能优化，包的体积从**174kb**降低到了**171kb**，基本上都是几十个字节几十个字节的减少的
+
 ## 3.3.6 (2022-03-08)
 
 - 修复 TyhDrawer 组件的样式

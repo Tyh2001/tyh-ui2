@@ -47,13 +47,12 @@ const props = defineProps({
 const emit = defineEmits(['update:modelValue', 'change'])
 const { width, upDataValue, showSayFn } = _TyhRate()
 
-function _TyhRate() {
+function _TyhRate () {
   const width = ref(props.modelValue)
   watch(
     () => props.modelValue,
     newVal => (width.value = newVal)
   )
-
   const upDataValue = () => {
     emit('update:modelValue', width.value)
     if (width.value !== props.modelValue) emit('change')
@@ -87,10 +86,8 @@ function _TyhRate() {
       },
       { immediate: true }
     )
-
     return showSay.value
   })
-
   return { width, upDataValue, showSayFn }
 }
 </script>

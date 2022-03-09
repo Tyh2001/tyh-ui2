@@ -24,11 +24,9 @@
         </li>
       </ul>
     </div>
-
     <div v-else class="tyh-list-content">
       <p class="note">暂无内容...</p>
     </div>
-
     <div v-if="footer" class="tyh-list-footer">
       {{ footer }}
     </div>

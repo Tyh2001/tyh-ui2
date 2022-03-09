@@ -1,20 +1,13 @@
 <template>
-  <tyh-button icon="tyh-ui-setting-filling">设置</tyh-button>
-  <tyh-button icon="tyh-ui-tyhui" type="primary">tyh-ui</tyh-button>
-  <tyh-button icon="tyh-ui-fabulous" type="success"></tyh-button>
-  <tyh-button icon="tyh-ui-discount" type="danger"></tyh-button>
-  <tyh-button icon="tyh-ui-chart-bar" type="warning"></tyh-button>
-
-  <tyh-button simple icon="tyh-ui-setting-filling">设置</tyh-button>
-  <tyh-button simple icon="tyh-ui-tyhui" type="primary">tyh-ui</tyh-button>
-  <tyh-button simple icon="tyh-ui-fabulous" type="success"></tyh-button>
-  <tyh-button simple icon="tyh-ui-discount" type="danger"></tyh-button>
-  <tyh-button simple icon="tyh-ui-chart-bar" type="warning"></tyh-button>
-  <Tiger />
+  <tyh-division
+    color="blue"
+    margin="30px"
+  >
+    这是左边文字
+  </tyh-division>
 </template>
 
 <script setup>
-import Tiger from './demo/tiger.vue'
 </script>
 
 <style scoped>

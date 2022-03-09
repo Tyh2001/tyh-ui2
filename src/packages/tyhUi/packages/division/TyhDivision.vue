@@ -1,10 +1,10 @@
 <template>
-  <div class="tyh-division" :style="[{ margin: `${margin}px 0` }]">
+  <div class="tyh-division" :style="{ margin: `${margin} 0` }">
     <span
       :class="['tyh-division-text', `tyh-division-text-${position}`]"
-      :style="[{ color }]"
+      :style="{ color }"
     >
-      <tyh-icon v-if="icon" :color="color" :icon="icon" />
+      <i v-if="icon" :style="{ color }" :class="['tyh-icon', icon]" />
       <slot v-else />
     </span>
   </div>
@@ -15,7 +15,7 @@ defineProps({
   position: {
     type: String,
     default: 'left',
-    validator(v) {
+    validator (v) {
       return ['left', 'center', 'right'].includes(v)
     }
   },
@@ -24,8 +24,8 @@ defineProps({
     default: '#515a6e'
   },
   margin: {
-    type: [Number, String],
-    default: '25'
+    type: String,
+    default: '25px'
   },
   icon: String
 })

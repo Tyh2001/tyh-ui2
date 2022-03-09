@@ -7,7 +7,7 @@
         'tyh-skeleton-animation': animation
       }
     ]"
-    :style="[{ width, height }]"
+    :style="{ width, height }"
   />
 </template>
 

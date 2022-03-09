@@ -5,7 +5,6 @@
         <tyh-icon size="70" :icon="errorIcon || 'tyh-ui-user'" color="#fff" />
       </slot>
     </div>
-
     <img
       v-else
       :draggable="draggable"
@@ -30,7 +29,7 @@ const props = defineProps({
   },
   fit: {
     type: String,
-    validator(v) {
+    validator (v) {
       return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
     }
   },
@@ -42,8 +41,7 @@ const props = defineProps({
 })
 const emit = defineEmits(['error', 'load'])
 const { isError, onError, isSize, errorClass, successClass } = _TyhAvatar()
-
-function _TyhAvatar() {
+function _TyhAvatar () {
   const isError = ref(false)
   const onError = () => {
     emit('error')
@@ -70,12 +68,6 @@ function _TyhAvatar() {
       }
     ]
   })
-  return {
-    isError,
-    onError,
-    isSize,
-    errorClass,
-    successClass
-  }
+  return { isError, onError, isSize, errorClass, successClass }
 }
 </script>

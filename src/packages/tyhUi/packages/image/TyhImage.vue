@@ -5,12 +5,11 @@
         <span class="tyh-image-error-text">加载失败</span>
       </slot>
     </div>
-
     <img
       v-else
       :draggable="draggable"
       :class="[`tyh-image-${fit}`, { 'tyh-image-select': select }]"
-      :style="[{ width, height }]"
+      :style="{ width, height }"
       :src="src"
       :alt="alt"
       @error="onError"
@@ -26,7 +25,7 @@ defineProps({
   alt: String,
   fit: {
     type: String,
-    validator(v) {
+    validator (v) {
       return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
     }
   },

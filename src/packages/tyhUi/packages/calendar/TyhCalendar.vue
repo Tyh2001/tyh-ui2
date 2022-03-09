@@ -19,7 +19,7 @@
           class="tyh-calendar-week-item"
           v-for="(item, index) in 7"
           :key="index"
-          :style="[{ width: `${cellWidth < 28 ? 28 : cellWidth}px` }]"
+          :style="{ width: `${cellWidth < 28 ? 28 : cellWidth}px` }"
         >
           {{ changeWeek(item) }}
         </td>
@@ -57,7 +57,6 @@ const props = defineProps({
     default: 50
   }
 })
-
 const {
   getMonth,
   getYear,
@@ -73,7 +72,7 @@ const {
   getDate
 } = _TyhCalendar()
 
-function _TyhCalendar() {
+function _TyhCalendar () {
   const getMonth = ref(props.modelValue.getMonth())
   const getYear = ref(props.modelValue.getFullYear())
   const getDate = props.modelValue.getDate()
@@ -120,12 +119,10 @@ function _TyhCalendar() {
 
   const nowDateStyle = date => {
     if (date + 1 === props.modelValue.getDate()) {
-      return [
-        {
-          backgroundColor: '#3a6ff4',
-          color: '#fff'
-        }
-      ]
+      return [{
+        backgroundColor: '#3a6ff4',
+        color: '#fff'
+      }]
     }
   }
 

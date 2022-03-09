@@ -20,7 +20,7 @@ const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator(v) {
+    validator (v) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
@@ -31,10 +31,8 @@ const props = defineProps({
   simple: Boolean
 })
 const emit = defineEmits(['close'])
-
 const { THEME, isClass, isStyle, isMessageStyle } = _TyhAlert()
-
-function _TyhAlert() {
+function _TyhAlert () {
   const BACKGROUND_THEME = {
     primary: '#e8f4ff',
     success: '#e1ffea',
@@ -63,11 +61,6 @@ function _TyhAlert() {
   const isMessageStyle = computed(() => {
     return [{ color: THEME[props.type] }]
   })
-  return {
-    THEME,
-    isClass,
-    isStyle,
-    isMessageStyle
-  }
+  return { THEME, isClass, isStyle, isMessageStyle }
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <div class="tyh-table" :style="[{ height }]">
+  <div class="tyh-table" :style="{ height }">
     <table
       class="tyh-table-table"
       border="0"

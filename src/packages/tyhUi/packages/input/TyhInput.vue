@@ -3,7 +3,7 @@
     <tyh-icon
       v-if="icon"
       :class="['tyh-input-icon', `tyh-input-icon-${size}`]"
-      :style="[{ cursor: disabled ? 'not-allowed' : 'Default' }]"
+      :style="{ cursor: disabled ? 'not-allowed' : 'Default' }"
       color="#c7c7c7"
       :icon="icon"
       size="12"
@@ -27,7 +27,7 @@
       color="#c7c7c7"
       size="12"
       :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
-      :style="[{ cursor: props.disabled ? 'not-allowed' : 'pointer' }]"
+      :style="{ cursor: props.disabled ? 'not-allowed' : 'pointer' }"
       :icon="rightIcon"
       @click="rightIconClick"
     />
@@ -42,14 +42,14 @@ const props = defineProps({
   type: {
     type: String,
     default: 'text',
-    validator(v) {
+    validator (v) {
       return ['text', 'password'].includes(v)
     }
   },
   size: {
     type: String,
     default: 'medium',
-    validator(v) {
+    validator (v) {
       return ['large', 'medium', 'small', 'mini'].includes(v)
     }
   },
@@ -70,7 +70,7 @@ const emit = defineEmits([
 ])
 const { input, isClass, inputType, rightIcon, rightIconClick } = _TyhInput()
 
-function _TyhInput() {
+function _TyhInput () {
   const inputType = ref(props.type)
   const isPass = ref(false)
 
