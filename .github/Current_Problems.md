@@ -15,3 +15,7 @@
 - [ ] Calendar 日历组件的头部翻页样式由按钮改为 icon
 - [ ] Image 图片、Avatar 头像组件计划添加图片懒加载
 - [ ] Skeleton 骨架的动画效果可以做的更好
+- [ ] 代码规范：引入eslint+prettier 使用commitizen对提交信息规范化
+- [ ] 压缩：减小体积，极少的依赖第三方库，进行gizp压缩
+- [ ] 支持按需加载 默认支持esm 的tree shaking
+- [ ] 使用vitest + cypress 进行测试，其中单元测试率覆盖超过80%，并且在持续攀升中
