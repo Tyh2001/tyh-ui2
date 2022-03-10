@@ -1,5 +1,5 @@
 {
-  "name": "tyh-ui2",
+  "name": "tyh-ui",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
