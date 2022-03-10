@@ -1,5 +1,11 @@
 # 更新日志
 
+## 3.3.9 (2022-03-10)
+
+- TyhBackTop 组件代码进行优化
+- TyhBackTop 组件新增 behavior 属性，来配置滚动模式
+- TyhBackTop 组件新增 beyond 属性，在滚动超出指定值后显示返回按钮
+
 ## 3.3.8 (2022-03-09)
 
 - 加入 TyhDialog 对话框组件
