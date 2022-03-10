@@ -5,7 +5,10 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "prettier": "prettier --write ."
+    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch dev",
+    "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json && pretty-quick --branch dev",
+    "prettier": "prettier --write .",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@vueuse/core": "^7.1.2",
@@ -14,13 +17,19 @@
     "vue": "^3.2.31",
     "vue-router": "^4.0.12"
   },
+  "lint-staged": {
+    "*.{vue,js,ts,md,json}": "prettier --write"
+  },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.0.0",
     "eslint": "^8.9.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^8.4.1",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
+    "pretty-quick": "^3.1.3",
     "vite": "^2.8.0"
   }
 }
