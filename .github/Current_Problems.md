@@ -26,4 +26,4 @@
 
 - [ ] 加入忽略格式化压缩样式文件 `src\packages\tyhUi\style\index.css`
 - [ ] 加入忽略格式化配置文件 `src\packages\tyhUi\package.json`
-- [ ] 函数名和括号前需要有一个空格
+- [ ] 函数名和括号前需要有一个空格的 eslint 配置
