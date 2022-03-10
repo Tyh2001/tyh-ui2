@@ -1,15 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 25.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
-<svg version="1.1" id="图层_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
-<style type="text/css">
-	.st0{fill:url(#SVGID_1_);}
-	.st1{fill:#FEFEFE;}
-	.st2{fill:#FFD72F;}
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" style="enable-background:new 0 0 200 200;" xml:space="preserve">
+<style>
+.st0{fill:url(#SVGID_1_)}.st1{fill:#fefefe}.st2{fill:#ffd72f}
 </style>
 <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="14.6575" y1="14.6552" x2="185.3553" y2="185.353">
-	<stop  offset="0" style="stop-color:#64A4FF"/>
-	<stop  offset="1" style="stop-color:#BD34FE"/>
+	<stop offset="0" style="stop-color:#64A4FF"/>
+	<stop offset="1" style="stop-color:#BD34FE"/>
 </linearGradient>
 <path class="st0" d="M150,200H50.01c-27.61,0-50-22.39-50-50V50.01c0-27.61,22.39-50,50-50H150c27.61,0,50,22.39,50,50V150
 	C200,177.61,177.61,200,150,200z"/>
