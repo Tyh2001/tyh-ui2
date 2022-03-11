@@ -1,4 +1,4 @@
-import T from './TyhLink.vue'
+import T from './src/TyhLink.vue'
 
 T.install = _ => _.component('TyhLink', T)
 

@@ -23,6 +23,8 @@
   position: absolute;
   left: 10px;
   user-select: none;
+  color: #c7c7c7;
+  font-size: 12px;
 }
 .tyh-input .tyh-input-input-large,
 .tyh-input .tyh-input-icon-large {
@@ -54,6 +56,8 @@
   position: absolute;
   right: 10px;
   margin: auto;
+  color: #c7c7c7;
+  font-size: 12px;
 }
 .tyh-input-disabled {
   background: #f5f7fa !important;

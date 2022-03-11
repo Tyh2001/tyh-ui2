@@ -1,10 +1,8 @@
 <template>
-  <div style="height: 2000px"></div>
-  <tyh-backTop bottom="150px" right="120px" action="smooth">Go</tyh-backTop>
+  <tyh-input v-model="text8" disabled clear />
 </template>
 
 <script setup>
 import { ref } from 'vue'
-const radio = ref('right')
-const open = ref(false)
+const text8 = ref('')
 </script>

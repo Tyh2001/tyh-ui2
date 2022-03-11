@@ -2,15 +2,15 @@
   <header class="tyh-header" :style="{ height }"><slot /></header>
 </template>
 
-<script>
+<script lang="ts">
 export default { name: 'TyhHeader' }
 </script>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   height: {
     type: String,
-    default: '60px'
+    default: () => '60px'
   }
 })
 </script>

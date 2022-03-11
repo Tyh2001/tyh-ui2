@@ -7,13 +7,13 @@ import { computed, useSlots } from 'vue'
 const props = defineProps({
   direction: {
     type: String,
-    validator (v) {
+    validator(v) {
       return ['horizontal', 'vertical'].includes(v)
     }
   }
 })
-const { isClass } = _TyhContainer()
-function _TyhContainer () {
+const { isClass } = TyhContainer()
+function TyhContainer() {
   const slots = useSlots()
   const isMode = computed(() => {
     if (props.direction === 'vertical') {
@@ -29,7 +29,10 @@ function _TyhContainer () {
     }
     return false
   })
-  const isClass = computed(() => ['tyh-container', !isMode.value ? 'tyh-container-vertical' : 'tyh-container-horizontal'])
+  const isClass = computed(() => [
+    'tyh-container',
+    !isMode.value ? 'tyh-container-vertical' : 'tyh-container-horizontal'
+  ])
   return { isClass }
 }
 </script>

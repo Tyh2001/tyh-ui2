@@ -2,15 +2,15 @@
   <aside class="tyh-aside" :style="{ width }"><slot /></aside>
 </template>
 
-<script>
+<script lang="ts">
 export default { name: 'TyhAside' }
 </script>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   width: {
     type: String,
-    default: '200px'
+    default: () => '200px'
   }
 })
 </script>

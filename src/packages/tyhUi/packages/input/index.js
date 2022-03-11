@@ -1,4 +1,4 @@
-import T from './TyhInput.vue'
+import T from './src/TyhInput.vue'
 
 T.install = _ => _.component('TyhInput', T)
 

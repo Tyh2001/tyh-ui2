@@ -2,15 +2,15 @@
   <footer class="tyh-footer" :style="{ height }"><slot /></footer>
 </template>
 
-<script>
+<script lang="ts">
 export default { name: 'TyhFooter' }
 </script>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   height: {
     type: String,
-    default: '60px'
+    default: () => '60px'
   }
 })
 </script>

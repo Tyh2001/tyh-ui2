@@ -21,7 +21,7 @@
 
 <script setup>
 import { computed } from 'vue'
-import { THEME } from '../../utils/theme'
+import { THEME } from '../../../utils/theme'
 const props = defineProps({
   type: {
     type: String,

@@ -6,11 +6,23 @@
           {{ getYear }}年 {{ getMonth + 1 }}月 {{ getDate }}日
         </span>
         <tyh-button-group>
-          <tyh-button size="mini" @click="prevMonth">上个月</tyh-button>
-          <tyh-button size="mini" simple type="primary" @click="goNow">
-            今天
-          </tyh-button>
-          <tyh-button size="mini" @click="nextMonth">下个月</tyh-button>
+          <tyh-button
+            size="mini"
+            icon="tyh-ui-arrow-left-bold"
+            @click="prevMonth"
+          />
+          <tyh-button
+            size="mini"
+            simple
+            type="primary"
+            icon="tyh-ui-time"
+            @click="goNow"
+          />
+          <tyh-button
+            size="mini"
+            icon="tyh-ui-arrow-right"
+            @click="nextMonth"
+          />
         </tyh-button-group>
       </div>
 
@@ -45,7 +57,7 @@
   </span>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, computed } from 'vue'
 const props = defineProps({
   modelValue: {
@@ -54,7 +66,7 @@ const props = defineProps({
   },
   cellWidth: {
     type: Number,
-    default: 50
+    default: () => 50
   }
 })
 const {
@@ -70,19 +82,19 @@ const {
   calendarWidth,
   calendarItemSize,
   getDate
-} = _TyhCalendar()
+} = TyhCalendar()
 
-function _TyhCalendar () {
+function TyhCalendar() {
   const getMonth = ref(props.modelValue.getMonth())
   const getYear = ref(props.modelValue.getFullYear())
   const getDate = props.modelValue.getDate()
 
-  const fun_week = computed(() => {
+  const fun_week = computed((): number => {
     const week = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
     return week === 0 ? 7 - 1 : week - 1
   })
 
-  const yearMonths = (month = getMonth.value, year) => {
+  const yearMonths = (month: number = getMonth.value, year: number): number => {
     if (month !== 1) {
       const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
       return months[month]
@@ -90,7 +102,7 @@ function _TyhCalendar () {
     return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28
   }
 
-  const prevMonth = () => {
+  const prevMonth = (): void => {
     if (getMonth.value > 0) {
       getMonth.value--
       return
@@ -99,7 +111,7 @@ function _TyhCalendar () {
     getMonth.value = 11
   }
 
-  const nextMonth = () => {
+  const nextMonth = (): void => {
     if (getMonth.value < 11) {
       getMonth.value++
       return
@@ -108,31 +120,33 @@ function _TyhCalendar () {
     getMonth.value = 0
   }
 
-  const goNow = () => {
+  const goNow = (): void => {
     getMonth.value = props.modelValue.getMonth()
     getYear.value = props.modelValue.getFullYear()
   }
 
-  const changeWeek = num => {
+  const changeWeek = (num: number): string => {
     return ['一', '二', '三', '四', '五', '六', '日'][num - 1]
   }
 
-  const nowDateStyle = date => {
+  const nowDateStyle = (date: number) => {
     if (date + 1 === props.modelValue.getDate()) {
-      return [{
-        backgroundColor: '#3a6ff4',
-        color: '#fff'
-      }]
+      return [
+        {
+          backgroundColor: '#3a6ff4',
+          color: '#fff'
+        }
+      ]
     }
   }
 
-  const calendarWidth = computed(() => {
-    const size = props.cellWidth < 28 ? 28 : props.cellWidth
+  const calendarWidth = computed((): object[] => {
+    const size: number = props.cellWidth < 28 ? 28 : props.cellWidth
     return [{ width: `${(size + 2) * 7}px` }]
   })
 
-  const calendarItemSize = computed(() => {
-    const size = props.cellWidth < 28 ? 28 : props.cellWidth
+  const calendarItemSize = computed((): object[] => {
+    const size: number = props.cellWidth < 28 ? 28 : props.cellWidth
     return [{ width: `${size}px`, height: `${size}px` }]
   })
 
@@ -152,3 +166,5 @@ function _TyhCalendar () {
   }
 }
 </script>
+
+<style lang="" src="/src/packages/THEME_STYLE/calendar/style/index.css"></style>

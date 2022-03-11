@@ -23,6 +23,7 @@ import { ref } from 'vue'
 import { prop } from './prop'
 defineProps({ ...prop })
 const emit = defineEmits(['error', 'load'])
+
 const isError = ref(false)
 const onError = (): void => {
   emit('error')

@@ -265,69 +265,6 @@
     opacity: 0.4;
   }
 }
-.tyh-input {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
-  width: 100%;
-  transition: 0.35s;
-}
-.tyh-input .tyh-input-input {
-  box-sizing: border-box;
-  padding: 0 10px;
-  width: 100%;
-  outline: 0;
-  border: 1px solid #c5d9e8;
-  border-radius: 5px;
-  background: #fff;
-  color: #3f536e;
-  transition: border 0.35s;
-}
-.tyh-input .tyh-input-input:focus {
-  border: 1px solid #3a6ff4;
-}
-.tyh-input .tyh-input-icon {
-  position: absolute;
-  left: 10px;
-  user-select: none;
-}
-.tyh-input .tyh-input-icon-large,
-.tyh-input .tyh-input-input-large {
-  font-size: 15px;
-  line-height: 40px;
-}
-.tyh-input .tyh-input-icon-medium,
-.tyh-input .tyh-input-input-medium {
-  font-size: 14px;
-  line-height: 35px;
-}
-.tyh-input .tyh-input-icon-small,
-.tyh-input .tyh-input-input-small {
-  font-size: 13px;
-  line-height: 30px;
-}
-.tyh-input .tyh-input-icon-mini,
-.tyh-input .tyh-input-input-mini {
-  font-size: 12px;
-  line-height: 25px;
-}
-.tyh-input .tyh-input-icon-padding {
-  padding-left: 26px;
-}
-.tyh-input .tyh-input-clear-padding {
-  padding-right: 26px;
-}
-.tyh-input .tyh-input-clear {
-  position: absolute;
-  right: 10px;
-  margin: auto;
-}
-.tyh-input-disabled {
-  border-color: #e4e7ed !important;
-  background: #f5f7fa !important;
-  color: #c0c4cc !important;
-  cursor: not-allowed;
-}
 .tyh-turn-page {
   display: flex;
   width: 100%;
@@ -468,61 +405,6 @@
 }
 .tyh-switch-openText {
   margin-left: 5px;
-}
-.tyh-calendar {
-  display: inline-block;
-}
-.tyh-calendar .tyh-calendar-container {
-  position: relative;
-  display: block;
-  border: 1px solid #eee;
-  flex-wrap: wrap;
-}
-.tyh-calendar .tyh-calendar-container .tyh-calendar-header {
-  display: flex;
-  box-sizing: border-box;
-  padding: 10px;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.tyh-calendar .tyh-calendar-container .tyh-calendar-header .tyh-calendar-isDay {
-  color: #333;
-  text-align: right;
-  line-height: 40px;
-}
-.tyh-calendar .tyh-calendar-container .tyh-calendar-month {
-  display: flex;
-  flex-wrap: wrap;
-}
-.tyh-calendar .tyh-calendar-container .tyh-calendar-month .tyh-calendar-day {
-  display: flex;
-  border: 1px solid #eee;
-  cursor: pointer;
-  transition: 0.3s;
-  justify-content: center;
-  align-items: center;
-}
-.tyh-calendar
-  .tyh-calendar-container
-  .tyh-calendar-month
-  .tyh-calendar-day:hover {
-  background-color: #dae8ff;
-}
-.tyh-calendar .tyh-calendar-container .tyh-calendar-week {
-  display: flex;
-  flex-wrap: wrap;
-}
-.tyh-calendar
-  .tyh-calendar-container
-  .tyh-calendar-week
-  .tyh-calendar-week-item {
-  display: flex;
-  height: 30px;
-  border: 1px solid #fff;
-  color: #333;
-  justify-content: center;
-  align-items: center;
 }
 .tyh-radio {
   margin-right: 19px;
@@ -1925,4 +1807,71 @@
 .tyh-drawer-leave-to {
   transform: translateX(20px);
   opacity: 0;
+}
+.tyh-input {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.35s;
+}
+.tyh-input .tyh-input-input {
+  width: 100%;
+  border-radius: 5px;
+  color: #3f536e;
+  border: 1px solid #c5d9e8;
+  outline: none;
+  padding: 0 10px;
+  transition: border 0.35s;
+  background: #fff;
+  box-sizing: border-box;
+}
+.tyh-input .tyh-input-input:focus {
+  border: 1px solid #3a6ff4;
+}
+.tyh-input .tyh-input-icon {
+  position: absolute;
+  left: 10px;
+  user-select: none;
+  color: #c7c7c7;
+  font-size: 12px;
+}
+.tyh-input .tyh-input-input-large,
+.tyh-input .tyh-input-icon-large {
+  line-height: 40px;
+  font-size: 15px;
+}
+.tyh-input .tyh-input-input-medium,
+.tyh-input .tyh-input-icon-medium {
+  line-height: 35px;
+  font-size: 14px;
+}
+.tyh-input .tyh-input-input-small,
+.tyh-input .tyh-input-icon-small {
+  line-height: 30px;
+  font-size: 13px;
+}
+.tyh-input .tyh-input-input-mini,
+.tyh-input .tyh-input-icon-mini {
+  line-height: 25px;
+  font-size: 12px;
+}
+.tyh-input .tyh-input-icon-padding {
+  padding-left: 26px;
+}
+.tyh-input .tyh-input-clear-padding {
+  padding-right: 26px;
+}
+.tyh-input .tyh-input-clear {
+  position: absolute;
+  right: 10px;
+  margin: auto;
+  color: #c7c7c7;
+  font-size: 12px;
+}
+.tyh-input-disabled {
+  background: #f5f7fa !important;
+  border-color: #e4e7ed !important;
+  color: #c0c4cc !important;
+  cursor: not-allowed;
 }
