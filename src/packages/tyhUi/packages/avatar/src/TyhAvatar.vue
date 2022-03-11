@@ -2,7 +2,7 @@
   <div class="tyh-avatar">
     <div v-if="isError" :class="errorClass" :style="isSize">
       <slot name="error">
-        <tyh-icon size="70" :icon="errorIcon || 'tyh-ui-user'" color="#fff" />
+        <i :class="['tyh-icon', errorIcon || 'tyh-ui-user']" />
       </slot>
     </div>
     <img
@@ -18,36 +18,22 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, computed } from 'vue'
-const props = defineProps({
-  src: String,
-  alt: String,
-  size: {
-    type: [Number, String],
-    default: '8'
-  },
-  fit: {
-    type: String,
-    validator (v) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
-    }
-  },
-  round: Boolean,
-  border: Boolean,
-  select: Boolean,
-  draggable: Boolean,
-  errorIcon: String
-})
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 const emit = defineEmits(['error', 'load'])
-const { isError, onError, isSize, errorClass, successClass } = _TyhAvatar()
-function _TyhAvatar () {
+const { isError, onError, isSize, errorClass, successClass } = TyhAvatar()
+
+function TyhAvatar() {
   const isError = ref(false)
-  const onError = () => {
+
+  const onError = (): void => {
     emit('error')
     isError.value = true
   }
-  const isSize = computed(() => {
+
+  const isSize = computed((): object[] => {
     return [
       {
         width: `${props.size * 10}px`,
@@ -55,10 +41,12 @@ function _TyhAvatar () {
       }
     ]
   })
-  const errorClass = computed(() => {
+
+  const errorClass = computed((): (string | object)[] => {
     return ['tyh-avatar-error', { 'tyh-avatar-round': props.round }]
   })
-  const successClass = computed(() => {
+
+  const successClass = computed((): object[] => {
     return [
       {
         [`tyh-avatar-${props.fit}`]: props.fit,
@@ -68,6 +56,7 @@ function _TyhAvatar () {
       }
     ]
   })
+
   return { isError, onError, isSize, errorClass, successClass }
 }
 </script>

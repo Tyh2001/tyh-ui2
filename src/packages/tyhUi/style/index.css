@@ -736,25 +736,29 @@
   object-fit: scale-down;
 }
 .tyh-avatar .tyh-avatar-error {
-  position: relative;
-  display: inline-block;
-  box-sizing: border-box;
+  background-color: #cfd1d6;
   padding: 5px;
   border-radius: 5px;
-  background-color: #cfd1d6;
+  display: inline-block;
   color: #c1c4cc;
   font-size: 15px;
+  position: relative;
+  box-sizing: border-box;
 }
 .tyh-avatar .tyh-avatar-error .tyh-icon {
+  width: 45px;
+  height: 45px;
   position: absolute;
+  display: block;
+  color: #fff;
+  font-size: 45px;
   top: 0;
+  left: 0;
   right: 0;
   bottom: 0;
-  left: 0;
   margin: auto;
-  width: 70px;
-  height: 70px;
 }
+
 .tyh-tagging {
   display: inline-block;
   margin: 0;

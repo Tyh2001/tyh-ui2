@@ -1,4 +1,4 @@
-import T from './TyhAvatar.vue'
+import T from './src/TyhAvatar.vue'
 
 T.install = _ => _.component('TyhAvatar', T)
 

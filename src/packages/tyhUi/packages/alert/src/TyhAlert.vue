@@ -13,7 +13,8 @@ import { computed } from 'vue'
 import { prop } from './prop'
 const props = defineProps({ ...prop })
 const emit = defineEmits(['close'])
-const isClass = computed(() => {
+
+const isClass = computed((): (string | object)[] => {
   return [
     'tyh-alert',
     `tyh-alert-${props.type}`,
