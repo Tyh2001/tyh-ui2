@@ -12,14 +12,7 @@
   </div>
 </template>
 
-<script setup>
-defineProps({
-  shadow: {
-    type: String,
-    validator(v) {
-      return ['always', 'hover', 'noShadow'].includes(v)
-    }
-  },
-  bodyStyle: Object
-})
+<script lang="ts" setup>
+import { prop } from './prop'
+defineProps({ ...prop })
 </script>

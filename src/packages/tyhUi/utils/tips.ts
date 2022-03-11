@@ -1,16 +1,17 @@
 import { h, render } from 'vue'
 
-export const createNot = (com, opts) => {
+export const createNot = (com: object, opts: object): object => {
   const instance = createComponent(com, opts)
   document.body.append(instance.vnode.el)
   return instance.proxy
 }
 
-export const createComponent = (com, props) => {
+export const mergeOptions = (def: object, opts: object): object =>
+  Object.assign(def, opts)
+
+const createComponent = (com: object, props: object): object => {
   const node = h(com, props)
   const container = document.createElement('div')
   render(node, container)
   return node.component
 }
-
-export const mergeOptions = (def, opts) => Object.assign(def, opts)

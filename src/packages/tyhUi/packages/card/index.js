@@ -1,4 +1,4 @@
-import T from './TyhCard.vue'
+import T from './src/TyhCard.vue'
 
 T.install = _ => _.component('TyhCard', T)
 

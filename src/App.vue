@@ -1,17 +1,17 @@
 <template>
-  <tyh-button>默认按钮</tyh-button>
-  <tyh-button type="">主要按钮</tyh-button>
-  <tyh-button type="primary">主要按钮</tyh-button>
-  <tyh-button type="success">成功按钮</tyh-button>
-  <tyh-button type="danger">危险按钮</tyh-button>
-  <tyh-button type="warning">警告按钮</tyh-button>
+  <tyh-card>
+    <template v-slot:title>主标题</template>
+    <template v-slot:subtitle>副标题</template>
+    <p>这是内容部分1</p>
+    <p>这是内容部分2</p>
+    <p>这是内容部分3</p>
+    <p>这是内容部分4</p>
+  </tyh-card>
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const isShow1 = ref(true)
-const isShow2 = ref(true)
-const isShow3 = ref(true)
-const isShow4 = ref(true)
-const isShow5 = ref(true)
+import { Message } from './packages/tyhUi'
+function change1() {
+  Message({ message: '默认提示', type: 'default', round: true })
+}
 </script>

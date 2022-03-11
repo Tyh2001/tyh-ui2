@@ -21,18 +21,12 @@
 
 <script setup>
 import { computed } from 'vue'
-const THEME = {
-  primary: '#3a6ff4',
-  success: '#54c600',
-  danger: '#d10f1b',
-  warning: '#fbcc30',
-  default: '#3f536e'
-}
+import { THEME } from '../../utils/theme'
 const props = defineProps({
   type: {
     type: String,
     default: 'default',
-    validator (v) {
+    validator(v) {
       return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
