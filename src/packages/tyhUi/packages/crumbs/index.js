@@ -1,4 +1,4 @@
-import T from './TyhCrumbs.vue'
+import T from './src/TyhCrumbs.vue'
 
 T.install = _ => _.component('TyhCrumbs', T)
 

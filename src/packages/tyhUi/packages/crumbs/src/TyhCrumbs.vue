@@ -2,7 +2,7 @@
   <div class="tyh-crumbs"><slot /></div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { provide } from 'vue'
 const props = defineProps({
   separator: {

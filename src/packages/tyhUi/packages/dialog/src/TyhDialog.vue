@@ -31,44 +31,19 @@
   </transition>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { getCurrentInstance, watch } from 'vue'
-const props = defineProps({
-  modelValue: Boolean,
-  width: {
-    type: String,
-    default: '30%'
-  },
-  top: {
-    type: String,
-    default: '15vh'
-  },
-  title: String,
-  appendToBody: Boolean,
-  modal: {
-    type: Boolean,
-    default: true
-  },
-  modalClose: {
-    type: Boolean,
-    default: true
-  },
-  showClose: {
-    type: Boolean,
-    default: true
-  },
-  showHeader: {
-    type: Boolean,
-    default: true
-  },
-  zIndex: {
-    type: Number,
-    default: 3500
-  }
-})
-const emit = defineEmits(['update:modelValue', 'open', 'close', 'onOpen', 'onClose'])
+import { prop } from './prop'
+const props = defineProps({ ...prop })
+const emit = defineEmits([
+  'update:modelValue',
+  'open',
+  'close',
+  'onOpen',
+  'onClose'
+])
 const { close, packingClose } = _TyhDialog()
-function _TyhDialog () {
+function _TyhDialog() {
   const close = () => {
     emit('close')
     emit('update:modelValue', false)
@@ -78,13 +53,16 @@ function _TyhDialog () {
     close()
   }
   const self = getCurrentInstance().proxy
-  watch(() => props.modelValue, v => {
-    if (v) emit('open')
-    const el = self.$el
-    if (v && props.appendToBody) {
-      document.body.appendChild(el)
+  watch(
+    () => props.modelValue,
+    v => {
+      if (v) emit('open')
+      const el = self.$el
+      if (v && props.appendToBody) {
+        document.body.appendChild(el)
+      }
     }
-  })
+  )
   return { close, packingClose }
 }
 </script>

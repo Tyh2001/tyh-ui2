@@ -1,17 +1,16 @@
 <template>
-  <tyh-card>
-    <template v-slot:title>主标题</template>
-    <template v-slot:subtitle>副标题</template>
-    <p>这是内容部分1</p>
-    <p>这是内容部分2</p>
-    <p>这是内容部分3</p>
-    <p>这是内容部分4</p>
-  </tyh-card>
+  <tyh-button simple @click="open1 = true">点我打开</tyh-button>
+
+  <tyh-dialog v-model="open1" title="这是标题">
+    欢迎使用 tyh-ui 的 dialog 对话框！
+    <template v-slot:footer>
+      <tyh-button type="primary" style="margin-right: 20px">确定</tyh-button>
+      <tyh-button type="primary" simple @click="open1 = false">取消</tyh-button>
+    </template>
+  </tyh-dialog>
 </template>
 
 <script setup>
-import { Message } from './packages/tyhUi'
-function change1() {
-  Message({ message: '默认提示', type: 'default', round: true })
-}
+import { ref } from 'vue'
+const open1 = ref(false)
 </script>

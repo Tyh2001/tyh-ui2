@@ -8,15 +8,14 @@
   </span>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, inject } from 'vue'
 import { getCurrentInstance } from 'vue'
 const props = defineProps({
   to: String
 })
 const { icon, link } = _TyhCrumbsItem()
-
-function _TyhCrumbsItem () {
+function _TyhCrumbsItem() {
   const icon = ref('')
   const { proxy } = getCurrentInstance()
   icon.value = inject('Crumbs-separator')

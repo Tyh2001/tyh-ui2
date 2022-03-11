@@ -10,7 +10,7 @@ import { computed } from 'vue'
 import { prop } from './props'
 import { THEME } from '../../../utils/theme'
 const props = defineProps({ ...prop })
-const color = computed(() => {
+const color = computed((): string => {
   if (props.simple) return THEME[props.type]
   return props.type === 'default' || !props.type ? '#333' : '#fff'
 })
