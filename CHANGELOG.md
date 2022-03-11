@@ -1,5 +1,12 @@
 # 更新日志
 
+## 3.4.0 ()
+
+- division 组件修复 bug，当 position 参数为空的时候，使用默认参数样式
+- avatar 组件的 icon 改为优化更好的标签，icon 的样式也有略微的调整
+- 解决 drawer 组件在 direction 属性为空值的时候弹出位置不正确的问题
+- icon 的 size 属性改为仅仅可以传递字符串参数
+
 ## 3.3.9 (2022-03-10)
 
 - TyhBackTop 组件代码进行优化

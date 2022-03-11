@@ -1,5 +1,5 @@
 import { PropType } from 'vue'
-import { bactTopBehavior } from './type'
+import { backTopAction } from './type'
 
 export const prop = {
   bottom: {
@@ -10,9 +10,9 @@ export const prop = {
     type: String,
     default: () => '50px'
   },
-  behavior: {
-    type: String as PropType<bactTopBehavior>,
-    default: 'smooth',
+  action: {
+    type: String as PropType<backTopAction>,
+    default: () => 'smooth',
     validator(v: string): boolean {
       return ['smooth', 'instant', ''].includes(v)
     }

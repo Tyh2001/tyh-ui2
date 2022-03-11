@@ -1,1 +1,1 @@
-export type bactTopBehavior = 'smooth' | 'instant' | ''
+export type backTopAction = 'smooth' | 'instant' | ''

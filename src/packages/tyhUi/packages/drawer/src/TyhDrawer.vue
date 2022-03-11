@@ -31,67 +31,47 @@
   </transition>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, getCurrentInstance, watch } from 'vue'
-const props = defineProps({
-  modelValue: Boolean,
-  direction: {
-    type: String,
-    default: 'right',
-    validator (v) {
-      return ['top', 'left', 'bottom', 'right'].includes(v)
-    }
-  },
-  size: {
-    type: String,
-    default: '30%'
-  },
-  title: String,
-  appendToBody: Boolean,
-  modal: {
-    type: Boolean,
-    default: true
-  },
-  modalClose: {
-    type: Boolean,
-    default: true
-  },
-  showClose: {
-    type: Boolean,
-    default: true
-  },
-  showHeader: {
-    type: Boolean,
-    default: true
-  },
-  zIndex: {
-    type: Number,
-    default: 3500
-  }
-})
-const emit = defineEmits(['update:modelValue', 'open', 'close', 'onOpen', 'onClose'])
-const { close, isDirection, packingClose } = _TyhDrawer()
-function _TyhDrawer () {
+import { prop } from './prop'
+const props = defineProps({ ...prop })
+const emit = defineEmits([
+  'update:modelValue',
+  'open',
+  'close',
+  'onOpen',
+  'onClose'
+])
+const { close, isDirection, packingClose } = TyhDrawer()
+
+function TyhDrawer() {
   const close = () => {
     emit('close')
     emit('update:modelValue', false)
   }
-  const isDirection = computed(() => {
+
+  const isDirection = computed((): boolean => {
     const p = props.direction
-    return p === 'left' || p === 'right'
+    return p === 'left' || p === 'right' || p === ''
   })
+
   const packingClose = () => {
     if (!props.modalClose) return
     close()
   }
+
   const self = getCurrentInstance().proxy
-  watch(() => props.modelValue, v => {
-    if (v) emit('open')
-    const el = self.$el
-    if (v && props.appendToBody) {
-      document.body.appendChild(el)
+  watch(
+    () => props.modelValue,
+    v => {
+      if (v) emit('open')
+      const el = self.$el
+      if (v && props.appendToBody) {
+        document.body.appendChild(el)
+      }
     }
-  })
+  )
+
   return { close, isDirection, packingClose }
 }
 </script>

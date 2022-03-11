@@ -7,7 +7,7 @@ import { provide } from 'vue'
 const props = defineProps({
   separator: {
     type: String,
-    default: 'tyh-ui-xiexian'
+    default: () => 'tyh-ui-xiexian'
   }
 })
 provide('Crumbs-separator', props.separator)

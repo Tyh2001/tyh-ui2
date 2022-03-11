@@ -18,25 +18,13 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
-defineProps({
-  src: String,
-  alt: String,
-  fit: {
-    type: String,
-    validator (v) {
-      return ['fill', 'contain', 'cover', 'none', 'scale-down'].includes(v)
-    }
-  },
-  width: String,
-  height: String,
-  select: Boolean,
-  draggable: Boolean
-})
+import { prop } from './prop'
+defineProps({ ...prop })
 const emit = defineEmits(['error', 'load'])
 const isError = ref(false)
-const onError = () => {
+const onError = (): void => {
   emit('error')
   isError.value = true
 }

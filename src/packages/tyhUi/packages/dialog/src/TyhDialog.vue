@@ -42,16 +42,18 @@ const emit = defineEmits([
   'onOpen',
   'onClose'
 ])
-const { close, packingClose } = _TyhDialog()
-function _TyhDialog() {
+const { close, packingClose } = TyhDialog()
+function TyhDialog() {
   const close = () => {
     emit('close')
     emit('update:modelValue', false)
   }
+
   const packingClose = () => {
     if (!props.modalClose) return
     close()
   }
+
   const self = getCurrentInstance().proxy
   watch(
     () => props.modelValue,
@@ -63,6 +65,7 @@ function _TyhDialog() {
       }
     }
   )
+
   return { close, packingClose }
 }
 </script>

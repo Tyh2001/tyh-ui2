@@ -1,4 +1,4 @@
-import T from './TyhDrawer.vue'
+import T from './src/TyhDrawer.vue'
 
 T.install = _ => _.component('TyhDrawer', T)
 
