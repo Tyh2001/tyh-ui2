@@ -1493,19 +1493,19 @@
   transform: translate(-50%, -100%);
 }
 .tyh-button {
-  padding: 0 22px;
   min-width: 40px;
+  padding: 0 22px;
   min-height: 35px;
-  outline: 0;
-  border: none;
   border-radius: 5px;
-  color: #fff;
-  text-align: center;
-  font-size: 14px;
-  line-height: 1;
   cursor: pointer;
-  transition: 0.3s;
   user-select: none;
+  border: none;
+  outline: none;
+  text-align: center;
+  transition: 0.3s;
+  color: #fff;
+  line-height: 1;
+  font-size: 14px;
 }
 .tyh-button-primary {
   background: #3a6ff4;
@@ -1554,8 +1554,8 @@
 }
 .tyh-button-:hover,
 .tyh-button-default:hover {
-  background: #eee;
-  box-shadow: 0 0 3px #eee;
+  background: #eeeeee;
+  box-shadow: 0 0 3px #eeeeee;
 }
 .tyh-button-:active,
 .tyh-button-default:active {
@@ -1564,33 +1564,33 @@
 .tyh-button-round {
   border-radius: 30px;
 }
-.tyh-button-simple-danger,
-.tyh-button-simple-default,
 .tyh-button-simple-primary,
 .tyh-button-simple-success,
-.tyh-button-simple-warning {
+.tyh-button-simple-danger,
+.tyh-button-simple-warning,
+.tyh-button-simple-default {
   background: #f4f5f5;
 }
-.tyh-button-simple-danger:hover,
-.tyh-button-simple-default:hover,
 .tyh-button-simple-primary:hover,
 .tyh-button-simple-success:hover,
-.tyh-button-simple-warning:hover {
-  background: #eee;
-  box-shadow: 0 0 3px #eee;
+.tyh-button-simple-danger:hover,
+.tyh-button-simple-warning:hover,
+.tyh-button-simple-default:hover {
+  background: #eeeeee;
+  box-shadow: 0 0 3px #eeeeee;
 }
-.tyh-button-simple-danger:active,
-.tyh-button-simple-default:active,
 .tyh-button-simple-primary:active,
 .tyh-button-simple-success:active,
-.tyh-button-simple-warning:active {
+.tyh-button-simple-danger:active,
+.tyh-button-simple-warning:active,
+.tyh-button-simple-default:active {
   background: #dbdbdb;
 }
-.tyh-button-disabled-danger,
-.tyh-button-disabled-default,
 .tyh-button-disabled-primary,
 .tyh-button-disabled-success,
-.tyh-button-disabled-warning {
+.tyh-button-disabled-danger,
+.tyh-button-disabled-warning,
+.tyh-button-disabled-default {
   opacity: 0.6;
   cursor: no-drop;
 }
@@ -1609,11 +1609,11 @@
 .tyh-button-disabled-default {
   background: #f4f5f5;
 }
-.tyh-button-simple-disabled-danger,
-.tyh-button-simple-disabled-default,
 .tyh-button-simple-disabled-primary,
 .tyh-button-simple-disabled-success,
-.tyh-button-simple-disabled-warning {
+.tyh-button-simple-disabled-danger,
+.tyh-button-simple-disabled-warning,
+.tyh-button-simple-disabled-default {
   opacity: 0.6;
   cursor: no-drop;
 }
@@ -1621,14 +1621,14 @@
   width: 100%;
 }
 .tyh-button-size-small {
+  min-width: 30px;
   padding: 0 17px;
   height: 30px;
-  min-width: 30px;
 }
 .tyh-button-size-mini {
+  min-width: 20px;
   padding: 0 12px;
   height: 25px;
-  min-width: 20px;
 }
 .tyh-button-square {
   border-radius: 0;
@@ -1636,6 +1636,7 @@
 .tyh-button [class*='tyh-icon'] + span {
   margin-left: 5px;
 }
+
 .tyh-message {
   position: fixed;
   top: -37px;
