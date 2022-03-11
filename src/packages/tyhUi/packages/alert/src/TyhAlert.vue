@@ -1,0 +1,26 @@
+<template>
+  <div :class="isClass">
+    <div class="tyh-alert-message">
+      <i v-if="icon" :class="['tyh-icon', 'tyh-message-icon', icon]" />
+      {{ message }}
+    </div>
+    <i v-if="close" class="tyh-icon tyh-ui-guanbi" @click="emit('close')" />
+  </div>
+</template>
+
+<script lang="ts" setup>
+import { computed } from 'vue'
+import { prop } from './prop'
+const props = defineProps({ ...prop })
+const emit = defineEmits(['close'])
+const isClass = computed(() => {
+  return [
+    'tyh-alert',
+    `tyh-alert-${props.type}`,
+    {
+      'tyh-alert-center': props.center,
+      [`tyh-alert-bac-${props.type}`]: !props.simple
+    }
+  ]
+})
+</script>
