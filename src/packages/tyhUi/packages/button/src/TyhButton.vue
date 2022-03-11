@@ -1,6 +1,6 @@
 <template>
   <button :class="isClass" :disabled="disabled">
-    <i v-if="icon" :class="['tyh-icon', `${icon}`]" :style="{ color }" />
+    <i v-if="icon" :class="`tyh-icon ${icon}`" :style="{ color }" />
     <span v-if="$slots.default" :style="{ color }"><slot /></span>
   </button>
 </template>
