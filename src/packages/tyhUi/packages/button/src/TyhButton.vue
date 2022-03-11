@@ -5,32 +5,13 @@
   </button>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed } from 'vue'
-const props = defineProps({
-  type: {
-    type: String,
-    default: 'default',
-    validator (v) {
-      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
-    }
-  },
-  round: Boolean,
-  disabled: Boolean,
-  icon: String,
-  size: {
-    type: String,
-    validator (v) {
-      return ['large', 'small', 'mini'].includes(v)
-    }
-  },
-  square: Boolean,
-  simple: Boolean
-})
-
+import { prop } from './props'
+const props = defineProps({ ...prop })
 const { color, isClass } = _TyhButton()
-function _TyhButton () {
-  const THEME = {
+function _TyhButton() {
+  const THEME: object = {
     primary: '#3a6ff4',
     success: '#54c600',
     danger: '#d10f1b',
@@ -51,8 +32,8 @@ function _TyhButton () {
           ? `tyh-button-simple-disabled-${props.type}`
           : `tyh-button-simple-${props.type}`
         : props.disabled
-          ? `tyh-button-disabled-${props.type}`
-          : `tyh-button-${props.type}`,
+        ? `tyh-button-disabled-${props.type}`
+        : `tyh-button-${props.type}`,
       {
         [`tyh-button-size-${props.size}`]: props.size,
         'tyh-button-round': props.round,
