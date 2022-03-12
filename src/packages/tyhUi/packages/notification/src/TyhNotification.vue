@@ -18,37 +18,16 @@
   </transition>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { getCurrentInstance, ref, computed } from 'vue'
-const props = defineProps({
-  title: String,
-  message: String,
-  time: {
-    type: Number,
-    default: 3500
-  },
-  position: {
-    type: String,
-    default: 'top-right',
-    validator(v) {
-      return ['top-left', 'top-right', 'bottom-left', 'bottom-right'].includes(
-        v
-      )
-    }
-  },
-  close: Boolean,
-  type: {
-    type: String,
-    validator(v) {
-      return ['primary', 'success', 'danger', 'warning'].includes(v)
-    }
-  }
-})
-const { isShow, onClose, leave, iconClass } = _TyhNotification()
-function _TyhNotification() {
-  const isShow = ref(true)
-  let timer
-  ;(function () {
+import { prop } from './prop'
+const props = defineProps({ ...prop })
+const { isShow, onClose, leave, iconClass } = TyhNotification()
+
+function TyhNotification() {
+  const isShow = ref<boolean>(true)
+  let timer: any
+  ;(function (): void {
     if (props.time > 0) {
       timer = setTimeout(() => {
         onClose()
@@ -56,13 +35,13 @@ function _TyhNotification() {
     }
   })()
 
-  const onClose = () => {
+  const onClose = (): void => {
     clearTimeout(timer)
     isShow.value = false
   }
 
-  const isIcon = computed(() => {
-    let icon
+  const isIcon = computed((): string => {
+    let icon: string = ''
     switch (props.type) {
       case 'primary':
         icon = 'tyh-ui-smile'
@@ -80,7 +59,7 @@ function _TyhNotification() {
     return icon
   })
 
-  const iconClass = computed(() => {
+  const iconClass = computed((): string[] => {
     return [
       'tyh-icon',
       'tyh-notification-icon',
@@ -89,10 +68,11 @@ function _TyhNotification() {
     ]
   })
 
-  const instance = getCurrentInstance()
-  const leave = () => {
+  const instance: any = getCurrentInstance()
+  const leave = (): void => {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
   }
+
   return { isShow, onClose, leave, iconClass }
 }
 </script>

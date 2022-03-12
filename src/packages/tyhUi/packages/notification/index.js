@@ -1,4 +1,4 @@
-import T from './TyhNotification.vue'
+import T from './src/TyhNotification.vue'
 import { createNot, mergeOptions } from '../../utils/tips'
 const G = { time: 3500, position: 'top-right', close: true }
 
