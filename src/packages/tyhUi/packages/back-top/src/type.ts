@@ -1,1 +1,1 @@
-export type backTopAction = 'smooth' | 'instant' | ''
+export type Action = 'smooth' | 'instant'

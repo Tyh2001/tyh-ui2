@@ -1,7 +1,1 @@
-export type avatarFit =
-  | 'fill'
-  | 'contain'
-  | 'cover'
-  | 'none'
-  | 'scale-down'
-  | ''
+export type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'

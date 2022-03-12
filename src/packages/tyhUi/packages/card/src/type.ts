@@ -1,1 +1,1 @@
-export type cardShadow = 'always' | 'hover' | ''
+export type Shadow = 'always' | 'hover'

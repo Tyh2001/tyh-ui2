@@ -1,1 +1,1 @@
-export type drawerDirection = 'top' | 'left' | 'bottom' | 'right' | ''
+export type Direction = 'top' | 'left' | 'bottom' | 'right'

@@ -1,1 +1,1 @@
-export type imageFit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down' | ''
+export type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'

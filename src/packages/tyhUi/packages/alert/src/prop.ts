@@ -1,12 +1,19 @@
-import { PropType } from "vue"
-import { alertType } from "./type"
+import { PropType } from 'vue'
+import { Type } from './type'
 
 export const prop = {
   type: {
-    type: String as PropType<alertType>,
+    type: String as PropType<Type>,
     default: 'default',
     validator(v: string): boolean {
-      return ['default', 'primary', 'success', 'danger', 'warning', ''].includes(v)
+      return [
+        'default',
+        'primary',
+        'success',
+        'danger',
+        'warning',
+        ''
+      ].includes(v)
     }
   },
   message: String,

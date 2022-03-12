@@ -1,2 +1,2 @@
-export type inputType = 'text' | 'password' | ''
-export type inputSize = 'large' | 'medium' | 'small' | 'mini' | ''
+export type Type = 'text' | 'password'
+export type Size = 'large' | 'medium' | 'small' | 'mini'

@@ -24,7 +24,7 @@ import { prop } from './prop'
 defineProps({ ...prop })
 const emit = defineEmits(['error', 'load'])
 
-const isError = ref(false)
+const isError = ref<boolean>(false)
 const onError = (): void => {
   emit('error')
   isError.value = true

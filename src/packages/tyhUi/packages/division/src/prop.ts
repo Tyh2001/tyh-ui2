@@ -1,9 +1,9 @@
 import { PropType } from 'vue'
-import { divisionPosition } from './type'
+import { Position } from './type'
 
 export const prop = {
   position: {
-    type: String as PropType<divisionPosition>,
+    type: String as PropType<Position>,
     default: 'left',
     validator(v: string): boolean {
       return ['left', 'center', 'right', ''].includes(v)

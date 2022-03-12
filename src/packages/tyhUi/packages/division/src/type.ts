@@ -1,1 +1,1 @@
-export type divisionPosition = 'left' | 'center' | 'right' | ''
+export type Position = 'left' | 'center' | 'right'

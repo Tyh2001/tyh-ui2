@@ -16,7 +16,7 @@ const props = defineProps({
 })
 const { icon, link } = TyhCrumbsItem()
 function TyhCrumbsItem() {
-  const icon = ref('')
+  const icon: any = ref<string>('')
   const { proxy }: any = getCurrentInstance()
   icon.value = inject('Crumbs-separator')
   const link = () => {

@@ -1,18 +1,18 @@
 import { PropType } from 'vue'
-import { inputType, inputSize } from './type'
+import { Type, Size } from './type'
 
 export const prop = {
   modelValue: String,
   placeholder: String,
   type: {
-    type: String as PropType<inputType>,
+    type: String as PropType<Type>,
     default: () => 'text',
     validator(v: string): boolean {
       return ['text', 'password', ''].includes(v)
     }
   },
   size: {
-    type: String as PropType<inputSize>,
+    type: String as PropType<Size>,
     default: () => 'medium',
     validator(v: string): boolean {
       return ['large', 'medium', 'small', 'mini', ''].includes(v)

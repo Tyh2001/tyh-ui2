@@ -39,7 +39,7 @@ function TyhMessage() {
     isShow.value = false
   }
 
-  const instance = getCurrentInstance()
+  const instance: any = getCurrentInstance()
   const leave = (): void => {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
   }

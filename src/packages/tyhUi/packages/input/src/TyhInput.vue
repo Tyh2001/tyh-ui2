@@ -56,10 +56,10 @@ const emit = defineEmits([
 const { input, isClass, inputType, rightIcon, rightIconClick } = TyhInput()
 
 function TyhInput() {
-  const inputType = ref(props.type)
-  const isPass = ref(false)
+  const inputType = ref<string>(props.type)
+  const isPass = ref<boolean>(false)
 
-  const input = (e: any) => emit('update:modelValue', e.target.value)
+  const input = (e: any): void => emit('update:modelValue', e.target.value)
 
   const clearText = (): void => {
     if (props.disabled) return

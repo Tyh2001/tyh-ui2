@@ -85,18 +85,20 @@ const {
 } = TyhCalendar()
 
 function TyhCalendar() {
-  const getMonth = ref(props.modelValue.getMonth())
-  const getYear = ref(props.modelValue.getFullYear())
-  const getDate = props.modelValue.getDate()
+  const getMonth = ref<number>(props.modelValue.getMonth())
+  const getYear = ref<number>(props.modelValue.getFullYear())
+  const getDate: number = props.modelValue.getDate()
 
   const fun_week = computed((): number => {
-    const week = new Date(`${getYear.value}/${getMonth.value + 1}/1`).getDay()
+    const week: number = new Date(
+      `${getYear.value}/${getMonth.value + 1}/1`
+    ).getDay()
     return week === 0 ? 7 - 1 : week - 1
   })
 
   const yearMonths = (month: number = getMonth.value, year: number): number => {
     if (month !== 1) {
-      const months = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
+      const months: number[] = [31, 0, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
       return months[month]
     }
     return (year % 4 == 0 && year % 100 != 0) || year % 400 == 0 ? 29 : 28
@@ -166,5 +168,3 @@ function TyhCalendar() {
   }
 }
 </script>
-
-<style lang="" src="/src/packages/THEME_STYLE/calendar/style/index.css"></style>

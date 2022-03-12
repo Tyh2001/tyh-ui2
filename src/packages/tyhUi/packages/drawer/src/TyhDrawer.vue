@@ -45,13 +45,13 @@ const emit = defineEmits([
 const { close, isDirection, packingClose } = TyhDrawer()
 
 function TyhDrawer() {
-  const close = () => {
+  const close = (): void => {
     emit('close')
     emit('update:modelValue', false)
   }
 
   const isDirection = computed((): boolean => {
-    const p = props.direction
+    const p: string = props.direction
     return p === 'left' || p === 'right' || p === ''
   })
 
@@ -60,10 +60,10 @@ function TyhDrawer() {
     close()
   }
 
-  const self = getCurrentInstance().proxy
+  const self: any = getCurrentInstance().proxy
   watch(
     () => props.modelValue,
-    v => {
+    (v: boolean): void => {
       if (v) emit('open')
       const el = self.$el
       if (v && props.appendToBody) {

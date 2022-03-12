@@ -16,7 +16,7 @@ const color = computed((): string => {
   return props.type === 'default' || !props.type ? '#333' : '#fff'
 })
 
-const isClass = computed(() => {
+const isClass = computed((): (string | object)[] => {
   return [
     'tyh-button',
     props.simple
