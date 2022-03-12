@@ -36,5 +36,3 @@ const liClass = computed((): (string | object)[] => {
   ]
 })
 </script>
-
-<style lang="" src="/src/packages/THEME_STYLE/list/style/index.css"></style>
