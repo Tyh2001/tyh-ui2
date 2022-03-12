@@ -25,37 +25,22 @@
   </label>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed } from 'vue'
-const props = defineProps({
-  modelValue: {
-    type: String,
-    required: true
-  },
-  label: String,
-  name: String,
-  disabled: Boolean,
-  border: Boolean,
-  size: {
-    type: String,
-    default: 'large',
-    validator (v) {
-      return ['large', 'medium', 'small', 'mini'].includes(v)
-    }
-  }
-})
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 const emits = defineEmits(['update:modelValue', 'change'])
-const { input, isClass, isStyle, labelStyle } = _TyhRadio()
+const { input, isClass, isStyle, labelStyle } = TyhRadio()
 
-function _TyhRadio () {
-  const input = evt => {
+function TyhRadio() {
+  const input = (evt: any): void => {
     emits('update:modelValue', evt.target.value)
     emits('change', evt.target.value)
   }
 
-  const isLabel = computed(() => props.modelValue === props.label)
+  const isLabel = computed((): boolean => props.modelValue === props.label)
 
-  const isClass = computed(() => {
+  const isClass = computed((): string[] => {
     return [
       'tyh-radio-o',
       isLabel.value
@@ -66,7 +51,7 @@ function _TyhRadio () {
     ]
   })
 
-  const isStyle = computed(() => {
+  const isStyle = computed((): object[] => {
     return [
       {
         color: isLabel.value
@@ -74,19 +59,23 @@ function _TyhRadio () {
             ? '#b6b5b5'
             : '#3a6ff4'
           : props.disabled
-            ? '#b6b5b5'
-            : '#333'
+          ? '#b6b5b5'
+          : '#333'
       }
     ]
   })
-  const labelStyle = computed(() => {
+
+  const labelStyle = computed((): (object | string | boolean)[] => {
     return [
       { cursor: props.disabled ? 'no-drop' : 'pointer' },
       props.border &&
-      `border: 1px solid ${isLabel.value ? (props.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
-      }`
+        `border: 1px solid ${
+          isLabel.value ? (props.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
+        }`
     ]
   })
+
+  console.log(labelStyle.value)
 
   return { input, isClass, isStyle, labelStyle }
 }

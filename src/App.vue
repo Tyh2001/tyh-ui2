@@ -1,14 +1,10 @@
 <template>
-  <tyh-button type="primary" @click="open1">展示通知</tyh-button>
+  <tyh-radio v-model="radio1" label="备选项1">备选项1</tyh-radio>
+  <tyh-radio v-model="radio1" label="备选项2">备选项2</tyh-radio>
+  <tyh-radio v-model="radio1" label="备选项3">备选项3</tyh-radio>
 </template>
 
 <script setup>
-import { Notification } from './packages/tyhUi'
-function open1() {
-  Notification({
-    title: '提示',
-    message: '这里是提示的文案',
-    type: ''
-  })
-}
+import { ref } from 'vue'
+const radio1 = ref('备选项1')
 </script>

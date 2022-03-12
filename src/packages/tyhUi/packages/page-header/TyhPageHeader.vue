@@ -8,17 +8,17 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   title: {
     type: String,
-    default: '返回'
+    default: () => '返回'
   },
   content: String,
   icon: {
     type: String,
-    default: 'tyh-ui-direction-left'
+    default: () => 'tyh-ui-direction-left'
   }
 })
-const emit = defineEmits(['back'])
+defineEmits(['back'])
 </script>

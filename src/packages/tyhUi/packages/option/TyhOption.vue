@@ -5,7 +5,7 @@
   </option>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 defineProps({
   value: String,
   label: String
