@@ -3,7 +3,7 @@
   border: 1px solid #dcdee2;
   border-radius: 6px;
   color: #515a6e;
-  padding: 0px;
+  // padding: 0;
 
   // 头部
   .tyh-list-header {
@@ -18,19 +18,12 @@
 
   // 内容
   .tyh-list-content {
-    min-height: 45px;
 
-    // 没有内容
-    .note {
-      padding: 20px;
-    }
-
-    .tyh-list-content-ul {
+    .tyh-list-ul {
       padding: 0;
       margin: 0;
 
-      // li 列表
-      .tyh-list-content-li {
+      .tyh-list-li {
         min-height: 45px;
         list-style: none;
         border-bottom: 1px solid #dcdee2;
@@ -46,31 +39,30 @@
         }
 
         // 序号显示
-        .tyh-list-content-li-num {
+        .tyh-list-num {
           width: 25px;
           display: inline-block;
           text-align: center;
-          color: #34373f;
-          font-weight: 600;
+          color: #8f8f8f;
           margin-right: 23px;
-        }
-
-        // 居中显示
-        .tyh-list-content-li-center {
-          text-align: center;
         }
       }
 
       // 斑马纹
-      .tyh-list-content-li-zebra:nth-child(odd) {
+      .tyh-list-zebra:nth-child(odd) {
         background: #fafafa;
       }
 
       // 鼠标移入带有阴影效果
-      .tyh-list-content-li-hoverShow:hover {
+      .tyh-list-hoverShow:hover {
+        transition: .6s;
         box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
       }
     }
+  }
+
+  .tyh-list-not {
+    padding: 20px;
   }
 
   // 页脚

@@ -1,6 +1,6 @@
 # 更新日志
 
-## 3.4.0 ()
+## 3.4.0 (2022-03-)
 
 - division 组件修复 bug，当 position 参数为空的时候，使用默认参数样式
 - avatar 组件的 icon 改为优化更好的标签，icon 的样式也有略微的调整
@@ -8,6 +8,11 @@
 - icon 的 size 属性改为仅仅可以传递字符串参数
 - input 组件的 max 属性现在只可以传入字符串
 - icon 组件的样式和 icon 进行调整优化
+- list 组件 header、footer 只限于 string 类型数据
+- lint 组件 content 只限于 array 类型数据
+- lint 组件 iskey 参数改为 keys
+- list 组件添加 header 和 footer 插槽
+- list 组件样式和模板细节优化
 
 ## 3.3.9 (2022-03-10)
 
