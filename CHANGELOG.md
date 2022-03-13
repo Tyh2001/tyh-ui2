@@ -18,6 +18,8 @@
 - tagging 组件的 size 属性现在只限于 string 类型
 - tagging 组件的 color 属性取消默认值
 - text 组件的 size 属性现在是限于 string 类型
+- textarea 组件的 max、cols 属性现在是限于 string 类型
+- textarea 组件的 resize 属性默认值改为 none
 
 ## 3.3.9 (2022-03-10)
 
