@@ -72,5 +72,5 @@
   "workbench.startupEditor": "none",
   "workbench.iconTheme": "vscode-icons",
   "workbench.colorTheme": "tyh-theme-dark",
-  "cSpell.words": ["vnode"]
+  "cSpell.words": ["importants", "vnode"]
 }

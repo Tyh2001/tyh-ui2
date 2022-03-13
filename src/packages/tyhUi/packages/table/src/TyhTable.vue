@@ -52,56 +52,20 @@
   </div>
 </template>
 
-<script setup>
-const props = defineProps({
-  data: {
-    type: Array,
-    default: () => []
-  },
-  columns: {
-    type: Array,
-    default: () => []
-  },
-  trHeight: {
-    type: String,
-    default: '40px'
-  },
-  align: {
-    type: String,
-    default: 'left',
-    validator (v) {
-      return ['left', 'right', 'center'].includes(v)
-    }
-  },
-  zebra: Boolean,
-  border: Boolean,
-  width: {
-    type: String,
-    default: '100%'
-  },
-  height: {
-    type: String,
-    default: 'auto'
-  },
-  num: Boolean,
-  important: {
-    type: Array,
-    default: () => []
-  },
-  importantColor: {
-    type: String,
-    default: '#fdf5e6'
-  }
-})
-const importantStyle = i => {
-  const importants = props.important
+<script lang="ts" setup>
+import { prop } from './prop'
+const props = defineProps({ ...prop })
+
+const importantStyle = (i: number): string | void => {
+  const importants: any = props.important
   for (const key of importants) {
     if (key === i + 1) {
       return `background: ${props.importantColor}`
     }
   }
 }
-const isTdThClass = key => {
+
+const isTdThClass = (key: string): (string | object)[] => {
   return [`tyh-${key}-td`, { 'tyh-table-border': props.border }]
 }
 </script>
