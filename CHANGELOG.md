@@ -15,6 +15,8 @@
 - list 组件样式和模板细节优化
 - rete 组件优化了样式和模板
 - switch 组件的 width 属性现在只可以传递 number 类型
+- tagging 组件的 size 属性现在只限于 string 类型
+- tagging 组件的 color 属性取消默认值
 
 ## 3.3.9 (2022-03-10)
 

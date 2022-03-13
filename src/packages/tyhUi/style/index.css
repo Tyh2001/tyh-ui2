@@ -465,28 +465,7 @@
   margin: auto;
 }
 
-.tyh-tagging {
-  display: inline-block;
-  margin: 0;
-  padding: 2px 8px;
-  border-radius: 6px;
-}
-.tyh-tagging-,
-.tyh-tagging-default {
-  background-color: #e7e7e7;
-}
-.tyh-tagging-primary {
-  background-color: #3a6ff4;
-}
-.tyh-tagging-success {
-  background-color: #54c600;
-}
-.tyh-tagging-danger {
-  background-color: #d10f1b;
-}
-.tyh-tagging-warning {
-  background-color: #fbcc30;
-}
+
 @font-face {
   font-family: tyh-icon;
   src: url(font/tyh-icon2.woff2) format('woff2'),

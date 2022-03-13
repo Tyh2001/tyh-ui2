@@ -3,20 +3,22 @@
   border-radius: 6px;
   padding: 2px 8px;
   margin: 0;
+  color: #fff;
 }
 .tyh-tagging-,
 .tyh-tagging-default {
-  background-color: #e7e7e7;
+  color: #333;
+  background: #e7e7e7;
 }
 .tyh-tagging-primary {
-  background-color: #3a6ff4;
+  background: #3a6ff4;
 }
 .tyh-tagging-success {
-  background-color: #54c600;
+  background: #54c600;
 }
 .tyh-tagging-danger {
-  background-color: #d10f1b;
+  background: #d10f1b;
 }
 .tyh-tagging-warning {
-  background-color: #fbcc30;
+  background: #fbcc30;
 }
