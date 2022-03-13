@@ -9,13 +9,17 @@
     >
       <thead class="tyh-thead">
         <tr class="tyh-thead-th" :height="trHeight">
-          <th v-if="num" :class="isTdThClass('thead')" :align="align" />
+          <th
+            v-if="num"
+            :class="isTdThClass('thead')"
+            :align="align || 'left'"
+          />
           <th
             v-for="(item, i) in columns"
             :class="isTdThClass('thead')"
             :width="item.width"
             :key="i"
-            :align="align"
+            :align="align || 'left'"
           >
             {{ item.title }}
           </th>
@@ -35,14 +39,14 @@
           :style="importantStyle(ind)"
           :key="ind"
         >
-          <td v-if="num" :class="isTdThClass('tbody')" :align="align">
+          <td v-if="num" :class="isTdThClass('tbody')" :align="align || 'left'">
             {{ ind + 1 }}
           </td>
           <td
             v-for="(colItem, index) in columns"
             :class="isTdThClass('tbody')"
             :key="index"
-            :align="align"
+            :align="align || 'left'"
           >
             {{ dataItem[colItem.key] }}
           </td>
