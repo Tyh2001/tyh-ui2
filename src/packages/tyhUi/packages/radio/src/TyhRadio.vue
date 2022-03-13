@@ -29,13 +29,13 @@
 import { computed } from 'vue'
 import { prop } from './prop'
 const props = defineProps({ ...prop })
-const emits = defineEmits(['update:modelValue', 'change'])
+const emit = defineEmits(['update:modelValue', 'change'])
 const { input, isClass, isStyle, labelStyle } = TyhRadio()
 
 function TyhRadio() {
   const input = (evt: any): void => {
-    emits('update:modelValue', evt.target.value)
-    emits('change', evt.target.value)
+    emit('update:modelValue', evt.target.value)
+    emit('change', evt.target.value)
   }
 
   const isLabel = computed((): boolean => props.modelValue === props.label)

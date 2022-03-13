@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-page-header">
-    <div class="tyh-page-header-title-box" @click="emit('back')">
+    <div class="tyh-page-header-title-box" @click="emits('back')">
       <tyh-icon :icon="icon" size="14" />
       <span class="tyh-page-header-title">{{ title }}</span>
     </div>
@@ -20,5 +20,5 @@ defineProps({
     default: () => 'tyh-ui-direction-left'
   }
 })
-defineEmits(['back'])
+const emits = defineEmits(['back'])
 </script>

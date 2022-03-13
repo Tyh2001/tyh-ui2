@@ -61,7 +61,6 @@
   color: #333;
   font-weight: 600;
 }
-
 .tyh-ui-close-03 {
   cursor: pointer;
 }
@@ -464,7 +463,6 @@
   bottom: 0;
   margin: auto;
 }
-
 @font-face {
   font-family: tyh-icon;
   src: url(font/tyh-icon2.woff2) format('woff2'),
@@ -1187,7 +1185,7 @@
   cursor: pointer;
   user-select: none;
   border: none;
-  outline: none;
+  outline: 0;
   text-align: center;
   transition: 0.3s;
   color: #fff;
@@ -1241,8 +1239,8 @@
 }
 .tyh-button-:hover,
 .tyh-button-default:hover {
-  background: #eeeeee;
-  box-shadow: 0 0 3px #eeeeee;
+  background: #eee;
+  box-shadow: 0 0 3px #eee;
 }
 .tyh-button-:active,
 .tyh-button-default:active {
@@ -1251,33 +1249,33 @@
 .tyh-button-round {
   border-radius: 30px;
 }
+.tyh-button-simple-danger,
+.tyh-button-simple-default,
 .tyh-button-simple-primary,
 .tyh-button-simple-success,
-.tyh-button-simple-danger,
-.tyh-button-simple-warning,
-.tyh-button-simple-default {
+.tyh-button-simple-warning {
   background: #f4f5f5;
 }
+.tyh-button-simple-danger:hover,
+.tyh-button-simple-default:hover,
 .tyh-button-simple-primary:hover,
 .tyh-button-simple-success:hover,
-.tyh-button-simple-danger:hover,
-.tyh-button-simple-warning:hover,
-.tyh-button-simple-default:hover {
-  background: #eeeeee;
-  box-shadow: 0 0 3px #eeeeee;
+.tyh-button-simple-warning:hover {
+  background: #eee;
+  box-shadow: 0 0 3px #eee;
 }
+.tyh-button-simple-danger:active,
+.tyh-button-simple-default:active,
 .tyh-button-simple-primary:active,
 .tyh-button-simple-success:active,
-.tyh-button-simple-danger:active,
-.tyh-button-simple-warning:active,
-.tyh-button-simple-default:active {
+.tyh-button-simple-warning:active {
   background: #dbdbdb;
 }
+.tyh-button-disabled-danger,
+.tyh-button-disabled-default,
 .tyh-button-disabled-primary,
 .tyh-button-disabled-success,
-.tyh-button-disabled-danger,
-.tyh-button-disabled-warning,
-.tyh-button-disabled-default {
+.tyh-button-disabled-warning {
   opacity: 0.6;
   cursor: no-drop;
 }
@@ -1296,11 +1294,11 @@
 .tyh-button-disabled-default {
   background: #f4f5f5;
 }
+.tyh-button-simple-disabled-danger,
+.tyh-button-simple-disabled-default,
 .tyh-button-simple-disabled-primary,
 .tyh-button-simple-disabled-success,
-.tyh-button-simple-disabled-danger,
-.tyh-button-simple-disabled-warning,
-.tyh-button-simple-disabled-default {
+.tyh-button-simple-disabled-warning {
   opacity: 0.6;
   cursor: no-drop;
 }
@@ -1323,7 +1321,6 @@
 .tyh-button [class*='tyh-icon'] + span {
   margin-left: 5px;
 }
-
 .tyh-aside {
   flex-shrink: 0;
 }
@@ -1414,32 +1411,32 @@
   border: 1px solid #3a6ff4;
   color: #3a6ff4;
 }
-.tyh-alert-primary .tyh-ui-guanbi,
-.tyh-alert-primary .tyh-message-icon {
+.tyh-alert-primary .tyh-message-icon,
+.tyh-alert-primary .tyh-ui-guanbi {
   color: #3a6ff4;
 }
 .tyh-alert-success {
   border: 1px solid #54c600;
   color: #54c600;
 }
-.tyh-alert-success .tyh-ui-guanbi,
-.tyh-alert-success .tyh-message-icon {
+.tyh-alert-success .tyh-message-icon,
+.tyh-alert-success .tyh-ui-guanbi {
   color: #54c600;
 }
 .tyh-alert-danger {
   border: 1px solid #d10f1b;
   color: #d10f1b;
 }
-.tyh-alert-danger .tyh-ui-guanbi,
-.tyh-alert-danger .tyh-message-icon {
+.tyh-alert-danger .tyh-message-icon,
+.tyh-alert-danger .tyh-ui-guanbi {
   color: #d10f1b;
 }
 .tyh-alert-warning {
   border: 1px solid #fbcc30;
   color: #fbcc30;
 }
-.tyh-alert-warning .tyh-ui-guanbi,
-.tyh-alert-warning .tyh-message-icon {
+.tyh-alert-warning .tyh-message-icon,
+.tyh-alert-warning .tyh-ui-guanbi {
   color: #fbcc30;
 }
 .tyh-alert-,
@@ -1447,10 +1444,10 @@
   border: 1px solid #606266;
   color: #606266;
 }
-.tyh-alert- .tyh-ui-guanbi,
-.tyh-alert-default .tyh-ui-guanbi,
 .tyh-alert- .tyh-message-icon,
-.tyh-alert-default .tyh-message-icon {
+.tyh-alert- .tyh-ui-guanbi,
+.tyh-alert-default .tyh-message-icon,
+.tyh-alert-default .tyh-ui-guanbi {
   color: #606266;
 }
 .tyh-alert-bac-primary {
@@ -1476,7 +1473,7 @@
   width: 100%;
   display: inline-block;
   height: 1px;
-  background-color: #c0c0c0;
+  background-color: silver;
   position: relative;
 }
 .tyh-division .tyh-division-text {
@@ -1510,7 +1507,7 @@
   background: #fff;
   z-index: 300;
   padding: 20px;
-  box-shadow: 0px 7px 30px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 7px 30px rgba(0, 0, 0, 0.2);
 }
 .tyh-drawer-packing .tyh-drawer .tyh-drawer-header {
   display: flex;
@@ -1538,13 +1535,13 @@
   bottom: 0;
 }
 .tyh-drawer-packing .tyh-drawer-bottom {
-  bottom: 0px;
+  bottom: 0;
   right: 0;
   left: 0;
 }
 .tyh-drawer-packing .tyh-drawer-,
 .tyh-drawer-packing .tyh-drawer-right {
-  right: 0px;
+  right: 0;
   top: 0;
   bottom: 0;
 }
@@ -1574,7 +1571,7 @@
   border-radius: 5px;
   color: #3f536e;
   border: 1px solid #c5d9e8;
-  outline: none;
+  outline: 0;
   padding: 0 10px;
   transition: border 0.35s;
   background: #fff;
@@ -1590,23 +1587,23 @@
   color: #c7c7c7;
   font-size: 12px;
 }
-.tyh-input .tyh-input-input-large,
-.tyh-input .tyh-input-icon-large {
+.tyh-input .tyh-input-icon-large,
+.tyh-input .tyh-input-input-large {
   line-height: 40px;
   font-size: 15px;
 }
-.tyh-input .tyh-input-input-medium,
-.tyh-input .tyh-input-icon-medium {
+.tyh-input .tyh-input-icon-medium,
+.tyh-input .tyh-input-input-medium {
   line-height: 35px;
   font-size: 14px;
 }
-.tyh-input .tyh-input-input-small,
-.tyh-input .tyh-input-icon-small {
+.tyh-input .tyh-input-icon-small,
+.tyh-input .tyh-input-input-small {
   line-height: 30px;
   font-size: 13px;
 }
-.tyh-input .tyh-input-input-mini,
-.tyh-input .tyh-input-icon-mini {
+.tyh-input .tyh-input-icon-mini,
+.tyh-input .tyh-input-input-mini {
   line-height: 25px;
   font-size: 12px;
 }
@@ -1650,8 +1647,8 @@
 .tyh-link-warning {
   color: #fbcc30;
 }
-.tyh-link-,
 .tyh-icon-default,
+.tyh-link-,
 .tyh-link-default {
   color: #3f536e;
 }
@@ -1979,10 +1976,10 @@
 }
 .tyh-menu-item-prohibit {
   cursor: not-allowed;
-  color: #bbbbbb !important;
+  color: #bbb !important;
 }
 .tyh-menu-item-prohibit::after {
-  background: none;
+  background: 0 0;
 }
 .tyh-menu {
   flex-wrap: wrap;
@@ -2011,5 +2008,5 @@
   background: #fff;
 }
 .tyh-menu-shadow {
-  box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 7px 15px rgba(0, 0, 0, 0.1);
 }

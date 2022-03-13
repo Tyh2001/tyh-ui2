@@ -60,12 +60,12 @@ function TyhDrawer() {
     close()
   }
 
-  const self: any = getCurrentInstance().proxy
+  const self: any = getCurrentInstance()
   watch(
     () => props.modelValue,
     (v: boolean): void => {
       if (v) emit('open')
-      const el = self.$el
+      const el = self.proxy.$el
       if (v && props.appendToBody) {
         document.body.appendChild(el)
       }
