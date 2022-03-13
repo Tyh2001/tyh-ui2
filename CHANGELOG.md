@@ -13,6 +13,8 @@
 - lint 组件 iskey 参数改为 keys
 - list 组件添加 header 和 footer 插槽
 - list 组件样式和模板细节优化
+- rete 组件优化了样式和模板
+- switch 组件的 width 属性现在只可以传递 number 类型
 
 ## 3.3.9 (2022-03-10)
 

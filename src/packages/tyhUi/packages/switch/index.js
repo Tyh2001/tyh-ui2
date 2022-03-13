@@ -1,4 +1,4 @@
-import T from './TyhSwitch.vue'
+import T from './src/TyhSwitch.vue'
 
 T.install = _ => _.component('TyhSwitch', T)
 

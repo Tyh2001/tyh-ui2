@@ -24,48 +24,29 @@
   </span>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, computed } from 'vue'
-const props = defineProps({
-  modelValue: {
-    type: Boolean,
-    required: true
-  },
-  closeColor: {
-    type: String,
-    default: '#dcdfe6'
-  },
-  openColor: {
-    type: String,
-    default: '#3a6ff4'
-  },
-  closeText: String,
-  openText: String,
-  disabled: Boolean,
-  width: {
-    type: [Number, String],
-    default: 40
-  }
-})
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 const emit = defineEmits(['update:modelValue', 'change'])
-const { switchValue, clickSwitch, switchStyle, switchRollStyle } = _TyhSwitch()
+const { switchValue, clickSwitch, switchStyle, switchRollStyle } = TyhSwitch()
 
-function _TyhSwitch () {
-  const switchValue = ref(props.modelValue)
+function TyhSwitch() {
+  const switchValue = ref<boolean>(props.modelValue)
 
-  const clickSwitch = () => {
+  const clickSwitch = (): void => {
     if (props.disabled) return
     switchValue.value = !switchValue.value
     emit('update:modelValue', switchValue.value)
     emit('change', switchValue.value)
   }
 
-  const switchColor = computed(() => {
+  const switchColor = computed((): string => {
     return props.modelValue ? props.openColor : props.closeColor
   })
 
-  const switchStyle = computed(() => {
-    const width = ref(props.width)
+  const switchStyle = computed((): object[] => {
+    const width = ref<number>(props.width)
     if (width.value < 20) width.value = 20
     return [
       {
@@ -76,8 +57,8 @@ function _TyhSwitch () {
     ]
   })
 
-  const switchRollStyle = computed(() => {
-    const width = ref(props.width)
+  const switchRollStyle = computed((): (object | string)[] => {
+    const width = ref<number>(props.width)
     if (width.value < 20) width.value = 20
     return [
       {
