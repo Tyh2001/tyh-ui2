@@ -11,7 +11,7 @@
   >
     <span :class="isClass">
       <input
-        v-model="modelValue"
+        v-model="value"
         type="radio"
         :name="name"
         :value="label"
@@ -26,21 +26,21 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { prop } from './prop'
 const props = defineProps({ ...prop })
-const emit = defineEmits(['update:modelValue', 'change'])
-const { input, isClass, isStyle, labelStyle } = TyhRadio()
+const emits = defineEmits(['update:modelValue', 'change'])
+const { value, input, isClass, isStyle, labelStyle } = TyhRadio()
 
 function TyhRadio() {
-  const input = (evt: any): void => {
-    emit('update:modelValue', evt.target.value)
-    emit('change', evt.target.value)
+  const value = ref(props.modelValue)
+
+  const input = (evt: any) => {
+    emits('update:modelValue', evt.target.value)
+    emits('change', evt.target.value)
   }
-
-  const isLabel = computed((): boolean => props.modelValue === props.label)
-
-  const isClass = computed((): string[] => {
+  const isLabel = computed(() => props.modelValue === props.label)
+  const isClass = computed(() => {
     return [
       'tyh-radio-o',
       isLabel.value
@@ -50,8 +50,7 @@ function TyhRadio() {
         : ''
     ]
   })
-
-  const isStyle = computed((): object[] => {
+  const isStyle = computed(() => {
     return [
       {
         color: isLabel.value
@@ -64,8 +63,7 @@ function TyhRadio() {
       }
     ]
   })
-
-  const labelStyle = computed((): (object | string | boolean)[] => {
+  const labelStyle = computed(() => {
     return [
       { cursor: props.disabled ? 'no-drop' : 'pointer' },
       props.border &&
@@ -74,7 +72,6 @@ function TyhRadio() {
         }`
     ]
   })
-
-  return { input, isClass, isStyle, labelStyle }
+  return { value, input, isClass, isStyle, labelStyle }
 }
 </script>

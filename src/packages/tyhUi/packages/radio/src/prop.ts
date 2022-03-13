@@ -2,10 +2,7 @@ import { PropType } from 'vue'
 import { Size } from './type'
 
 export const prop = {
-  modelValue: {
-    type: String,
-    required: true
-  },
+  modelValue: String,
   label: String,
   name: String,
   disabled: Boolean,
