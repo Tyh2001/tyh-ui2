@@ -1,22 +1,18 @@
 <template>
   <div class="tyh-rate">
     <div class="tyh-rate-mouseout" @mouseout="width = modelValue">
-      <tyh-icon
+      <i
+        class="tyh-icon tyh-ui-favorite"
         v-for="num in 5"
-        icon="tyh-ui-favorite"
-        size="17"
         :key="num"
-        :color="voidColor"
         @mouseover="width = num"
       />
-
       <span class="solid" :style="`width:${width * 17}px;`">
-        <tyh-icon
+        <i
+          class="tyh-icon tyh-ui-favorite-filling"
           v-for="num in 5"
-          icon="tyh-ui-favorite-filling"
-          size="17"
-          :color="color"
           :key="num"
+          :style="{ color }"
           @mouseover="width = num"
           @click="upDataValue"
         />
@@ -26,41 +22,28 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref, watch, computed } from 'vue'
-const props = defineProps({
-  modelValue: Number,
-  color: {
-    type: String,
-    default: '#fbcc30'
-  },
-  voidColor: {
-    type: String,
-    default: '#C6D1DE'
-  },
-  showText: Boolean,
-  sayText: {
-    type: Array,
-    default: () => ['极差', '失望', '一般', '惊喜', '满意']
-  }
-})
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 const emit = defineEmits(['update:modelValue', 'change'])
-const { width, upDataValue, showSayFn } = _TyhRate()
+const { width, upDataValue, showSayFn } = TyhRate()
 
-function _TyhRate () {
-  const width = ref(props.modelValue)
+function TyhRate() {
+  const width = ref<number | undefined>(props.modelValue)
   watch(
     () => props.modelValue,
-    newVal => (width.value = newVal)
+    v => (width.value = v)
   )
-  const upDataValue = () => {
+
+  const upDataValue = (): void => {
     emit('update:modelValue', width.value)
     if (width.value !== props.modelValue) emit('change')
   }
 
-  const showSayFn = computed(() => {
+  const showSayFn = computed((): string | void => {
     if (!props.showText) return
-    const showSay = ref(null)
+    const showSay = ref<any>(null)
     watch(
       () => width.value,
       () => {
@@ -88,6 +71,7 @@ function _TyhRate () {
     )
     return showSay.value
   })
+
   return { width, upDataValue, showSayFn }
 }
 </script>

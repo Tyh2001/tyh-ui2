@@ -1,7 +1,13 @@
 .tyh-rate {
   position: relative;
   display: flex;
+}
+.tyh-rate .tyh-rate-mouseout {
   cursor: pointer;
+}
+.tyh-rate .tyh-rate-mouseout .tyh-ui-favorite {
+  font-size: 17px;
+  color: #d9e0eb;
 }
 .tyh-rate .tyh-rate-mouseout .solid {
   width: 17px;
@@ -10,6 +16,9 @@
   left: 0;
   width: 0;
   overflow: hidden;
+}
+.tyh-rate .tyh-rate-mouseout .solid .tyh-ui-favorite-filling {
+  font-size: 17px;
 }
 .tyh-rate .show-text {
   color: #333;

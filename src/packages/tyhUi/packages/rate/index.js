@@ -1,4 +1,4 @@
-import T from './TyhRate.vue'
+import T from './src/TyhRate.vue'
 
 T.install = _ => _.component('TyhRate', T)
 

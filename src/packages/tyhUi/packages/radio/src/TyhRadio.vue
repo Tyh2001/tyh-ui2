@@ -75,8 +75,6 @@ function TyhRadio() {
     ]
   })
 
-  console.log(labelStyle.value)
-
   return { input, isClass, isStyle, labelStyle }
 }
 </script>
