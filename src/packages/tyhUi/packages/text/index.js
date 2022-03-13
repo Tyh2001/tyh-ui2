@@ -1,4 +1,4 @@
-import T from './TyhText.vue'
+import T from './src/TyhText.vue'
 
 T.install = _ => _.component('TyhText', T)
 

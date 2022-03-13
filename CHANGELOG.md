@@ -17,6 +17,7 @@
 - switch 组件的 width 属性现在只可以传递 number 类型
 - tagging 组件的 size 属性现在只限于 string 类型
 - tagging 组件的 color 属性取消默认值
+- text 组件的 size 属性现在是限于 string 类型
 
 ## 3.3.9 (2022-03-10)
 
