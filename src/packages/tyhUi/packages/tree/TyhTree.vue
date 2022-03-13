@@ -23,21 +23,20 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { ref } from 'vue'
 defineProps({
   data: {
-    type: Array
+    type: Array,
+    default: () => []
   }
 })
 
-const isClose = ref(false)
+const isClose = ref<boolean>(false)
 
-const onOpen = item => {
+const onOpen = (item: any): void => {
   if (item.children && item.children.length) {
     isClose.value = !isClose.value
   }
 }
 </script>
-
-<style scoped src="./style/index.css"></style>

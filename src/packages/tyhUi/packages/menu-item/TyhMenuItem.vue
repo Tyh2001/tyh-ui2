@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { getCurrentInstance, inject, computed } from 'vue'
 const props = defineProps({
   to: String,
@@ -17,9 +17,11 @@ const props = defineProps({
 })
 const theme = inject('theme')
 
-const isStyle = computed(() => [{ color: theme === 'dark' ? '#fff' : '#000' }])
-const { proxy } = getCurrentInstance()
-const link = () => {
+const isStyle = computed((): object[] => [
+  { color: theme === 'dark' ? '#fff' : '#000' }
+])
+const { proxy }: any = getCurrentInstance()
+const link = (): void => {
   if (props.prohibit) return
   try {
     proxy.$router.push(props.to)
@@ -28,5 +30,3 @@ const link = () => {
   }
 }
 </script>
-
-<style src="./style/index.css" scoped></style>

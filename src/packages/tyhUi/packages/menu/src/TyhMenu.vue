@@ -12,25 +12,10 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, provide } from 'vue'
-const props = defineProps({
-  theme: {
-    type: String,
-    default: 'dark',
-    validator(v) {
-      return ['dark', 'light'].includes(v)
-    }
-  },
-  shadow: Boolean,
-  mode: {
-    type: String,
-    default: 'horizontal',
-    validator(v) {
-      return ['horizontal', 'vertical'].includes(v)
-    }
-  }
-})
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 provide('theme', props.theme)
 
 const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
@@ -46,5 +31,3 @@ const isClass = computed(() => {
   ]
 })
 </script>
-
-<style src="./style/index.css" scoped></style>

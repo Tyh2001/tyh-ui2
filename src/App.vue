@@ -1,11 +1,68 @@
 <template>
-  <tyh-text block color="red">这是一段普通文字</tyh-text>
-  <tyh-text block color="red" type="">这是主要普通文字</tyh-text>
-  <tyh-text block color="red" type="">这是一段成功文字</tyh-text>
-  <tyh-text block color="red" type="danger">这是一段危险文字</tyh-text>
-  <tyh-text block color="red" type="warning">这是一段警告文字</tyh-text>
+  <tyh-menu>
+    <tyh-menu-item>首页</tyh-menu-item>
+    <tyh-menu-item>内容</tyh-menu-item>
+    <tyh-menu-item>设置</tyh-menu-item>
+    <tyh-menu-item>回收站</tyh-menu-item>
+  </tyh-menu>
 </template>
 
-<script setup></script>
-
-<style scoped></style>
+<script setup>
+const data = [
+  {
+    label: '一级 1',
+    children: [
+      {
+        label: '二级 1-1',
+        children: [
+          {
+            label: '三级 1-1-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '一级 2',
+    children: [
+      {
+        label: '二级 2-1',
+        children: [
+          {
+            label: '三级 2-1-1'
+          }
+        ]
+      },
+      {
+        label: '二级 2-2',
+        children: [
+          {
+            label: '三级 2-2-1'
+          }
+        ]
+      }
+    ]
+  },
+  {
+    label: '一级 3',
+    children: [
+      {
+        label: '二级 3-1',
+        children: [
+          {
+            label: '三级 3-1-1'
+          }
+        ]
+      },
+      {
+        label: '二级 3-2',
+        children: [
+          {
+            label: '三级 3-2-1'
+          }
+        ]
+      }
+    ]
+  }
+]
+</script>

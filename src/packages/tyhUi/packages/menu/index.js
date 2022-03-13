@@ -1,4 +1,4 @@
-import T from './TyhMenu.vue'
+import T from './src/TyhMenu.vue'
 
 T.install = _ => _.component('TyhMenu', T)
 

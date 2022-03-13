@@ -7,40 +7,29 @@
       ]"
       @click="link"
     >
-      <tyh-icon
+      <i
         v-if="direction === 'left'"
-        :icon="icon || 'tyh-ui-arrow-left-bold'"
+        :class="['tyh-icon', icon || 'tyh-ui-arrow-left-bold']"
       />
       <slot />
-      <tyh-icon
+      <i
         v-if="direction === 'right'"
-        :icon="icon || 'tyh-ui-arrow-right-bold'"
+        :class="['tyh-icon', icon || 'tyh-ui-arrow-right-bold']"
       />
     </div>
   </div>
 </template>
 
-<script setup>
-import { getCurrentInstance } from 'vue'
-import { inject } from 'vue'
-const props = defineProps({
-  direction: {
-    type: String,
-    required: true,
-    validator (v) {
-      return ['left', 'right'].includes(v)
-    }
-  },
-  url: String,
-  icon: String,
-  prohibit: Boolean
-})
+<script lang="ts" setup>
+import { getCurrentInstance, inject } from 'vue'
+import { prop } from './prop'
+const props = defineProps({ ...prop })
 
-const { isCenter, link } = _TyhTurnPageItem()
-function _TyhTurnPageItem () {
+const { isCenter, link } = TyhTurnPageItem()
+function TyhTurnPageItem() {
   const isCenter = inject('is-center')
-  const { proxy } = getCurrentInstance()
-  const link = () => {
+  const { proxy }: any = getCurrentInstance()
+  const link = (): void => {
     if (props.prohibit) return
     try {
       proxy.$router.push(props.url)
