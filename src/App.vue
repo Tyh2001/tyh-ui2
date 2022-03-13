@@ -1,10 +1,9 @@
 <template>
-  <tyh-radio v-model="radio1" label="备选项1">备选项1</tyh-radio>
-  <tyh-radio v-model="radio1" label="备选项2">备选项2</tyh-radio>
-  <tyh-radio v-model="radio1" label="备选项3">备选项3</tyh-radio>
+  <tyh-tagging>标注1</tyh-tagging>
+  <tyh-tagging type="primary">标注2</tyh-tagging>
+  <tyh-tagging type="success">标注3</tyh-tagging>
+  <tyh-tagging type="danger">标注4</tyh-tagging>
+  <tyh-tagging type="warning">标注5</tyh-tagging>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-const radio1 = ref('备选项1')
-</script>
+<script setup></script>
