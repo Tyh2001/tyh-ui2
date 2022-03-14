@@ -2,7 +2,12 @@ import { PropType } from 'vue'
 import { Type, Size } from './type'
 
 export const prop = {
-  modelValue: String,
+  modelValue: {
+    type: String,
+    set() {
+      return true
+    }
+  },
   placeholder: String,
   type: {
     type: String as PropType<Type>,
@@ -24,5 +29,8 @@ export const prop = {
   disabled: Boolean,
   autofocus: Boolean,
   name: String,
-  showPassword: Boolean
+  showPassword: Boolean,
+  set() {
+    return true
+  }
 }

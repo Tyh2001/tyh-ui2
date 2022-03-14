@@ -11,7 +11,7 @@
   >
     <span :class="isClass">
       <input
-        v-model="value"
+        v-model="proxy.modelValue"
         type="radio"
         :name="name"
         :value="label"
@@ -26,14 +26,18 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, ref } from 'vue'
+import { computed } from 'vue'
 import { prop } from './prop'
 const props = defineProps({ ...prop })
 const emits = defineEmits(['update:modelValue', 'change'])
-const { value, input, isClass, isStyle, labelStyle } = TyhRadio()
+const { proxy, input, isClass, isStyle, labelStyle } = TyhRadio()
 
 function TyhRadio() {
-  const value = ref(props.modelValue)
+  const proxy = new Proxy(props, {
+    set() {
+      return true
+    }
+  })
 
   const input = (evt: any) => {
     emits('update:modelValue', evt.target.value)
@@ -72,6 +76,6 @@ function TyhRadio() {
         }`
     ]
   })
-  return { value, input, isClass, isStyle, labelStyle }
+  return { proxy, input, isClass, isStyle, labelStyle }
 }
 </script>

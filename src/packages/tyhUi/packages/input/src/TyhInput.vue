@@ -19,15 +19,6 @@
       @blur="emit('onblur')"
       @focus="emit('onfocus')"
     />
-    <tyh-icon
-      v-if="clear || showPassword"
-      color="#c7c7c7"
-      size="12"
-      :class="['tyh-input-clear', `tyh-input-icon-${size}`]"
-      :style="{ cursor: props.disabled ? 'not-allowed' : 'pointer' }"
-      :icon="rightIcon"
-      @click="rightIconClick"
-    />
     <i
       v-if="clear || showPassword"
       :class="[
