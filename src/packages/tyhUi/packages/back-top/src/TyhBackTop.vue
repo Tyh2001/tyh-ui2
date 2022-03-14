@@ -16,11 +16,11 @@ const props = defineProps({ ...prop })
 const { isShow, toTop } = TyhBackTop()
 
 function TyhBackTop() {
-  const isShow = ref(false)
+  const isShow = ref<boolean>(false)
 
   const handleScroll = () => {
     let timer: any = null
-    return function () {
+    return (): void => {
       if (timer !== null) {
         clearTimeout(timer)
       }
@@ -33,7 +33,7 @@ function TyhBackTop() {
     }
   }
 
-  const toTop = () => {
+  const toTop = (): void => {
     const param: any = {
       top: 0,
       behavior: props.action
@@ -41,7 +41,7 @@ function TyhBackTop() {
     window.scrollTo(param)
   }
 
-  onMounted(() => addEventListener('scroll', handleScroll()))
+  onMounted((): void => addEventListener('scroll', handleScroll()))
 
   return { isShow, toTop }
 }

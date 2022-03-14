@@ -46,7 +46,7 @@ function TyhRate() {
     const showSay = ref<any>(null)
     watch(
       () => width.value,
-      () => {
+      (): void => {
         switch (width.value) {
           case 1:
             showSay.value = props.sayText[0]

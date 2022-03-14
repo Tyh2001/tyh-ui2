@@ -25,7 +25,6 @@
           </th>
         </tr>
       </thead>
-
       <tbody class="tyh-tbody">
         <tr
           v-for="(dataItem, ind) in data"

@@ -39,12 +39,14 @@ function TyhRadio() {
     }
   })
 
-  const input = (evt: any) => {
-    emits('update:modelValue', evt.target.value)
-    emits('change', evt.target.value)
+  const input = (e: any) => {
+    emits('update:modelValue', e.target.value)
+    emits('change', e.target.value)
   }
-  const isLabel = computed(() => props.modelValue === props.label)
-  const isClass = computed(() => {
+
+  const isLabel = computed((): boolean => props.modelValue === props.label)
+
+  const isClass = computed((): string[] => {
     return [
       'tyh-radio-o',
       isLabel.value
@@ -54,7 +56,8 @@ function TyhRadio() {
         : ''
     ]
   })
-  const isStyle = computed(() => {
+
+  const isStyle = computed((): object[] => {
     return [
       {
         color: isLabel.value
@@ -67,7 +70,8 @@ function TyhRadio() {
       }
     ]
   })
-  const labelStyle = computed(() => {
+
+  const labelStyle = computed((): object | boolean[] => {
     return [
       { cursor: props.disabled ? 'no-drop' : 'pointer' },
       props.border &&
@@ -76,6 +80,7 @@ function TyhRadio() {
         }`
     ]
   })
+
   return { proxy, input, isClass, isStyle, labelStyle }
 }
 </script>

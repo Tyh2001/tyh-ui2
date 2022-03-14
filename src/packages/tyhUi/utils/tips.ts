@@ -11,7 +11,7 @@ export const mergeOptions = (def: object, opts: object): object =>
 
 const createComponent = (com: object, props: object): object => {
   const node: any = h(com, props)
-  const container = document.createElement('div')
+  const container: HTMLDivElement = document.createElement('div')
   render(node, container)
   return node.component
 }

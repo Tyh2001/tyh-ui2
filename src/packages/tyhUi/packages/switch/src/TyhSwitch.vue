@@ -6,7 +6,6 @@
   >
     {{ closeText }}
   </span>
-
   <span
     :class="['tyh-switch', { 'tyh-switch-disabled': disabled }]"
     :style="switchStyle"
@@ -14,7 +13,6 @@
   >
     <span class="tyh-switch-roll" :style="switchRollStyle" />
   </span>
-
   <span
     v-if="openText"
     class="tyh-switch-openText"
@@ -69,6 +67,7 @@ function TyhSwitch() {
       `border:2px solid  ${switchColor.value}`
     ]
   })
+
   return { switchValue, clickSwitch, switchStyle, switchRollStyle }
 }
 </script>

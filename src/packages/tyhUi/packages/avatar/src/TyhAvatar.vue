@@ -26,7 +26,7 @@ const emit = defineEmits(['error', 'load'])
 const { isError, onError, isSize, errorClass, successClass } = TyhAvatar()
 
 function TyhAvatar() {
-  const isError = ref(false)
+  const isError = ref<boolean>(false)
 
   const onError = (): void => {
     emit('error')
