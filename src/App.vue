@@ -1,14 +1,90 @@
 <template>
-  <tyh-input clear size="large" v-model="text4" />
-  <tyh-input clear size="medium" v-model="text5" />
-  <tyh-input clear size="small" v-model="text6" />
-  <tyh-input clear size="mini" v-model="text7" />
+  <tyh-container>
+    <tyh-header>Header</tyh-header>
+    <tyh-main>Main</tyh-main>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-header>Header</tyh-header>
+    <tyh-main>Main</tyh-main>
+    <tyh-footer>Footer</tyh-footer>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-aside width="200px">Aside</tyh-aside>
+    <tyh-main>Main</tyh-main>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-header>Header</tyh-header>
+    <tyh-container>
+      <tyh-aside width="200px">Aside</tyh-aside>
+      <tyh-main>Main</tyh-main>
+    </tyh-container>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-header>Header</tyh-header>
+    <tyh-container>
+      <tyh-aside width="200px">Aside</tyh-aside>
+      <tyh-container>
+        <tyh-main>Main</tyh-main>
+        <tyh-footer>Footer</tyh-footer>
+      </tyh-container>
+    </tyh-container>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-aside width="200px">Aside</tyh-aside>
+    <tyh-container>
+      <tyh-header>Header</tyh-header>
+      <tyh-main>Main</tyh-main>
+    </tyh-container>
+  </tyh-container>
+
+  <tyh-container>
+    <tyh-aside width="200px">Aside</tyh-aside>
+    <tyh-container>
+      <tyh-header>Header</tyh-header>
+      <tyh-main>Main</tyh-main>
+      <tyh-footer>Footer</tyh-footer>
+    </tyh-container>
+  </tyh-container>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-const text4 = ref('')
-const text5 = ref('')
-const text6 = ref('')
-const text7 = ref('')
-</script>
+<style scoped>
+.tyh-header,
+.tyh-footer {
+  background-color: #b3c0d1;
+  color: #333;
+  text-align: center;
+  line-height: 60px;
+}
+
+.tyh-aside {
+  background-color: #d3dce6;
+  color: #333;
+  text-align: center;
+  line-height: 200px;
+}
+
+.tyh-main {
+  background-color: #e9eef3;
+  color: #333;
+  text-align: center;
+  line-height: 160px;
+}
+
+body > .tyh-container {
+  margin-bottom: 40px;
+}
+
+.tyh-container:nth-child(5) .tyh-aside,
+.tyh-container:nth-child(6) .tyh-aside {
+  line-height: 260px;
+}
+
+.tyh-container:nth-child(7) .tyh-aside {
+  line-height: 320px;
+}
+</style>
