@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <rateMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import rateMD from "@/docs/rate.md";
 </script>
