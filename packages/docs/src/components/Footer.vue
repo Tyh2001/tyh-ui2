@@ -51,16 +51,8 @@
 
 <script setup>
 const collaborator = [
-  {
-    name: '田同学',
-    photo: 'https://avatars.githubusercontent.com/u/73180970?v=4',
-    url: 'https://github.com/Tyh2001'
-  },
-  {
-    name: '话梅桔',
-    photo: 'https://avatars.githubusercontent.com/u/46716525?v=4',
-    url: 'https://github.com/Givenchy-Coisini'
-  }
+  { name: '田同学', photo: 'https://avatars.githubusercontent.com/u/73180970?v=4', url: 'https://github.com/Tyh2001' },
+  { name: '话梅桔', photo: 'https://avatars.githubusercontent.com/u/46716525?v=4', url: 'https://github.com/Givenchy-Coisini' },
 ]
 </script>
 

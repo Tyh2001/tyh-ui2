@@ -1,0 +1,107 @@
+[
+  {
+    "path:": "/component/install"
+  },
+  {
+    "path:": "/component/color"
+  },
+  {
+    "path:": "/component/button"
+  },
+  {
+    "path:": "/component/list"
+  },
+  {
+    "path:": "/component/card"
+  },
+  {
+    "path:": "/component/tag"
+  },
+  {
+    "path:": "/component/link"
+  },
+  {
+    "path:": "/component/input"
+  },
+  {
+    "path:": "/component/menu"
+  },
+  {
+    "path:": "/component/division"
+  },
+  {
+    "path:": "/component/icon"
+  },
+  {
+    "path:": "/component/crumbs"
+  },
+  {
+    "path:": "/component/turnPage"
+  },
+  {
+    "path:": "/component/backTop"
+  },
+  {
+    "path:": "/component/message"
+  },
+  {
+    "path:": "/component/skeleton"
+  },
+  {
+    "path:": "/component/alert"
+  },
+  {
+    "path:": "/component/rate"
+  },
+  {
+    "path:": "/component/image"
+  },
+  {
+    "path:": "/component/avatar"
+  },
+  {
+    "path:": "/component/container"
+  },
+  {
+    "path:": "/component/text"
+  },
+  {
+    "path:": "/component/table"
+  },
+  {
+    "path:": "/component/switch"
+  },
+  {
+    "path:": "/component/calendar"
+  },
+  {
+    "path:": "/component/radio"
+  },
+  {
+    "path:": "/component/tree"
+  },
+  {
+    "path:": "/component/pageHeader"
+  },
+  {
+    "path:": "/component/info"
+  },
+  {
+    "path:": "/component/textarea"
+  },
+  {
+    "path:": "/component/select"
+  },
+  {
+    "path:": "/component/tagging"
+  },
+  {
+    "path:": "/component/notification,"
+  },
+  {
+    "path:": "/component/drawer"
+  },
+  {
+    "path:": "/component/dialog"
+  }
+]
