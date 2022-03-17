@@ -1,7 +1,7 @@
 <template>
-  <alertMD />
+  <backTopMD />
 </template>
 
 <script lang="ts" setup>
-import alertMD from "@/docs/alert.md";
+import backTopMD from "@/docs/backTop.md";
 </script>
