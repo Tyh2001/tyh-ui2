@@ -1,45 +1,22 @@
 {
   "name": "tyh-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "author": "",
+  "private": true,
+  "engines": {
+    "node": ">= 16"
+  },
   "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview",
-    "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch dev",
-    "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json && pretty-quick --branch dev",
-    "prettier": "prettier --write .",
-    "prepare": "husky install",
-    "commit": "cz"
+    "dev:docs": "pnpm run dev --filter @tyh-ui/docs"
   },
-  "dependencies": {
-    "@vueuse/core": "^7.1.2",
-    "element3": "^0.0.40",
-    "tyh-ui2": "^3.3.2",
-    "vue": "^3.2.31",
-    "vue-router": "^4.0.12"
-  },
-  "lint-staged": {
-    "*.{vue,js,ts,md,json}": "prettier --write"
-  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "license": "ISC",
+  "dependencies": {},
   "devDependencies": {
-    "@commitlint/cli": "^16.2.1",
-    "@commitlint/config-conventional": "^16.2.1",
-    "@vitejs/plugin-vue": "^2.0.0",
-    "commitizen": "^4.2.4",
-    "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.4.1",
-    "husky": "^7.0.4",
-    "lint-staged": "^12.3.5",
-    "prettier": "^2.5.1",
-    "pretty-quick": "^3.1.3",
-    "vite": "^2.8.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
+    "vitest": "^0.7.0"
   }
 }

@@ -1,22 +1,23 @@
 {
-  "name": "tyh-ui-docs",
+  "name": "@tyh-ui/docs",
+  "private": true,
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "serve": "vite preview"
+    "build": "vue-tsc --noEmit && vite build",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "@highlightjs/vue-plugin": "^2.1.0",
-    "clipboard": "^2.0.8",
-    "highlight.js": "^11.4.0",
-    "rollup-plugin-visualizer": "^5.5.2",
-    "tyh-ui2": "^3.4.3",
+    "@tyh-ui/tyh-ui2": "3.4.3",
+    "vite-plugin-md": "^0.11.9",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
+    "vue-router": "^4.0.12",
+    "rollup-plugin-visualizer": "^5.5.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",
-    "vite": "^2.8.0"
+    "typescript": "^4.5.4",
+    "vite": "^2.8.0",
+    "vue-tsc": "^0.29.8"
   }
 }

@@ -71,16 +71,16 @@ const listPush = [
   { name: 'Tagging 标注', url: '/component/tagging' },
   { name: 'Notification 通知', url: '/component/notification' },
   { name: 'Drawer 抽屉', url: '/component/drawer' },
-  { name: 'Dialog 对话框', url: '/component/dialog' }
+  { name: 'Dialog 对话框', url: '/component/dialog' },
 ]
 const router = useRouter()
 const route = useRoute()
 // 点击跳转
-function listPushClick(index) {
+function listPushClick (index) {
   router.push(listPush[index].url)
 }
 // 高亮显示
-function highLightStyle(index) {
+function highLightStyle (index) {
   if (listPush[index].url === route.path) {
     return {
       color: '#3a6ff4',
