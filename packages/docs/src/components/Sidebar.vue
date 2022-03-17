@@ -38,7 +38,7 @@ defineProps({
 })
 const listPush = [
   { name: '快速上手', url: '/component/install' },
-  { name: 'Color 色彩', url: '/component/color' },
+  // { name: 'Color 色彩', url: '/component/color' },
   { name: 'Container 布局容器', url: '/component/container' },
   { name: 'Button 按钮', url: '/component/button' },
   { name: 'List 列表', url: '/component/list' },
@@ -48,7 +48,7 @@ const listPush = [
   { name: 'Input 输入框', url: '/component/input' },
   { name: 'Menu 导航栏', url: '/component/menu' },
   { name: 'Division 分割线', url: '/component/division' },
-  { name: 'Icon 图标', url: '/component/icon' },
+  // { name: 'Icon 图标', url: '/component/icon' },
   { name: 'Crumbs 面包屑', url: '/component/crumbs' },
   { name: 'TurnPage 翻页', url: '/component/turnPage' },
   { name: 'BackTop 回到顶部', url: '/component/backTop' },

@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <calendarMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import calendarMD from "@/docs/calendar.md";
 </script>

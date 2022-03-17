@@ -14,6 +14,7 @@ const routes = [
         children: [
           { path: '/component/install', component: () => import('../views/TyhUi/install.vue') },
           // { path: '/component/color', component: () => import('../views/TyhUi/public.vue') },
+          { path: '/component/container', component: () => import('../views/TyhUi/container.vue') },
           { path: '/component/button', component: () => import('../views/TyhUi/button.vue') },
           { path: '/component/list', component: () => import('../views/TyhUi/list.vue') },
           { path: '/component/card', component: () => import('../views/TyhUi/card.vue') },
@@ -32,7 +33,6 @@ const routes = [
           // { path: '/component/rate', component: () => import('../views/TyhUi/public.vue') },
           // { path: '/component/image', component: () => import('../views/TyhUi/public.vue') },
           // { path: '/component/avatar', component: () => import('../views/TyhUi/public.vue') },
-          // { path: '/component/container', component: () => import('../views/TyhUi/public.vue') },
           // { path: '/component/text', component: () => import('../views/TyhUi/public.vue') },
           // { path: '/component/table', component: () => import('../views/TyhUi/public.vue') },
           // { path: '/component/switch', component: () => import('../views/TyhUi/public.vue') },
