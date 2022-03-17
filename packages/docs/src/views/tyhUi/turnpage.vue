@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <turnPageMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import turnPageMD from "@/docs/turnPage.md";
 </script>

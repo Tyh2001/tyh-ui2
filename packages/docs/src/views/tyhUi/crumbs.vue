@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <crumbsMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import crumbsMD from "@/docs/crumbs.md";
 </script>

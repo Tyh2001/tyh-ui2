@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <divisionMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import divisionMD from "@/docs/division.md";
 </script>
