@@ -10,6 +10,8 @@
   },
   "scripts": {
     "dev:docs": "pnpm run dev --filter @tyh-ui/docs",
+    "test:test": "vitest",
+    "test:coverage": "vitest run --coverage",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch dev",
     "lint:fix": "eslint --fix . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json && pretty-quick --branch dev",
     "prettier": "prettier --write .",
