@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <dialog-md />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import dialogMd from "@/docs/dialog.md";
 </script>

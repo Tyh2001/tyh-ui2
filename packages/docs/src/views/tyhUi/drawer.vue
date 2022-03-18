@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <drawer-md />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import drawerMd from "@/docs/drawer.md";
 </script>

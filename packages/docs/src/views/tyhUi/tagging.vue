@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <tagging-md />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import taggingMd from "@/docs/tagging.md";
 </script>
