@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <radioMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import radioMD from "@/docs/radio.md";
 </script>
