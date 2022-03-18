@@ -9,10 +9,13 @@
   },
   "dependencies": {
     "@tyh-ui/tyh-ui2": "3.4.3",
+    "highlight.js": "^11.5.0",
+    "markdown-it-anchor": "^8.4.1",
+    "markdown-it-prism": "^2.2.3",
+    "rollup-plugin-visualizer": "^5.5.2",
     "vite-plugin-md": "^0.11.9",
     "vue": "^3.2.25",
-    "vue-router": "^4.0.12",
-    "rollup-plugin-visualizer": "^5.5.2"
+    "vue-router": "^4.0.12"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^2.2.0",

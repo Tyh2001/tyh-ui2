@@ -1,9 +1,11 @@
-.markdown-body {
+.tyh-markdown-body {
+
   h1,
   h2,
   h3,
   h4,
-  h5 {
+  h5,
+  h6 {
     color: #333;
   }
 
@@ -21,6 +23,42 @@
 
     code {
       font-family: '微软雅黑';
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    border-left: 3px solid skyblue;
+    padding-left: 15px;
+  }
+
+  p {
+    code {
+      background: #f6f8fa;
+      display: inline-block;
+      border-radius: 6px;
+      padding: 2px 8px;
+    }
+  }
+
+  table {
+    border: 0;
+    width: 100%;
+    border-collapse: collapse;
+
+    thead {
+      color: #6e6e6e;
+    }
+
+    tbody {
+      color: #333;
+    }
+
+    td,
+    th {
+      border-bottom: 1px solid #dcdfe6;
+      text-align: center;
+      padding: 10px 15px;
     }
   }
 }

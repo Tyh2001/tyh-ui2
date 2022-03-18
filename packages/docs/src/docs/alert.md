@@ -95,6 +95,7 @@ close 属性可以配置宽度
 ## 文字居中
 
 center 属性可以配置文字居中
+
 <tyh-alert center message="这是一个普通提示" />
 <tyh-alert center type="primary" message="这是一个主要提示" />
 <tyh-alert center type="success" message="这是一个成功提示" />

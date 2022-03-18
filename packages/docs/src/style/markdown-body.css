@@ -1,21 +1,50 @@
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3,
-.markdown-body h4,
-.markdown-body h5 {
+.tyh-markdown-body h1,
+.tyh-markdown-body h2,
+.tyh-markdown-body h3,
+.tyh-markdown-body h4,
+.tyh-markdown-body h5,
+.tyh-markdown-body h6 {
   color: #333;
 }
-.markdown-body p {
+.tyh-markdown-body p {
   color: #515a6e;
   font-size: 15px;
 }
-.markdown-body pre {
+.tyh-markdown-body pre {
   padding: 15px;
   box-sizing: border-box;
   font-size: 15px;
   border-radius: 18px;
   background: #f3f7ff;
 }
-.markdown-body pre code {
-  font-family: "微软雅黑";
+.tyh-markdown-body pre code {
+  font-family: '微软雅黑';
+}
+.tyh-markdown-body blockquote {
+  margin: 0;
+  border-left: 3px solid skyblue;
+  padding-left: 15px;
+}
+.tyh-markdown-body p code {
+  background: #f6f8fa;
+  display: inline-block;
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+.tyh-markdown-body table {
+  border: 0;
+  width: 100%;
+  border-collapse: collapse;
+}
+.tyh-markdown-body table thead {
+  color: #6e6e6e;
+}
+.tyh-markdown-body table tbody {
+  color: #333;
+}
+.tyh-markdown-body table td,
+.tyh-markdown-body table th {
+  border-bottom: 1px solid #dcdfe6;
+  text-align: center;
+  padding: 10px 15px;
 }
