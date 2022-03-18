@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <switchMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import switchMD from "@/docs/switch.md";
 </script>
