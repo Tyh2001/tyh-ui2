@@ -7,3 +7,5 @@
 **/*.sh
 
 /public/*
+
+/packages/tyh-ui2/style/*
