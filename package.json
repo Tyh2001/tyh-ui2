@@ -9,7 +9,8 @@
     "node": ">= 16"
   },
   "scripts": {
-    "dev:docs": "pnpm run dev --filter @tyh-ui/docs"
+    "dev:docs": "pnpm run dev --filter @tyh-ui/docs",
+    "build:docs": "pnpm run build --filter @tyh-ui/docs"
   },
   "workspaces": [
     "packages/*"
