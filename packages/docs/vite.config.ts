@@ -8,7 +8,7 @@ export default defineConfig({
   base: './',
   plugins: [
     vue({
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/]
     }),
     visualizer(),
     Markdown()
@@ -16,10 +16,10 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
-    },
+    }
   },
   server: {
     host: '127.0.0.1',
-    port: '2001',
+    port: 2001
   }
 })
