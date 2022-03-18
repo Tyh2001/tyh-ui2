@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <pageHeaderMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import pageHeaderMD from "@/docs/pageHeader.md";
 </script>

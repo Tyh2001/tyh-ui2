@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <treeMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import treeMD from "@/docs/tree.md";
 </script>
