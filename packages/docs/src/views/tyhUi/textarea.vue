@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <textareaMD />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import textareaMD from "@/docs/textarea.md";
 </script>

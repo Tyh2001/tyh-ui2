@@ -1,7 +1,7 @@
 <template>
-  <alert />
+  <select-md />
 </template>
 
 <script lang="ts" setup>
-import alert from "@/docs/alert.md";
+import selectMd from "@/docs/select.md";
 </script>
