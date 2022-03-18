@@ -1,3 +1,4 @@
 packages:
   - 'packages/docs/**/'
   - 'packages/tyh-ui2/**/'
+  - 'packages/demo/**/'

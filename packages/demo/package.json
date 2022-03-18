@@ -1,5 +1,5 @@
 {
-  "name": "@tyh-ui/docs",
+  "name": "@tyh-ui/demo",
   "private": true,
   "version": "0.0.0",
   "scripts": {
@@ -8,16 +8,10 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "highlight.js": "^11.5.0",
-    "markdown-it-anchor": "^8.4.1",
-    "markdown-it-prism": "^2.2.3",
-    "rollup-plugin-visualizer": "^5.5.2",
-    "tyh-ui2": "^3.4.3",
-    "vite-plugin-md": "^0.11.9",
-    "vue": "^3.2.25",
-    "vue-router": "^4.0.12"
+    "vue": "^3.2.25"
   },
   "devDependencies": {
+    "@tyh-ui/tyh-ui2": "3.4.3",
     "@vitejs/plugin-vue": "^2.2.0",
     "typescript": "^4.5.4",
     "vite": "^2.8.0",

@@ -1,12 +1,3 @@
-<button onclick="add()">点击</button>
-
-<script>
-    function add () {
-      console.log(1212)
-      alert('121')
-    }
-</script>
-
 # 快速上手
 
 ## 安装

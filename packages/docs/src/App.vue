@@ -4,4 +4,18 @@
 
 <script lang="ts" setup></script>
 
-<style scoped></style>
+<style>
+* {
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar {
+  width: 6px;
+  background-color: #ffffff;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dddddd;
+  border-radius: 6px;
+}
+</style>

@@ -8,7 +8,7 @@
     />
     <h1 class="MainTitle">
       Tyh UI
-      <span class="version">v&nbsp;xx</span>
+      <span class="version">v&nbsp;{{ version }}</span>
     </h1>
     <p class="Subtitle">一个轻量级组件库，基于 vue3.0 版本，全面拥抱 vue3.0</p>
 
@@ -49,7 +49,7 @@
 </template>
 
 <script setup>
-// import { version } from '../tyhUi'
+import { version } from '../tyhUi'
 import Footer from '@/components/Footer.vue'
 </script>
 
