@@ -1,7 +1,7 @@
 <template>
-  <textMD />
+  <text-md />
 </template>
 
 <script lang="ts" setup>
-import textMD from "@/docs/text.md";
+import textMd from '@/docs/text.md'
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <textareaMD />
+  <textarea-md />
 </template>
 
 <script lang="ts" setup>
-import textareaMD from "@/docs/textarea.md";
+import textareaMd from '@/docs/textarea.md'
 </script>

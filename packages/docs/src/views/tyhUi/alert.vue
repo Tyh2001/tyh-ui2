@@ -1,10 +1,9 @@
 <template>
-  <alertMD />
+  <alert-md />
 </template>
 
 <script lang="ts" setup>
-import alertMD from "@/docs/alert.md";
+import alertMd from '/docs/alert.md'
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

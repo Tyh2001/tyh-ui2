@@ -1,7 +1,7 @@
 <template>
-  <cardMD />
+  <card-md />
 </template>
 
 <script lang="ts" setup>
-import cardMD from "@/docs/card.md";
+import cardMd from '@/docs/card.md'
 </script>

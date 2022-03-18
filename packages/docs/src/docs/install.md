@@ -30,7 +30,7 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import {
   TyhButton,
-  TyhCard,
+  TyhCard
   // ...
 } from 'tyh-ui2'
 import 'tyh-ui2/style/index.css'

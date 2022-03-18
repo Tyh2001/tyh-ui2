@@ -1,7 +1,7 @@
 <template>
-  <install />
+  <install-md />
 </template>
 
 <script lang="ts" setup>
-import install from "@/docs/install.md";
+import installMd from '@/docs/install.md'
 </script>

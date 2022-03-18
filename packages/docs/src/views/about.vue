@@ -37,10 +37,11 @@
       <img draggable="false" src="@/assets/zhifubao.jpg" alt="zhifubao" />
     </div>
   </div>
+
   <Footer />
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import Footer from '@/components/Footer.vue'
 </script>
 

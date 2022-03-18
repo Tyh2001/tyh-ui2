@@ -1,7 +1,7 @@
 <template>
-  <switchMD />
+  <switch-md />
 </template>
 
 <script lang="ts" setup>
-import switchMD from "@/docs/switch.md";
+import switchMd from '@/docs/switch.md'
 </script>

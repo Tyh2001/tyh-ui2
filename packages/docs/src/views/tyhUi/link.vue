@@ -1,7 +1,7 @@
 <template>
-  <linkMD />
+  <link-md />
 </template>
 
 <script lang="ts" setup>
-import linkMD from "@/docs/link.md";
+import linkMd from '@/docs/link.md'
 </script>

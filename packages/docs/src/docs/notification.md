@@ -28,7 +28,7 @@ message 属性可以定义内容
   function open1() {
     Notification({
       title: '提示',
-      message: '这里是提示的文案',
+      message: '这里是提示的文案'
     })
   }
 </script>
@@ -52,28 +52,28 @@ type 属性可以配置不同类型的通知
     Notification({
       title: '主要提示',
       message: '这是一个主要提示',
-      type: 'primary',
+      type: 'primary'
     })
   }
   function open3() {
     Notification({
       title: '成功提示',
       message: '这是一个成功提示',
-      type: 'success',
+      type: 'success'
     })
   }
   function open4() {
     Notification({
       title: '危险提示',
       message: '这是一个危险提示',
-      type: 'danger',
+      type: 'danger'
     })
   }
   function open5() {
     Notification({
       title: '警告提示',
       message: '这是一个警告提示',
-      type: 'warning',
+      type: 'warning'
     })
   }
 </script>
@@ -97,28 +97,28 @@ position 属性可以配置不同类型的通知
     Notification({
       title: '提示',
       message: '这里是提示的文案',
-      position: 'top-left',
+      position: 'top-left'
     })
   }
   function open7() {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
-      position: 'top-right',
+      position: 'top-right'
     })
   }
   function open8() {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
-      position: 'bottom-left',
+      position: 'bottom-left'
     })
   }
   function open9() {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
-      position: 'bottom-right',
+      position: 'bottom-right'
     })
   }
 </script>
@@ -139,7 +139,7 @@ time 属性可以自定义通知展示的时长
     Notification({
       title: '提示',
       message: '4000 毫秒后自动关闭',
-      time: 4000,
+      time: 4000
     })
   }
 </script>

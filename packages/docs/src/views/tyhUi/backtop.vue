@@ -1,7 +1,7 @@
 <template>
-  <backTopMD />
+  <backTop-md />
 </template>
 
 <script lang="ts" setup>
-import backTopMD from "@/docs/backTop.md";
+import backTopMd from '@/docs/backTop.md'
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <pageHeaderMD />
+  <pageHeader-md />
 </template>
 
 <script lang="ts" setup>
-import pageHeaderMD from "@/docs/pageHeader.md";
+import pageHeaderMd from '@/docs/pageHeader.md'
 </script>

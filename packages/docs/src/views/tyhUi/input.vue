@@ -1,7 +1,7 @@
 <template>
-  <inputMD />
+  <input-md />
 </template>
 
 <script lang="ts" setup>
-import inputMD from "@/docs/input.md";
+import inputMd from '@/docs/input.md'
 </script>

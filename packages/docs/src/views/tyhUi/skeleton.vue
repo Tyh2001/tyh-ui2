@@ -1,7 +1,7 @@
 <template>
-  <skeletonMD />
+  <skeleton-md />
 </template>
 
 <script lang="ts" setup>
-import skeletonMD from "@/docs/skeleton.md";
+import skeletonMd from '@/docs/skeleton.md'
 </script>

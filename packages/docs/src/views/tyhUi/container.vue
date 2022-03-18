@@ -1,9 +1,9 @@
 <template>
-  <containerMD />
+  <container-md />
 </template>
 
 <script lang="ts" setup>
-import containerMD from "@/docs/container.md";
+import containerMd from '@/docs/container.md'
 </script>
 
 <style>

@@ -1,7 +1,7 @@
 <template>
-  <avatarMD />
+  <avatar-md />
 </template>
 
 <script lang="ts" setup>
-import avatarMD from "@/docs/avatar.md";
+import avatarMd from '@/docs/avatar.md'
 </script>

@@ -28,7 +28,6 @@ round 属性配置头像的圆角
 
 fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
-
 ```html
 <template>
   <div class="fitBox">

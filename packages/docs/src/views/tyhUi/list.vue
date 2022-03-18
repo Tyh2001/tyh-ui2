@@ -1,7 +1,7 @@
 <template>
-  <listMD />
+  <list-md />
 </template>
 
 <script lang="ts" setup>
-import listMD from "@/docs/list.md";
+import listMd from '@/docs/list.md'
 </script>

@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import notificationMd from "@/docs/notification.md";
+import notificationMd from '@/docs/notification.md'
 </script>

@@ -1,7 +1,7 @@
 <template>
-  <menuMD />
+  <menu-md />
 </template>
 
 <script lang="ts" setup>
-import menuMD from "@/docs/menu.md";
+import menuMd from '@/docs/menu.md'
 </script>

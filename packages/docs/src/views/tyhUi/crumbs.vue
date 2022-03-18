@@ -1,7 +1,7 @@
 <template>
-  <crumbsMD />
+  <crumbs-md />
 </template>
 
 <script lang="ts" setup>
-import crumbsMD from "@/docs/crumbs.md";
+import crumbsMd from '@/docs/crumbs.md'
 </script>

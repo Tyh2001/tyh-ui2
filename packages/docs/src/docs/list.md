@@ -22,7 +22,7 @@ keys 属性可以绑定数组中每个元素的键值
     { name: '小明5', age: 15 },
     { name: '小明6', age: 16 },
     { name: '小明7', age: 17 },
-    { name: '小明8', age: 18 },
+    { name: '小明8', age: 18 }
   ]
 </script>
 ```
@@ -47,7 +47,7 @@ footer 页脚内容
     { name: '小明5', age: 15 },
     { name: '小明6', age: 16 },
     { name: '小明7', age: 17 },
-    { name: '小明8', age: 18 },
+    { name: '小明8', age: 18 }
   ]
 </script>
 ```
@@ -79,7 +79,7 @@ num 是否显示序号
     { name: '小明5', age: 15 },
     { name: '小明6', age: 16 },
     { name: '小明7', age: 17 },
-    { name: '小明8', age: 18 },
+    { name: '小明8', age: 18 }
   ]
 </script>
 ```
@@ -102,7 +102,7 @@ hoverShow 配置 Hover 状态展示投影
     { name: '小明5', age: 15 },
     { name: '小明6', age: 16 },
     { name: '小明7', age: 17 },
-    { name: '小明8', age: 18 },
+    { name: '小明8', age: 18 }
   ]
 </script>
 ```

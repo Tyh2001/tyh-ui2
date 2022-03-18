@@ -22,7 +22,6 @@
       </a>
     </div>
 
-    <!-- 概述 -->
     <div class="summary">
       <div class="summary-left">
         <h2 class="summary-title">

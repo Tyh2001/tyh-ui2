@@ -1,7 +1,7 @@
 <template>
-  <infoMD />
+  <info-md />
 </template>
 
 <script lang="ts" setup>
-import infoMD from "@/docs/info.md";
+import infoMd from '@/docs/info.md'
 </script>

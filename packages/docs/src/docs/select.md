@@ -23,24 +23,24 @@
   const options = [
     {
       value: '选项1',
-      label: '上海',
+      label: '上海'
     },
     {
       value: '选项2',
-      label: '北京',
+      label: '北京'
     },
     {
       value: '选项3',
-      label: '杭州',
+      label: '杭州'
     },
     {
       value: '选项4',
-      label: '天津',
+      label: '天津'
     },
     {
       value: '选项5',
-      label: '大连',
-    },
+      label: '大连'
+    }
   ]
 </script>
 ```

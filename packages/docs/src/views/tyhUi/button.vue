@@ -1,7 +1,7 @@
 <template>
-  <buttonMD />
+  <button-md />
 </template>
 
 <script lang="ts" setup>
-import buttonMD from "@/docs/button.md";
+import buttonMd from '@/docs/button.md'
 </script>

@@ -14,7 +14,7 @@
   </div>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { useRoute } from 'vue-router'
 import Sidebar from '@/components/Sidebar.vue'
 const route = useRoute()

@@ -1,7 +1,7 @@
 <template>
-  <divisionMD />
+  <division-md />
 </template>
 
 <script lang="ts" setup>
-import divisionMD from "@/docs/division.md";
+import divisionMd from '@/docs/division.md'
 </script>

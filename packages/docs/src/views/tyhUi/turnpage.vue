@@ -1,7 +1,7 @@
 <template>
-  <turnPageMD />
+  <turnPage-md />
 </template>
 
 <script lang="ts" setup>
-import turnPageMD from "@/docs/turnPage.md";
+import turnPageMd from '@/docs/turnPage.md'
 </script>

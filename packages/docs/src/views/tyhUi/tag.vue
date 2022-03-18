@@ -1,7 +1,7 @@
 <template>
-  <tagMD />
+  <tag-md />
 </template>
 
 <script lang="ts" setup>
-import tagMD from "@/docs/tag.md";
+import tagMd from '@/docs/tag.md'
 </script>

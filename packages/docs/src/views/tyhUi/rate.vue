@@ -1,7 +1,7 @@
 <template>
-  <rateMD />
+  <rate-md />
 </template>
 
 <script lang="ts" setup>
-import rateMD from "@/docs/rate.md";
+import rateMd from '@/docs/rate.md'
 </script>

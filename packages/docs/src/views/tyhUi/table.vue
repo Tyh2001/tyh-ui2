@@ -1,7 +1,7 @@
 <template>
-  <tableMD />
+  <table-md />
 </template>
 
 <script lang="ts" setup>
-import tableMD from "@/docs/table.md";
+import tableMd from '@/docs/table.md'
 </script>
