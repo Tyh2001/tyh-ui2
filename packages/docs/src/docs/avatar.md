@@ -7,6 +7,7 @@
 src 属性可以添加图片路径
 
 size 可以配置头像大小
+
 <tyh-avatar :size="10" src="https://tianyuhao.cn/v3/assets/giraffe.jpg"/>
 
 ```html
@@ -27,7 +28,6 @@ round 属性配置头像的圆角
 
 fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
-##
 
 ```html
 <template>
