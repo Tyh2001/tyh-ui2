@@ -1,7 +1,7 @@
 {
   "name": "@tyh-ui/docs",
   "private": true,
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
@@ -14,13 +14,6 @@
     "rollup-plugin-visualizer": "^5.5.2",
     "tyh-ui2": "^3.4.3",
     "vite-plugin-md": "^0.11.9",
-    "vue": "^3.2.25",
     "vue-router": "^4.0.12"
-  },
-  "devDependencies": {
-    "@vitejs/plugin-vue": "^2.2.0",
-    "typescript": "^4.5.4",
-    "vite": "^2.8.0",
-    "vue-tsc": "^0.29.8"
   }
 }
