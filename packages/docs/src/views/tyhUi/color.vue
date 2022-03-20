@@ -41,7 +41,7 @@
   <p>下面是 tyh-ui 推荐的一些其它色彩</p>
   <p>点击即可复制颜色色号</p>
   <div id="colorList3">
-    <!-- <div
+    <div
       class="colorList-item3"
       v-for="(list3, index) in colorList3"
       :style="ListBackgroundColor(list3)"
@@ -51,32 +51,22 @@
     >
       <p>类型：{{ list3.type }}</p>
       <p>{{ list3.color }}</p>
-    </div> -->
-    <div
-      class="colorList-item3"
-      v-for="(list3, index) in colorList3"
-      :style="ListBackgroundColor(list3)"
-      :key="index"
-      :data-clipboard-text="list3.color"
-    >
-      <p>类型：{{ list3.type }}</p>
-      <p>{{ list3.color }}</p>
     </div>
   </div>
 
-  <!-- <tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page style="margin: 50px 0">
     <tyh-turn-page-item direction="left" url="/component/install">
       快速上手
     </tyh-turn-page-item>
     <tyh-turn-page-item direction="right" url="/component/container">
       Container 布局容器
     </tyh-turn-page-item>
-  </tyh-turn-page> -->
+  </tyh-turn-page>
 </template>
 
 <script setup>
-// import Clipboard from 'clipboard'
-// import { Message } from 'tyh-ui2'
+import Clipboard from 'clipboard'
+import { Message } from 'tyh-ui2'
 const colorList1 = [
   { color: '3a6ff4', type: 'primary' },
   { color: '54c600', type: 'success' },
@@ -129,17 +119,22 @@ const colorList3 = [
 ]
 
 // 复制色号
-function copyColor (dom) {
+function copyColor(dom) {
   const clipboard = new Clipboard(dom)
   // 复制成功
   clipboard.on('success', _ => {
-    Message({ message: '复制成功', type: 'success', iconClass: 'tyh-ui-success-01', round: true })
+    Message({
+      message: '复制成功',
+      type: 'success',
+      iconClass: 'tyh-ui-success-01',
+      round: true
+    })
     clipboard.destroy()
   })
 }
 
 // 每个盒子的颜色
-function ListBackgroundColor (item) {
+function ListBackgroundColor(item) {
   return { background: `#${item.color}` }
 }
 </script>

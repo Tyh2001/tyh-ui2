@@ -5,7 +5,7 @@
         <img
           draggable="false"
           class="logo"
-          src="@/assets/tyh-ui2-logo.svg"
+          src="./images/tyh-ui2-logo.svg"
           alt="logo"
         />
         <span class="name">Tyh UI</span>
@@ -40,11 +40,11 @@ import Sidebar from '@/components/Sidebar.vue'
 import { useRoute } from 'vue-router'
 import { ref, watch } from 'vue'
 const { highLightStyle, drawer, layoutList } = layoutOptions()
-function layoutOptions () {
+function layoutOptions() {
   const layoutList = [
     { title: '首页', url: '/' },
     { title: '组件', url: '/component' },
-    { title: '关于', url: '/about' },
+    { title: '关于', url: '/about' }
   ]
   const route = useRoute()
   const highLightStyle = url => {
@@ -54,9 +54,12 @@ function layoutOptions () {
     return { color: url === res ? '#3a6ff4' : '#000' }
   }
   const drawer = ref(false)
-  watch(() => route.path, () => {
-    drawer.value = false
-  })
+  watch(
+    () => route.path,
+    () => {
+      drawer.value = false
+    }
+  )
   return { highLightStyle, drawer, layoutList }
 }
 </script>

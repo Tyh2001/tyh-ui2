@@ -95,6 +95,7 @@ function highLightStyle(index) {
 
 <style scoped>
 .urlPush {
+  padding-left: 20px;
   width: 100%;
   display: inline-block;
   text-decoration: none;
@@ -102,8 +103,6 @@ function highLightStyle(index) {
   font-size: 14px;
   cursor: pointer;
   transition: 0.3s;
-  padding: 15px 20px;
-  margin: 0;
 }
 .urlPush a {
   text-decoration: none;
