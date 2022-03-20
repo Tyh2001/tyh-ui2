@@ -2,11 +2,6 @@
   "name": "@tyh-ui/docs",
   "private": true,
   "version": "1.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
-  },
   "dependencies": {
     "highlight.js": "^11.5.0",
     "markdown-it-anchor": "^8.4.1",

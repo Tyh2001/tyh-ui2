@@ -2,11 +2,6 @@
   "name": "@tyh-ui/demo",
   "private": true,
   "version": "1.0.0",
-  "scripts": {
-    "dev": "vite",
-    "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
-  },
   "devDependencies": {
     "@tyh-ui/tyh-ui2": "3.4.3"
   }

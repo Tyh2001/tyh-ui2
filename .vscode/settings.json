@@ -8,6 +8,7 @@
     "prettierignore",
     "prettierrc",
     "vite",
+    "vitejs",
     "vitest",
     "vnode"
   ]
