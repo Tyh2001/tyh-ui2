@@ -1,7 +1,6 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import Markdown from 'vite-plugin-md'
-import { visualizer } from 'rollup-plugin-visualizer'
 const { resolve } = require('path')
 
 export default defineConfig({
@@ -10,7 +9,6 @@ export default defineConfig({
     vue({
       include: [/\.vue$/, /\.md$/]
     }),
-    visualizer(),
     Markdown({
       wrapperClasses: 'tyh-markdown-body'
     })
