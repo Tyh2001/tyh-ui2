@@ -6,7 +6,7 @@
     "clipboard": "^2.0.8",
     "highlight.js": "^11.4.0",
     "rollup-plugin-visualizer": "^5.5.2",
-    "tyh-ui2": "^3.4.3",
+    "tyh-ui2": "^3.4.4",
     "vue-router": "^4.0.12"
   }
 }
