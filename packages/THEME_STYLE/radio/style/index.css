@@ -1,0 +1,57 @@
+.tyh-radio {
+  margin-right: 19px;
+  user-select: none;
+}
+.tyh-radio .tyh-radio-o {
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  border: 1px solid #e4e3e3;
+  vertical-align: middle;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+.tyh-radio .tyh-radio-o input {
+  display: none !important;
+}
+.tyh-radio .tyh-radio-o::after {
+  content: '';
+  width: 4px;
+  height: 4px;
+  border-radius: 100%;
+  background-color: #fff;
+  position: absolute;
+  top: 33%;
+  right: 33%;
+}
+.tyh-radio .tyh-radio-text {
+  font-size: 14px;
+  margin-left: 6px;
+  transition: 0.3s;
+}
+.tyh-radio .tyh-radio-hig {
+  background-color: #3a6ff4;
+  border: 1px solid #3a6ff4;
+  position: relative;
+}
+.tyh-radio .tyh-radio-disabled {
+  background-color: #b6b5b5;
+  border: 1px solid #b6b5b5;
+  position: relative;
+}
+.tyh-radio-border {
+  border-radius: 4px;
+  display: inline-block;
+}
+.tyh-radio-large {
+  padding: 7px 20px 10px 20px;
+}
+.tyh-radio-medium {
+  padding: 5px 17px 8px 17px;
+}
+.tyh-radio-small {
+  padding: 3px 14px 6px 14px;
+}
+.tyh-radio-mini {
+  padding: 1px 11px 4px 11px;
+}

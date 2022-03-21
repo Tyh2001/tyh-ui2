@@ -1,0 +1,69 @@
+@primary: #3a6ff4;
+@success: #54c600;
+@danger: #d10f1b;
+@warning: #fbcc30;
+@default: #484848;
+
+.tyh-message {
+  position: fixed;
+  display: inline-block;
+  min-width: 150px;
+  border-radius: 4px;
+  padding: 10px 23px;
+  box-sizing: border-box;
+  background: #fff;
+  box-shadow: 0 0 8px 2px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  z-index: 99999;
+  top: -37px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: opacity 0.3s, transform 0.4s, top 0.4s;
+
+  .tyh-message-content {
+    text-align: center;
+  }
+
+  .lef-icon {
+    margin-right: 6px;
+    font-size: 16px;
+  }
+
+  .tyh-ui-close {
+    margin-left: 15px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+}
+
+.tyh-message-round {
+  border-radius: 30px;
+}
+
+.tyh-message-,
+.tyh-message-default {
+  color: @default;
+}
+
+.tyh-message-primary {
+  color: @primary;
+}
+
+.tyh-message-success {
+  color: @success;
+}
+
+.tyh-message-danger {
+  color: @danger;
+}
+
+.tyh-message-warning {
+  color: @warning;
+}
+
+.tyh-message-fade-enter-from,
+.tyh-message-fade-leave-to {
+  opacity: 0;
+  -webkit-transform: translate(-50%, -100%);
+  transform: translate(-50%, -100%);
+}

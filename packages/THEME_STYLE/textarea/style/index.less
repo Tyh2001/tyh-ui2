@@ -1,0 +1,35 @@
+@primary: #3a6ff4;
+
+.tyh-textarea {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+  transition: 0.35s;
+  font-size: 0;
+
+  .tyh-textarea-textarea {
+    width: 100%;
+    border-radius: 5px;
+    color: #3f536e;
+    border: 1px solid #c5d9e8;
+    outline: none;
+    padding: 10px;
+    transition: border 0.35s;
+    background: #fff;
+    box-sizing: border-box;
+    font-family: '微软雅黑';
+    font-size: 15px;
+
+    &:focus {
+      border: 1px solid @primary;
+    }
+  }
+
+  .tyh-textarea-disabled {
+    background: #f5f7fa;
+    border-color: #e4e7ed;
+    color: #c0c4cc;
+    cursor: not-allowed;
+  }
+}

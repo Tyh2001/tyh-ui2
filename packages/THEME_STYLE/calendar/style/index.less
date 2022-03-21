@@ -1,0 +1,58 @@
+.tyh-calendar {
+  display: inline-block;
+
+  .tyh-calendar-container {
+    border: 1px solid #eee;
+    flex-wrap: wrap;
+    display: block;
+    position: relative;
+
+    .tyh-calendar-header {
+      display: flex;
+      padding: 10px;
+      box-sizing: border-box;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+
+      .tyh-calendar-isDay {
+        color: #333;
+        line-height: 40px;
+        text-align: right;
+      }
+    }
+
+    .tyh-calendar-month {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tyh-calendar-day {
+        border: 1px solid #eee;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .tyh-calendar-day:hover {
+        background-color: rgb(218, 232, 255);
+      }
+    }
+
+    // 星期
+    .tyh-calendar-week {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tyh-calendar-week-item {
+        height: 30px;
+        border: 1px solid #fff;
+        display: flex;
+        color: #333;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

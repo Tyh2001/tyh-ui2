@@ -1,0 +1,30 @@
+.tyh-turn-page-item {
+  flex: 1;
+  transition: 0.2s;
+}
+.tyh-turn-page-item .tyh-turn-page-item-link {
+  text-decoration: none;
+  color: #515a6e;
+  cursor: pointer;
+}
+.tyh-turn-page-item .tyh-turn-page-item-link:hover {
+  color: #3a6ff4;
+}
+.tyh-turn-page-item .tyh-turn-page-item-link:hover .tyh-icon {
+  color: #3a6ff4 !important;
+}
+.tyh-turn-page-item .tyh-turn-page-item-prohibit {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.tyh-turn-page-item .tyh-turn-page-item-prohibit .tyh-icon {
+  opacity: 0.5 !important;
+  color: #515a6e !important;
+}
+.tyh-turn-page-item .tyh-turn-page-item-prohibit:hover {
+  opacity: 0.5;
+  color: #515a6e;
+}
+.tyh-turn-page-item .tyh-turn-page-item-prohibit:hover .tyh-icon {
+  color: #515a6e !important;
+}

@@ -1,0 +1,29 @@
+.tyh-image {
+  display: inline-block;
+}
+.tyh-image .tyh-image-select {
+  user-select: none;
+}
+.tyh-image .tyh-image-fill {
+  object-fit: fill;
+}
+.tyh-image .tyh-image-contain {
+  object-fit: contain;
+}
+.tyh-image .tyh-image-cover {
+  object-fit: cover;
+}
+.tyh-image .tyh-image-none {
+  object-fit: none;
+}
+.tyh-image .tyh-image-scale-down {
+  object-fit: scale-down;
+}
+.tyh-image .tyh-image-error {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  display: inline-block;
+  color: #606266;
+  font-size: 15px;
+}
