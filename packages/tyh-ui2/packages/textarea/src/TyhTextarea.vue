@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
 
 const input = (e: any): void => emit('update:modelValue', e.target.value)

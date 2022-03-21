@@ -14,5 +14,5 @@
 
 <script lang="ts" setup>
 import { prop } from './prop'
-defineProps({ ...prop })
+defineProps(prop)
 </script>

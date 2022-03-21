@@ -9,7 +9,7 @@
 import { computed } from 'vue'
 import { prop } from './props'
 import { THEME } from '../../../utils/theme'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 
 const color = computed((): string => {
   if (props.simple) return THEME[props.type]

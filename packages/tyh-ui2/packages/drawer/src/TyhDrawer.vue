@@ -34,7 +34,7 @@
 <script lang="ts" setup>
 import { computed, getCurrentInstance, watch } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const emit = defineEmits([
   'update:modelValue',
   'open',

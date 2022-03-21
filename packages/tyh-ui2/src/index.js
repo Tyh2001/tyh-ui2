@@ -38,6 +38,7 @@ import TyhOption from '../packages/option'
 import TyhTagging from '../packages/tagging'
 import TyhDrawer from '../packages/drawer'
 import TyhDialog from '../packages/dialog'
+import TyhCheckbox from '../packages/checkbox'
 import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
@@ -82,7 +83,8 @@ const components = [
   TyhOption,
   TyhTagging,
   TyhDrawer,
-  TyhDialog
+  TyhDialog,
+  TyhCheckbox
 ]
 
 const install = app => {
@@ -139,7 +141,8 @@ export {
   TyhOption,
   TyhTagging,
   TyhDrawer,
-  TyhDialog
+  TyhDialog,
+  TyhCheckbox
 }
 
 export default tyhUi2

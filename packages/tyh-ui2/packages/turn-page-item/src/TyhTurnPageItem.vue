@@ -23,7 +23,7 @@
 <script lang="ts" setup>
 import { getCurrentInstance, inject } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 
 const { isCenter, link } = TyhTurnPageItem()
 function TyhTurnPageItem() {

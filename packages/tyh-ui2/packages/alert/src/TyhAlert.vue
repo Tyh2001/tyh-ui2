@@ -11,7 +11,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const emit = defineEmits(['close'])
 
 const isClass = computed((): (string | object)[] => {

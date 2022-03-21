@@ -21,7 +21,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { prop } from './prop'
-defineProps({ ...prop })
+defineProps(prop)
 const emit = defineEmits(['error', 'load'])
 
 const isError = ref<boolean>(false)

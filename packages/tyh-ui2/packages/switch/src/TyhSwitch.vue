@@ -25,7 +25,7 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const emit = defineEmits(['update:modelValue', 'change'])
 const { switchValue, clickSwitch, switchStyle, switchRollStyle } = TyhSwitch()
 

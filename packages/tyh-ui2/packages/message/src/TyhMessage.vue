@@ -20,7 +20,7 @@
 <script lang="ts" setup>
 import { getCurrentInstance, ref, computed } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const { isShow, leave, close, isClass } = TyhMessage()
 
 function TyhMessage() {

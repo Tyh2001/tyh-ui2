@@ -1,8 +1,5 @@
 {
   "name": "@tyh-ui/demo",
   "private": true,
-  "version": "1.0.0",
-  "devDependencies": {
-    "@tyh-ui/tyh-ui2": "3.4.3"
-  }
+  "version": "1.0.0"
 }

@@ -12,7 +12,7 @@
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 const { isShow, toTop } = TyhBackTop()
 
 function TyhBackTop() {

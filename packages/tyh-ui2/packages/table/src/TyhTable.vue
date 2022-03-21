@@ -57,7 +57,7 @@
 
 <script lang="ts" setup>
 import { prop } from './prop'
-const props = defineProps({ ...prop })
+const props = defineProps(prop)
 
 const importantStyle = (i: number): string | void => {
   const importants: any = props.important
