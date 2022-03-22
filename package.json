@@ -24,6 +24,7 @@
   },
   "license": "ISC",
   "dependencies": {
+    "gitmojis": "^3.9.0",
     "rollup": "^2.70.1",
     "vite-plugin-compression": "^0.5.1",
     "vue": "^3.2.25"
