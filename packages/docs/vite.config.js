@@ -1,7 +1,7 @@
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { visualizer } from 'rollup-plugin-visualizer'
-const { resolve } = require('path')
+import { resolve } from 'path'
 
 export default defineConfig({
   base: './',
@@ -9,6 +9,15 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': resolve(__dirname, './src')
+    }
+  },
+  build: {
+    minify: 'terser',
+    terserOptions: {
+      compress: {
+        drop_console: true,
+        drop_debugger: true
+      }
     }
   },
   server: {
