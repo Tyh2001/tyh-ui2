@@ -1,87 +1,38 @@
 <template>
-  <div id="Footer">
-    <div class="foot-box">
-      <h3 class="title-footer">链接</h3>
-      <ul class="link-ul">
-        <li>
-          <tyh-link target="_blank" url="https://github.com/Tyh2001/tyh-ui">
-            Github
-          </tyh-link>
-        </li>
-        <li>
-          <tyh-link target="_blank" url="https://www.npmjs.com/package/tyh-ui2">
-            NPM
-          </tyh-link>
-        </li>
-        <li>
-          <tyh-link
-            target="_blank"
-            url="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md"
-          >
-            更新日志
-          </tyh-link>
-        </li>
-        <li>
-          <tyh-link target="_blank" url="https://tianyuhao.cn">
-            关于我
-          </tyh-link>
-        </li>
-      </ul>
-    </div>
+  <div id="footer">
+    <a target="_blank" href="https://github.com/Tyh2001/tyh-ui">Github</a>
+    <span class="interval">-</span>
+    <a target="_blank" href="https://www.npmjs.com/package/tyh-ui2">NPM</a>
+    <span class="interval">-</span>
+    <a
+      target="_blank"
+      href="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md"
+    >
+      更新日志
+    </a>
+    <span class="interval">-</span>
+    <a target="_blank" href="https://tianyuhao.cn">关于我</a>
   </div>
 </template>
 
 <style scoped>
-#Footer {
-  background: #f7fbfd;
-  padding: 60px 0;
-  box-sizing: border-box;
-  user-select: none;
-}
-#Footer .foot-box {
-  width: 800px;
-  margin: auto;
-}
-#Footer .foot-box .title-footer {
-  margin-top: 50px;
-  font-size: 20px;
-  font-weight: 600;
-  padding-bottom: 20px;
-  color: #515a6e;
-}
-#Footer .foot-box .tyh-link {
-  display: inline-block;
-}
-#Footer .foot-box .tyh-link .userBox {
-  width: 150px;
-  height: 50px;
+#footer {
+  height: 140px;
   display: flex;
   justify-content: center;
   align-items: center;
-  cursor: pointer;
 }
-#Footer .foot-box .tyh-link .userBox .myPhoto {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
+#footer .interval {
+  display: inline-block;
+  padding: 0 15px;
+  cursor: default;
 }
-#Footer .foot-box .tyh-link .userBox .userName {
-  font-size: 20px;
-  color: #515a6e;
-  margin-left: 10px;
+#footer a {
+  color: #333;
+  text-decoration: none;
+  transition: 0.4s;
 }
-#Footer .foot-box .link-ul li {
-  list-style: none;
-  line-height: 40px;
-}
-@media screen and (max-width: 700px) {
-  #Footer {
-    width: 100%;
-    padding: 30px;
-    box-sizing: border-box;
-  }
-  #Footer .foot-box {
-    width: 100%;
-  }
+#footer a:hover {
+  color: #3a6ff4;
 }
 </style>
