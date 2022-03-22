@@ -1,24 +1,6 @@
 <template>
   <div id="Footer">
     <div class="foot-box">
-      <h3 class="title-footer">合作者</h3>
-      <tyh-link
-        v-for="(item, index) in collaborator"
-        target="_blank"
-        :url="item.url"
-        :key="index"
-      >
-        <div class="userBox">
-          <img
-            draggable="false"
-            class="myPhoto"
-            :src="item.photo"
-            alt="photo"
-          />
-          <span class="userName">{{ item.name }}</span>
-        </div>
-      </tyh-link>
-
       <h3 class="title-footer">链接</h3>
       <ul class="link-ul">
         <li>
@@ -48,21 +30,6 @@
     </div>
   </div>
 </template>
-
-<script setup>
-const collaborator = [
-  {
-    name: '田同学',
-    photo: 'https://avatars.githubusercontent.com/u/73180970?v=4',
-    url: 'https://github.com/Tyh2001'
-  },
-  {
-    name: '话梅桔',
-    photo: 'https://avatars.githubusercontent.com/u/46716525?v=4',
-    url: 'https://github.com/Givenchy-Coisini'
-  }
-]
-</script>
 
 <style scoped>
 #Footer {

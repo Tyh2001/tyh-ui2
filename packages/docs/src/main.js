@@ -11,8 +11,4 @@ import hlVue from '@highlightjs/vue-plugin'
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('xml', xml)
 
-const app = createApp(App)
-app.use(router)
-app.use(hlVue)
-app.use(tyhUi2)
-app.mount('#app')
+createApp(App).use(router).use(hlVue).use(tyhUi2).mount('#app')

@@ -4,7 +4,7 @@
       <img
         draggable="false"
         class="logo"
-        src="./images/tyh-ui2-logo.svg"
+        src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg"
         alt="logo"
       />
     </div>
@@ -35,8 +35,16 @@
     <h3 class="about_title">赞助我们</h3>
     <tyh-text>开发不易，欢迎大家赞助！</tyh-text>
     <div id="sponsor">
-      <img draggable="false" src="./images/weixin.jpg" alt="weixin" />
-      <img draggable="false" src="./images/zhifubao.jpg" alt="zhifubao" />
+      <img
+        draggable="false"
+        src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg"
+        alt="weixin"
+      />
+      <img
+        draggable="false"
+        src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg"
+        alt="zhifubao"
+      />
     </div>
   </div>
   <Footer />

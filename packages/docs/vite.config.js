@@ -2,6 +2,7 @@ import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import { visualizer } from 'rollup-plugin-visualizer'
 import { resolve } from 'path'
+// import viteCompression from 'vite-plugin-compression'
 
 export default defineConfig({
   base: './',
@@ -11,6 +12,7 @@ export default defineConfig({
       '@': resolve(__dirname, './src')
     }
   },
+  // 生产环境取消 console
   build: {
     minify: 'terser',
     terserOptions: {
@@ -19,6 +21,13 @@ export default defineConfig({
         drop_debugger: true
       }
     }
+    // rollupOptions: {
+    //   output: {
+    //     chunkFileNames: 'js/[name]-[hash].js',
+    //     entryFileNames: 'js/[name]-[hash].js',
+    //     assetFileNames: '[ext]/[name]-[hash].[ext]'
+    //   }
+    // }
   },
   server: {
     host: '127.0.0.1',

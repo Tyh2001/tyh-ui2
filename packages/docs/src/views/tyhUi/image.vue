@@ -5,7 +5,10 @@
   <p>图片的基本使用</p>
   <p>src 属性可以添加图片路径</p>
   <p>width，height 可以配置图片宽高</p>
-  <tyh-image width="300px" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+  <tyh-image
+    width="300px"
+    src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+  />
   <highlightjs language="javascript" :code="image.img1" />
 
   <h3 class="Subtitle">如何适应容器框</h3>
@@ -25,7 +28,7 @@
       <tyh-image
         width="100px"
         height="100px"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
         :fit="fit"
       />
     </div>

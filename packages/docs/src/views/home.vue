@@ -3,7 +3,7 @@
     <img
       draggable="false"
       class="logo"
-      src="./images/tyh-ui2-logo.svg"
+      src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg"
       alt="logo"
     />
     <h1 class="MainTitle">

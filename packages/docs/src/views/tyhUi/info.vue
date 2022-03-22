@@ -21,7 +21,7 @@
       <tyh-avatar
         round
         :size="5"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
       />
     </template>
     <template v-slot:right>
@@ -37,7 +37,7 @@
       <tyh-avatar
         round
         :size="5"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
       />
     </template>
     <template v-slot:right>
@@ -48,7 +48,7 @@
       <tyh-text block type="success">这是我今天拍的照片，好看吗？</tyh-text>
       <tyh-image
         width="300px"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
       />
     </template>
 
@@ -69,7 +69,7 @@
       <tyh-avatar
         round
         :size="5"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
       />
     </template>
   </tyh-info>
