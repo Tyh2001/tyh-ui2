@@ -7,12 +7,8 @@ export default {
       required: true
     }
   },
-  setup (props, { slots }) {
-    return () => h(
-      'h' + props.num,
-      {},
-      slots.default()
-    )
+  setup(props, { slots }) {
+    return () => h('h' + props.num, {}, slots.default())
     // render(){
     //   return h('h' + props.num, {}, slots.default())
     // }
