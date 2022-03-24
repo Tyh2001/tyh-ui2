@@ -1,6 +1,6 @@
-# tyh-ui contributing Guide
+# Tyh-ui contributing Guide
 
-## preface
+## Preface
 
 Hello! Welcome to use tyh-ui :blush:
 
@@ -28,19 +28,19 @@ For example:
 git commit -m 'feat: Add XXX function'
 ```
 
-| type     | describe                                                                |
-| -------- | ----------------------------------------------------------------------- |
-| build    |   build                                                                 |
-| chore    |  Change the construction process or add dependent libraries, tools, etc |
-| ci       | Ci related changes                                                      |
-| docs     | Document change                                                         |
-| feat     | new function                                                            |
-| fix      | repair                                                                  |
-| perf     | performance optimization                                                |
-| refactor | Code changes that neither fix errors nor add features                   |
-| revert   | Release new version                                                     |
-| style    | Tag, space, format, missing semicolon                                   |
-| test     | Add test / test case                                                    |
+| type     | describe                                                               |
+| -------- | ---------------------------------------------------------------------- |
+| build    | build                                                                  |
+| chore    | Change the construction process or add dependent libraries, tools, etc |
+| ci       | Ci related changes                                                     |
+| docs     | Document change                                                        |
+| feat     | new function                                                           |
+| fix      | repair                                                                 |
+| perf     | performance optimization                                               |
+| refactor | Code changes that neither fix errors nor add features                  |
+| revert   | Release new version                                                    |
+| style    | Tag, space, format, missing semicolon                                  |
+| test     | Add test / test case                                                   |
 
 ## Project structure
 
@@ -56,11 +56,11 @@ git commit -m 'feat: Add XXX function'
 ├── .vscode
 ├── packages                      Primary source file
 |  ├── demo                       Test items
-|  ├── docs                       tyh-ui2 docs
-|  ├── docs-new                   tyh-ui2 new docs(Under development)
-|  ├── sass_style                 sass style(Under development)
+|  ├── docs                       Tyh-ui2 docs
+|  ├── docs-new                   Tyh-ui2 new docs(Under development)
+|  ├── sass_style                 Sass style(Under development)
 |  ├── THEME_STYLE                Main style sheet
-|  └── tyh-ui2                    tyh-ui2 Source code
+|  └── tyh-ui2                    Tyh-ui2 Source code
 ├── .editorconfig                 Editor configuration because developers' editors are different
 ├── .eslintignore                 Files that do not require eslint verification
 ├── .eslintrc.js                  Configuration file of eslintrc specification
