@@ -9,11 +9,18 @@
 </template>
 
 <script lang="ts" setup>
-import Demo from './components/demo.jsx'
+import { h, render } from 'vue'
+import Demo from './components/demo.js'
 import { Message } from './message/index'
 function change1() {
   Message({ message: '默认提示', type: 'default', round: true })
 }
+
+Array.from({ length: 20 }).map(val => {
+  const VNode = h('p', null, 'hi')
+  render(VNode)
+  document.body.appendChild(VNode)
+})
 </script>
 
 <style scoped></style>
