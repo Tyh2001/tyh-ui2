@@ -100,3 +100,12 @@ errorIcon 属性配置加载失败的 icon
 | 插槽名称 | 说明说明       |
 | -------- | -------------- |
 | error    | 自定义失败提示 |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/image">
+    Image 头像
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/text">
+    Text 文字
+  </tyh-turn-page-item>
+</tyh-turn-page>
