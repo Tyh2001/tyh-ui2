@@ -53,3 +53,7 @@ size 属性可以改变 icon 的大小
 | icon  | 类名     | string | ——     | ——     |
 | color | 颜色     | string | ——     | ——     |
 | size  | 字体大小 | string | ——     | 16     |
+
+## Icon 集合
+
+点击即可复制代码
