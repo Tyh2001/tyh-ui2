@@ -72,14 +72,16 @@ clear 属性可以配置带有清空按钮的文本框
 
 icon 属性可以配置文本框带有其他图标，直接传递 icon 的名字传递即可
 
+```html
 <template>
   <tyh-input v-model="text9" icon="tyh-ui-electronics" />
 </template>
 
 <script setup>
-import { ref } from 'vue'
-const text9 = ref('')
+  import { ref } from 'vue'
+  const text9 = ref('')
 </script>
+```
 
 ## 禁用状态
 

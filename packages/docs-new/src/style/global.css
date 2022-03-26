@@ -6,9 +6,15 @@
 .tyh-button,
 .tyh-tag,
 .tyh-link,
+.tyh-input,
 .tyh-tagging,
 .tyh-button-group {
   margin: 0 13px 13px 0;
+}
+
+.tyh-input {
+  width: 260px;
+  display: block;
 }
 
 .tyh-button-group .tyh-button {
@@ -37,7 +43,7 @@
   line-height: 160px;
 }
 
-body > .tyh-container {
+body>.tyh-container {
   margin-bottom: 40px;
 }
 
