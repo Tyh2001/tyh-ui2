@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import buttonMd from '@/docs/button.md'
+import buttonMd from '@/docs/button/button.md'
 </script>

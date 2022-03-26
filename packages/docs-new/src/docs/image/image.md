@@ -18,24 +18,34 @@ width，height 可以配置图片宽高
 
 fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
-```html
-<template>
-  <div class="fitBox">
-    <div class="item" v-for="fit in fits" :key="fit">
-      <span class="text">{{ fit }}</span>
-      <tyh-image
-        width="100px"
-        height="100px"
-        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
-        :fit="fit"
-      />
-    </div>
+<div class="fitBox">
+  <div class="item" v-for="fit in ['fill', 'contain', 'cover', 'none', 'scale-down']" :key="fit">
+    <span class="text">{{ fit }}</span>
+    <tyh-image
+      width="100px"
+      height="100px"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+      :fit="fit"
+    />
   </div>
-</template>
+</div>
 
-<script setup>
-  const fits = ['fill', 'contain', 'cover', 'none', 'scale-down']
-</script>
+```html
+<div class="fitBox">
+  <div
+    class="item"
+    v-for="fit in ['fill', 'contain', 'cover', 'none', 'scale-down']"
+    :key="fit"
+  >
+    <span class="text">{{ fit }}</span>
+    <tyh-image
+      width="100px"
+      height="100px"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+      :fit="fit"
+    />
+  </div>
+</div>
 ```
 
 ## Attributes
@@ -62,3 +72,12 @@ fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://
 | 插槽名称 | 说明说明       |
 | -------- | -------------- |
 | error    | 自定义失败提示 |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/rate">
+    Rate 评分
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/avatar">
+    Avatar 头像
+  </tyh-turn-page-item>
+</tyh-turn-page>

@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import imageMd from '@/docs/image.md'
+import imageMd from '@/docs/image/image.md'
 </script>

@@ -213,3 +213,12 @@ size 属性可以配置按钮尺寸
 | icon     | 按钮上的 icon  | string  | ——                                             | ——      |
 | size     | 按钮尺寸       | string  | large / small / mini                           | ——      |
 | square   | 方形按钮       | boolean | ——                                             | false   |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/container">
+    Container 布局容器
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/list">
+    List 列表
+  </tyh-turn-page-item>
+</tyh-turn-page>

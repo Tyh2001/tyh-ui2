@@ -81,3 +81,12 @@ icon 属性可以配置 icon
 | target    | 以新的窗口打开 | string  | 同原生 target 属性 \_blank           | ——     |
 | icon      | icon           | string  | ——                                   | ——     |
 | prohibit  | 禁用状态       | boolean | ——                                   | false  |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/tag">
+    Tag 标签
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/input">
+    Input 输入框
+  </tyh-turn-page-item>
+</tyh-turn-page>

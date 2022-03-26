@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import linkMd from '@/docs/link.md'
+import linkMd from '@/docs/link/link.md'
 </script>

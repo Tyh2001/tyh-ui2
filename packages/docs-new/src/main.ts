@@ -1,9 +1,12 @@
 import { createApp } from 'vue'
 import App from './App.vue'
+// @ts-ignore'
 import router from './router'
 import tyhUi2 from './tyhUi'
 import 'tyh-ui2/style/index.css'
 import './style/markdown-body.css'
+import './style/global.css'
+// @ts-ignore'
 import brightCode from 'bright-code'
 import 'bright-code/theme/tyh-theme.css'
 

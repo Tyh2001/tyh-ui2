@@ -64,14 +64,14 @@
     </div>
   </div>
 
-  <!-- <tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page style="margin: 50px 0">
     <tyh-turn-page-item direction="left" url="/component/install">
       快速上手
     </tyh-turn-page-item>
     <tyh-turn-page-item direction="right" url="/component/container">
       Container 布局容器
     </tyh-turn-page-item>
-  </tyh-turn-page> -->
+  </tyh-turn-page>
 </template>
 
 <script setup>

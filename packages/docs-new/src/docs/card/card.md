@@ -50,19 +50,19 @@ subtitle 自定义卡片的副标题
 
 shadow 属性可以配置阴影显示时机
 
-<tyh-card shadow="always">
+<tyh-card class="tyh-card-item" shadow="always">
   <template v-slot:title>主标题</template>
   <template v-slot:subtitle>副标题</template>
   <p>总是显示阴影</p>
 </tyh-card>
 
-<tyh-card shadow="hover">
+<tyh-card class="tyh-card-item" shadow="hover">
   <template v-slot:title>主标题</template>
   <template v-slot:subtitle>副标题</template>
   <p>鼠标移入显示</p>
 </tyh-card>
 
-<tyh-card>
+<tyh-card class="tyh-card-item">
   <template v-slot:title>主标题</template>
   <template v-slot:subtitle>副标题</template>
   <p>从不显示</p>
@@ -101,3 +101,12 @@ shadow 属性可以配置阴影显示时机
 | -------- | ------------------ |
 | title    | 自定义卡片的主标题 |
 | subtitle | 自定义卡片的副标题 |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/list">
+    List 列表
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/tag">
+    Tag 标签
+  </tyh-turn-page-item>
+</tyh-turn-page>

@@ -186,3 +186,12 @@ tyh-footer
 | 参数   | 说明     | 类型   | 可选值 | 默认值 |
 | ------ | -------- | ------ | ------ | ------ |
 | height | 底栏高度 | string | ——     | 60px   |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/color">
+    Color 色彩
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/button">
+    Button 按钮
+  </tyh-turn-page-item>
+</tyh-turn-page>

@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import installMd from '@/docs/install.md'
+import installMd from '@/docs/install/install.md'
 </script>
