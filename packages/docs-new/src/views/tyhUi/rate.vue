@@ -1,5 +1,5 @@
 <template>
-  <rate-md />
+  <rate-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <message-md />
+  <message-md v-high />
 </template>
 
 <script lang="ts" setup>

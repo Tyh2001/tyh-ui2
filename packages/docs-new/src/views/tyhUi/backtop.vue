@@ -1,5 +1,5 @@
 <template>
-  <backTop-md />
+  <backTop-md v-high />
 </template>
 
 <script lang="ts" setup>

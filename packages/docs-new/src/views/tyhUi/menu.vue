@@ -1,5 +1,5 @@
 <template>
-  <menu-md />
+  <menu-md v-high />
 </template>
 
 <script lang="ts" setup>

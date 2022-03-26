@@ -1,5 +1,5 @@
 <template>
-  <table-md />
+  <table-md v-high />
 </template>
 
 <script lang="ts" setup>

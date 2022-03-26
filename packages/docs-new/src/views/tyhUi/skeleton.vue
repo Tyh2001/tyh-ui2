@@ -1,5 +1,5 @@
 <template>
-  <skeleton-md />
+  <skeleton-md v-high />
 </template>
 
 <script lang="ts" setup>

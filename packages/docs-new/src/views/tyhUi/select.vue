@@ -1,5 +1,5 @@
 <template>
-  <select-md />
+  <select-md v-high />
 </template>
 
 <script lang="ts" setup>

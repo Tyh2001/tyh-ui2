@@ -1,5 +1,5 @@
 <template>
-  <tagging-md />
+  <tagging-md v-high />
 </template>
 
 <script lang="ts" setup>

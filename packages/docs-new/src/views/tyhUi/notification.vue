@@ -1,5 +1,5 @@
 <template>
-  <notification-md />
+  <notification-md v-high />
 </template>
 
 <script lang="ts" setup>

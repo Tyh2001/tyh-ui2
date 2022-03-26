@@ -1,5 +1,5 @@
 <template>
-  <crumbs-md />
+  <crumbs-md v-high />
 </template>
 
 <script lang="ts" setup>

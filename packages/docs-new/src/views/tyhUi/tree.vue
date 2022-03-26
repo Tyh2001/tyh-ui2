@@ -1,5 +1,5 @@
 <template>
-  <tree-md />
+  <tree-md v-high />
 </template>
 
 <script lang="ts" setup>

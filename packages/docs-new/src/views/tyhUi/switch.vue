@@ -1,5 +1,5 @@
 <template>
-  <switch-md />
+  <switch-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <turnPage-md />
+  <turnPage-md v-high />
 </template>
 
 <script lang="ts" setup>

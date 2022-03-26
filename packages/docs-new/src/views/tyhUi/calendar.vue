@@ -1,5 +1,5 @@
 <template>
-  <calendar-md />
+  <calendar-md v-high />
 </template>
 
 <script lang="ts" setup>

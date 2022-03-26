@@ -1,5 +1,5 @@
 <template>
-  <info-md />
+  <info-md v-high />
 </template>
 
 <script lang="ts" setup>

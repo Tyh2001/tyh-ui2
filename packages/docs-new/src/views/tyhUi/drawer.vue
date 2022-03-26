@@ -1,5 +1,5 @@
 <template>
-  <drawer-md />
+  <drawer-md v-high />
 </template>
 
 <script lang="ts" setup>

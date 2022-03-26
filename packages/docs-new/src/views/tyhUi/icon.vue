@@ -1,5 +1,5 @@
 <template>
-  <icon-md />
+  <icon-md v-high />
 </template>
 
 <script lang="ts" setup>

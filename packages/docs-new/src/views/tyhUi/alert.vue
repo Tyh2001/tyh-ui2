@@ -1,5 +1,5 @@
 <template>
-  <alert-md />
+  <alert-md v-high />
 </template>
 
 <script lang="ts" setup>

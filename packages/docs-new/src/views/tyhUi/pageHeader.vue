@@ -1,5 +1,5 @@
 <template>
-  <pageHeader-md />
+  <pageHeader-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <textarea-md />
+  <textarea-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <avatar-md />
+  <avatar-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <card-md />
+  <card-md v-high />
 </template>
 
 <script lang="ts" setup>

@@ -1,5 +1,5 @@
 <template>
-  <button-md />
+  <button-md v-high />
 </template>
 
 <script lang="ts" setup>

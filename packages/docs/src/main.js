@@ -11,4 +11,21 @@ import hlVue from '@highlightjs/vue-plugin'
 hljs.registerLanguage('javascript', javascript)
 hljs.registerLanguage('xml', xml)
 
-createApp(App).use(router).use(hlVue).use(tyhUi2).mount('#app')
+// import hljs from 'highlight.js'
+// import 'highlight.js/styles/github.css'
+
+createApp(App)
+  .use(router)
+  // .use(app => {
+  //   app.directive('highlight', {
+  //     mounted (el) {
+  //       let blocks = el.querySelectorAll('pre code')
+  //       for (let i = 0; i < blocks.length; i++) {
+  //         hljs.highlightElement(blocks[i])
+  //       }
+  //     },
+  //   })
+  // })
+  .use(hlVue)
+  .use(tyhUi2)
+  .mount('#app')

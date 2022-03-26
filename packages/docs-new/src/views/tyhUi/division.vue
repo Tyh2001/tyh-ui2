@@ -1,5 +1,5 @@
 <template>
-  <division-md />
+  <division-md v-high />
 </template>
 
 <script lang="ts" setup>

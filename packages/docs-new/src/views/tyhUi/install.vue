@@ -1,5 +1,5 @@
 <template>
-  <install-md />
+  <install-md v-high />
 </template>
 
 <script lang="ts" setup>

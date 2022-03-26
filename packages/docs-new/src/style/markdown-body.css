@@ -5,16 +5,18 @@
 .tyh-markdown-body h5,
 .tyh-markdown-body h6 {
   color: #333;
+  font-weight: 500;
 }
 .tyh-markdown-body p {
   color: #515a6e;
   font-size: 15px;
 }
 .tyh-markdown-body pre {
-  padding: 15px;
   box-sizing: border-box;
   font-size: 15px;
-  border-radius: 18px;
+}
+.tyh-markdown-body pre code {
+  border-radius: 8px;
   background: #f3f7ff;
 }
 .tyh-markdown-body pre code {

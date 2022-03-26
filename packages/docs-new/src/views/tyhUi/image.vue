@@ -1,5 +1,5 @@
 <template>
-  <image-md />
+  <image-md v-high />
 </template>
 
 <script lang="ts" setup>

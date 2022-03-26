@@ -1,5 +1,5 @@
 <template>
-  <radio-md />
+  <radio-md v-high />
 </template>
 
 <script lang="ts" setup>

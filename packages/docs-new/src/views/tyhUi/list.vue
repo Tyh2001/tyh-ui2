@@ -1,5 +1,5 @@
 <template>
-  <list-md />
+  <list-md v-high />
 </template>
 
 <script lang="ts" setup>
