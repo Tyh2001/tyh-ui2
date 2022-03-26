@@ -1,14 +1,5 @@
-/*
-Language: HTML, XML
-Website: https://www.w3.org/XML/
-Category: common, web
-Audit: 2020
-*/
-
-/** @type LanguageFn */
-function xml(hljs) {
+export const xml = hljs => {
   const regex = hljs.regex
-  // Element names can contain letters, digits, hyphens, underscores, and periods
   const TAG_NAME_RE = regex.concat(
     /[A-Z_]/,
     regex.optional(/[A-Z0-9_.-]*:/),
@@ -224,5 +215,3 @@ function xml(hljs) {
     ]
   }
 }
-
-export default xml

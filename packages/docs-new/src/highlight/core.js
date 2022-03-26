@@ -2659,16 +2659,11 @@ const HLJS = function (hljs) {
     }
   }
 
-  // merge all the modes/regexes into our main object
   Object.assign(hljs, MODES)
 
   return hljs
 }
 
-// export an "instance" of the highlighter
 var highlight = HLJS({})
 
-// module.exports = highlight;
 export default highlight
-highlight.HighlightJS = highlight
-highlight.default = highlight

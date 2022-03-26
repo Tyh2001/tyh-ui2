@@ -144,15 +144,7 @@ const BUILT_IN_VARIABLES = [
 
 const BUILT_INS = [].concat(BUILT_IN_GLOBALS, TYPES, ERROR_TYPES)
 
-/*
-Language: JavaScript
-Description: JavaScript (JS) is a lightweight, interpreted, or just-in-time compiled programming language with first-class functions.
-Category: common, scripting, web
-Website: https://developer.mozilla.org/en-US/docs/Web/JavaScript
-*/
-
-/** @type LanguageFn */
-function javascript(hljs) {
+export const javascript = hljs => {
   const regex = hljs.regex
   /**
    * Takes a string like "<Booger" and checks to see
@@ -701,5 +693,3 @@ function javascript(hljs) {
     ]
   }
 }
-
-export default javascript

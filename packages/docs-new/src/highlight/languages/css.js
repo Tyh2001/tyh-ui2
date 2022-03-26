@@ -598,14 +598,7 @@ const ATTRIBUTES = [
   // instead of getting false positives on say `font`
 ].reverse()
 
-/*
-Language: CSS
-Category: common, css, web
-Website: https://developer.mozilla.org/en-US/docs/Web/CSS
-*/
-
-/** @type LanguageFn */
-function css(hljs) {
+export const css = hljs => {
   const regex = hljs.regex
   const modes = MODES(hljs)
   const VENDOR_PREFIX = { begin: /-(webkit|moz|ms|o)-(?=[a-z])/ }
@@ -729,5 +722,3 @@ function css(hljs) {
     ]
   }
 }
-
-export default css
