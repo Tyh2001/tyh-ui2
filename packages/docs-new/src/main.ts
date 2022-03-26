@@ -14,7 +14,7 @@ import './style/markdown-body.css'
 // hljs.registerLanguage('xml', xml)
 
 import hljs from 'highlight.js'
-import 'highlight.js/styles/github.css'
+import './style/stackoverflow-light.css'
 
 createApp(App)
   .use(router)

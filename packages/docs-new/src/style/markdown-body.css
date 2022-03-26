@@ -6,10 +6,12 @@
 .tyh-markdown-body h6 {
   color: #333;
   font-weight: 500;
+  padding: 22px 0;
 }
 .tyh-markdown-body p {
   color: #515a6e;
   font-size: 15px;
+  padding-bottom: 10px;
 }
 .tyh-markdown-body pre {
   box-sizing: border-box;
