@@ -39,6 +39,7 @@
   border: 0;
   width: 100%;
   border-collapse: collapse;
+  margin-bottom: 20px;
 }
 .tyh-markdown-body table thead {
   color: #6e6e6e;

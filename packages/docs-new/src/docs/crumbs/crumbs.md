@@ -73,3 +73,12 @@ tyh-crumbs-item
 | 参数 | 说明       | 类型   | 可选值 | 默认值 |
 | ---- | ---------- | ------ | ------ | ------ |
 | to   | 跳转的路径 | string | ——     | ——     |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/icon">
+    Icon 图标
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/turnpage">
+    TurnPage 翻页
+  </tyh-turn-page-item>
+</tyh-turn-page>

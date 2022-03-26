@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import taggingMd from '@/docs/tagging.md'
+import taggingMd from '@/docs/tagging/tagging.md'
 </script>

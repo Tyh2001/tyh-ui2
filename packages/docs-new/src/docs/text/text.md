@@ -86,3 +86,12 @@ color 属性可以配置自定义颜色
 | block | 是否独占一行 | boolean | ——                                             | false   |
 | size  | 文字大小     | string  | ——                                             | 16      |
 | color | 自定义颜色   | string  | ——                                             | ——      |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/avatar">
+    Avatar 头像
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/table">
+    Table 表格
+  </tyh-turn-page-item>
+</tyh-turn-page>

@@ -82,3 +82,12 @@ tyh-turn-page-item
 | url       | 跳转的路由 | string  | ——           | ——     |
 | icon      | 左右的图标 | string  | ——           | ——     |
 | prohibit  | 是否禁用   | boolean | ——           | false  |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/crumbs">
+    Crumbs 面包屑
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/backtop">
+    BackTop 回到顶部
+  </tyh-turn-page-item>
+</tyh-turn-page>

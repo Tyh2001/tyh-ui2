@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import textMd from '@/docs/text.md'
+import textMd from '@/docs/text/text.md'
 </script>

@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import backTopMd from '@/docs/backTop.md'
+import backTopMd from '@/docs/backTop/backTop.md'
 </script>

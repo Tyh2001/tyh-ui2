@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import divisionMd from '@/docs/division.md'
+import divisionMd from '@/docs/division/division.md'
 </script>

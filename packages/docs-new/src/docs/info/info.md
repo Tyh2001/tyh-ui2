@@ -17,7 +17,7 @@ right 插槽可以插入右侧内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
   <template v-slot:right>
@@ -31,7 +31,7 @@ right 插槽可以插入右侧内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
   <template v-slot:right>
@@ -49,7 +49,7 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
   <template v-slot:right>
@@ -60,7 +60,7 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-text block type="success">这是我今天拍的照片，好看吗？</tyh-text>
     <tyh-image
       width="300px"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
 
@@ -75,7 +75,7 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
   <template v-slot:right>
@@ -84,7 +84,10 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
 
   <template v-slot:body>
     <tyh-text block type="success">这是我今天拍的照片，好看吗？</tyh-text>
-    <tyh-image width="300px" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+    <tyh-image
+      width="300px"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+    />
   </template>
 
   <template v-slot:footer>
@@ -102,7 +105,7 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
 </tyh-info>
@@ -117,7 +120,7 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-avatar
       round
       :size="5"
-      src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
     />
   </template>
 </tyh-info>
@@ -139,3 +142,12 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
 | right    | 自定义信息栏的右侧内容 |
 | body     | 自定义信息栏的主要部分 |
 | footer   | 自定义信息栏的页脚部分 |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/pageHeader">
+    PageHeader 页头
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/textarea">
+    Textarea 文本域
+  </tyh-turn-page-item>
+</tyh-turn-page>

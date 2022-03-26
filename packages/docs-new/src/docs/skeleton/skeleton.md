@@ -66,3 +66,12 @@ animation 属性可以配置显示动画
 | width     | 宽度         | string  | ——     | 100%   |
 | height    | 高度         | string  | ——     | 15px   |
 | animation | 是否启用动画 | boolean | ——     | false  |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/message">
+    Message 提示框
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/alert">
+    Alert 提示
+  </tyh-turn-page-item>
+</tyh-turn-page>

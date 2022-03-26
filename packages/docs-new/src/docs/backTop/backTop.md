@@ -40,3 +40,12 @@ bottom 和 right 属性可以配置距离右边和下边的距离
 | right    | 距离右面的距离   | string | ——               | 50px   |
 | behavior | 滚动模式         | string | smooth / instant | smooth |
 | beyond   | 超出 xx 范围显示 | number | ——               | 100    |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/crumbs">
+    TurnPage 分页
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/message">
+    Message 提示框
+  </tyh-turn-page-item>
+</tyh-turn-page>

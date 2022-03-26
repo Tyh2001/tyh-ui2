@@ -41,3 +41,12 @@ size 属性可以配置标注的文字大小
 | type  | 类型     | string | default / primary / success / danger / warning | default |
 | size  | 文字大小 | string | ——                                             | 13      |
 | color | 文字颜色 | string | ——                                             | ——      |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/select">
+    Select 选择器
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/notification">
+    Notification 通知
+  </tyh-turn-page-item>
+</tyh-turn-page>

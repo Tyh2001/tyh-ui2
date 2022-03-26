@@ -113,67 +113,40 @@ left 插槽可以定制左侧自定义内容
 
 right 插槽可以定制右侧自定义内容
 
+<tyh-menu>
+  <template v-slot:left>
+    <tyh-avatar
+      :size="5"
+      round
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+    />
+  </template>
+  <tyh-menu-item>首页</tyh-menu-item>
+  <tyh-menu-item>内容</tyh-menu-item>
+  <tyh-menu-item>设置</tyh-menu-item>
+  <tyh-menu-item>回收站</tyh-menu-item>
+  <template v-slot:right>
+    <tyh-button style="margin:0" simple>右侧插槽</tyh-button>
+  </template>
+</tyh-menu>
+
 ```html
-<template>
-  <tyh-menu>
-    <tyh-menu-item>首页</tyh-menu-item>
-    <tyh-menu-item>内容</tyh-menu-item>
-    <tyh-menu-item>设置</tyh-menu-item>
-    <tyh-menu-item>回收站</tyh-menu-item>
-    <template v-slot:right>
-      <tyh-button>右侧插槽</tyh-button>
-    </template>
-  </tyh-menu>
-
-  <tyh-menu>
-    <template v-slot:left>
-      <tyh-switch v-model="false" />
-    </template>
-    <tyh-menu-item>首页</tyh-menu-item>
-    <tyh-menu-item>内容</tyh-menu-item>
-    <tyh-menu-item>设置</tyh-menu-item>
-    <tyh-menu-item>回收站</tyh-menu-item>
-  </tyh-menu>
-
-  <tyh-menu>
-    <template v-slot:left>
-      <tyh-avatar
-        :size="5"
-        round
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
-      />
-    </template>
-    <tyh-menu-item>首页</tyh-menu-item>
-    <tyh-menu-item>内容</tyh-menu-item>
-    <tyh-menu-item>设置</tyh-menu-item>
-    <tyh-menu-item>回收站</tyh-menu-item>
-    <template v-slot:right>
-      <tyh-button simple>右侧插槽</tyh-button>
-    </template>
-  </tyh-menu>
-
-  <tyh-menu mode="vertical" style="width: 200px">
-    <template v-slot:left>
-      <tyh-avatar
-        :size="5"
-        round
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
-      />
-    </template>
-    <tyh-menu-item>首页</tyh-menu-item>
-    <tyh-menu-item>内容</tyh-menu-item>
-    <tyh-menu-item>设置</tyh-menu-item>
-    <tyh-menu-item>回收站</tyh-menu-item>
-    <template v-slot:right>
-      <tyh-button simple>右侧插槽</tyh-button>
-    </template>
-  </tyh-menu>
-</template>
-
-<script setup>
-  import { ref } from 'vue'
-  const value = ref(true)
-</script>
+<tyh-menu>
+  <template v-slot:left>
+    <tyh-avatar
+      :size="5"
+      round
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+    />
+  </template>
+  <tyh-menu-item>首页</tyh-menu-item>
+  <tyh-menu-item>内容</tyh-menu-item>
+  <tyh-menu-item>设置</tyh-menu-item>
+  <tyh-menu-item>回收站</tyh-menu-item>
+  <template v-slot:right>
+    <tyh-button simple>右侧插槽</tyh-button>
+  </template>
+</tyh-menu>
 ```
 
 ## Attributes
@@ -192,3 +165,12 @@ tyh-menu-item
 | -------- | ---------- | ------- | ------ | ------ |
 | to       | 跳转的路径 | string  | ——     | ——     |
 | prohibit | 是否禁用   | boolean | ——     | ——     |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/input">
+    Input 输入框
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/division">
+    Division 分割线
+  </tyh-turn-page-item>
+</tyh-turn-page>
