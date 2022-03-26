@@ -524,16 +524,12 @@ function _rewriteBackreferences(regexps, { joinWith }) {
 /** @typedef {import('highlight.js').Mode} Mode */
 /** @typedef {import('highlight.js').ModeCallback} ModeCallback */
 
-// Common regexps
-const MATCH_NOTHING_RE = /\b\B/
 const IDENT_RE = '[a-zA-Z]\\w*'
 const UNDERSCORE_IDENT_RE = '[a-zA-Z_]\\w*'
 const NUMBER_RE = '\\b\\d+(\\.\\d+)?'
 const C_NUMBER_RE =
   '(-?)(\\b0[xX][a-fA-F0-9]+|(\\b\\d+(\\.\\d*)?|\\.\\d+)([eE][-+]?\\d+)?)' // 0x..., 0..., decimal, float
 const BINARY_NUMBER_RE = '\\b(0b[01]+)' // 0b...
-const RE_STARTERS_RE =
-  '!|!=|!==|%|%=|&|&&|&=|\\*|\\*=|\\+|\\+=|,|-|-=|/=|/|:|;|<<|<<=|<=|<|===|==|=|>>>=|>>=|>=|>>>|>>|>|\\?|\\[|\\{|\\(|\\^|\\^=|\\||\\|=|\\|\\||~'
 
 /**
  * @param { Partial<Mode> & {binary?: string | RegExp} } opts
@@ -735,13 +731,6 @@ const END_SAME_AS_BEGIN = function (mode) {
 
 var MODES = /*#__PURE__*/ Object.freeze({
   __proto__: null,
-  MATCH_NOTHING_RE: MATCH_NOTHING_RE,
-  IDENT_RE: IDENT_RE,
-  UNDERSCORE_IDENT_RE: UNDERSCORE_IDENT_RE,
-  NUMBER_RE: NUMBER_RE,
-  C_NUMBER_RE: C_NUMBER_RE,
-  BINARY_NUMBER_RE: BINARY_NUMBER_RE,
-  RE_STARTERS_RE: RE_STARTERS_RE,
   SHEBANG: SHEBANG,
   BACKSLASH_ESCAPE: BACKSLASH_ESCAPE,
   APOS_STRING_MODE: APOS_STRING_MODE,
@@ -993,11 +982,6 @@ https://github.com/highlightjs/highlight.js/issues/2880#issuecomment-747275419
 */
 
 /**
- * @type {Record<string, boolean>}
- */
-const seenDeprecations = {}
-
-/**
  * @param {string} message
  */
 const error = message => {
@@ -1012,17 +996,6 @@ const warn = (message, ...args) => {
   console.log(`WARN: ${message}`, ...args)
 }
 
-/**
- * @param {string} version
- * @param {string} message
- */
-const deprecated = (version, message) => {
-  if (seenDeprecations[`${version}/${message}`]) return
-
-  console.log(`Deprecated as of ${version}. ${message}`)
-  seenDeprecations[`${version}/${message}`] = true
-}
-
 /* eslint-disable no-throw-literal */
 
 /**
@@ -1031,34 +1004,6 @@ const deprecated = (version, message) => {
 
 const MultiClassError = new Error()
 
-/**
- * Renumbers labeled scope names to account for additional inner match
- * groups that otherwise would break everything.
- *
- * Lets say we 3 match scopes:
- *
- *   { 1 => ..., 2 => ..., 3 => ... }
- *
- * So what we need is a clean match like this:
- *
- *   (a)(b)(c) => [ "a", "b", "c" ]
- *
- * But this falls apart with inner match groups:
- *
- * (a)(((b)))(c) => ["a", "b", "b", "b", "c" ]
- *
- * Our scopes are now "out of alignment" and we're repeating `b` 3 times.
- * What needs to happen is the numbers are remapped:
- *
- *   { 1 => ..., 2 => ..., 5 => ... }
- *
- * We also need to know that the ONLY groups that should be output
- * are 1, 2, and 5.  This function handles this behavior.
- *
- * @param {CompiledMode} mode
- * @param {Array<RegExp | string>} regexes
- * @param {{key: "beginScope"|"endScope"}} opts
- */
 function remapScopeNames(mode, regexes, { key }) {
   let offset = 0
   const scopeNames = mode[key]
@@ -1593,16 +1538,6 @@ function expandOrCloneMode(mode) {
   return mode
 }
 
-var version = '11.5.0'
-
-class HTMLInjectionError extends Error {
-  constructor(reason, html) {
-    super(reason)
-    this.name = 'HTMLInjectionError'
-    this.html = html
-  }
-}
-
 /*
 Syntax highlighting with language autodetection.
 https://highlightjs.org/
@@ -1735,15 +1670,6 @@ const HLJS = function (hljs) {
       ignoreIllegals = optionsOrCode.ignoreIllegals
       languageName = optionsOrCode.language
     } else {
-      // old API
-      deprecated(
-        '10.7.0',
-        'highlight(lang, code, ...args) has been deprecated.'
-      )
-      deprecated(
-        '10.7.0',
-        'Please use highlight(code, options) instead.\nhttps://github.com/highlightjs/highlight.js/issues/2277'
-      )
       languageName = codeOrLanguageName
       code = optionsOrCode
     }
@@ -2369,27 +2295,6 @@ const HLJS = function (hljs) {
 
     fire('before:highlightElement', { el: element, language: language })
 
-    // we should be all text, no child nodes (unescaped HTML) - this is possibly
-    // an HTML injection attack - it's likely too late if this is already in
-    // production (the code has likely already done its damage by the time
-    // we're seeing it)... but we yell loudly about this so that hopefully it's
-    // more likely to be caught in development before making it to production
-    // if (element.children.length > 0) {
-    //   if (!options.ignoreUnescapedHTML) {
-    //     console.warn("One of your code blocks includes unescaped HTML. This is a potentially serious security risk.");
-    //     console.warn("https://github.com/highlightjs/highlight.js/wiki/security");
-    //     console.warn("The element with unescaped HTML:");
-    //     console.warn(element);
-    //   }
-    //   if (options.throwUnescapedHTML) {
-    //     const err = new HTMLInjectionError(
-    //       "One of your code blocks includes unescaped HTML.",
-    //       element.innerHTML
-    //     );
-    //     throw err;
-    //   }
-    // }
-
     node = element
     const text = node.textContent
     const result = language
@@ -2400,7 +2305,6 @@ const HLJS = function (hljs) {
     updateClassName(element, language, result.language)
     element.result = {
       language: result.language,
-      // TODO: remove with version 11.0
       re: result.relevance,
       relevance: result.relevance
     }
@@ -2537,7 +2441,6 @@ const HLJS = function (hljs) {
   hljs.safeMode = function () {
     SAFE_MODE = true
   }
-  hljs.versionString = version
 
   hljs.regex = {
     concat: concat,
