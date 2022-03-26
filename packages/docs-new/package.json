@@ -3,12 +3,8 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
-    "highlight.js": "^11.5.0",
-    "markdown-it-anchor": "^8.4.1",
-    "markdown-it-prism": "^2.2.3",
     "tyh-ui2": "^3.4.3",
     "vite-plugin-md": "^0.11.9",
-    "vue-router": "^4.0.12",
-    "@highlightjs/vue-plugin": "^2.1.0"
+    "vue-router": "^4.0.12"
   }
 }
