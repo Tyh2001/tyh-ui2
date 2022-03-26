@@ -3,6 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "dependencies": {
+    "bright-code": "^1.0.0",
     "tyh-ui2": "^3.4.3",
     "vite-plugin-md": "^0.11.9",
     "vue-router": "^4.0.12"
