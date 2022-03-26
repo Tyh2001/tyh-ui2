@@ -5,15 +5,7 @@ import tyhUi2 from './tyhUi'
 import 'tyh-ui2/style/index.css'
 import './style/markdown-body.css'
 
-// import './style/stackoverflow-light.css'
-// import hljs from 'highlight.js/lib/core'
-// import javascript from 'highlight.js/lib/languages/javascript'
-// import xml from 'highlight.js/lib/languages/xml'
-// import hlVue from '@highlightjs/vue-plugin'
-// hljs.registerLanguage('javascript', javascript)
-// hljs.registerLanguage('xml', xml)
-
-import hljs from 'highlight.js'
+import hljs from './highlight.js'
 import './style/stackoverflow-light.css'
 
 createApp(App)
@@ -29,5 +21,4 @@ createApp(App)
       }
     })
   })
-  // .use(hlVue)
   .mount('#app')

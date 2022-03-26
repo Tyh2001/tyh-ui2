@@ -1,0 +1,6 @@
+{
+  "name": "highlight.js",
+  "type": "commonjs",
+  "main": "./lib/index.js",
+  "types": "./types/index.d.ts"
+}
