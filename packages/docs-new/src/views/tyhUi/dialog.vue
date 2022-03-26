@@ -31,7 +31,7 @@
   <dialog-d v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import dialogA from '@/docs/dialog/dialogA.md'
 import dialogB from '@/docs/dialog/dialogB.md'
 import dialogC from '@/docs/dialog/dialogC.md'

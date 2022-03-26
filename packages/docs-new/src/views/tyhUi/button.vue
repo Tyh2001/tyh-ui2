@@ -2,6 +2,6 @@
   <button-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import buttonMd from '@/docs/button/button.md'
 </script>

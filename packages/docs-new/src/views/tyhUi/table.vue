@@ -30,7 +30,7 @@
   <table-i v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import tableA from '@/docs/table/tableA.md'
 import tableB from '@/docs/table/tableB.md'
 import tableC from '@/docs/table/tableC.md'

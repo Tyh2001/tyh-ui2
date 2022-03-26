@@ -16,7 +16,7 @@
   <rate-d v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import rateA from '@/docs/rate/rateA.md'
 import rateB from '@/docs/rate/rateB.md'
 import rateC from '@/docs/rate/rateC.md'

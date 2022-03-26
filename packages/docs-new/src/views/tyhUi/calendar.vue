@@ -9,7 +9,7 @@
   <calendar-c v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import calendarA from '@/docs/calendar/calendarA.md'
 import calendarB from '@/docs/calendar/calendarB.md'
 import calendarC from '@/docs/calendar/calendarC.md'

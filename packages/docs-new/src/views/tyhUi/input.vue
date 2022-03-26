@@ -20,7 +20,7 @@
   <input-h v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import inputA from '@/docs/input/inputA.md'
 import inputB from '@/docs/input/inputB.md'
 import inputC from '@/docs/input/inputC.md'

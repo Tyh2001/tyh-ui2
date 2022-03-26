@@ -2,6 +2,6 @@
   <info-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import infoMd from '@/docs/info/info.md'
 </script>

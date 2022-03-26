@@ -18,7 +18,7 @@
   <switch-f v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import switchA from '@/docs/switch/switchA.md'
 import switchB from '@/docs/switch/switchB.md'
 import switchC from '@/docs/switch/switchC.md'

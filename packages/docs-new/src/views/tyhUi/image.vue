@@ -2,6 +2,6 @@
   <image-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import imageMd from '@/docs/image/image.md'
 </script>

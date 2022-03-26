@@ -4,7 +4,7 @@
   <tree-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import treeA from '@/docs/tree/treeA.md'
 import treeB from '@/docs/tree/treeB.md'
 const data = [

@@ -48,7 +48,7 @@
   line-height: 160px;
 }
 
-body > .tyh-container {
+body>.tyh-container {
   margin-bottom: 40px;
 }
 
@@ -132,4 +132,12 @@ body > .tyh-container {
 #allIcon .allIcon-ui .allIcon-li:hover {
   transition: background 0.3s;
   background: #dcdfe6;
+}
+
+#about {
+  max-width: 800px;
+  margin: auto;
+  padding: 22px;
+  box-sizing: border-box;
+  padding-bottom: 99px;
 }

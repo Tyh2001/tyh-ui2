@@ -4,7 +4,7 @@
   <pageHeader-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import pageHeaderA from '@/docs/pageHeader/pageHeaderA.md'
 import pageHeaderB from '@/docs/pageHeader/pageHeaderB.md'
 const goBack = () => console.log('goBack')

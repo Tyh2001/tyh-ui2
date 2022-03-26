@@ -2,6 +2,6 @@
   <text-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import textMd from '@/docs/text/text.md'
 </script>

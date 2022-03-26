@@ -14,7 +14,7 @@
   <message-e v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import messageA from '@/docs/message/messageA.md'
 import messageB from '@/docs/message/messageB.md'
 import messageC from '@/docs/message/messageC.md'

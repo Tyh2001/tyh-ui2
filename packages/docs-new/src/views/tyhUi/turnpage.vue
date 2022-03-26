@@ -2,6 +2,6 @@
   <turnPage-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import turnPageMd from '@/docs/turnPage/turnPage.md'
 </script>

@@ -27,7 +27,7 @@
   <drawer-d v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import drawerA from '@/docs/drawer/drawerA.md'
 import drawerB from '@/docs/drawer/drawerB.md'
 import drawerC from '@/docs/drawer/drawerC.md'

@@ -16,7 +16,7 @@
   <notification-e v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import notificationA from '@/docs/notification/notificationA.md'
 import notificationB from '@/docs/notification/notificationB.md'
 import notificationC from '@/docs/notification/notificationC.md'

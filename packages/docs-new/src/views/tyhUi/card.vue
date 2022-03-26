@@ -2,6 +2,6 @@
   <card-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import cardMd from '@/docs/card/card.md'
 </script>

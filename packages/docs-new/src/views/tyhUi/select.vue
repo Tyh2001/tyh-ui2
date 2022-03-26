@@ -12,7 +12,7 @@
   <select-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import selectA from '@/docs/select/selectA.md'
 import selectB from '@/docs/select/selectB.md'
 import { ref } from 'vue'

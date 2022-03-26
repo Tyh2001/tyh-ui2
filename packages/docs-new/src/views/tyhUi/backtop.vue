@@ -2,6 +2,6 @@
   <backTop-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import backTopMd from '@/docs/backTop/backTop.md'
 </script>

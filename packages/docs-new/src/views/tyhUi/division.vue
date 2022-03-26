@@ -2,6 +2,6 @@
   <division-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import divisionMd from '@/docs/division/division.md'
 </script>

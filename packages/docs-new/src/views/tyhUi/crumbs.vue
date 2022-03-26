@@ -2,6 +2,6 @@
   <crumbs-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import crumbsMd from '@/docs/crumbs/crumbs.md'
 </script>

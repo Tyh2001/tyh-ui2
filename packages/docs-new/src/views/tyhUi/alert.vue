@@ -37,7 +37,7 @@
   <alert-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import alertA from '@/docs/alert/alertA.md'
 import alertB from '@/docs/alert/alertB.md'
 import { ref } from 'vue'

@@ -19,7 +19,7 @@
   <textarea-f v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import textareaA from '@/docs/textarea/textareaA.md'
 import textareaB from '@/docs/textarea/textareaB.md'
 import textareaC from '@/docs/textarea/textareaC.md'

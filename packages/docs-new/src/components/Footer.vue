@@ -2,10 +2,10 @@
   <div id="Footer">
     <div class="foot-box">
       <h3 class="title-footer">合作者</h3>
-      <tyh-link
+      <a
         v-for="(item, index) in collaborator"
         target="_blank"
-        :url="item.url"
+        :href="item.url"
         :key="index"
       >
         <div class="userBox">
@@ -17,32 +17,30 @@
           />
           <span class="userName">{{ item.name }}</span>
         </div>
-      </tyh-link>
+      </a>
 
       <h3 class="title-footer">链接</h3>
       <ul class="link-ul">
         <li>
-          <tyh-link target="_blank" url="https://github.com/Tyh2001/tyh-ui">
+          <a target="_blank" href="https://github.com/Tyh2001/tyh-ui">
             Github
-          </tyh-link>
+          </a>
         </li>
         <li>
-          <tyh-link target="_blank" url="https://www.npmjs.com/package/tyh-ui2">
+          <a target="_blank" href="https://www.npmjs.com/package/tyh-ui2">
             NPM
-          </tyh-link>
+          </a>
         </li>
         <li>
-          <tyh-link
+          <a
             target="_blank"
-            url="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md"
+            href="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md"
           >
             更新日志
-          </tyh-link>
+          </a>
         </li>
         <li>
-          <tyh-link target="_blank" url="https://tianyuhao.cn">
-            关于我
-          </tyh-link>
+          <a target="_blank" href="https://tianyuhao.cn"> 关于我 </a>
         </li>
       </ul>
     </div>
@@ -82,10 +80,12 @@ const collaborator = [
   padding-bottom: 20px;
   color: #515a6e;
 }
-#Footer .foot-box .tyh-link {
+#Footer .foot-box a {
   display: inline-block;
+  color: #3f536e;
+  text-decoration: none;
 }
-#Footer .foot-box .tyh-link .userBox {
+#Footer .foot-box a .userBox {
   width: 150px;
   height: 50px;
   display: flex;
@@ -93,12 +93,12 @@ const collaborator = [
   align-items: center;
   cursor: pointer;
 }
-#Footer .foot-box .tyh-link .userBox .myPhoto {
+#Footer .foot-box a .userBox .myPhoto {
   width: 45px;
   height: 45px;
   border-radius: 50%;
 }
-#Footer .foot-box .tyh-link .userBox .userName {
+#Footer .foot-box a .userBox .userName {
   font-size: 20px;
   color: #515a6e;
   margin-left: 10px;

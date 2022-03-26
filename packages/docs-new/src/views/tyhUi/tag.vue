@@ -16,7 +16,7 @@
   <tag-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import tagA from '@/docs/tag/tagA.md'
 import tagB from '@/docs/tag/tagB.md'
 import { ref } from 'vue'

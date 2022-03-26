@@ -2,6 +2,6 @@
   <install-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import installMd from '@/docs/install/install.md'
 </script>

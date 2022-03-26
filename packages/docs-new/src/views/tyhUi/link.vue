@@ -2,6 +2,6 @@
   <link-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import linkMd from '@/docs/link/link.md'
 </script>

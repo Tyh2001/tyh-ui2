@@ -2,6 +2,6 @@
   <skeleton-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import skeletonMd from '@/docs/skeleton/skeleton.md'
 </script>

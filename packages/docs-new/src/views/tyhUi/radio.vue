@@ -62,7 +62,7 @@
   <radio-e v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import radioA from '@/docs/radio/radioA.md'
 import radioB from '@/docs/radio/radioB.md'
 import radioC from '@/docs/radio/radioC.md'

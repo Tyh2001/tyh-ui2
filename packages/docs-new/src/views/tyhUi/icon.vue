@@ -11,7 +11,7 @@
   <icon-b v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import iconA from '@/docs/icon/iconA.md'
 import iconB from '@/docs/icon/iconB.md'
 const iconList = [

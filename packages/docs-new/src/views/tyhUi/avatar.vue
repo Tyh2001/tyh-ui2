@@ -2,6 +2,6 @@
   <avatar-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import avatarMd from '@/docs/avatar/avatar.md'
 </script>

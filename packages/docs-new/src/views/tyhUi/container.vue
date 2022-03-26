@@ -2,6 +2,6 @@
   <container-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import containerMd from '@/docs/container/container.md'
 </script>

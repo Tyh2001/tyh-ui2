@@ -2,6 +2,6 @@
   <tagging-md v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import taggingMd from '@/docs/tagging/tagging.md'
 </script>

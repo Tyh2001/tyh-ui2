@@ -17,7 +17,7 @@
   <list-e v-high />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import listA from '@/docs/list/listA.md'
 import listB from '@/docs/list/listB.md'
 import listC from '@/docs/list/listC.md'
