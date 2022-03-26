@@ -573,10 +573,6 @@ const QUOTE_STRING_MODE = {
   illegal: '\\n',
   contains: [BACKSLASH_ESCAPE]
 }
-const PHRASAL_WORDS_MODE = {
-  begin:
-    /\b(a|an|the|are|I'm|isn't|don't|doesn't|won't|but|just|should|pretty|simply|enough|gonna|going|wtf|so|such|will|you|your|they|like|more)\b/
-}
 /**
  * Creates a comment mode
  *
@@ -617,63 +613,18 @@ const COMMENT = function (begin, end, modeOptions = {}) {
     'in',
     'it',
     'on',
-    // note: this is not an exhaustive list of contractions, just popular ones
     /[A-Za-z]+['](d|ve|re|ll|t|s|n)/, // contractions - can't we'd they're let's, etc
     /[A-Za-z]+[-][a-z]+/, // `no-way`, etc.
     /[A-Za-z][a-z]{2,}/ // allow capitalized words at beginning of sentences
   )
-  // looking like plain text, more likely to be a comment
   mode.contains.push({
-    // TODO: how to include ", (, ) without breaking grammars that use these for
-    // comment delimiters?
-    // begin: /[ ]+([()"]?([A-Za-z'-]{3,}|is|a|I|so|us|[tT][oO]|at|if|in|it|on)[.]?[()":]?([.][ ]|[ ]|\))){3}/
-    // ---
-
-    // this tries to find sequences of 3 english words in a row (without any
-    // "programming" type syntax) this gives us a strong signal that we've
-    // TRULY found a comment - vs perhaps scanning with the wrong language.
-    // It's possible to find something that LOOKS like the start of the
-    // comment - but then if there is no readable text - good chance it is a
-    // false match and not a comment.
-    //
-    // for a visual example please see:
-    // https://github.com/highlightjs/highlight.js/issues/2827
-
-    begin: concat(
-      /[ ]+/, // necessary to prevent us gobbling up doctags like /* @author Bob Mcgill */
-      '(',
-      ENGLISH_WORD,
-      /[.]?[:]?([.][ ]|[ ])/,
-      '){3}'
-    ) // look for 3 words in a row
+    begin: concat(/[ ]+/, '(', ENGLISH_WORD, /[.]?[:]?([.][ ]|[ ])/, '){3}')
   })
   return mode
 }
 const C_LINE_COMMENT_MODE = COMMENT('//', '$')
 const C_BLOCK_COMMENT_MODE = COMMENT('/\\*', '\\*/')
-const HASH_COMMENT_MODE = COMMENT('#', '$')
-const NUMBER_MODE = {
-  scope: 'number',
-  begin: NUMBER_RE,
-  relevance: 0
-}
-const C_NUMBER_MODE = {
-  scope: 'number',
-  begin: C_NUMBER_RE,
-  relevance: 0
-}
-const BINARY_NUMBER_MODE = {
-  scope: 'number',
-  begin: BINARY_NUMBER_RE,
-  relevance: 0
-}
 const REGEXP_MODE = {
-  // this outer rule makes sure we actually have a WHOLE regex and not simply
-  // an expression such as:
-  //
-  //     3 / something
-  //
-  // (which will then blow up when regex's `illegal` sees the newline)
   begin: /(?=\/[^/\n]*\/)/,
   contains: [
     {
@@ -693,92 +644,19 @@ const REGEXP_MODE = {
     }
   ]
 }
-const TITLE_MODE = {
-  scope: 'title',
-  begin: IDENT_RE,
-  relevance: 0
-}
-const UNDERSCORE_TITLE_MODE = {
-  scope: 'title',
-  begin: UNDERSCORE_IDENT_RE,
-  relevance: 0
-}
-const METHOD_GUARD = {
-  // excludes method names from keyword processing
-  begin: '\\.\\s*' + UNDERSCORE_IDENT_RE,
-  relevance: 0
-}
-
-/**
- * Adds end same as begin mechanics to a mode
- *
- * Your mode must include at least a single () match group as that first match
- * group is what is used for comparison
- * @param {Partial<Mode>} mode
- */
-const END_SAME_AS_BEGIN = function (mode) {
-  return Object.assign(mode, {
-    /** @type {ModeCallback} */
-    'on:begin': (m, resp) => {
-      resp.data._beginMatch = m[1]
-    },
-    /** @type {ModeCallback} */
-    'on:end': (m, resp) => {
-      if (resp.data._beginMatch !== m[1]) resp.ignoreMatch()
-    }
-  })
-}
 
 var MODES = /*#__PURE__*/ Object.freeze({
   __proto__: null,
   SHEBANG: SHEBANG,
-  BACKSLASH_ESCAPE: BACKSLASH_ESCAPE,
-  APOS_STRING_MODE: APOS_STRING_MODE,
-  QUOTE_STRING_MODE: QUOTE_STRING_MODE,
-  PHRASAL_WORDS_MODE: PHRASAL_WORDS_MODE,
+  BACKSLASH_ESCAPE,
+  APOS_STRING_MODE,
+  QUOTE_STRING_MODE,
   COMMENT: COMMENT,
-  C_LINE_COMMENT_MODE: C_LINE_COMMENT_MODE,
-  C_BLOCK_COMMENT_MODE: C_BLOCK_COMMENT_MODE,
-  HASH_COMMENT_MODE: HASH_COMMENT_MODE,
-  NUMBER_MODE: NUMBER_MODE,
-  C_NUMBER_MODE: C_NUMBER_MODE,
-  BINARY_NUMBER_MODE: BINARY_NUMBER_MODE,
-  REGEXP_MODE: REGEXP_MODE,
-  TITLE_MODE: TITLE_MODE,
-  UNDERSCORE_TITLE_MODE: UNDERSCORE_TITLE_MODE,
-  METHOD_GUARD: METHOD_GUARD,
-  END_SAME_AS_BEGIN: END_SAME_AS_BEGIN
+  C_LINE_COMMENT_MODE,
+  C_BLOCK_COMMENT_MODE,
+  REGEXP_MODE
 })
 
-/**
-@typedef {import('highlight.js').CallbackResponse} CallbackResponse
-@typedef {import('highlight.js').CompilerExt} CompilerExt
-*/
-
-// Grammar extensions / plugins
-// See: https://github.com/highlightjs/highlight.js/issues/2833
-
-// Grammar extensions allow "syntactic sugar" to be added to the grammar modes
-// without requiring any underlying changes to the compiler internals.
-
-// `compileMatch` being the perfect small example of now allowing a grammar
-// author to write `match` when they desire to match a single expression rather
-// than being forced to use `begin`.  The extension then just moves `match` into
-// `begin` when it runs.  Ie, no features have been added, but we've just made
-// the experience of writing (and reading grammars) a little bit nicer.
-
-// ------
-
-// TODO: We need negative look-behind support to do this properly
-/**
- * Skip a match if it has a preceding dot
- *
- * This is used for `beginKeywords` to prevent matching expressions such as
- * `bob.keyword.do()`. The mode compiler automatically wires this up as a
- * special _internal_ 'on:begin' callback for modes with `beginKeywords`
- * @param {RegExpMatchArray} match
- * @param {CallbackResponse} response
- */
 function skipIfHasPrecedingDot(match, response) {
   const before = match.input[match.index - 1]
   if (before === '.') {
