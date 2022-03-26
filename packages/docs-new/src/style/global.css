@@ -20,7 +20,8 @@
   display: block;
 }
 
-.tyh-button-group .tyh-button {
+.tyh-button-group .tyh-button,
+.tyh-info .tyh-link {
   margin: 0;
 }
 

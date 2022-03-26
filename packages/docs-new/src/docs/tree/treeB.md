@@ -1,11 +1,3 @@
-# Tree 树形控件
-
-## 基本使用
-
-tree 的基本使用
-
-data 属性传递一个树型结构的数据
-
 ```html
 <template>
   <tyh-tree :data="data" />
@@ -77,3 +69,12 @@ data 属性传递一个树型结构的数据
 | 参数 | 说明     | 类型  | 可选值 | 默认值 |
 | ---- | -------- | ----- | ------ | ------ |
 | data | 展示数据 | array | ——     | []     |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/radio">
+    Radio 单选框
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/pageHeader">
+    PageHeader 页头
+  </tyh-turn-page-item>
+</tyh-turn-page>
