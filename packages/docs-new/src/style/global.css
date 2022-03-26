@@ -9,8 +9,9 @@
 .tyh-link,
 .tyh-input,
 .tyh-tagging,
+.tyh-alert,
 .tyh-button-group {
-  margin: 0 13px 13px 0;
+  margin: 10px;
 }
 
 .tyh-input {
@@ -44,7 +45,7 @@
   line-height: 160px;
 }
 
-body > .tyh-container {
+body>.tyh-container {
   margin-bottom: 40px;
 }
 

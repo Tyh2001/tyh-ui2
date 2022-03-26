@@ -3,5 +3,5 @@
 </template>
 
 <script lang="ts" setup>
-import avatarMd from '@/docs/avatar.md'
+import avatarMd from '@/docs/avatar/avatar.md'
 </script>
