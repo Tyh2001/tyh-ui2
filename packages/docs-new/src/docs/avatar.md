@@ -8,20 +8,20 @@ src 属性可以添加图片路径
 
 size 可以配置头像大小
 
-<tyh-avatar :size="10" src="https://tianyuhao.cn/v3/assets/giraffe.jpg"/>
+<tyh-avatar :size="10" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"/>
 
 ```html
-<tyh-avatar :size="10" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-avatar :size="10" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
 ## 配置圆角
 
 round 属性配置头像的圆角
 
-<tyh-avatar round src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-avatar round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 
 ```html
-<tyh-avatar round src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-avatar round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
 ## 如何适应容器框
@@ -35,7 +35,7 @@ fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://
       <span class="text">{{ fit }}</span>
       <tyh-avatar
         round
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
         :fit="fit"
       />
     </div>
@@ -51,12 +51,12 @@ fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://
 
 border 属性配置头像的边框
 
-<tyh-avatar border src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
-<tyh-avatar border round  src="https://tianyuhao.cn/v3/assets/giraffe.jpg"/>
+<tyh-avatar border src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
+<tyh-avatar border round  src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"/>
 
 ```html
-<tyh-avatar border src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
-<tyh-avatar border round src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-avatar border src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
+<tyh-avatar border round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
 ## 加载失败

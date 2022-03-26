@@ -8,10 +8,10 @@ src 属性可以添加图片路径
 
 width，height 可以配置图片宽高
 
-<tyh-image width="300px" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-image width="300px" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 
 ```html
-<tyh-image width="300px" src="https://tianyuhao.cn/v3/assets/giraffe.jpg" />
+<tyh-image width="300px" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
 ## 如何适应容器框
@@ -26,7 +26,7 @@ fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://
       <tyh-image
         width="100px"
         height="100px"
-        src="https://tianyuhao.cn/v3/assets/giraffe.jpg"
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
         :fit="fit"
       />
     </div>

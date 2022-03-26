@@ -4,12 +4,14 @@
       <img
         draggable="false"
         class="logo"
-        src="@/assets/tyh-ui2-logo.svg"
+        src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg"
         alt="logo"
       />
     </div>
     <h3 class="about_title">关于</h3>
-    <tyh-text block>一个轻量级组件库，基于 vue3 版本，全面拥抱 vue3。</tyh-text>
+    <tyh-text block>
+      一个轻量级组件库，基于 vue3 + typescript，全面拥抱 vue3。
+    </tyh-text>
 
     <h3 class="about_title">加入我们</h3>
     <tyh-text block>
@@ -33,15 +35,22 @@
     <h3 class="about_title">赞助我们</h3>
     <tyh-text>开发不易，欢迎大家赞助！</tyh-text>
     <div id="sponsor">
-      <img draggable="false" src="@/assets/weixin.jpg" alt="weixin" />
-      <img draggable="false" src="@/assets/zhifubao.jpg" alt="zhifubao" />
+      <img
+        draggable="false"
+        src="https://tianyuhao.cn/images/tyh-ui/weixin.jpg"
+        alt="weixin"
+      />
+      <img
+        draggable="false"
+        src="https://tianyuhao.cn/images/tyh-ui/zhifubao.jpg"
+        alt="zhifubao"
+      />
     </div>
   </div>
-
   <Footer />
 </template>
 
-<script lang="ts" setup>
+<script setup>
 import Footer from '@/components/Footer.vue'
 </script>
 

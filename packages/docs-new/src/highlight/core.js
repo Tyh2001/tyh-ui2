@@ -1659,9 +1659,6 @@ const HLJS = function (hljs) {
     contains: []
   }
 
-  // Global options used when within external APIs. This is modified when
-  // calling the `hljs.configure` function.
-  /** @type HLJSOptions */
   let options = {
     ignoreUnescapedHTML: false,
     throwUnescapedHTML: false,
@@ -2417,33 +2414,6 @@ const HLJS = function (hljs) {
     fire('after:highlightElement', { el: element, result, text })
   }
 
-  /**
-   * Updates highlight.js global options with the passed options
-   *
-   * @param {Partial<HLJSOptions>} userOptions
-   */
-  function configure(userOptions) {
-    options = inherit(options, userOptions)
-  }
-
-  // TODO: remove v12, deprecated
-  const initHighlighting = () => {
-    highlightAll()
-    deprecated(
-      '10.6.0',
-      'initHighlighting() deprecated.  Use highlightAll() now.'
-    )
-  }
-
-  // TODO: remove v12, deprecated
-  function initHighlightingOnLoad() {
-    highlightAll()
-    deprecated(
-      '10.6.0',
-      'initHighlightingOnLoad() deprecated.  Use highlightAll() now.'
-    )
-  }
-
   let wantsHighlight = false
 
   /**
@@ -2510,27 +2480,6 @@ const HLJS = function (hljs) {
   }
 
   /**
-   * Remove a language grammar module
-   *
-   * @param {string} languageName
-   */
-  function unregisterLanguage(languageName) {
-    delete languages[languageName]
-    for (const alias of Object.keys(aliases)) {
-      if (aliases[alias] === languageName) {
-        delete aliases[alias]
-      }
-    }
-  }
-
-  /**
-   * @returns {string[]} List of language internal names
-   */
-  function listLanguages() {
-    return Object.keys(languages)
-  }
-
-  /**
    * @param {string} name - name of the language to retrieve
    * @returns {Language | undefined}
    */
@@ -2563,33 +2512,6 @@ const HLJS = function (hljs) {
   }
 
   /**
-   * Upgrades the old highlightBlock plugins to the new
-   * highlightElement API
-   * @param {HLJSPlugin} plugin
-   */
-  function upgradePluginAPI(plugin) {
-    // TODO: remove with v12
-    if (plugin['before:highlightBlock'] && !plugin['before:highlightElement']) {
-      plugin['before:highlightElement'] = data => {
-        plugin['before:highlightBlock'](Object.assign({ block: data.el }, data))
-      }
-    }
-    if (plugin['after:highlightBlock'] && !plugin['after:highlightElement']) {
-      plugin['after:highlightElement'] = data => {
-        plugin['after:highlightBlock'](Object.assign({ block: data.el }, data))
-      }
-    }
-  }
-
-  /**
-   * @param {HLJSPlugin} plugin
-   */
-  function addPlugin(plugin) {
-    upgradePluginAPI(plugin)
-    plugins.push(plugin)
-  }
-
-  /**
    *
    * @param {PluginEvent} event
    * @param {any} args
@@ -2603,36 +2525,10 @@ const HLJS = function (hljs) {
     })
   }
 
-  /**
-   * DEPRECATED
-   * @param {HighlightedHTMLElement} el
-   */
-  function deprecateHighlightBlock(el) {
-    deprecated('10.7.0', 'highlightBlock will be removed entirely in v12.0')
-    deprecated('10.7.0', 'Please use highlightElement now.')
-
-    return highlightElement(el)
-  }
-
-  /* Interface definition */
   Object.assign(hljs, {
-    highlight,
-    highlightAuto,
-    highlightAll,
     highlightElement,
-    // TODO: Remove with v12 API
-    highlightBlock: deprecateHighlightBlock,
-    configure,
-    initHighlighting,
-    initHighlightingOnLoad,
     registerLanguage,
-    unregisterLanguage,
-    listLanguages,
-    getLanguage,
-    registerAliases,
-    autoDetection,
-    inherit,
-    addPlugin
+    inherit
   })
 
   hljs.debugMode = function () {

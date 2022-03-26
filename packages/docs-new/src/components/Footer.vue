@@ -103,9 +103,6 @@ const collaborator = [
   color: #515a6e;
   margin-left: 10px;
 }
-#Footer .foot-box .link-ul {
-  padding: 0;
-}
 #Footer .foot-box .link-ul li {
   list-style: none;
   line-height: 40px;
