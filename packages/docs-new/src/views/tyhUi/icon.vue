@@ -3,7 +3,7 @@
   <div id="allIcon">
     <ul class="allIcon-ui">
       <li class="allIcon-li" v-for="(icon, index) in iconList" :key="index">
-        <i :class="['tyh-ui', icon]" />
+        <i :class="['tyh-icon', icon]" />
         <p class="iconTitle">{{ icon }}</p>
       </li>
     </ul>

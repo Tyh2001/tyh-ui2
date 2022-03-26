@@ -1,11 +1,5 @@
 <template>
-  <h1 class="title">Color 色彩</h1>
-
-  <h3 class="Subtitle">内部颜色</h3>
-  <p>tyh-ui 在这里提供了一些比较鲜艳、友好的颜色提供使用</p>
-  <p>下面是 tyh-ui 内部使用的颜色色号，采用的比较鲜亮的颜色</p>
-  <p>点击即可复制颜色色号</p>
-
+  <color-a v-high />
   <div id="colorList1">
     <div
       class="colorList-item1"
@@ -20,9 +14,7 @@
     </div>
   </div>
 
-  <h3 class="Subtitle">字体边框</h3>
-  <p>下面是 tyh-ui 内部使用的字体边框色号</p>
-  <p>点击即可复制颜色色号</p>
+  <color-b v-high />
   <div id="colorList2">
     <div
       class="colorList-item2"
@@ -37,9 +29,7 @@
     </div>
   </div>
 
-  <h3 class="Subtitle">其他推荐</h3>
-  <p>下面是 tyh-ui 推荐的一些其它色彩</p>
-  <p>点击即可复制颜色色号</p>
+  <color-c v-high />
   <div id="colorList3">
     <!-- <div
       class="colorList-item3"
@@ -75,6 +65,9 @@
 </template>
 
 <script setup>
+import colorA from '@/docs/color/colorA.md'
+import colorB from '@/docs/color/colorB.md'
+import colorC from '@/docs/color/colorC.md'
 // import Clipboard from 'clipboard'
 // import { Message } from 'tyh-ui2'
 const colorList1 = [
