@@ -11,6 +11,7 @@
 .tyh-tagging,
 .tyh-alert,
 .tyh-table,
+.tyh-select,
 .tyh-button-group {
   margin: 10px;
 }
@@ -47,7 +48,7 @@
   line-height: 160px;
 }
 
-body>.tyh-container {
+body > .tyh-container {
   margin-bottom: 40px;
 }
 

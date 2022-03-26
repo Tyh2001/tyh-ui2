@@ -1,9 +1,3 @@
-# Select 选择器
-
-## 基本使用
-
-选择器的基本用法
-
 ```html
 <template>
   <tyh-select v-model="value" placeholder="请选择">
@@ -60,3 +54,12 @@ tyh-option
 | ----- | ---------- | ------ | ------ | ------ |
 | value | 选项的值   | string | ——     | ——     |
 | label | 分组的组名 | string | ——     | ——     |
+
+<tyh-turn-page style="margin: 50px 0">
+  <tyh-turn-page-item direction="left" url="/component/textarea">
+    Textarea 文本域
+  </tyh-turn-page-item>
+  <tyh-turn-page-item direction="right" url="/component/tagging">
+    Tagging 标注
+  </tyh-turn-page-item>
+</tyh-turn-page>
