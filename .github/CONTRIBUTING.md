@@ -58,7 +58,6 @@ git commit -m 'feat: Add XXX function'
 |  ├── demo                       Test items
 |  ├── docs                       Tyh-ui2 docs
 |  ├── docs-new                   Tyh-ui2 new docs
-|  ├── sass_style                 Sass style(Under development)
 |  ├── THEME_STYLE                Main style sheet
 |  └── tyh-ui2                    Tyh-ui2 Source code
 ├── .editorconfig                 Editor configuration because developers' editors are different
