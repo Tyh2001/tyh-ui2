@@ -26,5 +26,6 @@ export const prop = {
     }
   },
   square: Boolean,
-  simple: Boolean
+  simple: Boolean,
+  loading: Boolean
 }

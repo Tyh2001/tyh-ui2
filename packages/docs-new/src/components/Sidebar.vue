@@ -10,12 +10,6 @@
       <p class="urlPush">关于</p>
     </router-link>
 
-    <tyh-link
-      target="_blank"
-      url="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md"
-    >
-      <p class="urlPush">更新日志</p>
-    </tyh-link>
     <tyh-division />
   </template>
 
@@ -28,7 +22,6 @@
   >
     {{ item.name }}
   </p>
-  <br /><br /><br /><br />
 </template>
 
 <script setup>

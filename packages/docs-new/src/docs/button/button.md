@@ -4,6 +4,8 @@
 
 按钮的基础用法
 
+type 属性配置不同的按钮类型
+
 <tyh-button>默认按钮</tyh-button>
 <tyh-button type="primary">主要按钮</tyh-button>
 <tyh-button type="success">成功按钮</tyh-button>
@@ -130,7 +132,7 @@ square 属性可以配置方形按钮
 
 ## 按钮组
 
-使用 tyh-button-group 标签来嵌套按钮
+使用 `tyh-button-group` 标签来嵌套按钮
 
 <tyh-button-group>
 <tyh-button type="primary">上一页</tyh-button>
@@ -202,6 +204,24 @@ size 属性可以配置按钮尺寸
 <tyh-button simple size="large" type="primary">大号按钮</tyh-button>
 ```
 
+## loading 状态
+
+loading 属性可以配置 loading 状态下的按钮
+
+<tyh-button loading>默认按钮</tyh-button>
+<tyh-button loading type="primary">主要按钮</tyh-button>
+<tyh-button loading type="success">成功按钮</tyh-button>
+<tyh-button loading type="danger">危险按钮</tyh-button>
+<tyh-button loading type="warning">警告按钮</tyh-button>
+
+```html
+<tyh-button loading>默认按钮</tyh-button>
+<tyh-button loading type="primary">主要按钮</tyh-button>
+<tyh-button loading type="success">成功按钮</tyh-button>
+<tyh-button loading type="danger">危险按钮</tyh-button>
+<tyh-button loading type="warning">警告按钮</tyh-button>
+```
+
 ## Attributes
 
 | 参数     | 说明           | 类型    | 可选值                                         | 默认值  |
@@ -213,6 +233,7 @@ size 属性可以配置按钮尺寸
 | icon     | 按钮上的 icon  | string  | ——                                             | ——      |
 | size     | 按钮尺寸       | string  | large / small / mini                           | ——      |
 | square   | 方形按钮       | boolean | ——                                             | false   |
+| loading  | loading 状态   | boolean | ——                                             | false   |
 
 <tyh-turn-page style="margin: 50px 0">
   <tyh-turn-page-item direction="left" url="/component/container">

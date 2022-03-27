@@ -1,6 +1,10 @@
 <template>
-  <button :class="isClass" :disabled="disabled">
-    <i v-if="icon" :class="`tyh-icon ${icon}`" :style="{ color }" />
+  <button :class="isClass" :disabled="disabled || loading">
+    <i
+      v-if="loading || icon"
+      :class="['tyh-icon', loading ? 'tyh-ui-loading' : icon]"
+      :style="{ color }"
+    />
     <span v-if="$slots.default" :style="{ color }"><slot /></span>
   </button>
 </template>
@@ -20,10 +24,10 @@ const isClass = computed((): (string | object)[] => {
   return [
     'tyh-button',
     props.simple
-      ? props.disabled
+      ? props.disabled || props.loading
         ? `tyh-button-simple-disabled-${props.type}`
         : `tyh-button-simple-${props.type}`
-      : props.disabled
+      : props.disabled || props.loading
       ? `tyh-button-disabled-${props.type}`
       : `tyh-button-${props.type}`,
     {

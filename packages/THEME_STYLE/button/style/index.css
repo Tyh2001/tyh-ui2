@@ -13,11 +13,17 @@
   line-height: 1;
   font-size: 14px;
 }
+.tyh-button .tyh-ui-loading {
+  display: inline-block;
+  animation: loading 1.2s linear infinite;
+  -webkit-animation: loading 1.2s linear infinite;
+}
 .tyh-button-primary {
   background: #3a6ff4;
 }
 .tyh-button-primary:hover {
   background: #5d88f6;
+  opacity: 0.8;
   box-shadow: 0 0 3px #5d88f6;
 }
 .tyh-button-primary:active {
@@ -141,4 +147,21 @@
 }
 .tyh-button [class*='tyh-icon'] + span {
   margin-left: 5px;
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(90deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
