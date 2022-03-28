@@ -3,6 +3,7 @@
 ## 基本使用
 
 链接的基本使用
+
 <tyh-link url="">链接一</tyh-link>
 <tyh-link url="" type="primary">链接二</tyh-link>
 <tyh-link url="" type="success">链接三</tyh-link>
