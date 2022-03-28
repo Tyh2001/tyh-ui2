@@ -1,0 +1,27 @@
+.tyh-aside {
+  flex-shrink: 0
+}
+
+.tyh-container-vertical {
+  display: flex
+}
+
+.tyh-container-horizontal {
+  width: 100%
+}
+
+.tyh-footer {
+  width: 100%;
+  flex-shrink: 0
+}
+
+.tyh-header {
+  flex-shrink: 0
+}
+
+.tyh-main {
+  box-sizing: border-box;
+  padding: 20px;
+  flex: 1;
+  flex-shrink: 0
+}

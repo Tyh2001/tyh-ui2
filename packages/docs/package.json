@@ -1,11 +1,13 @@
 {
-  "name": "docs",
+  "name": "@tyh-ui/docs",
+  "private": true,
   "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
   "dependencies": {
-    "@highlightjs/vue-plugin": "^2.1.0",
-    "clipboard": "^2.0.8",
-    "highlight.js": "^11.4.0",
-    "rollup-plugin-visualizer": "^5.5.2",
+    "bright-code": "^1.0.0",
+    "vite-plugin-md": "^0.11.9",
     "vue-router": "^4.0.12"
   }
 }

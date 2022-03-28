@@ -1,65 +1,19 @@
 <template>
-  <h1 class="title">Icon 图标</h1>
-
-  <h3 class="Subtitle">基本使用</h3>
-  <p>icon 的基本使用</p>
-  <p>通过 icon 属性来给 icon 添加类名，来显示不同的图标</p>
-  <tyh-icon icon="tyh-ui-tyhui" />
-  <tyh-icon icon="tyh-ui-ashbin" />
-  <tyh-icon icon="tyh-ui-data-view" />
-  <highlightjs language="javascript" :code="icon.icon1" />
-
-  <h3 class="Subtitle">配置颜色</h3>
-  <p>color 属性改变 icon 的颜色</p>
-  <tyh-icon color="skyblue" icon="tyh-ui-favorite" />
-  <tyh-icon color="red" icon="tyh-ui-fabulous" />
-  <tyh-icon color="pink" icon="tyh-ui-good" />
-  <highlightjs language="javascript" :code="icon.icon2" />
-
-  <h3 class="Subtitle">配置大小</h3>
-  <p>size 属性可以改变 icon 的大小</p>
-  <p>这里采用的是字体大小形式，只需要传递具体数值，并不需要传递单位</p>
-  <tyh-icon size="50" icon="tyh-ui-hide" />
-  <tyh-icon size="40" icon="tyh-ui-shouye-xianxing" />
-  <tyh-icon size="30" icon="tyh-ui-huojian" />
-  <highlightjs language="javascript" :code="icon.icon3" />
-
-  <h3 class="Subtitle">Attributes</h3>
-  <tyh-table align="center" :data="configures" :columns="table.columns" />
-
-  <h3 class="Subtitle">Icon 集合</h3>
-  <p>点击即可复制代码</p>
-  <p>下面提供 {{ iconLength }} 个图标</p>
+  <icon-a v-high />
   <div id="allIcon">
     <ul class="allIcon-ui">
-      <li
-        class="allIcon-li"
-        v-for="(icon, index) in iconList"
-        :key="index"
-        :data-clipboard-text="icon"
-        @click="copy(icon)"
-      >
-        <tyh-icon size="34" :icon="icon" color="rgb(102,102,102)" />
+      <li class="allIcon-li" v-for="(icon, index) in iconList" :key="index">
+        <i :class="['tyh-icon', icon]" />
         <p class="iconTitle">{{ icon }}</p>
       </li>
     </ul>
   </div>
-
-  <tyh-turn-page style="margin: 50px 0">
-    <tyh-turn-page-item direction="left" url="/component/division">
-      Division 分割线
-    </tyh-turn-page-item>
-    <tyh-turn-page-item direction="right" url="/component/crumbs">
-      Crumbs 面包屑
-    </tyh-turn-page-item>
-  </tyh-turn-page>
+  <icon-b v-high />
 </template>
 
 <script setup>
-import { icon } from './index'
-import table from './table'
-import Clipboard from 'clipboard'
-import { Message } from 'tyh-ui2'
+import iconA from '@/docs/icon/iconA.md'
+import iconB from '@/docs/icon/iconB.md'
 const iconList = [
   'tyh-ui-tyhui',
   'tyh-ui-githublogo',
@@ -249,76 +203,4 @@ const iconList = [
   'tyh-ui-arrow-right-bold',
   'tyh-ui-select-bold'
 ]
-const configures = [
-  {
-    param: 'icon',
-    explain: 'icon 的类名',
-    type: 'string',
-    value: '——',
-    default: '——'
-  },
-  {
-    param: 'color',
-    explain: 'icon 的颜色',
-    type: 'string',
-    value: '——',
-    default: '#606266'
-  },
-  {
-    param: 'size',
-    explain: 'icon 的尺寸',
-    type: 'string',
-    value: '——',
-    default: '16'
-  }
-]
-const iconLength = iconList.length
-const copy = icon => {
-  const clipboard = new Clipboard('.allIcon-li')
-  clipboard.on('success', _ => {
-    Message({
-      message: `复制成功 ${icon}`,
-      type: 'success',
-      iconClass: 'tyh-ui-smile',
-      round: true
-    })
-    clipboard.destroy()
-  })
-}
 </script>
-
-<style scoped>
-#allIcon {
-  width: 100%;
-}
-#allIcon .allIcon-ui {
-  display: flex;
-  flex-wrap: wrap;
-}
-#allIcon .allIcon-ui .allIcon-li {
-  width: 140px;
-  height: 120px;
-  list-style: none;
-  cursor: pointer;
-  padding: 5px;
-  box-sizing: border-box;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-#allIcon .allIcon-ui .allIcon-li .iconTitle {
-  font-size: 12px;
-  color: #8a8a8a;
-  display: inline-block;
-  max-width: 100px;
-  text-align: center;
-  margin: 20px 0 0 0;
-  height: 30px;
-  line-height: 15px;
-}
-#allIcon .allIcon-ui .allIcon-li:hover {
-  transition: background 0.3s;
-  background: #dcdfe6;
-}
-</style>

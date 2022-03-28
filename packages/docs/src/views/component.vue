@@ -8,7 +8,7 @@
       <router-view />
     </div>
 
-    <tyh-backTop v-if="route.path !== '/component/backtop'">
+    <tyh-backTop v-if="route.path !== '/component/backtop'" bottom="150px">
       <tyh-icon icon="tyh-ui-top" color="#409eff" />
     </tyh-backTop>
   </div>
@@ -24,28 +24,28 @@ const route = useRoute()
 #component {
   display: flex;
   width: 1100px;
-  margin: auto;
+  margin: 0 auto;
   position: relative;
 }
 #component .contentList {
-  width: 200px;
-  border-right: 1px solid #eee;
   position: fixed;
+  width: 200px;
   overflow-y: auto;
   overflow-x: hidden;
-  background: #fff;
+  z-index: 100;
   top: 60px;
   padding-top: 40px;
   bottom: 0px;
   user-select: none;
+  background: #fff;
 }
 #component .content {
-  background: #fff;
   padding: 24px;
   box-sizing: border-box;
   width: 900px;
   position: absolute;
   right: 0px;
+  background: #fff;
 }
 @media screen and (max-width: 700px) {
   .contentList {
