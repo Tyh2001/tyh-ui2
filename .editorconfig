@@ -1,5 +1,4 @@
 # http://editorconfig.org
-
 root = true
 
 [*] # 表示所有文件适用
