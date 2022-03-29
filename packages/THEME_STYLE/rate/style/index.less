@@ -1,6 +1,6 @@
 .tyh-rate {
   position: relative;
-  display: flex;
+  display: inline-block;
 
   .tyh-rate-mouseout {
     cursor: pointer;
@@ -11,11 +11,12 @@
     }
 
     .solid {
-      width: 17px;
+      display: inline-block;
       position: absolute;
       top: 0;
       left: 0;
-      width: 0;
+      right: 0;
+      bottom: 0;
       overflow: hidden;
 
       .tyh-ui-favorite-filling {

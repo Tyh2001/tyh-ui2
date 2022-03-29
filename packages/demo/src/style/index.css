@@ -2094,7 +2094,7 @@
   align-items: center;
 }
 
-.tyh-rate {
+/* .tyh-rate {
   position: relative;
   display: flex;
 }
@@ -2125,7 +2125,7 @@
   color: #333;
   font-size: 14px;
   margin-left: 5px;
-}
+} */
 
 .tyh-tag {
   min-width: 57px;

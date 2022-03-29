@@ -7,7 +7,7 @@
         :key="num"
         @mouseover="width = num"
       />
-      <span class="solid" :style="`width:${width * 17}px;`">
+      <span class="solid" :style="`width:${width * 18}px;`">
         <i
           class="tyh-icon tyh-ui-favorite-filling"
           v-for="num in 5"
@@ -28,19 +28,16 @@ import { prop } from './prop'
 const props = defineProps(prop)
 const emit = defineEmits(['update:modelValue', 'change'])
 const { width, upDataValue, showSayFn } = TyhRate()
-
 function TyhRate() {
   const width = ref<number | undefined>(props.modelValue)
   watch(
     () => props.modelValue,
     v => (width.value = v)
   )
-
   const upDataValue = (): void => {
     emit('update:modelValue', width.value)
     if (width.value !== props.modelValue) emit('change')
   }
-
   const showSayFn = computed((): string | void => {
     if (!props.showText) return
     const showSay = ref<any>(null)
@@ -71,7 +68,11 @@ function TyhRate() {
     )
     return showSay.value
   })
-
   return { width, upDataValue, showSayFn }
 }
 </script>
+
+<style
+  src="D:\项目文件\tyh-ui\packages\THEME_STYLE\rate\style\index.css"
+  scoped
+></style>
