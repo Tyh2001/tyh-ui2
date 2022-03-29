@@ -1,6 +1,6 @@
 .tyh-rate {
   position: relative;
-  display: inline-block;
+  display: flex;
 }
 .tyh-rate .tyh-rate-mouseout {
   cursor: pointer;
