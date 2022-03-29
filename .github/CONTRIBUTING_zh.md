@@ -57,7 +57,6 @@ git commit -m 'feat: 新增xxx功能'
 ├── packages                      主要源文件
 |  ├── demo                       测试项目
 |  ├── docs                       tyh-ui2 文档
-|  ├── docs-new                   tyh-ui2 新文档
 |  ├── THEME_STYLE                主样式表
 |  └── tyh-ui2                    tyh-ui2 的源码
 ├── .editorconfig                 编辑器配置因为开发者的编辑器都不一样

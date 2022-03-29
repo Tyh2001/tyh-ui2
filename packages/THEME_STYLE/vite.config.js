@@ -16,7 +16,7 @@ export default defineConfig({
     // },
     lib: {
       entry: './index.css',
-      name: 'a'
+      name: 'index'
     }
   }
 })

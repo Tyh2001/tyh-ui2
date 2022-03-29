@@ -57,7 +57,6 @@ git commit -m 'feat: Add XXX function'
 ├── packages                      Primary source file
 |  ├── demo                       Test items
 |  ├── docs                       Tyh-ui2 docs
-|  ├── docs-new                   Tyh-ui2 new docs
 |  ├── THEME_STYLE                Main style sheet
 |  └── tyh-ui2                    Tyh-ui2 Source code
 ├── .editorconfig                 Editor configuration because developers' editors are different
