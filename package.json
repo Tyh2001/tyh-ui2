@@ -7,6 +7,7 @@
   "scripts": {
     "dev:docs": "pnpm run dev --filter @tyh-ui/docs",
     "build:docs": "vite build packages/docs",
+    "build:demo": "vite build packages/demo",
     "dev:demo": "vite packages/demo",
     "build:style": "vite build packages/THEME_STYLE",
     "test:test": "vitest",
@@ -20,7 +21,7 @@
   "license": "ISC",
   "dependencies": {
     "rollup": "^2.70.1",
-    "tyh-ui2": "^3.4.5",
+    "tyh-ui2": "workspace:^3.4.6",
     "vite-plugin-compression": "^0.5.1",
     "vue": "^3.2.25"
   },

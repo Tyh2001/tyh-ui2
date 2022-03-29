@@ -2,7 +2,7 @@
   <select
     v-if="$slots.default"
     class="tyh-select"
-    v-model="modelValue"
+    v-model="proxy.modelValue"
     :name="name"
     @input="input"
   >
@@ -11,10 +11,15 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
+const props = defineProps({
   modelValue: String,
   name: String
 })
 const emit = defineEmits(['update:modelValue'])
+const proxy = new Proxy(props, {
+  set() {
+    return true
+  }
+})
 const input = (e: any): void => emit('update:modelValue', e.target.value)
 </script>

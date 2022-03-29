@@ -2,6 +2,10 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.6 (2022-03-29)
+
+- 修复 Select 选择器 选择时报错的 bug
+
 ## 3.4.5 (2022-03-27)
 
 - 按钮组件加入 loading 配置项
