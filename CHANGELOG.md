@@ -4,7 +4,7 @@ For more information, please refer to the Chinese update log.
 
 English | [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG_zh.md)
 
-## 3.4.8 (2022-03-30)
+## 3.4.9 (2022-03-30)
 
 Fix rete scoring style bug
 

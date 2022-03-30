@@ -18,6 +18,13 @@ Start the project first
 - `pnpm i`
 - `pnpm run dev:docs`
 
+## Command description
+
+- `pnpm run dev:demo` Start the test project to test the components
+- `pnpm run dev:docs` Start document project
+- `pnpm run build:docs` Document packaging project
+- `pnpm run build:style` Packaging style sheet
+
 ## Commit specification
 
 Git allows us to attach a submission information as a description when submitting each time. When executing `commit`, we need to fill in the description information in strict accordance with the specification below. The submission information must be one of the following information, followed by **colon + space + information in English**
