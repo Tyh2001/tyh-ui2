@@ -71,8 +71,3 @@ function TyhRate() {
   return { width, upDataValue, showSayFn }
 }
 </script>
-
-<style
-  src="D:\项目文件\tyh-ui\packages\THEME_STYLE\rate\style\index.css"
-  scoped
-></style>
