@@ -2,6 +2,14 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.8 (2022-03-30)
+
+- 修复 rete 评分样式 bug
+
+## 3.4.8 (2022-03-29)
+
+- 修复 rete 评分样式 bug
+
 ## 3.4.7 (2022-03-29)
 
 - 修复 rete 评分样式 bug

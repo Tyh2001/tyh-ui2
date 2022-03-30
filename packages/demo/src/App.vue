@@ -1,8 +1,17 @@
 <template>
-  <h1>hello</h1>
-  <tyh-button>111</tyh-button>
+  <tyh-alert
+    v-show="isShow1"
+    close
+    message="点击关闭普通提示"
+    @close="change"
+  />
 </template>
 
-<script lang="ts" setup></script>
-
-<style scoped></style>
+<script setup>
+import { ref } from 'vue'
+const isShow1 = ref(true)
+function change(e) {
+  isShow1.value = false
+  console.log(e)
+}
+</script>
