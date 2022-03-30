@@ -18,6 +18,13 @@
 - `pnpm i`
 - `pnpm run dev:docs`
 
+## 命令说明
+
+- `pnpm run dev:demo` 启动测试项目，用于测试组件
+- `pnpm run dev:docs` 启动文档项目
+- `pnpm run build:docs` 打包文档项目
+- `pnpm run build:style` 打包样式表
+
 ## 提交说明规范
 
 git 允许我们在每次提交时，附带一个提交信息作为说明，当执行 `commit` 的时候，需要严格按照下方说明规范进行填写说明信息，提交信息必须是下面信息中的一个，后面跟随**英文的冒号+空格+信息**

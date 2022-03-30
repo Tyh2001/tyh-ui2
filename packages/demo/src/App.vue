@@ -1,9 +1,8 @@
 <template>
-  <tyh-rate v-model="value2" />
-  <!-- <tyh-rate v-model="value2" color="red" voidColor="#eee" /> -->
+  <h1>hello</h1>
+  <tyh-button>111</tyh-button>
 </template>
 
-<script setup>
-import { ref } from 'vue'
-const value2 = ref(2)
-</script>
+<script lang="ts" setup></script>
+
+<style scoped></style>
