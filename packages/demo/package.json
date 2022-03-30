@@ -1,5 +1,11 @@
 {
   "name": "@tyh-ui/demo",
   "private": true,
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "@tyh-ui/tyh-ui2": "workspace:^3.4.8"
+  }
 }
