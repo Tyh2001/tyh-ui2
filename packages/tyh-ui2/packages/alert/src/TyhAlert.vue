@@ -4,15 +4,15 @@
       <i v-if="icon" :class="['tyh-icon', 'tyh-message-icon', icon]" />
       {{ message }}
     </div>
-    <i v-if="close" class="tyh-icon tyh-ui-guanbi" @click="emit('close')" />
+    <i v-if="close" class="tyh-icon tyh-ui-guanbi" @click="close" />
   </div>
 </template>
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
-const emit = defineEmits(['close'])
+import { alertProps, alertEmits } from './alert'
+const props = defineProps(alertProps)
+const emit = defineEmits(alertEmits)
 
 const isClass = computed((): (string | object)[] => {
   return [
@@ -24,4 +24,7 @@ const isClass = computed((): (string | object)[] => {
     }
   ]
 })
+const close = (evt: MouseEvent) => {
+  emit('close', evt)
+}
 </script>
