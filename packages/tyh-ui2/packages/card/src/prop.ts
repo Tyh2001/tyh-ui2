@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Shadow } from './type'
 
-export const prop = {
+type Shadow = 'always' | 'hover'
+
+export const cardProps = {
   shadow: {
     type: String as PropType<Shadow>,
     validator(v: string): boolean {
@@ -9,4 +10,4 @@ export const prop = {
     }
   },
   bodyStyle: Object
-}
+} as const

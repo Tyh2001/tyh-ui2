@@ -10,9 +10,9 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { alertProps, alertEmits } from './alert'
+import { alertProps } from './alert'
 const props = defineProps(alertProps)
-const emit = defineEmits(alertEmits)
+const emit = defineEmits(['close'])
 
 const isClass = computed((): (string | object)[] => {
   return [
@@ -24,7 +24,6 @@ const isClass = computed((): (string | object)[] => {
     }
   ]
 })
-const close = (evt: MouseEvent) => {
-  emit('close', evt)
-}
+
+const close = () => emit('close')
 </script>

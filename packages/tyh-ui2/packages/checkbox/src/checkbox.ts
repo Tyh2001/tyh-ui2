@@ -1,4 +1,4 @@
-export const prop = {
+export const checkboxProps = {
   modelValue: Array,
   label: String
 }

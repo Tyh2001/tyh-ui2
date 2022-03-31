@@ -1,7 +1,9 @@
-import { Type, Size } from './type'
 import { PropType } from 'vue'
 
-export const prop = {
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+type Size = 'large' | 'small' | 'mini'
+
+export const buttonProps = {
   type: {
     type: String as PropType<Type>,
     default: 'default',
@@ -28,4 +30,4 @@ export const prop = {
   square: Boolean,
   simple: Boolean,
   loading: Boolean
-}
+} as const

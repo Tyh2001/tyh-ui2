@@ -1,5 +1,5 @@
-import { ExtractPropTypes, PropType } from 'vue'
-import type Alert from './TyhAlert.vue'
+import { PropType } from 'vue'
+
 type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
 
 export const alertProps = {
@@ -23,12 +23,3 @@ export const alertProps = {
   center: Boolean,
   simple: Boolean
 } as const
-export type AlertProps = ExtractPropTypes<typeof alertProps>
-
-// emits
-export const alertEmits = {
-  close: (evt: MouseEvent) => evt instanceof MouseEvent
-}
-export type AlertEmits = typeof alertEmits
-
-export type AlertInstance = InstanceType<typeof Alert>

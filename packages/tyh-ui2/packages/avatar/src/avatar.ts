@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Fit } from './type'
 
-export const prop = {
+type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
+
+export const avatarProps = {
   src: String,
   alt: String,
   size: {
@@ -19,4 +20,4 @@ export const prop = {
   select: Boolean,
   draggable: Boolean,
   errorIcon: String
-}
+} as const

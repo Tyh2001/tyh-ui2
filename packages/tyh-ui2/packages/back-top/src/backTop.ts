@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Action } from './type'
 
-export const prop = {
+type Action = 'smooth' | 'instant'
+
+export const backTop = {
   bottom: {
     type: String,
     default: () => '50px'
@@ -21,4 +22,4 @@ export const prop = {
     type: Number,
     default: () => 100
   }
-}
+} as const

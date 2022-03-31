@@ -12,8 +12,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { checkboxProps } from './checkbox'
+const props = defineProps(checkboxProps)
 const emit = defineEmits(['update:modelValue'])
 const proxy = new Proxy(props, {
   set() {
@@ -21,11 +21,9 @@ const proxy = new Proxy(props, {
   }
 })
 
-const input = e => {
+const input = (e: any): void => {
   const model = ref([])
-  // console.log(e.target.value)
   model.value.push(e.target.value)
-  // console.log(model.value)
   emit('update:modelValue', model.value)
 }
 </script>
