@@ -40,7 +40,7 @@ function TyhRate() {
   }
   const showSayFn = computed((): string | void => {
     if (!props.showText) return
-    const showSay = ref<any>(null)
+    const showSay = ref<null | string>(null)
     watch(
       () => width.value,
       (): void => {

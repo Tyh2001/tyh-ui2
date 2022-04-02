@@ -32,7 +32,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, getCurrentInstance, watch } from 'vue'
+import {
+  computed,
+  getCurrentInstance,
+  watch,
+  ComponentInternalInstance
+} from 'vue'
 import { drawerProps } from './drawer.ts'
 const props = defineProps(drawerProps)
 const emit = defineEmits([
@@ -60,7 +65,7 @@ function TyhDrawer() {
     close()
   }
 
-  const self: any = getCurrentInstance()
+  const self = getCurrentInstance() as ComponentInternalInstance
   watch(
     () => props.modelValue,
     (v: boolean): void => {

@@ -60,7 +60,7 @@ import { tableProps } from './table.ts'
 const props = defineProps(tableProps)
 
 const importantStyle = (i: number): string | void => {
-  const importants: any = props.important
+  const importants: number[] = props.important
   for (const key of importants) {
     if (key === i + 1) {
       return `background: ${props.importantColor}`

@@ -19,7 +19,12 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, ref, computed } from 'vue'
+import {
+  getCurrentInstance,
+  ref,
+  computed,
+  ComponentInternalInstance
+} from 'vue'
 import { notificationProps } from './notification.ts'
 const props = defineProps(notificationProps)
 const { isShow, onClose, leave, iconClass } = TyhNotification()
@@ -68,7 +73,7 @@ function TyhNotification() {
     ]
   })
 
-  const instance: any = getCurrentInstance()
+  const instance = getCurrentInstance() as ComponentInternalInstance
   const leave = (): void => {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
   }

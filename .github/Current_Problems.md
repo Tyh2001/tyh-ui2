@@ -43,3 +43,14 @@ function () {}
 
 function() {}
 ```
+
+- [ ] 去除下面的 any 类型
+
+* input
+* backTop
+* checkbox
+* input
+* radio
+* select
+* textarea
+*

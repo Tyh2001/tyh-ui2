@@ -32,7 +32,7 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, watch } from 'vue'
+import { getCurrentInstance, watch, ComponentInternalInstance } from 'vue'
 import { prop } from './prop.ts'
 const props = defineProps(prop)
 const emit = defineEmits([
@@ -54,7 +54,7 @@ function TyhDialog() {
     close()
   }
 
-  const self: any = getCurrentInstance()
+  const self = getCurrentInstance() as ComponentInternalInstance
   watch(
     () => props.modelValue,
     (v: boolean): void => {

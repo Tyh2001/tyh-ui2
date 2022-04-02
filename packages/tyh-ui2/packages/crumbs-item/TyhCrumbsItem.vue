@@ -9,8 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, inject } from 'vue'
-import { getCurrentInstance } from 'vue'
+import { ref, inject, ComponentInternalInstance, getCurrentInstance } from 'vue'
 const props = defineProps({
   to: String
 } as const)
@@ -18,14 +17,14 @@ const props = defineProps({
 const { icon, link } = TyhCrumbsItem()
 
 function TyhCrumbsItem() {
-  const icon: any = ref<string>('')
-  const { proxy }: any = getCurrentInstance()
+  const icon = ref<string>('')
+  const { proxy } = getCurrentInstance() as ComponentInternalInstance
   icon.value = inject('Crumbs-separator')
-  const link = () => {
+  const link = (): void => {
     if (!props.to) return
     try {
       proxy.$router.push(props.to)
-    } catch (e) {
+    } catch (e: any) {
       console.log(e)
     }
   }

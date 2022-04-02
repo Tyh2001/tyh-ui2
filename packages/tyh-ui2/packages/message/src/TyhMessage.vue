@@ -18,7 +18,12 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, ref, computed } from 'vue'
+import {
+  getCurrentInstance,
+  ref,
+  computed,
+  ComponentInternalInstance
+} from 'vue'
 import { messageProps } from './message.ts'
 const props = defineProps(messageProps)
 const { isShow, leave, close, isClass } = TyhMessage()
@@ -39,7 +44,7 @@ function TyhMessage() {
     isShow.value = false
   }
 
-  const instance: any = getCurrentInstance()
+  const instance = getCurrentInstance() as ComponentInternalInstance
   const leave = (): void => {
     instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
   }

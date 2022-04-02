@@ -15,7 +15,7 @@ export default defineConfig({
     //   },
     // },
     lib: {
-      entry: './index.css',
+      entry: '../tyh-ui2/style/index.css',
       name: 'index'
     }
   }

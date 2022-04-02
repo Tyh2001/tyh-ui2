@@ -34,11 +34,10 @@ function TyhBackTop() {
   }
 
   const toTop = (): void => {
-    const param: any = {
+    window.scrollTo({
       top: 0,
       behavior: props.action
-    }
-    window.scrollTo(param)
+    })
   }
 
   onMounted((): void => addEventListener('scroll', handleScroll()))

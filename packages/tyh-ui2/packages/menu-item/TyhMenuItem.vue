@@ -10,17 +10,24 @@
 </template>
 
 <script lang="ts" setup>
-import { getCurrentInstance, inject, computed } from 'vue'
+import {
+  getCurrentInstance,
+  inject,
+  computed,
+  ComponentInternalInstance
+} from 'vue'
 const props = defineProps({
   to: String,
   prohibit: Boolean
 } as const)
+
 const theme: string = inject('theme')
 
 const isStyle = computed((): object[] => [
   { color: theme === 'dark' ? '#fff' : '#000' }
 ])
-const { proxy }: any = getCurrentInstance()
+
+const { proxy } = getCurrentInstance() as ComponentInternalInstance
 const link = (): void => {
   if (props.prohibit) return
   try {
