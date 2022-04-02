@@ -4,6 +4,10 @@ For more information, please refer to the Chinese update log.
 
 English | [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG_zh.md)
 
+## 3.4.11 (2022-04-03)
+
+- Add more stringent type restrictions
+
 ## 3.4.10 (2022-04-02)
 
 - All files are rewritten with TS

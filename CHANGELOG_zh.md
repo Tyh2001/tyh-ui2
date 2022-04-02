@@ -2,6 +2,10 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.11 (2022-04-03)
+
+- 添加更严谨的类型限制
+
 ## 3.4.10 (2022-04-02)
 
 - 全部文件使用 ts 重写
