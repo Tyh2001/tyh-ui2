@@ -2,7 +2,13 @@
   <icon-a v-high />
   <div id="allIcon">
     <ul class="allIcon-ui">
-      <li class="allIcon-li" v-for="(icon, index) in iconList" :key="index">
+      <li
+        class="allIcon-li"
+        v-for="(icon, index) in iconList"
+        :key="index"
+        :data-clipboard-text="icon"
+        @click="copy(icon)"
+      >
         <i :class="['tyh-icon', icon]" />
         <p class="iconTitle">{{ icon }}</p>
       </li>
@@ -12,6 +18,8 @@
 </template>
 
 <script setup>
+import Clipboard from 'clipboard'
+import { Message } from '@tyh-ui/tyh-ui2'
 import iconA from '@/docs/icon/iconA.md'
 import iconB from '@/docs/icon/iconB.md'
 const iconList = [
@@ -203,4 +211,11 @@ const iconList = [
   'tyh-ui-arrow-right-bold',
   'tyh-ui-select-bold'
 ]
+const copy = icon => {
+  const clipboard = new Clipboard('.allIcon-li')
+  clipboard.on('success', _ => {
+    Message({ message: `复制成功 ${icon}`, type: 'success', round: true })
+    clipboard.destroy()
+  })
+}
 </script>
