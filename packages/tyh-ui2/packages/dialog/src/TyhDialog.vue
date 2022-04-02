@@ -33,7 +33,7 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, watch } from 'vue'
-import { prop } from './prop'
+import { prop } from './prop.ts'
 const props = defineProps(prop)
 const emit = defineEmits([
   'update:modelValue',

@@ -19,7 +19,6 @@
   "license": "ISC",
   "dependencies": {
     "rollup": "^2.70.1",
-    "tyh-ui2": "workspace:^3.4.9",
     "vite-plugin-compression": "^0.5.1",
     "vue": "^3.2.25"
   },

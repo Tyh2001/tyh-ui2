@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import { avatarProps } from './avatar'
+import { avatarProps } from './avatar.ts'
 const props = defineProps(avatarProps)
 const emit = defineEmits(['error', 'load'])
 const { isError, onError, isSize, errorClass, successClass } = TyhAvatar()

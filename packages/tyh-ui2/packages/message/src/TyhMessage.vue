@@ -19,7 +19,7 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, ref, computed } from 'vue'
-import { messageProps } from './message'
+import { messageProps } from './message.ts'
 const props = defineProps(messageProps)
 const { isShow, leave, close, isClass } = TyhMessage()
 

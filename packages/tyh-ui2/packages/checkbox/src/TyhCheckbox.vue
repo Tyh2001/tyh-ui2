@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { checkboxProps } from './checkbox'
+import { checkboxProps } from './checkbox.ts'
 const props = defineProps(checkboxProps)
 const emit = defineEmits(['update:modelValue'])
 const proxy = new Proxy(props, {

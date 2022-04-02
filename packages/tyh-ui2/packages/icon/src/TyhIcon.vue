@@ -3,6 +3,6 @@
 </template>
 
 <script lang="ts" setup>
-import { iconProps } from './icon'
+import { iconProps } from './icon.ts'
 defineProps(iconProps)
 </script>

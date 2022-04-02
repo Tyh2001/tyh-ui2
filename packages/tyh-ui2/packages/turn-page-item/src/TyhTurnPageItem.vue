@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject } from 'vue'
-import { turnPageItemProps } from './turnPageItem'
+import { turnPageItemProps } from './turnPageItem.ts'
 const props = defineProps(turnPageItemProps)
 
 const { isCenter, link } = TyhTurnPageItem()

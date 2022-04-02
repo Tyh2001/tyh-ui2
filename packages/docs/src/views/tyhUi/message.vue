@@ -20,7 +20,7 @@ import messageB from '@/docs/message/messageB.md'
 import messageC from '@/docs/message/messageC.md'
 import messageD from '@/docs/message/messageD.md'
 import messageE from '@/docs/message/messageE.md'
-import { Message } from 'tyh-ui2'
+import { Message } from '@tyh-ui/tyh-ui2'
 function change1() {
   Message({ message: '默认提示', type: 'default', round: true })
 }

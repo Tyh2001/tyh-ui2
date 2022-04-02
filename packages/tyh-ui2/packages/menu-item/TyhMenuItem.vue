@@ -15,7 +15,7 @@ const props = defineProps({
   to: String,
   prohibit: Boolean
 } as const)
-const theme = inject('theme')
+const theme: string = inject('theme')
 
 const isStyle = computed((): object[] => [
   { color: theme === 'dark' ? '#fff' : '#000' }
@@ -25,7 +25,7 @@ const link = (): void => {
   if (props.prohibit) return
   try {
     proxy.$router.push(props.to)
-  } catch (e) {
+  } catch (e: any) {
     console.log(e)
   }
 }

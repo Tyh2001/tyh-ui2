@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { tagProps } from './tag'
+import { tagProps } from './tag.ts'
 const props = defineProps(tagProps)
 const emit = defineEmits(['close'])
 

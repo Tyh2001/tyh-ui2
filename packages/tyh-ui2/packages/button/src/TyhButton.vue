@@ -11,8 +11,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { buttonProps } from './button'
-import { THEME } from '../../../utils/theme'
+import { buttonProps } from './button.ts'
+import { THEME } from '../../../utils/theme.ts'
 const props = defineProps(buttonProps)
 
 const color = computed((): string => {

@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
 import { ref, onMounted } from 'vue'
-import { backTopProps } from './backTop'
+import { backTopProps } from './backTop.ts'
 const props = defineProps(backTopProps)
 const { isShow, toTop } = TyhBackTop()
 

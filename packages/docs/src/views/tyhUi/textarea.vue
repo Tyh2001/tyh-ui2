@@ -30,7 +30,7 @@ import { ref } from 'vue'
 const value1 = ref('')
 const value3 = ref('')
 const value4 = ref('')
-const text5 = ref('禁用状态')
+const value5 = ref('禁用状态')
 const value6 = ref('')
 const value7 = ref('随意拉伸')
 const value8 = ref('只能纵向拉伸')

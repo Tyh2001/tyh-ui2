@@ -1,5 +1,7 @@
 import { PropType } from 'vue'
-import { Type, Size } from './type'
+
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+type Size = 'small' | 'mini'
 
 export const tagProps = {
   type: {
@@ -24,4 +26,4 @@ export const tagProps = {
   },
   round: Boolean,
   isClose: Boolean
-}
+} as const
