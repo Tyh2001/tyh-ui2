@@ -5,7 +5,7 @@
 推荐使用 npm 的方式安装
 
 ```shell
-npm i tyh-ui2
+npm i tyh-ui2 -S
 ```
 
 ## 完整引入

@@ -48,6 +48,7 @@
       :style="ListBackgroundColor(list3)"
       :key="index"
       :data-clipboard-text="list3.color"
+      @click="copyColor('.colorList-item3')"
     >
       <p>类型：{{ list3.type }}</p>
       <p>{{ list3.color }}</p>
@@ -68,8 +69,8 @@
 import colorA from '@/docs/color/colorA.md'
 import colorB from '@/docs/color/colorB.md'
 import colorC from '@/docs/color/colorC.md'
-// import Clipboard from 'clipboard'
-// import { Message } from 'tyh-ui2'
+import Clipboard from 'clipboard'
+import { Message } from '@tyh-ui/tyh-ui2'
 const colorList1 = [
   { color: '3a6ff4', type: 'primary' },
   { color: '54c600', type: 'success' },
@@ -121,23 +122,15 @@ const colorList3 = [
   { color: 'e2e1e4', type: '芡食白' }
 ]
 
-// 复制色号
-function copyColor(dom) {
+const copyColor = dom => {
   const clipboard = new Clipboard(dom)
-  // 复制成功
   clipboard.on('success', _ => {
-    Message({
-      message: '复制成功',
-      type: 'success',
-      iconClass: 'tyh-ui-success-01',
-      round: true
-    })
+    Message({ message: '复制成功', type: 'success', round: true })
     clipboard.destroy()
   })
 }
 
-// 每个盒子的颜色
-function ListBackgroundColor(item) {
+const ListBackgroundColor = item => {
   return { background: `#${item.color}` }
 }
 </script>
