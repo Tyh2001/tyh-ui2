@@ -14,8 +14,8 @@
 
 <script lang="ts" setup>
 import { computed, provide } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { menuProps } from './menu'
+const props = defineProps(menuProps)
 provide('theme', props.theme)
 
 const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')

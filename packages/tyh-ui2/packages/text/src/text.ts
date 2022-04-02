@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Type } from './type'
 
-export const prop = {
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+
+export const textProps = {
   type: {
     type: String as PropType<Type>,
     default: 'default',
@@ -18,7 +19,8 @@ export const prop = {
   },
   size: {
     type: String,
-    default: () => '13'
+    default: () => '16'
   },
+  block: Boolean,
   color: String
-}
+} as const

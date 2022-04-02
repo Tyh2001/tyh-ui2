@@ -1,7 +1,9 @@
 import { PropType } from 'vue'
-import { Theme, Mode } from './type'
 
-export const prop = {
+type Theme = 'dark' | 'light'
+type Mode = 'horizontal' | 'vertical'
+
+export const menuProps = {
   theme: {
     type: String as PropType<Theme>,
     default: 'dark',
@@ -17,4 +19,4 @@ export const prop = {
       return ['horizontal', 'vertical', ''].includes(v)
     }
   }
-}
+} as const

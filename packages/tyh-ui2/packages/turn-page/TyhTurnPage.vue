@@ -6,6 +6,6 @@
 import { provide } from 'vue'
 const props = defineProps({
   center: Boolean
-})
+} as const)
 provide('is-center', props.center)
 </script>

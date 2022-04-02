@@ -1,4 +1,4 @@
-export const prop = {
+export const rateProps = {
   modelValue: Number,
   color: {
     type: String,
@@ -13,4 +13,4 @@ export const prop = {
     type: Array,
     default: () => ['极差', '失望', '一般', '惊喜', '满意']
   }
-}
+} as const

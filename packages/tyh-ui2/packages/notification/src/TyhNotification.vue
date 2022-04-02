@@ -20,8 +20,8 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, ref, computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { notificationProps } from './notification'
+const props = defineProps(notificationProps)
 const { isShow, onClose, leave, iconClass } = TyhNotification()
 
 function TyhNotification() {

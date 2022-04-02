@@ -27,9 +27,6 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  userInfo: String,
-  describe: String,
-  linkUrl: String
-})
+import { infoProps } from './info'
+defineProps(infoProps)
 </script>

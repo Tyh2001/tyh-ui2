@@ -1,7 +1,9 @@
 import { PropType } from 'vue'
-import { Type, Size } from './type'
 
-export const prop = {
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+type Size = 'small' | 'mini'
+
+export const tagProps = {
   type: {
     type: String as PropType<Type>,
     default: () => 'default',
@@ -24,4 +26,4 @@ export const prop = {
   },
   round: Boolean,
   isClose: Boolean
-}
+} as const

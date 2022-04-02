@@ -27,8 +27,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { radioProps } from './radio'
+const props = defineProps(radioProps)
 const emits = defineEmits(['update:modelValue', 'change'])
 const { proxy, input, isClass, isStyle, labelStyle } = TyhRadio()
 

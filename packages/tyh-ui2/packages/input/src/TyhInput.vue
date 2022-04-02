@@ -35,8 +35,8 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { inputProps } from './input'
+const props = defineProps(inputProps)
 const emit = defineEmits([
   'update:modelValue',
   'clear',

@@ -4,8 +4,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { taggingProps } from './tagging'
+const props = defineProps(taggingProps)
 
 const isClass = computed((): string[] => [
   'tyh-tagging',

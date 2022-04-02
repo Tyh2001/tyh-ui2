@@ -1,10 +1,11 @@
 import { PropType } from 'vue'
-import { Type } from './type'
 
-export const prop = {
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+
+export const linkProps = {
   type: {
     type: String as PropType<Type>,
-    default: 'default',
+    default: () => 'default',
     validator(v: string): boolean {
       return [
         'default',
@@ -16,10 +17,12 @@ export const prop = {
       ].includes(v)
     }
   },
-  size: {
-    type: String,
-    default: () => '16'
+  prohibit: Boolean,
+  url: String,
+  underline: {
+    type: Boolean,
+    default: () => true
   },
-  block: Boolean,
-  color: String
-}
+  target: String,
+  icon: String
+} as const

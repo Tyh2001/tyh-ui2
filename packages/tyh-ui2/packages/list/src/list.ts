@@ -1,4 +1,4 @@
-export const prop = {
+export const listProps = {
   header: String,
   content: {
     type: Array,
@@ -9,4 +9,4 @@ export const prop = {
   zebra: Boolean,
   num: Boolean,
   hoverShow: Boolean
-}
+} as const

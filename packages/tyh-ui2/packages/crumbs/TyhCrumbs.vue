@@ -9,6 +9,6 @@ const props = defineProps({
     type: String,
     default: () => 'tyh-ui-xiexian'
   }
-})
+} as const)
 provide('Crumbs-separator', props.separator)
 </script>

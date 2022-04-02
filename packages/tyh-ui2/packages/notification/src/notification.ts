@@ -1,7 +1,9 @@
 import { PropType } from 'vue'
-import { Type, Position } from './type'
 
-export const prop = {
+type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
+type Type = 'primary' | 'success' | 'danger' | 'warning'
+
+export const notificationProps = {
   title: String,
   message: String,
   time: {
@@ -28,4 +30,4 @@ export const prop = {
       return ['primary', 'success', 'danger', 'warning', ''].includes(v)
     }
   }
-}
+} as const

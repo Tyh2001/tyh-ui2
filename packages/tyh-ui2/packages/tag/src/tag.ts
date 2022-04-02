@@ -1,31 +1,27 @@
 import { PropType } from 'vue'
-import { Type } from './type'
+import { Type, Size } from './type'
 
-export const prop = {
-  message: String,
+export const tagProps = {
   type: {
     type: String as PropType<Type>,
     default: () => 'default',
     validator(v: string): boolean {
       return [
+        'default',
         'primary',
         'success',
         'danger',
         'warning',
-        'default',
         ''
       ].includes(v)
     }
   },
-  showClose: Boolean,
-  time: {
-    type: Number,
-    default: () => 200
+  size: {
+    type: String as PropType<Size>,
+    validator(v: string): boolean {
+      return ['small', 'mini', ''].includes(v)
+    }
   },
-  offset: {
-    type: Number,
-    default: () => 20
-  },
-  icon: String,
-  round: Boolean
+  round: Boolean,
+  isClose: Boolean
 }

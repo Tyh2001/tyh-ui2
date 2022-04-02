@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Resize } from './type'
 
-export const prop = {
+type Resize = 'vertical' | 'horizontal' | 'none'
+
+export const textareaProps = {
   modelValue: String,
   placeholder: String,
   max: [Number, String],
@@ -20,4 +21,4 @@ export const prop = {
   disabled: Boolean,
   autofocus: Boolean,
   name: String
-}
+} as const

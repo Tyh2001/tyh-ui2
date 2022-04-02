@@ -1,7 +1,9 @@
 import { PropType } from 'vue'
-import { Type, Size } from './type'
 
-export const prop = {
+type Type = 'text' | 'password'
+type Size = 'large' | 'medium' | 'small' | 'mini'
+
+export const inputProps = {
   modelValue: {
     type: String,
     set() {
@@ -33,4 +35,4 @@ export const prop = {
   set() {
     return true
   }
-}
+} as const

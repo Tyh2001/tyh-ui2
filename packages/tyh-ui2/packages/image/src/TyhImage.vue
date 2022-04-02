@@ -20,8 +20,8 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-import { prop } from './prop'
-defineProps(prop)
+import { imageProps } from './image'
+defineProps(imageProps)
 const emit = defineEmits(['error', 'load'])
 
 const isError = ref<boolean>(false)

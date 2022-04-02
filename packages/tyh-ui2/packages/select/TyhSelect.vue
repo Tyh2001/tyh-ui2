@@ -14,7 +14,7 @@
 const props = defineProps({
   modelValue: String,
   name: String
-})
+} as const)
 const emit = defineEmits(['update:modelValue'])
 const proxy = new Proxy(props, {
   set() {

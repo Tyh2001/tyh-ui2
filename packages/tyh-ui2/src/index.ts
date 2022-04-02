@@ -43,7 +43,7 @@ import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
 
-const components = [
+const components: object[] = [
   TyhButton,
   TyhList,
   TyhCard,
@@ -87,16 +87,16 @@ const components = [
   TyhCheckbox
 ]
 
-const install = app => {
+const install: Function = app => {
   components.forEach(component => {
     app.use(component)
   })
 }
 
-const tyhUi2 = {
+const tyhUi2: object = {
   version,
   install
-}
+} as const
 
 export {
   install,

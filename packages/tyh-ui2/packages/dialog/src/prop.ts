@@ -30,4 +30,4 @@ export const prop = {
     type: Number,
     default: () => 3500
   }
-}
+} as const

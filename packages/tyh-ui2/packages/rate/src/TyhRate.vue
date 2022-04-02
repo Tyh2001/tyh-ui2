@@ -24,8 +24,8 @@
 
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { rateProps } from './rate'
+const props = defineProps(rateProps)
 const emit = defineEmits(['update:modelValue', 'change'])
 const { width, upDataValue, showSayFn } = TyhRate()
 function TyhRate() {

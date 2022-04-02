@@ -17,5 +17,5 @@ defineProps({
   width: String,
   height: String,
   animation: Boolean
-})
+} as const)
 </script>

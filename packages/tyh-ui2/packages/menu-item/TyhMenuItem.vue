@@ -14,7 +14,7 @@ import { getCurrentInstance, inject, computed } from 'vue'
 const props = defineProps({
   to: String,
   prohibit: Boolean
-})
+} as const)
 const theme = inject('theme')
 
 const isStyle = computed((): object[] => [

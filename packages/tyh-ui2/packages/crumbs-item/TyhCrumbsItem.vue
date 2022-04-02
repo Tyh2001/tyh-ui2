@@ -13,8 +13,10 @@ import { ref, inject } from 'vue'
 import { getCurrentInstance } from 'vue'
 const props = defineProps({
   to: String
-})
+} as const)
+
 const { icon, link } = TyhCrumbsItem()
+
 function TyhCrumbsItem() {
   const icon: any = ref<string>('')
   const { proxy }: any = getCurrentInstance()
@@ -27,6 +29,7 @@ function TyhCrumbsItem() {
       console.log(e)
     }
   }
+
   return { icon, link }
 }
 </script>

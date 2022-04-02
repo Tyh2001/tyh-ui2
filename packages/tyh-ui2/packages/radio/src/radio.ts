@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Size } from './type'
 
-export const prop = {
+type Size = 'large' | 'medium' | 'small' | 'mini'
+
+export const radioProps = {
   modelValue: String,
   label: String,
   name: String,
@@ -14,4 +15,4 @@ export const prop = {
       return ['large', 'medium', 'small', 'mini', ''].includes(v)
     }
   }
-}
+} as const

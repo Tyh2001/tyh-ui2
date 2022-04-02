@@ -30,7 +30,7 @@ defineProps({
     type: Array,
     default: () => []
   }
-})
+} as const)
 
 const isClose = ref<boolean>(false)
 

@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Direction } from './type'
 
-export const prop = {
+type Direction = 'left' | 'right'
+
+export const turnPageItemProps = {
   direction: {
     type: String as PropType<Direction>,
     required: true,
@@ -12,4 +13,4 @@ export const prop = {
   url: String,
   icon: String,
   prohibit: Boolean
-}
+} as const

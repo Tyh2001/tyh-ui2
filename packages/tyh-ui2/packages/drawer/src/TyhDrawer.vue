@@ -33,8 +33,8 @@
 
 <script lang="ts" setup>
 import { computed, getCurrentInstance, watch } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { drawerProps } from './drawer'
+const props = defineProps(drawerProps)
 const emit = defineEmits([
   'update:modelValue',
   'open',

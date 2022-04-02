@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Fit } from './type'
 
-export const prop = {
+type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
+
+export const imageProps = {
   src: String,
   alt: String,
   fit: {
@@ -14,4 +15,4 @@ export const prop = {
   height: String,
   select: Boolean,
   draggable: Boolean
-}
+} as const

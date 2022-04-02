@@ -1,10 +1,11 @@
 import { PropType } from 'vue'
-import { Type } from './type'
 
-export const prop = {
+type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
+
+export const taggingProps = {
   type: {
     type: String as PropType<Type>,
-    default: () => 'default',
+    default: 'default',
     validator(v: string): boolean {
       return [
         'default',
@@ -16,12 +17,9 @@ export const prop = {
       ].includes(v)
     }
   },
-  prohibit: Boolean,
-  url: String,
-  underline: {
-    type: Boolean,
-    default: () => true
+  size: {
+    type: String,
+    default: () => '13'
   },
-  target: String,
-  icon: String
-}
+  color: String
+} as const

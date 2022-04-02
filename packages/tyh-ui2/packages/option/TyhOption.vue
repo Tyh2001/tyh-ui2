@@ -9,5 +9,5 @@
 defineProps({
   value: String,
   label: String
-})
+} as const)
 </script>

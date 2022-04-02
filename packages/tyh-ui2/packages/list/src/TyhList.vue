@@ -24,8 +24,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { listProps } from './list'
+const props = defineProps(listProps)
 const liClass = computed((): (string | object)[] => {
   return [
     'tyh-list-li',

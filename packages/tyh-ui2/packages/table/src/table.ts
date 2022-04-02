@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Align } from './type'
 
-export const prop = {
+type Align = 'left' | 'right' | 'center'
+
+export const tableProps = {
   data: {
     type: Array,
     default: () => []
@@ -40,4 +41,4 @@ export const prop = {
     type: String,
     default: () => '#fdf5e6'
   }
-}
+} as const

@@ -19,6 +19,6 @@ defineProps({
     type: String,
     default: () => 'tyh-ui-direction-left'
   }
-})
+} as const)
 const emits = defineEmits(['back'])
 </script>

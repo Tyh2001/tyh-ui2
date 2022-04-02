@@ -12,5 +12,5 @@ defineProps({
     type: String,
     default: () => '200px'
   }
-})
+} as const)
 </script>

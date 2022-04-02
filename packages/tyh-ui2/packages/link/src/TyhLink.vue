@@ -12,8 +12,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { prop } from './prop'
-const props = defineProps(prop)
+import { linkProps } from './link'
+const props = defineProps(linkProps)
 const isClass = computed((): (string | object)[] => {
   return [
     'tyh-link',

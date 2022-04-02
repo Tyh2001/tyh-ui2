@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Position } from './type'
 
-export const prop = {
+type Position = 'left' | 'center' | 'right'
+
+export const divisionProps = {
   position: {
     type: String as PropType<Position>,
     default: 'left',
@@ -18,4 +19,4 @@ export const prop = {
     default: () => '25px'
   },
   icon: String
-}
+} as const

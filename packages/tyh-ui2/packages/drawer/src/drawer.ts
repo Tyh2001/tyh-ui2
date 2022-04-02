@@ -1,7 +1,8 @@
 import { PropType } from 'vue'
-import { Direction } from './type'
 
-export const prop = {
+type Direction = 'top' | 'left' | 'bottom' | 'right'
+
+export const drawerProps = {
   modelValue: Boolean,
   direction: {
     type: String as PropType<Direction>,
@@ -36,4 +37,4 @@ export const prop = {
     type: Number,
     default: () => 3500
   }
-}
+} as const
