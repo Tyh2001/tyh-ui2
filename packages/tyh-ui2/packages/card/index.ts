@@ -1,5 +1,7 @@
-import T from './src/TyhCard.vue'
+import TyhCard from './src/TyhCard.vue'
 
-T.install = _ => _.component('TyhCard', T)
+TyhCard.install = (app: any) => {
+  app.component('TyhCard', TyhCard)
+}
 
-export default T
+export default TyhCard

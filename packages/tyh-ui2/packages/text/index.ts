@@ -1,5 +1,7 @@
-import T from './src/TyhText.vue'
+import TyhText from './src/TyhText.vue'
 
-T.install = _ => _.component('TyhText', T)
+TyhText.install = (app: any) => {
+  app.component('TyhText', TyhText)
+}
 
-export default T
+export default TyhText

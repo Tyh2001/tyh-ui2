@@ -53,4 +53,3 @@ function() {}
 * radio
 * select
 * textarea
-*

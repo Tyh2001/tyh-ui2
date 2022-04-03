@@ -1,5 +1,7 @@
-import T from './TyhTurnPage.vue'
+import TyhTurnPage from './TyhTurnPage.vue'
 
-T.install = _ => _.component('TyhTurnPage', T)
+TyhTurnPage.install = (app: any) => {
+  app.component('TyhTurnPage', TyhTurnPage)
+}
 
-export default T
+export default TyhTurnPage

@@ -1,5 +1,7 @@
-import T from './TyhFooter.vue'
+import TyhFooter from './TyhFooter.vue'
 
-T.install = _ => _.component('TyhFooter', T)
+TyhFooter.install = (app: any) => {
+  app.component('TyhFooter', TyhFooter)
+}
 
-export default T
+export default TyhFooter

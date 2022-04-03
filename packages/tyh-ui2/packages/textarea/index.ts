@@ -1,5 +1,7 @@
-import T from './src/TyhTextarea.vue'
+import TyhTextarea from './src/TyhTextarea.vue'
 
-T.install = _ => _.component('TyhTextarea', T)
+TyhTextarea.install = (app: any) => {
+  app.component('TyhTextarea', TyhTextarea)
+}
 
-export default T
+export default TyhTextarea

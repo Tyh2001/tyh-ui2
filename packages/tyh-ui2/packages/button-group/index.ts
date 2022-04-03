@@ -1,5 +1,7 @@
-import T from './TyhButtonGroup.vue'
+import TyhButtonGroup from './TyhButtonGroup.vue'
 
-T.install = _ => _.component('TyhButtonGroup', T)
+TyhButtonGroup.install = (app: any) => {
+  app.component('TyhButtonGroup', TyhButtonGroup)
+}
 
-export default T
+export default TyhButtonGroup

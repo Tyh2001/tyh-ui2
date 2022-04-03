@@ -1,5 +1,5 @@
 import T from './src/TyhMessage.vue'
-import { createNot, mergeOptions } from '../../utils/tips.ts'
+import { createNot, mergeOptions } from '../../utils/tips'
 
 const G: object = { time: 2000, offset: 20 }
 

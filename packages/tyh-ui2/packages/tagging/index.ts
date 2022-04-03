@@ -1,5 +1,7 @@
-import T from './src/TyhTagging.vue'
+import TyhTagging from './src/TyhTagging.vue'
 
-T.install = _ => _.component('TyhTagging', T)
+TyhTagging.install = (app: any) => {
+  app.component('TyhTagging', TyhTagging)
+}
 
-export default T
+export default TyhTagging

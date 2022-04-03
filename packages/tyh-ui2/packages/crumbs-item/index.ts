@@ -1,5 +1,7 @@
-import T from './TyhCrumbsItem.vue'
+import TyhCrumbsItem from './TyhCrumbsItem.vue'
 
-T.install = _ => _.component('TyhCrumbsItem', T)
+TyhCrumbsItem.install = (app: any) => {
+  app.component('TyhCrumbsItem', TyhCrumbsItem)
+}
 
-export default T
+export default TyhCrumbsItem

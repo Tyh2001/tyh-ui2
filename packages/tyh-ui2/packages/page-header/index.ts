@@ -1,5 +1,7 @@
-import T from './TyhPageHeader.vue'
+import TyhPageHeader from './TyhPageHeader.vue'
 
-T.install = _ => _.component('TyhPageHeader', T)
+TyhPageHeader.install = (app: any) => {
+  app.component('TyhPageHeader', TyhPageHeader)
+}
 
-export default T
+export default TyhPageHeader

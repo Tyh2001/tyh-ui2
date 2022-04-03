@@ -1,5 +1,7 @@
-import T from './src/TyhTable.vue'
+import TyhTable from './src/TyhTable.vue'
 
-T.install = _ => _.component('TyhTable', T)
+TyhTable.install = (app: any) => {
+  app.component('TyhTable', TyhTable)
+}
 
-export default T
+export default TyhTable

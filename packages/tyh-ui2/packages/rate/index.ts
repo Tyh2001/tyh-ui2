@@ -1,5 +1,7 @@
-import T from './src/TyhRate.vue'
+import TyhRate from './src/TyhRate.vue'
 
-T.install = _ => _.component('TyhRate', T)
+TyhRate.install = (app: any) => {
+  app.component('TyhRate', TyhRate)
+}
 
-export default T
+export default TyhRate

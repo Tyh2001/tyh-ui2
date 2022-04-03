@@ -87,13 +87,13 @@ const components: object[] = [
   TyhCheckbox
 ]
 
-const install: Function = app => {
+const install = (app: any) => {
   components.forEach(component => {
     app.use(component)
   })
 }
 
-const tyhUi2: object = {
+const tyhUi2 = {
   version,
   install
 } as const

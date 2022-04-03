@@ -1,5 +1,7 @@
-import T from './src/TyhDivision.vue'
+import TyhDivision from './src/TyhDivision.vue'
 
-T.install = _ => _.component('TyhDivision', T)
+TyhDivision.install = (app: any) => {
+  app.component('TyhDivision', TyhDivision)
+}
 
-export default T
+export default TyhDivision

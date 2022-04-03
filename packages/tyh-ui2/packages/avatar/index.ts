@@ -1,5 +1,7 @@
-import T from './src/TyhAvatar.vue'
+import TyhAvatar from './src/TyhAvatar.vue'
 
-T.install = _ => _.component('TyhAvatar', T)
+TyhAvatar.install = (app: any) => {
+  app.component('TyhAvatar', TyhAvatar)
+}
 
-export default T
+export default TyhAvatar

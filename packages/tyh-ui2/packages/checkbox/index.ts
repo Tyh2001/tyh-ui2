@@ -1,5 +1,7 @@
-import T from './src/TyhCheckbox.vue'
+import TyhCheckbox from './src/TyhCheckbox.vue'
 
-T.install = _ => _.component('TyhCheckbox', T)
+TyhCheckbox.install = (app: any) => {
+  app.component('TyhCheckbox', TyhCheckbox)
+}
 
-export default T
+export default TyhCheckbox

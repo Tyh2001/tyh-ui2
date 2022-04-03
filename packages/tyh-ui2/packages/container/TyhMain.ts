@@ -1,5 +1,7 @@
-import T from './TyhMain.vue'
+import TyhMain from './TyhMain.vue'
 
-T.install = _ => _.component('TyhMain', T)
+TyhMain.install = (app: any) => {
+  app.component('TyhMain', TyhMain)
+}
 
-export default T
+export default TyhMain

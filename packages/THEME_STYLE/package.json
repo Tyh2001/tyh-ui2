@@ -1,4 +1,5 @@
 {
   "name": "@tyh-ui/theme_style",
+  "version": "1.0.0",
   "main": "index.css"
 }

@@ -1,5 +1,7 @@
-import T from './src/TyhLink.vue'
+import TyhLink from './src/TyhLink.vue'
 
-T.install = _ => _.component('TyhLink', T)
+TyhLink.install = (app: any) => {
+  app.component('TyhLink', TyhLink)
+}
 
-export default T
+export default TyhLink

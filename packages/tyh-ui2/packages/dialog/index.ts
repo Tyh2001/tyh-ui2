@@ -1,5 +1,7 @@
-import T from './src/TyhDialog.vue'
+import TyhDialog from './src/TyhDialog.vue'
 
-T.install = _ => _.component('TyhDialog', T)
+TyhDialog.install = (app: any) => {
+  app.component('TyhDialog', TyhDialog)
+}
 
-export default T
+export default TyhDialog
