@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "@tyh-ui/tyh-ui2": "workspace:^3.4.8",
+    "@tyh-ui/theme_style": "workspace:^1.0.0",
     "bright-code": "^1.0.0",
     "clipboard": "^2.0.10",
     "vite-plugin-md": "^0.11.9"

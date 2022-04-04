@@ -60,11 +60,13 @@ importers:
 
   packages/docs:
     specifiers:
+      '@tyh-ui/theme_style': workspace:^1.0.0
       '@tyh-ui/tyh-ui2': workspace:^3.4.8
       bright-code: ^1.0.0
       clipboard: ^2.0.10
       vite-plugin-md: ^0.11.9
     dependencies:
+      '@tyh-ui/theme_style': link:../THEME_STYLE
       '@tyh-ui/tyh-ui2': link:../tyh-ui2
       bright-code: 1.1.1
       clipboard: 2.0.10

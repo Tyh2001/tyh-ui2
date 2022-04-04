@@ -76,7 +76,7 @@
 
 ## 不同排列状态
 
-mode 属性可以配置不同的排列状态
+mode 属性可以配置不同的排列状态，如果 mode 属性为 `vertical` 则宽度自动为 200px，也可以手动设置
 
 <tyh-menu theme="dark" mode="vertical">
   <tyh-menu-item>首页</tyh-menu-item>
@@ -159,13 +159,16 @@ tyh-menu
 | theme  | 主题颜色         | string  | dark / light          | dark       |
 | shadow | 底部是否显示阴影 | boolean | ——                    | false      |
 | mode   | 排列方式         | string  | horizontal / vertical | horizontal |
+| width  | 导航栏宽度       | string  | ——                    | ——         |
 
 tyh-menu-item
 
-| 参数     | 说明       | 类型    | 可选值 | 默认值 |
-| -------- | ---------- | ------- | ------ | ------ |
-| to       | 跳转的路径 | string  | ——     | ——     |
-| prohibit | 是否禁用   | boolean | ——     | ——     |
+| 参数     | 说明                           | 类型    | 可选值 | 默认值 |
+| -------- | ------------------------------ | ------- | ------ | ------ |
+| route    | 跳转的路径                     | string  | ——     | ——     |
+| prohibit | 是否禁用                       | boolean | ——     | ——     |
+| title    | 标题文字（插槽优先级大于属性） | string  | ——     | ——     |
+| link     | 跳转的链接（权重高于 router）  | string  | ——     | ——     |
 
 <tyh-turn-page style="margin: 50px 0">
   <tyh-turn-page-item direction="left" url="/component/input">
