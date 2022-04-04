@@ -77,11 +77,12 @@
 ## 不同排列状态
 
 mode 属性可以配置不同的排列状态
+
 <tyh-menu theme="dark" mode="vertical">
-<tyh-menu-item>首页</tyh-menu-item>
-<tyh-menu-item>内容</tyh-menu-item>
-<tyh-menu-item>设置</tyh-menu-item>
-<tyh-menu-item>回收站</tyh-menu-item>
+  <tyh-menu-item>首页</tyh-menu-item>
+  <tyh-menu-item>内容</tyh-menu-item>
+  <tyh-menu-item>设置</tyh-menu-item>
+  <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
 
 <tyh-menu theme="light" mode="vertical">

@@ -1,7 +1,6 @@
 {
   "name": "@tyh-ui/docs",
   "private": true,
-  "version": "1.0.0",
   "scripts": {
     "dev": "vite"
   },
@@ -9,7 +8,6 @@
     "@tyh-ui/tyh-ui2": "workspace:^3.4.8",
     "bright-code": "^1.0.0",
     "clipboard": "^2.0.10",
-    "vite-plugin-md": "^0.11.9",
-    "vue-router": "^4.0.14"
+    "vite-plugin-md": "^0.11.9"
   }
 }

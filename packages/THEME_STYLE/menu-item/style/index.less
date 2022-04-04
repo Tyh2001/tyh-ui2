@@ -1,19 +1,34 @@
 @primary: #3a6ff4;
 
 .tyh-menu-item {
-  // height: 58px;
-  height: 60px;
+  height: 58px;
   padding: 0 22px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
-  // border-bottom: 2px solid transparent;
+  line-height: 60px;
+  margin: 0;
+  border-bottom: 2px solid transparent;
 
-  // &:hover {
-  //   transition: border 0.2s;
-  //   border-bottom: 2px solid @primary;
-  // }
+
+}
+
+// hover 类型
+// 竖的
+.tyh-menu-item-hover-vertical {
+  &:hover {
+    transition: 0.3s;
+    color: @primary  !important;
+  }
+}
+
+// 水平的
+.tyh-menu-item-hover-horizontal {
+  &:hover {
+    transition: 0.3s;
+    border-bottom: 2px solid @primary;
+  }
 }
 
 // 禁用状态
@@ -22,7 +37,7 @@
   color: #bbbbbb !important;
 
   &:hover {
-    // border: 2px solid transparent;
+    border-bottom: 2px solid transparent;
     // padding-bottom: 3px;
   }
 

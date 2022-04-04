@@ -1,14 +1,28 @@
 .tyh-menu-item {
-  height: 60px;
+  height: 58px;
   padding: 0 22px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
   align-items: center;
+  line-height: 60px;
+  margin: 0;
+  border-bottom: 2px solid transparent;
+}
+.tyh-menu-item-hover-vertical:hover {
+  transition: 0.3s;
+  color: #3a6ff4 !important;
+}
+.tyh-menu-item-hover-horizontal:hover {
+  transition: 0.3s;
+  border-bottom: 2px solid #3a6ff4;
 }
 .tyh-menu-item-prohibit {
   cursor: not-allowed;
   color: #bbbbbb !important;
+}
+.tyh-menu-item-prohibit:hover {
+  border-bottom: 2px solid transparent;
 }
 .tyh-menu-item-prohibit::after {
   background: none;

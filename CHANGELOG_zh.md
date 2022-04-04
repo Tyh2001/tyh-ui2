@@ -2,6 +2,15 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.12
+
+- TyhButton 组件的内部实现逻辑进行优化
+- TyhMenu 组件新增 width 配置项
+- TyhMenu 组件如果 mode 属性为 `vertical` 则宽度自动为 200px，也可以手动设置
+- TyhMenuItem 组件废除 to 属性，改完 route 属性
+- TyhMenuItem 新增 title 属性可以配置标题，但是插槽的优先级大于 title 参数
+- TyhMenuItem 新增 link 属性可以配置跳转的指定 url
+
 ## 3.4.11 (2022-04-03)
 
 - 添加更严谨的类型限制

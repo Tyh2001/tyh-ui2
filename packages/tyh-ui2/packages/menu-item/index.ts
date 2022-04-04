@@ -1,4 +1,4 @@
-import TyhMenuItem from './TyhMenuItem.vue'
+import TyhMenuItem from './src/TyhMenuItem.vue'
 
 TyhMenuItem.install = (app: any) => {
   app.component('TyhMenuItem', TyhMenuItem)

@@ -18,5 +18,6 @@ export const menuProps = {
     validator(v: string): boolean {
       return ['horizontal', 'vertical', ''].includes(v)
     }
-  }
+  },
+  width: String
 } as const

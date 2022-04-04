@@ -1,5 +1,8 @@
 <template>
-  <div :class="isClass">
+  <div
+    :class="isClass"
+    :style="[{ width: mode === 'vertical' && !width ? '200px' : width }]"
+  >
     <div v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
       <slot name="left" />
     </div>
@@ -15,8 +18,10 @@
 <script lang="ts" setup>
 import { computed, provide } from 'vue'
 import { menuProps } from './menu.ts'
+
 const props = defineProps(menuProps)
 provide('theme', props.theme)
+provide('mode', props.mode)
 
 const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
 
