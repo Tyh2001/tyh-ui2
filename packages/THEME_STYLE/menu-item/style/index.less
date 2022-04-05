@@ -2,7 +2,7 @@
 
 .tyh-menu-item {
   height: 58px;
-  padding: 0 22px;
+  padding: 0 26px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
@@ -10,21 +10,25 @@
   line-height: 60px;
   margin: 0;
   border-bottom: 2px solid transparent;
+
+  .tyh-icon {
+    margin-right: 5px;
+  }
 }
 
 // hover 类型
 // 竖的
 .tyh-menu-item-hover-vertical {
   &:hover {
-    transition: .4s;
-    color: @primary !important;
+    transition: 0.4s;
+    color: @primary  !important;
   }
 }
 
 // 水平的
 .tyh-menu-item-hover-horizontal {
   &:hover {
-    transition: .4s;
+    transition: 0.4s;
     border-bottom: 2px solid @primary;
   }
 }

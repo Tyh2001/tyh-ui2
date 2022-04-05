@@ -1,7 +1,9 @@
 <template>
   <div :class="isClass" :style="isStyle" @click="link">
+    <!-- <span> -->
     <slot v-if="$slots.default" />
-    <template v-else>{{ title }}</template>
+    <!-- <template v-else> {{ title }} </template>
+    </span> -->
   </div>
 </template>
 
@@ -13,10 +15,15 @@ const props = defineProps(menuItemProps)
 
 const theme = inject('theme')
 const mode = inject('mode')
+const textColor = inject('textColor')
 
-const isStyle = computed((): object[] => [
-  { color: theme === 'dark' ? '#fff' : '#000' }
-])
+const isStyle = computed((): object[] => {
+  return [
+    {
+      color: textColor ? textColor : theme === 'dark' ? '#fff' : '#333'
+    }
+  ]
+})
 
 const { proxy }: any = getCurrentInstance()
 const link = (): void => {

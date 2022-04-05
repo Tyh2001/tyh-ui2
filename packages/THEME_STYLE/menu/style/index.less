@@ -1,10 +1,11 @@
 .tyh-menu {
+  width: 100%;
   display: inline-block;
   flex-wrap: wrap;
   align-items: center;
   user-select: none;
   justify-content: space-between;
-  padding: 0 22px;
+  transition: .3s;
 
   .tyh-menu-left,
   .tyh-menu-right {
@@ -34,4 +35,19 @@
 
 .tyh-menu-shadow {
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
+}
+
+// 折叠
+.the-menu-collapse {
+  width: 65px;
+
+  .tyh-menu-item {
+    span {
+      display: inline-block;
+      width: 0;
+      height: 0;
+      overflow: hidden;
+      visibility: hidden;
+    }
+  }
 }

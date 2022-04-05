@@ -1,6 +1,6 @@
 .tyh-menu-item {
   height: 58px;
-  padding: 0 22px;
+  padding: 0 26px;
   font-size: 15px;
   cursor: pointer;
   display: flex;
@@ -8,6 +8,9 @@
   line-height: 60px;
   margin: 0;
   border-bottom: 2px solid transparent;
+}
+.tyh-menu-item .tyh-icon {
+  margin-right: 5px;
 }
 .tyh-menu-item-hover-vertical:hover {
   transition: 0.4s;
