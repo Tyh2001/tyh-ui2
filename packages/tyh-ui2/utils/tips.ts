@@ -1,3 +1,5 @@
+'use strict'
+
 import { h, render } from 'vue'
 
 export const createNot: Function = (com: object, opts: object): object => {

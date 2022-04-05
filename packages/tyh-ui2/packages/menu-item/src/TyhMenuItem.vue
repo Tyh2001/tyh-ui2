@@ -1,11 +1,7 @@
 <template>
   <div :class="isClass" :style="isStyle" @click="link">
-    <template v-if="$slots.default">
-      <slot />
-    </template>
-    <template v-else>
-      {{ title }}
-    </template>
+    <slot v-if="$slots.default" />
+    <template v-else>{{ title }}</template>
   </div>
 </template>
 
@@ -29,14 +25,16 @@ const link = (): void => {
     window.open(props.link, 'link')
     return
   }
-  try {
-    proxy.$router.push(props.route)
-  } catch (e: any) {
-    console.log(e)
+  if (props.route) {
+    try {
+      proxy.$router.push(props.route)
+    } catch (e: any) {
+      console.log(e)
+    }
   }
 }
 
-const isClass = computed(() => {
+const isClass = computed((): (string | object)[] => {
   return [
     'tyh-menu-item',
     `tyh-menu-item-hover-${mode}`,

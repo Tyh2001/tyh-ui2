@@ -10,6 +10,8 @@
 - TyhMenuItem 组件废除 to 属性，改完 route 属性
 - TyhMenuItem 新增 title 属性可以配置标题，但是插槽的优先级大于 title 参数
 - TyhMenuItem 新增 link 属性可以配置跳转的指定 url
+- TyhMenu 组件的浅色主题背景色更新为浅灰色
+- 加入严格模式
 
 ## 3.4.11 (2022-04-03)
 

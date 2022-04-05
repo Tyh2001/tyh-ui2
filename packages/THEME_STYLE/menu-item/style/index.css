@@ -10,11 +10,11 @@
   border-bottom: 2px solid transparent;
 }
 .tyh-menu-item-hover-vertical:hover {
-  transition: 0.3s;
+  transition: 0.4s;
   color: #3a6ff4 !important;
 }
 .tyh-menu-item-hover-horizontal:hover {
-  transition: 0.3s;
+  transition: 0.4s;
   border-bottom: 2px solid #3a6ff4;
 }
 .tyh-menu-item-prohibit {
@@ -23,7 +23,4 @@
 }
 .tyh-menu-item-prohibit:hover {
   border-bottom: 2px solid transparent;
-}
-.tyh-menu-item-prohibit::after {
-  background: none;
 }

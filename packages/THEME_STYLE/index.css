@@ -20,7 +20,6 @@
 @import url('./menu-item/style/index.css');
 @import url('./message/style/index.css');
 @import url('./notification/style/index.css');
-/* @import url('./option/style/index.css'); */
 @import url('./page-header/style/index.css');
 @import url('./radio/style/index.css');
 @import url('./rate/style/index.css');
@@ -37,3 +36,4 @@
 @import url('./turn-page/style/index.css');
 @import url('./turn-page-item/style/index.css');
 @import url('./container/style/index.css');
+/* @import url('./option/style/index.css'); */
