@@ -5,7 +5,7 @@
   align-items: center;
   user-select: none;
   justify-content: space-between;
-  transition: 0.3s;
+  transition: 0.4s;
 }
 .tyh-menu .tyh-menu-left,
 .tyh-menu .tyh-menu-right {
@@ -33,9 +33,5 @@
   width: 65px;
 }
 .the-menu-collapse .tyh-menu-item span {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  overflow: hidden;
-  visibility: hidden;
+  display: none;
 }

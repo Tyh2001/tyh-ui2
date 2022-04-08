@@ -50,7 +50,7 @@
     :collapse="isCollapse"
   >
     <el-menu-item index="1">
-      <!-- <i class="el-icon-menu"></i> -->
+      <i class="el-icon-menu"></i>
       <span>导航二</span>
     </el-menu-item>
     <el-menu-item index="2">
