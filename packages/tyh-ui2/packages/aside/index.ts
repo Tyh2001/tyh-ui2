@@ -1,4 +1,4 @@
-import TyhAside from './TyhAside.vue'
+import TyhAside from '../container/src/TyhAside.vue'
 
 TyhAside.install = (app: any) => {
   app.component('TyhAside', TyhAside)

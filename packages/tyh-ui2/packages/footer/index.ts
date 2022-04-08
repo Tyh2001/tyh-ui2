@@ -1,4 +1,4 @@
-import TyhFooter from './TyhFooter.vue'
+import TyhFooter from '../container/src/TyhFooter.vue'
 
 TyhFooter.install = (app: any) => {
   app.component('TyhFooter', TyhFooter)

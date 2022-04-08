@@ -2,20 +2,21 @@
   <section :class="isClass"><slot /></section>
 </template>
 
-<script setup>
+<script lang="ts" setup>
 import { computed, useSlots } from 'vue'
 const props = defineProps({
   direction: {
     type: String,
-    validator(v) {
-      return ['horizontal', 'vertical'].includes(v)
+    validator(v: string): boolean {
+      return ['horizontal', 'vertical', ''].includes(v)
     }
   }
-})
+} as const)
+
 const { isClass } = TyhContainer()
 function TyhContainer() {
   const slots = useSlots()
-  const isMode = computed(() => {
+  const isMode = computed((): boolean => {
     if (props.direction === 'vertical') {
       return true
     } else if (props.direction === 'horizontal') {
@@ -29,10 +30,12 @@ function TyhContainer() {
     }
     return false
   })
-  const isClass = computed(() => [
+
+  const isClass = computed((): string[] => [
     'tyh-container',
     !isMode.value ? 'tyh-container-vertical' : 'tyh-container-horizontal'
   ])
+
   return { isClass }
 }
 </script>

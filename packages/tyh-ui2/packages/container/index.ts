@@ -1,4 +1,4 @@
-import TyhContainer from './TyhContainer.vue'
+import TyhContainer from './src/TyhContainer.vue'
 
 TyhContainer.install = (app: any) => {
   app.component('TyhContainer', TyhContainer)
