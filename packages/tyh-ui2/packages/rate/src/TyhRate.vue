@@ -25,8 +25,10 @@
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue'
 import { rateProps } from './rate.ts'
+
 const props = defineProps(rateProps)
 const emit = defineEmits(['update:modelValue', 'change'])
+
 const { width, upDataValue, showSayFn } = TyhRate()
 function TyhRate() {
   const width = ref<number | undefined>(props.modelValue)
@@ -38,7 +40,7 @@ function TyhRate() {
     emit('update:modelValue', width.value)
     if (width.value !== props.modelValue) emit('change')
   }
-  const showSayFn = computed((): string | void => {
+  const showSayFn = computed((): string | void | null => {
     if (!props.showText) return
     const showSay = ref<null | string>(null)
     watch(

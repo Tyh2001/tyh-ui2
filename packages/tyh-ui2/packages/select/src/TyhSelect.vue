@@ -11,10 +11,9 @@
 </template>
 
 <script lang="ts" setup>
-const props = defineProps({
-  modelValue: String,
-  name: String
-} as const)
+import { selectProps } from './select.ts'
+
+const props = defineProps(selectProps)
 
 const emit = defineEmits(['update:modelValue'])
 const proxy = new Proxy(props, {

@@ -19,7 +19,6 @@ export const menuProps = {
       return ['horizontal', 'vertical', ''].includes(v)
     }
   },
-  width: String,
   backgroundColor: String,
   textColor: String,
   collapse: Boolean

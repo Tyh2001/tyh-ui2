@@ -5,6 +5,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { taggingProps } from './tagging.ts'
+
 const props = defineProps(taggingProps)
 
 const isClass = computed((): string[] => [

@@ -13,6 +13,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { linkProps } from './link.ts'
+
 const props = defineProps(linkProps)
 const isClass = computed((): (string | object)[] => {
   return [

@@ -57,8 +57,8 @@
 
 <script lang="ts" setup>
 import { tableProps } from './table.ts'
-const props = defineProps(tableProps)
 
+const props = defineProps(tableProps)
 const importantStyle = (i: number): string | void => {
   const importants: number[] = props.important
   for (const key of importants) {

@@ -36,6 +36,7 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { inputProps } from './input.ts'
+
 const props = defineProps(inputProps)
 const emit = defineEmits([
   'update:modelValue',
@@ -44,8 +45,8 @@ const emit = defineEmits([
   'onblur',
   'onfocus'
 ])
-const { input, isClass, inputType, rightIcon, rightIconClick } = TyhInput()
 
+const { input, isClass, inputType, rightIcon, rightIconClick } = TyhInput()
 function TyhInput() {
   const inputType = ref<string>(props.type)
   const isPass = ref<boolean>(false)

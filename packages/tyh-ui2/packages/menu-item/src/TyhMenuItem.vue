@@ -10,7 +10,6 @@ import { getCurrentInstance, inject, computed } from 'vue'
 import { menuItemProps } from './menuItem.ts'
 
 const props = defineProps(menuItemProps)
-
 const theme = inject('theme')
 const mode = inject('mode')
 const textColor = inject('textColor')

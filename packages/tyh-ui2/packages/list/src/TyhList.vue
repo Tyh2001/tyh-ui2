@@ -25,6 +25,7 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { listProps } from './list.ts'
+
 const props = defineProps(listProps)
 const liClass = computed((): (string | object)[] => {
   return [

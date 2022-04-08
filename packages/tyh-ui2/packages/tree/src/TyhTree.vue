@@ -25,13 +25,9 @@
 
 <script lang="ts" setup>
 import { ref } from 'vue'
-defineProps({
-  data: {
-    type: Array,
-    default: () => []
-  }
-} as const)
+import { treeProps } from './tree.ts'
 
+defineProps(treeProps)
 const isClose = ref<boolean>(false)
 
 const onOpen = (item: any): void => {

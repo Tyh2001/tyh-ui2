@@ -10,6 +10,7 @@
 
 <script lang="ts" setup>
 import { ref, inject, ComponentInternalInstance, getCurrentInstance } from 'vue'
+
 const props = defineProps({
   to: String
 } as const)
@@ -17,8 +18,8 @@ const props = defineProps({
 const { icon, link } = TyhCrumbsItem()
 
 function TyhCrumbsItem() {
-  const icon = ref<string>('')
-  const { proxy } = getCurrentInstance() as ComponentInternalInstance
+  const icon = ref<string | undefined>('')
+  const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
   icon.value = inject('Crumbs-separator')
   const link = (): void => {
     if (!props.to) return

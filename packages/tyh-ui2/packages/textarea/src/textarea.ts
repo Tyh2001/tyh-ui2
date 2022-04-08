@@ -8,12 +8,12 @@ export const textareaProps = {
   max: [Number, String],
   rows: {
     type: String,
-    default: () => '3'
+    default: (): string => '3'
   },
   cols: String,
   resize: {
     type: String as PropType<Resize>,
-    default: () => 'none',
+    default: (): string => 'none',
     validator(v: string): boolean {
       return ['vertical', 'horizontal', 'none', ''].includes(v)
     }

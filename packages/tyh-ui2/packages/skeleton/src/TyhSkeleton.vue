@@ -12,10 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  round: Boolean,
-  width: String,
-  height: String,
-  animation: Boolean
-} as const)
+import { skeletonProps } from './skeleton.ts'
+defineProps(skeletonProps)
 </script>

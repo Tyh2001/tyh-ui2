@@ -21,6 +21,7 @@
 <script lang="ts" setup>
 import { ref } from 'vue'
 import { imageProps } from './image.ts'
+
 defineProps(imageProps)
 const emit = defineEmits(['error', 'load'])
 

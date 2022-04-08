@@ -19,7 +19,7 @@ export const textProps = {
   },
   size: {
     type: String,
-    default: () => '16'
+    default: (): string => '16'
   },
   block: Boolean,
   color: String

@@ -26,6 +26,7 @@ import {
   ComponentInternalInstance
 } from 'vue'
 import { notificationProps } from './notification.ts'
+
 const props = defineProps(notificationProps)
 const { isShow, onClose, leave, iconClass } = TyhNotification()
 

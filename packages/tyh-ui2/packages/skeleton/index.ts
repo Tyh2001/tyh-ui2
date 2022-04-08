@@ -1,4 +1,4 @@
-import TyhSkeleton from './TyhSkeleton.vue'
+import TyhSkeleton from './src/TyhSkeleton.vue'
 
 TyhSkeleton.install = (app: any) => {
   app.component('TyhSkeleton', TyhSkeleton)

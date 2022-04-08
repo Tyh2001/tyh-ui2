@@ -34,6 +34,7 @@
 <script lang="ts" setup>
 import { getCurrentInstance, watch, ComponentInternalInstance } from 'vue'
 import { dialogProps } from './dialog.ts'
+
 const props = defineProps(dialogProps)
 const emit = defineEmits([
   'update:modelValue',
@@ -42,6 +43,7 @@ const emit = defineEmits([
   'onOpen',
   'onClose'
 ])
+
 const { close, packingClose } = TyhDialog()
 function TyhDialog() {
   const close = (): void => {
@@ -54,7 +56,7 @@ function TyhDialog() {
     close()
   }
 
-  const self = getCurrentInstance() as ComponentInternalInstance
+  const self: any = getCurrentInstance() as ComponentInternalInstance
   watch(
     () => props.modelValue,
     (v: boolean): void => {

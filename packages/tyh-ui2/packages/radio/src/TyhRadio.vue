@@ -28,10 +28,11 @@
 <script lang="ts" setup>
 import { computed } from 'vue'
 import { radioProps } from './radio.ts'
+
 const props = defineProps(radioProps)
 const emits = defineEmits(['update:modelValue', 'change'])
-const { proxy, input, isClass, isStyle, labelStyle } = TyhRadio()
 
+const { proxy, input, isClass, isStyle, labelStyle } = TyhRadio()
 function TyhRadio() {
   const proxy = new Proxy(props, {
     set() {
@@ -39,7 +40,7 @@ function TyhRadio() {
     }
   })
 
-  const input = (e: any) => {
+  const input = (e: any): void => {
     emits('update:modelValue', e.target.value)
     emits('change', e.target.value)
   }

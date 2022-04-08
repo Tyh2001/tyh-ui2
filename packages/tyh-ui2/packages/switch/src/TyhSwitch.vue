@@ -25,10 +25,11 @@
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
 import { switchProps } from './switch.ts'
+
 const props = defineProps(switchProps)
 const emit = defineEmits(['update:modelValue', 'change'])
-const { switchValue, clickSwitch, switchStyle, switchRollStyle } = TyhSwitch()
 
+const { switchValue, clickSwitch, switchStyle, switchRollStyle } = TyhSwitch()
 function TyhSwitch() {
   const switchValue = ref<boolean>(props.modelValue)
 

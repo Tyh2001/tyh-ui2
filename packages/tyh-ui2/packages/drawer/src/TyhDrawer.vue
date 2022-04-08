@@ -39,6 +39,7 @@ import {
   ComponentInternalInstance
 } from 'vue'
 import { drawerProps } from './drawer.ts'
+
 const props = defineProps(drawerProps)
 const emit = defineEmits([
   'update:modelValue',
@@ -47,8 +48,8 @@ const emit = defineEmits([
   'onOpen',
   'onClose'
 ])
-const { close, isDirection, packingClose } = TyhDrawer()
 
+const { close, isDirection, packingClose } = TyhDrawer()
 function TyhDrawer() {
   const close = (): void => {
     emit('close')
@@ -60,12 +61,12 @@ function TyhDrawer() {
     return p === 'left' || p === 'right' || p === ''
   })
 
-  const packingClose = () => {
+  const packingClose = (): void => {
     if (!props.modalClose) return
     close()
   }
 
-  const self = getCurrentInstance() as ComponentInternalInstance
+  const self: any = getCurrentInstance() as ComponentInternalInstance
   watch(
     () => props.modelValue,
     (v: boolean): void => {
