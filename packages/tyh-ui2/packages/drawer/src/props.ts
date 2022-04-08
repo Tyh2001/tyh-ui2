@@ -6,35 +6,35 @@ export const drawerProps = {
   modelValue: Boolean,
   direction: {
     type: String as PropType<Direction>,
-    default: 'right',
+    default: (): string => 'right',
     validator(v: string): boolean {
       return ['top', 'left', 'bottom', 'right', ''].includes(v)
     }
   },
   size: {
     type: String,
-    default: () => '30%'
+    default: (): string => '30%'
   },
   title: String,
   appendToBody: Boolean,
   modal: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   modalClose: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   showClose: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   showHeader: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   zIndex: {
     type: Number,
-    default: () => 3500
+    default: (): number => 3500
   }
 } as const

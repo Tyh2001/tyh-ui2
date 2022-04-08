@@ -1,4 +1,4 @@
-import TyhCalendar from './TyhCalendar.vue'
+import TyhCalendar from './src/TyhCalendar.vue'
 
 TyhCalendar.install = (app: any) => {
   app.component('TyhCalendar', TyhCalendar)

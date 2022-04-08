@@ -10,10 +10,9 @@
 
 <script lang="ts" setup>
 import { ref, inject, ComponentInternalInstance, getCurrentInstance } from 'vue'
+import { crumbsItemProps } from './props.ts'
 
-const props = defineProps({
-  to: String
-} as const)
+const props = defineProps(crumbsItemProps)
 
 const { icon, link } = TyhCrumbsItem()
 

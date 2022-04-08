@@ -4,11 +4,8 @@
 
 <script lang="ts" setup>
 import { provide } from 'vue'
-const props = defineProps({
-  separator: {
-    type: String,
-    default: () => 'tyh-ui-xiexian'
-  }
-} as const)
+import { crumbsProps } from './props.ts'
+
+const props = defineProps(crumbsProps)
 provide('Crumbs-separator', props.separator)
 </script>

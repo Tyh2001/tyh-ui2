@@ -59,16 +59,10 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-const props = defineProps({
-  modelValue: {
-    type: Object,
-    required: true
-  },
-  cellWidth: {
-    type: Number,
-    default: () => 50
-  }
-})
+import { calendarProps } from './props.ts'
+
+const props = defineProps(calendarProps)
+
 const {
   getMonth,
   getYear,

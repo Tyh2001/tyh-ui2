@@ -2,32 +2,32 @@ export const dialogProps = {
   modelValue: Boolean,
   width: {
     type: String,
-    default: () => '30%'
+    default: (): string => '30%'
   },
   top: {
     type: String,
-    default: () => '15vh'
+    default: (): string => '15vh'
   },
   title: String,
   appendToBody: Boolean,
   modal: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   modalClose: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   showClose: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   showHeader: {
     type: Boolean,
-    default: () => true
+    default: (): boolean => true
   },
   zIndex: {
     type: Number,
-    default: () => 3500
+    default: (): number => 3500
   }
 } as const

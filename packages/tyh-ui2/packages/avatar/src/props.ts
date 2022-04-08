@@ -7,7 +7,7 @@ export const avatarProps = {
   alt: String,
   size: {
     type: Number,
-    default: () => 8
+    default: (): number => 8
   },
   fit: {
     type: String as PropType<Fit>,

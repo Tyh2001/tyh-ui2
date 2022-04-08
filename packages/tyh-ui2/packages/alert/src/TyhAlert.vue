@@ -10,7 +10,8 @@
 
 <script lang="ts" setup>
 import { computed } from 'vue'
-import { alertProps } from './alert.ts'
+import { alertProps } from './props.ts'
+
 const props = defineProps(alertProps)
 const emit = defineEmits(['close'])
 
@@ -25,5 +26,5 @@ const isClass = computed((): (string | object)[] => {
   ]
 })
 
-const close = () => emit('close')
+const close = (): void => emit('close')
 </script>

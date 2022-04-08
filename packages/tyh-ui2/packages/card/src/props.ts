@@ -9,5 +9,8 @@ export const cardProps = {
       return ['always', 'hover', ''].includes(v)
     }
   },
-  bodyStyle: Object
+  bodyStyle: {
+    type: Object,
+    default: (): null => null
+  }
 } as const

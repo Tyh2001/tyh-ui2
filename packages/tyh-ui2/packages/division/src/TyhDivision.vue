@@ -11,6 +11,6 @@
 </template>
 
 <script lang="ts" setup>
-import { divisionProps } from './division.ts'
+import { divisionProps } from './props.ts'
 defineProps(divisionProps)
 </script>

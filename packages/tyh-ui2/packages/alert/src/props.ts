@@ -5,7 +5,7 @@ type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
 export const alertProps = {
   type: {
     type: String as PropType<Type>,
-    default: 'default',
+    default: (): string => 'default',
     validator(v: string): boolean {
       return [
         'default',

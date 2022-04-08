@@ -1,4 +1,4 @@
-import TyhCrumbs from './TyhCrumbs.vue'
+import TyhCrumbs from './src/TyhCrumbs.vue'
 
 TyhCrumbs.install = (app: any) => {
   app.component('TyhCrumbs', TyhCrumbs)

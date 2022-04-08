@@ -6,7 +6,7 @@ type Size = 'large' | 'small' | 'mini'
 export const buttonProps = {
   type: {
     type: String as PropType<Type>,
-    default: 'default',
+    default: (): string => 'default',
     validator(v: string): boolean {
       return [
         'default',

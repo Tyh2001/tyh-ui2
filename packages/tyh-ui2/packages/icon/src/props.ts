@@ -3,6 +3,6 @@ export const iconProps = {
   color: String,
   size: {
     type: String,
-    default: () => '16'
+    default: (): string => '16'
   }
 } as const
