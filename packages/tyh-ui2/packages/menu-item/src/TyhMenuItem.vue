@@ -1,10 +1,8 @@
 <template>
-  <div :class="isClass" :style="isStyle" @click="link">
-    <!-- <span> -->
+  <li :class="isClass" :style="isStyle" @click="link">
     <slot v-if="$slots.default" />
-    <!-- <template v-else> {{ title }} </template>
-    </span> -->
-  </div>
+    <template v-else>{{ title }}</template>
+  </li>
 </template>
 
 <script lang="ts" setup>

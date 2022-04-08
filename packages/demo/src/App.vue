@@ -27,7 +27,8 @@
     >
   </tyh-menu>
 
-  <tyh-menu theme="light" mode="vertical">
+  <br />
+  <tyh-menu theme="light" :collapse="value1" mode="vertical">
     <tyh-menu-item>首页</tyh-menu-item>
     <tyh-menu-item>内容</tyh-menu-item>
     <tyh-menu-item>设置</tyh-menu-item>
@@ -50,20 +51,25 @@
     :collapse="isCollapse"
   >
     <el-menu-item index="1">
-      <i class="el-icon-menu"></i>
-      <span>导航二</span>
+      <!-- <i class="el-icon-menu"></i> -->
+      <!-- <span>导航二</span> -->
+      首页
     </el-menu-item>
     <el-menu-item index="2">
-      <i class="el-icon-menu"></i>
-      <span>导航二</span>
+      <!-- <i class="el-icon-menu"></i> -->
+      <!-- <span>导航二</span> -->
+      哈哈和大家喝酒哈酒
     </el-menu-item>
     <el-menu-item index="3">
-      <i class="el-icon-menu"></i>
-      <span>导航二</span>
+      <!-- <i class="el-icon-menu"></i> -->
+      <!-- <span>导航二</span> -->
+      哈哈和大家喝酒哈酒
     </el-menu-item>
     <el-menu-item index="4">
-      <i class="el-icon-menu"></i>
-      <span>导航二</span>
+      <!-- <i class="el-icon-menu"></i> -->
+      <!-- <span>导航二</span> -->
+
+      哈哈和大家喝酒哈酒
     </el-menu-item>
   </el-menu>
 </template>
