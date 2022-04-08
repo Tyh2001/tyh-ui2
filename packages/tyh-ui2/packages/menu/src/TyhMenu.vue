@@ -14,7 +14,7 @@
 
 <script lang="ts" setup>
 import { computed, provide } from 'vue'
-import { menuProps } from './menu.ts'
+import { menuProps } from './props.ts'
 
 const props = defineProps(menuProps)
 provide('theme', props.theme)

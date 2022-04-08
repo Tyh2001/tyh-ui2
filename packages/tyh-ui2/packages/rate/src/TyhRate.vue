@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 import { ref, watch, computed } from 'vue'
-import { rateProps } from './rate.ts'
+import { rateProps } from './props.ts'
 
 const props = defineProps(rateProps)
 const emit = defineEmits(['update:modelValue', 'change'])

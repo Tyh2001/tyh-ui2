@@ -5,19 +5,19 @@ type Align = 'left' | 'right' | 'center'
 export const tableProps = {
   data: {
     type: Array,
-    default: () => []
+    default: (): [] => []
   },
   columns: {
     type: Array,
-    default: () => []
+    default: (): [] => []
   },
   trHeight: {
     type: String,
-    default: () => '40px'
+    default: (): string => '40px'
   },
   align: {
     type: String as PropType<Align>,
-    default: 'left',
+    default: (): string => 'left',
     validator(v: string): boolean {
       return ['left', 'right', 'center', ''].includes(v)
     }
@@ -26,19 +26,19 @@ export const tableProps = {
   border: Boolean,
   width: {
     type: String,
-    default: () => '100%'
+    default: (): string => '100%'
   },
   height: {
     type: String,
-    default: () => 'auto'
+    default: (): string => 'auto'
   },
   num: Boolean,
   important: {
     type: Array,
-    default: () => []
+    default: (): [] => []
   },
   importantColor: {
     type: String,
-    default: () => '#fdf5e6'
+    default: (): string => '#fdf5e6'
   }
 } as const

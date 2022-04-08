@@ -6,8 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  value: String,
-  label: String
-} as const)
+import { optionProps } from './props.ts'
+defineProps(optionProps)
 </script>

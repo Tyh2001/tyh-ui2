@@ -2,17 +2,17 @@ export const switchProps = {
   modelValue: Boolean,
   closeColor: {
     type: String,
-    default: () => '#dcdfe6'
+    default: (): string => '#dcdfe6'
   },
   openColor: {
     type: String,
-    default: () => '#3a6ff4'
+    default: (): string => '#3a6ff4'
   },
   closeText: String,
   openText: String,
   disabled: Boolean,
   width: {
     type: Number,
-    default: () => 40
+    default: (): number => 40
   }
 } as const

@@ -24,7 +24,7 @@
 
 <script lang="ts" setup>
 import { ref, computed } from 'vue'
-import { switchProps } from './switch.ts'
+import { switchProps } from './props.ts'
 
 const props = defineProps(switchProps)
 const emit = defineEmits(['update:modelValue', 'change'])

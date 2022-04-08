@@ -6,7 +6,7 @@ export const messageProps = {
   message: String,
   type: {
     type: String as PropType<Type>,
-    default: () => 'default',
+    default: (): string => 'default',
     validator(v: string): boolean {
       return [
         'primary',
@@ -21,11 +21,11 @@ export const messageProps = {
   showClose: Boolean,
   time: {
     type: Number,
-    default: () => 200
+    default: (): number => 200
   },
   offset: {
     type: Number,
-    default: () => 20
+    default: (): number => 20
   },
   icon: String,
   round: Boolean

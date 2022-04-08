@@ -1,12 +1,11 @@
 import { PropType } from 'vue'
 
 type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
-type Size = 'small' | 'mini'
 
-export const tagProps = {
+export const taggingProps = {
   type: {
     type: String as PropType<Type>,
-    default: () => 'default',
+    default: (): string => 'default',
     validator(v: string): boolean {
       return [
         'default',
@@ -19,11 +18,8 @@ export const tagProps = {
     }
   },
   size: {
-    type: String as PropType<Size>,
-    validator(v: string): boolean {
-      return ['small', 'mini', ''].includes(v)
-    }
+    type: String,
+    default: (): string => '13'
   },
-  round: Boolean,
-  isClose: Boolean
+  color: String
 } as const

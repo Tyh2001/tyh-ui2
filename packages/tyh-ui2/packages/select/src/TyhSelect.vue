@@ -11,7 +11,7 @@
 </template>
 
 <script lang="ts" setup>
-import { selectProps } from './select.ts'
+import { selectProps } from './props.ts'
 
 const props = defineProps(selectProps)
 

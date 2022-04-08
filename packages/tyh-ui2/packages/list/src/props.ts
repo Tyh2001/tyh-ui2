@@ -2,7 +2,7 @@ export const listProps = {
   header: String,
   content: {
     type: Array,
-    default: () => []
+    default: (): [] => []
   },
   keys: String,
   footer: String,

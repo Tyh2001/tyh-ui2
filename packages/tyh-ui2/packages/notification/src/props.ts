@@ -8,11 +8,11 @@ export const notificationProps = {
   message: String,
   time: {
     type: Number,
-    default: () => 3500
+    default: (): number => 3500
   },
   position: {
     type: String as PropType<Position>,
-    default: () => 'top-right',
+    default: (): string => 'top-right',
     validator(v: string): boolean {
       return [
         'top-left',

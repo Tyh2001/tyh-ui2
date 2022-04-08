@@ -7,7 +7,7 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject, computed } from 'vue'
-import { menuItemProps } from './menuItem.ts'
+import { menuItemProps } from './props.ts'
 
 const props = defineProps(menuItemProps)
 const theme = inject('theme')

@@ -24,7 +24,7 @@ import {
   computed,
   ComponentInternalInstance
 } from 'vue'
-import { messageProps } from './message.ts'
+import { messageProps } from './props.ts'
 
 const props = defineProps(messageProps)
 const { isShow, leave, close, isClass } = TyhMessage()

@@ -6,21 +6,21 @@ type Size = 'large' | 'medium' | 'small' | 'mini'
 export const inputProps = {
   modelValue: {
     type: String,
-    set() {
+    set(): boolean {
       return true
     }
   },
   placeholder: String,
   type: {
     type: String as PropType<Type>,
-    default: () => 'text',
+    default: (): string => 'text',
     validator(v: string): boolean {
       return ['text', 'password', ''].includes(v)
     }
   },
   size: {
     type: String as PropType<Size>,
-    default: () => 'medium',
+    default: (): string => 'medium',
     validator(v: string): boolean {
       return ['large', 'medium', 'small', 'mini', ''].includes(v)
     }
@@ -32,7 +32,7 @@ export const inputProps = {
   autofocus: Boolean,
   name: String,
   showPassword: Boolean,
-  set() {
+  set(): boolean {
     return true
   }
 } as const

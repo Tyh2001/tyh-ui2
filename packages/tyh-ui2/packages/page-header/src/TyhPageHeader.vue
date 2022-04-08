@@ -9,16 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-defineProps({
-  title: {
-    type: String,
-    default: () => '返回'
-  },
-  content: String,
-  icon: {
-    type: String,
-    default: () => 'tyh-ui-direction-left'
-  }
-} as const)
+import { pageHeaderProps } from './props.ts'
+defineProps(pageHeaderProps)
 const emits = defineEmits(['back'])
 </script>
