@@ -4,9 +4,8 @@
 
 <script lang="ts" setup>
 import { provide } from 'vue'
-const props = defineProps({
-  center: Boolean
-} as const)
+import { turnPageProps } from './props.ts'
+const props = defineProps(turnPageProps)
 
 provide('is-center', props.center)
 </script>

@@ -22,13 +22,14 @@
 
 <script lang="ts" setup>
 import { getCurrentInstance, inject, ComponentInternalInstance } from 'vue'
-import { turnPageItemProps } from './turnPageItem.ts'
+import { turnPageItemProps } from './props.ts'
 
 const props = defineProps(turnPageItemProps)
 const { isCenter, link } = TyhTurnPageItem()
 function TyhTurnPageItem() {
-  const isCenter = inject('is-center')
-  const { proxy } = getCurrentInstance() as ComponentInternalInstance
+  const isCenter: unknown = inject('is-center')
+
+  const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
   const link = (): void => {
     if (props.prohibit) return
     try {

@@ -14,6 +14,6 @@
 </template>
 
 <script lang="ts" setup>
-import { textProps } from './text.ts'
+import { textProps } from './props.ts'
 defineProps(textProps)
 </script>
