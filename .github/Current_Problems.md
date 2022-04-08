@@ -9,7 +9,7 @@
 
 ## 2022-03-09
 
-- [ ] Menu 导航栏组件鼠标 hover 样式未添加
+- [x] Menu 导航栏组件鼠标 hover 样式未添加
 - [ ] Tree 组件尚未完善
 - [ ] Select 选择器组件可以考虑添加更多配置项
 - [ ] Calendar 日历组件的头部翻页样式由按钮改为 icon
@@ -43,13 +43,3 @@ function () {}
 
 function() {}
 ```
-
-- [ ] 去除下面的 any 类型
-
-* input
-* backTop
-* checkbox
-* input
-* radio
-* select
-* textarea
