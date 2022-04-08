@@ -2,6 +2,10 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.13 (2022-04-08)
+
+- TyhMenu 组件 light 主题样式更新
+
 ## 3.4.12 (2022-04-08)
 
 - TyhButton 组件的内部实现逻辑进行优化
