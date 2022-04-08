@@ -1,7 +1,7 @@
 <template>
   <li :class="isClass" :style="isStyle" @click="link">
     <slot v-if="$slots.default" />
-    <template v-else>{{ title }}</template>
+    <span v-else>{{ title }}</span>
   </li>
 </template>
 
