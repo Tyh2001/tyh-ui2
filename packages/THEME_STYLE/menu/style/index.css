@@ -6,6 +6,7 @@
   user-select: none;
   justify-content: space-between;
   transition: 0.4s;
+  list-style: none;
 }
 .tyh-menu .tyh-menu-left,
 .tyh-menu .tyh-menu-right {
@@ -13,6 +14,12 @@
   flex-wrap: wrap;
   align-items: center;
   min-height: 60px;
+}
+.tyh-menu .tyh-menu-left {
+  margin-left: 20px;
+}
+.tyh-menu .tyh-menu-right {
+  margin-right: 20px;
 }
 .tyh-menu .tyh-menu-default {
   flex-wrap: wrap;
@@ -29,9 +36,9 @@
 .tyh-menu-shadow {
   box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1);
 }
-.the-menu-collapse {
+.tyh-menu-collapse {
   width: 65px;
 }
-.the-menu-collapse .tyh-menu-item span {
+.tyh-menu-collapse .tyh-menu-item span {
   display: none;
 }

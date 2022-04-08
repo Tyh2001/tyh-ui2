@@ -6,6 +6,7 @@
   user-select: none;
   justify-content: space-between;
   transition: 0.4s;
+  list-style: none;
 
   .tyh-menu-left,
   .tyh-menu-right {
@@ -15,9 +16,16 @@
     min-height: 60px;
   }
 
+  .tyh-menu-left {
+    margin-left: 20px;
+  }
+
+  .tyh-menu-right {
+    margin-right: 20px;
+  }
+
   .tyh-menu-default {
     flex-wrap: wrap;
-    // overflow: hidden;
   }
 }
 
@@ -38,7 +46,7 @@
 }
 
 // 折叠
-.the-menu-collapse {
+.tyh-menu-collapse {
   width: 65px;
 
   .tyh-menu-item {

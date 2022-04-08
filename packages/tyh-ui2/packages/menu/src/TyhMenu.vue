@@ -35,6 +35,6 @@ const isClass = computed(() => {
 })
 
 const isCollapseClass = computed(() => {
-  return [{ 'the-menu-collapse': props.collapse && props.mode === 'vertical' }]
+  return [{ 'tyh-menu-collapse': props.collapse && props.mode === 'vertical' }]
 })
 </script>

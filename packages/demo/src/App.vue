@@ -5,6 +5,22 @@
     <tyh-menu-item>设置</tyh-menu-item>
     <tyh-menu-item>回收站</tyh-menu-item>
   </tyh-menu> -->
+  <tyh-menu :collapse="value1">
+    <template v-slot:left>
+      <tyh-avatar
+        :size="5"
+        round
+        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+      />
+    </template>
+    <tyh-menu-item>首页</tyh-menu-item>
+    <tyh-menu-item>内容</tyh-menu-item>
+    <tyh-menu-item>设置</tyh-menu-item>
+    <tyh-menu-item>回收站</tyh-menu-item>
+    <template v-slot:right>
+      <tyh-button simple>右侧插槽</tyh-button>
+    </template>
+  </tyh-menu>
   <tyh-switch v-model="value1" />
   <br />
 
