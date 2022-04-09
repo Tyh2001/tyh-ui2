@@ -64,7 +64,7 @@ git commit -m 'feat: Add XXX function'
 ├── packages                      Primary source file
 |  ├── demo                       Test items
 |  ├── docs                       Tyh-ui2 docs
-|  ├── THEME_STYLE                Main style sheet
+|  ├── style                      Main style sheet
 |  └── tyh-ui2                    Tyh-ui2 Source code
 ├── .editorconfig                 Editor configuration because developers' editors are different
 ├── .eslintignore                 Files that do not require eslint verification
