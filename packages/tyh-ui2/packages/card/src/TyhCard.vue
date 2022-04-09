@@ -1,12 +1,12 @@
 <template>
   <div :class="['tyh-card', { [`tyh-card-shadow-${shadow}`]: shadow }]">
     <div v-if="$slots.title || $slots.subtitle" class="tyh-card-header">
-      <p v-if="$slots.title" class="tyh-card-title">
+      <span v-if="$slots.title" class="tyh-card-title">
         <slot name="title" />
-      </p>
-      <p v-if="$slots.subtitle" class="tyh-card-subtitle">
+      </span>
+      <span v-if="$slots.subtitle" class="tyh-card-subtitle">
         <slot name="subtitle" />
-      </p>
+      </span>
     </div>
     <div class="tyh-card-body" :style="bodyStyle"><slot /></div>
   </div>

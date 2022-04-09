@@ -31,6 +31,10 @@
 
 .tyh-menu-flex {
   display: flex;
+
+  .tyh-menu-item:first-child {
+    margin-left: 20px;
+  }
 }
 
 .tyh-menu-dark {

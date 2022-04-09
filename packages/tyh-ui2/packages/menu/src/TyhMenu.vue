@@ -1,14 +1,14 @@
 <template>
   <ul :class="[...isClass, ...isCollapseClass]" :style="{ backgroundColor }">
-    <li v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
+    <div v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
       <slot name="left" />
-    </li>
-    <li v-if="$slots.default" :class="['tyh-menu-default', isFlex]">
+    </div>
+    <div v-if="$slots.default" :class="['tyh-menu-default', isFlex]">
       <slot />
-    </li>
-    <li v-if="$slots.right" :class="['tyh-menu-right', isFlex]">
+    </div>
+    <div v-if="$slots.right" :class="['tyh-menu-right', isFlex]">
       <slot name="right" />
-    </li>
+    </div>
   </ul>
 </template>
 

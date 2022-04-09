@@ -63,13 +63,13 @@ importers:
     specifiers:
       '@tyh-ui/style': workspace:^1.0.0
       '@tyh-ui/tyh-ui2': workspace:^3.4.12
-      bright-code: ^1.2.0
+      bright-code: ^1.2.1
       clipboard: ^2.0.10
       vite-plugin-md: ^0.11.9
     dependencies:
       '@tyh-ui/style': link:../style
       '@tyh-ui/tyh-ui2': link:../tyh-ui2
-      bright-code: 1.2.0
+      bright-code: 1.2.1
       clipboard: 2.0.10
       vite-plugin-md: 0.11.9_vite@2.8.6
 
@@ -742,8 +742,8 @@ packages:
     dependencies:
       fill-range: 7.0.1
 
-  /bright-code/1.2.0:
-    resolution: {integrity: sha512-soinSPI9n3r9sJTXQfv2JoowJRjV5ZL9klXNNzpuRr6R7F+xpPfA+3DMNUxlNbwCKTxyTL3AB26pCoY0s8XBpw==}
+  /bright-code/1.2.1:
+    resolution: {integrity: sha512-OZwvG0Gp3wQCtHWa6TqhKCv+hGGQFJMWqxpNwTbLaGgTz7TLq36EdhJYBoHcf94k5PyfcYp9+HjV0RDRfvm7Ww==}
     dev: false
 
   /cachedir/2.2.0:

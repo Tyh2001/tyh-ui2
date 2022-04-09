@@ -2,6 +2,11 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.4.14 (2022-04-09)
+
+- 优化 TyhMenu 组件布局
+- 优化 TyhMenu 组件样式
+
 ## 3.4.13 (2022-04-08)
 
 - TyhMenu 组件 light 主题样式更新
