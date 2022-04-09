@@ -41,6 +41,8 @@ import TyhTagging from '../packages/tagging'
 import TyhDrawer from '../packages/drawer'
 import TyhDialog from '../packages/dialog'
 import TyhCheckbox from '../packages/checkbox'
+import TyhCollapse from '../packages/collapse'
+import TyhCollapseItem from '../packages/collapse-item'
 import { Message } from '../packages/message'
 import { Notification } from '../packages/notification'
 import { version } from '../package.json'
@@ -86,7 +88,9 @@ const components: object[] = [
   TyhTagging,
   TyhDrawer,
   TyhDialog,
-  TyhCheckbox
+  TyhCheckbox,
+  TyhCollapse,
+  TyhCollapseItem
 ]
 
 const install = (app: any) => {
