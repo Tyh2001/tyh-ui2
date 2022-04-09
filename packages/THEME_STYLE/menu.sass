@@ -1,0 +1,46 @@
+.tyh-menu
+  width: 100%
+  display: inline-block
+  flex-wrap: wrap
+  align-items: center
+  user-select: none
+  justify-content: space-between
+  transition: 0.4s
+  list-style: none
+
+  &-left,
+
+    &-right
+      display: flex
+      flex-wrap: wrap
+      align-items: center
+      min-height: 60px
+
+    &-left
+      margin-left: 20px
+
+    &-right
+      margin-right: 20px
+
+    &-default
+      flex-wrap: wrap
+
+  &-flex
+    display: flex
+
+  &-dark
+    background: #545c64
+
+  &-light
+    background-color: #fff
+
+  &-shadow
+    box-shadow: 0px 7px 15px rgba(0, 0, 0, 0.1)
+
+  // 折叠
+  &-collapse
+    width: 65px
+
+    &-item
+    span
+      display: none

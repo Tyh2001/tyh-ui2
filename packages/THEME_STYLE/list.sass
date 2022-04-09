@@ -1,0 +1,67 @@
+.tyh-list
+  width: 100%
+  border: 1px solid #dcdee2
+  border-radius: 6px
+  color: #515a6e
+
+  // 头部
+
+  &-header
+    min-height: 45px
+    font-weight: 600
+    border-bottom: 1px solid #dcdee2
+    display: flex
+    align-items: center
+    padding: 10px 20px
+    box-sizing: border-box
+
+  // 内容
+    &-content
+
+      &-ul
+        padding: 0
+        margin: 0
+
+        &-li
+          min-height: 45px
+          list-style: none
+          border-bottom: 1px solid #dcdee2
+          display: flex
+          align-items: center
+          padding: 10px 20px
+          box-sizing: border-box
+          cursor: pointer
+
+    // 最后一个不添加边框
+    &:last-child
+      border: none
+
+        // 序号显示
+      &-num
+        width: 25px
+        display: inline-block
+        text-align: center
+        color: #8f8f8f
+        margin-right: 23px
+
+        // 斑马纹
+        &-zebra:nth-child(odd)
+          background: #fafafa
+
+        // 鼠标移入带有阴影效果
+        &-hoverShow:hover
+          transition: 0.6s
+          box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+
+    &-not
+      padding: 20px
+
+  // 页脚
+    &-footer
+      min-height: 45px
+      font-weight: 600
+      display: flex
+      align-items: center
+      padding: 10px 20px
+      border-top: 1px solid #dcdee2
+      box-sizing: border-box

@@ -1,0 +1,72 @@
+$primary: #3a6ff4
+
+.tyh-input
+  display: inline-block
+  position: relative
+  width: 100%
+  box-sizing: border-box
+  transition: 0.35s
+
+  &-input
+    width: 100%
+    border-radius: 5px
+    color: #3f536e
+    border: 1px solid #c5d9e8
+    outline: none
+    padding: 0 10px
+    transition: border 0.35s
+    background: #fff
+    box-sizing: border-box
+
+    &:focus
+      border: 1px solid $primary
+
+    &-icon
+      position: absolute
+      left: 10px
+      user-select: none
+      color: #c7c7c7
+      font-size: 12px
+
+    &-input-large,
+
+    &-icon-large
+      line-height: 40px
+      font-size: 15px
+
+    &-input-medium,
+
+    &-icon-medium
+      line-height: 35px
+      font-size: 14px
+
+    &-input-small,
+
+    &-icon-small
+      line-height: 30px
+      font-size: 13px
+
+    &-input-mini,
+
+    &-icon-mini
+      line-height: 25px
+      font-size: 12px
+
+    &-icon-padding
+      padding-left: 26px
+
+    &-clear-padding
+      padding-right: 26px
+
+    &-clear
+      position: absolute
+      right: 10px
+      margin: auto
+      color: #c7c7c7
+      font-size: 12px
+
+  &-disabled
+    background: #f5f7fa !important
+    border-color: #e4e7ed !important
+    color: #c0c4cc !important
+    cursor: not-allowed
