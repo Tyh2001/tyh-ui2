@@ -5,7 +5,7 @@ export default defineConfig({
   plugins: [vue()],
   build: {
     lib: {
-      entry: 'index.sass',
+      entry: 'index.scss',
       name: 'index'
     }
   }
