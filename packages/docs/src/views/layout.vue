@@ -18,7 +18,7 @@
           v-for="(list, index) in layoutList"
           :style="highLightStyle(list.url)"
           :key="index"
-          :to="list.url"
+          :route="list.url"
         >
           {{ list.title }}
         </tyh-menu-item>
