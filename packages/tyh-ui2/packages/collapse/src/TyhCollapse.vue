@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <h1>hhh</h1>
+  <div class="tyh-collapse">
+    <slot />
   </div>
 </template>
 

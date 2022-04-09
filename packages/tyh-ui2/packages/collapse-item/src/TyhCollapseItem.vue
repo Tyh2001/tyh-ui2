@@ -1,7 +1,13 @@
 <template>
-  <div>
-    <h1>hhh</h1>
+  <div class="tyh-collapse-item">
+    <div class="tyh-collapse-item-title">{{ title }}</div>
+    <div class="tyh-collapse-item-content">
+      <slot />
+    </div>
   </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { collapseItemProps } from './props.ts'
+defineProps(collapseItemProps)
+</script>
