@@ -5,13 +5,14 @@ import router from './router'
 import tyhUi2 from './tyhUi'
 // import '@tyh-ui/tyh-ui2/style/index.css'
 // import '@tyh-ui/theme_style/index.css'
-import '@tyh-ui/theme_style/index.sass'
 // import '@tyh-ui/theme_style/dist/style.css'
 import './style/markdown-body.css'
 import './style/global.css'
 // @ts-ignore'
 import brightCode from 'bright-code'
 import 'bright-code/theme/tyh-theme.css'
+
+import '@tyh-ui/theme_style/index.sass'
 
 createApp(App)
   .use(router)
