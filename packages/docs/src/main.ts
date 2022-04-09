@@ -1,12 +1,20 @@
 import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
+
+// https://github.com/Tyh2001/tyh-ui
 import tyhUi2 from './tyhUi'
-import '@tyh-ui/style'
-import './style/markdown-body.css'
-import './style/global.css'
+import '@tyh-ui/style/dist/style.css'
+
+// https://github.com/Tyh2001/bright-code
 import brightCode from 'bright-code'
 import 'bright-code/theme/tyh-theme.css'
+
+// markdown style
+import './style/markdown-body.scss'
+
+// global style
+import './style/global.scss'
 
 createApp(App)
   .use(router)
@@ -14,8 +22,8 @@ createApp(App)
   .use(app => {
     app.directive('high', {
       mounted(el) {
-        let blocks = el.querySelectorAll('pre code')
-        for (let i = 0; i < blocks.length; i++) {
+        const blocks = el.querySelectorAll('pre code')
+        for (let i: number = 0; i < blocks.length; i++) {
           brightCode.highlightElement(blocks[i])
         }
       }
