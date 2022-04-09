@@ -1,0 +1,41 @@
+.tyh-card {
+  border: 1px solid #dcdee2;
+  border-radius: 4px;
+
+  .tyh-card-header {
+    border-bottom: 1px solid #dcdee2;
+    height: 48px;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+    color: #2c405a;
+
+    .tyh-card-title {
+      font-weight: 600;
+      color: rgb(93, 93, 93);
+    }
+
+    .tyh-card-subtitle {
+      font-size: 14px;
+    }
+  }
+
+  .tyh-card-body {
+    padding: 20px;
+    box-sizing: border-box;
+    font-size: 14px;
+    color: #303133;
+  }
+}
+
+.tyh-card-shadow-always {
+  box-shadow: 2px 2px 18px 3px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+.tyh-card-shadow-hover:hover {
+  transition: box-shadow 0.25s;
+  box-shadow: 2px 2px 18px 3px rgba(0, 0, 0, 0.1), 0 0 4px 0 rgba(0, 0, 0, 0.1);
+}

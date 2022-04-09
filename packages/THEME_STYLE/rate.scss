@@ -1,0 +1,33 @@
+.tyh-rate {
+  position: relative;
+  display: flex;
+
+  .tyh-rate-mouseout {
+    cursor: pointer;
+
+    .tyh-ui-favorite {
+      font-size: 17px;
+      color: rgb(217, 224, 235);
+    }
+
+    .solid {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      overflow: hidden;
+
+      .tyh-ui-favorite-filling {
+        font-size: 17px;
+      }
+    }
+  }
+
+  .show-text {
+    color: #333;
+    font-size: 14px;
+    margin-left: 5px;
+  }
+}

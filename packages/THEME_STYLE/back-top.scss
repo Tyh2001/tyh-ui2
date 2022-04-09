@@ -1,0 +1,21 @@
+.tyh-back-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background: #fff;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  user-select: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #484848;
+  font-size: 14px;
+  z-index: 999999;
+
+  &:hover {
+    transition: background 0.2s;
+    background: rgb(244, 248, 253);
+  }
+}

@@ -1,0 +1,42 @@
+$primary: #3a6ff4;
+$success: #54c600;
+$danger: #d10f1b;
+$warning: #fbcc30;
+$default: #3f536e;
+
+.tyh-link {
+  font-size: 15px;
+  user-select: none;
+  cursor: pointer;
+}
+
+.tyh-icon-primary,
+.tyh-link-primary {
+  color: $primary;
+}
+
+.tyh-icon-success,
+.tyh-link-success {
+  color: $success;
+}
+
+.tyh-icon-danger,
+.tyh-link-danger {
+  color: $danger;
+}
+
+.tyh-icon-warning,
+.tyh-link-warning {
+  color: $warning;
+}
+
+.tyh-link-,
+.tyh-icon-default,
+.tyh-link-default {
+  color: $default;
+}
+
+.tyh-link-prohibit {
+  opacity: 0.4;
+  cursor: no-drop;
+}

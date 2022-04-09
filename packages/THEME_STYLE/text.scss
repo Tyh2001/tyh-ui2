@@ -1,0 +1,29 @@
+$primary: #3a6ff4;
+$success: #54c600;
+$danger: #d10f1b;
+$warning: #fbcc30;
+
+.tyh-text {
+  display: inline-block;
+  color: rgb(63, 83, 110);
+}
+
+.tyh-text-primary {
+  color: $primary;
+}
+
+.tyh-text-success {
+  color: $success;
+}
+
+.tyh-text-danger {
+  color: $danger;
+}
+
+.tyh-text-warning {
+  color: $warning;
+}
+
+.tyh-text-block {
+  display: block;
+}

@@ -1,0 +1,28 @@
+.tyh-crumbs-item {
+  cursor: pointer;
+  user-select: none;
+  font-size: 14px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #333333;
+
+  .tyh-icon {
+    width: 28px;
+    display: inline-block;
+    text-align: center;
+    color: #c0c4cc;
+  }
+}
+
+// 最后一个的 icon 隐藏
+.tyh-crumbs-item:last-child {
+  .tyh-icon {
+    display: none;
+  }
+}
+
+.tyh-crumbs-item__to {
+  font-weight: 600;
+  color: #333333;
+}

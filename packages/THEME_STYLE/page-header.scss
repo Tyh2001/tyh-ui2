@@ -1,0 +1,33 @@
+.tyh-page-header {
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  box-sizing: border-box;
+
+  .tyh-page-header-title-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    user-select: none;
+
+    .tyh-page-header-title {
+      font-size: 14px;
+      color: #333;
+      margin-left: 6px;
+    }
+  }
+
+  .tyh-page-header-title-box::after {
+    content: '';
+    width: 1px;
+    display: inline;
+    height: 18px;
+    background-color: #dcdfe6;
+    margin: 0px 20px;
+  }
+
+  .tyh-page-header-content {
+    color: #333;
+  }
+}
