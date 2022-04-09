@@ -7,6 +7,6 @@
   "dependencies": {
     "element3": "^0.0.40",
     "@tyh-ui/tyh-ui2": "workspace:^3.4.12",
-    "@tyh-ui/theme_style": "workspace:^1.0.0"
+    "@tyh-ui/style": "workspace:^1.0.0"
   }
 }
