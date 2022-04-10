@@ -1,3 +1,4 @@
 export const collapseItemProps = {
-  title: String
+  title: String,
+  name: String
 } as const

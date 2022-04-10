@@ -1,17 +1,14 @@
 <template>
-  <tyh-collapse>
-    <tyh-collapse-item title="12121">哈哈哈</tyh-collapse-item>
-    <tyh-collapse-item title="12121">哈哈哈</tyh-collapse-item>
-    <tyh-collapse-item title="12121">哈哈哈</tyh-collapse-item>
+  <tyh-collapse v-model="value">
+    <tyh-collapse-item title="标题1" name="1">哈哈哈哈</tyh-collapse-item>
+    <tyh-collapse-item title="标题2" name="2">哈哈哈哈</tyh-collapse-item>
+    <tyh-collapse-item title="标题3" name="3">哈哈哈哈</tyh-collapse-item>
   </tyh-collapse>
-
-  <tyh-alert message="这是一个普通提示" />
-  <tyh-alert type="primary" message="这是一个主要提示" />
-  <tyh-alert type="success" message="这是一个成功提示" />
-  <tyh-alert type="danger" message="这是一个危险提示" />
-  <tyh-alert type="warning" message="这是一个警告提示" />
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+const value = ref(['1', '3'])
+</script>
 
 <style scoped></style>
