@@ -6,7 +6,7 @@
   },
   "scripts": {
     "dev:docs": "pnpm run dev --filter @tyh-ui/docs",
-    "dev:demo": "pnpm run dev --filter @tyh-ui/demo",
+    "dev:demo": "vite packages/demo",
     "build:docs": "vite build packages/docs",
     "build:style": "vite build packages/style",
     "preinstall": "node ./scripts/preinstall.js",
