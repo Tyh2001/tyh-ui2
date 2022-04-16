@@ -20,16 +20,14 @@ const config = {
       'classic',
       {
         docs: {
-          sidebarPath: require.resolve('./sidebars.js'),
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+          sidebarPath: require.resolve('./sidebars.js')
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
+          showReadingTime: true
+          // editUrl:
+          //   'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/'
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css')
@@ -39,10 +37,10 @@ const config = {
   ],
   themeConfig: {
     navbar: {
-      title: 'Fighting Design',
+      title: 'Tyh UI',
       logo: {
         alt: 'My Site Logo',
-        src: 'img/logo.svg'
+        src: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg'
       },
       items: [
         {
@@ -63,34 +61,33 @@ const config = {
       style: 'dark',
       links: [
         {
-          title: '博客',
+          title: '关于我',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/install'
-            }
-          ]
-        },
-        {
-          title: '社区链接',
-          items: [
-            {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus'
-            }
+            { label: 'Tyh2001', to: 'https://tianyuhao.cn/' },
+            { label: 'Github', to: 'https://github.com/Tyh2001' },
+            { label: 'Blog', to: 'https://tianyuhao.cn/blog' }
           ]
         },
         {
           title: '更多链接',
           items: [
+            { label: 'GitHub', href: 'https://github.com/Tyh2001/tyh-ui' },
+            { label: 'NPM', href: 'https://www.npmjs.com/package/tyh-ui2' },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus'
+              label: '更新日志',
+              href: 'https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md'
             }
           ]
+        },
+        {
+          title: '合作者',
+          items: [
+            { label: '田同学', href: 'https://github.com/Tyh2001' },
+            { label: '话梅桔', href: 'https://github.com/Givenchy-Coisini' }
+          ]
         }
-      ],
-      copyright: '底部说明'
+      ]
+      // copyright: '底部说明'
     },
     prism: {
       theme: lightCodeTheme,
