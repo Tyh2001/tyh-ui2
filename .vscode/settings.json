@@ -12,6 +12,7 @@
     "githublogo",
     "gitmojis",
     "gizp",
+    "gsap",
     "guanbi",
     "highlightjs",
     "horiz",
@@ -31,11 +32,13 @@
     "vant",
     "vite",
     "vitejs",
+    "vitepress",
     "vitest",
     "vnode",
     "vuejs",
     "weixin",
     "xianxing",
-    "xiexian"
+    "xiexian",
+    "zhlint"
   ]
 }
