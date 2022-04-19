@@ -2,16 +2,18 @@
   "name": "@tyh-ui/docs-new",
   "scripts": {
     "dev": "vitepress",
-    "build": "vitepress build"
+    "build": "vitepress build",
+    "serve": "vitepress serve",
+    "zhlint": "zhlint 'src/guide/**/*.md'",
+    "preinstall": "npx only-allow pnpm"
   },
   "dependencies": {
     "@vue/repl": "^1.0.0",
     "@vue/theme": "^1.0.1",
+    "tyh-ui2": "3.4.14",
     "dynamics.js": "^1.1.5",
     "gsap": "^3.9.0",
-    "tyh-ui2": "^3.4.14",
-    "vitepress": "^0.22.2",
-    "vue": "^3.2.31"
+    "vitepress": "^0.22.2"
   },
   "devDependencies": {
     "@types/markdown-it": "^12.2.3",

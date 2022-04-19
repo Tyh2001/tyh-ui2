@@ -1,8 +1,8 @@
-import { h, App } from 'vue'
+import { App } from 'vue'
 import { VPTheme } from '@vue/theme'
 // import Banner from './components/Banner.vue'
 // import PreferenceSwitch from './components/PreferenceSwitch.vue'
-import VueSchoolLink from './components/VueSchoolLink.vue'
+// import VueSchoolLink from './components/VueSchoolLink.vue'
 import {
   preferComposition,
   preferSFC,
@@ -28,7 +28,7 @@ export default Object.assign({}, VPTheme, {
     app.provide('prefer-composition', preferComposition)
     app.provide('prefer-sfc', preferSFC)
     app.provide('filter-headers', filterHeadersByPreference)
-    app.component('VueSchoolLink', VueSchoolLink)
+    // app.component('VueSchoolLink', VueSchoolLink)
     app.use(tyhUi)
   }
 })

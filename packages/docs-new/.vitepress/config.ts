@@ -1,3 +1,5 @@
+import fs from 'fs'
+import path from 'path'
 import { defineConfigWithTheme } from 'vitepress'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
@@ -46,15 +48,35 @@ export const sidebar = {
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
-  title: 'Tyh Ui',
-  description: '121212',
+
+  // base: '/demo/',
+  lang: 'zh-CN',
+  title: 'Vue.js',
+  description: 'Vue.js - 渐进式的 JavaScript 框架',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
   scrollOffset: 'header',
 
   head: [
     ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }]
+    ['meta', { name: 'twitter:card', content: 'summary' }],
+    [
+      'script',
+      {},
+      fs.readFileSync(
+        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
+        'utf-8'
+      )
+    ],
+    [
+      'script',
+      {
+        src: 'https://cdn.usefathom.com/script.js',
+        'data-site': 'XNOLWPLB',
+        'data-spa': 'auto',
+        defer: ''
+      }
+    ]
   ],
 
   themeConfig: {
@@ -70,14 +92,24 @@ export default defineConfigWithTheme<ThemeConfig>({
     //   }
     // },
 
+    // carbonAds: {
+    //   code: 'CEBDT27Y',
+    //   placement: 'vuejsorg'
+    // },
+
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/' }],
+
+    editLink: {
+      repo: 'vuejs-translations/docs-zh-cn',
+      text: '在 GitHub 上编辑此页'
+    },
 
     footer: {
       license: {
-        text: '123',
+        text: '',
         link: ''
       },
-      copyright: '底部的信息'
+      copyright: `Copyright © 2014-${new Date().getFullYear()} Evan You`
     }
   },
 
