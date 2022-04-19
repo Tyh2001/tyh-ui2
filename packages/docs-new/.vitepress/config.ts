@@ -50,16 +50,16 @@ export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
 
   // base: '/demo/',
-  lang: 'zh-CN',
-  title: 'Vue.js',
-  description: 'Vue.js - 渐进式的 JavaScript 框架',
+  title: 'hello',
+  description: 'hello',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
-  scrollOffset: 'header',
+  // scrollOffset: 'header',
 
   head: [
-    ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
+    ['link', { rel: 'icon', href: './my.png' }],
+    // ['meta', { name: 'twitter:site', content: '@vuejs' }],
+    // ['meta', { name: 'twitter:card', content: 'summary' }],
     [
       'script',
       {},
@@ -83,24 +83,12 @@ export default defineConfigWithTheme<ThemeConfig>({
     nav,
     sidebar,
 
-    // algolia: {
-    //   indexName: 'vuejs',
-    //   appId: 'ML0LEBN7FQ',
-    //   apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
-    //   searchParameters: {
-    //     facetFilters: ['version:v3']
-    //   }
-    // },
-
-    // carbonAds: {
-    //   code: 'CEBDT27Y',
-    //   placement: 'vuejsorg'
-    // },
-
-    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Tyh2001/tyh-ui' }
+    ],
 
     editLink: {
-      repo: 'vuejs-translations/docs-zh-cn',
+      repo: 'Tyh2001/tyh-ui',
       text: '在 GitHub 上编辑此页'
     },
 
@@ -109,7 +97,7 @@ export default defineConfigWithTheme<ThemeConfig>({
         text: '',
         link: ''
       },
-      copyright: `Copyright © 2014-${new Date().getFullYear()} Evan You`
+      copyright: 'hello'
     }
   },
 
