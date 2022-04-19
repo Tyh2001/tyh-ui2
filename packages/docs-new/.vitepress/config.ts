@@ -100,11 +100,6 @@ export default defineConfigWithTheme<ThemeConfig>({
       }
     },
 
-    carbonAds: {
-      code: 'CEBDT27Y',
-      placement: 'vuejsorg'
-    },
-
     socialLinks: [
       { icon: 'languages', link: '/translations/' },
       { icon: 'github', link: 'https://github.com/vuejs/' },

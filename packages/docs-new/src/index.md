@@ -1,6 +1,6 @@
 ---
 page: true
-title: Vue.js - 渐进式 JavaScript 框架
+title: Tyh Ui | Vue3 组件库
 ---
 
 <script setup>

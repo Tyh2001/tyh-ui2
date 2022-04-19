@@ -1,16 +1,11 @@
 <template>
   <section id="hero">
     <h1 class="tagline">
-      <span class="accent">渐进式</span>
-      <br />JavaScript 框架
+      <span class="accent">Tyh Ui</span>
     </h1>
-    <p class="description">
-      一款用于构建 Web 界面，易学易用，性能出色且功能丰富的框架。
-    </p>
     <p class="actions">
-      <vue-mastery-modal />
-      <a class="get-started" href="/guide/introduction.html"> 快速开始 </a>
-      <a class="setup" href="/guide/quick-start.html">安装</a>
+      <a class="get-started" href="/components/install.html">快速开始</a>
+      <a class="setup" href="https://github.com/Tyh2001/tyh-ui">Github</a>
     </p>
   </section>
 </template>
