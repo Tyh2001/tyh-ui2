@@ -12,7 +12,7 @@ type 属性配置不同的按钮类型
 <tyh-button type="danger">危险按钮</tyh-button>
 <tyh-button type="warning">警告按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button>默认按钮</tyh-button>
 <tyh-button type="primary">主要按钮</tyh-button>
 <tyh-button type="success">成功按钮</tyh-button>
@@ -30,7 +30,7 @@ simple 属性可以配置简约按钮
 <tyh-button simple type="danger">危险按钮</tyh-button>
 <tyh-button simple type="warning">警告按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button simple>默认按钮</tyh-button>
 <tyh-button simple type="primary">主要按钮</tyh-button>
 <tyh-button simple type="success">成功按钮</tyh-button>
@@ -54,7 +54,7 @@ icon 属性可以配置图标按钮
 <tyh-button simple icon="tyh-ui-discount" type="danger"></tyh-button>
 <tyh-button simple icon="tyh-ui-chart-bar" type="warning"></tyh-button>
 
-```html
+```vue-html
 <tyh-button icon="tyh-ui-setting-filling">设置</tyh-button>
 <tyh-button icon="tyh-ui-tyhui" type="primary">tyh-ui</tyh-button>
 <tyh-button icon="tyh-ui-fabulous" type="success"></tyh-button>
@@ -84,7 +84,7 @@ disabled 属性可以配置禁用状态
 <tyh-button simple disabled type="danger">危险按钮</tyh-button>
 <tyh-button simple disabled type="warning">警告按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button disabled>默认按钮</tyh-button>
 <tyh-button disabled type="primary">主要按钮</tyh-button>
 <tyh-button disabled type="success">成功按钮</tyh-button>
@@ -116,7 +116,7 @@ square 属性可以配置方形按钮
 <tyh-button square type="danger">危险按钮</tyh-button>
 <tyh-button square type="warning">警告按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button round>默认按钮</tyh-button>
 <tyh-button round type="primary">主要按钮</tyh-button>
 <tyh-button round type="success">成功按钮</tyh-button>
@@ -155,7 +155,7 @@ square 属性可以配置方形按钮
   <tyh-button type="primary">右</tyh-button>
 </tyh-button-group>
 
-```html
+```vue-html
 <tyh-button-group>
   <tyh-button type="primary">上一页</tyh-button>
   <tyh-button type="primary">下一页</tyh-button>
@@ -192,7 +192,7 @@ size 属性可以配置按钮尺寸
 <tyh-button simple type="primary">正常大小</tyh-button>
 <tyh-button simple size="large" type="primary">大号按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button size="mini" type="primary">小型按钮</tyh-button>
 <tyh-button size="small" type="primary">中等按钮</tyh-button>
 <tyh-button type="primary">正常大小</tyh-button>
@@ -214,7 +214,7 @@ loading 属性可以配置 loading 状态下的按钮
 <tyh-button loading type="danger">危险按钮</tyh-button>
 <tyh-button loading type="warning">警告按钮</tyh-button>
 
-```html
+```vue-html
 <tyh-button loading>默认按钮</tyh-button>
 <tyh-button loading type="primary">主要按钮</tyh-button>
 <tyh-button loading type="success">成功按钮</tyh-button>

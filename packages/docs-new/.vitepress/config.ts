@@ -1,5 +1,3 @@
-import fs from 'fs'
-import path from 'path'
 import { defineConfigWithTheme } from 'vitepress'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
@@ -29,7 +27,11 @@ export const sidebar = {
     },
     {
       text: '表单',
-      items: []
+      items: [
+        { text: 'Table 表格', link: '/components/table' },
+        { text: 'Radio 单选框', link: '/components/radio' },
+        { text: 'Input 输入框', link: '/components/input' }
+      ]
     },
     {
       text: '提示',
@@ -44,78 +46,36 @@ export const sidebar = {
 
 export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
-  lang: 'zh-CN',
-  title: 'Vue.js',
-  description: 'Vue.js - 渐进式的 JavaScript 框架',
+  title: 'Tyh Ui',
+  description: '121212',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
   scrollOffset: 'header',
 
   head: [
     ['meta', { name: 'twitter:site', content: '@vuejs' }],
-    ['meta', { name: 'twitter:card', content: 'summary' }],
-    [
-      'meta',
-      {
-        name: 'twitter:image',
-        content: 'https://vuejs.org/images/logo.png'
-      }
-    ],
-    [
-      'link',
-      {
-        rel: 'preconnect',
-        href: 'https://sponsors.vuejs.org'
-      }
-    ],
-    [
-      'script',
-      {},
-      fs.readFileSync(
-        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
-        'utf-8'
-      )
-    ],
-    [
-      'script',
-      {
-        src: 'https://cdn.usefathom.com/script.js',
-        'data-site': 'XNOLWPLB',
-        'data-spa': 'auto',
-        defer: ''
-      }
-    ]
+    ['meta', { name: 'twitter:card', content: 'summary' }]
   ],
 
   themeConfig: {
     nav,
     sidebar,
 
-    algolia: {
-      indexName: 'vuejs',
-      appId: 'ML0LEBN7FQ',
-      apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
-      searchParameters: {
-        facetFilters: ['version:v3']
-      }
-    },
+    // algolia: {
+    //   indexName: 'vuejs',
+    //   appId: 'ML0LEBN7FQ',
+    //   apiKey: 'f49cbd92a74532cc55cfbffa5e5a7d01',
+    //   searchParameters: {
+    //     facetFilters: ['version:v3']
+    //   }
+    // },
 
-    socialLinks: [
-      { icon: 'languages', link: '/translations/' },
-      { icon: 'github', link: 'https://github.com/vuejs/' },
-      { icon: 'twitter', link: 'https://twitter.com/vuejs' },
-      { icon: 'discord', link: 'https://discord.com/invite/HBherRA' }
-    ],
-
-    editLink: {
-      repo: 'vuejs-translations/docs-zh-cn',
-      text: '在 GitHub 上编辑此页'
-    },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/' }],
 
     footer: {
       license: {
-        text: 'MIT License',
-        link: 'https://opensource.org/licenses/MIT'
+        text: '123',
+        link: ''
       },
       copyright: '底部的信息'
     }
