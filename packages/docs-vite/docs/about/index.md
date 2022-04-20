@@ -1,5 +1,6 @@
 ---
-home: true
+# home: true
+sidebar: false
 ---
 
 <p align="center">

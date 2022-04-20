@@ -54,7 +54,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   description: 'hello',
   srcDir: 'src',
   srcExclude: ['tutorial/**/description.md'],
-  // scrollOffset: 'header',
+  scrollOffset: 'header',
 
   head: [
     ['link', { rel: 'icon', href: './my.png' }],
