@@ -1,9 +1,21 @@
+import { defineConfigWithTheme } from 'vitepress'
+
 // 导航栏
 const nav: object[] = [
+  {
+    text: '首页',
+    activeMatch: `/`,
+    link: '/'
+  },
   {
     text: '组件',
     activeMatch: `^/components/`,
     link: '/components/install'
+  },
+  {
+    text: '关于',
+    activeMatch: `^/about/`,
+    link: '/about/index'
   }
 ]
 
@@ -41,7 +53,7 @@ const sidebar: object = {
   ]
 }
 
-const config: object = {
+const config: object = defineConfigWithTheme({
   // base: '/v3/',
   title: 'hello',
   description: 'hello',
@@ -62,6 +74,6 @@ const config: object = {
       copyright: 'hello'
     }
   }
-}
+})
 
 export default config

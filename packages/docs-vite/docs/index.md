@@ -1,7 +1,6 @@
-<!-- ---
-page: true
-title: Tyh Ui | Vue3 组件库
---- -->
+---
+home: true
+---
 
 <Home />
 
