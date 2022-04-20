@@ -1,0 +1,13 @@
+{
+  "name": "@tyh-ui/docs-vite",
+  "private": true,
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "dependencies": {
+    "tyh-ui2": "^3.4.14",
+    "vitepress": "0.22.3"
+  }
+}
