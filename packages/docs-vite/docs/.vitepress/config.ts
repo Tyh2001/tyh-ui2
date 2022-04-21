@@ -57,7 +57,10 @@ const sidebar: object[] = [
     children: [
       // { text: 'Tag 标签', link: '/components/tag' },
       { text: 'Tree 树形控件', link: '/components/tree' },
-      { text: 'Avatar 头像', link: '/components/avatar' }
+      { text: 'Avatar 头像', link: '/components/avatar' },
+      { text: 'Text 文字', link: '/components/text' },
+      // { text: 'Tagging 标注', link: '/components/tagging' },
+      { text: 'Skeleton 骨架', link: '/components/skeleton' }
     ]
   },
   {
@@ -85,7 +88,8 @@ const sidebar: object[] = [
       { text: 'Division 分割线', link: '/components/division' },
       { text: 'TurnPage 翻页', link: '/components/turnPage' },
       { text: 'BackTop 回到顶部', link: '/components/backTop' },
-      { text: 'Image 图片', link: '/components/image' }
+      { text: 'Image 图片', link: '/components/image' },
+      { text: 'Info 信息栏', link: '/components/info' }
     ]
   }
 ]
