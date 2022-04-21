@@ -60,7 +60,15 @@ const sidebar: object[] = [
     ]
   },
   {
-    text: '其它',
+    text: '提示',
+    children: [
+      { text: 'Alert 提示', link: '/components/alert' },
+      { text: 'Message 提示框', link: '/components/message' },
+      { text: 'Notification 通知', link: '/components/notification' }
+    ]
+  },
+  {
+    text: '提示',
     children: []
   }
 ]
