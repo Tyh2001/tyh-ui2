@@ -23,6 +23,141 @@ label 属性可配置 Radio 的 value
 </script>
 ```
 
+## 禁用状态
+
+disabled 属性可以配置禁用状态
+
+<tyh-radio v-model="radio2" disabled label="备选项1">备选项 1</tyh-radio>
+<tyh-radio v-model="radio2" label="备选项2">备选项 2</tyh-radio>
+<tyh-radio v-model="radio2" label="备选项3">备选项 3</tyh-radio>
+
+```html
+<template>
+  <tyh-radio v-model="radio2" disabled label="备选项1">备选项1</tyh-radio>
+  <tyh-radio v-model="radio2" label="备选项2">备选项2</tyh-radio>
+  <tyh-radio v-model="radio2" label="备选项3">备选项3</tyh-radio>
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+  const radio2 = ref('备选项2')
+</script>
+```
+
+## 带有边框
+
+border 属性可以配置边框
+
+<tyh-radio v-model="radio3" label="备选项1" border>备选项 1</tyh-radio>
+<tyh-radio v-model="radio3" label="备选项2" border>备选项 2</tyh-radio>
+<tyh-radio v-model="radio3" label="备选项3" border>备选项 3</tyh-radio>
+
+```html
+<template>
+  <tyh-radio v-model="radio3" label="备选项1" border>备选项1</tyh-radio>
+  <tyh-radio v-model="radio3" label="备选项2" border>备选项2</tyh-radio>
+  <tyh-radio v-model="radio3" label="备选项3" border>备选项3</tyh-radio>
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+  const radio3 = ref('备选项3')
+</script>
+```
+
+## 配置大小
+
+size 属性可以大小，但是必须是带有 border 属性的前提才可以正常工作
+
+<tyh-radio v-model="radio4" label="备选项1" border size="large">
+  备选项1
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项2" border size="large">
+  备选项2
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项3" border size="large">
+  备选项3
+</tyh-radio>
+
+<tyh-radio v-model="radio4" label="备选项1" border size="medium">
+  备选项1
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项2" border size="medium">
+  备选项2
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项3" border size="medium">
+  备选项3
+</tyh-radio>
+
+<tyh-radio v-model="radio4" label="备选项1" border size="small">
+  备选项1
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项2" border size="small">
+  备选项2
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项3" border size="small">
+  备选项3
+</tyh-radio>
+
+<tyh-radio v-model="radio4" label="备选项1" border size="mini">
+  备选项1
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项2" border size="mini">
+  备选项2
+</tyh-radio>
+<tyh-radio v-model="radio4" label="备选项3" border size="mini">
+  备选项3
+</tyh-radio>
+
+```html
+<template>
+  <tyh-radio v-model="radio4" label="备选项1" border size="large">
+    备选项1
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项2" border size="large">
+    备选项2
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项3" border size="large">
+    备选项3
+  </tyh-radio>
+
+  <tyh-radio v-model="radio4" label="备选项1" border size="medium">
+    备选项1
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项2" border size="medium">
+    备选项2
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项3" border size="medium">
+    备选项3
+  </tyh-radio>
+
+  <tyh-radio v-model="radio4" label="备选项1" border size="small">
+    备选项1
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项2" border size="small">
+    备选项2
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项3" border size="small">
+    备选项3
+  </tyh-radio>
+
+  <tyh-radio v-model="radio4" label="备选项1" border size="mini">
+    备选项1
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项2" border size="mini">
+    备选项2
+  </tyh-radio>
+  <tyh-radio v-model="radio4" label="备选项3" border size="mini">
+    备选项3
+  </tyh-radio>
+</template>
+
+<script setup>
+  import { ref } from 'vue'
+  const radio4 = ref('备选项1')
+</script>
+```
+
 ## Attributes
 
 | 参数     | 说明           | 类型    | 可选值                        | 默认值 |
@@ -45,5 +180,5 @@ label 属性可配置 Radio 的 value
   const radio1 = ref('备选项1')
   const radio2 = ref('备选项2')
   const radio3 = ref('备选项3')
-  const radio4 = ref('备选项1')
+  const radio3 = ref('备选项1')
 </script>
