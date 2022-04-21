@@ -47,12 +47,17 @@ const sidebar: object[] = [
       // { text: 'Radio 单选框', link: '/components/radio' },
       { text: 'Input 输入框', link: '/components/input' },
       { text: 'Select 选择器', link: '/components/select' },
-      { text: 'Switch 开关', link: '/components/switch' }
+      { text: 'Switch 开关', link: '/components/switch' },
+      { text: 'Rate 评分', link: '/components/rate' }
     ]
   },
   {
-    text: '提示',
-    children: []
+    text: '数据',
+    children: [
+      // { text: 'Tag 标签', link: '/components/tag' },
+      { text: 'Tree 树形控件', link: '/components/tree' },
+      { text: 'Avatar 头像', link: '/components/avatar' }
+    ]
   },
   {
     text: '其它',
