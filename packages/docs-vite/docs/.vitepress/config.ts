@@ -46,6 +46,7 @@ const sidebar: object[] = [
       { text: 'Table 表格', link: '/components/table' },
       // { text: 'Radio 单选框', link: '/components/radio' },
       { text: 'Input 输入框', link: '/components/input' },
+      { text: 'Textarea 文本域', link: '/components/textarea' },
       { text: 'Select 选择器', link: '/components/select' },
       { text: 'Switch 开关', link: '/components/switch' },
       { text: 'Rate 评分', link: '/components/rate' }
@@ -68,8 +69,24 @@ const sidebar: object[] = [
     ]
   },
   {
-    text: '提示',
-    children: []
+    text: '导航',
+    children: [
+      { text: 'Menu 导航栏', link: '/components/menu' },
+      { text: 'Crumbs 面包屑', link: '/components/crumbs' },
+      { text: 'PageHeader 页头', link: '/components/pageHeader' }
+    ]
+  },
+  {
+    text: '其它',
+    children: [
+      // { text: 'Dialog 对话框', link: '/components/dialog' },
+      // { text: 'Card 卡片', link: '/components/card' },
+      { text: 'Calendar 日历', link: '/components/calendar' },
+      { text: 'Division 分割线', link: '/components/division' },
+      { text: 'TurnPage 翻页', link: '/components/turnPage' },
+      { text: 'BackTop 回到顶部', link: '/components/backTop' },
+      { text: 'Image 图片', link: '/components/image' }
+    ]
   }
 ]
 
