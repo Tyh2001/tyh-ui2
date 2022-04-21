@@ -34,6 +34,7 @@ const sidebar: object[] = [
     // 这个控制是否可以折叠
     collapsible: true,
     children: [
+      { text: 'Color 色彩', link: '/components/color' },
       { text: 'Button 按钮', link: '/components/button' },
       { text: 'Icon 图标', link: '/components/icon' },
       { text: 'Link 链接', link: '/components/link' },
@@ -70,6 +71,7 @@ const sidebar: object[] = [
       { text: 'Alert 提示', link: '/components/alert' },
       { text: 'Message 提示框', link: '/components/message' },
       { text: 'Notification 通知', link: '/components/notification' }
+      // { text: 'Drawer 抽屉', link: '/components/drawer' },
     ]
   },
   {
