@@ -4,14 +4,7 @@
 
 卡片的基础用法
 
-<tyh-card>
-  <template v-slot:title>主标题</template>
-  <template v-slot:subtitle>副标题</template>
-  <p>这是内容部分1</p>
-  <p>这是内容部分2</p>
-  <p>这是内容部分3</p>
-  <p>这是内容部分4</p>
-</tyh-card>
+<tyh-card><template v-slot:title>主标题</template><template v-slot:subtitle>副标题</template><p>这是内容部分 1</p><p>这是内容部分 2</p><p>这是内容部分 3</p><p>这是内容部分 4</p></tyh-card>
 
 ```html
 <tyh-card>
@@ -26,12 +19,7 @@
 
 ## 简约卡片
 
-<tyh-card simple>
-  <p>这是内容部分1</p>
-  <p>这是内容部分2</p>
-  <p>这是内容部分3</p>
-  <p>这是内容部分4</p>
-</tyh-card>
+<tyh-card simple><p>这是内容部分 1</p><p>这是内容部分 2</p><p>这是内容部分 3</p><p>这是内容部分 4</p></tyh-card>
 
 ```html
 <tyh-card simple>
@@ -46,23 +34,11 @@
 
 shadow 属性可以配置阴影显示时机
 
-<tyh-card class="tyh-card-item" shadow="always">
-  <template v-slot:title>主标题</template>
-  <template v-slot:subtitle>副标题</template>
-  <p>总是显示阴影</p>
-</tyh-card>
+<tyh-card class="tyh-card-item" shadow="always"><template v-slot:title>主标题</template><template v-slot:subtitle>副标题</template><p>总是显示阴影</p></tyh-card>
 
-<tyh-card class="tyh-card-item" shadow="hover">
-  <template v-slot:title>主标题</template>
-  <template v-slot:subtitle>副标题</template>
-  <p>鼠标移入显示</p>
-</tyh-card>
+<tyh-card class="tyh-card-item" shadow="hover"><template v-slot:title>主标题</template><template v-slot:subtitle>副标题</template><p>鼠标移入显示</p></tyh-card>
 
-<tyh-card class="tyh-card-item">
-  <template v-slot:title>主标题</template>
-  <template v-slot:subtitle>副标题</template>
-  <p>从不显示</p>
-</tyh-card>
+<tyh-card class="tyh-card-item"><template v-slot:title>主标题</template><template v-slot:subtitle>副标题</template><p>从不显示</p></tyh-card>
 
 ```html
 <tyh-card shadow="always">

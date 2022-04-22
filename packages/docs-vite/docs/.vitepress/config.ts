@@ -46,7 +46,7 @@ const sidebar: object[] = [
     collapsible: true,
     children: [
       { text: 'Table 表格', link: '/components/table' },
-      // { text: 'Radio 单选框', link: '/components/radio' },
+      { text: 'Radio 单选框', link: '/components/radio' },
       { text: 'Input 输入框', link: '/components/input' },
       { text: 'Textarea 文本域', link: '/components/textarea' },
       { text: 'Select 选择器', link: '/components/select' },
@@ -57,11 +57,11 @@ const sidebar: object[] = [
   {
     text: '数据',
     children: [
-      // { text: 'Tag 标签', link: '/components/tag' },
+      { text: 'Tag 标签', link: '/components/tag' },
       { text: 'Tree 树形控件', link: '/components/tree' },
       { text: 'Avatar 头像', link: '/components/avatar' },
       { text: 'Text 文字', link: '/components/text' },
-      // { text: 'Tagging 标注', link: '/components/tagging' },
+      { text: 'Tagging 标注', link: '/components/tagging' },
       { text: 'Skeleton 骨架', link: '/components/skeleton' }
     ]
   },
@@ -70,8 +70,8 @@ const sidebar: object[] = [
     children: [
       { text: 'Alert 提示', link: '/components/alert' },
       { text: 'Message 提示框', link: '/components/message' },
-      { text: 'Notification 通知', link: '/components/notification' }
-      // { text: 'Drawer 抽屉', link: '/components/drawer' },
+      { text: 'Notification 通知', link: '/components/notification' },
+      { text: 'Drawer 抽屉', link: '/components/drawer' }
     ]
   },
   {
@@ -85,8 +85,8 @@ const sidebar: object[] = [
   {
     text: '其它',
     children: [
-      // { text: 'Dialog 对话框', link: '/components/dialog' },
-      // { text: 'Card 卡片', link: '/components/card' },
+      { text: 'Dialog 对话框', link: '/components/dialog' },
+      { text: 'Card 卡片', link: '/components/card' },
       { text: 'Calendar 日历', link: '/components/calendar' },
       { text: 'Division 分割线', link: '/components/division' },
       { text: 'TurnPage 翻页', link: '/components/turnPage' },

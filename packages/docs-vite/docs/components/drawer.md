@@ -15,9 +15,7 @@ direction 属性可以配置抽屉的弹出方向
 <tyh-radio v-model="radio" label="bottom">从下面弹出</tyh-radio>
 <tyh-radio v-model="radio" label="top">从上面弹出</tyh-radio>
 
-<tyh-drawer v-model="open" :direction="radio" title="这是标题">
-  hello，欢迎使用 tyh-ui!
-</tyh-drawer>
+<tyh-drawer v-model="open" :direction="radio" title="这是标题">hello，欢迎使用 tyh-ui!</tyh-drawer>
 
 ```html
 <template>
@@ -48,9 +46,7 @@ showHeader 属性可以配置不带头部信息
 
 <tyh-button type="primary" @click="open2 = true">点我打开</tyh-button>
 
-<tyh-drawer v-model="open2" direction="right" :showHeader="false">
-  hello，欢迎使用 tyh-ui!
-</tyh-drawer>
+<tyh-drawer v-model="open2" direction="right" :showHeader="false">hello，欢迎使用 tyh-ui!</tyh-drawer>
 
 ```html
 <template>
@@ -73,11 +69,7 @@ size 属性可以配置宽度或者高度
 
 <tyh-button type="primary" @click="open3 = true">点我打开</tyh-button>
 
-<tyh-drawer v-model="open3" direction="right" size="50%">
-  <tyh-button type="primary" @click="open4 = true">点我打开内层</tyh-button>
-  hello，欢迎使用 tyh-ui!
-  <tyh-drawer v-model="open4" direction="right"> 这是内层的 </tyh-drawer>
-</tyh-drawer>
+<tyh-drawer v-model="open3" direction="right" size="50%"><tyh-button type="primary" @click="open4 = true">点我打开内层</tyh-button>hello，欢迎使用 tyh-ui!<tyh-drawer v-model="open4" direction="right"> 这是内层的 </tyh-drawer></tyh-drawer>
 
 ```html
 <template>

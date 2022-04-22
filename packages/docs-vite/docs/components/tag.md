@@ -57,18 +57,10 @@ round 属性可以配置圆角显示
 动态编辑标签可以通过点击标签关闭按钮后触发的 onClose 事件来实现
 
 <tyh-tag v-show="show1" isClose @close="show1 = false">标签一</tyh-tag>
-<tyh-tag v-show="show2" type="primary" isClose @close="show2 = false">
-标签二
-</tyh-tag>
-<tyh-tag v-show="show3" type="success" isClose @close="show3 = false">
-标签三
-</tyh-tag>
-<tyh-tag v-show="show4" type="danger" isClose @close="show4 = false">
-标签四
-</tyh-tag>
-<tyh-tag v-show="show5" type="warning" isClose @close="show5 = false">
-标签五
-</tyh-tag>
+<tyh-tag v-show="show2" type="primary" isClose @close="show2 = false">标签二</tyh-tag>
+<tyh-tag v-show="show3" type="success" isClose @close="show3 = false">标签三</tyh-tag>
+<tyh-tag v-show="show4" type="danger" isClose @close="show4 = false">标签四</tyh-tag>
+<tyh-tag v-show="show5" type="warning" isClose @close="show5 = false">标签五</tyh-tag>
 
 ```html
 <template>

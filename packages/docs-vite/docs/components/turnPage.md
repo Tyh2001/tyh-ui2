@@ -6,10 +6,7 @@
 
 direction 属性用于配置子组件，此属性为必传参数，它决定了你的翻页标识文字的显示位置
 
-<tyh-turn-page>
-  <tyh-turn-page-item direction="left" url="">上一页</tyh-turn-page-item>
-  <tyh-turn-page-item direction="right" url="">下一页</tyh-turn-page-item>
-</tyh-turn-page>
+<tyh-turn-page><tyh-turn-page-item direction="left" url="">上一页</tyh-turn-page-item><tyh-turn-page-item direction="right" url="">下一页</tyh-turn-page-item></tyh-turn-page>
 
 ```html
 <tyh-turn-page>
@@ -22,14 +19,7 @@ direction 属性用于配置子组件，此属性为必传参数，它决定了�
 
 center 属性可以配置居中显示
 
-<tyh-turn-page center>
-  <tyh-turn-page-item direction="left" url="">
-    上一页 - 居中
-  </tyh-turn-page-item>
-  <tyh-turn-page-item direction="right" url="">
-    下一页 - 居中
-  </tyh-turn-page-item>
-</tyh-turn-page>
+<tyh-turn-page center><tyh-turn-page-item direction="left" url="">上一页 - 居中</tyh-turn-page-item><tyh-turn-page-item direction="right" url="">下一页 - 居中</tyh-turn-page-item></tyh-turn-page>
 
 ```html
 <tyh-turn-page center>
@@ -46,14 +36,7 @@ center 属性可以配置居中显示
 
 icon 属性可以配置其他 icon
 
-<tyh-turn-page>
-  <tyh-turn-page-item direction="left" url="" icon="tyh-ui-shouye-xianxing">
-  首页
-  </tyh-turn-page-item>
-  <tyh-turn-page-item direction="right" url="" icon="tyh-ui-direction-right">
-  下一页
-  </tyh-turn-page-item>
-</tyh-turn-page>
+<tyh-turn-page><tyh-turn-page-item direction="left" url="" icon="tyh-ui-shouye-xianxing">首页</tyh-turn-page-item><tyh-turn-page-item direction="right" url="" icon="tyh-ui-direction-right">下一页</tyh-turn-page-item></tyh-turn-page>
 
 ```html
 <tyh-turn-page>

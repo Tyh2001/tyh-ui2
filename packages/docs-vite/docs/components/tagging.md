@@ -24,9 +24,7 @@ type 属性可以配置标注的类型
 
 size 属性可以配置标注的文字大小
 
-<tyh-tagging size="14">
-  使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。
-</tyh-tagging>
+<tyh-tagging size="14">使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。</tyh-tagging>
 
 ```html
 <tyh-tagging size="14">
