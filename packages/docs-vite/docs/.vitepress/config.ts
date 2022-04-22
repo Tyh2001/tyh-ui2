@@ -103,7 +103,6 @@ const config: object = defineConfigWithTheme<ThemeConfig>({
   title: 'Tyh Ui',
   description: 'hello',
   // srcDir: 'src',
-  // srcExclude: ['tutorial/**/description.md'],
   scrollOffset: 'header',
   sidebarDepth: 0,
 
