@@ -99,8 +99,8 @@ const sidebar: object[] = [
 
 const config: object = defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig,
-  // base: '/v3/',
-  title: 'hello',
+  base: '/docs/',
+  title: 'Tyh Ui',
   description: 'hello',
   // srcDir: 'src',
   // srcExclude: ['tutorial/**/description.md'],
