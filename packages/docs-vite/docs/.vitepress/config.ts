@@ -1,7 +1,6 @@
 import { defineConfigWithTheme } from 'vitepress'
 import type { Config as ThemeConfig } from '@vue/theme'
 import baseConfig from '@vue/theme/config'
-import { headerPlugin } from './headerMdPlugin'
 import fs from 'fs'
 import path from 'path'
 
@@ -98,13 +97,12 @@ const sidebar: object = {
 }
 
 const config: object = defineConfigWithTheme<ThemeConfig>({
-  // extends: baseConfig,
-  // base: '/demo/',
+  extends: baseConfig, // 配置代码片段高亮
   title: 'Tyh Ui',
   description: 'hello',
-  // srcDir: 'src',
   scrollOffset: 'header',
   sidebarDepth: 0,
+  // base: '/demo/',
 
   head: [
     [
@@ -116,7 +114,6 @@ const config: object = defineConfigWithTheme<ThemeConfig>({
       )
     ]
   ],
-
   // 主题配置
   themeConfig: {
     nav,
@@ -132,11 +129,6 @@ const config: object = defineConfigWithTheme<ThemeConfig>({
     footer: {
       license: { text: '', link: '' },
       copyright: 'hello'
-    }
-  },
-  markdown: {
-    config(md) {
-      md.use(headerPlugin)
     }
   }
 })
