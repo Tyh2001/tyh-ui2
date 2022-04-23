@@ -8,8 +8,11 @@
   },
   "dependencies": {
     "@vue/theme": "^1.0.1",
+    "@types/node": "^16.9.1",
     "markdown-it": "^12.3.2",
     "tyh-ui2": "^3.4.14",
-    "vitepress": "0.22.2"
+    "vitepress": "0.22.2",
+    "dynamics.js": "^1.1.5",
+    "gsap": "^3.9.0"
   }
 }

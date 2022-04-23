@@ -3,11 +3,11 @@ import { VPTheme } from '@vue/theme'
 // import Banner from './components/Banner.vue'
 // import PreferenceSwitch from './components/PreferenceSwitch.vue'
 // import VueSchoolLink from './components/VueSchoolLink.vue'
-// import {
-//   preferComposition,
-//   preferSFC,
-//   filterHeadersByPreference
-// } from './components/preferences'
+import {
+  preferComposition,
+  preferSFC,
+  filterHeadersByPreference
+} from './components/preferences'
 // import SponsorsAside from './components/SponsorsAside.vue'
 // import VueJobs from './components/VueJobs.vue'
 
@@ -27,10 +27,10 @@ export default Object.assign({}, VPTheme, {
   //   })
   // },
   enhanceApp({ app }: { app: App }) {
-    // app.provide('prefer-composition', preferComposition)
-    // app.provide('prefer-sfc', preferSFC)
-    // app.provide('filter-headers', filterHeadersByPreference)
-    // app.component('VueSchoolLink', VueSchoolLink)
+    app.provide('prefer-composition', preferComposition)
+    app.provide('prefer-sfc', preferSFC)
+    app.provide('filter-headers', filterHeadersByPreference)
+    app.component('VueSchoolLink', VueSchoolLink)
     app.use(tyhUi)
   }
 })

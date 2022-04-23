@@ -1,11 +1,8 @@
 ---
-# home: true
-sidebar: false
+home: true
 ---
 
-<p align="center">
-  <img height="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
-</p>
+<img height="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
 
 ## 关于
 
