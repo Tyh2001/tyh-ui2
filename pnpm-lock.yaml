@@ -112,15 +112,11 @@ importers:
     specifiers:
       '@types/node': ^16.9.1
       '@vue/theme': ^1.0.1
-      dynamics.js: ^1.1.5
-      gsap: ^3.9.0
       tyh-ui2: ^3.4.14
       vitepress: 0.22.2
     dependencies:
       '@types/node': 16.11.27
       '@vue/theme': 1.0.1_vue@3.2.31
-      dynamics.js: 1.1.5
-      gsap: 3.10.4
       tyh-ui2: 3.4.14
       vitepress: 0.22.2_sass@1.50.0
 

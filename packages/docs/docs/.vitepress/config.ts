@@ -4,8 +4,14 @@ import baseConfig from '@vue/theme/config'
 import fs from 'fs'
 import path from 'path'
 
+interface navType {
+  text: string
+  activeMatch: string
+  link: string
+}
+
 // 导航栏
-const nav: object[] = [
+const nav: navType[] = [
   {
     text: '首页',
     activeMatch: `/`,
@@ -24,7 +30,7 @@ const nav: object[] = [
 ]
 
 // 侧边栏
-const sidebar: object = {
+const sidebar: any = {
   '/components/': [
     {
       text: '开发指南',
@@ -96,12 +102,11 @@ const sidebar: object = {
   ]
 }
 
-const config: object = defineConfigWithTheme<ThemeConfig>({
+export default defineConfigWithTheme<ThemeConfig>({
   extends: baseConfig, // 配置代码片段高亮
   title: 'Tyh Ui',
   description: 'hello',
   scrollOffset: 'header',
-  sidebarDepth: 0,
   // base: '/demo/',
 
   head: [
@@ -109,7 +114,7 @@ const config: object = defineConfigWithTheme<ThemeConfig>({
       'script',
       {},
       fs.readFileSync(
-        path.resolve(__dirname, './inlined-scripts/restorePreference.js'),
+        path.resolve(__dirname, './utils/restorePreference.js'),
         'utf-8'
       )
     ]
@@ -119,18 +124,6 @@ const config: object = defineConfigWithTheme<ThemeConfig>({
     nav,
     sidebar,
     sidebarDepth: 0,
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/Tyh2001/tyh-ui' }
-    ],
-    editLink: {
-      repo: 'Tyh2001/tyh-ui',
-      text: '在 GitHub 上编辑此页'
-    },
-    footer: {
-      license: { text: '', link: '' },
-      copyright: 'hello'
-    }
+    socialLinks: [{ icon: 'github', link: 'https://github.com/Tyh2001/tyh-ui' }]
   }
 })
-
-export default config
