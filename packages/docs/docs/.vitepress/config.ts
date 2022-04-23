@@ -107,7 +107,7 @@ export default defineConfigWithTheme<ThemeConfig>({
   title: 'Tyh Ui',
   description: 'hello',
   scrollOffset: 'header',
-  // base: '/demo/',
+  base: '/demo/',
 
   head: [
     [

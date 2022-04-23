@@ -8,7 +8,6 @@
     "dev:docs": "pnpm run dev --filter @tyh-ui/docs",
     "dev:docs-old": "pnpm run dev --filter @tyh-ui/docs-old",
     "dev:demo": "pnpm run dev --filter @tyh-ui/demo",
-    "build:docs": "vitepress packages/docs",
     "build:style": "vite build packages/style",
     "preinstall": "node ./scripts/preinstall.js",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch master",
