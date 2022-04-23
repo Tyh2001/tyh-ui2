@@ -1,39 +1,15 @@
 {
   "name": "@tyh-ui/docs-new",
+  "private": true,
   "scripts": {
-    "dev": "vitepress",
-    "build": "vitepress build",
-    "serve": "vitepress serve",
-    "zhlint": "zhlint 'src/guide/**/*.md'",
-    "preinstall": "npx only-allow pnpm"
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
   },
   "dependencies": {
-    "@vue/repl": "^1.0.0",
     "@vue/theme": "^1.0.1",
-    "tyh-ui2": "3.4.14",
-    "dynamics.js": "^1.1.5",
-    "gsap": "^3.9.0",
-    "vitepress": "^0.22.2"
-  },
-  "devDependencies": {
-    "@types/markdown-it": "^12.2.3",
-    "@types/node": "^16.9.1",
-    "chalk": "^4.1.2",
-    "gray-matter": "^4.0.3",
-    "lodash": "^4.17.21",
-    "open": "^8.4.0",
-    "patch-vue-directive-ssr": "^0.0.1",
-    "simple-git": "^2.48.0",
-    "zhlint": "^0.5.3"
-  },
-  "pnpm": {
-    "peerDependencyRules": {
-      "ignoreMissing": [
-        "@algolia/client-search",
-        "react",
-        "react-dom",
-        "@types/react"
-      ]
-    }
+    "markdown-it": "^12.3.2",
+    "tyh-ui2": "^3.4.14",
+    "vitepress": "0.22.2"
   }
 }
