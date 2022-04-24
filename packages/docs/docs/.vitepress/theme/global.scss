@@ -1,0 +1,22 @@
+.tyh-button,
+.tyh-turn-page,
+.tyh-tag,
+.tyh-link,
+.tyh-input,
+.tyh-tagging,
+.tyh-alert,
+.tyh-table,
+.tyh-select,
+.tyh-button-group {
+  margin: 5px;
+}
+
+.tyh-input {
+  width: 260px;
+  display: block;
+}
+
+.tyh-button-group .tyh-button,
+.tyh-info .tyh-link {
+  margin: 0;
+}

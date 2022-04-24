@@ -2,7 +2,7 @@
   <color-a v-high />
   <div id="colorList1">
     <div
-      class="colorList-item1"
+      class="colorList-item"
       v-for="(list1, index) in colorList1"
       :style="ListBackgroundColor(list1)"
       :key="index"
@@ -15,9 +15,9 @@
   </div>
 
   <color-b v-high />
-  <div id="colorList2">
+  <div id="colorList">
     <div
-      class="colorList-item2"
+      class="colorList-item"
       v-for="(list2, index) in colorList2"
       :style="ListBackgroundColor(list2)"
       :key="index"
@@ -30,20 +30,9 @@
   </div>
 
   <color-c v-high />
-  <div id="colorList3">
-    <!-- <div
-      class="colorList-item3"
-      v-for="(list3, index) in colorList3"
-      :style="ListBackgroundColor(list3)"
-      :key="index"
-      :data-clipboard-text="list3.color"
-      @click="copyColor('.colorList-item3')"
-    >
-      <p>类型：{{ list3.type }}</p>
-      <p>{{ list3.color }}</p>
-    </div> -->
+  <div id="colorList">
     <div
-      class="colorList-item3"
+      class="colorList-item"
       v-for="(list3, index) in colorList3"
       :style="ListBackgroundColor(list3)"
       :key="index"
@@ -154,23 +143,13 @@ const ListBackgroundColor = item => {
   user-select: none;
   margin-top: 30px;
 }
-#colorList1,
-#colorList2,
-#colorList3 {
+#colorList {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-#colorList1 .colorList-item1,
-#colorList2 .colorList-item1,
-#colorList3 .colorList-item1,
-#colorList1 .colorList-item2,
-#colorList2 .colorList-item2,
-#colorList3 .colorList-item2,
-#colorList1 .colorList-item3,
-#colorList2 .colorList-item3,
-#colorList3 .colorList-item3 {
+#colorList .colorList-item {
   margin-top: 10px;
   width: 200px;
   height: 70px;
@@ -182,35 +161,17 @@ const ListBackgroundColor = item => {
   box-sizing: border-box;
   cursor: pointer;
 }
-#colorList1 .colorList-item1 p,
-#colorList2 .colorList-item1 p,
-#colorList3 .colorList-item1 p,
-#colorList1 .colorList-item2 p,
-#colorList2 .colorList-item2 p,
-#colorList3 .colorList-item2 p,
-#colorList1 .colorList-item3 p,
-#colorList2 .colorList-item3 p,
-#colorList3 .colorList-item3 p {
+#colorList .colorList-item p {
   color: #fff;
 }
 @media screen and (max-width: 700px) {
-  #colorList1,
-  #colorList2,
-  #colorList3 {
+  #colorList {
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
   }
-  #colorList1 .colorList-item1,
-  #colorList2 .colorList-item1,
-  #colorList3 .colorList-item1,
-  #colorList1 .colorList-item2,
-  #colorList2 .colorList-item2,
-  #colorList3 .colorList-item2,
-  #colorList1 .colorList-item3,
-  #colorList2 .colorList-item3,
-  #colorList3 .colorList-item3 {
+  #colorList .colorList-item {
     margin-top: 10px;
     width: 48%;
     height: 70px;
@@ -222,15 +183,7 @@ const ListBackgroundColor = item => {
     box-sizing: border-box;
     cursor: pointer;
   }
-  #colorList1 .colorList-item1 p,
-  #colorList2 .colorList-item1 p,
-  #colorList3 .colorList-item1 p,
-  #colorList1 .colorList-item2 p,
-  #colorList2 .colorList-item2 p,
-  #colorList3 .colorList-item2 p,
-  #colorList1 .colorList-item3 p,
-  #colorList2 .colorList-item3 p,
-  #colorList3 .colorList-item3 p {
+  #colorList .colorList-item p {
     color: #fff;
   }
 }

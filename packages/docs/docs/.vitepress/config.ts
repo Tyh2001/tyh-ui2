@@ -1,6 +1,3 @@
-// import { defineConfigWithTheme } from 'vitepress'
-// import type { Config as ThemeConfig } from '@vue/theme'
-// import baseConfig from '@vue/theme/config'
 import fs from 'fs'
 import path from 'path'
 
@@ -102,9 +99,7 @@ const sidebar: any = {
   ]
 }
 
-// export default defineConfigWithTheme<ThemeConfig>({
 export default {
-  // extends: baseConfig, // 配置代码片段高亮
   title: 'Tyh Ui',
   description: 'hello',
   scrollOffset: 'header',
@@ -124,7 +119,6 @@ export default {
   themeConfig: {
     nav,
     sidebar,
-    // sidebarDepth: 0,
     socialLinks: [{ icon: 'github', link: 'https://github.com/Tyh2001/tyh-ui' }]
   }
 }

@@ -6,29 +6,29 @@ tyh-ui 在这里提供了一些比较鲜艳、友好的颜色提供使用
 
 下面是 tyh-ui 内部使用的颜色色号，采用的比较鲜亮的颜色
 
-<div id="colorList1">
+<div id="colorList">
   <div
-    class="colorList-item1"
+    class="colorList-item"
     v-for="(list1, index) in colorList1"
     :style="ListBackgroundColor(list1)"
     :key="index"
   >
     <p>类型：{{ list1.type }}</p>
-    <p>{{ list1.color }}</p>
+    <p>#{{ list1.color }}</p>
   </div>
 </div>
 
 ## 字体边框
 
-<div id="colorList2">
+<div id="colorList">
   <div
-    class="colorList-item2"
+    class="colorList-item"
     v-for="(list2, index) in colorList2"
     :style="ListBackgroundColor(list2)"
     :key="index"
   >
     <p>类型：{{ list2.type }}</p>
-    <p>{{ list2.color }}</p>
+    <p>#{{ list2.color }}</p>
   </div>
 </div>
 
@@ -38,9 +38,9 @@ tyh-ui 在这里提供了一些比较鲜艳、友好的颜色提供使用
 
 下面是 tyh-ui 推荐的一些其它色彩
 
- <div id="colorList3">
+ <div id="colorList">
   <div
-    class="colorList-item3"
+    class="colorList-item"
     v-for="(list3, index) in colorList3"
     :style="ListBackgroundColor(list3)"
     :key="index"
@@ -48,7 +48,7 @@ tyh-ui 在这里提供了一些比较鲜艳、友好的颜色提供使用
     @click="copyColor('.colorList-item3')"
   >
     <p>类型：{{ list3.type }}</p>
-    <p>{{ list3.color }}</p>
+    <p>#{{ list3.color }}</p>
   </div>
 </div>
 
@@ -109,84 +109,16 @@ const ListBackgroundColor = item => {
 }
 </script>
 
-<style scoped>
-.title {
-  font-weight: 500;
-  color: #1f2f3d;
-  margin-bottom: 50px;
-  user-select: none;
-}
-.explain {
-  color: #515a6e;
-  line-height: 40px;
-  font-size: 15px;
-  user-select: none;
-}
-.Subtitle {
-  color: #515a6e;
-  line-height: 60px;
-  user-select: none;
-  margin-top: 30px;
-}
-#colorList1,
-#colorList2,
-#colorList3 {
+<style lang="scss" scoped>
+
+#colorList {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-}
-#colorList1 .colorList-item1,
-#colorList2 .colorList-item1,
-#colorList3 .colorList-item1,
-#colorList1 .colorList-item2,
-#colorList2 .colorList-item2,
-#colorList3 .colorList-item2,
-#colorList1 .colorList-item3,
-#colorList2 .colorList-item3,
-#colorList3 .colorList-item3 {
-  margin-top: 10px;
-  width: 200px;
-  height: 70px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
-#colorList1 .colorList-item1 p,
-#colorList2 .colorList-item1 p,
-#colorList3 .colorList-item1 p,
-#colorList1 .colorList-item2 p,
-#colorList2 .colorList-item2 p,
-#colorList3 .colorList-item2 p,
-#colorList1 .colorList-item3 p,
-#colorList2 .colorList-item3 p,
-#colorList3 .colorList-item3 p {
-  color: #fff;
-}
-@media screen and (max-width: 700px) {
-  #colorList1,
-  #colorList2,
-  #colorList3 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  #colorList1 .colorList-item1,
-  #colorList2 .colorList-item1,
-  #colorList3 .colorList-item1,
-  #colorList1 .colorList-item2,
-  #colorList2 .colorList-item2,
-  #colorList3 .colorList-item2,
-  #colorList1 .colorList-item3,
-  #colorList2 .colorList-item3,
-  #colorList3 .colorList-item3 {
+  .colorList-item {
     margin-top: 10px;
-    width: 48%;
+    width: 165px;
     height: 70px;
     border-radius: 5px;
     display: flex;
@@ -195,17 +127,31 @@ const ListBackgroundColor = item => {
     padding: 10px;
     box-sizing: border-box;
     cursor: pointer;
+    p {
+      color: #fff;
+      margin: 0;
+    }
   }
-  #colorList1 .colorList-item1 p,
-  #colorList2 .colorList-item1 p,
-  #colorList3 .colorList-item1 p,
-  #colorList1 .colorList-item2 p,
-  #colorList2 .colorList-item2 p,
-  #colorList3 .colorList-item2 p,
-  #colorList1 .colorList-item3 p,
-  #colorList2 .colorList-item3 p,
-  #colorList3 .colorList-item3 p {
-    color: #fff;
+}
+@media screen and (max-width: 700px) {
+  #colorList {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    .colorList-item {
+      margin-top: 10px;
+      width: 48%;
+      height: 70px;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
   }
 }
 </style>
