@@ -15,7 +15,7 @@
     </p>
 
     <div class="btnBox">
-      <a href="/components/install.html">
+      <a href="/v3/components/install.html">
         <tyh-button type="primary" round>快速开始</tyh-button>
       </a>
 
