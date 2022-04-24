@@ -37,7 +37,7 @@
     line-height: 100px;
   }
   .title_2 {
-    font-size: 4.5rem;
+    font-size: 4rem;
     white-space: wrap;
     line-height: 90px;
     font-weight: 700;
