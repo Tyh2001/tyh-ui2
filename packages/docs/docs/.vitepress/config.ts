@@ -103,7 +103,7 @@ export default {
   title: 'Tyh Ui',
   description: 'hello',
   scrollOffset: 'header',
-  base: '/v3/',
+  // base: '/v3/',
 
   head: [
     [
