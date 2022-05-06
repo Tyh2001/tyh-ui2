@@ -44,30 +44,25 @@ const emit = defineEmits([
   'onClose'
 ])
 
-const { close, packingClose } = TyhDialog()
-function TyhDialog() {
-  const close = (): void => {
-    emit('close')
-    emit('update:modelValue', false)
-  }
-
-  const packingClose = (): void => {
-    if (!props.modalClose) return
-    close()
-  }
-
-  const self: any = getCurrentInstance() as ComponentInternalInstance
-  watch(
-    () => props.modelValue,
-    (v: boolean): void => {
-      if (v) emit('open')
-      const el = self.proxy.$el
-      if (v && props.appendToBody) {
-        document.body.appendChild(el)
-      }
-    }
-  )
-
-  return { close, packingClose }
+const close = (): void => {
+  emit('close')
+  emit('update:modelValue', false)
 }
+
+const packingClose = (): void => {
+  if (!props.modalClose) return
+  close()
+}
+
+const self: any = getCurrentInstance() as ComponentInternalInstance
+watch(
+  () => props.modelValue,
+  (v: boolean): void => {
+    if (v) emit('open')
+    const el = self.proxy.$el
+    if (v && props.appendToBody) {
+      document.body.appendChild(el)
+    }
+  }
+)
 </script>

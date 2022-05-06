@@ -2,6 +2,11 @@
 
 [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | Chinese
 
+## 3.5.0 (2022-05-06)
+
+- 取消组件代码封转
+- 删除部分严格模式标识
+
 ## 3.4.14 (2022-04-09)
 
 - 优化 TyhMenu 组件布局

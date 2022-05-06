@@ -28,5 +28,3 @@ const input = (e: any): void => {
   emit('update:modelValue', model.value)
 }
 </script>
-
-<style scoped></style>

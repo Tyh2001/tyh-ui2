@@ -4,6 +4,11 @@ For more information, please refer to the Chinese update log.
 
 English | [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG_zh.md)
 
+## 3.5.0 (2022-05-06)
+
+- Cancel component code blocking
+- Delete some strict mode identifiers
+
 ## 3.4.14 (2022-04-09)
 
 - Optimize the layout of TyhMenu components

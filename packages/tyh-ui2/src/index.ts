@@ -1,5 +1,3 @@
-'use strict'
-
 import TyhButton from '../packages/button'
 import TyhList from '../packages/list'
 import TyhCard from '../packages/card'

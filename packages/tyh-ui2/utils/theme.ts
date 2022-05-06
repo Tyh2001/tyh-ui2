@@ -1,5 +1,3 @@
-'use strict'
-
 interface themeType {
   [name: string]: string
 }

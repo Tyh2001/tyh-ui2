@@ -24,40 +24,35 @@ import { avatarProps } from './props.ts'
 
 const props = defineProps(avatarProps)
 const emit = defineEmits(['error', 'load'])
-const { isError, onError, isSize, errorClass, successClass } = TyhAvatar()
 
-function TyhAvatar() {
-  const isError = ref<boolean>(false)
+const isError = ref<boolean>(false)
 
-  const onError = (): void => {
-    emit('error')
-    isError.value = true
-  }
-
-  const isSize = computed((): object[] => {
-    return [
-      {
-        width: `${props.size * 10}px`,
-        height: `${props.size * 10}px`
-      }
-    ]
-  })
-
-  const errorClass = computed((): (string | object)[] => {
-    return ['tyh-avatar-error', { 'tyh-avatar-round': props.round }]
-  })
-
-  const successClass = computed((): object[] => {
-    return [
-      {
-        [`tyh-avatar-${props.fit}`]: props.fit,
-        'tyh-avatar-round': props.round,
-        'tyh-avatar-border': props.border,
-        'tyh-avatar-select': props.select
-      }
-    ]
-  })
-
-  return { isError, onError, isSize, errorClass, successClass }
+const onError = (): void => {
+  emit('error')
+  isError.value = true
 }
+
+const isSize = computed((): object[] => {
+  return [
+    {
+      width: `${props.size * 10}px`,
+      height: `${props.size * 10}px`
+    }
+  ]
+})
+
+const errorClass = computed((): (string | object)[] => {
+  return ['tyh-avatar-error', { 'tyh-avatar-round': props.round }]
+})
+
+const successClass = computed((): object[] => {
+  return [
+    {
+      [`tyh-avatar-${props.fit}`]: props.fit,
+      'tyh-avatar-round': props.round,
+      'tyh-avatar-border': props.border,
+      'tyh-avatar-select': props.select
+    }
+  ]
+})
 </script>

@@ -46,58 +46,47 @@ const emit = defineEmits([
   'onfocus'
 ])
 
-const { input, isClass, inputType, rightIcon, rightIconClick } = TyhInput()
-function TyhInput() {
-  const inputType = ref<string>(props.type)
-  const isPass = ref<boolean>(false)
+const inputType = ref<string>(props.type)
+const isPass = ref<boolean>(false)
 
-  const input = (e: any): void => emit('update:modelValue', e.target.value)
+const input = (e: any): void => emit('update:modelValue', e.target.value)
 
-  const clearText = (): void => {
-    if (props.disabled) return
-    emit('update:modelValue', '')
-    emit('clear')
-  }
+const clearText = (): void => {
+  if (props.disabled) return
+  emit('update:modelValue', '')
+  emit('clear')
+}
 
-  const isClass = computed((): (string | object)[] => {
-    return [
-      'tyh-input-input',
-      `tyh-input-input-${props.size}`,
-      {
-        'tyh-input-icon-padding': props.icon,
-        'tyh-input-clear-padding': props.clear,
-        'tyh-input-disabled': props.disabled
-      }
-    ]
-  })
+const isClass = computed((): (string | object)[] => {
+  return [
+    'tyh-input-input',
+    `tyh-input-input-${props.size}`,
+    {
+      'tyh-input-icon-padding': props.icon,
+      'tyh-input-clear-padding': props.clear,
+      'tyh-input-disabled': props.disabled
+    }
+  ]
+})
 
-  const showPasswordClick = (): void => {
-    isPass.value = !isPass.value
-    inputType.value = isPass.value ? 'text' : 'password'
-  }
+const showPasswordClick = (): void => {
+  isPass.value = !isPass.value
+  inputType.value = isPass.value ? 'text' : 'password'
+}
 
-  const isIcon = computed((): boolean => {
-    return props.clear ? (props.showPassword ? true : false) : true
-  })
+const isIcon = computed((): boolean => {
+  return props.clear ? (props.showPassword ? true : false) : true
+})
 
-  const rightIcon = computed((): string => {
-    return isIcon.value
-      ? isPass.value
-        ? 'tyh-ui-browse'
-        : 'tyh-ui-eye-close'
-      : 'tyh-ui-guanbi'
-  })
+const rightIcon = computed((): string => {
+  return isIcon.value
+    ? isPass.value
+      ? 'tyh-ui-browse'
+      : 'tyh-ui-eye-close'
+    : 'tyh-ui-guanbi'
+})
 
-  const rightIconClick = (): void => {
-    isIcon.value ? showPasswordClick() : clearText()
-  }
-
-  return {
-    input,
-    isClass,
-    inputType,
-    rightIcon,
-    rightIconClick
-  }
+const rightIconClick = (): void => {
+  isIcon.value ? showPasswordClick() : clearText()
 }
 </script>

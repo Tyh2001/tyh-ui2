@@ -14,21 +14,15 @@ import { crumbsItemProps } from './props.ts'
 
 const props = defineProps(crumbsItemProps)
 
-const { icon, link } = TyhCrumbsItem()
-
-function TyhCrumbsItem() {
-  const icon = ref<string | undefined>('')
-  const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
-  icon.value = inject('Crumbs-separator')
-  const link = (): void => {
-    if (!props.to) return
-    try {
-      proxy.$router.push(props.to)
-    } catch (e: any) {
-      console.log(e)
-    }
+const icon = ref<string | undefined>('')
+const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
+icon.value = inject('Crumbs-separator')
+const link = (): void => {
+  if (!props.to) return
+  try {
+    proxy.$router.push(props.to)
+  } catch (e: any) {
+    console.log(e)
   }
-
-  return { icon, link }
 }
 </script>

@@ -28,57 +28,51 @@ import {
 import { notificationProps } from './props.ts'
 
 const props = defineProps(notificationProps)
-const { isShow, onClose, leave, iconClass } = TyhNotification()
-
-function TyhNotification() {
-  const isShow = ref<boolean>(true)
-  let timer: any
-  ;(function (): void {
-    if (props.time > 0) {
-      timer = setTimeout(() => {
-        onClose()
-      }, props.time)
-    }
-  })()
-
-  const onClose = (): void => {
-    clearTimeout(timer)
-    isShow.value = false
+const isShow = ref<boolean>(true)
+let timer: any
+;(function (): void {
+  if (props.time > 0) {
+    timer = setTimeout(() => {
+      onClose()
+    }, props.time)
   }
+})()
 
-  const isIcon = computed((): string => {
-    let icon: string = ''
-    switch (props.type) {
-      case 'primary':
-        icon = 'tyh-ui-smile'
-        break
-      case 'success':
-        icon = 'tyh-ui-success-filling'
-        break
-      case 'danger':
-        icon = 'tyh-ui-error'
-        break
-      case 'warning':
-        icon = 'tyh-ui-warning-filling'
-        break
-    }
-    return icon
-  })
+const onClose = (): void => {
+  clearTimeout(timer)
+  isShow.value = false
+}
 
-  const iconClass = computed((): string[] => {
-    return [
-      'tyh-icon',
-      'tyh-notification-icon',
-      isIcon.value,
-      `tyh-notification-icon-${props.type}`
-    ]
-  })
-
-  const instance = getCurrentInstance() as ComponentInternalInstance
-  const leave = (): void => {
-    instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
+const isIcon = computed((): string => {
+  let icon: string = ''
+  switch (props.type) {
+    case 'primary':
+      icon = 'tyh-ui-smile'
+      break
+    case 'success':
+      icon = 'tyh-ui-success-filling'
+      break
+    case 'danger':
+      icon = 'tyh-ui-error'
+      break
+    case 'warning':
+      icon = 'tyh-ui-warning-filling'
+      break
   }
+  return icon
+})
 
-  return { isShow, onClose, leave, iconClass }
+const iconClass = computed((): string[] => {
+  return [
+    'tyh-icon',
+    'tyh-notification-icon',
+    isIcon.value,
+    `tyh-notification-icon-${props.type}`
+  ]
+})
+
+const instance = getCurrentInstance() as ComponentInternalInstance
+const leave = (): void => {
+  instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
 }
 </script>

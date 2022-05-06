@@ -14,6 +14,7 @@ const props = defineProps({
 } as const)
 
 const { isClass } = TyhContainer()
+
 function TyhContainer() {
   const slots = useSlots()
   const isMode = computed((): boolean => {
