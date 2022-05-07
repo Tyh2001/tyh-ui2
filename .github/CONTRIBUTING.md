@@ -16,14 +16,14 @@ Start the project first
 - `git clone xxxxx`
 - `cd tyh-ui`
 - `pnpm i`
-- `pnpm run dev:docs`
+- `pnpm dev:docs`
 
 ## Command description
 
-- `pnpm run dev:demo` Start the test project to test the components
-- `pnpm run dev:docs` Start document project
-- `pnpm run build:docs` Document packaging project
-- `pnpm run build:style` Packaging style sheet
+- `pnpm dev:demo` Start the test project to test the components
+- `pnpm dev:docs` Start document project
+- `pnpm build:docs` Document packaging project
+- `pnpm build:style` Packaging style sheet
 
 ## Commit specification
 

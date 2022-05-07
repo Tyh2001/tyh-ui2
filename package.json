@@ -5,6 +5,7 @@
   },
   "scripts": {
     "dev:docs": "pnpm run -C packages/docs dev",
+    "build:docs": "vite build packages/docs ",
     "dev:demo": "pnpm run -C packages/demo dev",
     "build:style": "vite build packages/style",
     "preinstall": "node ./scripts/preinstall.js",

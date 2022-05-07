@@ -16,14 +16,14 @@
 - `git clone xxxxx`
 - `cd tyh-ui`
 - `pnpm i`
-- `pnpm run dev:docs`
+- `pnpm dev:docs`
 
 ## 命令说明
 
-- `pnpm run dev:demo` 启动测试项目，用于测试组件
-- `pnpm run dev:docs` 启动文档项目
-- `pnpm run build:docs` 打包文档项目
-- `pnpm run build:style` 打包样式表
+- `pnpm dev:demo` 启动测试项目，用于测试组件
+- `pnpm dev:docs` 启动文档项目
+- `pnpm build:docs` 打包文档项目
+- `pnpm build:style` 打包样式表
 
 ## 提交说明规范
 
