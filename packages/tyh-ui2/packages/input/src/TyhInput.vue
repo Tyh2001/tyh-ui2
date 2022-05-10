@@ -49,7 +49,9 @@ const emit = defineEmits([
 const inputType = ref<string>(props.type)
 const isPass = ref<boolean>(false)
 
-const input = (e: any): void => emit('update:modelValue', e.target.value)
+const input = (e: Event): void => {
+  emit('update:modelValue', (e.target as HTMLInputElement).value)
+}
 
 const clearText = (): void => {
   if (props.disabled) return
