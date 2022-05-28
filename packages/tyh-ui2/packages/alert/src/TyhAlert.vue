@@ -9,22 +9,22 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { alertProps } from './props.ts'
+  import { computed } from 'vue'
+  import { alertProps } from './props.ts'
 
-const props = defineProps(alertProps)
-const emit = defineEmits(['close'])
+  const props = defineProps(alertProps)
+  const emit = defineEmits(['close'])
 
-const isClass = computed((): (string | object)[] => {
-  return [
-    'tyh-alert',
-    `tyh-alert-${props.type}`,
-    {
-      'tyh-alert-center': props.center,
-      [`tyh-alert-bac-${props.type}`]: !props.simple
-    }
-  ]
-})
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-alert',
+      `tyh-alert-${props.type}`,
+      {
+        'tyh-alert-center': props.center,
+        [`tyh-alert-bac-${props.type}`]: !props.simple
+      }
+    ]
+  })
 
-const close = (): void => emit('close')
+  const close = (): void => emit('close')
 </script>

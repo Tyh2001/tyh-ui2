@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import imageMd from '@/docs/image/image.md'
+  import imageMd from '@/docs/image/image.md'
 </script>

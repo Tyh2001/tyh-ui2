@@ -6,6 +6,6 @@
 </template>
 
 <script lang="ts" setup>
-import { optionProps } from './props.ts'
-defineProps(optionProps)
+  import { optionProps } from './props.ts'
+  defineProps(optionProps)
 </script>

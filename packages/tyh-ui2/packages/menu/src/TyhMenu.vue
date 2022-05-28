@@ -13,28 +13,30 @@
 </template>
 
 <script lang="ts" setup>
-import { computed, provide } from 'vue'
-import { menuProps } from './props.ts'
+  import { computed, provide } from 'vue'
+  import { menuProps } from './props.ts'
 
-const props = defineProps(menuProps)
-provide('theme', props.theme)
-provide('mode', props.mode)
-provide('textColor', props.textColor)
+  const props = defineProps(menuProps)
+  provide('theme', props.theme)
+  provide('mode', props.mode)
+  provide('textColor', props.textColor)
 
-const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
+  const isFlex = computed(() => props.mode === 'horizontal' && 'tyh-menu-flex')
 
-const isClass = computed(() => {
-  return [
-    'tyh-menu',
-    isFlex.value,
-    {
-      'tyh-menu-shadow': props.shadow,
-      [`tyh-menu-${props.theme}`]: props.theme
-    }
-  ]
-})
+  const isClass = computed(() => {
+    return [
+      'tyh-menu',
+      isFlex.value,
+      {
+        'tyh-menu-shadow': props.shadow,
+        [`tyh-menu-${props.theme}`]: props.theme
+      }
+    ]
+  })
 
-const isCollapseClass = computed(() => {
-  return [{ 'tyh-menu-collapse': props.collapse && props.mode === 'vertical' }]
-})
+  const isCollapseClass = computed(() => {
+    return [
+      { 'tyh-menu-collapse': props.collapse && props.mode === 'vertical' }
+    ]
+  })
 </script>

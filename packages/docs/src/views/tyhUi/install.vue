@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import installMd from '@/docs/install/install.md'
+  import installMd from '@/docs/install/install.md'
 </script>

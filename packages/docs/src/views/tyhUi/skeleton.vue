@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import skeletonMd from '@/docs/skeleton/skeleton.md'
+  import skeletonMd from '@/docs/skeleton/skeleton.md'
 </script>

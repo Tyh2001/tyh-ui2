@@ -36,83 +36,83 @@
 </template>
 
 <script setup>
-import Sidebar from '@/components/Sidebar.vue'
-import { useRoute } from 'vue-router'
-import { ref, watch } from 'vue'
-const { highLightStyle, drawer, layoutList } = layoutOptions()
-function layoutOptions() {
-  const layoutList = [
-    { title: '首页', url: '/' },
-    { title: '组件', url: '/component' },
-    { title: '关于', url: '/about' }
-  ]
-  const route = useRoute()
-  const highLightStyle = url => {
-    const path = route.path
-    if (path === '/') return { color: url === path ? '#3a6ff4' : '#000' }
-    const res = path.match(/\/[a-zA-Z]+/gi)[0]
-    return { color: url === res ? '#3a6ff4' : '#000' }
-  }
-  const drawer = ref(false)
-  watch(
-    () => route.path,
-    () => {
-      drawer.value = false
+  import Sidebar from '@/components/Sidebar.vue'
+  import { useRoute } from 'vue-router'
+  import { ref, watch } from 'vue'
+  const { highLightStyle, drawer, layoutList } = layoutOptions()
+  function layoutOptions() {
+    const layoutList = [
+      { title: '首页', url: '/' },
+      { title: '组件', url: '/component' },
+      { title: '关于', url: '/about' }
+    ]
+    const route = useRoute()
+    const highLightStyle = (url) => {
+      const path = route.path
+      if (path === '/') return { color: url === path ? '#3a6ff4' : '#000' }
+      const res = path.match(/\/[a-zA-Z]+/gi)[0]
+      return { color: url === res ? '#3a6ff4' : '#000' }
     }
-  )
-  return { highLightStyle, drawer, layoutList }
-}
+    const drawer = ref(false)
+    watch(
+      () => route.path,
+      () => {
+        drawer.value = false
+      }
+    )
+    return { highLightStyle, drawer, layoutList }
+  }
 </script>
 
 <style scoped>
-.tyh-menu {
-  position: fixed;
-  top: 0px;
-  right: 0px;
-  left: 0px;
-  z-index: 20;
-  display: flex;
-}
-.tyh-menu .logoLink {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.tyh-menu .logoLink .logo {
-  height: 36px;
-  width: 36px;
-}
-.tyh-menu .logoLink .name {
-  font-size: 20px;
-  color: #6c63ff;
-  font-weight: 600;
-  margin-left: 10px;
-}
-#content {
-  margin-top: 120px;
-}
-@media screen and (min-width: 700px) {
-  .tyh-ui-menu {
-    display: none;
-  }
-  .menu-list {
+  .tyh-menu {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    z-index: 20;
     display: flex;
   }
-}
-@media screen and (max-width: 700px) {
-  .tyh-ui-menu {
-    display: block;
+  .tyh-menu .logoLink {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
   }
-  .menu-list {
-    display: none;
+  .tyh-menu .logoLink .logo {
+    height: 36px;
+    width: 36px;
   }
-}
+  .tyh-menu .logoLink .name {
+    font-size: 20px;
+    color: #6c63ff;
+    font-weight: 600;
+    margin-left: 10px;
+  }
+  #content {
+    margin-top: 120px;
+  }
+  @media screen and (min-width: 700px) {
+    .tyh-ui-menu {
+      display: none;
+    }
+    .menu-list {
+      display: flex;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    .tyh-ui-menu {
+      display: block;
+    }
+    .menu-list {
+      display: none;
+    }
+  }
 </style>
 
 <style>
-.tyh-drawer {
-  overflow-x: hidden !important;
-  overflow-y: auto !important;
-}
+  .tyh-drawer {
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+  }
 </style>

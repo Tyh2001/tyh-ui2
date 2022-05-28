@@ -24,15 +24,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { treeProps } from './props.ts'
+  import { ref } from 'vue'
+  import { treeProps } from './props.ts'
 
-defineProps(treeProps)
-const isClose = ref<boolean>(false)
+  defineProps(treeProps)
+  const isClose = ref<boolean>(false)
 
-const onOpen = (item: any): void => {
-  if (item.children && item.children.length) {
-    isClose.value = !isClose.value
+  const onOpen = (item: any): void => {
+    if (item.children && item.children.length) {
+      isClose.value = !isClose.value
+    }
   }
-}
 </script>

@@ -10,9 +10,9 @@
 </template>
 
 <script setup>
-import calendarA from '@/docs/calendar/calendarA.md'
-import calendarB from '@/docs/calendar/calendarB.md'
-import calendarC from '@/docs/calendar/calendarC.md'
-import { ref } from 'vue'
-const value = ref(new Date())
+  import calendarA from '@/docs/calendar/calendarA.md'
+  import calendarB from '@/docs/calendar/calendarB.md'
+  import calendarC from '@/docs/calendar/calendarC.md'
+  import { ref } from 'vue'
+  const value = ref(new Date())
 </script>

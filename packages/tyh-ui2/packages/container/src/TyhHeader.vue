@@ -3,14 +3,14 @@
 </template>
 
 <script lang="ts">
-export default { name: 'TyhHeader' }
+  export default { name: 'TyhHeader' }
 </script>
 
 <script lang="ts" setup>
-defineProps({
-  height: {
-    type: String,
-    default: () => '60px'
-  }
-} as const)
+  defineProps({
+    height: {
+      type: String,
+      default: () => '60px'
+    }
+  } as const)
 </script>

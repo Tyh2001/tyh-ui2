@@ -5,9 +5,9 @@
 </template>
 
 <script lang="ts" setup>
-import { provide } from 'vue'
-import { collapseProps } from './props.ts'
+  import { provide } from 'vue'
+  import { collapseProps } from './props.ts'
 
-const props = defineProps(collapseProps)
-provide('modelValue', props.modelValue)
+  const props = defineProps(collapseProps)
+  provide('modelValue', props.modelValue)
 </script>

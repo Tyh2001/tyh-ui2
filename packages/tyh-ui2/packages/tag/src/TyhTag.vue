@@ -6,20 +6,20 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { tagProps } from './props.ts'
+  import { computed } from 'vue'
+  import { tagProps } from './props.ts'
 
-const props = defineProps(tagProps)
-const emit = defineEmits(['close'])
+  const props = defineProps(tagProps)
+  const emit = defineEmits(['close'])
 
-const isClass = computed((): (string | object)[] => {
-  return [
-    'tyh-tag',
-    `tyh-tag-${props.type}`,
-    {
-      [`tyh-tag-${props.size}`]: props.size,
-      'tyh-tag-round': props.round
-    }
-  ]
-})
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-tag',
+      `tyh-tag-${props.type}`,
+      {
+        [`tyh-tag-${props.size}`]: props.size,
+        'tyh-tag-round': props.round
+      }
+    ]
+  })
 </script>

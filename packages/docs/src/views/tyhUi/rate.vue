@@ -17,12 +17,12 @@
 </template>
 
 <script setup>
-import rateA from '@/docs/rate/rateA.md'
-import rateB from '@/docs/rate/rateB.md'
-import rateC from '@/docs/rate/rateC.md'
-import rateD from '@/docs/rate/rateD.md'
-import { ref } from 'vue'
-const value1 = ref(2)
-const value2 = ref(2)
-const value3 = ref(2)
+  import rateA from '@/docs/rate/rateA.md'
+  import rateB from '@/docs/rate/rateB.md'
+  import rateC from '@/docs/rate/rateC.md'
+  import rateD from '@/docs/rate/rateD.md'
+  import { ref } from 'vue'
+  const value1 = ref(2)
+  const value2 = ref(2)
+  const value3 = ref(2)
 </script>

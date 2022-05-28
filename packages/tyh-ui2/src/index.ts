@@ -92,7 +92,7 @@ const components: object[] = [
 ]
 
 const install = (app: any) => {
-  components.forEach(component => {
+  components.forEach((component) => {
     app.use(component)
   })
 }

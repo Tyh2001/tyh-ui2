@@ -23,49 +23,49 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, watch, computed } from 'vue'
-import { rateProps } from './props.ts'
+  import { ref, watch, computed } from 'vue'
+  import { rateProps } from './props.ts'
 
-const props = defineProps(rateProps)
-const emit = defineEmits(['update:modelValue', 'change'])
+  const props = defineProps(rateProps)
+  const emit = defineEmits(['update:modelValue', 'change'])
 
-const width = ref<number | undefined>(props.modelValue)
-watch(
-  () => props.modelValue,
-  v => (width.value = v)
-)
-const upDataValue = (): void => {
-  emit('update:modelValue', width.value)
-  if (width.value !== props.modelValue) emit('change')
-}
-const showSayFn = computed((): string | void | null => {
-  if (!props.showText) return
-  const showSay = ref<null | string>(null)
+  const width = ref<number | undefined>(props.modelValue)
   watch(
-    () => width.value,
-    (): void => {
-      switch (width.value) {
-        case 1:
-          showSay.value = props.sayText[0]
-          break
-        case 2:
-          showSay.value = props.sayText[1]
-          break
-        case 3:
-          showSay.value = props.sayText[2]
-          break
-        case 4:
-          showSay.value = props.sayText[3]
-          break
-        case 5:
-          showSay.value = props.sayText[4]
-          break
-        default:
-          showSay.value = ''
-      }
-    },
-    { immediate: true }
+    () => props.modelValue,
+    (v) => (width.value = v)
   )
-  return showSay.value
-})
+  const upDataValue = (): void => {
+    emit('update:modelValue', width.value)
+    if (width.value !== props.modelValue) emit('change')
+  }
+  const showSayFn = computed((): string | void | null => {
+    if (!props.showText) return
+    const showSay = ref<null | string>(null)
+    watch(
+      () => width.value,
+      (): void => {
+        switch (width.value) {
+          case 1:
+            showSay.value = props.sayText[0]
+            break
+          case 2:
+            showSay.value = props.sayText[1]
+            break
+          case 3:
+            showSay.value = props.sayText[2]
+            break
+          case 4:
+            showSay.value = props.sayText[3]
+            break
+          case 5:
+            showSay.value = props.sayText[4]
+            break
+          default:
+            showSay.value = ''
+        }
+      },
+      { immediate: true }
+    )
+    return showSay.value
+  })
 </script>

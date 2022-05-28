@@ -23,17 +23,17 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { listProps } from './props.ts'
+  import { computed } from 'vue'
+  import { listProps } from './props.ts'
 
-const props = defineProps(listProps)
-const liClass = computed((): (string | object)[] => {
-  return [
-    'tyh-list-li',
-    {
-      'tyh-list-zebra': props.zebra,
-      'tyh-list-hoverShow': props.hoverShow
-    }
-  ]
-})
+  const props = defineProps(listProps)
+  const liClass = computed((): (string | object)[] => {
+    return [
+      'tyh-list-li',
+      {
+        'tyh-list-zebra': props.zebra,
+        'tyh-list-hoverShow': props.hoverShow
+      }
+    ]
+  })
 </script>

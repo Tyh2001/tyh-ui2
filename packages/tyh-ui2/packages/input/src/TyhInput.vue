@@ -34,61 +34,61 @@
 </template>
 
 <script lang="ts" setup>
-import { ref, computed } from 'vue'
-import { inputProps } from './props.ts'
+  import { ref, computed } from 'vue'
+  import { inputProps } from './props.ts'
 
-const props = defineProps(inputProps)
-const emit = defineEmits([
-  'update:modelValue',
-  'clear',
-  'enter',
-  'onblur',
-  'onfocus'
-])
+  const props = defineProps(inputProps)
+  const emit = defineEmits([
+    'update:modelValue',
+    'clear',
+    'enter',
+    'onblur',
+    'onfocus'
+  ])
 
-const inputType = ref<string>(props.type)
-const isPass = ref<boolean>(false)
+  const inputType = ref<string>(props.type)
+  const isPass = ref<boolean>(false)
 
-const input = (e: Event): void => {
-  emit('update:modelValue', (e.target as HTMLInputElement).value)
-}
+  const input = (e: Event): void => {
+    emit('update:modelValue', (e.target as HTMLInputElement).value)
+  }
 
-const clearText = (): void => {
-  if (props.disabled) return
-  emit('update:modelValue', '')
-  emit('clear')
-}
+  const clearText = (): void => {
+    if (props.disabled) return
+    emit('update:modelValue', '')
+    emit('clear')
+  }
 
-const isClass = computed((): (string | object)[] => {
-  return [
-    'tyh-input-input',
-    `tyh-input-input-${props.size}`,
-    {
-      'tyh-input-icon-padding': props.icon,
-      'tyh-input-clear-padding': props.clear,
-      'tyh-input-disabled': props.disabled
-    }
-  ]
-})
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-input-input',
+      `tyh-input-input-${props.size}`,
+      {
+        'tyh-input-icon-padding': props.icon,
+        'tyh-input-clear-padding': props.clear,
+        'tyh-input-disabled': props.disabled
+      }
+    ]
+  })
 
-const showPasswordClick = (): void => {
-  isPass.value = !isPass.value
-  inputType.value = isPass.value ? 'text' : 'password'
-}
+  const showPasswordClick = (): void => {
+    isPass.value = !isPass.value
+    inputType.value = isPass.value ? 'text' : 'password'
+  }
 
-const isIcon = computed((): boolean => {
-  return props.clear ? (props.showPassword ? true : false) : true
-})
+  const isIcon = computed((): boolean => {
+    return props.clear ? (props.showPassword ? true : false) : true
+  })
 
-const rightIcon = computed((): string => {
-  return isIcon.value
-    ? isPass.value
-      ? 'tyh-ui-browse'
-      : 'tyh-ui-eye-close'
-    : 'tyh-ui-guanbi'
-})
+  const rightIcon = computed((): string => {
+    return isIcon.value
+      ? isPass.value
+        ? 'tyh-ui-browse'
+        : 'tyh-ui-eye-close'
+      : 'tyh-ui-guanbi'
+  })
 
-const rightIconClick = (): void => {
-  isIcon.value ? showPasswordClick() : clearText()
-}
+  const rightIconClick = (): void => {
+    isIcon.value ? showPasswordClick() : clearText()
+  }
 </script>

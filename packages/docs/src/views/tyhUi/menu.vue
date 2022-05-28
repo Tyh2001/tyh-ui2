@@ -45,8 +45,8 @@
 </template>
 
 <script setup>
-import menuA from '@/docs/menu/menuA.md'
-import menuB from '@/docs/menu/menuB.md'
-import { ref } from 'vue'
-const isCollapse = ref(false)
+  import menuA from '@/docs/menu/menuA.md'
+  import menuB from '@/docs/menu/menuB.md'
+  import { ref } from 'vue'
+  const isCollapse = ref(false)
 </script>

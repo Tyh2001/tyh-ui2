@@ -17,12 +17,12 @@
 </template>
 
 <script setup>
-import tagA from '@/docs/tag/tagA.md'
-import tagB from '@/docs/tag/tagB.md'
-import { ref } from 'vue'
-const show1 = ref(true)
-const show2 = ref(true)
-const show3 = ref(true)
-const show4 = ref(true)
-const show5 = ref(true)
+  import tagA from '@/docs/tag/tagA.md'
+  import tagB from '@/docs/tag/tagB.md'
+  import { ref } from 'vue'
+  const show1 = ref(true)
+  const show2 = ref(true)
+  const show3 = ref(true)
+  const show4 = ref(true)
+  const show5 = ref(true)
 </script>

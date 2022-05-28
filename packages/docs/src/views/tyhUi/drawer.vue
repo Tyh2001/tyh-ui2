@@ -28,14 +28,14 @@
 </template>
 
 <script setup>
-import drawerA from '@/docs/drawer/drawerA.md'
-import drawerB from '@/docs/drawer/drawerB.md'
-import drawerC from '@/docs/drawer/drawerC.md'
-import drawerD from '@/docs/drawer/drawerD.md'
-import { ref } from 'vue'
-const radio = ref('right')
-const open = ref(false)
-const open2 = ref(false)
-const open3 = ref(false)
-const open4 = ref(false)
+  import drawerA from '@/docs/drawer/drawerA.md'
+  import drawerB from '@/docs/drawer/drawerB.md'
+  import drawerC from '@/docs/drawer/drawerC.md'
+  import drawerD from '@/docs/drawer/drawerD.md'
+  import { ref } from 'vue'
+  const radio = ref('right')
+  const open = ref(false)
+  const open2 = ref(false)
+  const open3 = ref(false)
+  const open4 = ref(false)
 </script>

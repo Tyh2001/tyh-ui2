@@ -19,15 +19,18 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { textareaProps } from './props.ts'
+  import { computed } from 'vue'
+  import { textareaProps } from './props.ts'
 
-const props = defineProps(textareaProps)
-const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
+  const props = defineProps(textareaProps)
+  const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
 
-const input = (e: any): void => emit('update:modelValue', e.target.value)
+  const input = (e: any): void => emit('update:modelValue', e.target.value)
 
-const isClass = computed((): (string | object)[] => {
-  return ['tyh-textarea-textarea', { 'tyh-textarea-disabled': props.disabled }]
-})
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-textarea-textarea',
+      { 'tyh-textarea-disabled': props.disabled }
+    ]
+  })
 </script>

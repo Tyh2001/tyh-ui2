@@ -18,40 +18,40 @@
 </template>
 
 <script lang="ts" setup>
-import {
-  getCurrentInstance,
-  ref,
-  computed,
-  ComponentInternalInstance
-} from 'vue'
-import { messageProps } from './props.ts'
+  import {
+    getCurrentInstance,
+    ref,
+    computed,
+    ComponentInternalInstance
+  } from 'vue'
+  import { messageProps } from './props.ts'
 
-const props = defineProps(messageProps)
-const isShow = ref<boolean>(true)
-let timer: any
-;(function (): void {
-  if (props.time > 0) {
-    timer = setTimeout(() => {
-      close()
-    }, props.time)
+  const props = defineProps(messageProps)
+  const isShow = ref<boolean>(true)
+  let timer: any
+  ;(function (): void {
+    if (props.time > 0) {
+      timer = setTimeout(() => {
+        close()
+      }, props.time)
+    }
+  })()
+
+  const close = (): void => {
+    clearTimeout(timer)
+    isShow.value = false
   }
-})()
 
-const close = (): void => {
-  clearTimeout(timer)
-  isShow.value = false
-}
+  const instance = getCurrentInstance() as ComponentInternalInstance
+  const leave = (): void => {
+    instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
+  }
 
-const instance = getCurrentInstance() as ComponentInternalInstance
-const leave = (): void => {
-  instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
-}
-
-const isClass = computed((): (string | object)[] => {
-  return [
-    'tyh-message',
-    `tyh-message-${props.type}`,
-    { 'tyh-message-round': props.round }
-  ]
-})
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-message',
+      `tyh-message-${props.type}`,
+      { 'tyh-message-round': props.round }
+    ]
+  })
 </script>

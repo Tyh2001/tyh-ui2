@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import cardMd from '@/docs/card/card.md'
+  import cardMd from '@/docs/card/card.md'
 </script>

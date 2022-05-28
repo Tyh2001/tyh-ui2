@@ -21,24 +21,24 @@
 </template>
 
 <script setup>
-import inputA from '@/docs/input/inputA.md'
-import inputB from '@/docs/input/inputB.md'
-import inputC from '@/docs/input/inputC.md'
-import inputD from '@/docs/input/inputD.md'
-import inputE from '@/docs/input/inputE.md'
-import inputF from '@/docs/input/inputF.md'
-import inputG from '@/docs/input/inputG.md'
-import inputH from '@/docs/input/inputH.md'
-import { ref } from 'vue'
-const text1 = ref('')
-const text2 = ref('')
-const text3 = ref('')
-const text4 = ref('')
-const text5 = ref('')
-const text6 = ref('')
-const text7 = ref('')
-const text8 = ref('')
-const text9 = ref('')
-const text10 = ref('')
-const text11 = ref('')
+  import inputA from '@/docs/input/inputA.md'
+  import inputB from '@/docs/input/inputB.md'
+  import inputC from '@/docs/input/inputC.md'
+  import inputD from '@/docs/input/inputD.md'
+  import inputE from '@/docs/input/inputE.md'
+  import inputF from '@/docs/input/inputF.md'
+  import inputG from '@/docs/input/inputG.md'
+  import inputH from '@/docs/input/inputH.md'
+  import { ref } from 'vue'
+  const text1 = ref('')
+  const text2 = ref('')
+  const text3 = ref('')
+  const text4 = ref('')
+  const text5 = ref('')
+  const text6 = ref('')
+  const text7 = ref('')
+  const text8 = ref('')
+  const text9 = ref('')
+  const text10 = ref('')
+  const text11 = ref('')
 </script>

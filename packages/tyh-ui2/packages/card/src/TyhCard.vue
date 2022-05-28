@@ -13,6 +13,6 @@
 </template>
 
 <script lang="ts" setup>
-import { cardProps } from './props.ts'
-defineProps(cardProps)
+  import { cardProps } from './props.ts'
+  defineProps(cardProps)
 </script>
