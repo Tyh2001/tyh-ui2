@@ -19,15 +19,15 @@
 </template>
 
 <script lang="ts" setup>
-import { ref } from 'vue'
-import { imageProps } from './props.ts'
+  import { ref } from 'vue'
+  import { imageProps } from './props.ts'
 
-defineProps(imageProps)
-const emit = defineEmits(['error', 'load'])
+  defineProps(imageProps)
+  const emit = defineEmits(['error', 'load'])
 
-const isError = ref<boolean>(false)
-const onError = (): void => {
-  emit('error')
-  isError.value = true
-}
+  const isError = ref<boolean>(false)
+  const onError = (): void => {
+    emit('error')
+    isError.value = true
+  }
 </script>

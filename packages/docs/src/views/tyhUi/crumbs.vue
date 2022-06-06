@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import crumbsMd from '@/docs/crumbs/crumbs.md'
+  import crumbsMd from '@/docs/crumbs/crumbs.md'
 </script>

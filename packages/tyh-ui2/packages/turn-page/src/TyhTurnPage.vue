@@ -3,9 +3,9 @@
 </template>
 
 <script lang="ts" setup>
-import { provide } from 'vue'
-import { turnPageProps } from './props.ts'
-const props = defineProps(turnPageProps)
+  import { provide } from 'vue'
+  import { turnPageProps } from './props.ts'
+  const props = defineProps(turnPageProps)
 
-provide('is-center', props.center)
+  provide('is-center', props.center)
 </script>

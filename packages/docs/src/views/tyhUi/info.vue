@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import infoMd from '@/docs/info/info.md'
+  import infoMd from '@/docs/info/info.md'
 </script>

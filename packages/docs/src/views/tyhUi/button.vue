@@ -3,5 +3,5 @@
 </template>
 
 <script setup>
-import buttonMd from '@/docs/button/button.md'
+  import buttonMd from '@/docs/button/button.md'
 </script>

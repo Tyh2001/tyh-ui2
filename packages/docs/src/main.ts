@@ -20,7 +20,7 @@ import './style/global.scss'
 createApp(App)
   .use(router)
   .use(tyhUi2)
-  .use(app => {
+  .use((app) => {
     app.directive('high', {
       mounted(el) {
         const blocks = el.querySelectorAll('pre code')

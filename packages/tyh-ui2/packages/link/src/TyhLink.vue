@@ -11,15 +11,15 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { linkProps } from './props.ts'
+  import { computed } from 'vue'
+  import { linkProps } from './props.ts'
 
-const props = defineProps(linkProps)
-const isClass = computed((): (string | object)[] => {
-  return [
-    'tyh-link',
-    `tyh-link-${props.type}`,
-    { 'tyh-link-prohibit': props.prohibit }
-  ]
-})
+  const props = defineProps(linkProps)
+  const isClass = computed((): (string | object)[] => {
+    return [
+      'tyh-link',
+      `tyh-link-${props.type}`,
+      { 'tyh-link-prohibit': props.prohibit }
+    ]
+  })
 </script>

@@ -14,7 +14,7 @@
 </template>
 
 <script setup>
-import avatarA from '@/docs/avatar/avatarA.md'
-import avatarB from '@/docs/avatar/avatarB.md'
-const fits = ['fill', 'contain', 'cover', 'none', 'scale-down']
+  import avatarA from '@/docs/avatar/avatarA.md'
+  import avatarB from '@/docs/avatar/avatarB.md'
+  const fits = ['fill', 'contain', 'cover', 'none', 'scale-down']
 </script>

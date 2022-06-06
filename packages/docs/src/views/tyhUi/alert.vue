@@ -38,12 +38,12 @@
 </template>
 
 <script setup>
-import alertA from '@/docs/alert/alertA.md'
-import alertB from '@/docs/alert/alertB.md'
-import { ref } from 'vue'
-const isShow1 = ref(true)
-const isShow2 = ref(true)
-const isShow3 = ref(true)
-const isShow4 = ref(true)
-const isShow5 = ref(true)
+  import alertA from '@/docs/alert/alertA.md'
+  import alertB from '@/docs/alert/alertB.md'
+  import { ref } from 'vue'
+  const isShow1 = ref(true)
+  const isShow2 = ref(true)
+  const isShow3 = ref(true)
+  const isShow4 = ref(true)
+  const isShow5 = ref(true)
 </script>

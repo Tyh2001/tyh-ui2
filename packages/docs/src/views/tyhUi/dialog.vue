@@ -32,13 +32,13 @@
 </template>
 
 <script setup>
-import dialogA from '@/docs/dialog/dialogA.md'
-import dialogB from '@/docs/dialog/dialogB.md'
-import dialogC from '@/docs/dialog/dialogC.md'
-import dialogD from '@/docs/dialog/dialogD.md'
-import { ref } from 'vue'
-const open1 = ref(false)
-const open2 = ref(false)
-const open3 = ref(false)
-const open4 = ref(false)
+  import dialogA from '@/docs/dialog/dialogA.md'
+  import dialogB from '@/docs/dialog/dialogB.md'
+  import dialogC from '@/docs/dialog/dialogC.md'
+  import dialogD from '@/docs/dialog/dialogD.md'
+  import { ref } from 'vue'
+  const open1 = ref(false)
+  const open2 = ref(false)
+  const open3 = ref(false)
+  const open4 = ref(false)
 </script>
