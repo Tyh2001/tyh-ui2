@@ -56,7 +56,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { tableProps } from './props.ts'
+  import { tableProps } from './props'
 
   const props = defineProps(tableProps)
   const importantStyle = (i: number): string | void => {

@@ -9,7 +9,7 @@
 </template>
 
 <script lang="ts" setup>
-  import { pageHeaderProps } from './props.ts'
+  import { pageHeaderProps } from './props'
   defineProps(pageHeaderProps)
   const emits = defineEmits(['back'])
 </script>

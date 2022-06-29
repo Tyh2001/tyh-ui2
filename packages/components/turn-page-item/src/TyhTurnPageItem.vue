@@ -22,7 +22,7 @@
 
 <script lang="ts" setup>
   import { getCurrentInstance, inject, ComponentInternalInstance } from 'vue'
-  import { turnPageItemProps } from './props.ts'
+  import { turnPageItemProps } from './props'
 
   const props = defineProps(turnPageItemProps)
   const isCenter: unknown = inject('is-center')

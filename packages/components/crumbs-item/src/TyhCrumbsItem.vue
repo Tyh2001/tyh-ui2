@@ -15,7 +15,7 @@
     ComponentInternalInstance,
     getCurrentInstance
   } from 'vue'
-  import { crumbsItemProps } from './props.ts'
+  import { crumbsItemProps } from './props'
 
   const props = defineProps(crumbsItemProps)
 

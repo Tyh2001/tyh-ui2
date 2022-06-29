@@ -33,7 +33,7 @@
 
 <script lang="ts" setup>
   import { getCurrentInstance, watch, ComponentInternalInstance } from 'vue'
-  import { dialogProps } from './props.ts'
+  import { dialogProps } from './props'
 
   const props = defineProps(dialogProps)
   const emit = defineEmits([

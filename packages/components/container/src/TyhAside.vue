@@ -1,5 +1,7 @@
 <template>
-  <aside class="tyh-aside" :style="{ width }"><slot /></aside>
+  <aside class="tyh-aside" :style="{ width }">
+    <slot />
+  </aside>
 </template>
 
 <script lang="ts">

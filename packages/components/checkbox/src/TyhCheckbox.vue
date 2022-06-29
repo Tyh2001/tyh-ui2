@@ -12,7 +12,7 @@
 
 <script lang="ts" setup>
   import { ref } from 'vue'
-  import { checkboxProps } from './props.ts'
+  import { checkboxProps } from './props'
 
   const props = defineProps(checkboxProps)
   const emit = defineEmits(['update:modelValue'])

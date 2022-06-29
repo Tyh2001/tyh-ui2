@@ -1,5 +1,7 @@
 <template>
-  <section :class="isClass"><slot /></section>
+  <section :class="isClass">
+    <slot />
+  </section>
 </template>
 
 <script lang="ts" setup>

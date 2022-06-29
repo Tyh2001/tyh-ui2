@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
   import { computed, inject } from 'vue'
-  import { collapseItemProps } from './props.ts'
+  import { collapseItemProps } from './props'
 
   const props = defineProps(collapseItemProps)
   const emit = defineEmits(['onChange'])

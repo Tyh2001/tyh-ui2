@@ -12,6 +12,6 @@
 </template>
 
 <script lang="ts" setup>
-  import { skeletonProps } from './props.ts'
+  import { skeletonProps } from './props'
   defineProps(skeletonProps)
 </script>

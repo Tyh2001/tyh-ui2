@@ -11,7 +11,7 @@
 
 <script lang="ts" setup>
   import { ref, onMounted } from 'vue'
-  import { backTopProps } from './props.ts'
+  import { backTopProps } from './props'
 
   const props = defineProps(backTopProps)
 

@@ -59,7 +59,7 @@
 
 <script lang="ts" setup>
   import { ref, computed } from 'vue'
-  import { calendarProps } from './props.ts'
+  import { calendarProps } from './props'
 
   const props = defineProps(calendarProps)
 
@@ -109,7 +109,7 @@
     return ['一', '二', '三', '四', '五', '六', '日'][num - 1]
   }
 
-  const nowDateStyle = (date: number) => {
+  const nowDateStyle = (date: number): object[] | void => {
     if (date + 1 === props.modelValue.getDate()) {
       return [
         {

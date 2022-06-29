@@ -27,6 +27,6 @@
 </template>
 
 <script lang="ts" setup>
-  import { infoProps } from './props.ts'
+  import { infoProps } from './props'
   defineProps(infoProps)
 </script>

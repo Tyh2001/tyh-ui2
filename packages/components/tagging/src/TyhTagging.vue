@@ -1,10 +1,12 @@
 <template>
-  <span :class="isClass" :style="isStyle"><slot /></span>
+  <span :class="isClass" :style="isStyle">
+    <slot />
+  </span>
 </template>
 
 <script lang="ts" setup>
   import { computed } from 'vue'
-  import { taggingProps } from './props.ts'
+  import { taggingProps } from './props'
 
   const props = defineProps(taggingProps)
 

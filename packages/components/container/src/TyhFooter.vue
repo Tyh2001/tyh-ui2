@@ -1,5 +1,7 @@
 <template>
-  <footer class="tyh-footer" :style="{ height }"><slot /></footer>
+  <footer class="tyh-footer" :style="{ height }">
+    <slot />
+  </footer>
 </template>
 
 <script lang="ts">

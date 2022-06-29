@@ -25,7 +25,7 @@
     computed,
     ComponentInternalInstance
   } from 'vue'
-  import { notificationProps } from './props.ts'
+  import { notificationProps } from './props'
 
   const props = defineProps(notificationProps)
   const isShow = ref<boolean>(true)

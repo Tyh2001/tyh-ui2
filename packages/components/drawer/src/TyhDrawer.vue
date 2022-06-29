@@ -38,7 +38,7 @@
     watch,
     ComponentInternalInstance
   } from 'vue'
-  import { drawerProps } from './props.ts'
+  import { drawerProps } from './props'
 
   const props = defineProps(drawerProps)
   const emit = defineEmits([

@@ -24,7 +24,7 @@
     computed,
     ComponentInternalInstance
   } from 'vue'
-  import { messageProps } from './props.ts'
+  import { messageProps } from './props'
 
   const props = defineProps(messageProps)
   const isShow = ref<boolean>(true)

@@ -1,5 +1,7 @@
 <template>
-  <main class="tyh-main"><slot /></main>
+  <main class="tyh-main">
+    <slot />
+  </main>
 </template>
 
 <script lang="ts">

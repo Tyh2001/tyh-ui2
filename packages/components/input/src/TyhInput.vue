@@ -35,7 +35,7 @@
 
 <script lang="ts" setup>
   import { ref, computed } from 'vue'
-  import { inputProps } from './props.ts'
+  import { inputProps } from './props'
 
   const props = defineProps(inputProps)
   const emit = defineEmits([

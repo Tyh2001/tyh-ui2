@@ -25,7 +25,7 @@
 
 <script lang="ts" setup>
   import { ref } from 'vue'
-  import { treeProps } from './props.ts'
+  import { treeProps } from './props'
 
   defineProps(treeProps)
   const isClose = ref<boolean>(false)

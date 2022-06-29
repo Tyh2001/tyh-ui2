@@ -6,7 +6,7 @@
 
 <script lang="ts" setup>
   import { provide } from 'vue'
-  import { collapseProps } from './props.ts'
+  import { collapseProps } from './props'
 
   const props = defineProps(collapseProps)
   provide('modelValue', props.modelValue)

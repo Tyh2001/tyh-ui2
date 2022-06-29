@@ -20,7 +20,7 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue'
-  import { textareaProps } from './props.ts'
+  import { textareaProps } from './props'
 
   const props = defineProps(textareaProps)
   const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
