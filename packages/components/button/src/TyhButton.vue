@@ -11,8 +11,8 @@
 
 <script lang="ts" setup>
   import { computed } from 'vue'
-  import { buttonProps } from './props.ts'
-  import { THEME } from '../../../utils/theme.ts'
+  import { buttonProps } from './props'
+  import { THEME } from '@tyh-ui/utils'
 
   const props = defineProps(buttonProps)
 
