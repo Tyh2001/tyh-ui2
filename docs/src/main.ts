@@ -4,8 +4,7 @@ import router from './router'
 
 // https://github.com/Tyh2001/tyh-ui
 import tyhUi2 from './tyhUi'
-import '@tyh-ui/tyh-ui2/style/index.css' // 线上
-// import '@tyh-ui/style/index.ts' // 测试
+import '@tyh-ui2/style'
 
 // https://github.com/Tyh2001/bright-code
 import brightCode from 'bright-code'

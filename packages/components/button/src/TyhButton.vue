@@ -12,7 +12,7 @@
 <script lang="ts" setup>
   import { computed } from 'vue'
   import { buttonProps } from './props'
-  import { THEME } from '@tyh-ui/utils'
+  import { THEME } from '@tyh-ui2/utils'
 
   const props = defineProps(buttonProps)
 

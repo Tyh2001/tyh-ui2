@@ -5,9 +5,9 @@
   },
   "scripts": {
     "dev:docs": "pnpm run -C docs dev",
-    "build:docs": "vite build docs",
-    "build:components": "vite build",
     "dev:start": "pnpm run -C start dev",
+    "build:docs": "vite build docs",
+    "build:components": "vite build --config vite.config.ts",
     "build:style": "vite build --config vite.config.theme.ts",
     "preinstall": "node ./scripts/preinstall.js",
     "lint": "eslint . --ext .vue,.js,.ts,.jsx,.tsx,.md,.json --max-warnings 0 && pretty-quick --check --branch master",
@@ -18,8 +18,9 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@tyh-ui/utils": "workspace:*",
-    "@tyh-ui/style": "workspace:*",
+    "@tyh-ui2/utils": "workspace:*",
+    "@tyh-ui2/style": "workspace:*",
+    "@tyh-ui2/components": "workspace:*",
     "rollup": "^2.70.1",
     "sass": "^1.50.0",
     "vite-plugin-compression": "^0.5.1",

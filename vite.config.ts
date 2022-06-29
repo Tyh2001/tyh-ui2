@@ -20,7 +20,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: resolve(__dirname, 'packages/tyh-ui2'),
-      name: 'tyh-ui2',
+      name: 'tyhUi2',
       formats: ['es'],
       fileName: () => {
         return 'index.js'

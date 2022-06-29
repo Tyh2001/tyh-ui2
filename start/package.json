@@ -3,10 +3,5 @@
   "private": true,
   "scripts": {
     "dev": "vite"
-  },
-  "dependencies": {
-    "element3": "^0.0.40",
-    "@tyh-ui/tyh-ui2": "workspace:*",
-    "@tyh-ui/style": "workspace:*"
   }
 }
