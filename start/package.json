@@ -1,5 +1,5 @@
 {
-  "name": "@tyh-ui/demo",
+  "name": "start",
   "private": true,
   "scripts": {
     "dev": "vite"
