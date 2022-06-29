@@ -21,7 +21,6 @@
     "@tyh-ui2/utils": "workspace:*",
     "@tyh-ui2/style": "workspace:*",
     "@tyh-ui2/components": "workspace:*",
-    "rollup": "^2.70.1",
     "sass": "^1.50.0",
     "vite-plugin-compression": "^0.5.1",
     "vite-plugin-dts": "^1.2.0",

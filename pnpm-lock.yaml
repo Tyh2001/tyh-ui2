@@ -20,7 +20,6 @@ importers:
       lint-staged: ^12.3.5
       prettier: ^2.5.1
       pretty-quick: ^3.1.3
-      rollup: ^2.70.1
       sass: ^1.50.0
       typescript: ^4.5.4
       vite: ^2.8.0
@@ -34,7 +33,6 @@ importers:
       '@tyh-ui2/components': link:packages/components
       '@tyh-ui2/style': link:packages/style
       '@tyh-ui2/utils': link:packages/utils
-      rollup: 2.70.1
       sass: 1.50.0
       vite-plugin-compression: 0.5.1_vite@2.8.6
       vite-plugin-dts: 1.2.0_vite@2.8.6
@@ -3134,6 +3132,7 @@ packages:
     hasBin: true
     optionalDependencies:
       fsevents: 2.3.2
+    dev: true
 
   /run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
