@@ -46,7 +46,23 @@ export const sidebar = {
         { text: 'Image 图片', link: '/components/image' },
         { text: 'Info 信息栏', link: '/components/info' },
         { text: 'Input 输入框', link: '/components/input' },
-        { text: ' Link 链接', link: '/components/link' }
+        { text: 'Link 链接', link: '/components/link' },
+        { text: 'List 列表', link: '/components/list' },
+        { text: 'Menu 导航栏', link: '/components/menu' },
+        { text: 'Message 提示框', link: '/components/message' },
+        { text: 'Notification 通知', link: '/components/notification' },
+        { text: 'PageHeader 页头', link: '/components/page-header' },
+        { text: 'Radio 单选框', link: '/components/radio' },
+        { text: 'Rate 评分', link: '/components/rate' },
+        { text: 'Select 选择器', link: '/components/select' },
+        { text: 'Skeleton 骨架', link: '/components/skeleton' },
+        { text: 'Switch 开关', link: '/components/switch' },
+        { text: 'Table 表格', link: '/components/table' },
+        { text: 'Tag 标签', link: '/components/tag' },
+        { text: 'Tagging 标注', link: '/components/tagging' },
+        { text: 'Text 文字', link: '/components/text' },
+        { text: 'Textarea 文本域', link: '/components/textarea' },
+        { text: 'Tree 树形控件', link: '/components/tree' }
       ]
     }
     // {
