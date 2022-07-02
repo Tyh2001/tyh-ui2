@@ -1,321 +1,157 @@
 <template>
   <div id="home">
-    <div id="banner">
-      <div class="logo_box">
-        <img
-          class="logo"
-          draggable="false"
-          src="https://tianyuhao.cn/fighting/imgs/FightingDesign.svg"
-          alt="Fighting Design logo"
-        />
-      </div>
+    <img
+      draggable="false"
+      class="logo"
+      src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg"
+      alt="logo"
+    />
+    <h1 class="MainTitle">
+      Tyh UI
+      <!-- <span class="version">v&nbsp;{{ version }}</span> -->
+    </h1>
+    <p class="Subtitle">
+      一个轻量级组件库，基于 vue3 + typescript，全面拥抱 vue3
+    </p>
+
+    <div class="btnBox">
+      <a href="/docs/install">
+        <tyh-button type="primary" round> 快速开始 </tyh-button>
+      </a>
+
+      <a target="_back" href="https://github.com/Tyh2001/tyh-ui">
+        <!-- <tyh-button round icon="tyh-ui-githublogo">Github</tyh-button> -->
+        <tyh-button round>Github</tyh-button>
+      </a>
     </div>
 
-    <div id="content">
-      <div id="title">
-        <img
-          class="logo"
-          draggable="false"
-          src="https://tianyuhao.cn/fighting/imgs/FightingDesign.svg"
-          alt="Fighting Design logo"
-        />
-        <h1 class="title">Fighting Design</h1>
-
-        <h1 class="subtitle">
-          一个用 TypeScript + Template 编写的 Vue3 组件库。
-        </h1>
-        <p class="content">
-          <strong>🎨 Fighting Design</strong> 是一款灵活、优质的
-          <strong>vue3</strong>
-          组件库，为开发者、设计师准备。希望开发者可以借用
-          <strong>Fighting Design</strong>
-          的设计，在不久的将来，孕育出更高阶的组件库。
+    <div class="summary">
+      <div class="summary-left">
+        <h2 class="summary-title">
+          <tyh-icon icon="tyh-ui-huojian-01" size="22" color="#67a1ff" />
+          简洁至上
+        </h2>
+        <p class="summary-content">
+          tyh-ui
+          整体非常简洁明了，虽没有很多高级的组件，但它是使用最简单的方式达到实用的效果。
         </p>
-
-        <div class="action">
-          <f-button type="primary" size="large" href="/docs/install">
-            开始使用
-          </f-button>
-          <f-button
-            class="code"
-            type="primary"
-            size="large"
-            blob
-            simple
-            data-clipboard-text="npm i filling-design"
-            @click="copyCode('.code')"
-          >
-            pnpm add filling-design
-          </f-button>
-        </div>
       </div>
-
-      <div id="introduce">
-        <div class="advantage">
-          <div
-            v-for="(list, index) in lists"
-            :key="index"
-            class="advantage_item"
-          >
-            <div class="img_box">
-              <img
-                :src="`https://tianyuhao.cn/fighting/imgs/home-${
-                  index + 1
-                }.svg`"
-              />
-            </div>
-            <p class="text">{{ list }}</p>
-          </div>
-        </div>
-      </div>
-
-      <div id="footer">
-        <div class="footer_item">
-          <div class="list">
-            <ul v-for="(listItem, index) in bottomList" :key="index">
-              <h4>{{ listItem.title }}</h4>
-              <li v-for="(list, i) in listItem.item" :key="i">
-                <a class="home_link" target="_back" :href="list.link">
-                  {{ list.text }}
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="footer_item">
-          <h4 class="title">加入我们</h4>
-          <img src="https://tianyuhao.cn/images/weixin2.png" alt="weixin" />
-        </div>
-
-        <div class="footer_item">
-          <h4 class="title">合作者</h4>
-          <a
-            v-for="(item, index) in collaborator"
-            :key="index"
-            class="collaborator"
-            target="_blank"
-            :href="item.url"
-          >
-            <img
-              draggable="false"
-              class="myPhoto"
-              :src="item.photo"
-              alt="photo"
-            />
-            <span class="userName">{{ item.name }}</span>
-          </a>
-        </div>
-
-        <p class="code">
-          <a target="_back" href="https://beian.miit.gov.cn">
-            FightingDesign | 浙ICP备2021024540号-2
-          </a>
+      <div class="summary-right">
+        <h2 class="summary-title">
+          <tyh-icon icon="tyh-ui-channel-01" size="22" color="#bd34fe" />
+          轻量容易
+        </h2>
+        <p class="summary-content">
+          使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。
         </p>
       </div>
     </div>
   </div>
+
+  <Footer />
 </template>
 
-<script lang="ts" setup>
-  import Clipboard from 'clipboard'
-  import { lists, bottomList, collaborator } from './src/list'
-
-  const copyCode = (node: string): void => {
-    new Clipboard(node)
-  }
+<script setup>
+  // import { version } from '../tyhUi'
+  import Footer from './Footer.vue'
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
   #home {
-    position: relative;
-    #banner {
-      width: 100%;
-      box-sizing: border-box;
-      position: relative;
-      z-index: 100;
-      min-height: 370px;
-      padding-bottom: 30px;
-      .logo_box {
-        position: absolute;
-        right: 0px;
-        top: 0px;
-        height: 100%;
-        width: 100%;
-        max-width: 1368px;
-        z-index: -1;
-        overflow: hidden;
-        background: -webkit-linear-gradient(
-          815deg,
-          rgb(57, 92, 227) 10%,
-          rgb(94, 224, 221)
-        );
-        -webkit-mask: url('./images/banner.svg') 100% -150px / cover no-repeat;
-        .logo {
-          width: 500px;
-          height: 500px;
-          top: 0px;
-          right: 0px;
-          position: absolute;
-          transform: translate(-155px, -77px) scale(1);
-          user-select: none;
-        }
-      }
-    }
-    #content {
-      transition: 0.2s;
-      max-width: 1350px;
-      height: 500px;
-      padding: 30px;
-      box-sizing: border-box;
-      right: 0;
-      left: 0;
-      margin: auto;
-      top: 140px;
-      position: absolute;
-      #title {
-        .logo {
-          width: 120px;
-          height: 120px;
-          user-select: none;
-        }
-        .title {
-          font-size: 32px;
-          line-height: 43px;
-          text-align: left;
-          letter-spacing: -1.2px;
-          font-weight: bold;
-          word-break: normal;
-          display: inline-block;
-          margin-top: 20px;
-          background: -webkit-linear-gradient(
-            55deg,
-            rgb(57, 92, 227) 10%,
-            rgb(94, 224, 221)
-          );
-          -webkit-background-clip: text;
-          -webkit-text-fill-color: transparent;
-        }
-        .subtitle {
-          margin-top: 10px;
-          font-size: 33px;
-          font-weight: 700;
-          transition: 0.3s;
-          font-weight: 500;
-          line-height: 50px;
-          transition: 0.3s;
-        }
-        .content {
-          transition: 0.3s;
-          max-width: 700px;
-          margin-top: 30px;
-        }
-        .action {
-          margin-top: 30px;
-          display: flex;
-          align-items: center;
-          .code {
-            margin-left: 17px;
-            font-size: 21px;
-          }
-        }
-      }
-      #introduce {
-        margin-bottom: 40px;
-        .advantage {
-          margin-top: 80px;
-          width: 100%;
-          display: flex;
-          flex-wrap: wrap;
-          user-select: none;
-          .advantage_item {
-            width: 50%;
-            padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            .img_box {
-              width: 70%;
-              overflow: hidden;
-              height: 12rem;
-              img {
-                width: 100%;
-                height: 200px;
-                transition: 0.3s;
-              }
-            }
-            .text {
-              margin-top: 30px;
-              font-size: 20px;
-            }
-          }
-        }
-      }
-      #footer {
-        border-top: 1px solid #eee;
-        width: 100%;
-        margin: auto;
-        padding: 40px 0;
-        box-sizing: border-box;
-        .footer_item {
-          .title {
-            margin: 30px 0 10px 0;
-            font-weight: 600;
-          }
-          .list {
-            display: flex;
-            justify-content: space-between;
-            user-select: none;
-            ul {
-              h4 {
-                font-weight: 600;
-                line-height: 36px;
-                font-size: 15px;
-              }
-              li {
-                line-height: 36px;
-                cursor: pointer;
-                font-size: 14px;
-              }
-            }
-          }
-          .collaborator {
-            width: 150px;
-            height: 50px;
-            display: inline-block;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            cursor: pointer;
-            .myPhoto {
-              width: 45px;
-              height: 45px;
-              border-radius: 50%;
-            }
-            .userName {
-              font-size: 20px;
-              margin-left: 10px;
-              color: #333;
-            }
-          }
-        }
-        .code {
-          margin-top: 30px;
-          text-align: center;
-          font-size: 15px;
-          cursor: pointer;
-          a {
-            color: #333;
-          }
-        }
-      }
-    }
+    width: 800px;
+    padding-bottom: 40px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  @media (max-width: 768px) {
-    #content {
-      top: 200px !important;
+  #home .logo {
+    width: 220px;
+    height: 220px;
+    user-select: none;
+  }
+  #home .MainTitle {
+    text-align: center;
+    color: #515a6e;
+    margin-top: 20px;
+    font-size: 40px;
+    align-items: center;
+    position: relative;
+  }
+  #home .MainTitle .version {
+    text-align: center;
+    position: absolute;
+    font-size: 18px;
+    display: inline-block;
+    background: #3a6ff4;
+    color: #fff;
+    border-radius: 10px;
+    padding: 3px 10px;
+    left: 140px;
+    top: 0px;
+  }
+  #home .Subtitle {
+    text-align: center;
+    color: #515a6e;
+    margin-top: 20px;
+    font-size: 22px;
+    padding: 0 19px;
+  }
+  #home .btnBox {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #home .btnBox .tyh-button {
+    width: 200px;
+    height: 50px;
+    margin: 20px;
+  }
+  #home .btnBox .tyh-button .tyh-ui-github {
+    color: #606266 !important;
+  }
+  #home .summary {
+    width: 800px;
+    border-top: 1px solid #dbdbdb;
+    margin: auto;
+    display: flex;
+    margin-top: 50px;
+  }
+  #home .summary .summary-left,
+  #home .summary .summary-right {
+    flex: 1;
+    padding: 25px;
+    box-sizing: border-box;
+  }
+  #home .summary .summary-left .summary-title,
+  #home .summary .summary-right .summary-title {
+    line-height: 60px;
+    color: #2d3035;
+    font-weight: 500;
+  }
+  #home .summary .summary-left .summary-content,
+  #home .summary .summary-right .summary-content {
+    color: #515a6e;
+    line-height: 25px;
+  }
+  @media screen and (max-width: 700px) {
+    #home {
+      width: 100%;
+      display: flex;
+    }
+    #home .logo {
+      width: 150px;
+      height: 150px;
+    }
+    #home .summary {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+    }
+    #home .btnBox {
+      display: flex;
+      flex-direction: column;
     }
   }
 </style>

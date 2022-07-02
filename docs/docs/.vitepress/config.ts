@@ -13,7 +13,7 @@ export default (async () => {
         minify: false
       }
     },
-    title: 'Fighting Design',
+    title: 'Tyh Ui',
     head: [
       [
         'link',
