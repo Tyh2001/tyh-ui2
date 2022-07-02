@@ -33,7 +33,13 @@ export const sidebar = {
       items: [
         { text: 'Button 按钮', link: '/components/button' },
         { text: 'Alert 提示', link: '/components/alert' },
-        { text: 'Avatar 头像', link: '/components/avatar' }
+        { text: 'Avatar 头像', link: '/components/avatar' },
+        { text: 'BackTop 回到顶部', link: '/components/back-top' },
+        { text: 'Calendar 日历', link: '/components/calendar' },
+        { text: 'Card 卡片', link: '/components/card' },
+        { text: 'Container 布局容器', link: '/components/container' },
+        { text: 'Crumbs 面包屑', link: '/components/crumbs' },
+        { text: 'Dialog 对话框', link: '/components/dialog' }
       ]
     }
     // {
