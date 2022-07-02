@@ -30,27 +30,31 @@ export const sidebar = {
     {
       text: '基础组件',
       link: '/components/',
-      items: [{ text: 'Button 按钮', link: '/components/button' }]
-    },
-    {
-      text: '数据展示',
-      link: '/components/',
-      items: []
-    },
-    {
-      text: '导航组件',
-      link: '/components/',
-      items: []
-    },
-    {
-      text: '反馈组件',
-      link: '/components/',
-      items: []
-    },
-    {
-      text: '其它',
-      link: '/components/',
-      items: []
+      items: [
+        { text: 'Button 按钮', link: '/components/button' },
+        { text: 'Alert 提示', link: '/components/alert' },
+        { text: 'Avatar 头像', link: '/components/avatar' }
+      ]
     }
+    // {
+    //   text: '数据展示',
+    //   link: '/components/',
+    //   items: []
+    // },
+    // {
+    //   text: '导航组件',
+    //   link: '/components/',
+    //   items: []
+    // },
+    // {
+    //   text: '反馈组件',
+    //   link: '/components/',
+    //   items: []
+    // },
+    // {
+    //   text: '其它',
+    //   link: '/components/',
+    //   items: []
+    // }
   ]
 } as const
