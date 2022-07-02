@@ -7,28 +7,28 @@ export const sidebar = {
         { text: '安装', link: '/docs/install' },
         { text: '引入使用', link: '/docs/import' }
       ]
-    },
-    {
-      text: '指南',
-      link: '/docs/introduce',
-      items: [
-        { text: '介绍', link: '/docs/introduce' },
-        { text: '贡献指南', link: '/docs/contributing' },
-        { text: '加入我们', link: '/docs/join' }
-      ]
-    },
-    {
-      text: '历程',
-      link: '/docs/CHANGELOG',
-      items: [
-        { text: '更新日志', link: '/docs/CHANGELOG' },
-        { text: '里程碑', link: '/docs/milepost' }
-      ]
     }
+    // {
+    //   text: '指南',
+    //   link: '/docs/introduce',
+    //   items: [
+    //     { text: '介绍', link: '/docs/introduce' },
+    //     { text: '贡献指南', link: '/docs/contributing' },
+    //     { text: '加入我们', link: '/docs/join' }
+    //   ]
+    // },
+    // {
+    //   text: '历程',
+    //   link: '/docs/CHANGELOG',
+    //   items: [
+    //     { text: '更新日志', link: '/docs/CHANGELOG' },
+    //     { text: '里程碑', link: '/docs/milepost' }
+    //   ]
+    // }
   ],
   '/components/': [
     {
-      text: '基础组件',
+      text: '组件',
       link: '/components/',
       items: [
         { text: 'Button 按钮', link: '/components/button' },

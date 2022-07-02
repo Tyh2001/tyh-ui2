@@ -2,15 +2,15 @@
 
 ## 完整引入
 
-在 `main.js` 中引入下面内容
+在 main.js 中引入下面内容
 
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import FightingDesign from 'fighting-design'
-import 'fighting-design/theme/style.css'
+import tyhUi2 from 'tyh-ui2'
+import 'tyh-ui2/style/index.css'
 
-createApp(App).use(FightingDesign).mount('#app')
+createApp(App).use(tyhUi2).mount('#app')
 ```
 
 ## 按需引入
@@ -20,8 +20,12 @@ createApp(App).use(FightingDesign).mount('#app')
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import { FButton, FIcon } from 'fighting-design'
-import 'fighting-design/theme/style.css'
+import {
+  TyhButton,
+  TyhCard
+  // ...
+} from 'tyh-ui2'
+import 'tyh-ui2/style/index.css'
 
-createApp(App).use(FButton).use(FIcon).mount('#app')
+createApp(App).use(TyhButton).use(TyhCard).mount('#app')
 ```
