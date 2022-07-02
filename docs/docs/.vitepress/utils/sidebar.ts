@@ -39,7 +39,14 @@ export const sidebar = {
         { text: 'Card 卡片', link: '/components/card' },
         { text: 'Container 布局容器', link: '/components/container' },
         { text: 'Crumbs 面包屑', link: '/components/crumbs' },
-        { text: 'Dialog 对话框', link: '/components/dialog' }
+        { text: 'Dialog 对话框', link: '/components/dialog' },
+        { text: 'Division 分割线', link: '/components/division' },
+        { text: 'Drawer 抽屉', link: '/components/drawer' },
+        { text: 'Icon 图标', link: '/components/icon' },
+        { text: 'Image 图片', link: '/components/image' },
+        { text: 'Info 信息栏', link: '/components/info' },
+        { text: 'Input 输入框', link: '/components/input' },
+        { text: ' Link 链接', link: '/components/link' }
       ]
     }
     // {
