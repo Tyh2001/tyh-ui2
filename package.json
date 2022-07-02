@@ -5,6 +5,7 @@
   },
   "scripts": {
     "dev:docs": "pnpm run -C docs dev",
+    "dev:docs2": "pnpm run -C docs2 dev",
     "dev:start": "pnpm run -C start dev",
     "build:docs": "vite build docs",
     "build:components": "vite build --config vite.config.ts",
