@@ -4,6 +4,8 @@
 
 文本域的基本用法
 
+<tyh-textarea v-model="value1" placeholder="请输入内容..." />
+
 ```html
 <template>
   <tyh-textarea v-model="value1" placeholder="请输入内容..." />
@@ -19,20 +21,25 @@
 
 resize 属性可以规定文本域的拉伸方式
 
+<tyh-textarea v-model="value2" />
+<tyh-textarea v-model="value3" resize="vertical" />
+<tyh-textarea v-model="value4" resize="horizontal" />
+<tyh-textarea v-model="value5" resize="none" />
+
 ```html
 <template>
-  <tyh-textarea v-model="value7" />
-  <tyh-textarea v-model="value8" resize="vertical" />
-  <tyh-textarea v-model="value9" resize="horizontal" />
-  <tyh-textarea v-model="value10" resize="none" />
+  <tyh-textarea v-model="value2" />
+  <tyh-textarea v-model="value3" resize="vertical" />
+  <tyh-textarea v-model="value4" resize="horizontal" />
+  <tyh-textarea v-model="value5" resize="none" />
 </template>
 
 <script setup>
   import { ref } from 'vue'
-  const value7 = ref('随意拉伸')
-  const value8 = ref('只能纵向拉伸')
-  const value9 = ref('只能横向拉伸')
-  const value10 = ref('禁止拉伸')
+  const value2 = ref('随意拉伸')
+  const value3 = ref('只能纵向拉伸')
+  const value4 = ref('只能横向拉伸')
+  const value5 = ref('禁止拉伸')
 </script>
 ```
 
@@ -42,16 +49,19 @@ rows 属性可以配置文本域的行数
 
 cols 属性可以配置文本域的宽度
 
+<tyh-textarea v-model="value6" rows="5" />
+<tyh-textarea v-model="value7" cols="10" />
+
 ```html
 <template>
-  <tyh-textarea v-model="value3" rows="5" />
-  <tyh-textarea v-model="value4" cols="10" />
+  <tyh-textarea v-model="value6" rows="5" />
+  <tyh-textarea v-model="value7" cols="10" />
 </template>
 
 <script setup>
   import { ref } from 'vue'
-  const value3 = ref('')
-  const value4 = ref('')
+  const value6 = ref('')
+  const value7 = ref('')
 </script>
 ```
 
@@ -59,14 +69,16 @@ cols 属性可以配置文本域的宽度
 
 disabled 属性可以配置文本域禁用状态
 
+<tyh-textarea v-model="value8" disabled />
+
 ```html
 <template>
-  <tyh-textarea v-model="value5" disabled />
+  <tyh-textarea v-model="value8" disabled />
 </template>
 
 <script setup>
   import { ref } from 'vue'
-  const text5 = ref('禁用状态')
+  const value8 = ref('禁用状态')
 </script>
 ```
 
@@ -76,12 +88,12 @@ max 属性可以配置文本域输入的最大上限文本
 
 ```html
 <template>
-  <tyh-textarea v-model="value6" max="10" />
+  <tyh-textarea v-model="value9" max="10" />
 </template>
 
 <script setup>
   import { ref } from 'vue'
-  const value6 = ref('')
+  const value9 = ref('')
 </script>
 ```
 
@@ -105,3 +117,16 @@ max 属性可以配置文本域输入的最大上限文本
 | -------- | ------------------ | -------- |
 | onblur   | 失去焦点触发的回调 | ——       |
 | onfocus  | 获取焦点触发的回调 | ——       |
+
+<script setup>
+  import { ref } from 'vue'
+  const value1 = ref('')
+  const value2 = ref('随意拉伸')
+  const value3 = ref('只能纵向拉伸')
+  const value4 = ref('只能横向拉伸')
+  const value5 = ref('禁止拉伸')
+  const value6 = ref('')
+  const value7 = ref('')
+  const value8 = ref('禁用状态')
+  const value9 = ref('')
+</script>

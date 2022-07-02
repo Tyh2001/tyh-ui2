@@ -4,6 +4,8 @@
 
 输入框的基本用法
 
+<tyh-input v-model="text1" />
+
 ```html
 <template>
   <tyh-input v-model="text1" />
@@ -18,6 +20,9 @@
 ## 输入框类型
 
 type 属性可以规定文本框类型
+
+<tyh-input type="text" v-model="text2" />
+<tyh-input type="password" v-model="text3" />
 
 ```html
 <template>
@@ -35,6 +40,11 @@ type 属性可以规定文本框类型
 ## 不同尺寸
 
 size 属性可以配置文本框尺寸
+
+<tyh-input size="large" v-model="text4" />
+<tyh-input size="medium" v-model="text5" />
+<tyh-input size="small" v-model="text6" />
+<tyh-input size="mini" v-model="text7" />
 
 ```html
 <template>
@@ -57,6 +67,8 @@ size 属性可以配置文本框尺寸
 
 clear 属性可以配置带有清空按钮的文本框
 
+<tyh-input v-model="text8" clear />
+
 ```html
 <template>
   <tyh-input v-model="text8" clear />
@@ -71,6 +83,8 @@ clear 属性可以配置带有清空按钮的文本框
 ## 带有 icon
 
 icon 属性可以配置文本框带有其他图标，直接传递 icon 的名字传递即可
+
+<tyh-input v-model="text9" icon="tyh-ui-electronics" />
 
 ```html
 <template>
@@ -87,6 +101,8 @@ icon 属性可以配置文本框带有其他图标，直接传递 icon 的名字
 
 disabled 属性可以配置文本框禁用状态
 
+<tyh-input v-model="text10" disabled />
+
 ```html
 <template>
   <tyh-input v-model="text10" disabled />
@@ -101,6 +117,8 @@ disabled 属性可以配置文本框禁用状态
 ## 查看密码
 
 showPassword 属性可以配置查看密码按钮，showPassword 优先级大于 clear
+
+<tyh-input v-model="text11" type="password" showPassword />
 
 ```html
 <template>
@@ -136,3 +154,18 @@ showPassword 属性可以配置查看密码按钮，showPassword 优先级大于
 | enter    | 按下回车触发的回调     | ——       |
 | onblur   | 失去焦点触发的回调     | ——       |
 | onfocus  | 获取焦点触发的回调     | ——       |
+
+<script setup>
+  import { ref } from 'vue'
+  const text1 = ref('')
+  const text2 = ref('')
+  const text3 = ref('')
+  const text4 = ref('')
+  const text5 = ref('')
+  const text6 = ref('')
+  const text7 = ref('')
+  const text8 = ref('')
+  const text9 = ref('')
+  const text10 = ref('')
+  const text11 = ref('')
+</script>

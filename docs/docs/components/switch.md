@@ -4,6 +4,9 @@
 
 开关的基本使用
 
+<tyh-switch v-model="value1" />
+<tyh-switch v-model="value1" />
+
 ```html
 <template>
   <tyh-switch v-model="value1" />
@@ -22,6 +25,8 @@ closeText 属性可以配置左侧的文字
 
 openText 属性可以配置右侧的文字
 
+<tyh-switch v-model="value2" closeText="关闭" openText="开启" />
+
 ```html
 <template>
   <tyh-switch v-model="value2" closeText="关闭" openText="开启" />
@@ -36,6 +41,9 @@ openText 属性可以配置右侧的文字
 ## 禁用状态
 
 disabled 属性可以配置禁用开关
+
+<tyh-switch v-model="value3" disabled />
+<tyh-switch v-model="value4" disabled />
 
 ```html
 <template>
@@ -56,6 +64,9 @@ closeColor 属性可以配置自定义关闭颜色
 
 openColor 属性可以配置自定义开启颜色
 
+<tyh-switch v-model="value5" closeColor="red" openColor="green" />
+<tyh-switch v-model="value6" closeColor="black" openColor="#eee" />
+
 ```html
 <template>
   <tyh-switch v-model="value5" closeColor="red" openColor="green" />
@@ -72,6 +83,8 @@ openColor 属性可以配置自定义开启颜色
 ## 自定义尺寸
 
 width 属性可以自定义开关的尺寸 最小宽度为 20
+
+<tyh-switch v-model="value7" :width="60" />
 
 ```html
 <template>
@@ -101,3 +114,14 @@ width 属性可以自定义开关的尺寸 最小宽度为 20
 | 事件名称 | 说明                            | 回调参数   |
 | -------- | ------------------------------- | ---------- |
 | change   | switch 状态发生变化时的回调函数 | 新状态的值 |
+
+<script setup>
+  import { ref } from 'vue'
+  const value1 = ref(true)
+  const value2 = ref(true)
+  const value3 = ref(true)
+  const value4 = ref(false)
+  const value5 = ref(true)
+  const value6 = ref(false)
+  const value7 = ref(true)
+</script>

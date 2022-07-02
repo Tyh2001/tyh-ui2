@@ -6,6 +6,8 @@
 
 v-model 绑定评分值
 
+<tyh-rate v-model="value1" />
+
 ```html
 <template>
   <tyh-rate v-model="value1" />
@@ -22,6 +24,9 @@ v-model 绑定评分值
 color 属性可以配置选中的 icon 颜色
 
 voidColor 属性可以配置未选中的 icon 颜色
+
+<tyh-rate v-model="value2" />
+<tyh-rate v-model="value2" color="red" voidColor="#eee" />
 
 ```html
 <template>
@@ -40,6 +45,13 @@ voidColor 属性可以配置未选中的 icon 颜色
 showText 属性可以配置是否显示辅助文字
 
 SayText 属性可以配置辅助文字数组
+
+<tyh-rate v-model="value3" showText />
+<tyh-rate
+  v-model="value3"
+  showText
+  :sayText="['1星', '2星', '3星', '4星', '5星']"
+/>
 
 ```html
 <template>
@@ -72,3 +84,10 @@ SayText 属性可以配置辅助文字数组
 | 事件名称 | 说明             | 回调参数 |
 | -------- | ---------------- | -------- |
 | change   | 分值改变时的回调 | ——       |
+
+<script setup>
+  import { ref } from 'vue'
+  const value1 = ref(2)
+  const value2 = ref(2)
+  const value3 = ref(2)
+</script>
