@@ -1,4 +1,4 @@
-import TyhBackTop from './src/TyhBackTop.vue'
+import TyhBackTop from './src/back-top.vue'
 
 TyhBackTop.install = (app: any) => {
   app.component('TyhBackTop', TyhBackTop)

@@ -9,7 +9,7 @@
   </button>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhButton">
   import { computed } from 'vue'
   import { buttonProps } from './props'
   import { THEME } from '@tyh-ui2/utils'

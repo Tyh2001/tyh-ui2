@@ -8,20 +8,22 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhAlert">
   import { computed } from 'vue'
-  import { alertProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(alertProps)
+  const prop = defineProps(Props)
   const emit = defineEmits(['close'])
 
   const isClass = computed((): (string | object)[] => {
+    const { type, center, simple } = prop
+
     return [
       'tyh-alert',
-      `tyh-alert-${props.type}`,
+      `tyh-alert-${type}`,
       {
-        'tyh-alert-center': props.center,
-        [`tyh-alert-bac-${props.type}`]: !props.simple
+        'tyh-alert-center': center,
+        [`tyh-alert-bac-${type}`]: !simple
       }
     ]
   })

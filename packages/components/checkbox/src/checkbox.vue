@@ -10,7 +10,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCheckbox">
   import { ref } from 'vue'
   import { checkboxProps } from './props'
 

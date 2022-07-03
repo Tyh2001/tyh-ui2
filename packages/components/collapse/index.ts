@@ -1,7 +1,7 @@
-import TyhCollapse from './src/TyhCollapse.vue'
+import TyhCollapse from './src/collapse.vue'
 
 TyhCollapse.install = (app: any) => {
-  app.component('TyhCollapse', TyhCollapse)
+  app.component(TyhCollapse.name, TyhCollapse)
 }
 
 export default TyhCollapse

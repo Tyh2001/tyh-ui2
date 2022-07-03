@@ -4,7 +4,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCollapse">
   import { provide } from 'vue'
   import { collapseProps } from './props'
 

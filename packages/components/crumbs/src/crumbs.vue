@@ -1,8 +1,10 @@
 <template>
-  <div class="tyh-crumbs"><slot /></div>
+  <div class="tyh-crumbs">
+    <slot />
+  </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCrumbs">
   import { provide } from 'vue'
   import { crumbsProps } from './props'
 

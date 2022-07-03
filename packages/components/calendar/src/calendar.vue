@@ -57,7 +57,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCalendar">
   import { ref, computed } from 'vue'
   import { calendarProps } from './props'
 

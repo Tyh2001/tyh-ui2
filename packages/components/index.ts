@@ -10,8 +10,6 @@ import TyhIcon from './icon'
 import TyhCrumbs from './crumbs'
 import TyhCrumbsItem from './crumbs-item'
 import TyhInput from './input'
-import TyhTurnPage from './turn-page'
-import TyhTurnPageItem from './turn-page-item'
 import TyhBackTop from './back-top'
 import TyhSkeleton from './skeleton'
 import TyhAlert from './alert'
@@ -57,8 +55,6 @@ const components: object[] = [
   TyhCrumbs,
   TyhCrumbsItem,
   TyhInput,
-  TyhTurnPage,
-  TyhTurnPageItem,
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,
@@ -116,8 +112,6 @@ export {
   TyhCrumbs,
   TyhCrumbsItem,
   TyhInput,
-  TyhTurnPage,
-  TyhTurnPageItem,
   TyhBackTop,
   TyhSkeleton,
   TyhAlert,

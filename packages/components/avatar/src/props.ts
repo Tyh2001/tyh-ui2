@@ -2,7 +2,7 @@ import { PropType } from 'vue'
 
 type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
 
-export const avatarProps = {
+export const Props = {
   src: String,
   alt: String,
   size: {

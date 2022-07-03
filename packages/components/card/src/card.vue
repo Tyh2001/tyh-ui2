@@ -12,7 +12,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCard">
   import { cardProps } from './props'
   defineProps(cardProps)
 </script>

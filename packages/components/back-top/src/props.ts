@@ -2,7 +2,7 @@ import { PropType } from 'vue'
 
 type Action = 'smooth' | 'instant'
 
-export const backTopProps = {
+export const Props = {
   bottom: {
     type: String,
     default: (): string => '50px'

@@ -18,11 +18,11 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhAvatar">
   import { ref, computed } from 'vue'
-  import { avatarProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(avatarProps)
+  const props = defineProps(Props)
   const emit = defineEmits(['error', 'load'])
 
   const isError = ref<boolean>(false)

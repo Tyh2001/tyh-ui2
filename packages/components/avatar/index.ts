@@ -1,4 +1,4 @@
-import TyhAvatar from './src/TyhAvatar.vue'
+import TyhAvatar from './src/avatar.vue'
 
 TyhAvatar.install = (app: any) => {
   app.component('TyhAvatar', TyhAvatar)

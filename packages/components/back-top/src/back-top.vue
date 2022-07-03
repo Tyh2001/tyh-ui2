@@ -9,11 +9,11 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhBackTop">
   import { ref, onMounted } from 'vue'
-  import { backTopProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(backTopProps)
+  const props = defineProps(Props)
 
   const isShow = ref<boolean>(false)
 

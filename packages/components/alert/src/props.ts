@@ -1,12 +1,11 @@
 import { PropType } from 'vue'
+import type { alertType } from './interface'
 
-type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
-
-export const alertProps = {
+export const Props = {
   type: {
-    type: String as PropType<Type>,
-    default: (): string => 'default',
-    validator(v: string): boolean {
+    type: String as PropType<alertType>,
+    default: (): alertType => 'default',
+    validator: (v: alertType): boolean => {
       return [
         'default',
         'primary',

@@ -1,7 +1,7 @@
-import TyhFooter from '../container/src/TyhFooter.vue'
+import TyhFooter from '../container/src/footer.vue'
 
 TyhFooter.install = (app: any) => {
-  app.component('TyhFooter', TyhFooter)
+  app.component(TyhFooter.name, TyhFooter)
 }
 
 export default TyhFooter

@@ -9,7 +9,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCollapseItem">
   import { computed, inject } from 'vue'
   import { collapseItemProps } from './props'
 
