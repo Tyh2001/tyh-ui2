@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhList">
   import { computed } from 'vue'
   import { listProps } from './props'
 

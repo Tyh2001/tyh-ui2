@@ -1,7 +1,7 @@
-import TyhTagging from './src/TyhTagging.vue'
+import TyhTagging from './src/tagging.vue'
 
 TyhTagging.install = (app: any) => {
-  app.component('TyhTagging', TyhTagging)
+  app.component(TyhTagging.name, TyhTagging)
 }
 
 export default TyhTagging

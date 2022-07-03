@@ -22,7 +22,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhRate">
   import { ref, watch, computed } from 'vue'
   import { rateProps } from './props'
 

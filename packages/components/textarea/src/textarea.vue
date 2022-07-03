@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhTextarea">
   import { computed } from 'vue'
   import { textareaProps } from './props'
 

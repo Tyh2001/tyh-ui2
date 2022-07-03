@@ -1,4 +1,4 @@
-import TyhMessage from './src/TyhMessage.vue'
+import TyhMessage from './src/message.vue'
 import { createNot, mergeOptions } from '@tyh-ui2/utils'
 
 const options: object = { time: 2000, offset: 20 }

@@ -1,7 +1,7 @@
-import TyhIcon from './src/TyhIcon.vue'
+import TyhIcon from './src/icon.vue'
 
 TyhIcon.install = (app: any) => {
-  app.component('TyhIcon', TyhIcon)
+  app.component(TyhIcon.name, TyhIcon)
 }
 
 export default TyhIcon

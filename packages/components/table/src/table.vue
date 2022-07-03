@@ -55,7 +55,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhTable">
   import { tableProps } from './props'
 
   const props = defineProps(tableProps)

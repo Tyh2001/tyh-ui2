@@ -18,7 +18,7 @@
   </transition>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhNotification">
   import {
     getCurrentInstance,
     ref,

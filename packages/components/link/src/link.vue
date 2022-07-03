@@ -10,7 +10,7 @@
   </a>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhLink">
   import { computed } from 'vue'
   import { linkProps } from './props'
 

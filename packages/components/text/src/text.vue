@@ -13,7 +13,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhText">
   import { textProps } from './props'
   defineProps(textProps)
 </script>

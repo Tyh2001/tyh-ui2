@@ -1,7 +1,7 @@
-import TyhSelect from './src/TyhSelect.vue'
+import TyhSelect from './src/select.vue'
 
 TyhSelect.install = (app: any) => {
-  app.component('TyhSelect', TyhSelect)
+  app.component(TyhSelect.name, TyhSelect)
 }
 
 export default TyhSelect

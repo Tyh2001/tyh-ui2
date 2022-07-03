@@ -1,7 +1,7 @@
-import TyhMenuItem from './src/TyhMenuItem.vue'
+import TyhMenuItem from './src/menu-item.vue'
 
 TyhMenuItem.install = (app: any) => {
-  app.component('TyhMenuItem', TyhMenuItem)
+  app.component(TyhMenuItem.name, TyhMenuItem)
 }
 
 export default TyhMenuItem

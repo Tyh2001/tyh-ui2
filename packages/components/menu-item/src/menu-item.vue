@@ -5,7 +5,7 @@
   </li>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhMenuItem">
   import { getCurrentInstance, inject, computed } from 'vue'
   import { menuItemProps } from './props'
 

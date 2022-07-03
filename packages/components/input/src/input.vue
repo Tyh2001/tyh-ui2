@@ -33,7 +33,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhInput">
   import { ref, computed } from 'vue'
   import { inputProps } from './props'
 

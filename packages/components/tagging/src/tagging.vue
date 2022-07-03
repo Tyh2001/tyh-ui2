@@ -4,7 +4,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhTagging">
   import { computed } from 'vue'
   import { taggingProps } from './props'
 

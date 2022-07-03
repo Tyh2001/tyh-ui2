@@ -1,7 +1,7 @@
-import TyhSwitch from './src/TyhSwitch.vue'
+import TyhSwitch from './src/switch.vue'
 
 TyhSwitch.install = (app: any) => {
-  app.component('TyhSwitch', TyhSwitch)
+  app.component(TyhSwitch.name, TyhSwitch)
 }
 
 export default TyhSwitch

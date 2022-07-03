@@ -5,7 +5,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhTag">
   import { computed } from 'vue'
   import { tagProps } from './props'
 

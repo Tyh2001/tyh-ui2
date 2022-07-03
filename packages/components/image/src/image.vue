@@ -18,7 +18,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhImage">
   import { ref } from 'vue'
   import { imageProps } from './props'
 

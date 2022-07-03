@@ -11,7 +11,7 @@
   />
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhSkeleton">
   import { skeletonProps } from './props'
   defineProps(skeletonProps)
 </script>

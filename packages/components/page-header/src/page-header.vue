@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhPageHeader">
   import { pageHeaderProps } from './props'
   defineProps(pageHeaderProps)
   const emits = defineEmits(['back'])

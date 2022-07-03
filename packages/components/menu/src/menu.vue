@@ -12,7 +12,7 @@
   </ul>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhMenu">
   import { computed, provide } from 'vue'
   import { menuProps } from './props'
 

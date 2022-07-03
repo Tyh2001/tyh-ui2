@@ -8,7 +8,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhCrumbsItem">
   import {
     ref,
     inject,

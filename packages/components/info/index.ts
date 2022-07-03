@@ -1,7 +1,7 @@
-import TyhInfo from './src/TyhInfo.vue'
+import TyhInfo from './src/info.vue'
 
 TyhInfo.install = (app: any) => {
-  app.component('TyhInfo', TyhInfo)
+  app.component(TyhInfo.name, TyhInfo)
 }
 
 export default TyhInfo

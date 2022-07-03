@@ -7,7 +7,7 @@
   </option>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhOption">
   import { optionProps } from './props'
   defineProps(optionProps)
 </script>

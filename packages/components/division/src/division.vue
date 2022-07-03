@@ -10,7 +10,7 @@
   </div>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhDivision">
   import { divisionProps } from './props'
   defineProps(divisionProps)
 </script>

@@ -31,7 +31,7 @@
   </transition>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhDialog">
   import { getCurrentInstance, watch, ComponentInternalInstance } from 'vue'
   import { dialogProps } from './props'
 

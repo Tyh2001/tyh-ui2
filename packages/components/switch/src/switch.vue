@@ -22,7 +22,7 @@
   </span>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhSwitch">
   import { ref, computed } from 'vue'
   import { switchProps } from './props'
 

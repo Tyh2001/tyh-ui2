@@ -25,7 +25,7 @@
   </label>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhRadio">
   import { computed } from 'vue'
   import { radioProps } from './props'
 
