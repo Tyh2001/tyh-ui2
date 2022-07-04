@@ -1,4 +1,4 @@
-export const rateProps = {
+export const Props = {
   modelValue: Number,
   color: {
     type: String,

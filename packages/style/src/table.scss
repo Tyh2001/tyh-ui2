@@ -37,4 +37,13 @@
       border: 1px solid #dcdfe6;
     }
   }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    background-color: #ffffff;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #dddddd;
+    border-radius: 6px;
+  }
 }

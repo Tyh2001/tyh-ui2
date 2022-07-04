@@ -56,30 +56,20 @@
 </template>
 
 <script lang="ts" setup name="TyhTable">
-  import { tableProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(tableProps)
+  const prop = defineProps(Props)
+
   const importantStyle = (i: number): string | void => {
-    const importants: number[] = props.important
+    const importants: number[] = prop.important
     for (const key of importants) {
       if (key === i + 1) {
-        return `background: ${props.importantColor}`
+        return `background: ${prop.importantColor}`
       }
     }
   }
 
   const isTdThClass = (key: string): (string | object)[] => {
-    return [`tyh-${key}-td`, { 'tyh-table-border': props.border }]
+    return [`tyh-${key}-td`, { 'tyh-table-border': prop.border }]
   }
 </script>
-
-<style scoped>
-  ::-webkit-scrollbar {
-    width: 6px;
-    background-color: #ffffff;
-  }
-  ::-webkit-scrollbar-thumb {
-    background: #dddddd;
-    border-radius: 6px;
-  }
-</style>

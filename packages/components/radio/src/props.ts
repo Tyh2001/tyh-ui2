@@ -1,8 +1,7 @@
 import { PropType } from 'vue'
+import type { Size } from './interface'
 
-type Size = 'large' | 'medium' | 'small' | 'mini'
-
-export const radioProps = {
+export const Props = {
   modelValue: String,
   label: String,
   name: String,
@@ -10,8 +9,8 @@ export const radioProps = {
   border: Boolean,
   size: {
     type: String as PropType<Size>,
-    default: () => 'large',
-    validator(v: string): boolean {
+    default: (): Size => 'large',
+    validator: (v: Size): boolean => {
       return ['large', 'medium', 'small', 'mini', ''].includes(v)
     }
   }

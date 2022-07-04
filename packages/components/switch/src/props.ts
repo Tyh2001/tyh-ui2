@@ -1,4 +1,4 @@
-export const switchProps = {
+export const Props = {
   modelValue: Boolean,
   closeColor: {
     type: String,

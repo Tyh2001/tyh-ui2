@@ -1,4 +1,4 @@
-export const skeletonProps = {
+export const Props = {
   round: Boolean,
   width: String,
   height: String,

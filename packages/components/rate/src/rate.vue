@@ -24,41 +24,41 @@
 
 <script lang="ts" setup name="TyhRate">
   import { ref, watch, computed } from 'vue'
-  import { rateProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(rateProps)
+  const prop = defineProps(Props)
   const emit = defineEmits(['update:modelValue', 'change'])
 
-  const width = ref<number | undefined>(props.modelValue)
+  const width = ref<number | undefined>(prop.modelValue)
   watch(
-    () => props.modelValue,
+    () => prop.modelValue,
     (v) => (width.value = v)
   )
   const upDataValue = (): void => {
     emit('update:modelValue', width.value)
-    if (width.value !== props.modelValue) emit('change')
+    if (width.value !== prop.modelValue) emit('change')
   }
   const showSayFn = computed((): string | void | null => {
-    if (!props.showText) return
+    if (!prop.showText) return
     const showSay = ref<null | string>(null)
     watch(
       () => width.value,
       (): void => {
         switch (width.value) {
           case 1:
-            showSay.value = props.sayText[0]
+            showSay.value = prop.sayText[0]
             break
           case 2:
-            showSay.value = props.sayText[1]
+            showSay.value = prop.sayText[1]
             break
           case 3:
-            showSay.value = props.sayText[2]
+            showSay.value = prop.sayText[2]
             break
           case 4:
-            showSay.value = props.sayText[3]
+            showSay.value = prop.sayText[3]
             break
           case 5:
-            showSay.value = props.sayText[4]
+            showSay.value = prop.sayText[4]
             break
           default:
             showSay.value = ''

@@ -8,6 +8,6 @@
 </template>
 
 <script lang="ts" setup name="TyhOption">
-  import { optionProps } from './props'
-  defineProps(optionProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

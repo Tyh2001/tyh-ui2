@@ -25,16 +25,17 @@
     computed,
     ComponentInternalInstance
   } from 'vue'
-  import { notificationProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(notificationProps)
+  const prop = defineProps(Props)
+
   const isShow = ref<boolean>(true)
   let timer: any
   ;(function (): void {
-    if (props.time > 0) {
+    if (prop.time > 0) {
       timer = setTimeout(() => {
         onClose()
-      }, props.time)
+      }, prop.time)
     }
   })()
 
@@ -45,7 +46,7 @@
 
   const isIcon = computed((): string => {
     let icon: string = ''
-    switch (props.type) {
+    switch (prop.type) {
       case 'primary':
         icon = 'tyh-ui-smile'
         break
@@ -67,7 +68,7 @@
       'tyh-icon',
       'tyh-notification-icon',
       isIcon.value,
-      `tyh-notification-icon-${props.type}`
+      `tyh-notification-icon-${prop.type}`
     ]
   })
 

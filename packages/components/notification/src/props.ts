@@ -1,9 +1,7 @@
 import { PropType } from 'vue'
+import type { Position, Type } from './interface'
 
-type Position = 'top-left' | 'top-right' | 'bottom-left' | 'bottom-right'
-type Type = 'primary' | 'success' | 'danger' | 'warning'
-
-export const notificationProps = {
+export const Props = {
   title: String,
   message: String,
   time: {
@@ -12,8 +10,8 @@ export const notificationProps = {
   },
   position: {
     type: String as PropType<Position>,
-    default: (): string => 'top-right',
-    validator(v: string): boolean {
+    default: (): Position => 'top-right',
+    validator: (v: Position): boolean => {
       return [
         'top-left',
         'top-right',
@@ -26,7 +24,7 @@ export const notificationProps = {
   close: Boolean,
   type: {
     type: String as PropType<Type>,
-    validator(v: string): boolean {
+    validator: (v: Type): boolean => {
       return ['primary', 'success', 'danger', 'warning', ''].includes(v)
     }
   }

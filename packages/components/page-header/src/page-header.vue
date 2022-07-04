@@ -1,6 +1,6 @@
 <template>
   <div class="tyh-page-header">
-    <div class="tyh-page-header-title-box" @click="emits('back')">
+    <div class="tyh-page-header-title-box" @click="emit('back')">
       <tyh-icon :icon="icon" size="14" />
       <span class="tyh-page-header-title">{{ title }}</span>
     </div>
@@ -9,7 +9,8 @@
 </template>
 
 <script lang="ts" setup name="TyhPageHeader">
-  import { pageHeaderProps } from './props'
-  defineProps(pageHeaderProps)
-  const emits = defineEmits(['back'])
+  import { Props } from './props'
+  defineProps(Props)
+
+  const emit = defineEmits(['back'])
 </script>

@@ -1,4 +1,4 @@
-export const selectProps = {
+export const Props = {
   modelValue: String,
   name: String
 } as const

@@ -27,29 +27,29 @@
 
 <script lang="ts" setup name="TyhRadio">
   import { computed } from 'vue'
-  import { radioProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(radioProps)
-  const emits = defineEmits(['update:modelValue', 'change'])
+  const prop = defineProps(Props)
+  const emit = defineEmits(['update:modelValue', 'change'])
 
-  const proxy = new Proxy(props, {
+  const proxy = new Proxy(prop, {
     set() {
       return true
     }
   })
 
   const input = (e: any): void => {
-    emits('update:modelValue', e.target.value)
-    emits('change', e.target.value)
+    emit('update:modelValue', e.target.value)
+    emit('change', e.target.value)
   }
 
-  const isLabel = computed((): boolean => props.modelValue === props.label)
+  const isLabel = computed((): boolean => prop.modelValue === prop.label)
 
   const isClass = computed((): string[] => {
     return [
       'tyh-radio-o',
       isLabel.value
-        ? props.disabled
+        ? prop.disabled
           ? 'tyh-radio-disabled'
           : 'tyh-radio-hig'
         : ''
@@ -60,10 +60,10 @@
     return [
       {
         color: isLabel.value
-          ? props.disabled
+          ? prop.disabled
             ? '#b6b5b5'
             : '#3a6ff4'
-          : props.disabled
+          : prop.disabled
           ? '#b6b5b5'
           : '#333'
       }
@@ -72,10 +72,10 @@
 
   const labelStyle = computed((): object | boolean[] => {
     return [
-      { cursor: props.disabled ? 'no-drop' : 'pointer' },
-      props.border &&
+      { cursor: prop.disabled ? 'no-drop' : 'pointer' },
+      prop.border &&
         `border: 1px solid ${
-          isLabel.value ? (props.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
+          isLabel.value ? (prop.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
         }`
     ]
   })

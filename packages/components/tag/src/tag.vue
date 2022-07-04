@@ -7,9 +7,9 @@
 
 <script lang="ts" setup name="TyhTag">
   import { computed } from 'vue'
-  import { tagProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(tagProps)
+  const props = defineProps(Props)
   const emit = defineEmits(['close'])
 
   const isClass = computed((): (string | object)[] => {

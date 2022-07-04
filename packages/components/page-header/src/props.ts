@@ -1,4 +1,4 @@
-export const pageHeaderProps = {
+export const Props = {
   title: {
     type: String,
     default: (): string => '返回'

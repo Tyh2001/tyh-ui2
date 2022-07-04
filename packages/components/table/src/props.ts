@@ -1,8 +1,7 @@
 import { PropType } from 'vue'
+import type { Align } from './interface'
 
-type Align = 'left' | 'right' | 'center'
-
-export const tableProps = {
+export const Props = {
   data: {
     type: Array,
     default: (): [] => []
@@ -17,8 +16,8 @@ export const tableProps = {
   },
   align: {
     type: String as PropType<Align>,
-    default: (): string => 'left',
-    validator(v: string): boolean {
+    default: (): Align => 'left',
+    validator: (v: Align): boolean => {
       return ['left', 'right', 'center', ''].includes(v)
     }
   },
@@ -35,7 +34,7 @@ export const tableProps = {
   num: Boolean,
   important: {
     type: Array,
-    default: (): [] => []
+    default: (): number[] => []
   },
   importantColor: {
     type: String,

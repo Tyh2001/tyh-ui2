@@ -11,9 +11,9 @@
 </template>
 
 <script lang="ts" setup name="TyhSelect">
-  import { selectProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(selectProps)
+  const props = defineProps(Props)
 
   const emit = defineEmits(['update:modelValue'])
   const proxy = new Proxy(props, {
