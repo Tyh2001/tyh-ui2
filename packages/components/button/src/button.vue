@@ -9,7 +9,13 @@
   </button>
 </template>
 
-<script lang="ts" setup name="TyhButton">
+<script lang="ts">
+  export default {
+    name: 'TyhButton'
+  }
+</script>
+
+<script lang="ts" setup>
   import { computed } from 'vue'
   import { Props } from './props'
   import { THEME } from '@tyh-ui2/utils'

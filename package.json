@@ -4,8 +4,8 @@
     "node": ">= 16"
   },
   "scripts": {
+    "start": "pnpm run -C start dev",
     "dev:docs": "pnpm run -C docs dev",
-    "dev:start": "pnpm run -C start dev",
     "build:docs": "vite build docs",
     "build:components": "vite build --config vite.config.ts",
     "build:style": "vite build --config vite.config.theme.ts",

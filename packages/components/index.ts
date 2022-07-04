@@ -1,3 +1,4 @@
+import { App } from 'vue'
 import TyhButton from './button'
 import TyhList from './list'
 import TyhCard from './card'
@@ -42,7 +43,7 @@ import TyhCollapseItem from './collapse-item'
 import { Message } from './message'
 import { Notification } from './notification'
 
-const components: object[] = [
+const components = {
   TyhButton,
   TyhList,
   TyhCard,
@@ -84,20 +85,15 @@ const components: object[] = [
   TyhCheckbox,
   TyhCollapse,
   TyhCollapseItem
-]
+}
 
-const install = (app: any) => {
-  components.forEach((component) => {
-    app.use(component)
+const install = (app: App): void => {
+  Object.entries(components).forEach(([key, value]) => {
+    app.component(key, value)
   })
 }
 
-const tyhUi2 = {
-  install
-} as const
-
 export {
-  install,
   Message,
   Notification,
   TyhButton,
@@ -138,7 +134,12 @@ export {
   TyhTagging,
   TyhDrawer,
   TyhDialog,
-  TyhCheckbox
+  TyhCheckbox,
+  TyhCollapse,
+  TyhCollapseItem
 }
 
-export default tyhUi2
+export default {
+  install,
+  ...components
+}
