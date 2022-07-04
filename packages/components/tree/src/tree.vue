@@ -25,9 +25,9 @@
 
 <script lang="ts" setup name="TyhTree">
   import { ref } from 'vue'
-  import { treeProps } from './props'
+  import { Props } from './props'
 
-  defineProps(treeProps)
+  defineProps(Props)
   const isClose = ref<boolean>(false)
 
   const onOpen = (item: any): void => {

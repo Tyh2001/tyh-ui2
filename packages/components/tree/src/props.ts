@@ -1,4 +1,4 @@
-export const treeProps = {
+export const Props = {
   data: {
     type: Array,
     default: (): [] => []

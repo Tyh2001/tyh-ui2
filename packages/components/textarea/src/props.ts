@@ -1,8 +1,7 @@
 import { PropType } from 'vue'
+import type { Resize } from './interface'
 
-type Resize = 'vertical' | 'horizontal' | 'none'
-
-export const textareaProps = {
+export const Props = {
   modelValue: String,
   placeholder: String,
   max: [Number, String],
@@ -13,8 +12,8 @@ export const textareaProps = {
   cols: String,
   resize: {
     type: String as PropType<Resize>,
-    default: (): string => 'none',
-    validator(v: string): boolean {
+    default: (): Resize => 'none',
+    validator: (v: Resize): boolean => {
       return ['vertical', 'horizontal', 'none', ''].includes(v)
     }
   },

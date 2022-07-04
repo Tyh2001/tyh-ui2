@@ -6,20 +6,20 @@
 
 <script lang="ts" setup name="TyhTagging">
   import { computed } from 'vue'
-  import { taggingProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(taggingProps)
+  const prop = defineProps(Props)
 
   const isClass = computed((): string[] => [
     'tyh-tagging',
-    `tyh-tagging-${props.type}`
+    `tyh-tagging-${prop.type}`
   ])
 
   const isStyle = computed(
     (): { fontSize: string; color: string | undefined } => {
       return {
-        fontSize: `${props.size}px`,
-        color: props.color
+        fontSize: `${prop.size}px`,
+        color: prop.color
       }
     }
   )

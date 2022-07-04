@@ -14,6 +14,6 @@
 </template>
 
 <script lang="ts" setup name="TyhText">
-  import { textProps } from './props'
-  defineProps(textProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

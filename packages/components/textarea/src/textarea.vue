@@ -20,9 +20,9 @@
 
 <script lang="ts" setup name="TyhTextarea">
   import { computed } from 'vue'
-  import { textareaProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(textareaProps)
+  const props = defineProps(Props)
   const emit = defineEmits(['update:modelValue', 'onfocus', 'onblur'])
 
   const input = (e: any): void => emit('update:modelValue', e.target.value)
