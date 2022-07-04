@@ -13,6 +13,6 @@
 </template>
 
 <script lang="ts" setup name="TyhCard">
-  import { cardProps } from './props'
-  defineProps(cardProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

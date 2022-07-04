@@ -13,7 +13,7 @@
   import { ref, onMounted } from 'vue'
   import { Props } from './props'
 
-  const props = defineProps(Props)
+  const prop = defineProps(Props)
 
   const isShow = ref<boolean>(false)
 
@@ -25,9 +25,7 @@
       }
       timer = setTimeout((): void => {
         let scrollTop = document.documentElement.scrollTop
-        scrollTop > props.beyond
-          ? (isShow.value = true)
-          : (isShow.value = false)
+        scrollTop > prop.beyond ? (isShow.value = true) : (isShow.value = false)
       }, 188)
     }
   }
@@ -35,7 +33,7 @@
   const toTop = (): void => {
     window.scrollTo({
       top: 0,
-      behavior: props.action
+      behavior: prop.action
     })
   }
 

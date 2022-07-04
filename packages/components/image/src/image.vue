@@ -20,9 +20,9 @@
 
 <script lang="ts" setup name="TyhImage">
   import { ref } from 'vue'
-  import { imageProps } from './props'
+  import { Props } from './props'
 
-  defineProps(imageProps)
+  defineProps(Props)
   const emit = defineEmits(['error', 'load'])
 
   const isError = ref<boolean>(false)

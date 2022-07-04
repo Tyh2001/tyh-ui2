@@ -12,14 +12,14 @@
 
 <script lang="ts" setup name="TyhLink">
   import { computed } from 'vue'
-  import { linkProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(linkProps)
+  const prop = defineProps(Props)
   const isClass = computed((): (string | object)[] => {
     return [
       'tyh-link',
-      `tyh-link-${props.type}`,
-      { 'tyh-link-prohibit': props.prohibit }
+      `tyh-link-${prop.type}`,
+      { 'tyh-link-prohibit': prop.prohibit }
     ]
   })
 </script>

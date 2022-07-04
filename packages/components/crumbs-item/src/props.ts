@@ -1,3 +1,3 @@
-export const crumbsItemProps = {
+export const Props = {
   to: String
 } as const

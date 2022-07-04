@@ -1,13 +1,12 @@
 import { PropType } from 'vue'
+import type { Fit } from './interface'
 
-type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
-
-export const imageProps = {
+export const Props = {
   src: String,
   alt: String,
   fit: {
     type: String as PropType<Fit>,
-    validator(v: string): boolean {
+    validator: (v: Fit): boolean => {
       return ['fill', 'contain', 'cover', 'none', 'scale-down', ''].includes(v)
     }
   },

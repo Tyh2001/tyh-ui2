@@ -15,17 +15,17 @@
     ComponentInternalInstance,
     getCurrentInstance
   } from 'vue'
-  import { crumbsItemProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(crumbsItemProps)
+  const prop = defineProps(Props)
 
   const icon = ref<string | undefined>('')
   const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
   icon.value = inject('Crumbs-separator')
   const link = (): void => {
-    if (!props.to) return
+    if (!prop.to) return
     try {
-      proxy.$router.push(props.to)
+      proxy.$router.push(prop.to)
     } catch (e: any) {
       console.log(e)
     }

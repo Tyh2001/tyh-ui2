@@ -1,11 +1,10 @@
 import { PropType } from 'vue'
+import type { Shadow } from './interface'
 
-type Shadow = 'always' | 'hover'
-
-export const cardProps = {
+export const Props = {
   shadow: {
     type: String as PropType<Shadow>,
-    validator(v: string): boolean {
+    validator: (v: Shadow): boolean => {
       return ['always', 'hover', ''].includes(v)
     }
   },

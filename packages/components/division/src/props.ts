@@ -1,12 +1,11 @@
 import { PropType } from 'vue'
+import type { Position } from './interface'
 
-type Position = 'left' | 'center' | 'right'
-
-export const divisionProps = {
+export const Props = {
   position: {
     type: String as PropType<Position>,
-    default: (): string => 'left',
-    validator(v: string): boolean {
+    default: (): Position => 'left',
+    validator: (v: Position): boolean => {
       return ['left', 'center', 'right', ''].includes(v)
     }
   },

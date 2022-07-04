@@ -3,6 +3,6 @@
 </template>
 
 <script lang="ts" setup name="TyhIcon">
-  import { iconProps } from './props'
-  defineProps(iconProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

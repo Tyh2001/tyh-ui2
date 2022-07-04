@@ -1,13 +1,11 @@
 import { PropType } from 'vue'
+import type { Type, Size } from './interface'
 
-type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
-type Size = 'large' | 'small' | 'mini'
-
-export const buttonProps = {
+export const Props = {
   type: {
     type: String as PropType<Type>,
-    default: (): string => 'default',
-    validator(v: string): boolean {
+    default: (): Type => 'default',
+    validator: (v: Type): boolean => {
       return [
         'default',
         'primary',
@@ -23,7 +21,7 @@ export const buttonProps = {
   icon: String,
   size: {
     type: String as PropType<Size>,
-    validator(v: string): boolean {
+    validator: (v: Size): boolean => {
       return ['large', 'small', 'mini', ''].includes(v)
     }
   },

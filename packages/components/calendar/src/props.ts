@@ -1,4 +1,4 @@
-export const calendarProps = {
+export const Props = {
   modelValue: {
     type: Object,
     required: true

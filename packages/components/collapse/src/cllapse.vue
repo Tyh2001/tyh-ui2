@@ -6,8 +6,8 @@
 
 <script lang="ts" setup name="TyhCollapse">
   import { provide } from 'vue'
-  import { collapseProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(collapseProps)
-  provide('modelValue', props.modelValue)
+  const prop = defineProps(Props)
+  provide('modelValue', prop.modelValue)
 </script>

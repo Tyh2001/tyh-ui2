@@ -1,6 +1,5 @@
 import { PropType } from 'vue'
-
-type Action = 'smooth' | 'instant'
+import type { Action } from './interface'
 
 export const Props = {
   bottom: {
@@ -13,8 +12,8 @@ export const Props = {
   },
   action: {
     type: String as PropType<Action>,
-    default: (): string => 'smooth',
-    validator(v: string): boolean {
+    default: (): Action => 'smooth',
+    validator: (v: Action): boolean => {
       return ['smooth', 'instant', ''].includes(v)
     }
   },

@@ -11,17 +11,18 @@
 
 <script lang="ts" setup name="TyhCollapseItem">
   import { computed, inject } from 'vue'
-  import { collapseItemProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(collapseItemProps)
+  const prop = defineProps(Props)
   const emit = defineEmits(['onChange'])
+
   const modelValue: any = inject('modelValue')
 
   const isShow = computed((): boolean => {
-    return modelValue.indexOf(props.name) > -1
+    return modelValue.indexOf(prop.name) > -1
   })
 
   const changeCollapse = () => {
-    emit('onChange', props.name)
+    emit('onChange', prop.name)
   }
 </script>

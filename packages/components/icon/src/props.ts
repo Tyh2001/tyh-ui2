@@ -1,4 +1,4 @@
-export const iconProps = {
+export const Props = {
   icon: String,
   color: String,
   size: {

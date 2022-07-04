@@ -1,4 +1,4 @@
-export const collapseItemProps = {
+export const Props = {
   title: String,
   name: String
 } as const

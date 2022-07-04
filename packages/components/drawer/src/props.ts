@@ -1,13 +1,12 @@
 import { PropType } from 'vue'
+import type { Direction } from './interface'
 
-type Direction = 'top' | 'left' | 'bottom' | 'right'
-
-export const drawerProps = {
+export const Props = {
   modelValue: Boolean,
   direction: {
     type: String as PropType<Direction>,
-    default: (): string => 'right',
-    validator(v: string): boolean {
+    default: (): Direction => 'right',
+    validator: (v: Direction): boolean => {
       return ['top', 'left', 'bottom', 'right', ''].includes(v)
     }
   },

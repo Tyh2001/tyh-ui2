@@ -11,6 +11,6 @@
 </template>
 
 <script lang="ts" setup name="TyhDivision">
-  import { divisionProps } from './props'
-  defineProps(divisionProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

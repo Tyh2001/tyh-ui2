@@ -1,4 +1,4 @@
-export const collapseProps = {
+export const Props = {
   modelValue: {
     type: Array,
     default: (): [] => []

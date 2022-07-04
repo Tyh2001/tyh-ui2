@@ -22,7 +22,7 @@
   import { ref, computed } from 'vue'
   import { Props } from './props'
 
-  const props = defineProps(Props)
+  const prop = defineProps(Props)
   const emit = defineEmits(['error', 'load'])
 
   const isError = ref<boolean>(false)
@@ -35,23 +35,23 @@
   const isSize = computed((): object[] => {
     return [
       {
-        width: `${props.size * 10}px`,
-        height: `${props.size * 10}px`
+        width: `${prop.size * 10}px`,
+        height: `${prop.size * 10}px`
       }
     ]
   })
 
   const errorClass = computed((): (string | object)[] => {
-    return ['tyh-avatar-error', { 'tyh-avatar-round': props.round }]
+    return ['tyh-avatar-error', { 'tyh-avatar-round': prop.round }]
   })
 
   const successClass = computed((): object[] => {
     return [
       {
-        [`tyh-avatar-${props.fit}`]: props.fit,
-        'tyh-avatar-round': props.round,
-        'tyh-avatar-border': props.border,
-        'tyh-avatar-select': props.select
+        [`tyh-avatar-${prop.fit}`]: prop.fit,
+        'tyh-avatar-round': prop.round,
+        'tyh-avatar-border': prop.border,
+        'tyh-avatar-select': prop.select
       }
     ]
   })

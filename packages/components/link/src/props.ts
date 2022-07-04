@@ -1,12 +1,11 @@
 import { PropType } from 'vue'
+import type { Type } from './interface'
 
-type Type = 'default' | 'primary' | 'success' | 'danger' | 'warning'
-
-export const linkProps = {
+export const Props = {
   type: {
     type: String as PropType<Type>,
-    default: (): string => 'default',
-    validator(v: string): boolean {
+    default: (): Type => 'default',
+    validator: (v: Type): boolean => {
       return [
         'default',
         'primary',

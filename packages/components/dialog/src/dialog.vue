@@ -33,9 +33,9 @@
 
 <script lang="ts" setup name="TyhDialog">
   import { getCurrentInstance, watch, ComponentInternalInstance } from 'vue'
-  import { dialogProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(dialogProps)
+  const prop = defineProps(Props)
   const emit = defineEmits([
     'update:modelValue',
     'open',
@@ -50,17 +50,17 @@
   }
 
   const packingClose = (): void => {
-    if (!props.modalClose) return
+    if (!prop.modalClose) return
     close()
   }
 
   const self: any = getCurrentInstance() as ComponentInternalInstance
   watch(
-    () => props.modelValue,
+    () => prop.modelValue,
     (v: boolean): void => {
       if (v) emit('open')
       const el = self.proxy.$el
-      if (v && props.appendToBody) {
+      if (v && prop.appendToBody) {
         document.body.appendChild(el)
       }
     }

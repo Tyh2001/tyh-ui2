@@ -48,7 +48,7 @@
           class="tyh-calendar-day"
           v-for="(m, index) in yearMonths(getMonth, getYear)"
           :key="index"
-          :style="[nowDateStyle(index), calendarItemSize]"
+          :style="[nowDateStyle(index)!, calendarItemSize]"
         >
           {{ index + 1 }}
         </td>
@@ -59,13 +59,13 @@
 
 <script lang="ts" setup name="TyhCalendar">
   import { ref, computed } from 'vue'
-  import { calendarProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(calendarProps)
+  const prop = defineProps(Props)
 
-  const getMonth = ref<number>(props.modelValue.getMonth())
-  const getYear = ref<number>(props.modelValue.getFullYear())
-  const getDate: number = props.modelValue.getDate()
+  const getMonth = ref<number>(prop.modelValue.getMonth())
+  const getYear = ref<number>(prop.modelValue.getFullYear())
+  const getDate: number = prop.modelValue.getDate()
 
   const fun_week = computed((): number => {
     const week: number = new Date(
@@ -101,8 +101,8 @@
   }
 
   const goNow = (): void => {
-    getMonth.value = props.modelValue.getMonth()
-    getYear.value = props.modelValue.getFullYear()
+    getMonth.value = prop.modelValue.getMonth()
+    getYear.value = prop.modelValue.getFullYear()
   }
 
   const changeWeek = (num: number): string => {
@@ -110,7 +110,7 @@
   }
 
   const nowDateStyle = (date: number): object[] | void => {
-    if (date + 1 === props.modelValue.getDate()) {
+    if (date + 1 === prop.modelValue.getDate()) {
       return [
         {
           backgroundColor: '#3a6ff4',
@@ -121,12 +121,12 @@
   }
 
   const calendarWidth = computed((): object[] => {
-    const size: number = props.cellWidth < 28 ? 28 : props.cellWidth
+    const size: number = prop.cellWidth < 28 ? 28 : prop.cellWidth
     return [{ width: `${(size + 2) * 7}px` }]
   })
 
   const calendarItemSize = computed((): object[] => {
-    const size: number = props.cellWidth < 28 ? 28 : props.cellWidth
+    const size: number = prop.cellWidth < 28 ? 28 : prop.cellWidth
     return [{ width: `${size}px`, height: `${size}px` }]
   })
 </script>

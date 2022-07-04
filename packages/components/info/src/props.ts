@@ -1,4 +1,4 @@
-export const infoProps = {
+export const Props = {
   userInfo: String,
   describe: String,
   linkUrl: String

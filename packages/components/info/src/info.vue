@@ -27,6 +27,6 @@
 </template>
 
 <script lang="ts" setup name="TyhInfo">
-  import { infoProps } from './props'
-  defineProps(infoProps)
+  import { Props } from './props'
+  defineProps(Props)
 </script>

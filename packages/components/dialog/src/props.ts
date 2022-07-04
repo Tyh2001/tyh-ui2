@@ -1,4 +1,4 @@
-export const dialogProps = {
+export const Props = {
   modelValue: Boolean,
   width: {
     type: String,

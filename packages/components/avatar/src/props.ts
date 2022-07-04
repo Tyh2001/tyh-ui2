@@ -1,6 +1,5 @@
 import { PropType } from 'vue'
-
-type Fit = 'fill' | 'contain' | 'cover' | 'none' | 'scale-down'
+import type { Fit } from './interface'
 
 export const Props = {
   src: String,
@@ -11,7 +10,7 @@ export const Props = {
   },
   fit: {
     type: String as PropType<Fit>,
-    validator(v: string): boolean {
+    validator: (v: Fit): boolean => {
       return ['fill', 'contain', 'cover', 'none', 'scale-down', ''].includes(v)
     }
   },

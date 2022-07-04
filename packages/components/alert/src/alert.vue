@@ -15,7 +15,7 @@
   const prop = defineProps(Props)
   const emit = defineEmits(['close'])
 
-  const isClass = computed((): (string | object)[] => {
+  const isClass = computed((): object | string[] => {
     const { type, center, simple } = prop
 
     return [

@@ -38,9 +38,9 @@
     watch,
     ComponentInternalInstance
   } from 'vue'
-  import { drawerProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(drawerProps)
+  const props = defineProps(Props)
   const emit = defineEmits([
     'update:modelValue',
     'open',

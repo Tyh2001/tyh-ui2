@@ -1,9 +1,7 @@
 import { PropType } from 'vue'
+import type { Size, Type } from './interface'
 
-type Type = 'text' | 'password'
-type Size = 'large' | 'medium' | 'small' | 'mini'
-
-export const inputProps = {
+export const Props = {
   modelValue: {
     type: String,
     set(): boolean {
@@ -13,15 +11,15 @@ export const inputProps = {
   placeholder: String,
   type: {
     type: String as PropType<Type>,
-    default: (): string => 'text',
-    validator(v: string): boolean {
+    default: (): Type => 'text',
+    validator: (v: Type): boolean => {
       return ['text', 'password', ''].includes(v)
     }
   },
   size: {
     type: String as PropType<Size>,
-    default: (): string => 'medium',
-    validator(v: string): boolean {
+    default: (): Size => 'medium',
+    validator: (v: Size): boolean => {
       return ['large', 'medium', 'small', 'mini', ''].includes(v)
     }
   },

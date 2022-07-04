@@ -11,36 +11,36 @@
 
 <script lang="ts" setup name="TyhButton">
   import { computed } from 'vue'
-  import { buttonProps } from './props'
+  import { Props } from './props'
   import { THEME } from '@tyh-ui2/utils'
 
-  const props = defineProps(buttonProps)
+  const prop = defineProps(Props)
 
   const color = computed((): string => {
-    if (props.simple) return THEME[props.type]
-    return props.type === 'default' || !props.type ? '#333' : '#fff'
+    if (prop.simple) return THEME[prop.type]
+    return prop.type === 'default' || !prop.type ? '#333' : '#fff'
   })
 
   const isClass = computed((): (string | object)[] => {
     return [
       'tyh-button',
       {
-        [`tyh-button-size-${props.size}`]: props.size,
-        'tyh-button-round': props.round,
-        'tyh-button-square': props.square
+        [`tyh-button-size-${prop.size}`]: prop.size,
+        'tyh-button-round': prop.round,
+        'tyh-button-square': prop.square
       }
     ]
   })
 
   const typeClass = computed((): string[] => {
     return [
-      props.simple
-        ? props.disabled || props.loading
-          ? `tyh-button-simple-disabled-${props.type}`
-          : `tyh-button-simple-${props.type}`
-        : props.disabled || props.loading
-        ? `tyh-button-disabled-${props.type}`
-        : `tyh-button-${props.type}`
+      prop.simple
+        ? prop.disabled || prop.loading
+          ? `tyh-button-simple-disabled-${prop.type}`
+          : `tyh-button-simple-${prop.type}`
+        : prop.disabled || prop.loading
+        ? `tyh-button-disabled-${prop.type}`
+        : `tyh-button-${prop.type}`
     ]
   })
 </script>

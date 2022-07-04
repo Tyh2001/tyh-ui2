@@ -35,9 +35,9 @@
 
 <script lang="ts" setup name="TyhInput">
   import { ref, computed } from 'vue'
-  import { inputProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(inputProps)
+  const prop = defineProps(Props)
   const emit = defineEmits([
     'update:modelValue',
     'clear',
@@ -46,7 +46,7 @@
     'onfocus'
   ])
 
-  const inputType = ref<string>(props.type)
+  const inputType = ref<string>(prop.type)
   const isPass = ref<boolean>(false)
 
   const input = (e: Event): void => {
@@ -54,7 +54,7 @@
   }
 
   const clearText = (): void => {
-    if (props.disabled) return
+    if (prop.disabled) return
     emit('update:modelValue', '')
     emit('clear')
   }
@@ -62,11 +62,11 @@
   const isClass = computed((): (string | object)[] => {
     return [
       'tyh-input-input',
-      `tyh-input-input-${props.size}`,
+      `tyh-input-input-${prop.size}`,
       {
-        'tyh-input-icon-padding': props.icon,
-        'tyh-input-clear-padding': props.clear,
-        'tyh-input-disabled': props.disabled
+        'tyh-input-icon-padding': prop.icon,
+        'tyh-input-clear-padding': prop.clear,
+        'tyh-input-disabled': prop.disabled
       }
     ]
   })
@@ -77,7 +77,7 @@
   }
 
   const isIcon = computed((): boolean => {
-    return props.clear ? (props.showPassword ? true : false) : true
+    return prop.clear ? (prop.showPassword ? true : false) : true
   })
 
   const rightIcon = computed((): string => {
