@@ -24,9 +24,9 @@
     computed,
     ComponentInternalInstance
   } from 'vue'
-  import { messageProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(messageProps)
+  const props = defineProps(Props)
   const isShow = ref<boolean>(true)
   let timer: any
   ;(function (): void {

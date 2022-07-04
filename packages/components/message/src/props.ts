@@ -1,13 +1,12 @@
 import { PropType } from 'vue'
+import type { Type } from './interface'
 
-type Type = 'primary' | 'success' | 'danger' | 'warning' | 'default'
-
-export const messageProps = {
+export const Props = {
   message: String,
   type: {
     type: String as PropType<Type>,
-    default: (): string => 'default',
-    validator(v: string): boolean {
+    default: (): Type => 'default',
+    validator: (v: Type): boolean => {
       return [
         'primary',
         'success',

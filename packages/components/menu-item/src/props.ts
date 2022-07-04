@@ -1,4 +1,4 @@
-export const menuItemProps = {
+export const Props = {
   route: String,
   title: String,
   prohibit: Boolean,

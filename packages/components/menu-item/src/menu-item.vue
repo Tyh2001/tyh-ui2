@@ -7,9 +7,9 @@
 
 <script lang="ts" setup name="TyhMenuItem">
   import { getCurrentInstance, inject, computed } from 'vue'
-  import { menuItemProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(menuItemProps)
+  const props = defineProps(Props)
   const theme = inject('theme')
   const mode = inject('mode')
   const textColor = inject('textColor')

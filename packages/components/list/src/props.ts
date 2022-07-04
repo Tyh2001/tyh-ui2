@@ -1,4 +1,4 @@
-export const listProps = {
+export const Props = {
   header: String,
   content: {
     type: Array,

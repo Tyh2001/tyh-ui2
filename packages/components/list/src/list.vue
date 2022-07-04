@@ -24,15 +24,16 @@
 
 <script lang="ts" setup name="TyhList">
   import { computed } from 'vue'
-  import { listProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(listProps)
+  const prop = defineProps(Props)
+
   const liClass = computed((): (string | object)[] => {
     return [
       'tyh-list-li',
       {
-        'tyh-list-zebra': props.zebra,
-        'tyh-list-hoverShow': props.hoverShow
+        'tyh-list-zebra': prop.zebra,
+        'tyh-list-hoverShow': prop.hoverShow
       }
     ]
   })

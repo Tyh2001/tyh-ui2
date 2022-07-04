@@ -1,21 +1,19 @@
 import { PropType } from 'vue'
+import type { Theme, Mode } from './interface'
 
-type Theme = 'dark' | 'light'
-type Mode = 'horizontal' | 'vertical'
-
-export const menuProps = {
+export const Props = {
   theme: {
     type: String as PropType<Theme>,
-    default: (): string => 'dark',
-    validator(v: string): boolean {
+    default: (): Theme => 'dark',
+    validator: (v: Theme): boolean => {
       return ['dark', 'light', ''].includes(v)
     }
   },
   shadow: Boolean,
   mode: {
     type: String as PropType<Mode>,
-    default: (): string => 'horizontal',
-    validator(v: string): boolean {
+    default: (): Mode => 'horizontal',
+    validator: (v: Mode): boolean => {
       return ['horizontal', 'vertical', ''].includes(v)
     }
   },

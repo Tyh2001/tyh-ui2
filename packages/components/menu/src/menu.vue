@@ -14,9 +14,9 @@
 
 <script lang="ts" setup name="TyhMenu">
   import { computed, provide } from 'vue'
-  import { menuProps } from './props'
+  import { Props } from './props'
 
-  const props = defineProps(menuProps)
+  const props = defineProps(Props)
   provide('theme', props.theme)
   provide('mode', props.mode)
   provide('textColor', props.textColor)
