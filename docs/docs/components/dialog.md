@@ -2,11 +2,11 @@
 
 ## 基本使用
 
-抽屉的基本使用
+对话框的基本使用
 
-title 属性可以配置抽屉的标题
+`title` 属性可以配置抽屉的标题
 
-footer 插槽可以配置操作区内容
+`footer` 插槽可以配置操作区内容
 
 <tyh-button simple @click="open1 = true">点我打开</tyh-button>
 
@@ -17,6 +17,8 @@ footer 插槽可以配置操作区内容
     <tyh-button type="primary" simple @click="open1 = false">取消</tyh-button>
   </template>
 </tyh-dialog>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -37,11 +39,13 @@ footer 插槽可以配置操作区内容
 </script>
 ```
 
+:::
+
 ## 不带头部信息
 
-不带有 title 和关闭按钮
+不带有 `title` 和关闭按钮
 
-showHeader 属性可以配置不带头部信息
+`showHeader` 属性可以配置不带头部信息
 
 <tyh-button simple @click="open2 = true">点我打开</tyh-button>
 
@@ -52,6 +56,8 @@ showHeader 属性可以配置不带头部信息
     <tyh-button type="primary" simple @click="open2 = false">取消</tyh-button>
   </template>
 </tyh-dialog>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -72,11 +78,13 @@ showHeader 属性可以配置不带头部信息
 </script>
 ```
 
+:::
+
 ## 多层嵌套
 
-width 属性可以配置宽度
+`width` 属性可以配置宽度
 
-top 属性可以配置距离顶部的距离
+`top` 属性可以配置距离顶部的距离
 
 <tyh-button simple @click="open3 = true">点我打开第一层</tyh-button>
 
@@ -87,6 +95,8 @@ top 属性可以配置距离顶部的距离
     hi～我是第二层的 dialog 对话框
   </tyh-dialog>
 </tyh-dialog>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -107,6 +117,8 @@ top 属性可以配置距离顶部的距离
   const open4 = ref(false)
 </script>
 ```
+
+:::
 
 ## Attributes
 

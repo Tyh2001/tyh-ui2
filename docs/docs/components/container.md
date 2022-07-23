@@ -16,57 +16,59 @@
 
 常见页面布局
 
+<tyh-container>
+  <tyh-header>Header</tyh-header>
+  <tyh-main>Main</tyh-main>
+</tyh-container>
+
+<tyh-container>
+  <tyh-header>Header</tyh-header>
+  <tyh-main>Main</tyh-main>
+  <tyh-footer>Footer</tyh-footer>
+</tyh-container>
+
+<tyh-container>
+  <tyh-aside width="200px">Aside</tyh-aside>
+  <tyh-main>Main</tyh-main>
+</tyh-container>
+
+<tyh-container>
+  <tyh-header>Header</tyh-header>
+  <tyh-container>
+    <tyh-aside width="200px">Aside</tyh-aside>
+    <tyh-main>Main</tyh-main>
+  </tyh-container>
+</tyh-container>
+
+<tyh-container>
+  <tyh-header>Header</tyh-header>
+  <tyh-container>
+    <tyh-aside width="200px">Aside</tyh-aside>
+    <tyh-container>
+      <tyh-main>Main</tyh-main>
+      <tyh-footer>Footer</tyh-footer>
+    </tyh-container>
+  </tyh-container>
+</tyh-container>
+
+<tyh-container>
+  <tyh-aside width="200px">Aside</tyh-aside>
   <tyh-container>
     <tyh-header>Header</tyh-header>
     <tyh-main>Main</tyh-main>
   </tyh-container>
+</tyh-container>
 
+<tyh-container>
+  <tyh-aside width="200px">Aside</tyh-aside>
   <tyh-container>
     <tyh-header>Header</tyh-header>
     <tyh-main>Main</tyh-main>
     <tyh-footer>Footer</tyh-footer>
   </tyh-container>
+</tyh-container>
 
-  <tyh-container>
-    <tyh-aside width="200px">Aside</tyh-aside>
-    <tyh-main>Main</tyh-main>
-  </tyh-container>
-
-  <tyh-container>
-    <tyh-header>Header</tyh-header>
-    <tyh-container>
-      <tyh-aside width="200px">Aside</tyh-aside>
-      <tyh-main>Main</tyh-main>
-    </tyh-container>
-  </tyh-container>
-
-  <tyh-container>
-    <tyh-header>Header</tyh-header>
-    <tyh-container>
-      <tyh-aside width="200px">Aside</tyh-aside>
-      <tyh-container>
-        <tyh-main>Main</tyh-main>
-        <tyh-footer>Footer</tyh-footer>
-      </tyh-container>
-    </tyh-container>
-  </tyh-container>
-
-  <tyh-container>
-    <tyh-aside width="200px">Aside</tyh-aside>
-    <tyh-container>
-      <tyh-header>Header</tyh-header>
-      <tyh-main>Main</tyh-main>
-    </tyh-container>
-  </tyh-container>
-
-  <tyh-container>
-    <tyh-aside width="200px">Aside</tyh-aside>
-    <tyh-container>
-      <tyh-header>Header</tyh-header>
-      <tyh-main>Main</tyh-main>
-      <tyh-footer>Footer</tyh-footer>
-    </tyh-container>
-  </tyh-container>
+::: details 显示代码
 
 ```html
 <template>
@@ -160,6 +162,8 @@
   }
 </style>
 ```
+
+:::
 
 ## Attributes
 

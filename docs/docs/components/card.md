@@ -4,9 +4,9 @@
 
 卡片的基础用法
 
-title 自定义卡片的主标题
+`title` 自定义卡片的主标题
 
-subtitle 自定义卡片的副标题
+`subtitle` 自定义卡片的副标题
 
 <tyh-card>
   <template v-slot:title>主标题</template>
@@ -16,6 +16,8 @@ subtitle 自定义卡片的副标题
   <p>这是内容部分3</p>
   <p>这是内容部分4</p>
 </tyh-card>
+
+::: details 显示代码
 
 ```html
 <tyh-card>
@@ -27,15 +29,21 @@ subtitle 自定义卡片的副标题
   <p>这是内容部分4</p>
 </tyh-card>
 ```
+
+:::
 
 ## 简约卡片
 
+`simple` 可以配置简约的卡片
+
 <tyh-card simple>
   <p>这是内容部分1</p>
   <p>这是内容部分2</p>
   <p>这是内容部分3</p>
   <p>这是内容部分4</p>
 </tyh-card>
+
+::: details 显示代码
 
 ```html
 <tyh-card simple>
@@ -46,9 +54,11 @@ subtitle 自定义卡片的副标题
 </tyh-card>
 ```
 
+:::
+
 ## 阴影显示时机
 
-shadow 属性可以配置阴影显示时机
+`shadow` 属性可以配置阴影显示时机
 
 <tyh-card class="tyh-card-item" shadow="always">
   <template v-slot:title>主标题</template>
@@ -67,6 +77,8 @@ shadow 属性可以配置阴影显示时机
   <template v-slot:subtitle>副标题</template>
   <p>从不显示</p>
 </tyh-card>
+
+::: details 显示代码
 
 ```html
 <tyh-card shadow="always">
@@ -87,6 +99,8 @@ shadow 属性可以配置阴影显示时机
   <p>从不显示</p>
 </tyh-card>
 ```
+
+:::
 
 ## Attributes
 
