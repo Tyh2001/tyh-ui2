@@ -55,3 +55,7 @@ createApp(App).use(tyhUi2).mount('#app')
 - [更新日志](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
 - 项目的安装和贡献请参考[贡献指南](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md)。
 - 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md)。
+
+## 非常感谢:sparkling_heart:
+
+感谢所有已经为 `tyh-ui` [做出贡献的人](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！
