@@ -9,4 +9,4 @@ export const nav = [
     activeMatch: '^/components/',
     link: '/components/button'
   }
-] as const
+]

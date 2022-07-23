@@ -1,16 +1,13 @@
-import FightingDesign from '@tyh-ui2/components'
+import DefaultTheme from 'vitepress/theme'
+// import tyhUi from '@tyh-ui2/components'
+import tyhUi from 'tyh-ui2'
 import '@tyh-ui2/style'
 import './style/md.scss'
 import './style/vitepress.scss'
-import { VPTheme } from '../../../src/index'
-import { h } from 'vue'
 
 export default {
-  ...VPTheme,
+  ...DefaultTheme,
   enhanceApp({ app }) {
-    app.use(FightingDesign)
-  },
-  Layout() {
-    return h(VPTheme.Layout, null, {})
+    app.use(tyhUi)
   }
 }

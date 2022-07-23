@@ -86,4 +86,4 @@ export const sidebar = {
     //   items: []
     // }
   ]
-} as const
+}

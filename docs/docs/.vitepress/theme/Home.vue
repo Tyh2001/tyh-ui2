@@ -53,7 +53,6 @@
 
 <script setup>
   // import { version } from '../tyhUi'
-  import Footer from './Footer.vue'
 </script>
 
 <style scoped>
