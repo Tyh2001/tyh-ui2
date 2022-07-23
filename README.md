@@ -58,4 +58,4 @@ createApp(App).use(tyhUi2).mount('#app')
 
 ## Thank a lot:sparkling_heart:
 
-Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！ to `tyh-ui`!
+Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！to `tyh-ui`!
