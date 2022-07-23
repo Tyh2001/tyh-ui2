@@ -4,40 +4,50 @@
 
 头像的基本使用
 
-src 属性可以添加图片路径
+`src` 属性可以添加图片路径
 
-size 可以配置头像大小
+`size` 可以配置头像大小
 
 <tyh-avatar :size="10" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"/>
+
+::: details 显示代码
 
 ```html
 <tyh-avatar :size="10" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
+:::
+
 ## 配置圆角
 
-round 属性配置头像的圆角
+`round` 属性配置头像的圆角
 
 <tyh-avatar round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
+
+::: details 显示代码
 
 ```html
 <tyh-avatar round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
+:::
+
 ## 如何适应容器框
 
-fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+`fit` 属性配置头像如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
 <div class="fitBox">
-    <div class="item" v-for="fit in fits" :key="fit">
-      <span class="text">{{ fit }}</span>
-      <tyh-avatar
-        round
-        src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
-        :fit="fit"
-      />
-    </div>
+  <div class="item" v-for="fit in fits" :key="fit">
+    <span class="text">{{ fit }}</span>
+    <tyh-avatar
+      round
+      src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"
+      :fit="fit"
+    />
   </div>
+</div>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -58,24 +68,32 @@ fit 属性配置头像如何适应到容器框，同原生 [object-fit](https://
 </script>
 ```
 
+:::
+
 ## 配置边框
 
-border 属性配置头像的边框
+`border` 属性配置头像的边框
 
 <tyh-avatar border src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 <tyh-avatar border round  src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg"/>
+
+::: details 显示代码
 
 ```html
 <tyh-avatar border src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 <tyh-avatar border round src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
+:::
+
 ## 加载失败
 
-errorIcon 属性配置加载失败的 icon
+`errorIcon` 属性配置加载失败的 `icon`
 
 <tyh-avatar src="https://tianyuhao.cn2/v3/assets/giraffe.jpg" />
 <tyh-avatar errorIcon="tyh-ui-githublogo" src="https://tianyuhao.cn2/v3/assets/giraffe.jpg"/>
+
+::: details 显示代码
 
 ```html
 <tyh-avatar src="https://tianyuhao.cn2/v3/assets/giraffe.jpg" />
@@ -84,6 +102,8 @@ errorIcon 属性配置加载失败的 icon
   src="https://tianyuhao.cn2/v3/assets/giraffe.jpg"
 />
 ```
+
+:::
 
 ## Attributes
 

@@ -4,9 +4,11 @@
 
 日历的基本使用
 
-v-model 绑定一个日期
+`v-model` 绑定一个日期
 
 <tyh-calendar v-model="value" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -19,14 +21,18 @@ v-model 绑定一个日期
 </script>
 ```
 
+:::
+
 ## 定制大小
 
-cellWidth 属性可以配置日期单元格的宽度
+`cellWidth` 属性可以配置日期单元格的宽度
 
 最小宽度为 28，如果小于 28 则按照 28 计算
 
 <tyh-calendar v-model="value" :cellWidth="70" />
 <tyh-calendar v-model="value" :cellWidth="10" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -39,6 +45,8 @@ cellWidth 属性可以配置日期单元格的宽度
   const value = ref(new Date())
 </script>
 ```
+
+:::
 
 ## Attributes
 

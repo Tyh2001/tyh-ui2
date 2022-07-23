@@ -6,19 +6,27 @@
 
 <tyh-back-top>Top</tyh-back-top>
 
+::: details 显示代码
+
 ```html
 <tyh-back-top>Top</tyh-back-top>
 ```
 
+:::
+
 ## 位置偏移
 
-bottom 和 right 属性可以配置距离右边和下边的距离
+`bottom` 和 `right` 属性可以配置距离右边和下边的距离
 
 <tyh-backTop bottom="150px" right="120px">Go</tyh-backTop>
+
+::: details 显示代码
 
 ```html
 <tyh-backTop bottom="150px" right="120px">Go</tyh-backTop>
 ```
+
+:::
 
 ## 插入 Icon
 
@@ -26,11 +34,15 @@ bottom 和 right 属性可以配置距离右边和下边的距离
   <tyh-icon icon="tyh-ui-top" color="#409eff" />
 </tyh-backTop>
 
+::: details 显示代码
+
 ```html
 <tyh-backTop bottom="100px">
   <tyh-icon icon="tyh-ui-top" color="#409eff" />
 </tyh-backTop>
 ```
+
+:::
 
 ## Attributes
 
