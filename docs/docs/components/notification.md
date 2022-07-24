@@ -12,13 +12,15 @@ import { Notification } from 'tyh-ui2'
 
 通知的基本使用
 
-通过引入 Notification 方法，接收一个对象
+通过引入 `Notification` 方法，接收一个对象
 
-title 属性可以定义标题
+`title` 属性可以定义标题
 
-message 属性可以定义内容
+`message` 属性可以定义内容
 
 <tyh-button type="primary" @click="open1">展示通知</tyh-button>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -27,7 +29,7 @@ message 属性可以定义内容
 
 <script setup>
   import { Notification } from 'tyh-ui2'
-  function open1() {
+  const open1 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案'
@@ -36,14 +38,18 @@ message 属性可以定义内容
 </script>
 ```
 
+:::
+
 ## 不同类型的
 
-type 属性可以配置不同类型的通知
+`type` 属性可以配置不同类型的通知
 
 <tyh-button type="primary" @click="open2">主要通知</tyh-button>
 <tyh-button type="success" @click="open3">成功通知</tyh-button>
 <tyh-button type="danger" @click="open4">危险通知</tyh-button>
 <tyh-button type="warning" @click="open5">警告通知</tyh-button>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -55,28 +61,28 @@ type 属性可以配置不同类型的通知
 
 <script setup>
   import { Notification } from 'tyh-ui2'
-  function open2() {
+  const open2 = () => {
     Notification({
       title: '主要提示',
       message: '这是一个主要提示',
       type: 'primary'
     })
   }
-  function open3() {
+  const open3 = () => {
     Notification({
       title: '成功提示',
       message: '这是一个成功提示',
       type: 'success'
     })
   }
-  function open4() {
+  const open4 = () => {
     Notification({
       title: '危险提示',
       message: '这是一个危险提示',
       type: 'danger'
     })
   }
-  function open5() {
+  const open5 = () => {
     Notification({
       title: '警告提示',
       message: '这是一个警告提示',
@@ -86,14 +92,18 @@ type 属性可以配置不同类型的通知
 </script>
 ```
 
+:::
+
 ## 不同的弹出位置
 
-position 属性可以配置不同类型的通知
+`position` 属性可以配置不同类型的通知
 
 <tyh-button type="primary" @click="open6">上左</tyh-button>
 <tyh-button type="primary" @click="open7">上右</tyh-button>
 <tyh-button type="primary" @click="open8">下左</tyh-button>
 <tyh-button type="primary" @click="open9">下右</tyh-button>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -105,28 +115,28 @@ position 属性可以配置不同类型的通知
 
 <script setup>
   import { Notification } from 'tyh-ui2'
-  function open6() {
+  const open6 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'top-left'
     })
   }
-  function open7() {
+  const open7 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'top-right'
     })
   }
-  function open8() {
+  const open8 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'bottom-left'
     })
   }
-  function open9() {
+  const open9 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
@@ -136,11 +146,15 @@ position 属性可以配置不同类型的通知
 </script>
 ```
 
+:::
+
 ## 自定义时长
 
-time 属性可以自定义通知展示的时长
+`time` 属性可以自定义通知展示的时长
 
 <tyh-button type="primary" @click="open10">4000 毫秒后自动关闭</tyh-button>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -149,7 +163,7 @@ time 属性可以自定义通知展示的时长
 
 <script setup>
   import { Notification } from 'tyh-ui2'
-  function open10() {
+  const open10 = () => {
     Notification({
       title: '提示',
       message: '4000 毫秒后自动关闭',
@@ -158,6 +172,8 @@ time 属性可以自定义通知展示的时长
   }
 </script>
 ```
+
+:::
 
 ## Attributes
 
@@ -172,69 +188,69 @@ time 属性可以自定义通知展示的时长
 
 <script setup>
   import { Notification } from '@tyh-ui2/components'
-  function open1() {
+  const open1 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案'
     })
   }
-  function open2() {
+  const open2 = () => {
     Notification({
       title: '主要提示',
       message: '这是一个主要提示',
       type: 'primary'
     })
   }
-  function open3() {
+  const open3 = () => {
     Notification({
       title: '成功提示',
       message: '这是一个成功提示',
       type: 'success'
     })
   }
-  function open4() {
+  const open4 = () => {
     Notification({
       title: '危险提示',
       message: '这是一个危险提示',
       type: 'danger'
     })
   }
-  function open5() {
+  const open5 = () => {
     Notification({
       title: '警告提示',
       message: '这是一个警告提示',
       type: 'warning'
     })
   }
-  function open6() {
+  const open6 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'top-left'
     })
   }
-  function open7() {
+  const open7 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'top-right'
     })
   }
-  function open8() {
+  const open8 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'bottom-left'
     })
   }
-  function open9() {
+  const open9 = () => {
     Notification({
       title: '提示',
       message: '这里是提示的文案',
       position: 'bottom-right'
     })
   }
-   function open10() {
+   const open10 = () => {
     Notification({
       title: '提示',
       message: '4000 毫秒后自动关闭',
@@ -242,3 +258,9 @@ time 属性可以自定义通知展示的时长
     })
   }
 </script>
+
+<style scoped>
+.tyh-button {
+  margin: 5px;
+}
+</style>

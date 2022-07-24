@@ -11,6 +11,8 @@
   <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
 
+::: details 显示代码
+
 ```html
 <tyh-menu>
   <tyh-menu-item>首页</tyh-menu-item>
@@ -19,10 +21,12 @@
   <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
 ```
+
+:::
 
 ## 主题配置
 
-通过 theme 属性可以配置主题
+通过 `theme` 属性可以配置主题
 
 <tyh-menu theme="dark">
   <tyh-menu-item>首页</tyh-menu-item>
@@ -37,6 +41,8 @@
   <tyh-menu-item>设置</tyh-menu-item>
   <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
+
+::: details 显示代码
 
 ```html
 <tyh-menu theme="dark">
@@ -53,10 +59,12 @@
   <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
 ```
+
+:::
 
 ## 禁用状态
 
-通过 prohibit 属性可以配置子组件链接是否禁用
+通过 `prohibit` 属性可以配置子组件链接是否禁用
 
 <tyh-menu>
   <tyh-menu-item prohibit url="/home">首页</tyh-menu-item>
@@ -64,6 +72,8 @@
   <tyh-menu-item>设置</tyh-menu-item>
   <tyh-menu-item>回收站</tyh-menu-item>
 </tyh-menu>
+
+::: details 显示代码
 
 ```html
 <tyh-menu>
@@ -74,11 +84,13 @@
 </tyh-menu>
 ```
 
+:::
+
 ## 不同排列状态
 
-mode 属性可以配置不同的排列状态
+`mode` 属性可以配置不同的排列状态
 
-collapse 属性可以配置是否折叠导航栏，请注意，在折叠的导航栏中，title 必须使用 `span` 标签进行包裹才能正常工作。
+`collapse` 属性可以配置是否折叠导航栏，请注意，在折叠的导航栏中，`title` 必须使用 `span` 标签进行包裹才能正常工作。
 
 <tyh-switch v-model="isCollapse" />
 
@@ -119,6 +131,8 @@ collapse 属性可以配置是否折叠导航栏，请注意，在折叠的导�
     <span>回收站</span>
   </tyh-menu-item>
 </tyh-menu>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -169,11 +183,13 @@ collapse 属性可以配置是否折叠导航栏，请注意，在折叠的导�
 </script>
 ```
 
+:::
+
 ## 左右插槽
 
-left 插槽可以定制左侧自定义内容
+`left` 插槽可以定制左侧自定义内容
 
-right 插槽可以定制右侧自定义内容
+`right` 插槽可以定制右侧自定义内容
 
 <tyh-menu>
   <template v-slot:left>
@@ -191,6 +207,8 @@ right 插槽可以定制右侧自定义内容
     <tyh-button style="margin:0" simple>右侧插槽</tyh-button>
   </template>
 </tyh-menu>
+
+::: details 显示代码
 
 ```html
 <tyh-menu>
@@ -211,9 +229,9 @@ right 插槽可以定制右侧自定义内容
 </tyh-menu>
 ```
 
-## Attributes
+:::
 
-tyh-menu
+## Tyh-menu Attributes
 
 | 参数            | 说明             | 类型    | 可选值                | 默认值     |
 | --------------- | ---------------- | ------- | --------------------- | ---------- |
@@ -224,7 +242,7 @@ tyh-menu
 | textColor       | 自定义主题颜色   | string  | ——                    | ——         |
 | collapse        | 是否折叠         | boolean | ——                    | false      |
 
-tyh-menu-item
+## Tyh-menu-item Attributes
 
 | 参数     | 说明                           | 类型    | 可选值 | 默认值 |
 | -------- | ------------------------------ | ------- | ------ | ------ |

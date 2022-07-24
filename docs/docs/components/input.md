@@ -6,6 +6,8 @@
 
 <tyh-input v-model="text1" />
 
+::: details 显示代码
+
 ```html
 <template>
   <tyh-input v-model="text1" />
@@ -17,9 +19,11 @@
 </script>
 ```
 
+:::
+
 ## 输入框类型
 
-type 属性可以规定文本框类型
+`type` 属性可以规定文本框类型
 
 <tyh-input type="text" v-model="text2" />
 <tyh-input type="password" v-model="text3" />
@@ -39,12 +43,14 @@ type 属性可以规定文本框类型
 
 ## 不同尺寸
 
-size 属性可以配置文本框尺寸
+`size` 属性可以配置文本框尺寸
 
 <tyh-input size="large" v-model="text4" />
 <tyh-input size="medium" v-model="text5" />
 <tyh-input size="small" v-model="text6" />
 <tyh-input size="mini" v-model="text7" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -63,11 +69,15 @@ size 属性可以配置文本框尺寸
 </script>
 ```
 
+:::
+
 ## 可清空
 
-clear 属性可以配置带有清空按钮的文本框
+`clear` 属性可以配置带有清空按钮的文本框
 
 <tyh-input v-model="text8" clear />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -80,11 +90,15 @@ clear 属性可以配置带有清空按钮的文本框
 </script>
 ```
 
+:::
+
 ## 带有 icon
 
-icon 属性可以配置文本框带有其他图标，直接传递 icon 的名字传递即可
+`icon` 属性可以配置文本框带有其他图标，直接传递 `icon` 的名字传递即可
 
 <tyh-input v-model="text9" icon="tyh-ui-electronics" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -97,11 +111,15 @@ icon 属性可以配置文本框带有其他图标，直接传递 icon 的名字
 </script>
 ```
 
+:::
+
 ## 禁用状态
 
-disabled 属性可以配置文本框禁用状态
+`disabled` 属性可以配置文本框禁用状态
 
 <tyh-input v-model="text10" disabled />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -114,11 +132,15 @@ disabled 属性可以配置文本框禁用状态
 </script>
 ```
 
+:::
+
 ## 查看密码
 
-showPassword 属性可以配置查看密码按钮，showPassword 优先级大于 clear
+`showPassword` 属性可以配置查看密码按钮，`showPassword` 优先级大于 `clear`
 
 <tyh-input v-model="text11" type="password" showPassword />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -130,6 +152,8 @@ showPassword 属性可以配置查看密码按钮，showPassword 优先级大于
   const text11 = ref('')
 </script>
 ```
+
+:::
 
 ## Attributes
 
@@ -169,3 +193,9 @@ showPassword 属性可以配置查看密码按钮，showPassword 优先级大于
   const text10 = ref('')
   const text11 = ref('')
 </script>
+
+<style scoped>
+.tyh-input {
+  margin: 5px;
+}
+</style>

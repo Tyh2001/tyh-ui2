@@ -10,6 +10,8 @@
 <tyh-link url="" type="danger">链接四</tyh-link>
 <tyh-link url="" type="warning">链接五</tyh-link>
 
+::: details 显示代码
+
 ```html
 <tyh-link url="">链接一</tyh-link>
 <tyh-link url="" type="primary">链接二</tyh-link>
@@ -18,15 +20,19 @@
 <tyh-link url="" type="warning">链接五</tyh-link>
 ```
 
+:::
+
 ## 带有下划线
 
-underline 属性可以配置带有下划线
+`underline` 属性可以配置带有下划线
 
 <tyh-link :underline="false">链接一</tyh-link>
 <tyh-link :underline="false" type="primary">链接二</tyh-link>
 <tyh-link :underline="false" type="success">链接三</tyh-link>
 <tyh-link :underline="false" type="danger">链接四</tyh-link>
 <tyh-link :underline="false" type="warning">链接五</tyh-link>
+
+::: details 显示代码
 
 ```html
 <tyh-link :underline="false">链接一</tyh-link>
@@ -35,16 +41,20 @@ underline 属性可以配置带有下划线
 <tyh-link :underline="false" type="danger">链接四</tyh-link>
 <tyh-link :underline="false" type="warning">链接五</tyh-link>
 ```
+
+:::
 
 ## 禁用链接
 
-prohibit 属性可以禁用链接标签
+`prohibit` 属性可以禁用链接标签
 
 <tyh-link url="" prohibit>禁用链接一</tyh-link>
 <tyh-link url="" prohibit type="primary">禁用链接二</tyh-link>
 <tyh-link url="" prohibit type="success">禁用链接三</tyh-link>
 <tyh-link url="" prohibit type="danger">禁用链接四</tyh-link>
 <tyh-link url="" prohibit type="warning">禁用链接五</tyh-link>
+
+::: details 显示代码
 
 ```html
 <tyh-link url="" prohibit>禁用链接一</tyh-link>
@@ -53,16 +63,20 @@ prohibit 属性可以禁用链接标签
 <tyh-link url="" prohibit type="danger">禁用链接四</tyh-link>
 <tyh-link url="" prohibit type="warning">禁用链接五</tyh-link>
 ```
+
+:::
 
 ## 带有 Icon
 
-icon 属性可以配置 icon
+`icon` 属性可以配置 `icon`
 
 <tyh-link url="" icon="tyh-ui-favorite-filling">链接一</tyh-link>
 <tyh-link url="" icon="tyh-ui-attachment" type="primary">链接二</tyh-link>
 <tyh-link url="" icon="tyh-ui-customer-service" type="success">链接三</tyh-link>
 <tyh-link url="" icon="tyh-ui-filter" type="danger">链接四</tyh-link>
 <tyh-link url="" icon="tyh-ui-good" type="warning">链接五</tyh-link>
+
+::: details 显示代码
 
 ```html
 <tyh-link url="" icon="tyh-ui-favorite-filling">链接一</tyh-link>
@@ -71,6 +85,8 @@ icon 属性可以配置 icon
 <tyh-link url="" icon="tyh-ui-filter" type="danger">链接四</tyh-link>
 <tyh-link url="" icon="tyh-ui-good" type="warning">链接五</tyh-link>
 ```
+
+:::
 
 ## Attributes
 
@@ -82,3 +98,9 @@ icon 属性可以配置 icon
 | target    | 以新的窗口打开 | string  | 同原生 target 属性 \_blank           | ——     |
 | icon      | icon           | string  | ——                                   | ——     |
 | prohibit  | 禁用状态       | boolean | ——                                   | false  |
+
+<style scoped>
+.tyh-link {
+  margin: 5px;
+}
+</style>

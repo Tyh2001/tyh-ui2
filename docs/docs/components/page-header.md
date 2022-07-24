@@ -2,13 +2,13 @@
 
 ## 基本使用
 
-PageHeader 的基本使用
+`title` 属性可以配置页头的标题
 
-title 属性可以配置页头的标题
-
-content 属性可以配置页头的内容
+`content` 属性可以配置页头的内容
 
 <tyh-page-header title="返回上一层" content="详情页面" @back="goBack" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -19,6 +19,8 @@ content 属性可以配置页头的内容
   const goBack = () => console.log('goBack')
 </script>
 ```
+
+:::
 
 ## Attributes
 

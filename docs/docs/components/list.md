@@ -4,11 +4,13 @@
 
 列表的基本使用
 
-content 属性可以绑定需要展示的数组元素
+`content` 属性可以绑定需要展示的数组元素
 
-keys 属性可以绑定数组中每个元素的键值
+`keys` 属性可以绑定数组中每个元素的键值
 
 <tyh-list :content="arr" keys="name" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -29,13 +31,17 @@ keys 属性可以绑定数组中每个元素的键值
 </script>
 ```
 
+:::
+
 ## 配置表头和页脚
 
-header 表头内容
+`header` 表头内容
 
-footer 页脚内容
+`footer` 页脚内容
 
 <tyh-list :content="arr" keys="name" header="这是头部" footer="这是页脚" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -56,13 +62,17 @@ footer 页脚内容
 </script>
 ```
 
+:::
+
 ## 斑马纹
 
-zebra 是否显示斑马纹
+`zebra` 是否显示斑马纹
 
-num 是否显示序号
+`num` 是否显示序号
 
 <tyh-list zebra num :content="arr" keys="name" header="这是头部" footer="这是页脚"  />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -90,11 +100,15 @@ num 是否显示序号
 </script>
 ```
 
+:::
+
 ## hover 状态展示投影
 
-hoverShow 配置 Hover 状态展示投影
+`hoverShow` 配置 `Hover` 状态展示投影
 
 <tyh-list hoverShow :content="arr" keys="name" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -114,6 +128,8 @@ hoverShow 配置 Hover 状态展示投影
   ]
 </script>
 ```
+
+:::
 
 ## Attributes
 

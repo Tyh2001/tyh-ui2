@@ -14,6 +14,8 @@
   </tyh-option>
 </tyh-select>
   
+::: details 显示代码
+
 ```html
 <template>
   <tyh-select v-model="value" placeholder="请选择">
@@ -53,19 +55,18 @@
     }
   ]
 </script>
-
 ```
 
-## Attributes
+:::
 
-tyh-select
+## Tyh-select Attributes
 
 | 参数    | 说明      | 类型   | 可选值 | 默认值 |
 | ------- | --------- | ------ | ------ | ------ |
 | v-model | 绑定值    | string | ——     | ——     |
 | name    | 原生 name | string | ——     | ——     |
 
-tyh-option
+## Tyh-option Attributes
 
 | 参数  | 说明       | 类型   | 可选值 | 默认值 |
 | ----- | ---------- | ------ | ------ | ------ |
@@ -98,4 +99,7 @@ tyh-option
     }
   ]
 </script>
+
+```
+
 ```

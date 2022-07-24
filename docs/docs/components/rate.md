@@ -2,11 +2,11 @@
 
 ## 基本使用
 
-评分的基本使用
-
-v-model 绑定评分值
+`v-model` 绑定评分值
 
 <tyh-rate v-model="value1" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -19,14 +19,18 @@ v-model 绑定评分值
 </script>
 ```
 
+:::
+
 ## 配置颜色
 
-color 属性可以配置选中的 icon 颜色
+`color` 属性可以配置选中的 `icon` 颜色
 
-voidColor 属性可以配置未选中的 icon 颜色
+`voidColor` 属性可以配置未选中的 `icon` 颜色
 
 <tyh-rate v-model="value2" />
 <tyh-rate v-model="value2" color="red" voidColor="#eee" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -40,11 +44,13 @@ voidColor 属性可以配置未选中的 icon 颜色
 </script>
 ```
 
+:::
+
 ## 辅助文字
 
-showText 属性可以配置是否显示辅助文字
+`showText` 属性可以配置是否显示辅助文字
 
-SayText 属性可以配置辅助文字数组
+`SayText` 属性可以配置辅助文字数组
 
 <tyh-rate v-model="value3" showText />
 <tyh-rate
@@ -52,6 +58,8 @@ SayText 属性可以配置辅助文字数组
   showText
   :sayText="['1星', '2星', '3星', '4星', '5星']"
 />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -68,6 +76,8 @@ SayText 属性可以配置辅助文字数组
   const value3 = ref(2)
 </script>
 ```
+
+:::
 
 ## Attributes
 

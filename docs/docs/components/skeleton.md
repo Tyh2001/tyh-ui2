@@ -8,55 +8,71 @@
 <tyh-skeleton />
 <tyh-skeleton />
     
+::: details 显示代码
+
 ```html
 <tyh-skeleton />
 <tyh-skeleton />
 <tyh-skeleton />
 ```
+
+:::
 
 ## 圆角的
 
-round 属性可以配置圆角
+`round` 属性可以配置圆角
 
 <tyh-skeleton round />
 <tyh-skeleton round />
 <tyh-skeleton round />
+
+::: details 显示代码
 
 ```html
 <tyh-skeleton round />
 <tyh-skeleton round />
 <tyh-skeleton round />
 ```
+
+:::
 
 ## 自定义宽高
 
-width 属性可以配置宽度
+`width` 属性可以配置宽度
 
-height 属性可以配置高度
+`height` 属性可以配置高度
 
 <tyh-skeleton width="75%" />
 <tyh-skeleton width="150px" />
 <tyh-skeleton width="100px" height="100px" />
+
+::: details 显示代码
 
 ```html
 <tyh-skeleton width="75%" />
 <tyh-skeleton width="150px" />
 <tyh-skeleton width="100px" height="100px" />
 ```
+
+:::
 
 ## 启用动画
 
-animation 属性可以配置显示动画
+`animation` 属性可以配置显示动画
 
 <tyh-skeleton animation />
 <tyh-skeleton animation />
 <tyh-skeleton animation />
+
+::: details 显示代码
 
 ```html
 <tyh-skeleton animation />
 <tyh-skeleton animation />
 <tyh-skeleton animation />
 ```
+
+:::
 
 ## Attributes
 
