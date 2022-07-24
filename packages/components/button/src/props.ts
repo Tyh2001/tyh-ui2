@@ -27,5 +27,6 @@ export const Props = {
   },
   square: Boolean,
   simple: Boolean,
-  loading: Boolean
+  loading: Boolean,
+  block: Boolean
 } as const

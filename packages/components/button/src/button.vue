@@ -1,15 +1,15 @@
 <template>
-  <button :class="[...isClass, ...typeClass]" :disabled="disabled || loading">
+  <button :class="classList" :disabled="disabled || loading" :style="{ color }">
     <i
       v-if="loading || icon"
       :class="['tyh-icon', loading ? 'tyh-ui-loading' : icon]"
       :style="{ color }"
     />
-    <span v-if="$slots.default" :style="{ color }"><slot /></span>
+    <slot />
   </button>
 </template>
 
-<script lang="ts" setup>
+<script lang="ts" setup name="TyhButton">
   import { computed } from 'vue'
   import { Props } from './props'
   import { THEME } from '@tyh-ui2/utils'
@@ -21,26 +21,18 @@
     return prop.type === 'default' || !prop.type ? '#333' : '#fff'
   })
 
-  const isClass = computed((): (string | object)[] => {
+  const classList = computed((): (string | object)[] => {
     return [
       'tyh-button',
+      `tyh-button-${prop.type}`,
       {
-        [`tyh-button-size-${prop.size}`]: prop.size,
+        [`tyh-button-${prop.size}`]: prop.size,
         'tyh-button-round': prop.round,
-        'tyh-button-square': prop.square
+        'tyh-button-square': prop.square,
+        'tyh-button-simple': prop.simple,
+        'tyh-button-disabled': prop.disabled || prop.loading,
+        'tyh-button-block': prop.block
       }
-    ]
-  })
-
-  const typeClass = computed((): string[] => {
-    return [
-      prop.simple
-        ? prop.disabled || prop.loading
-          ? `tyh-button-simple-disabled-${prop.type}`
-          : `tyh-button-simple-${prop.type}`
-        : prop.disabled || prop.loading
-        ? `tyh-button-disabled-${prop.type}`
-        : `tyh-button-${prop.type}`
     ]
   })
 </script>

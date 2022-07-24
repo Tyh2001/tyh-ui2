@@ -15,6 +15,7 @@ export default defineConfig({
     })
   ],
   build: {
+    outDir: resolve(__dirname, 'dist/es'),
     lib: {
       entry: resolve(__dirname, 'packages/tyh-ui2'),
       name: 'tyhUi2',

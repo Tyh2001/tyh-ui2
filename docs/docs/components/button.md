@@ -258,6 +258,7 @@
 | size     | 按钮尺寸       | string  | large / small / mini                           | ——      |
 | square   | 方形按钮       | boolean | ——                                             | false   |
 | loading  | loading 状态   | boolean | ——                                             | false   |
+| block    | 是否为块级元素 | boolean | ——                                             | false   |
 
 <style scoped>
 .tyh-button-group,

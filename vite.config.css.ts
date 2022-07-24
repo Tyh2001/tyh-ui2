@@ -7,6 +7,7 @@ const input = resolve(__dirname, 'packages/style/src')
 export default defineConfig({
   build: {
     assetsDir: 'theme',
+    outDir: resolve(__dirname, 'dist/'),
     rollupOptions: {
       input: readdirSync(input).map((name) => {
         return `${input}/${name}`

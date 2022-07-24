@@ -36,183 +36,198 @@ $defaultActive: #dbdbdb;
     animation: loading 1.2s linear infinite;
     -webkit-animation: loading 1.2s linear infinite;
   }
-}
 
-// 基础按钮
-.tyh-button-primary {
-  background: $primary;
-
-  &:hover {
-    background: $primaryHover;
-    opacity: 0.8;
-    box-shadow: 0 0 3px $primaryHover;
+  .tyh-icon {
+    margin-right: 5px;
   }
 
-  &:active {
-    background: $primaryActive;
-  }
-}
+  // 基础按钮
+  &.tyh-button-primary {
+    background: $primary;
 
-.tyh-button-success {
-  background: $success;
+    &:hover {
+      background: $primaryHover;
+      opacity: 0.8;
+      box-shadow: 0 0 3px $primaryHover;
+    }
 
-  &:hover {
-    background: $successHover;
-    box-shadow: 0 0 3px $successHover;
-  }
+    &:active {
+      background: $primaryActive;
+    }
 
-  &:active {
-    background: $successActive;
-  }
-}
-
-.tyh-button-danger {
-  background: $danger;
-
-  &:hover {
-    background: $dangerHover;
-    box-shadow: 0 0 3px $dangerHover;
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $primary;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  &:active {
-    background: $dangerActive;
-  }
-}
+  &.tyh-button-success {
+    background: $success;
 
-.tyh-button-warning {
-  background: $warning;
+    &:hover {
+      background: $successHover;
+      box-shadow: 0 0 3px $successHover;
+    }
 
-  &:hover {
-    background: $warningHover;
-    box-shadow: 0 0 3px $warningHover;
-  }
+    &:active {
+      background: $successActive;
+    }
 
-  &:active {
-    background: $warningActive;
-  }
-}
-
-.tyh-button-,
-.tyh-button-default {
-  background: $default;
-  color: #333;
-
-  &:hover {
-    background: $defaultHover;
-    box-shadow: 0 0 3px $defaultHover;
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $success;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  &:active {
-    background: $defaultActive;
-  }
-}
+  &.tyh-button-danger {
+    background: $danger;
 
-// 圆角按钮
-.tyh-button-round {
-  border-radius: 30px;
-}
+    &:hover {
+      background: $dangerHover;
+      box-shadow: 0 0 3px $dangerHover;
+    }
 
-// 简约按钮
-.tyh-button-simple-primary,
-.tyh-button-simple-success,
-.tyh-button-simple-danger,
-.tyh-button-simple-warning,
-.tyh-button-simple-default {
-  background: $default;
+    &:active {
+      background: $dangerActive;
+    }
 
-  &:hover {
-    background: $defaultHover;
-    box-shadow: 0 0 3px $defaultHover;
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $danger;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  &:active {
-    background: $defaultActive;
-  }
-}
+  &.tyh-button-warning {
+    background: $warning;
 
-// 普通按钮禁用状态
-.tyh-button-disabled-primary,
-.tyh-button-disabled-success,
-.tyh-button-disabled-danger,
-.tyh-button-disabled-warning,
-.tyh-button-disabled-default {
-  opacity: 0.6;
-  cursor: no-drop;
-}
+    &:hover {
+      background: $warningHover;
+      box-shadow: 0 0 3px $warningHover;
+    }
 
-.tyh-button-disabled-primary {
-  background: $primary;
-}
+    &:active {
+      background: $warningActive;
+    }
 
-.tyh-button-disabled-success {
-  background: $success;
-}
-
-.tyh-button-disabled-danger {
-  background: $danger;
-}
-
-.tyh-button-disabled-warning {
-  background: $warning;
-}
-
-.tyh-button-disabled-default {
-  background: $default;
-}
-
-// 简约按钮禁用
-.tyh-button-simple-disabled-primary,
-.tyh-button-simple-disabled-success,
-.tyh-button-simple-disabled-danger,
-.tyh-button-simple-disabled-warning,
-.tyh-button-simple-disabled-default {
-  opacity: 0.6;
-  cursor: no-drop;
-}
-
-// 按钮大小
-.tyh-button-size-large {
-  width: 100%;
-}
-
-.tyh-button-size-small {
-  min-width: 30px;
-  padding: 0 17px;
-  height: 30px;
-}
-
-.tyh-button-size-mini {
-  min-width: 20px;
-  padding: 0 12px;
-  height: 25px;
-}
-
-.tyh-button-square {
-  border-radius: 0;
-}
-
-.tyh-button [class*='tyh-icon'] + span {
-  margin-left: 5px;
-}
-
-@keyframes loading {
-  0% {
-    transform: rotate(0deg);
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $warning;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  25% {
-    transform: rotate(90deg);
+  &.tyh-button-,
+  &.tyh-button-default {
+    background: $default;
+    color: #333;
+
+    &:hover {
+      background: $defaultHover;
+      box-shadow: 0 0 3px $defaultHover;
+    }
+
+    &:active {
+      background: $defaultActive;
+    }
+
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $default;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  50% {
-    transform: rotate(180deg);
+  // 圆角按钮
+  &.tyh-button-round {
+    border-radius: 30px;
   }
 
-  75% {
-    transform: rotate(270deg);
+  // 简约按钮
+  &.tyh-button-simple {
+    background: $default;
+
+    &:hover {
+      background: $defaultHover;
+      box-shadow: 0 0 3px $defaultHover;
+    }
+
+    &:active {
+      background: $defaultActive;
+    }
+
+    // 禁用状态
+    &.tyh-button-disabled:hover {
+      background: $default;
+      opacity: 0.6;
+      box-shadow: none;
+    }
   }
 
-  100% {
-    transform: rotate(360deg);
+  // 禁用状态
+  &.tyh-button-disabled {
+    opacity: 0.6;
+    cursor: no-drop;
+  }
+
+  // 按钮大小
+  &.tyh-button-large {
+    min-width: 50px;
+    padding: 0 27px;
+    height: 40px;
+    font-size: 15px;
+  }
+
+  &.tyh-button-small {
+    min-width: 30px;
+    padding: 0 17px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  &.tyh-button-mini {
+    min-width: 20px;
+    padding: 0 12px;
+    height: 25px;
+    font-size: 12px;
+  }
+
+  &.tyh-button-square {
+    border-radius: 0;
+  }
+
+  // 块级元素
+  &.tyh-button-block {
+    display: block;
+    width: 100%;
+  }
+
+  @keyframes loading {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    25% {
+      transform: rotate(90deg);
+    }
+
+    50% {
+      transform: rotate(180deg);
+    }
+
+    75% {
+      transform: rotate(270deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 }
