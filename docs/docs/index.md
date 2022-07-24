@@ -15,16 +15,15 @@ hero:
     - theme: alt
       text: GitHub
       link: https://github.com/Tyh2001/tyh-ui
+
+features:
+  - icon: 💡
+    title: 简洁至上
+    details: tyh-ui 整体非常简洁明了，虽没有很多高级的组件，但它是使用最简单的方式达到实用的效果。
+  - icon: ⚡️
+    title: 轻量容易
+    details: 使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手简单，像复制粘贴一样容易。
+  - icon: 🔑
+    title: 使用 TypeScript
+    details: 严格的 TypeScript 类型
 ---
-
-<!-- ---
-page: true
-sidebar: false
-title: Fighting Design
----
-
-<Home />
-
-<script setup>
-import Home from '/@theme/Home.vue'
-</script> -->
