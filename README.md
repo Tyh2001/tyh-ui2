@@ -1,5 +1,7 @@
 <p align="center">
-  <img height="160px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
+  <a href="https://tianyuhao.cn/v3">
+    <img height="160px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
+  </a>
 </p>
 
 <p align="center">
@@ -21,7 +23,7 @@
   </a>
 </p>
 
-## Introduction:bulb:
+## Introduction 💡
 
 A lightweight component library, based on vue3 + typescript, fully embraces vue3.
 
@@ -33,13 +35,13 @@ Tyh-ui is very concise and clear as a whole, although it does not have many adva
 
 Easy to use, simple configuration, clear directory, simple structure, lightweight components, easy to use, as easy as copy and paste.
 
-## Install:wrench:
+## Install 🔧
 
 ```shell
 npm i tyh-ui2
 ```
 
-## Quick Start:key:
+## Quick Start 🔑
 
 ```js
 import { createApp } from 'vue'
@@ -50,12 +52,12 @@ import 'tyh-ui2/style/index.css'
 createApp(App).use(tyhUi2).mount('#app')
 ```
 
-## About:page_facing_up:
+## About 📄
 
 - Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md).
 - For the installation and contribution of the project, please refer to [contributing](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md).
 - [Vulnerabilities](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md) can be reported here.
 
-## Thank a lot:sparkling_heart:
+## Thank a lot 💖
 
 Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！to `tyh-ui`!
