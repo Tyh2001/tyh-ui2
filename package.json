@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "start": "pnpm run -C start dev",
     "dev:docs": "pnpm run -C docs dev",
-    "build": "pnpm clean && pnpm build:css && vite build && pnpm build:lib && pnpm build:umd && pnpm build:theme",
+    "build": "pnpm clean && pnpm build:css && vite build && pnpm build:lib && pnpm build:umd && pnpm build:theme && pnpm move",
     "build:docs": "pnpm run -C docs build",
     "build:es": "vite build --config vite.config.ts",
     "build:theme": "vite build --config vite.config.theme.ts",

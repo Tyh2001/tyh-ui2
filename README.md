@@ -5,7 +5,7 @@
 </p>
 
 <p align="center">
-   English | <a href="https://github.com/Tyh2001/tyh-ui/blob/master/README_zh.md">Chinese</a> 
+  中文 | <a href="https://github.com/Tyh2001/tyh-ui/blob/master/README.en-US.md">English</a>
 </p>
 
 <p align="center">
@@ -18,46 +18,46 @@
   <a style="margin-left:15px;" href="https://tianyuhao.cn/v3">
     <img src="https://img.shields.io/badge/tyh--ui-docs-red" alt="docs">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/README_zh.md">
-    <img src="https://img.shields.io/badge/tyh--ui-README__zh-yellowgreen" alt="README_zh">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/README.md">
+    <img src="https://img.shields.io/badge/tyh--ui-README__en-yellowgreen">
   </a>
 </p>
 
-## Introduction 💡
+## 介绍 💡
 
-A lightweight component library, based on vue3 + typescript, fully embraces vue3.
+一个轻量级组件库，基于 vue3 + typescript，全面拥抱 vue3。
 
-> Simplicity first
+> 简洁至上
 
-Tyh-ui is very concise and clear as a whole, although it does not have many advanced components,But the results were achieved in a simple way.
+tyh-ui 整体非常简洁明了，虽没有很多高级的组件，但它是使用最简单的方式达到实用的效果。
 
-> Light weight and easy
+> 轻量容易
 
-Easy to use, simple configuration, clear directory, simple structure, lightweight components, easy to use, as easy as copy and paste.
+使用方便，配置简单，目录清晰，结构简单，组件轻量级，上手容易，像复制粘贴一样容易。
 
-## Install 🔧
+## 安装 🔧
 
 ```shell
 npm i tyh-ui2
 ```
 
-## Quick Start 🔑
+## 快速上手 🔑
 
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
 import tyhUi2 from 'tyh-ui2'
-import 'tyh-ui2/style/index.css'
+import 'tyh-ui2/dist/style.css'
 
 createApp(App).use(tyhUi2).mount('#app')
 ```
 
-## About 📄
+## 关于 📄
 
-- Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md).
-- For the installation and contribution of the project, please refer to [contributing](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md).
-- [Vulnerabilities](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md) can be reported here.
+- [更新日志](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md)中记录了每个版本的详细更改。
+- 项目的安装和贡献请参考[贡献指南](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md)。
+- 在这里可以[报告漏洞](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md)。
 
-## Thank a lot 💖
+## 非常感谢 💖
 
-Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！to `tyh-ui`!
+感谢所有已经为 `tyh-ui` [做出贡献的人](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！

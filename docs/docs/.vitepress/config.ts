@@ -5,7 +5,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Tyh Ui',
-  // base: '/v3/',
+  base: '/v3/',
   head: [
     [
       'link',

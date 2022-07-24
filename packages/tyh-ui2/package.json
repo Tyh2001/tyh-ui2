@@ -1,6 +1,6 @@
 {
   "name": "tyh-ui2",
-  "version": "4.0.0",
+  "version": "4.0.1",
   "description": "The next generation ui component library of tyh-ui is based on vue3 Version, fully embrace vue3.",
   "main": "./es/index.d.ts",
   "module": "./lib/index.d.ts",
