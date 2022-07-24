@@ -2,13 +2,13 @@
 
 ## 基本使用
 
-表格的基本使用
+`data` 属性可以配置表格的数据，接收一个数组
 
-data 属性可以配置表格的数据，接收一个数组
-
-columns 属性可以配置表格的标题和键值，它接收一个数组，里面是对象，对象的 title 配置标题，key 配置键值，名字是必须的，否则将不能正常工作！详情参考文档
+`columns` 属性可以配置表格的标题和键值，它接收一个数组，里面是对象，对象的 `title` 配置标题，`key` 配置键值，名字是必须的，否则将不能正常工作！详情参考文档
 
 <tyh-table :data="tableData" :columns="columns" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -55,11 +55,15 @@ columns 属性可以配置表格的标题和键值，它接收一个数组，里
 </script>
 ```
 
+:::
+
 ## 配置行高
 
-trHeight 属性可以表格行高
+`trHeight` 属性可以表格行高
 
 <tyh-table :data="tableData" :columns="columns" trHeight="50px" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -106,11 +110,15 @@ trHeight 属性可以表格行高
 </script>
 ```
 
+:::
+
 ## 文字放置方向
 
-align 属性可以表格文字居中还是居两侧
+`align` 属性可以表格文字居中还是居两侧
 
 <tyh-table :data="tableData" :columns="columns" align="center" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -157,13 +165,17 @@ align 属性可以表格文字居中还是居两侧
 </script>
 ```
 
+:::
+
 ## 斑马纹和边框
 
-zebra 属性可以配置斑马纹
+`zebra` 属性可以配置斑马纹
 
-border 属性可以配置边框
+`border` 属性可以配置边框
 
 <tyh-table :data="tableData" :columns="columns" align="center" border zebra />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -210,11 +222,13 @@ border 属性可以配置边框
 </script>
 ```
 
+:::
+
 ## 自定义宽高
 
-width 属性可以配置表格宽度
+`width` 属性可以配置表格宽度
 
-height 属性可以配置表格高度
+`height` 属性可以配置表格高度
 
 <tyh-table
   :data="tableData"
@@ -223,6 +237,8 @@ height 属性可以配置表格高度
   width="500px"
   height="200px"
 />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -275,11 +291,15 @@ height 属性可以配置表格高度
 </script>
 ```
 
+:::
+
 ## 带有序号
 
-num 属性可以配置带有序号的表格
+`num` 属性可以配置带有序号的表格
 
 <tyh-table :data="tableData" :columns="columns" align="center" num />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -326,9 +346,11 @@ num 属性可以配置带有序号的表格
 </script>
 ```
 
+:::
+
 ## 重点行标注
 
-important 属性可以配置重点行着重标注，它接收一个数组，里面包含重点行的行号
+`important` 属性可以配置重点行着重标注，它接收一个数组，里面包含重点行的行号
 
 <tyh-table
   :data="tableData"
@@ -337,6 +359,8 @@ important 属性可以配置重点行着重标注，它接收一个数组，里�
   num
   :important="[2, 4]"
 />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -389,11 +413,15 @@ important 属性可以配置重点行着重标注，它接收一个数组，里�
 </script>
 ```
 
+:::
+
 ## 单独配置列度
 
-每一列的宽度也是可以单独配置的，可以在 columns 数组对象中添加 width 键值，来配置单独的列宽，比如下面将第一列和第二列设置宽度为 100px
+每一列的宽度也是可以单独配置的，可以在 `columns` 数组对象中添加 `width` 键值，来配置单独的列宽，比如下面将第一列和第二列设置宽度为 `100px`
 
 <tyh-table :data="tableData" :columns="columns2" align="center" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -441,6 +469,8 @@ important 属性可以配置重点行着重标注，它接收一个数组，里�
   ]
 </script>
 ```
+
+:::
 
 ## Attributes
 

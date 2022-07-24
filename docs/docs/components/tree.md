@@ -1,14 +1,18 @@
 # Tree 树形控件
 
-<tyh-alert type="danger" message="组件仍在完善中，谨慎使用！" />
+:::danger
+组件仍在完善中，谨慎使用！
+:::
 
 ## 基本使用
 
-tree 的基本使用
+`tree` 的基本使用
 
-data 属性传递一个树型结构的数据
+`data` 属性传递一个树型结构的数据
 
 <tyh-tree :data="data" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -75,6 +79,8 @@ data 属性传递一个树型结构的数据
   ]
 </script>
 ```
+
+:::
 
 ## Attributes
 

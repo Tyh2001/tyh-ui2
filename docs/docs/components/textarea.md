@@ -6,6 +6,8 @@
 
 <tyh-textarea v-model="value1" placeholder="请输入内容..." />
 
+::: details 显示代码
+
 ```html
 <template>
   <tyh-textarea v-model="value1" placeholder="请输入内容..." />
@@ -17,14 +19,18 @@
 </script>
 ```
 
+:::
+
 ## 拉伸方式
 
-resize 属性可以规定文本域的拉伸方式
+`resize` 属性可以规定文本域的拉伸方式
 
 <tyh-textarea v-model="value2" />
 <tyh-textarea v-model="value3" resize="vertical" />
 <tyh-textarea v-model="value4" resize="horizontal" />
 <tyh-textarea v-model="value5" resize="none" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -43,14 +49,18 @@ resize 属性可以规定文本域的拉伸方式
 </script>
 ```
 
+:::
+
 ## 不同尺寸
 
-rows 属性可以配置文本域的行数
+`rows` 属性可以配置文本域的行数
 
-cols 属性可以配置文本域的宽度
+`cols` 属性可以配置文本域的宽度
 
 <tyh-textarea v-model="value6" rows="5" />
 <tyh-textarea v-model="value7" cols="10" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -65,11 +75,15 @@ cols 属性可以配置文本域的宽度
 </script>
 ```
 
+:::
+
 ## 禁用状态
 
-disabled 属性可以配置文本域禁用状态
+`disabled` 属性可以配置文本域禁用状态
 
 <tyh-textarea v-model="value8" disabled />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -82,9 +96,15 @@ disabled 属性可以配置文本域禁用状态
 </script>
 ```
 
+:::
+
 ## 最大上限
 
-max 属性可以配置文本域输入的最大上限文本
+`max` 属性可以配置文本域输入的最大上限文本
+
+<tyh-textarea v-model="value9" max="10" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -96,6 +116,8 @@ max 属性可以配置文本域输入的最大上限文本
   const value9 = ref('')
 </script>
 ```
+
+:::
 
 ## Attributes
 

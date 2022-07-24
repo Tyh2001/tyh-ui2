@@ -7,6 +7,8 @@
 <tyh-switch v-model="value1" />
 <tyh-switch v-model="value1" />
 
+::: details 显示代码
+
 ```html
 <template>
   <tyh-switch v-model="value1" />
@@ -19,13 +21,17 @@
 </script>
 ```
 
+:::
+
 ## 文字描述
 
-closeText 属性可以配置左侧的文字
+`closeText` 属性可以配置左侧的文字
 
-openText 属性可以配置右侧的文字
+`openText` 属性可以配置右侧的文字
 
 <tyh-switch v-model="value2" closeText="关闭" openText="开启" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -38,12 +44,16 @@ openText 属性可以配置右侧的文字
 </script>
 ```
 
+:::
+
 ## 禁用状态
 
-disabled 属性可以配置禁用开关
+`disabled` 属性可以配置禁用开关
 
 <tyh-switch v-model="value3" disabled />
 <tyh-switch v-model="value4" disabled />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -58,14 +68,18 @@ disabled 属性可以配置禁用开关
 </script>
 ```
 
+:::
+
 ## 自定义颜色
 
-closeColor 属性可以配置自定义关闭颜色
+`closeColor` 属性可以配置自定义关闭颜色
 
-openColor 属性可以配置自定义开启颜色
+`openColor` 属性可以配置自定义开启颜色
 
 <tyh-switch v-model="value5" closeColor="red" openColor="green" />
 <tyh-switch v-model="value6" closeColor="black" openColor="#eee" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -80,11 +94,15 @@ openColor 属性可以配置自定义开启颜色
 </script>
 ```
 
+:::
+
 ## 自定义尺寸
 
-width 属性可以自定义开关的尺寸 最小宽度为 20
+`width` 属性可以自定义开关的尺寸 最小宽度为 `20`
 
 <tyh-switch v-model="value7" :width="60" />
+
+::: details 显示代码
 
 ```html
 <template>
@@ -96,6 +114,8 @@ width 属性可以自定义开关的尺寸 最小宽度为 20
   const value7 = ref(true)
 </script>
 ```
+
+:::
 
 ## Attributes
 

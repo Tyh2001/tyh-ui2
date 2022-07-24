@@ -10,6 +10,8 @@
 <tyh-tag type="danger">标签四</tyh-tag>
 <tyh-tag type="warning">标签五</tyh-tag>
 
+::: details 显示代码
+
 ```html
 <tyh-tag>标签一</tyh-tag>
 <tyh-tag type="primary">标签二</tyh-tag>
@@ -18,29 +20,37 @@
 <tyh-tag type="warning">标签五</tyh-tag>
 ```
 
+:::
+
 ## 不同尺寸
 
-size 属性可以配置不同的尺寸
+`size` 属性可以配置不同的尺寸
 
 <tyh-tag type="primary">标签</tyh-tag>
 <tyh-tag size="small" type="primary">标签</tyh-tag>
 <tyh-tag size="mini" type="primary">标签</tyh-tag>
+
+::: details 显示代码
 
 ```html
 <tyh-tag type="primary">标签</tyh-tag>
 <tyh-tag size="small" type="primary">标签</tyh-tag>
 <tyh-tag size="mini" type="primary">标签</tyh-tag>
 ```
+
+:::
 
 ## 圆角标签
 
-round 属性可以配置圆角显示
+`round` 属性可以配置圆角显示
 
 <tyh-tag round>标签一</tyh-tag>
 <tyh-tag round type="primary">标签二</tyh-tag>
 <tyh-tag round type="success">标签三</tyh-tag>
 <tyh-tag round type="danger">标签四</tyh-tag>
 <tyh-tag round type="warning">标签五</tyh-tag>
+
+::: details 显示代码
 
 ```html
 <tyh-tag round>标签一</tyh-tag>
@@ -50,11 +60,13 @@ round 属性可以配置圆角显示
 <tyh-tag round type="warning">标签五</tyh-tag>
 ```
 
+:::
+
 ## 可关闭
 
-设置 isclose 属性可以定义一个标签是否可移除
+设置 `isclose` 属性可以定义一个标签是否可移除
 
-动态编辑标签可以通过点击标签关闭按钮后触发的 onClose 事件来实现
+动态编辑标签可以通过点击标签关闭按钮后触发的 `onClose` 事件来实现
 
 <tyh-tag v-show="show1" isClose @close="show1 = false">标签一</tyh-tag>
 <tyh-tag v-show="show2" type="primary" isClose @close="show2 = false">
@@ -69,6 +81,8 @@ round 属性可以配置圆角显示
 <tyh-tag v-show="show5" type="warning" isClose @close="show5 = false">
 标签五
 </tyh-tag>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -97,6 +111,8 @@ round 属性可以配置圆角显示
 </script>
 ```
 
+:::
+
 ## Attributes
 
 | 参数    | 说明             | 类型    | 可选值                                         | 默认值  |
@@ -120,3 +136,9 @@ round 属性可以配置圆角显示
   const show4 = ref(true)
   const show5 = ref(true)
 </script>
+
+<style scoped>
+.tyh-tag {
+  margin: 5px;
+}
+</style>
