@@ -2,15 +2,15 @@
 
 ## 基本使用
 
-Info 的基本使用
+`Info` 的基本使用
 
-userInfo 属性可以配置昵称
+`userInfo` 属性可以配置昵称
 
-describe 属性可以配置描述信息
+`describe` 属性可以配置描述信息
 
-photo 插槽可以插入一个头像
+`photo` 插槽可以插入一个头像
 
-right 插槽可以插入右侧内容
+`right` 插槽可以插入右侧内容
 
 <tyh-info userInfo="Tyh2001" describe="hello world">
   <template v-slot:photo>
@@ -24,6 +24,8 @@ right 插槽可以插入右侧内容
     <tyh-button simple type="primary" size="mini">关注 TA</tyh-button>
   </template>
 </tyh-info>
+
+::: details 显示代码
 
 ```html
 <tyh-info userInfo="Tyh2001" describe="hello world">
@@ -39,10 +41,12 @@ right 插槽可以插入右侧内容
   </template>
 </tyh-info>
 ```
+
+:::
 
 ## 更多扩展
 
-body 和 footer 插槽可以进行插入身体和页脚的内容
+`body` 和 `footer` 插槽可以进行插入身体和页脚的内容
 
 <tyh-info userInfo="Tyh2001" describe="hello world">
   <template v-slot:photo>
@@ -68,6 +72,8 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     <tyh-text type="danger">2022-02-12</tyh-text>
   </template>
 </tyh-info>
+
+::: details 显示代码
 
 ```html
 <tyh-info userInfo="Tyh2001" describe="hello world">
@@ -96,9 +102,11 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
 </tyh-info>
 ```
 
+:::
+
 ## 昵称超链接
 
-使用 linkUrl 属性，传入一个 url 可以配置点击昵称的时候进行超链接跳转
+使用 `linkUrl` 属性，传入一个 `url` 可以配置点击昵称的时候进行超链接跳转
 
 <tyh-info userInfo="Tyh2001" describe="hello world" linkUrl="https://tianyuhao.cn">  
   <template v-slot:photo>
@@ -109,6 +117,8 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
     />
   </template>
 </tyh-info>
+
+::: details 显示代码
 
 ```html
 <tyh-info
@@ -125,6 +135,8 @@ body 和 footer 插槽可以进行插入身体和页脚的内容
   </template>
 </tyh-info>
 ```
+
+:::
 
 ## Attributes
 

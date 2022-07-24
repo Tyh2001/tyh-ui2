@@ -4,19 +4,23 @@
 
 图片的基本使用
 
-src 属性可以添加图片路径
+`src` 属性可以添加图片路径
 
-width，height 可以配置图片宽高
+`width` `height` 可以配置图片宽高
 
 <tyh-image width="300px" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
+
+::: details 显示代码
 
 ```html
 <tyh-image width="300px" src="https://tianyuhao.cn/images/tyh-ui/giraffe.jpg" />
 ```
 
+:::
+
 ## 如何适应容器框
 
-fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
+`fit` 属性配置图片如何适应到容器框，同原生 [object-fit](https://developer.mozilla.org/en-US/docs/Web/CSS/object-fit)
 
 <div class="fitBox">
   <div class="item" v-for="fit in ['fill', 'contain', 'cover', 'none', 'scale-down']" :key="fit">
@@ -29,6 +33,8 @@ fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://
     />
   </div>
 </div>
+
+::: details 显示代码
 
 ```html
 <div class="fitBox">
@@ -47,6 +53,8 @@ fit 属性配置图片如何适应到容器框，同原生 [object-fit](https://
   </div>
 </div>
 ```
+
+:::
 
 ## Attributes
 

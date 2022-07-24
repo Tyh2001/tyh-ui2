@@ -4,9 +4,9 @@
 
 抽屉的基本使用
 
-title 属性可以配置抽屉的标题
+`title` 属性可以配置抽屉的标题
 
-direction 属性可以配置抽屉的弹出方向
+`direction` 属性可以配置抽屉的弹出方向
 
 <tyh-button type="primary" @click="open = true">点我打开</tyh-button>
 
@@ -18,6 +18,8 @@ direction 属性可以配置抽屉的弹出方向
 <tyh-drawer v-model="open" :direction="radio" title="这是标题">
   hello，欢迎使用 tyh-ui!
 </tyh-drawer>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -40,11 +42,15 @@ direction 属性可以配置抽屉的弹出方向
 </script>
 ```
 
+:::
+
 ## 不带头部信息
 
 不带有 title 和关闭按钮
 
-showHeader 属性可以配置不带头部信息
+`showHeader` 属性可以配置不带头部信息
+
+::: details 显示代码
 
 <tyh-button type="primary" @click="open2 = true">点我打开</tyh-button>
 
@@ -67,9 +73,11 @@ showHeader 属性可以配置不带头部信息
 </script>
 ```
 
+:::
+
 ## 多层嵌套
 
-size 属性可以配置宽度或者高度
+`size` 属性可以配置宽度或者高度
 
 <tyh-button type="primary" @click="open3 = true">点我打开</tyh-button>
 
@@ -78,6 +86,8 @@ size 属性可以配置宽度或者高度
   hello，欢迎使用 tyh-ui!
   <tyh-drawer v-model="open4" direction="right"> 这是内层的 </tyh-drawer>
 </tyh-drawer>
+
+::: details 显示代码
 
 ```html
 <template>
@@ -96,6 +106,8 @@ size 属性可以配置宽度或者高度
   const open4 = ref(false)
 </script>
 ```
+
+:::
 
 ## Attributes
 
@@ -136,3 +148,9 @@ size 属性可以配置宽度或者高度
   const open3 = ref(false)
   const open4 = ref(false)
 </script>
+
+<style scoped>
+.tyh-button {
+  margin-right: 15px;
+}
+</style>
