@@ -59,8 +59,8 @@
     if (width.value < 20) width.value = 20
     return [
       {
-        width: `${width.value / 2 - 4}px`,
-        height: `${width.value / 2 - 4}px`,
+        width: `${width.value / 2}px`,
+        height: `${width.value / 2}px`,
         left: prop.modelValue ? `${width.value / 2}px` : '0px'
       },
       `border:2px solid  ${switchColor.value}`

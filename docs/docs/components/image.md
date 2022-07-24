@@ -78,3 +78,22 @@
 | 插槽名称 | 说明说明       |
 | -------- | -------------- |
 | error    | 自定义失败提示 |
+
+<style scoped>
+.fitBox {
+  display: flex;
+}
+.fitBox .item {
+  width: 200px;
+  height: 200px;
+  border: 1px solid #eee;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fitBox .item .text {
+  color: #333333;
+  margin-bottom: 20px;
+}
+</style>
