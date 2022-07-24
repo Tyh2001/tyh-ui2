@@ -16,7 +16,7 @@ createApp(App).use(tyhUi2).mount('#app')
 ## 按需引入
 
 :::danger
-按需引入暂不支持，问题正在修复中，请谨慎使用！
+按需引入暂不完善，问题正在修复中，请谨慎使用！
 ::::
 
 为了减小体积，只希望引入部分组件，可以使用按需引入的方式
@@ -24,12 +24,13 @@ createApp(App).use(tyhUi2).mount('#app')
 ```js
 import { createApp } from 'vue'
 import App from './App.vue'
-import {
-  TyhButton,
-  TyhCard
-  // ...
-} from 'tyh-ui2'
-import 'tyh-ui2/dist/style.css'
+
+// 组件按需引入
+import { TyhButton, TyhCard } from 'tyh-ui2/es/components/index'
+
+// 样式按需引入
+import 'fighting-design/theme/button.css'
+import 'fighting-design/theme/card.css'
 
 createApp(App).use(TyhButton).use(TyhCard).mount('#app')
 ```
