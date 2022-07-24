@@ -29,7 +29,7 @@
   const prop = defineProps(Props)
   const emit = defineEmits(['update:modelValue', 'change'])
 
-  const width = ref<number | undefined>(prop.modelValue)
+  const width = ref<number>(prop.modelValue)
   watch(
     () => prop.modelValue,
     (v) => (width.value = v)
@@ -40,32 +40,32 @@
   }
   const showSayFn = computed((): string | void | null => {
     if (!prop.showText) return
-    const showSay = ref<null | string>(null)
+    let showSay: string = ''
     watch(
       () => width.value,
       (): void => {
         switch (width.value) {
           case 1:
-            showSay.value = prop.sayText[0]
+            showSay = prop.sayText[0]
             break
           case 2:
-            showSay.value = prop.sayText[1]
+            showSay = prop.sayText[1]
             break
           case 3:
-            showSay.value = prop.sayText[2]
+            showSay = prop.sayText[2]
             break
           case 4:
-            showSay.value = prop.sayText[3]
+            showSay = prop.sayText[3]
             break
           case 5:
-            showSay.value = prop.sayText[4]
+            showSay = prop.sayText[4]
             break
           default:
-            showSay.value = ''
+            showSay = ''
         }
       },
       { immediate: true }
     )
-    return showSay.value
+    return showSay
   })
 </script>

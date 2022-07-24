@@ -21,5 +21,7 @@
       return true
     }
   })
-  const input = (e: any): void => emit('update:modelValue', e.target.value)
+  const input = (e: Event): void => {
+    emit('update:modelValue', (e.target as HTMLInputElement).value)
+  }
 </script>

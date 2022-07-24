@@ -57,16 +57,18 @@
 
 <script lang="ts" setup name="TyhTable">
   import { Props } from './props'
+  import type { CSSProperties } from 'vue'
 
   const prop = defineProps(Props)
 
-  const importantStyle = (i: number): string | void => {
+  const importantStyle = (i: number): CSSProperties => {
     const importants: number[] = prop.important
     for (const key of importants) {
       if (key === i + 1) {
-        return `background: ${prop.importantColor}`
+        return { background: prop.importantColor }
       }
     }
+    return {}
   }
 
   const isTdThClass = (key: string): (string | object)[] => {

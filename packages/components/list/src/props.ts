@@ -1,8 +1,10 @@
+import type { PropType } from 'vue'
+
 export const Props = {
   header: String,
   content: {
-    type: Array,
-    default: (): [] => []
+    type: Array as PropType<any[]>,
+    default: (): any[] => []
   },
   keys: String,
   footer: String,

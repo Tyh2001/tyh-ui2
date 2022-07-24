@@ -10,6 +10,8 @@
 
 <script lang="ts" setup>
   import { computed, useSlots } from 'vue'
+  import type { Component, VNode } from 'vue'
+
   const props = defineProps({
     direction: {
       type: String,
@@ -30,8 +32,8 @@
         return false
       }
       if (slots && slots.default) {
-        return slots.default().some((n) => {
-          const tag = n.type && n.type.name
+        return slots.default().some((n: VNode) => {
+          const tag = n.type && (n.type as Component).name
           return tag === 'TyhHeader' || tag === 'TyhFooter'
         })
       }

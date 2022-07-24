@@ -46,9 +46,9 @@
 
 ## Attributes
 
-| 参数     | 说明             | 类型   | 可选值           | 默认值 |
-| -------- | ---------------- | ------ | ---------------- | ------ |
-| bottom   | 距离下面的距离   | string | ——               | 50px   |
-| right    | 距离右面的距离   | string | ——               | 50px   |
-| behavior | 滚动模式         | string | smooth / instant | smooth |
-| beyond   | 超出 xx 范围显示 | number | ——               | 100    |
+| 参数     | 说明             | 类型   | 可选值        | 默认值 |
+| -------- | ---------------- | ------ | ------------- | ------ |
+| bottom   | 距离下面的距离   | string | ——            | 50px   |
+| right    | 距离右面的距离   | string | ——            | 50px   |
+| behavior | 滚动模式         | string | smooth / auto | smooth |
+| beyond   | 超出 xx 范围显示 | number | ——            | 100    |

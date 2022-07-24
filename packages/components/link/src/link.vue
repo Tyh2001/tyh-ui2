@@ -2,7 +2,7 @@
   <a
     :class="isClass"
     :style="{ textDecoration: underline ? 'none' : 'underline' }"
-    :href="prohibit ? null : url"
+    :href="prohibit ? '' : url"
     :target="target"
   >
     <i v-if="icon" :class="['tyh-icon', `tyh-icon-${type}`, icon]" />

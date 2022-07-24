@@ -37,7 +37,6 @@ import TyhOption from './option'
 import TyhTagging from './tagging'
 import TyhDrawer from './drawer'
 import TyhDialog from './dialog'
-import TyhCheckbox from './checkbox'
 import TyhCollapse from './collapse'
 import TyhCollapseItem from './collapse-item'
 import { Message } from './message'
@@ -82,7 +81,6 @@ const components = {
   TyhTagging,
   TyhDrawer,
   TyhDialog,
-  TyhCheckbox,
   TyhCollapse,
   TyhCollapseItem
 }
@@ -134,7 +132,6 @@ export {
   TyhTagging,
   TyhDrawer,
   TyhDialog,
-  TyhCheckbox,
   TyhCollapse,
   TyhCollapseItem
 }

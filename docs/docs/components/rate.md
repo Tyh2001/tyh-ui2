@@ -83,7 +83,7 @@
 
 | 参数      | 说明               | 类型    | 可选值 | 默认值                                   |
 | --------- | ------------------ | ------- | ------ | ---------------------------------------- |
-| v-model   | 绑定值             | number  | ——     | ——                                       |
+| v-model   | 绑定值             | number  | ——     | 0                                        |
 | color     | 选中的 icon 颜色   | string  | ——     | #fbcc30                                  |
 | voidColor | 未选中的 icon 颜色 | string  | ——     | #C6D1DE                                  |
 | showText  | 是否显示辅助文字   | boolean | ——     | false                                    |

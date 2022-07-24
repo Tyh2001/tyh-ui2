@@ -21,6 +21,7 @@
 <script lang="ts" setup name="TyhAvatar">
   import { ref, computed } from 'vue'
   import { Props } from './props'
+  import type { CSSProperties } from 'vue'
 
   const prop = defineProps(Props)
   const emit = defineEmits(['error', 'load'])
@@ -32,13 +33,11 @@
     isError.value = true
   }
 
-  const isSize = computed((): object[] => {
-    return [
-      {
-        width: `${prop.size * 10}px`,
-        height: `${prop.size * 10}px`
-      }
-    ]
+  const isSize = computed((): CSSProperties => {
+    return {
+      width: `${prop.size * 10}px`,
+      height: `${prop.size * 10}px`
+    }
   })
 
   const errorClass = computed((): (string | object)[] => {

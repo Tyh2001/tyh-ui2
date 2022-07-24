@@ -1,5 +1,5 @@
 <template>
-  <div :class="['tyh-card', { [`tyh-card-shadow-${shadow}`]: shadow }]">
+  <div :class="['tyh-card', `tyh-card-shadow-${shadow}`]">
     <div v-if="$slots.title || $slots.subtitle" class="tyh-card-header">
       <span v-if="$slots.title" class="tyh-card-title">
         <slot name="title" />
@@ -8,7 +8,9 @@
         <slot name="subtitle" />
       </span>
     </div>
-    <div class="tyh-card-body" :style="bodyStyle"><slot /></div>
+    <div class="tyh-card-body" :style="bodyStyle">
+      <slot />
+    </div>
   </div>
 </template>
 

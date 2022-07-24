@@ -1,5 +1,10 @@
+import type { PropType } from 'vue'
+
 export const Props = {
-  modelValue: Number,
+  modelValue: {
+    type: Number as PropType<number>,
+    default: (): number => 0
+  },
   color: {
     type: String,
     default: (): string => '#fbcc30'
@@ -10,7 +15,7 @@ export const Props = {
   },
   showText: Boolean,
   sayText: {
-    type: Array,
+    type: Array as PropType<string[]>,
     default: (): string[] => ['极差', '失望', '一般', '惊喜', '满意']
   }
 } as const

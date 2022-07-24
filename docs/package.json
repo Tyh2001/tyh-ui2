@@ -6,7 +6,6 @@
     "serve": "vitepress serve docs"
   },
   "dependencies": {
-    "tyh-ui2": "workspace:^3.5.0",
     "vitepress": "1.0.0-alpha.4"
   }
 }

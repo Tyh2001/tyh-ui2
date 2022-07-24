@@ -28,6 +28,7 @@
 <script lang="ts" setup name="TyhRadio">
   import { computed } from 'vue'
   import { Props } from './props'
+  import type { CSSProperties } from 'vue'
 
   const prop = defineProps(Props)
   const emit = defineEmits(['update:modelValue', 'change'])
@@ -70,13 +71,14 @@
     ]
   })
 
-  const labelStyle = computed((): object | boolean[] => {
-    return [
-      { cursor: prop.disabled ? 'no-drop' : 'pointer' },
-      prop.border &&
-        `border: 1px solid ${
-          isLabel.value ? (prop.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
-        }`
-    ]
+  const labelStyle = computed((): CSSProperties => {
+    return {
+      cursor: prop.disabled ? 'no-drop' : 'pointer',
+      borderStyle: prop.border
+        ? `border: 1px solid ${
+            isLabel.value ? (prop.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
+          }`
+        : ''
+    }
   })
 </script>

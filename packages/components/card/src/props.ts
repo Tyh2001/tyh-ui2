@@ -1,4 +1,4 @@
-import { PropType } from 'vue'
+import { PropType, CSSProperties } from 'vue'
 import type { Shadow } from './interface'
 
 export const Props = {
@@ -9,7 +9,7 @@ export const Props = {
     }
   },
   bodyStyle: {
-    type: Object,
+    type: Object as PropType<CSSProperties>,
     default: (): null => null
   }
 } as const

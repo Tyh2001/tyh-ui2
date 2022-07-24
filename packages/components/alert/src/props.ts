@@ -6,14 +6,7 @@ export const Props = {
     type: String as PropType<alertType>,
     default: (): alertType => 'default',
     validator: (v: alertType): boolean => {
-      return [
-        'default',
-        'primary',
-        'success',
-        'danger',
-        'warning',
-        ''
-      ].includes(v)
+      return ['default', 'primary', 'success', 'danger', 'warning'].includes(v)
     }
   },
   message: String,

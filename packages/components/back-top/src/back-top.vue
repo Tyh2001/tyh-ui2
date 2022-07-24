@@ -33,7 +33,7 @@
   const toTop = (): void => {
     window.scrollTo({
       top: 0,
-      behavior: prop.action
+      behavior: prop.behavior
     })
   }
 

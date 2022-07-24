@@ -1,5 +1,5 @@
 import { PropType } from 'vue'
-import type { Action } from './interface'
+import type { backTopBehavior } from './interface'
 
 export const Props = {
   bottom: {
@@ -10,15 +10,15 @@ export const Props = {
     type: String,
     default: (): string => '50px'
   },
-  action: {
-    type: String as PropType<Action>,
-    default: (): Action => 'smooth',
-    validator: (v: Action): boolean => {
-      return ['smooth', 'instant', ''].includes(v)
-    }
-  },
   beyond: {
     type: Number,
     default: (): number => 100
+  },
+  behavior: {
+    type: String as PropType<backTopBehavior>,
+    default: (): backTopBehavior => 'smooth',
+    validator: (val: backTopBehavior): boolean => {
+      return (['smooth', 'auto'] as const).includes(val)
+    }
   }
 } as const

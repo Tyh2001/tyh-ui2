@@ -74,6 +74,6 @@
 
   const instance = getCurrentInstance() as ComponentInternalInstance
   const leave = (): void => {
-    instance.vnode.el.parentElement?.removeChild(instance.vnode.el)
+    instance.vnode.el!.parentElement.removeChild(instance.vnode.el)
   }
 </script>

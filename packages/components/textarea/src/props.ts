@@ -4,7 +4,7 @@ import type { Resize } from './interface'
 export const Props = {
   modelValue: String,
   placeholder: String,
-  max: [Number, String],
+  max: [Number, String] as PropType<number | string>,
   rows: {
     type: String,
     default: (): string => '3'

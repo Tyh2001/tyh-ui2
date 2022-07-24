@@ -10,6 +10,8 @@
 
 <script lang="ts" setup name="TyhPageHeader">
   import { Props } from './props'
+  import { TyhIcon } from '@tyh-ui2/components'
+
   defineProps(Props)
 
   const emit = defineEmits(['back'])

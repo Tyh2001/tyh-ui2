@@ -3,6 +3,6 @@ export const Props = {
   color: String,
   size: {
     type: String,
-    default: (): string => '16'
+    default: (): string => '16px'
   }
 } as const

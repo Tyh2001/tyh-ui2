@@ -3,7 +3,9 @@
     :class="['tyh-crumbs-item', { 'tyh-crumbs-item__to': to }]"
     @click="link"
   >
-    <span class="tyh-crumbs-item-text"><slot /></span>
+    <span class="tyh-crumbs-item-text">
+      <slot />
+    </span>
     <i :class="['tyh-icon', icon]" />
   </span>
 </template>

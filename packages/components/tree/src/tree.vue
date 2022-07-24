@@ -1,7 +1,7 @@
 <template>
   <div class="tyh-three">
     <div class="tyh-three-list" v-for="(dataItem, index) in data" :key="index">
-      <div class="tyh-three-label" @click="onOpen(dataItem, index)">
+      <div class="tyh-three-label" @click="onOpen(dataItem)">
         <tyh-icon
           icon="tyh-ui-arrow-right-filling"
           color="#c0c4cc"

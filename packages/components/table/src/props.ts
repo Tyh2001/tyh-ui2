@@ -1,14 +1,14 @@
 import { PropType } from 'vue'
-import type { Align } from './interface'
+import type { Align, columnsInterface } from './interface'
 
 export const Props = {
   data: {
-    type: Array,
-    default: (): [] => []
+    type: Array as PropType<any[]>,
+    default: (): any[] => []
   },
   columns: {
-    type: Array,
-    default: (): [] => []
+    type: Array as PropType<columnsInterface[]>,
+    default: (): columnsInterface[] => []
   },
   trHeight: {
     type: String,
@@ -33,7 +33,7 @@ export const Props = {
   },
   num: Boolean,
   important: {
-    type: Array,
+    type: Array as PropType<number[]>,
     default: (): number[] => []
   },
   importantColor: {

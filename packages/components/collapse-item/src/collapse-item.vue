@@ -16,7 +16,7 @@
   const prop = defineProps(Props)
   const emit = defineEmits(['onChange'])
 
-  const modelValue: any = inject('modelValue')
+  const modelValue = inject('modelValue')!
 
   const isShow = computed((): boolean => {
     return modelValue.indexOf(prop.name) > -1

@@ -60,6 +60,7 @@
 <script lang="ts" setup name="TyhCalendar">
   import { ref, computed } from 'vue'
   import { Props } from './props'
+  import { TyhButton, TyhButtonGroup } from '@tyh-ui2/components'
 
   const prop = defineProps(Props)
 

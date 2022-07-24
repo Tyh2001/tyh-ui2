@@ -6,10 +6,7 @@
       src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg"
       alt="logo"
     />
-    <h1 class="MainTitle">
-      Tyh UI
-      <!-- <span class="version">v&nbsp;{{ version }}</span> -->
-    </h1>
+    <h1 class="MainTitle">Tyh UI</h1>
     <p class="Subtitle">
       一个轻量级组件库，基于 vue3 + typescript，全面拥抱 vue3
     </p>
@@ -50,9 +47,7 @@
   <Footer />
 </template>
 
-<script setup>
-  // import { version } from '../tyhUi'
-</script>
+<script setup></script>
 
 <style scoped>
   #home {
