@@ -8,5 +8,10 @@ export const nav = [
     text: '基础组件',
     activeMatch: '^/components/',
     link: '/components/button'
+  },
+  {
+    text: '关于',
+    activeMatch: '^/about/',
+    link: '/about/about'
   }
 ]

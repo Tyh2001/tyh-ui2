@@ -24,6 +24,9 @@ export default defineConfig({
         link: 'https://github.com/FightingDesign/fighting-design'
       }
     ],
-    logo: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg'
+    logo: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg',
+    editLink: {
+      pattern: 'https://github.com/Tyh2001/tyh-ui/blob/master/docs/docs/:path'
+    }
   }
 })
