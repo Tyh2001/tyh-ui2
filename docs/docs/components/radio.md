@@ -2,7 +2,7 @@
 
 ## 基本使用
 
-`label` 属性可配置 `Radio` 的 `value`
+`label` 属性可配置 `radio` 的 `value`
 
 <tyh-radio v-model="radio1" label="备选项1">备选项 1</tyh-radio>
 <tyh-radio v-model="radio1" label="备选项2">备选项 2</tyh-radio>

@@ -2,8 +2,6 @@
 
 ## 基本使用
 
-`icon` 的基本使用
-
 通过 `icon` 属性来给 `icon` 添加类名，来显示不同的图标
 
 <tyh-icon icon="tyh-ui-tyhui" />

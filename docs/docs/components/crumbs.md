@@ -72,15 +72,13 @@
 
 :::
 
-## Attributes
-
-tyh-crumbs
+## Tyh-crumbs Attributes
 
 | 参数      | 说明                | 类型   | 可选值 | 默认值            |
 | --------- | ------------------- | ------ | ------ | ----------------- |
 | separator | 分隔符，icon 的类名 | string | ——     | tyh-ui-xiexian-01 |
 
-tyh-crumbs-item
+## Tyh-crumbs-item Attributes
 
 | 参数 | 说明       | 类型   | 可选值 | 默认值 |
 | ---- | ---------- | ------ | ------ | ------ |

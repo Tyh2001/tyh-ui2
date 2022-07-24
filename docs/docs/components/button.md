@@ -2,9 +2,7 @@
 
 ## 基本使用
 
-按钮的基础用法
-
-type 属性配置不同的按钮类型
+`type` 属性配置不同的按钮类型
 
 <tyh-button>默认按钮</tyh-button>
 <tyh-button type="primary">主要按钮</tyh-button>

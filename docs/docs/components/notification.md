@@ -1,16 +1,12 @@
 # Notification 通知
 
-## 使用前
+## 基本使用
 
 使用前，你必须先引入它
 
 ```js
 import { Notification } from 'tyh-ui2'
 ```
-
-## 基本使用
-
-通知的基本使用
 
 通过引入 `Notification` 方法，接收一个对象
 
