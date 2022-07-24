@@ -20,7 +20,6 @@
       </a>
 
       <a target="_back" href="https://github.com/Tyh2001/tyh-ui">
-        <!-- <tyh-button round icon="tyh-ui-githublogo">Github</tyh-button> -->
         <tyh-button round>Github</tyh-button>
       </a>
     </div>

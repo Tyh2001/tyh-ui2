@@ -2,7 +2,7 @@
 
 ## 完整引入
 
-在 main.js 中引入下面内容
+在 `main.js` 中引入下面内容
 
 ```js
 import { createApp } from 'vue'
