@@ -6,7 +6,6 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: 'Tyh Ui',
   // base: '/v3/',
-  // base: import.meta.env.VITE_BASE,
   head: [
     [
       'link',
