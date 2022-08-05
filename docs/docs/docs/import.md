@@ -29,8 +29,8 @@ import App from './App.vue'
 import { TyhButton, TyhCard } from 'tyh-ui2/es/components/index'
 
 // 样式按需引入
-import 'fighting-design/theme/button.css'
-import 'fighting-design/theme/card.css'
+import 'tyh-ui2/theme/button.css'
+import 'tyh-ui2/theme/card.css'
 
 createApp(App).use(TyhButton).use(TyhCard).mount('#app')
 ```

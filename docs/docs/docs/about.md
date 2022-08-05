@@ -1,5 +1,5 @@
 <p align="center">
-  <img height="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
+  <img height="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg">
 </p>
 
 ## 关于

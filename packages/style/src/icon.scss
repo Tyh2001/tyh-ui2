@@ -1,8 +1,11 @@
 @font-face {
-  font-family: tyh-icon;
-  src: url(../font/tyh-icon2.woff2) format('woff2'),
-    url(../font/tyh-icon2.woff) format('woff'),
-    url(../font/tyh-icon2.ttf) format('truetype');
+  font-family: 'tyh-icon';
+  src: url('//at.alicdn.com/t/c/font_2628839_2v48b0isjq3.woff2?t=1659684909244')
+      format('woff2'),
+    url('//at.alicdn.com/t/c/font_2628839_2v48b0isjq3.woff?t=1659684909244')
+      format('woff'),
+    url('//at.alicdn.com/t/c/font_2628839_2v48b0isjq3.ttf?t=1659684909244')
+      format('truetype');
 }
 
 .tyh-icon {

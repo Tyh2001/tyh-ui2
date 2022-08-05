@@ -16,6 +16,6 @@ export const nav = [
   },
   {
     text: '旧版文档',
-    link: 'https://tianyuhao.cn/v3/old'
+    link: 'https://tianyuhao.cn/v3-old'
   }
 ]

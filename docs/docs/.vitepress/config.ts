@@ -5,13 +5,12 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'Tyh Ui',
-  // base: '/v3/',
   head: [
     [
       'link',
       {
         rel: 'icon',
-        href: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg'
+        href: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg'
       }
     ]
   ],
@@ -25,7 +24,7 @@ export default defineConfig({
         link: 'https://github.com/Tyh2001/tyh-ui'
       }
     ],
-    logo: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg',
+    logo: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg',
     editLink: {
       pattern: 'https://github.com/Tyh2001/tyh-ui/blob/master/docs/docs/:path'
     }

@@ -1,6 +1,6 @@
 <p align="center">
-  <a href="https://tianyuhao.cn/v3">
-    <img height="160px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
+  <a href="https://v3/tianyuhao.cn">
+    <img height="160px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg">
   </a>
 </p>
 

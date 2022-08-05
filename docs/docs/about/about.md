@@ -3,7 +3,7 @@ sidebar: false
 ---
 
 <p align="center">
-  <img width="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui-logo.svg">
+  <img width="220px" src="https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg">
 </p>
 
 ## 关于
