@@ -15,7 +15,7 @@
   <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md">
     <img src="https://img.shields.io/badge/tyh--ui-CHANGELOG-orange" alt="CHANGELOG">
   </a>
-  <a style="margin-left:15px;" href="https://tianyuhao.cn/v3">
+  <a style="margin-left:15px;" href="https://v3.tianyuhao.cn">
     <img src="https://img.shields.io/badge/tyh--ui-docs-red" alt="docs">
   </a>
   <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/README.md">
