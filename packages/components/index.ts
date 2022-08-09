@@ -37,8 +37,6 @@ import TyhOption from './option'
 import TyhTagging from './tagging'
 import TyhDrawer from './drawer'
 import TyhDialog from './dialog'
-import TyhCollapse from './collapse'
-import TyhCollapseItem from './collapse-item'
 import { Message } from './message'
 import { Notification } from './notification'
 
@@ -80,9 +78,7 @@ const components = {
   TyhOption,
   TyhTagging,
   TyhDrawer,
-  TyhDialog,
-  TyhCollapse,
-  TyhCollapseItem
+  TyhDialog
 }
 
 const install = (app: App): void => {
@@ -131,9 +127,7 @@ export {
   TyhOption,
   TyhTagging,
   TyhDrawer,
-  TyhDialog,
-  TyhCollapse,
-  TyhCollapseItem
+  TyhDialog
 }
 
 export default {

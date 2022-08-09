@@ -12,11 +12,18 @@
 <script lang="ts" setup name="TyhButton">
   import { computed } from 'vue'
   import { Props } from './props'
-  import { THEME } from '../../_utils'
 
   const prop = defineProps(Props)
 
   const color = computed((): string => {
+    const THEME = {
+      primary: '#3a6ff4',
+      success: '#54c600',
+      danger: '#d10f1b',
+      warning: '#fbcc30',
+      default: '#3f536e'
+    } as const
+
     if (prop.simple) return THEME[prop.type]
     return prop.type === 'default' || !prop.type ? '#333' : '#fff'
   })

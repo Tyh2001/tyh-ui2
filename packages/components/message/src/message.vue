@@ -29,9 +29,9 @@
   const props = defineProps(Props)
   const isShow = ref<boolean>(true)
   let timer: any
-  ;(function (): void {
+  ;((): void => {
     if (props.time > 0) {
-      timer = setTimeout(() => {
+      timer = setTimeout((): void => {
         close()
       }, props.time)
     }
