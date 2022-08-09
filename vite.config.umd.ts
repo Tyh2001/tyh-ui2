@@ -7,7 +7,7 @@ export default defineConfig({
   build: {
     outDir: resolve(__dirname, 'dist/dist'),
     lib: {
-      entry: resolve(__dirname, 'packages/tyh-ui2/index.d.ts'),
+      entry: resolve(__dirname, 'packages/components/index.ts'),
       name: 'tyhUi2',
       formats: ['umd'],
       fileName: () => {
