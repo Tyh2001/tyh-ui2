@@ -22,7 +22,6 @@
   "dependencies": {
     "@tyh-ui2/components": "workspace:*",
     "@tyh-ui2/style": "workspace:*",
-    "@tyh-ui2/utils": "workspace:*",
     "sass": "^1.50.0",
     "unplugin-vue-setup-extend-plus": "^0.3.2",
     "vite-plugin-compression": "^0.5.1",

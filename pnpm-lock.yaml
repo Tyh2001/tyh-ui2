@@ -8,7 +8,6 @@ importers:
       '@commitlint/config-conventional': ^16.2.1
       '@tyh-ui2/components': workspace:*
       '@tyh-ui2/style': workspace:*
-      '@tyh-ui2/utils': workspace:*
       '@vitejs/plugin-vue': ^2.3.1
       commitizen: ^4.2.4
       cz-conventional-changelog: ^3.3.0
@@ -32,7 +31,6 @@ importers:
     dependencies:
       '@tyh-ui2/components': link:packages/components
       '@tyh-ui2/style': link:packages/style
-      '@tyh-ui2/utils': link:packages/utils
       sass: 1.50.0
       unplugin-vue-setup-extend-plus: 0.3.2_vite@3.0.4
       vite-plugin-compression: 0.5.1_vite@3.0.4
@@ -70,9 +68,6 @@ importers:
     specifiers: {}
 
   packages/tyh-ui2:
-    specifiers: {}
-
-  packages/utils:
     specifiers: {}
 
   start:
