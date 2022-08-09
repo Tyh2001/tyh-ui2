@@ -16,7 +16,7 @@ export default defineConfig(async () => {
     build: {
       outDir: resolve(__dirname, 'dist/lib'),
       lib: {
-        entry: resolve(__dirname, 'packages/tyh-ui2/index.d.ts'),
+        entry: resolve(__dirname, 'packages/components/index.ts'),
         formats: ['cjs'],
         fileName: () => {
           return 'index.js'
