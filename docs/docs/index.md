@@ -2,7 +2,7 @@
 layout: home
 
 hero:
-  name: Tyh Ui
+  name: Tyh Ui2
   text: Vue3 组件库
   tagline: 一个轻量级组件库，基于 vue3 + typescript，全面拥抱 vue3
   image:
@@ -14,7 +14,7 @@ hero:
       link: /docs/install
     - theme: alt
       text: GitHub
-      link: https://github.com/Tyh2001/tyh-ui
+      link: https://github.com/Tyh2001/tyh-ui2
 
 features:
   - icon: 💡

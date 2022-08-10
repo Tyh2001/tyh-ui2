@@ -5,20 +5,20 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Tyh2001/tyh-ui/blob/master/README.md">Chinese</a> | English
+  <a href="https://github.com/Tyh2001/tyh-ui2/blob/master/README.md">Chinese</a> | English
 </p>
 
 <p align="center">
   <a href="https://www.npmjs.com/package/tyh-ui2">
     <img src="https://badgen.net/npm/v/tyh-ui2" alt="npm package">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md">
     <img src="https://img.shields.io/badge/tyh--ui-CHANGELOG-orange" alt="CHANGELOG">
   </a>
   <a style="margin-left:15px;" href="https://tianyuhao.cn/v3">
     <img src="https://img.shields.io/badge/tyh--ui-docs-red" alt="docs">
   </a>
-  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui/blob/master/README_zh.md">
+  <a style="margin-left:15px;" href="https://github.com/Tyh2001/tyh-ui2/blob/master/README_zh.md">
     <img src="https://img.shields.io/badge/tyh--ui-README__zh-yellowgreen" alt="README_zh">
   </a>
 </p>
@@ -54,10 +54,10 @@ createApp(App).use(tyhUi2).mount('#app')
 
 ## About 📄
 
-- Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui/blob/master/CHANGELOG.md).
-- For the installation and contribution of the project, please refer to [contributing](https://github.com/Tyh2001/tyh-ui/blob/master/contributing.md).
-- [Vulnerabilities](https://github.com/Tyh2001/tyh-ui/blob/master/SECURITY.md) can be reported here.
+- Detailed changes for each release are documented in the [CHANGELOG](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md).
+- For the installation and contribution of the project, please refer to [contributing](https://github.com/Tyh2001/tyh-ui2/blob/master/contributing.md).
+- [Vulnerabilities](https://github.com/Tyh2001/tyh-ui2/blob/master/SECURITY.md) can be reported here.
 
 ## Thank a lot 💖
 
-Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui/graphs/contributors)！to `tyh-ui`!
+Thank all those who have [contributed](https://github.com/Tyh2001/tyh-ui2/graphs/contributors)！to `tyh-ui`!

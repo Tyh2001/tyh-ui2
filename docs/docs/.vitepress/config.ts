@@ -21,12 +21,12 @@ export default defineConfig({
     socialLinks: [
       {
         icon: 'github',
-        link: 'https://github.com/Tyh2001/tyh-ui'
+        link: 'https://github.com/Tyh2001/tyh-ui2'
       }
     ],
     logo: 'https://tianyuhao.cn/images/tyh-ui/tyh-ui2.svg',
     editLink: {
-      pattern: 'https://github.com/Tyh2001/tyh-ui/blob/master/docs/docs/:path'
+      pattern: 'https://github.com/Tyh2001/tyh-ui2/blob/master/docs/docs/:path'
     }
   }
 })

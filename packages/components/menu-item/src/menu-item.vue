@@ -8,18 +8,17 @@
 <script lang="ts" setup name="TyhMenuItem">
   import { getCurrentInstance, inject, computed } from 'vue'
   import { Props } from './props'
+  import type { CSSProperties } from 'vue'
 
   const props = defineProps(Props)
   const theme = inject('theme')
   const mode = inject('mode')
-  const textColor = inject('textColor')
+  const textColor = inject('textColor') as string
 
-  const isStyle = computed((): object[] => {
-    return [
-      {
-        color: textColor ? textColor : theme === 'dark' ? '#fff' : '#333'
-      }
-    ]
+  const isStyle = computed((): CSSProperties => {
+    return {
+      color: textColor ? textColor : theme === 'dark' ? '#fff' : '#333'
+    }
   })
 
   const { proxy }: any = getCurrentInstance()

@@ -10,8 +10,8 @@ export default defineConfig({
       entry: resolve(__dirname, 'packages/components/index.ts'),
       name: 'tyhUi2',
       formats: ['umd'],
-      fileName: () => {
-        return 'index.js'
+      fileName: (target): string => {
+        return `index.${target}.js`
       }
     },
     rollupOptions: {

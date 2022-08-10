@@ -9,7 +9,7 @@ export default defineConfig({
     vueSetupExtend(),
     vue(),
     dts({
-      insertTypesEntry: true,
+      insertTypesEntry: false,
       copyDtsFiles: true,
       cleanVueFileName: true
     })
@@ -20,8 +20,8 @@ export default defineConfig({
       entry: resolve(__dirname, 'packages/components/index.ts'),
       name: 'tyhUi2',
       formats: ['es'],
-      fileName: () => {
-        return 'index.js'
+      fileName: (target): string => {
+        return `index.${target}.mjs`
       }
     },
     rollupOptions: {

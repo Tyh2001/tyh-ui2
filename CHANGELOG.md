@@ -2,6 +2,14 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
+## 4.1.1 (2022-08-11)
+
+- 优化构建
+
+## 4.1.0 (2022-08-10)
+
+- 优化构建
+
 ## 4.0.1 (2022-07-24)
 
 - 更新 `README.md`
@@ -83,7 +91,7 @@ Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-
 
 ## 3.4.2 (2022-03-13)
 
-> 目前已经将 `tyh-ui` 的所有组件都是有 `typeScript` 进行了重构对每条数据都做了强烈的类型限制，也优化了很多的样式和性能，也优化了部分配置项等。目前组件库的性能已经变得愈来愈强壮了，希望 tyh-ui 这个小朋友会越来越好～
+> 目前已经将 `tyh-ui2` 的所有组件都是有 `typeScript` 进行了重构对每条数据都做了强烈的类型限制，也优化了很多的样式和性能，也优化了部分配置项等。目前组件库的性能已经变得愈来愈强壮了，希望 tyh-ui2 这个小朋友会越来越好～
 
 - 修复 tagging 丢失样式问题
 

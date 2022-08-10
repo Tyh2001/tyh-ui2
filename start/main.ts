@@ -1,7 +1,9 @@
 import { createApp } from 'vue'
 import App from './src/App.vue'
 
-import TyhUi2 from '@tyh-ui2/components'
+import tyhUi2 from '@tyh-ui2/components'
 import '@tyh-ui2/style'
 
-createApp(App).use(TyhUi2).mount('#app')
+// import tyhUi2 from '../dist'
+
+createApp(App).use(tyhUi2).mount('#app')
