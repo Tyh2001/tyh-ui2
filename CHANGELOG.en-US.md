@@ -4,6 +4,11 @@ For more information, please refer to the Chinese update log.
 
 [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | English
 
+## 4.2.0 (2022-08-13)
+
+- Remove the `to` attribute from the TyhCrumbItem component
+- Fix TyhAvatar component style details
+
 ## 4.0.1 (2022-07-24)
 
 - To update `README.md`
