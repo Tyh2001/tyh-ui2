@@ -2,6 +2,10 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
+## 4.2.1 (2022-08-13)
+
+- 修复配置文件错误
+
 ## 4.2.0 (2022-08-13)
 
 - TyhCrumbsItem 组件移除 `to` 属性

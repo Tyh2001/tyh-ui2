@@ -39,7 +39,7 @@ createApp(App).use(TyhButton).use(TyhCard).mount('#app')
 <head>
   <link
     rel="stylesheet"
-    href="https://cdn.jsdelivr.net/npm/tyh-ui2/dist/style.css"
+    href="https://cdn.jsdelivr.net/npm/tyh-ui2/dist/index.css"
   />
 </head>
 
