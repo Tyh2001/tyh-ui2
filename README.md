@@ -47,7 +47,7 @@ npm i tyh-ui2
 import { createApp } from 'vue'
 import App from './App.vue'
 import tyhUi2 from 'tyh-ui2'
-import 'tyh-ui2/dist/style.css'
+import 'tyh-ui2/dist/index.css'
 
 createApp(App).use(tyhUi2).mount('#app')
 ```
