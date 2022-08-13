@@ -1,6 +1,7 @@
 import TyhCard from './src/card.vue'
+import type { App } from 'vue'
 
-TyhCard.install = (app: any) => {
+TyhCard.install = (app: App) => {
   app.component(TyhCard.name, TyhCard)
 }
 

@@ -1,6 +1,7 @@
 import TyhSelect from './src/select.vue'
+import type { App } from 'vue'
 
-TyhSelect.install = (app: any) => {
+TyhSelect.install = (app: App) => {
   app.component(TyhSelect.name, TyhSelect)
 }
 

@@ -1,8 +1,8 @@
-# tyh-ui 贡献指南
+# Tyh-ui2 贡献指南
 
 ## 前言
 
-你好！欢迎使用 tyh-ui :blush:
+你好！欢迎使用 tyh-ui 😊
 
 在这里，不需要你的技术有多么优秀，只希望你对做开源有足够的热爱。如果你有技术，你可以参加主要的开发；如果你是一个新手，可以来写 Ui 设计方面的开发，就算你技术水平一团糟，还可以看看文档，找一找错别字，提一提 issues 或 pr 呢，不是吗？
 
@@ -12,7 +12,7 @@
 
 先把项目跑起来
 
-- Fork [tyh-ui](https://github.com/Tyh2001/tyh-ui2)
+- Fork [tyh-ui2](https://github.com/Tyh2001/tyh-ui2)
 - `git clone xxxxx`
 - `cd tyh-ui`
 - `pnpm i`

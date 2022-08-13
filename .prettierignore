@@ -2,6 +2,9 @@
 .local
 .output.js
 /node_modules/**
+
 **/*.svg
 **/*.sh
+
+/public/*
 /packages/tyh-ui2/style/*

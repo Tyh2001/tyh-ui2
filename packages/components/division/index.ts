@@ -1,6 +1,7 @@
 import TyhDivision from './src/division.vue'
+import type { App } from 'vue'
 
-TyhDivision.install = (app: any) => {
+TyhDivision.install = (app: App) => {
   app.component(TyhDivision.name, TyhDivision)
 }
 

@@ -1,6 +1,7 @@
 import TyhOption from './src/option.vue'
+import type { App } from 'vue'
 
-TyhOption.install = (app: any) => {
+TyhOption.install = (app: App) => {
   app.component(TyhOption.name, TyhOption)
 }
 

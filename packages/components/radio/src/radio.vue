@@ -57,16 +57,18 @@
     ]
   })
 
-  const isStyle = computed((): CSSProperties => {
-    return {
-      color: isLabel.value
-        ? prop.disabled
+  const isStyle = computed((): object[] => {
+    return [
+      {
+        color: isLabel.value
+          ? prop.disabled
+            ? '#b6b5b5'
+            : '#3a6ff4'
+          : prop.disabled
           ? '#b6b5b5'
-          : '#3a6ff4'
-        : prop.disabled
-        ? '#b6b5b5'
-        : '#333'
-    }
+          : '#333'
+      }
+    ]
   })
 
   const labelStyle = computed((): CSSProperties => {

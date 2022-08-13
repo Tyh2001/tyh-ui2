@@ -14,7 +14,6 @@
     "build:umd": "vite build --config vite.config.umd.ts",
     "build:lib": "vite build --config vite.config.lib.ts",
     "build:css": "vite build --config vite.config.css.ts",
-    "build:start": "pnpm run -C start build",
     "move": "node ./script/move-file.js",
     "prettier": "prettier --write .",
     "commit": "cz"

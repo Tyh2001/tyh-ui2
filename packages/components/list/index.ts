@@ -1,6 +1,7 @@
 import TyhList from './src/list.vue'
+import type { App } from 'vue'
 
-TyhList.install = (app: any) => {
+TyhList.install = (app: App) => {
   app.component(TyhList.name, TyhList)
 }
 

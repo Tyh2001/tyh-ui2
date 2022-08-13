@@ -2,13 +2,8 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
-## 4.1.1 (2022-08-11)
-
-- 优化构建
-
-## 4.1.0 (2022-08-10)
-
-- 优化构建
+- TyhCrumbsItem 组件移除 `to` 属性
+- 修复 TyhAvatar 组件样式细节
 
 ## 4.0.1 (2022-07-24)
 

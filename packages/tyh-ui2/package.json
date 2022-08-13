@@ -1,9 +1,11 @@
 {
   "name": "tyh-ui2",
-  "version": "4.1.1",
+  "version": "4.1.0",
   "description": "The next generation ui component library of tyh-ui is based on vue3 Version, fully embrace vue3.",
   "module": "es/index.es.mjs",
-  "main": "lib/index.cjs.js",
+  "main": "lib/index.d.ts",
+  "unpkg": "dist/index.umd.js",
+  "style": "dist/style.css",
   "keywords": [
     "vuejs",
     "vue3",

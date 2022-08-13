@@ -1,8 +1,8 @@
-# Tyh-ui contributing Guide
+# Tyh-ui2 contributing Guide
 
 ## Preface
 
-Hello! Welcome to use tyh-ui :blush:
+Hello! Welcome to use tyh-ui 😊
 
 Here, I don't need how excellent your technology is. I just hope you have enough love for open source. If you have technology, you can participate in major development; If you are a novice, you can write the development of UI design. Even if your technical level is in a mess, you can also look at the documents, find the wrong words, and mention issues or PR, right?
 
@@ -12,7 +12,7 @@ I'm glad you're interested in contributing to tyh UI. Before submitting your con
 
 Start the project first
 
-- Fork [tyh-ui](https://github.com/Tyh2001/tyh-ui2)
+- Fork [tyh-ui2](https://github.com/Tyh2001/tyh-ui2)
 - `git clone xxxxx`
 - `cd tyh-ui`
 - `pnpm i`

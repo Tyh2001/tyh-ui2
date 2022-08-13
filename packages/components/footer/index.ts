@@ -1,6 +1,7 @@
 import TyhFooter from '../container/src/footer.vue'
+import type { App } from 'vue'
 
-TyhFooter.install = (app: any) => {
+TyhFooter.install = (app: App) => {
   app.component(TyhFooter.name, TyhFooter)
 }
 

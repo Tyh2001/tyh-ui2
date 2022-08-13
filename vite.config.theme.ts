@@ -1,21 +1,17 @@
-import { defineConfig } from 'vite'
+import type { UserConfigExport } from 'vite'
 import { resolve } from 'path'
 
-export default defineConfig({
-  build: {
-    minify: true,
-    outDir: resolve(__dirname, 'dist/dist'),
-    lib: {
-      entry: resolve(__dirname, 'packages/style/index.scss'),
-      formats: ['es'],
-      name: 'style',
-      fileName: 'style'
-    },
-    emptyOutDir: false,
-    rollupOptions: {
-      output: {
-        format: 'es'
+export default (): UserConfigExport => {
+  return {
+    build: {
+      outDir: resolve(__dirname, 'dist/dist'),
+      emptyOutDir: false,
+      rollupOptions: {
+        input: resolve(__dirname, 'packages/style/index.scss'),
+        output: {
+          assetFileNames: '[name].[ext]'
+        }
       }
     }
   }
-})
+}

@@ -9,7 +9,3 @@
     name: 'TyhButtonGroup'
   }
 </script>
-
-<script lang="ts" setup>
-  // defineProps({})
-</script>

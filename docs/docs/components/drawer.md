@@ -14,7 +14,7 @@
 <tyh-radio v-model="radio" label="top">从上面弹出</tyh-radio>
 
 <tyh-drawer v-model="open" :direction="radio" title="这是标题">
-  hello，欢迎使用 tyh-ui!
+  hello，欢迎使用 tyh-ui2!
 </tyh-drawer>
 
 ::: details 显示代码
@@ -29,7 +29,7 @@
   <tyh-radio v-model="radio" label="top">从上面弹出</tyh-radio>
 
   <tyh-drawer v-model="open" :direction="radio" title="这是标题">
-    hello，欢迎使用 tyh-ui!
+    hello，欢迎使用 tyh-ui2!
   </tyh-drawer>
 </template>
 
@@ -53,7 +53,7 @@
 <tyh-button type="primary" @click="open2 = true">点我打开</tyh-button>
 
 <tyh-drawer v-model="open2" direction="right" :showHeader="false">
-  hello，欢迎使用 tyh-ui!
+  hello，欢迎使用 tyh-ui2!
 </tyh-drawer>
 
 ```html
@@ -61,7 +61,7 @@
   <tyh-button type="primary" @click="open2 = true">点我打开</tyh-button>
 
   <tyh-drawer v-model="open2" direction="right" :showHeader="false">
-    hello，欢迎使用 tyh-ui!
+    hello，欢迎使用 tyh-ui2!
   </tyh-drawer>
 </template>
 
@@ -81,7 +81,7 @@
 
 <tyh-drawer v-model="open3" direction="right" size="50%">
   <tyh-button type="primary" @click="open4 = true">点我打开内层</tyh-button>
-  hello，欢迎使用 tyh-ui!
+  hello，欢迎使用 tyh-ui2!
   <tyh-drawer v-model="open4" direction="right"> 这是内层的 </tyh-drawer>
 </tyh-drawer>
 
@@ -93,7 +93,7 @@
 
   <tyh-drawer v-model="open3" direction="right" size="50%">
     <tyh-button type="primary" @click="open4 = true">点我打开内层</tyh-button>
-    hello，欢迎使用 tyh-ui!
+    hello，欢迎使用 tyh-ui2!
     <tyh-drawer v-model="open4" direction="right"> 这是内层的 </tyh-drawer>
   </tyh-drawer>
 </template>

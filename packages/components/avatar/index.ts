@@ -1,6 +1,7 @@
 import TyhAvatar from './src/avatar.vue'
+import type { App } from 'vue'
 
-TyhAvatar.install = (app: any) => {
+TyhAvatar.install = (app: App) => {
   app.component('TyhAvatar', TyhAvatar)
 }
 

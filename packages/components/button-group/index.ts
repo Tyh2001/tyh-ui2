@@ -1,6 +1,7 @@
 import TyhButtonGroup from './TyhButtonGroup.vue'
+import type { App } from 'vue'
 
-TyhButtonGroup.install = (app: any) => {
+TyhButtonGroup.install = (app: App) => {
   app.component(TyhButtonGroup.name, TyhButtonGroup)
 }
 

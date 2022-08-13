@@ -1,8 +1,5 @@
 <template>
-  <span
-    :class="['tyh-crumbs-item', { 'tyh-crumbs-item__to': to }]"
-    @click="link"
-  >
+  <span class="tyh-crumbs-item">
     <span class="tyh-crumbs-item-text">
       <slot />
     </span>
@@ -11,25 +8,9 @@
 </template>
 
 <script lang="ts" setup name="TyhCrumbsItem">
-  import {
-    ref,
-    inject,
-    ComponentInternalInstance,
-    getCurrentInstance
-  } from 'vue'
-  import { Props } from './props'
+  import { ref, inject } from 'vue'
+  import type { Ref } from 'vue'
 
-  const prop = defineProps(Props)
-
-  const icon = ref<string | undefined>('')
-  const { proxy }: any = getCurrentInstance() as ComponentInternalInstance
-  icon.value = inject('Crumbs-separator')
-  const link = (): void => {
-    if (!prop.to) return
-    try {
-      proxy.$router.push(prop.to)
-    } catch (e: any) {
-      console.log(e)
-    }
-  }
+  const icon: Ref<string> = ref<string>('')
+  icon.value = inject('Crumbs-separator')!
 </script>

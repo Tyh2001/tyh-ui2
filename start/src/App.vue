@@ -1,15 +1,10 @@
-<script lang="ts" setup>
-  import { Message } from '@tyh-ui2/components'
-
-  Message({
-    message: '123'
-  })
-</script>
+<script lang="ts" setup></script>
 
 <template>
-  <tyh-button>默认按钮</tyh-button>
-  <tyh-button type="primary">主要按钮</tyh-button>
-  <tyh-button type="success">成功按钮</tyh-button>
-  <tyh-button type="danger">危险按钮</tyh-button>
-  <tyh-button type="warning">警告按钮</tyh-button>
+<tyh-avatar src="https://tianyuhao.cn2/v3/assets/giraffe.jpg" />
+<tyh-avatar
+  errorIcon="tyh-ui-githublogo"
+  src="https://tianyuhao.cn2/v3/assets/giraffe.jpg"
+/>
+
 </template>
