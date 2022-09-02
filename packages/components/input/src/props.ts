@@ -4,7 +4,7 @@ import type { Size, Type } from './interface'
 export const Props = {
   modelValue: {
     type: String,
-    set(): boolean {
+    set (): boolean {
       return true
     }
   },
@@ -30,7 +30,7 @@ export const Props = {
   autofocus: Boolean,
   name: String,
   showPassword: Boolean,
-  set(): boolean {
+  set (): boolean {
     return true
   }
 } as const

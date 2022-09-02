@@ -24,9 +24,6 @@
   "dependencies": {
     "vue": "^3.2.33"
   },
-  "lint-staged": {
-    "*.{vue,js,ts,md,json}": "prettier --write"
-  },
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
@@ -53,5 +50,11 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx,vue}": [
+      "prettier --write",
+      "git add"
+    ]
   }
 }

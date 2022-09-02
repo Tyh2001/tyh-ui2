@@ -34,7 +34,7 @@ export default (): UserConfigExport => {
       rollupOptions: {
         external: ['vue'],
         output: {
-          preserveModules: true,
+          preserveModules: true
         }
       }
     }
