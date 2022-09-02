@@ -20,12 +20,6 @@
   },
   "license": "ISC",
   "dependencies": {
-    "@tyh-ui2/components": "workspace:*",
-    "@tyh-ui2/style": "workspace:*",
-    "sass": "^1.50.0",
-    "unplugin-vue-setup-extend-plus": "^0.3.2",
-    "vite-plugin-compression": "^0.5.1",
-    "vite-plugin-dts": "^1.2.0",
     "vue": "^3.2.33"
   },
   "lint-staged": {
@@ -34,20 +28,23 @@
   "devDependencies": {
     "@commitlint/cli": "^16.2.1",
     "@commitlint/config-conventional": "^16.2.1",
+    "@tyh-ui2/style": "workspace:*",
     "@vitejs/plugin-vue": "^2.3.1",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "^3.3.0",
-    "eslint": "^8.9.0",
-    "eslint-config-prettier": "^8.5.0",
-    "eslint-plugin-prettier": "^4.0.0",
-    "eslint-plugin-vue": "^8.4.1",
+    "eslint": "^8.23.0",
+    "eslint-config-fighting": "^0.1.0",
     "husky": "^7.0.4",
     "lint-staged": "^12.3.5",
     "prettier": "^2.5.1",
     "pretty-quick": "^3.1.3",
-    "typescript": "^4.5.4",
     "rimraf": "^3.0.2",
+    "sass": "^1.50.0",
+    "typescript": "^4.5.4",
+    "unplugin-vue-setup-extend-plus": "^0.3.2",
     "vite": "^3.0.3",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-dts": "^1.2.0",
     "vue-tsc": "^0.29.8"
   },
   "config": {

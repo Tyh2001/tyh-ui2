@@ -5,7 +5,7 @@
 使用快速的，节省磁盘空间的包管理工具 [pnpm](https://pnpm.io/zh) 进行安装
 
 ```shell
-pnpm add tyh-ui2
+pnpm add --save-dev tyh-ui2
 ```
 
 ## npm
@@ -13,7 +13,7 @@ pnpm add tyh-ui2
 使用 `npm` 的方式安装
 
 ```shell
-npm i tyh-ui2
+npm install --save-dev tyh-ui2
 ```
 
 ## yarn
@@ -21,5 +21,5 @@ npm i tyh-ui2
 使用 `yarn` 的方式安装
 
 ```shell
-yarn add tyh-ui2
+yarn add --save-dev tyh-ui2
 ```

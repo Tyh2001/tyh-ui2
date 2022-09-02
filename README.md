@@ -38,7 +38,14 @@ tyh-ui2 整体非常简洁明了，虽没有很多高级的组件，但它是使
 ## 安装 🔧
 
 ```shell
-npm i tyh-ui2
+# pnpm
+pnpm add --save-dev tyh-ui2
+
+# npm
+npm install --save-dev tyh-ui2
+
+# yarn
+yarn add --save-dev tyh-ui2
 ```
 
 ## 快速上手 🔑

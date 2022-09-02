@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './src/App.vue'
 
-import TyhUi2, { TyhAlert } from '@tyh-ui2/components'
+import TyhUi2 from '../packages/components/index'
 import '@tyh-ui2/style'
 
 // import TyhUi2 from '../dist'

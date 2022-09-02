@@ -38,7 +38,14 @@ Easy to use, simple configuration, clear directory, simple structure, lightweigh
 ## Install 🔧
 
 ```shell
-npm i tyh-ui2
+# pnpm
+pnpm add --save-dev tyh-ui2
+
+# npm
+npm install --save-dev tyh-ui2
+
+# yarn
+yarn add --save-dev tyh-ui2
 ```
 
 ## Quick Start 🔑
