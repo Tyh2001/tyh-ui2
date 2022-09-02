@@ -137,7 +137,7 @@ import { Message } from 'tyh-ui2'
 | round     | 配置圆角         | boolean | ——                                             | false   |
 
 <script setup>
-  import { Message } from '@tyh-ui2/components'
+  import { Message } from '../../../packages/components/index'
   const change1 = () => {
     Message({ message: '默认提示', type: 'default', round: true })
   }

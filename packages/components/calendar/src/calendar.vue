@@ -42,7 +42,7 @@
           class="tyh-calendar-day"
           v-for="(item, index) in fun_week"
           :key="index"
-          :style="[calendarItemSize]"
+          :style="calendarItemSize"
         />
         <td
           class="tyh-calendar-day"
@@ -60,7 +60,8 @@
 <script lang="ts" setup name="TyhCalendar">
   import { ref, computed } from 'vue'
   import { Props } from './props'
-  import { TyhButton, TyhButtonGroup } from '@tyh-ui2/components'
+  import { TyhButton, TyhButtonGroup } from '../../index'
+  import type { CSSProperties } from 'vue'
 
   const prop = defineProps(Props)
 
@@ -110,24 +111,23 @@
     return ['一', '二', '三', '四', '五', '六', '日'][num - 1]
   }
 
-  const nowDateStyle = (date: number): object[] | void => {
+  const nowDateStyle = (date: number): CSSProperties => {
     if (date + 1 === prop.modelValue.getDate()) {
-      return [
-        {
+      return {
           backgroundColor: '#3a6ff4',
           color: '#fff'
         }
-      ]
     }
+    return {}
   }
 
-  const calendarWidth = computed((): object[] => {
+  const calendarWidth = computed((): CSSProperties => {
     const size: number = prop.cellWidth < 28 ? 28 : prop.cellWidth
-    return [{ width: `${(size + 2) * 7}px` }]
+    return { width: `${(size + 2) * 7}px` }
   })
 
-  const calendarItemSize = computed((): object[] => {
+  const calendarItemSize = computed((): CSSProperties => {
     const size: number = prop.cellWidth < 28 ? 28 : prop.cellWidth
-    return [{ width: `${size}px`, height: `${size}px` }]
+    return { width: `${size}px`, height: `${size}px` }
   })
 </script>

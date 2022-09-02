@@ -10,7 +10,7 @@
 
 <script lang="ts" setup name="TyhPageHeader">
   import { Props } from './props'
-  import { TyhIcon } from '@tyh-ui2/components'
+  import { TyhIcon } from '../../index'
 
   defineProps(Props)
 

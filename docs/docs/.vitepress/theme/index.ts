@@ -1,5 +1,5 @@
 import DefaultTheme from 'vitepress/theme'
-import tyhUi from '@tyh-ui2/components'
+import tyhUi from '../../../../packages/components/index'
 import '@tyh-ui2/style'
 import './style/vitepress.scss'
 

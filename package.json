@@ -16,7 +16,9 @@
     "build:css": "vite build --config vite.config.css.ts",
     "move": "node ./script/move-file.js",
     "prettier": "prettier --write .",
-    "commit": "cz"
+    "commit": "cz",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix"
   },
   "license": "ISC",
   "dependencies": {

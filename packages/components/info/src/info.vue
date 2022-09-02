@@ -28,7 +28,7 @@
 
 <script lang="ts" setup name="TyhInfo">
   import { Props } from './props'
-  import { TyhLink } from '@tyh-ui2/components'
+  import { TyhLink } from '../../index'
 
   defineProps(Props)
 </script>

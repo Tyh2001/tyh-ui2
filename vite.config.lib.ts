@@ -10,9 +10,10 @@ export default (): UserConfigExport => {
       vueSetupExtend(),
       vue(),
       dts({
-        insertTypesEntry: false,
+        insertTypesEntry: true,
+        cleanVueFileName: true,
         copyDtsFiles: true,
-        cleanVueFileName: true
+        include: ['./packages/components']
       })
     ],
     mode: 'production',
@@ -26,8 +27,8 @@ export default (): UserConfigExport => {
       lib: {
         entry: resolve(__dirname, 'packages/components/index.ts'),
         formats: ['cjs'],
-        fileName: (target): string => {
-          return `index.${target}.js`
+        fileName: (): string => {
+          return 'index.cjs'
         }
       },
       rollupOptions: {

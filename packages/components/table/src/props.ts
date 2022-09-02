@@ -3,7 +3,7 @@ import type { Align, columnsInterface } from './interface'
 
 export const Props = {
   data: {
-    type: Array as PropType<any[]>,
+    type: Array as PropType<unknown[]>,
     default: (): any[] => []
   },
   columns: {

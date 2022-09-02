@@ -183,7 +183,7 @@ import { Notification } from 'tyh-ui2'
 | close    | 是否显示关闭按钮 | boolean | ——                                                | true      |
 
 <script setup>
-  import { Notification } from '@tyh-ui2/components'
+  import { Notification } from '../../../packages/components/index'
   const open1 = () => {
     Notification({
       title: '提示',

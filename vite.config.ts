@@ -1,4 +1,4 @@
-import { defineConfig } from 'vite'
+import type { UserConfigExport } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueSetupExtend from 'unplugin-vue-setup-extend-plus/vite'
 import { resolve } from 'path'
@@ -10,9 +10,10 @@ export default (): UserConfigExport => {
       vueSetupExtend(),
       vue(),
       dts({
-        insertTypesEntry: false,
+        insertTypesEntry: true,
+        cleanVueFileName: true,
         copyDtsFiles: true,
-        cleanVueFileName: true
+        include: ['./packages/components']
       })
     ],
     mode: 'production',
@@ -26,8 +27,8 @@ export default (): UserConfigExport => {
       lib: {
         entry: resolve(__dirname, 'packages/components/index.ts'),
         formats: ['es'],
-        fileName: (target): string => {
-          return `index.${target}.mjs`
+        fileName: (): string => {
+          return 'index.mjs'
         }
       },
       rollupOptions: {

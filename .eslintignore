@@ -1,3 +1,5 @@
 node_modules
 dist
+script/*
+vite-env.d.ts
 !.*
