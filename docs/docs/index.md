@@ -27,3 +27,16 @@ features:
     title: 使用 TypeScript
     details: 严格的 TypeScript 类型
 ---
+
+<tyh-dialog v-model="show" title="通知" width="60%">
+  你好！欢迎使用 tyh-ui2！<br /><br />
+  也感谢您对本组件库的支持。本组件库是<tyh-link style="font-size:16px" target="_blank" url="https://github.com/Tyh2001" type="primary">我</tyh-link>初期用于学习的一个项目，整体写法较为简单，大多数组件还不够完善。所以后续并不会添加全新组件，仅仅会维护一些较大问题或构建方式的优化。现本组件库仅适合学习！<br /><br />
+  现在我重新发起了一个全新的组件库项目<tyh-link style="font-size:16px" target="_blank" url="https://github.com/FightingDesign/fighting-design" type="primary">fighting-design</tyh-link>，内置完善的组件，并一直保持密集提交维护中，也可以参与共同开发维护，可放心使用！<br /><br />
+  欢迎添加我微信 VirgoTyh 一起共同学习~<br /><br />
+  <tyh-link style="font-size:16px" target="_blank" url="https://github.com/Tyh2001" type="primary">田同学 2022-09-04</tyh-link>
+</tyh-dialog>
+
+<script setup>
+  import { ref } from 'vue'
+  const show = ref(true)
+</script>

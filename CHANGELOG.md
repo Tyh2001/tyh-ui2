@@ -2,6 +2,11 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
+## 4.3.0 (2022-09-04)
+
+- 修复构建问题
+- 修复部分组件类型问题
+
 ## 4.2.1 (2022-08-13)
 
 - 修复配置文件错误
