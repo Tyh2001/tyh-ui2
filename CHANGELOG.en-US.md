@@ -4,6 +4,10 @@ For more information, please refer to the Chinese update log.
 
 [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | English
 
+## 4.3.1 (2022-09-04)
+
+- Repair main entry file
+
 ## 4.3.0 (2022-09-04)
 
 - Fix build issues
