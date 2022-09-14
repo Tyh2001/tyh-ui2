@@ -2,6 +2,10 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
+## 4.3.2 (2022-09-14)
+
+- 修复主入口文件
+
 ## 4.3.1 (2022-09-04)
 
 - 修复主入口文件
