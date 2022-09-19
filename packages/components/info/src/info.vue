@@ -1,3 +1,10 @@
+<script lang="ts" setup name="TyhInfo">
+  import { Props } from './props'
+  import { TyhLink } from '../../index'
+
+  defineProps(Props)
+</script>
+
 <template>
   <div class="tyh-info">
     <div class="tyh-info-header">
@@ -25,10 +32,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup name="TyhInfo">
-  import { Props } from './props'
-  import { TyhLink } from '../../index'
-
-  defineProps(Props)
-</script>

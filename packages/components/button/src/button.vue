@@ -1,14 +1,3 @@
-<template>
-  <button :class="classList" :disabled="disabled || loading" :style="{ color }">
-    <i
-      v-if="loading || icon"
-      :class="['tyh-icon', loading ? 'tyh-ui-loading' : icon]"
-      :style="{ color }"
-    />
-    <slot />
-  </button>
-</template>
-
 <script lang="ts" setup name="TyhButton">
   import { computed } from 'vue'
   import { Props } from './props'
@@ -43,3 +32,14 @@
     ]
   })
 </script>
+
+<template>
+  <button :class="classList" :disabled="disabled || loading" :style="{ color }">
+    <i
+      v-if="loading || icon"
+      :class="['tyh-icon', loading ? 'tyh-ui-loading' : icon]"
+      :style="{ color }"
+    />
+    <slot />
+  </button>
+</template>

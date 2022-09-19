@@ -1,62 +1,3 @@
-<template>
-  <span class="tyh-calendar">
-    <div class="tyh-calendar-container" :style="calendarWidth">
-      <div class="tyh-calendar-header">
-        <span class="tyh-calendar-isDay">
-          {{ getYear }}年 {{ getMonth + 1 }}月 {{ getDate }}日
-        </span>
-        <tyh-button-group>
-          <tyh-button
-            size="mini"
-            icon="tyh-ui-arrow-left-bold"
-            @click="prevMonth"
-          />
-          <tyh-button
-            size="mini"
-            simple
-            type="primary"
-            icon="tyh-ui-time"
-            @click="goNow"
-          />
-          <tyh-button
-            size="mini"
-            icon="tyh-ui-arrow-right"
-            @click="nextMonth"
-          />
-        </tyh-button-group>
-      </div>
-
-      <tr class="tyh-calendar-week">
-        <td
-          class="tyh-calendar-week-item"
-          v-for="(item, index) in 7"
-          :key="index"
-          :style="{ width: `${cellWidth < 28 ? 28 : cellWidth}px` }"
-        >
-          {{ changeWeek(item) }}
-        </td>
-      </tr>
-
-      <tr class="tyh-calendar-month">
-        <td
-          class="tyh-calendar-day"
-          v-for="(item, index) in fun_week"
-          :key="index"
-          :style="calendarItemSize"
-        />
-        <td
-          class="tyh-calendar-day"
-          v-for="(m, index) in yearMonths(getMonth, getYear)"
-          :key="index"
-          :style="[nowDateStyle(index)!, calendarItemSize]"
-        >
-          {{ index + 1 }}
-        </td>
-      </tr>
-    </div>
-  </span>
-</template>
-
 <script lang="ts" setup name="TyhCalendar">
   import { ref, computed } from 'vue'
   import { Props } from './props'
@@ -131,3 +72,62 @@
     return { width: `${size}px`, height: `${size}px` }
   })
 </script>
+
+<template>
+  <span class="tyh-calendar">
+    <div class="tyh-calendar-container" :style="calendarWidth">
+      <div class="tyh-calendar-header">
+        <span class="tyh-calendar-isDay">
+          {{ getYear }}年 {{ getMonth + 1 }}月 {{ getDate }}日
+        </span>
+        <tyh-button-group>
+          <tyh-button
+            size="mini"
+            icon="tyh-ui-arrow-left-bold"
+            @click="prevMonth"
+          />
+          <tyh-button
+            size="mini"
+            simple
+            type="primary"
+            icon="tyh-ui-time"
+            @click="goNow"
+          />
+          <tyh-button
+            size="mini"
+            icon="tyh-ui-arrow-right"
+            @click="nextMonth"
+          />
+        </tyh-button-group>
+      </div>
+
+      <tr class="tyh-calendar-week">
+        <td
+          v-for="(item, index) in 7"
+          :key="index"
+          class="tyh-calendar-week-item"
+          :style="{ width: `${cellWidth < 28 ? 28 : cellWidth}px` }"
+        >
+          {{ changeWeek(item) }}
+        </td>
+      </tr>
+
+      <tr class="tyh-calendar-month">
+        <td
+          v-for="(item, index) in fun_week"
+          :key="index"
+          class="tyh-calendar-day"
+          :style="calendarItemSize"
+        />
+        <td
+          v-for="(m, index) in yearMonths(getMonth, getYear)"
+          :key="index"
+          class="tyh-calendar-day"
+          :style="[nowDateStyle(index)!, calendarItemSize]"
+        >
+          {{ index + 1 }}
+        </td>
+      </tr>
+    </div>
+  </span>
+</template>

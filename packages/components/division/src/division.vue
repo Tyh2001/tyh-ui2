@@ -1,3 +1,8 @@
+<script lang="ts" setup name="TyhDivision">
+  import { Props } from './props'
+  defineProps(Props)
+</script>
+
 <template>
   <div class="tyh-division" :style="{ margin: `${margin} 0` }">
     <span
@@ -9,8 +14,3 @@
     </span>
   </div>
 </template>
-
-<script lang="ts" setup name="TyhDivision">
-  import { Props } from './props'
-  defineProps(Props)
-</script>

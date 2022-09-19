@@ -1,9 +1,3 @@
-<template>
-  <header class="tyh-header" :style="{ height }">
-    <slot />
-  </header>
-</template>
-
 <script lang="ts">
   export default { name: 'TyhHeader' }
 </script>
@@ -16,3 +10,9 @@
     }
   } as const)
 </script>
+
+<template>
+  <header class="tyh-header" :style="{ height }">
+    <slot />
+  </header>
+</template>

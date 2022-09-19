@@ -1,22 +1,3 @@
-<template>
-  <transition name="tyh-message-fade" @after-leave="leave" appear>
-    <div v-show="isShow" :class="isClass" :style="{ top: `${offset}px` }">
-      <div class="tyh-message-content">
-        <i
-          v-if="icon"
-          :class="['tyh-icon', 'lef-icon', icon, `tyh-message-${type}`]"
-        />
-        <span>{{ message }}</span>
-        <i
-          v-if="showClose"
-          :class="['tyh-icon', 'tyh-ui-close', `tyh-message-${type}`]"
-          @click="close"
-        />
-      </div>
-    </div>
-  </transition>
-</template>
-
 <script lang="ts" setup name="TyhMessage">
   import {
     getCurrentInstance,
@@ -42,9 +23,10 @@
     isShow.value = false
   }
 
-  const instance = getCurrentInstance() as ComponentInternalInstance
+  const instance: ComponentInternalInstance =
+    getCurrentInstance() as ComponentInternalInstance
   const leave = (): void => {
-    instance.vnode.el!.parentElement.removeChild(instance.vnode.el)
+    instance.vnode.el.parentElement.removeChild(instance.vnode.el)
   }
 
   const isClass = computed((): (string | object)[] => {
@@ -55,3 +37,22 @@
     ]
   })
 </script>
+
+<template>
+  <transition name="tyh-message-fade" appear @after-leave="leave">
+    <div v-show="isShow" :class="isClass" :style="{ top: `${offset}px` }">
+      <div class="tyh-message-content">
+        <i
+          v-if="icon"
+          :class="['tyh-icon', 'lef-icon', icon, `tyh-message-${type}`]"
+        />
+        <span>{{ message }}</span>
+        <i
+          v-if="showClose"
+          :class="['tyh-icon', 'tyh-ui-close', `tyh-message-${type}`]"
+          @click="close"
+        />
+      </div>
+    </div>
+  </transition>
+</template>

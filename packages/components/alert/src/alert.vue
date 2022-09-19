@@ -1,13 +1,3 @@
-<template>
-  <div :class="isClass">
-    <div class="tyh-alert-message">
-      <i v-if="icon" :class="['tyh-icon', 'tyh-message-icon', icon]" />
-      {{ message }}
-    </div>
-    <i v-if="close" class="tyh-icon tyh-ui-guanbi" @click="close" />
-  </div>
-</template>
-
 <script lang="ts" setup name="TyhAlert">
   import { computed } from 'vue'
   import { Props } from './props'
@@ -30,3 +20,13 @@
 
   const close = (): void => emit('close')
 </script>
+
+<template>
+  <div :class="isClass">
+    <div class="tyh-alert-message">
+      <i v-if="icon" :class="['tyh-icon', 'tyh-message-icon', icon]" />
+      {{ message }}
+    </div>
+    <i v-if="close" class="tyh-icon tyh-ui-guanbi" @click="close" />
+  </div>
+</template>

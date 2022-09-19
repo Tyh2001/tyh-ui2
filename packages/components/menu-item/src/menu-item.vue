@@ -1,13 +1,7 @@
-<template>
-  <li :class="isClass" :style="isStyle" @click="link">
-    <slot v-if="$slots.default" />
-    <span v-else>{{ title }}</span>
-  </li>
-</template>
-
 <script lang="ts" setup name="TyhMenuItem">
   import { getCurrentInstance, inject, computed } from 'vue'
   import { Props } from './props'
+  import type { ComponentInternalInstance } from 'vue'
 
   const props = defineProps(Props)
   const theme = inject('theme')
@@ -22,7 +16,7 @@
     ]
   })
 
-  const { proxy }: any = getCurrentInstance()
+  const { proxy } = getCurrentInstance() as ComponentInternalInstance
   const link = (): void => {
     if (props.prohibit) return
     if (props.link) {
@@ -32,7 +26,7 @@
     if (props.route) {
       try {
         proxy.$router.push(props.route)
-      } catch (e: any) {
+      } catch (e) {
         console.log(e)
       }
     }
@@ -46,3 +40,10 @@
     ]
   })
 </script>
+
+<template>
+  <li :class="isClass" :style="isStyle" @click="link">
+    <slot v-if="$slots.default" />
+    <span v-else>{{ title }}</span>
+  </li>
+</template>

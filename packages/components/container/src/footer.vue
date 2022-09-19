@@ -1,9 +1,3 @@
-<template>
-  <footer class="tyh-footer" :style="{ height }">
-    <slot />
-  </footer>
-</template>
-
 <script lang="ts">
   export default { name: 'TyhFooter' }
 </script>
@@ -16,3 +10,9 @@
     }
   } as const)
 </script>
+
+<template>
+  <footer class="tyh-footer" :style="{ height }">
+    <slot />
+  </footer>
+</template>

@@ -1,9 +1,3 @@
-<template>
-  <aside class="tyh-aside" :style="{ width }">
-    <slot />
-  </aside>
-</template>
-
 <script lang="ts">
   export default { name: 'TyhAside' }
 </script>
@@ -16,3 +10,9 @@
     }
   } as const)
 </script>
+
+<template>
+  <aside class="tyh-aside" :style="{ width }">
+    <slot />
+  </aside>
+</template>

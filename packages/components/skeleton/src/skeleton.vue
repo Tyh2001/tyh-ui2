@@ -1,3 +1,8 @@
+<script lang="ts" setup name="TyhSkeleton">
+  import { Props } from './props'
+  defineProps(Props)
+</script>
+
 <template>
   <div
     :class="[
@@ -10,8 +15,3 @@
     :style="{ width, height }"
   />
 </template>
-
-<script lang="ts" setup name="TyhSkeleton">
-  import { Props } from './props'
-  defineProps(Props)
-</script>

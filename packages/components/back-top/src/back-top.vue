@@ -1,14 +1,3 @@
-<template>
-  <div
-    v-show="isShow"
-    class="tyh-back-top"
-    :style="{ bottom, right }"
-    @click="toTop"
-  >
-    <slot />
-  </div>
-</template>
-
 <script lang="ts" setup name="TyhBackTop">
   import { ref, onMounted } from 'vue'
   import { Props } from './props'
@@ -18,7 +7,7 @@
   const isShow = ref<boolean>(false)
 
   const handleScroll = () => {
-    let timer: any = null
+    let timer: NodeJS.Timeout = null as unknown as NodeJS.Timeout
     return (): void => {
       if (timer !== null) {
         clearTimeout(timer)
@@ -39,3 +28,14 @@
 
   onMounted((): void => addEventListener('scroll', handleScroll()))
 </script>
+
+<template>
+  <div
+    v-show="isShow"
+    class="tyh-back-top"
+    :style="{ bottom, right }"
+    @click="toTop"
+  >
+    <slot />
+  </div>
+</template>

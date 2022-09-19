@@ -1,3 +1,8 @@
+<script lang="ts" setup name="TyhCard">
+  import { Props } from './props'
+  defineProps(Props)
+</script>
+
 <template>
   <div :class="['tyh-card', `tyh-card-shadow-${shadow}`]">
     <div v-if="$slots.title || $slots.subtitle" class="tyh-card-header">
@@ -13,8 +18,3 @@
     </div>
   </div>
 </template>
-
-<script lang="ts" setup name="TyhCard">
-  import { Props } from './props'
-  defineProps(Props)
-</script>

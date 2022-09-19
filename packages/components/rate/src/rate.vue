@@ -1,27 +1,3 @@
-<template>
-  <div class="tyh-rate">
-    <div class="tyh-rate-mouseout" @mouseout="width = modelValue">
-      <i
-        class="tyh-icon tyh-ui-favorite"
-        v-for="num in 5"
-        :key="num"
-        @mouseover="width = num"
-      />
-      <span class="solid" :style="`width:${width * 18}px;`">
-        <i
-          class="tyh-icon tyh-ui-favorite-filling"
-          v-for="num in 5"
-          :key="num"
-          :style="{ color }"
-          @mouseover="width = num"
-          @click="upDataValue"
-        />
-      </span>
-    </div>
-    <div v-if="showText" class="show-text">{{ showSayFn }}</div>
-  </div>
-</template>
-
 <script lang="ts" setup name="TyhRate">
   import { ref, watch, computed } from 'vue'
   import { Props } from './props'
@@ -40,7 +16,7 @@
   }
   const showSayFn = computed((): string | void | null => {
     if (!prop.showText) return
-    let showSay: string = ''
+    let showSay = ''
     watch(
       () => width.value,
       (): void => {
@@ -69,3 +45,27 @@
     return showSay
   })
 </script>
+
+<template>
+  <div class="tyh-rate">
+    <div class="tyh-rate-mouseout" @mouseout="width = modelValue">
+      <i
+        v-for="num in 5"
+        :key="num"
+        class="tyh-icon tyh-ui-favorite"
+        @mouseover="width = num"
+      />
+      <span class="solid" :style="`width:${width * 18}px;`">
+        <i
+          v-for="num in 5"
+          :key="num"
+          class="tyh-icon tyh-ui-favorite-filling"
+          :style="{ color }"
+          @mouseover="width = num"
+          @click="upDataValue"
+        />
+      </span>
+    </div>
+    <div v-if="showText" class="show-text">{{ showSayFn }}</div>
+  </div>
+</template>

@@ -1,17 +1,3 @@
-<template>
-  <ul :class="[...isClass, ...isCollapseClass]" :style="{ backgroundColor }">
-    <div v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
-      <slot name="left" />
-    </div>
-    <div v-if="$slots.default" :class="['tyh-menu-default', isFlex]">
-      <slot />
-    </div>
-    <div v-if="$slots.right" :class="['tyh-menu-right', isFlex]">
-      <slot name="right" />
-    </div>
-  </ul>
-</template>
-
 <script lang="ts" setup name="TyhMenu">
   import { computed, provide } from 'vue'
   import { Props } from './props'
@@ -40,3 +26,17 @@
     ]
   })
 </script>
+
+<template>
+  <ul :class="[...isClass, ...isCollapseClass]" :style="{ backgroundColor }">
+    <div v-if="$slots.left" :class="['tyh-menu-left', isFlex]">
+      <slot name="left" />
+    </div>
+    <div v-if="$slots.default" :class="['tyh-menu-default', isFlex]">
+      <slot />
+    </div>
+    <div v-if="$slots.right" :class="['tyh-menu-right', isFlex]">
+      <slot name="right" />
+    </div>
+  </ul>
+</template>

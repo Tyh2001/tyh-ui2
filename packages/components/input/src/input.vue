@@ -1,38 +1,3 @@
-<template>
-  <div :class="['tyh-input', { 'tyh-input-disabled': disabled }]">
-    <i
-      v-if="icon"
-      :class="['tyh-icon', 'tyh-input-icon', `tyh-input-icon-${size}`, icon]"
-      :style="{ cursor: disabled ? 'not-allowed' : 'Default' }"
-    />
-    <input
-      :class="isClass"
-      :type="inputType"
-      :value="modelValue"
-      :placeholder="placeholder"
-      :maxlength="max"
-      :disabled="disabled"
-      :autofocus="autofocus"
-      :name="name"
-      @input="input"
-      @keyup.enter="emit('enter')"
-      @blur="emit('onblur')"
-      @focus="emit('onfocus')"
-    />
-    <i
-      v-if="clear || showPassword"
-      :class="[
-        'tyh-icon',
-        'tyh-input-clear',
-        `tyh-input-icon-${size}`,
-        rightIcon
-      ]"
-      :style="{ cursor: disabled ? 'not-allowed' : 'pointer' }"
-      @click="rightIconClick"
-    />
-  </div>
-</template>
-
 <script lang="ts" setup name="TyhInput">
   import { ref, computed } from 'vue'
   import { Props } from './props'
@@ -92,3 +57,38 @@
     isIcon.value ? showPasswordClick() : clearText()
   }
 </script>
+
+<template>
+  <div :class="['tyh-input', { 'tyh-input-disabled': disabled }]">
+    <i
+      v-if="icon"
+      :class="['tyh-icon', 'tyh-input-icon', `tyh-input-icon-${size}`, icon]"
+      :style="{ cursor: disabled ? 'not-allowed' : 'Default' }"
+    />
+    <input
+      :class="isClass"
+      :type="inputType"
+      :value="modelValue"
+      :placeholder="placeholder"
+      :maxlength="max"
+      :disabled="disabled"
+      :autofocus="autofocus"
+      :name="name"
+      @input="input"
+      @keyup.enter="emit('enter')"
+      @blur="emit('onblur')"
+      @focus="emit('onfocus')"
+    >
+    <i
+      v-if="clear || showPassword"
+      :class="[
+        'tyh-icon',
+        'tyh-input-clear',
+        `tyh-input-icon-${size}`,
+        rightIcon
+      ]"
+      :style="{ cursor: disabled ? 'not-allowed' : 'pointer' }"
+      @click="rightIconClick"
+    />
+  </div>
+</template>

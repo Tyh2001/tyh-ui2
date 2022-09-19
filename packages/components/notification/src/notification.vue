@@ -1,23 +1,3 @@
-<template>
-  <transition name="tyh-notification-fade" @after-leave="leave" appear>
-    <div
-      v-show="isShow"
-      :class="['tyh-notification', `tyh-notification-${position}`]"
-    >
-      <div class="tyh-notification-body">
-        <i v-if="type" :class="iconClass" />
-        <div class="tyh-notification-content">
-          <h3 class="tyh-notification-title">{{ title }}</h3>
-          <div class="tyh-notification-message">
-            <p>{{ message }}</p>
-          </div>
-        </div>
-        <i v-if="close" class="tyh-icon tyh-ui-close" @click="onClose" />
-      </div>
-    </div>
-  </transition>
-</template>
-
 <script lang="ts" setup name="TyhNotification">
   import {
     getCurrentInstance,
@@ -45,7 +25,7 @@
   }
 
   const isIcon = computed((): string => {
-    let icon: string = ''
+    let icon = ''
     switch (prop.type) {
       case 'primary':
         icon = 'tyh-ui-smile'
@@ -77,3 +57,23 @@
     instance.vnode.el!.parentElement.removeChild(instance.vnode.el)
   }
 </script>
+
+<template>
+  <transition name="tyh-notification-fade" appear @after-leave="leave">
+    <div
+      v-show="isShow"
+      :class="['tyh-notification', `tyh-notification-${position}`]"
+    >
+      <div class="tyh-notification-body">
+        <i v-if="type" :class="iconClass" />
+        <div class="tyh-notification-content">
+          <h3 class="tyh-notification-title">{{ title }}</h3>
+          <div class="tyh-notification-message">
+            <p>{{ message }}</p>
+          </div>
+        </div>
+        <i v-if="close" class="tyh-icon tyh-ui-close" @click="onClose" />
+      </div>
+    </div>
+  </transition>
+</template>

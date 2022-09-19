@@ -1,9 +1,3 @@
-<template>
-  <span :class="isClass" :style="isStyle">
-    <slot />
-  </span>
-</template>
-
 <script lang="ts" setup name="TyhTagging">
   import { computed } from 'vue'
   import { Props } from './props'
@@ -23,3 +17,9 @@
     }
   })
 </script>
+
+<template>
+  <span :class="isClass" :style="isStyle">
+    <slot />
+  </span>
+</template>

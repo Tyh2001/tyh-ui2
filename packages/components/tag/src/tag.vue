@@ -1,10 +1,3 @@
-<template>
-  <span :class="isClass">
-    <slot />
-    <i v-if="isClose" class="tyh-icon tyh-ui-close" @click="emit('close')" />
-  </span>
-</template>
-
 <script lang="ts" setup name="TyhTag">
   import { computed } from 'vue'
   import { Props } from './props'
@@ -23,3 +16,10 @@
     ]
   })
 </script>
+
+<template>
+  <span :class="isClass">
+    <slot />
+    <i v-if="isClose" class="tyh-icon tyh-ui-close" @click="emit('close')" />
+  </span>
+</template>

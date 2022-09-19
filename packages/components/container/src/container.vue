@@ -1,9 +1,3 @@
-<template>
-  <section :class="isClass">
-    <slot />
-  </section>
-</template>
-
 <script lang="ts">
   export default { name: 'TyhContainer' }
 </script>
@@ -15,7 +9,7 @@
   const props = defineProps({
     direction: {
       type: String,
-      validator(v: string): boolean {
+      validator (v: string): boolean {
         return ['horizontal', 'vertical', ''].includes(v)
       }
     }
@@ -23,7 +17,7 @@
 
   const { isClass } = TyhContainer()
 
-  function TyhContainer() {
+  function TyhContainer () {
     const slots = useSlots()
     const isMode = computed((): boolean => {
       if (props.direction === 'vertical') {
@@ -48,3 +42,9 @@
     return { isClass }
   }
 </script>
+
+<template>
+  <section :class="isClass">
+    <slot />
+  </section>
+</template>

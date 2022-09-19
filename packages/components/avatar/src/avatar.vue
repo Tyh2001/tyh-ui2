@@ -1,23 +1,3 @@
-<template>
-  <div class="tyh-avatar">
-    <div v-if="isError" :class="errorClass" :style="isSize">
-      <slot name="error">
-        <i :class="['tyh-icon', errorIcon || 'tyh-ui-user']" />
-      </slot>
-    </div>
-    <img
-      v-else
-      :draggable="draggable"
-      :class="successClass"
-      :style="isSize"
-      :src="src"
-      :alt="alt"
-      @error="onError"
-      @load="emit('load')"
-    />
-  </div>
-</template>
-
 <script lang="ts" setup name="TyhAvatar">
   import { ref, computed } from 'vue'
   import { Props } from './props'
@@ -55,3 +35,23 @@
     ]
   })
 </script>
+
+<template>
+  <div class="tyh-avatar">
+    <div v-if="isError" :class="errorClass" :style="isSize">
+      <slot name="error">
+        <i :class="['tyh-icon', errorIcon || 'tyh-ui-user']" />
+      </slot>
+    </div>
+    <img
+      v-else
+      :draggable="draggable"
+      :class="successClass"
+      :style="isSize"
+      :src="src"
+      :alt="alt"
+      @error="onError"
+      @load="emit('load')"
+    >
+  </div>
+</template>

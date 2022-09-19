@@ -1,3 +1,8 @@
+<script lang="ts" setup name="TyhText">
+  import { Props } from './props'
+  defineProps(Props)
+</script>
+
 <template>
   <span
     :class="[
@@ -12,8 +17,3 @@
     <slot />
   </span>
 </template>
-
-<script lang="ts" setup name="TyhText">
-  import { Props } from './props'
-  defineProps(Props)
-</script>
