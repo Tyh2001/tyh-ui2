@@ -4,6 +4,10 @@ For more information, please refer to the Chinese update log.
 
 [Chinese](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.md) | English
 
+## 4.4.0 (2022-10-26)
+
+- Change package.json license
+
 ## 4.3.2 (2022-09-14)
 
 - Repair main entry file

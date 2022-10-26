@@ -2,6 +2,10 @@
 
 Chinese | [English](https://github.com/Tyh2001/tyh-ui2/blob/master/CHANGELOG.en-US.md)
 
+## 4.4.0 (2022-10-26)
+
+- 更新 package.json license
+
 ## 4.3.2 (2022-09-14)
 
 - 修复主入口文件
