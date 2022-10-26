@@ -45,8 +45,8 @@
   const labelStyle = computed((): CSSProperties => {
     return {
       cursor: prop.disabled ? 'no-drop' : 'pointer',
-      borderStyle: prop.border
-        ? `border: 1px solid ${
+      border: prop.border
+        ? ` 1px solid ${
             isLabel.value ? (prop.disabled ? '#b6b5b5' : '#3a6ff4') : '#b6b5b5'
           }`
         : ''
