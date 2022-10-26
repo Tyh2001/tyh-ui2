@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "start": "pnpm run -C start dev",
     "dev:docs": "pnpm run -C docs dev",
-    "build": "pnpm clean && pnpm build:css && vite build && pnpm build:lib && pnpm build:umd && pnpm build:theme && pnpm move",
+    "build": "pnpm clean && pnpm build:css && pnpm build:theme && vite build",
     "build:docs": "pnpm run -C docs build",
     "build:es": "vite build --config vite.config.ts",
     "build:theme": "vite build --config vite.config.theme.ts",
@@ -22,7 +22,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "vue": "^3.2.33"
+    "vue": "3.2.26"
   },
   "devDependencies": {
     "@tyh-ui2/style": "workspace:*",
@@ -39,7 +39,7 @@
     "typescript": "^4.5.4",
     "unplugin-vue-setup-extend-plus": "^0.3.2",
     "vite": "^3.0.3",
-    "vite-plugin-dts": "^1.2.0",
+    "vite-plugin-dts": "^1.6.6",
     "vue-tsc": "^0.29.8"
   },
   "config": {
